@@ -100,11 +100,13 @@ a:hover, a:active, a:focus {
   background: #F5F5F5;
   text-align: center;
   font-size: 14px;
-  -webkit-appearance: none;
+}
+input {
   font-weight: normal;
   font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
 }
-.search input:focus {
+input:focus {
   outline: none;
 }
 
@@ -116,18 +118,42 @@ ul {
   font-size: 1px;
 }
 li {
+  position: relative;
   display: inline-block;
-  width: 87px;
-  font-size: 36px;
-  text-align: center;
-  font-weight: normal;
   padding-top: 18px;
   padding-bottom: 25px;
+  width: 87px;
   border-radius: 4px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 36px;
 }
 li:hover {
   background: #eee;
   color: #4F8EF7;
+}
+li input {
+  display: none;
+  position: absolute;
+  top: 57px;
+  left: 0;
+  border: 0;
+  width: 85px;
+  text-align: center;
+  font-size: 10px;
+  background: transparent;
+}
+li:hover input {
+  display: block;
+}
+#icons {
+  transition: opacity .2s ease-in-out;
+}
+.search-init {
+  opacity: 0.15;
+}
+.search-results li {
+  display: none;
 }
 
 .footer {
