@@ -10,7 +10,7 @@ if (!String.prototype.trim) {
 
   // load up the icon object from whats in the DOM
   var
-  x, l, y,
+  x, l, y, t,
   iconElement,
   tags,
   pack,
@@ -18,7 +18,9 @@ if (!String.prototype.trim) {
   isResult,
   totalResults,
   icons = {},
-  iconElements = document.getElementsByTagName("li");
+  iconElements = document.getElementsByTagName("li"),
+  searchInput = document.getElementById("search"),
+  iconsUL = document.getElementById("icons");
 
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
@@ -61,8 +63,6 @@ if (!String.prototype.trim) {
 
 
   // search
-  var searchInput = document.getElementById("search");
-  var iconsUL = document.getElementById("icons");
   searchInput.addEventListener("focus", function(){
     iconsUL.className = "search-init";
     this.placeholder = "";
@@ -75,7 +75,7 @@ if (!String.prototype.trim) {
       showAll();
     }
   });
-  searchInput.addEventListener("keyup", function(e) {
+  function onKeyUp(e) {
     var keyCode = e.which || e.keyCode;
     if(keyCode === 27) {
       this.value = "";
@@ -88,7 +88,8 @@ if (!String.prototype.trim) {
       iconsUL.className = "search-results";
       searchQuery(this.value);
     }
-  });
+  }
+  searchInput.addEventListener("keyup", onKeyUp);
 
   function searchQuery(query) {
     if(!query) return;
@@ -114,7 +115,7 @@ if (!String.prototype.trim) {
     }
 
     // filter down for each term in the query
-    for(var t = 0; t < terms.length; t++) {
+    for(t = 0; t < terms.length; t++) {
       for(x in icons) {
         if(!icons[x].show) continue;
         isResult = false;
@@ -149,7 +150,9 @@ if (!String.prototype.trim) {
     totalResults = icons.length;
     for(x in icons) {
       icons[x].show = true;
-      icons[x].el.style.display = "inline-block";
+      if(icons[x].el.style.display !== "inline-block") {
+        icons[x].el.style.display = "inline-block";
+      }
     }
   }
 
