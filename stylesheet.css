@@ -135,6 +135,7 @@ li:hover {
 li div {
   display: none;
   position: absolute;
+  z-index: 1000;
   top: 62px;
   left: -16px;
   width: 106px;
