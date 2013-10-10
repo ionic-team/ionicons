@@ -126,23 +126,26 @@ li {
   font-size: 32px;
   text-align: center;
   font-weight: normal;
+  cursor: pointer;
 }
 li:hover {
-  background: #fff;
+  background: #eee;
   color: #4F8EF7;
 }
-li input {
+li div {
   display: none;
   position: absolute;
-  top: 57px;
-  left: 0;
-  border: 0;
-  width: 85px;
+  top: 62px;
+  left: -16px;
+  width: 106px;
   text-align: center;
-  font-size: 10px;
-  background: transparent;
+  font-size: 14px;
+  background: black;
+  color: white;
+  padding: 3px 8px 6px;
+  border-radius: 4px
 }
-li:hover input {
+li:hover div {
   display: block;
 }
 #icons {

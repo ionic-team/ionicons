@@ -15,13 +15,15 @@
 
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
-    if(iconElement.className === "") {
+    if(iconElement.className.length < 6) {
       iconElement.style.display = 'none';
       continue;
     }
-    el = document.createElement("input");
-    el.value = iconElement.className;
+    
+    el = document.createElement("div");
+    el.innerHTML = iconElement.className;
     iconElement.appendChild(el);
+
     tags = iconElement.getAttribute("data-tags");
     pack = iconElement.getAttribute("data-pack");
     icons[ iconElement.className ] = {
@@ -35,6 +37,10 @@
         icons[ iconElement.className ].tags.push(tags[y]);
       }
     }
+    iconElement.addEventListener("click", iconClick);
+  }
+  function iconClick(e) {
+    alert(e.currentTarget.className);
   }
 
 
@@ -84,7 +90,7 @@
           icon.el.style.display = "inline-block";
         }
       } else {
-        if(icon.el.style.display !== "") {
+        if(icon.el.style.display !== "" && icon.el.style.display !== "none") {
           icon.el.style.display = "";
         }
       }
