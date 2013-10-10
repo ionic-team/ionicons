@@ -19,9 +19,9 @@
       iconElement.style.display = 'none';
       continue;
     }
+    el = window.getPseudoElements(iconElement, "before");
     el = document.createElement("input");
     el.value = iconElement.className;
-    iconElement.id = iconElement.className;
     iconElement.appendChild(el);
     tags = iconElement.getAttribute("data-tags");
     pack = iconElement.getAttribute("data-pack");
@@ -30,6 +30,12 @@
       pack: (pack ? pack : 'default'),
       el: iconElement
     };
+    tags = iconElement.className.split('-');
+    for(y = 0; y < tags.length; y++) {
+      if(tags[y] !== "icon") {
+        icons[ iconElement.className ].tags.push(tags[y]);
+      }
+    }
   }
 
 
@@ -69,7 +75,7 @@
     for(x in icons) {
       icon = icons[x];
       for(y = 0; y < icon.tags.length; y++) {
-        if( x.indexOf(query) > -1 ) {
+        if( icon.tags[y].indexOf(query) > -1 ) {
           isResult = true;
           break;
         }

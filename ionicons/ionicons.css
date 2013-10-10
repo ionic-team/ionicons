@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
-.icon-ios7-ionic-outline, .icon-arrow-up-a, .icon-arrow-right-a, .icon-arrow-left-a, .icon-arrow-down-a, .icon-alert, .icon-alert-circled, .icon-woman, .icon-wifi, .icon-waterdrop, .icon-volume-mute, .icon-volume-medium, .icon-volume-low, .icon-volume-high, .icon-videocamera, .icon-upload, .icon-unlocked, .icon-trash-b, .icon-trash-a, .icon-thumbsup, .icon-thumbsdown, .icon-stop, .icon-star, .icon-shuffle, .icon-share, .icon-search, .icon-reply, .icon-reply-all, .icon-refresh, .icon-record, .icon-printer, .icon-pound, .icon-plus, .icon-plus-round, .icon-plus-circled, .icon-play, .icon-plane, .icon-person, .icon-person-stalker, .icon-person-add, .icon-pause, .icon-paperclip, .icon-next, .icon-navicon, .icon-navicon-round, .icon-music-note, .icon-more, .icon-monitor, .icon-minus, .icon-minus-round, .icon-minus-circled, .icon-mic-c, .icon-mic-b, .icon-mic-a, .icon-map, .icon-man, .icon-loop, .icon-locked, .icon-location, .icon-leaf, .icon-laptop, .icon-ipod, .icon-iphone, .icon-ipad, .icon-ionic, .icon-information, .icon-information-circled, .icon-images, .icon-image, .icon-home, .icon-help, .icon-help-circled, .icon-heart, .icon-headphone, .icon-grid, .icon-gear-b, .icon-gear-a, .icon-game-controller-b, .icon-game-controller-a, .icon-forward, .icon-folder, .icon-flask, .icon-flash, .icon-flash-off, .icon-film-marker, .icon-filing, .icon-eye, .icon-email, .icon-drag, .icon-document, .icon-document-text, .icon-disc, .icon-compose, .icon-cloud, .icon-close, .icon-close-round, .icon-close-circled, .icon-clipboard, .icon-chevron-up, .icon-chevron-right, .icon-chevron-left, .icon-chevron-down, .icon-checkmark, .icon-checkmark-round, .icon-checkmark-circled, .icon-chatbubbles, .icon-chatbubble, .icon-chatbubble-working, .icon-chatboxes, .icon-chatbox, .icon-chatbox-working, .icon-card, .icon-camera, .icon-calendar, .icon-bluetooth, .icon-battery-low, .icon-battery-half, .icon-battery-full, .icon-battery-empty, .icon-battery-charging, .icon-bag, .icon-at, .icon-arrow-up-c, .icon-arrow-up-b, .icon-arrow-right-c, .icon-arrow-right-b, .icon-arrow-left-c, .icon-arrow-left-b, .icon-arrow-down-c, .icon-arrow-down-b, .icon-archive, .icon-ios7-world, .icon-ios7-world-outline, .icon-ios7-volume-low, .icon-ios7-volume-high, .icon-ios7-videocam, .icon-ios7-videocam-outline, .icon-ios7-upload, .icon-ios7-upload-outline, .icon-ios7-unlocked, .icon-ios7-unlocked-outline, .icon-ios7-undo, .icon-ios7-undo-outline, .icon-ios7-trash, .icon-ios7-trash-outline, .icon-ios7-timer, .icon-ios7-timer-outline, .icon-ios7-thunderstorm, .icon-ios7-thunderstorm-outline, .icon-ios7-telephone, .icon-ios7-telephone-outline, .icon-ios7-sunny, .icon-ios7-sunny-outline, .icon-ios7-stopwatch, .icon-ios7-stopwatch-outline, .icon-ios7-star, .icon-ios7-star-outline, .icon-ios7-skipforward, .icon-ios7-skipforward-outline, .icon-ios7-skipbackward, .icon-ios7-skipbackward-outline, .icon-ios7-search, .icon-ios7-search-strong, .icon-ios7-rewind, .icon-ios7-rewind-outline, .icon-ios7-refresh, .icon-ios7-refresh-outline, .icon-ios7-refresh-empty, .icon-ios7-redo, .icon-ios7-redo-outline, .icon-ios7-recording, .icon-ios7-recording-outline, .icon-ios7-rainy, .icon-ios7-rainy-outline, .icon-ios7-printer, .icon-ios7-printer-outline, .icon-ios7-plus, .icon-ios7-plus-outline, .icon-ios7-plus-empty, .icon-ios7-play, .icon-ios7-play-outline, .icon-ios7-photos, .icon-ios7-photos-outline, .icon-ios7-personadd, .icon-ios7-personadd-outline, .icon-ios7-person, .icon-ios7-person-outline, .icon-ios7-people, .icon-ios7-people-outline, .icon-ios7-pause, .icon-ios7-pause-outline, .icon-ios7-partlysunny, .icon-ios7-partlysunny-outline, .icon-ios7-paperplane, .icon-ios7-paperplane-outline, .icon-ios7-navigate, .icon-ios7-navigate-outline, .icon-ios7-musical-notes, .icon-ios7-musical-note, .icon-ios7-more, .icon-ios7-more-outline, .icon-ios7-moon, .icon-ios7-moon-outline, .icon-ios7-monitor, .icon-ios7-monitor-outline, .icon-ios7-minus, .icon-ios7-minus-outline, .icon-ios7-minus-empty, .icon-ios7-mic, .icon-ios7-mic-outline, .icon-ios7-mic-off, .icon-ios7-locked, .icon-ios7-locked-outline, .icon-ios7-location, .icon-ios7-location-outline, .icon-ios7-keypad, .icon-ios7-keypad-outline, .icon-ios7-information, .icon-ios7-information-outline, .icon-ios7-information-empty, .icon-ios7-infinite, .icon-ios7-infinite-outline, .icon-ios7-help, .icon-ios7-help-outline, .icon-ios7-help-empty, .icon-ios7-heart, .icon-ios7-heart-outline, .icon-ios7-glasses, .icon-ios7-glasses-outline, .icon-ios7-gear, .icon-ios7-gear-outline, .icon-ios7-folder, .icon-ios7-folder-outline, .icon-ios7-flag, .icon-ios7-flag-outline, .icon-ios7-film, .icon-ios7-film-outline, .icon-ios7-filing, .icon-ios7-filing-outline, .icon-ios7-fastforward, .icon-ios7-fastforward-outline, .icon-ios7-eye, .icon-ios7-eye-outline, .icon-ios7-email, .icon-ios7-email-outline, .icon-ios7-drag, .icon-ios7-download, .icon-ios7-download-outline, .icon-ios7-copy, .icon-ios7-copy-outline, .icon-ios7-contact, .icon-ios7-contact-outline, .icon-ios7-compose, .icon-ios7-compose-outline, .icon-ios7-cog, .icon-ios7-cog-outline, .icon-ios7-cloudy, .icon-ios7-cloudy-outline, .icon-ios7-cloud, .icon-ios7-cloud-upload, .icon-ios7-cloud-upload-outline, .icon-ios7-cloud-outline, .icon-ios7-cloud-download, .icon-ios7-cloud-download-outline, .icon-ios7-clock, .icon-ios7-clock-outline, .icon-ios7-circle-outline, .icon-ios7-circle-filled, .icon-ios7-checkmark, .icon-ios7-checkmark-outline, .icon-ios7-checkmark-empty, .icon-ios7-chatbubble, .icon-ios7-chatbubble-outline, .icon-ios7-chatboxes, .icon-ios7-chatboxes-outline, .icon-ios7-cart, .icon-ios7-cart-outline, .icon-ios7-camera, .icon-ios7-camera-outline, .icon-ios7-calendar, .icon-ios7-calendar-outline, .icon-ios7-browsers, .icon-ios7-browsers-outline, .icon-ios7-box, .icon-ios7-box-outline, .icon-ios7-bookmarks, .icon-ios7-bookmarks-outline, .icon-ios7-bolt, .icon-ios7-bolt-outline, .icon-ios7-bell, .icon-ios7-bell-outline, .icon-ios7-at, .icon-ios7-arrow-up, .icon-ios7-arrow-right, .icon-ios7-arrow-left, .icon-ios7-arrow-forward, .icon-ios7-arrow-down, .icon-ios7-arrow-back, .icon-ios7-albums, .icon-ios7-albums-outline, .icon-ios7-alarm, .icon-ios7-alarm-outline, .icon-social-youtube, .icon-social-youtube-outline, .icon-social-yahoo, .icon-social-yahoo-outline, .icon-social-wordpress, .icon-social-wordpress-outline, .icon-social-windows, .icon-social-windows-outline, .icon-social-vimeo, .icon-social-vimeo-outline, .icon-social-twitter, .icon-social-twitter-outline, .icon-social-tumblr, .icon-social-tumblr-outline, .icon-social-skype, .icon-social-skype-outline, .icon-social-rss, .icon-social-rss-outline, .icon-social-reddit, .icon-social-reddit-outline, .icon-social-linkedin, .icon-social-linkedin-outline, .icon-social-hackernews, .icon-social-hackernews-outline, .icon-social-google, .icon-social-google-outline, .icon-social-github, .icon-social-github-outline, .icon-social-facebook, .icon-social-facebook-outline, .icon-social-dropbox, .icon-social-dropbox-outline, .icon-social-dribbble, .icon-social-dribbble-outline, .icon-social-designernews, .icon-social-designernews-outline, .icon-social-buffer, .icon-social-buffer-outline, .icon-social-apple, .icon-social-apple-outline, .icon-social-android, .icon-social-android-outline {
+.icon-iphone, .icon-ipod, .icon-ipad, .icon-ios7-ionic-outline, .icon-arrow-up-a, .icon-arrow-right-a, .icon-arrow-left-a, .icon-arrow-down-a, .icon-alert, .icon-alert-circled, .icon-woman, .icon-wifi, .icon-waterdrop, .icon-volume-mute, .icon-volume-medium, .icon-volume-low, .icon-volume-high, .icon-videocamera, .icon-upload, .icon-unlocked, .icon-trash-b, .icon-trash-a, .icon-thumbsup, .icon-thumbsdown, .icon-stop, .icon-star, .icon-shuffle, .icon-share, .icon-search, .icon-reply, .icon-reply-all, .icon-refresh, .icon-record, .icon-printer, .icon-pound, .icon-plus, .icon-plus-round, .icon-plus-circled, .icon-play, .icon-plane, .icon-person, .icon-person-stalker, .icon-person-add, .icon-pause, .icon-paperclip, .icon-next, .icon-navicon, .icon-navicon-round, .icon-music-note, .icon-more, .icon-monitor, .icon-minus, .icon-minus-round, .icon-minus-circled, .icon-mic-c, .icon-mic-b, .icon-mic-a, .icon-map, .icon-man, .icon-loop, .icon-locked, .icon-location, .icon-leaf, .icon-laptop, .icon-ionic, .icon-information, .icon-information-circled, .icon-images, .icon-image, .icon-home, .icon-help, .icon-help-circled, .icon-heart, .icon-headphone, .icon-grid, .icon-gear-b, .icon-gear-a, .icon-game-controller-b, .icon-game-controller-a, .icon-forward, .icon-folder, .icon-flask, .icon-flash, .icon-flash-off, .icon-film-marker, .icon-filing, .icon-eye, .icon-email, .icon-drag, .icon-document, .icon-document-text, .icon-disc, .icon-compose, .icon-cloud, .icon-close, .icon-close-round, .icon-close-circled, .icon-clipboard, .icon-chevron-up, .icon-chevron-right, .icon-chevron-left, .icon-chevron-down, .icon-checkmark, .icon-checkmark-round, .icon-checkmark-circled, .icon-chatbubbles, .icon-chatbubble, .icon-chatbubble-working, .icon-chatboxes, .icon-chatbox, .icon-chatbox-working, .icon-card, .icon-camera, .icon-calendar, .icon-bluetooth, .icon-battery-low, .icon-battery-half, .icon-battery-full, .icon-battery-empty, .icon-battery-charging, .icon-bag, .icon-at, .icon-arrow-up-c, .icon-arrow-up-b, .icon-arrow-right-c, .icon-arrow-right-b, .icon-arrow-left-c, .icon-arrow-left-b, .icon-arrow-down-c, .icon-arrow-down-b, .icon-archive, .icon-ios7-world, .icon-ios7-world-outline, .icon-ios7-volume-low, .icon-ios7-volume-high, .icon-ios7-videocam, .icon-ios7-videocam-outline, .icon-ios7-upload, .icon-ios7-upload-outline, .icon-ios7-unlocked, .icon-ios7-unlocked-outline, .icon-ios7-undo, .icon-ios7-undo-outline, .icon-ios7-trash, .icon-ios7-trash-outline, .icon-ios7-timer, .icon-ios7-timer-outline, .icon-ios7-thunderstorm, .icon-ios7-thunderstorm-outline, .icon-ios7-telephone, .icon-ios7-telephone-outline, .icon-ios7-sunny, .icon-ios7-sunny-outline, .icon-ios7-stopwatch, .icon-ios7-stopwatch-outline, .icon-ios7-star, .icon-ios7-star-outline, .icon-ios7-skipforward, .icon-ios7-skipforward-outline, .icon-ios7-skipbackward, .icon-ios7-skipbackward-outline, .icon-ios7-search, .icon-ios7-search-strong, .icon-ios7-rewind, .icon-ios7-rewind-outline, .icon-ios7-refresh, .icon-ios7-refresh-outline, .icon-ios7-refresh-empty, .icon-ios7-redo, .icon-ios7-redo-outline, .icon-ios7-recording, .icon-ios7-recording-outline, .icon-ios7-rainy, .icon-ios7-rainy-outline, .icon-ios7-printer, .icon-ios7-printer-outline, .icon-ios7-plus, .icon-ios7-plus-outline, .icon-ios7-plus-empty, .icon-ios7-play, .icon-ios7-play-outline, .icon-ios7-photos, .icon-ios7-photos-outline, .icon-ios7-personadd, .icon-ios7-personadd-outline, .icon-ios7-person, .icon-ios7-person-outline, .icon-ios7-people, .icon-ios7-people-outline, .icon-ios7-pause, .icon-ios7-pause-outline, .icon-ios7-partlysunny, .icon-ios7-partlysunny-outline, .icon-ios7-paperplane, .icon-ios7-paperplane-outline, .icon-ios7-navigate, .icon-ios7-navigate-outline, .icon-ios7-musical-notes, .icon-ios7-musical-note, .icon-ios7-more, .icon-ios7-more-outline, .icon-ios7-moon, .icon-ios7-moon-outline, .icon-ios7-monitor, .icon-ios7-monitor-outline, .icon-ios7-minus, .icon-ios7-minus-outline, .icon-ios7-minus-empty, .icon-ios7-mic, .icon-ios7-mic-outline, .icon-ios7-mic-off, .icon-ios7-locked, .icon-ios7-locked-outline, .icon-ios7-location, .icon-ios7-location-outline, .icon-ios7-keypad, .icon-ios7-keypad-outline, .icon-ios7-information, .icon-ios7-information-outline, .icon-ios7-information-empty, .icon-ios7-infinite, .icon-ios7-infinite-outline, .icon-ios7-help, .icon-ios7-help-outline, .icon-ios7-help-empty, .icon-ios7-heart, .icon-ios7-heart-outline, .icon-ios7-glasses, .icon-ios7-glasses-outline, .icon-ios7-gear, .icon-ios7-gear-outline, .icon-ios7-folder, .icon-ios7-folder-outline, .icon-ios7-flag, .icon-ios7-flag-outline, .icon-ios7-film, .icon-ios7-film-outline, .icon-ios7-filing, .icon-ios7-filing-outline, .icon-ios7-fastforward, .icon-ios7-fastforward-outline, .icon-ios7-eye, .icon-ios7-eye-outline, .icon-ios7-email, .icon-ios7-email-outline, .icon-ios7-drag, .icon-ios7-download, .icon-ios7-download-outline, .icon-ios7-copy, .icon-ios7-copy-outline, .icon-ios7-contact, .icon-ios7-contact-outline, .icon-ios7-compose, .icon-ios7-compose-outline, .icon-ios7-cog, .icon-ios7-cog-outline, .icon-ios7-cloudy, .icon-ios7-cloudy-outline, .icon-ios7-cloud, .icon-ios7-cloud-upload, .icon-ios7-cloud-upload-outline, .icon-ios7-cloud-outline, .icon-ios7-cloud-download, .icon-ios7-cloud-download-outline, .icon-ios7-clock, .icon-ios7-clock-outline, .icon-ios7-circle-outline, .icon-ios7-circle-filled, .icon-ios7-checkmark, .icon-ios7-checkmark-outline, .icon-ios7-checkmark-empty, .icon-ios7-chatbubble, .icon-ios7-chatbubble-outline, .icon-ios7-chatboxes, .icon-ios7-chatboxes-outline, .icon-ios7-cart, .icon-ios7-cart-outline, .icon-ios7-camera, .icon-ios7-camera-outline, .icon-ios7-calendar, .icon-ios7-calendar-outline, .icon-ios7-browsers, .icon-ios7-browsers-outline, .icon-ios7-box, .icon-ios7-box-outline, .icon-ios7-bookmarks, .icon-ios7-bookmarks-outline, .icon-ios7-bolt, .icon-ios7-bolt-outline, .icon-ios7-bell, .icon-ios7-bell-outline, .icon-ios7-at, .icon-ios7-arrow-up, .icon-ios7-arrow-right, .icon-ios7-arrow-left, .icon-ios7-arrow-forward, .icon-ios7-arrow-down, .icon-ios7-arrow-back, .icon-ios7-albums, .icon-ios7-albums-outline, .icon-ios7-alarm, .icon-ios7-alarm-outline, .icon-social-youtube, .icon-social-youtube-outline, .icon-social-yahoo, .icon-social-yahoo-outline, .icon-social-wordpress, .icon-social-wordpress-outline, .icon-social-windows, .icon-social-windows-outline, .icon-social-vimeo, .icon-social-vimeo-outline, .icon-social-twitter, .icon-social-twitter-outline, .icon-social-tumblr, .icon-social-tumblr-outline, .icon-social-skype, .icon-social-skype-outline, .icon-social-rss, .icon-social-rss-outline, .icon-social-reddit, .icon-social-reddit-outline, .icon-social-linkedin, .icon-social-linkedin-outline, .icon-social-hackernews, .icon-social-hackernews-outline, .icon-social-google, .icon-social-google-outline, .icon-social-github, .icon-social-github-outline, .icon-social-facebook, .icon-social-facebook-outline, .icon-social-dropbox, .icon-social-dropbox-outline, .icon-social-dribbble, .icon-social-dribbble-outline, .icon-social-designernews, .icon-social-designernews-outline, .icon-social-buffer, .icon-social-buffer-outline, .icon-social-apple, .icon-social-apple-outline, .icon-social-android, .icon-social-android-outline {
 	font-family: 'ionicons';
 	speak: none;
 	font-style: normal;
@@ -38,196 +38,196 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-ios7-ionic-outline:before {
-	content: "\e000";
-}
-.icon-arrow-up-a:before {
-	content: "\e001";
-}
-.icon-arrow-right-a:before {
+.icon-iphone:before {
 	content: "\e002";
 }
-.icon-arrow-left-a:before {
-	content: "\e003";
-}
-.icon-arrow-down-a:before {
-	content: "\e004";
-}
-.icon-alert:before {
-	content: "\e005";
-}
-.icon-alert-circled:before {
-	content: "\e006";
-}
-.icon-woman:before {
-	content: "\e007";
-}
-.icon-wifi:before {
-	content: "\e008";
-}
-.icon-waterdrop:before {
-	content: "\e009";
-}
-.icon-volume-mute:before {
-	content: "\e00a";
-}
-.icon-volume-medium:before {
-	content: "\e00b";
-}
-.icon-volume-low:before {
-	content: "\e00c";
-}
-.icon-volume-high:before {
-	content: "\e00d";
-}
-.icon-videocamera:before {
-	content: "\e00e";
-}
-.icon-upload:before {
-	content: "\e00f";
-}
-.icon-unlocked:before {
-	content: "\e010";
-}
-.icon-trash-b:before {
-	content: "\e011";
-}
-.icon-trash-a:before {
-	content: "\e012";
-}
-.icon-thumbsup:before {
-	content: "\e013";
-}
-.icon-thumbsdown:before {
-	content: "\e014";
-}
-.icon-stop:before {
-	content: "\e015";
-}
-.icon-star:before {
-	content: "\e016";
-}
-.icon-shuffle:before {
-	content: "\e017";
-}
-.icon-share:before {
-	content: "\e018";
-}
-.icon-search:before {
-	content: "\e019";
-}
-.icon-reply:before {
-	content: "\e01a";
-}
-.icon-reply-all:before {
-	content: "\e01b";
-}
-.icon-refresh:before {
-	content: "\e01c";
-}
-.icon-record:before {
-	content: "\e01d";
-}
-.icon-printer:before {
-	content: "\e01e";
-}
-.icon-pound:before {
-	content: "\e01f";
-}
-.icon-plus:before {
-	content: "\e020";
-}
-.icon-plus-round:before {
-	content: "\e021";
-}
-.icon-plus-circled:before {
-	content: "\e022";
-}
-.icon-play:before {
-	content: "\e023";
-}
-.icon-plane:before {
-	content: "\e024";
-}
-.icon-person:before {
-	content: "\e025";
-}
-.icon-person-stalker:before {
-	content: "\e026";
-}
-.icon-person-add:before {
-	content: "\e027";
-}
-.icon-pause:before {
-	content: "\e028";
-}
-.icon-paperclip:before {
-	content: "\e029";
-}
-.icon-next:before {
-	content: "\e02a";
-}
-.icon-navicon:before {
-	content: "\e02b";
-}
-.icon-navicon-round:before {
-	content: "\e02c";
-}
-.icon-music-note:before {
-	content: "\e02d";
-}
-.icon-more:before {
-	content: "\e02e";
-}
-.icon-monitor:before {
-	content: "\e02f";
-}
-.icon-minus:before {
-	content: "\e030";
-}
-.icon-minus-round:before {
-	content: "\e031";
-}
-.icon-minus-circled:before {
-	content: "\e032";
-}
-.icon-mic-c:before {
-	content: "\e033";
-}
-.icon-mic-b:before {
-	content: "\e034";
-}
-.icon-mic-a:before {
-	content: "\e035";
-}
-.icon-map:before {
-	content: "\e036";
-}
-.icon-man:before {
-	content: "\e037";
-}
-.icon-loop:before {
-	content: "\e038";
-}
-.icon-locked:before {
-	content: "\e039";
-}
-.icon-location:before {
-	content: "\e03a";
-}
-.icon-leaf:before {
-	content: "\e03b";
-}
-.icon-laptop:before {
-	content: "\e03c";
-}
 .icon-ipod:before {
-	content: "\e03d";
-}
-.icon-iphone:before {
-	content: "\e03e";
+	content: "\e001";
 }
 .icon-ipad:before {
+	content: "\e000";
+}
+.icon-ios7-ionic-outline:before {
+	content: "\e003";
+}
+.icon-arrow-up-a:before {
+	content: "\e004";
+}
+.icon-arrow-right-a:before {
+	content: "\e005";
+}
+.icon-arrow-left-a:before {
+	content: "\e006";
+}
+.icon-arrow-down-a:before {
+	content: "\e007";
+}
+.icon-alert:before {
+	content: "\e008";
+}
+.icon-alert-circled:before {
+	content: "\e009";
+}
+.icon-woman:before {
+	content: "\e00a";
+}
+.icon-wifi:before {
+	content: "\e00b";
+}
+.icon-waterdrop:before {
+	content: "\e00c";
+}
+.icon-volume-mute:before {
+	content: "\e00d";
+}
+.icon-volume-medium:before {
+	content: "\e00e";
+}
+.icon-volume-low:before {
+	content: "\e00f";
+}
+.icon-volume-high:before {
+	content: "\e010";
+}
+.icon-videocamera:before {
+	content: "\e011";
+}
+.icon-upload:before {
+	content: "\e012";
+}
+.icon-unlocked:before {
+	content: "\e013";
+}
+.icon-trash-b:before {
+	content: "\e014";
+}
+.icon-trash-a:before {
+	content: "\e015";
+}
+.icon-thumbsup:before {
+	content: "\e016";
+}
+.icon-thumbsdown:before {
+	content: "\e017";
+}
+.icon-stop:before {
+	content: "\e018";
+}
+.icon-star:before {
+	content: "\e019";
+}
+.icon-shuffle:before {
+	content: "\e01a";
+}
+.icon-share:before {
+	content: "\e01b";
+}
+.icon-search:before {
+	content: "\e01c";
+}
+.icon-reply:before {
+	content: "\e01d";
+}
+.icon-reply-all:before {
+	content: "\e01e";
+}
+.icon-refresh:before {
+	content: "\e01f";
+}
+.icon-record:before {
+	content: "\e020";
+}
+.icon-printer:before {
+	content: "\e021";
+}
+.icon-pound:before {
+	content: "\e022";
+}
+.icon-plus:before {
+	content: "\e023";
+}
+.icon-plus-round:before {
+	content: "\e024";
+}
+.icon-plus-circled:before {
+	content: "\e025";
+}
+.icon-play:before {
+	content: "\e026";
+}
+.icon-plane:before {
+	content: "\e027";
+}
+.icon-person:before {
+	content: "\e028";
+}
+.icon-person-stalker:before {
+	content: "\e029";
+}
+.icon-person-add:before {
+	content: "\e02a";
+}
+.icon-pause:before {
+	content: "\e02b";
+}
+.icon-paperclip:before {
+	content: "\e02c";
+}
+.icon-next:before {
+	content: "\e02d";
+}
+.icon-navicon:before {
+	content: "\e02e";
+}
+.icon-navicon-round:before {
+	content: "\e02f";
+}
+.icon-music-note:before {
+	content: "\e030";
+}
+.icon-more:before {
+	content: "\e031";
+}
+.icon-monitor:before {
+	content: "\e032";
+}
+.icon-minus:before {
+	content: "\e033";
+}
+.icon-minus-round:before {
+	content: "\e034";
+}
+.icon-minus-circled:before {
+	content: "\e035";
+}
+.icon-mic-c:before {
+	content: "\e036";
+}
+.icon-mic-b:before {
+	content: "\e037";
+}
+.icon-mic-a:before {
+	content: "\e038";
+}
+.icon-map:before {
+	content: "\e039";
+}
+.icon-man:before {
+	content: "\e03a";
+}
+.icon-loop:before {
+	content: "\e03b";
+}
+.icon-locked:before {
+	content: "\e03c";
+}
+.icon-location:before {
+	content: "\e03d";
+}
+.icon-leaf:before {
+	content: "\e03e";
+}
+.icon-laptop:before {
 	content: "\e03f";
 }
 .icon-ionic:before {
