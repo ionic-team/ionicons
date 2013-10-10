@@ -70,7 +70,7 @@ if (!String.prototype.trim) {
   searchInput.addEventListener("blur", function(){
     iconsUL.className = "";
     this.placeholder = "Search";
-    if(totalResults < 1) {
+    if(totalResults < 1 || this.value.trim() === "") {
       this.value = "";
       showAll();
     }
