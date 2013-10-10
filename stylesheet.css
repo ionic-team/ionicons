@@ -128,19 +128,15 @@ li {
   font-weight: normal;
   cursor: pointer;
 }
-li:hover {
-  background: #eee;
-  color: #4F8EF7;
-}
 li div {
   display: none;
   position: absolute;
   z-index: 1000;
   top: 62px;
-  left: -16px;
-  width: 106px;
+  left: -14px;
+  width: 102px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   background: black;
   color: white;
   padding: 3px 8px 6px;
@@ -157,6 +153,10 @@ li:hover div {
 }
 .search-results li {
   display: none;
+  opacity: 0.6;
+}
+.search-results li:hover {
+  opacity: 1;
 }
 
 .footer {

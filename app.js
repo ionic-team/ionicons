@@ -10,6 +10,7 @@
   pack,
   el,
   icon,
+  totalResults = 0,
   icons = {},
   iconElements = document.getElementsByTagName("li");
 
@@ -51,6 +52,10 @@
   searchInput.addEventListener("blur", function(){
     iconsUL.className = "";
     this.placeholder = "Search";
+    if(totalResults < 1) {
+      this.value = "";
+      showAll();
+    }
   });
   searchInput.addEventListener("keyup", function(e) {
     var keyCode = e.which || e.keyCode;
@@ -64,9 +69,11 @@
   });
 
   function searchQuery(query) {
+    totalResults = 0;
     console.log("query:", query);
     
     if(query === "") {
+      showAll();
       iconsUL.className = "search-init";
       return;
     }
@@ -79,6 +86,7 @@
       for(y = 0; y < icon.tags.length; y++) {
         if( icon.tags[y].indexOf(query) > -1 ) {
           icon.show = true;
+          totalResults++;
           break;
         }
       }
@@ -91,6 +99,12 @@
           icon.el.style.display = "none";
         }
       }
+    }
+  }
+
+  function showAll() {
+    for(x in icons) {
+      icons[x].el.style.display = "inline-block";
     }
   }
 
