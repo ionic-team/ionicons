@@ -1,5 +1,11 @@
 // jQuery? We don't need no stinkin' jQuery
 
+if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^\s+|\s+$/g, '');
+  };
+}
+
 (function(){
 
   // load up the icon object from whats in the DOM
@@ -9,8 +15,8 @@
   tags,
   pack,
   el,
-  icon,
-  totalResults = 0,
+  isResult,
+  totalResults,
   icons = {},
   iconElements = document.getElementsByTagName("li");
 
@@ -37,6 +43,8 @@
     }
     iconElement.addEventListener("click", iconClick);
   }
+  totalResults = icons.length;
+  
   function iconClick(e) {
     alert(e.currentTarget.className);
   }
@@ -72,7 +80,11 @@
     totalResults = 0;
     console.log("query:", query);
     
-    if(query === "") {
+    query = query.trim();
+
+    var terms = query.split(' ');
+
+    if(terms.length < 1) {
       showAll();
       iconsUL.className = "search-init";
       return;
@@ -80,30 +92,47 @@
 
     iconsUL.className = "search-results";
 
+    // set all to show
     for(x in icons) {
-      icon = icons[x];
-      icon.show = false;
-      for(y = 0; y < icon.tags.length; y++) {
-        if( icon.tags[y].indexOf(query) > -1 ) {
-          icon.show = true;
-          totalResults++;
-          break;
+      icons[x].show = true;
+    }
+
+    // filter down for each term in the query
+    for(var t = 0; t < terms.length; t++) {
+      for(x in icons) {
+        if(!icons[x].show) continue;
+        isResult = false;
+        for(y = 0; y < icons[x].tags.length; y++) {
+          if( icons[x].tags[y].indexOf(terms[t]) > -1 ) {
+            isResult = true;
+            break;
+          }
+        }
+        if(!isResult) {
+          icons[x].show = false;
         }
       }
-      if(icon.show) {
-        if(icon.el.style.display !== "inline-block") {
-          icon.el.style.display = "inline-block";
+    }
+
+    // show or hide
+    for(x in icons) {
+      if(icons[x].show) {
+        totalResults++;
+        if(icons[x].el.style.display !== "inline-block") {
+          icons[x].el.style.display = "inline-block";
         }
       } else {
-        if(icon.el.style.display !== "none") {
-          icon.el.style.display = "none";
+        if(icons[x].el.style.display !== "none") {
+          icons[x].el.style.display = "none";
         }
       }
     }
   }
 
   function showAll() {
+    totalResults = icons.length;
     for(x in icons) {
+      icons[x].show = true;
       icons[x].el.style.display = "inline-block";
     }
   }
