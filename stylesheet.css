@@ -80,13 +80,23 @@ a:hover, a:active, a:focus {
   border-radius: 4px;
   text-decoration: none;
 }
+.download a:hover {
+  color: white;
+  background: #4F8EF7;
+}
 
 .footer {
   margin: 30px auto;
   padding: 20px 0;
   max-width: 700px;
   width: 100%;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+  color: #666;
+}
+.links a {
+  display: inline-block;
+  padding: 5px 10px;
 }
 
 
