@@ -37,6 +37,7 @@ if (!String.prototype.trim) {
     };
     tags = iconElement.className.split('-');
     for(y = 0; y < tags.length; y++) {
+      tags[y] = tags[y].trim().toLowerCase();
       if(tags[y].length > 1 && tags[y] !== "icon") {
         icons[ iconElement.className ].tags.push(tags[y]);
       }
@@ -77,10 +78,12 @@ if (!String.prototype.trim) {
   });
 
   function searchQuery(query) {
+    if(!query) return;
+    
     totalResults = 0;
     console.log("query:", query);
     
-    query = query.trim();
+    query = query.trim().toLowerCase();
 
     var terms = query.split(' ');
 
