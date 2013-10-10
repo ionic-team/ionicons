@@ -19,7 +19,6 @@
       iconElement.style.display = 'none';
       continue;
     }
-    el = window.getPseudoElements(iconElement, "before");
     el = document.createElement("input");
     el.value = iconElement.className;
     iconElement.appendChild(el);
