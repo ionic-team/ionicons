@@ -80,6 +80,10 @@ if (!String.prototype.trim) {
     if(keyCode === 27) {
       this.value = "";
       this.blur();
+    } else if(this.value.trim() === "") {
+      showAll();
+      this.value = "";
+      iconsUL.className = "search-init";
     } else {
       iconsUL.className = "search-results";
       searchQuery(this.value);
