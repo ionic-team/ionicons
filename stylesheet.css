@@ -108,6 +108,28 @@ a:hover, a:active, a:focus {
   outline: none;
 }
 
+ul {
+  margin: 70px auto;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  font-size: 1px;
+}
+li {
+  display: inline-block;
+  width: 87px;
+  font-size: 36px;
+  text-align: center;
+  font-weight: normal;
+  padding-top: 18px;
+  padding-bottom: 25px;
+  border-radius: 4px;
+}
+li:hover {
+  background: #eee;
+  color: #4F8EF7;
+}
+
 .footer {
   margin: 30px auto;
   padding: 20px 0;
