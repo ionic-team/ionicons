@@ -70,19 +70,42 @@ a:hover, a:active, a:focus {
   margin-top: 73px;
 }
 
+.download, .search {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 200px;
+  width: 100%;
+}
+
 .download a {
-  display: inline-block;
+  display: block;
   padding: 12px 40px;
   border: 2px solid #4F8EF7;
+  border-radius: 4px;
   background-color: white;
+  text-decoration: none;
   font-weight: bold;
   font-size: 22px;
-  border-radius: 4px;
-  text-decoration: none;
 }
 .download a:hover {
-  color: white;
   background: #4F8EF7;
+  color: white;
+}
+
+.search input {
+  padding: 4px 6px;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  background: #F5F5F5;
+  text-align: center;
+  font-size: 14px;
+  -webkit-appearance: none;
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.search input:focus {
+  outline: none;
 }
 
 .footer {
@@ -90,9 +113,9 @@ a:hover, a:active, a:focus {
   padding: 20px 0;
   max-width: 700px;
   width: 100%;
-  border-top: 1px solid #4e8ef7;
-  font-size: 12px;
+  border-top: 1px solid #ccc;
   color: #666;
+  font-size: 12px;
 }
 .links a {
   display: inline-block;
