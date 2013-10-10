@@ -95,7 +95,6 @@ if (!String.prototype.trim) {
     if(!query) return;
     
     totalResults = 0;
-    console.log("query:", query);
     
     query = query.trim().toLowerCase();
 
