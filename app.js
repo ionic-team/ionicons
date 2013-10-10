@@ -23,6 +23,15 @@ if (!String.prototype.trim) {
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
     
+    if(iconElement.className.length < 6) {
+      continue;
+    }
+
+    if(icons[ iconElement.className ]) {
+      alert(iconElement.className + " already exists");
+      continue;
+    }
+
     el = document.createElement("div");
     el.innerHTML = iconElement.className;
     iconElement.appendChild(el);
