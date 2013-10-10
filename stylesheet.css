@@ -123,24 +123,25 @@ li {
   padding-top: 18px;
   padding-bottom: 25px;
   width: 87px;
-  font-size: 32px;
   text-align: center;
   font-weight: normal;
+  font-size: 32px;
   cursor: pointer;
 }
+li:hover {
+  color: #4F8EF7;
+}
 li div {
-  display: none;
   position: absolute;
-  z-index: 1000;
   top: 62px;
   left: -14px;
+  z-index: 1000;
+  display: none;
+  padding: 3px 8px 6px;
   width: 102px;
+  border-radius: 4px;
   text-align: center;
   font-size: 12px;
-  background: black;
-  color: white;
-  padding: 3px 8px 6px;
-  border-radius: 4px
 }
 li:hover div {
   display: block;
@@ -153,10 +154,6 @@ li:hover div {
 }
 .search-results li {
   display: none;
-  opacity: 0.6;
-}
-.search-results li:hover {
-  opacity: 1;
 }
 
 .footer {
