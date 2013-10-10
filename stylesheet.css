@@ -1,11 +1,4 @@
 /*******************************************************************************
-Slate Theme for GitHub Pages
-by Jason Costello, @jsncostello
-*******************************************************************************/
-
-@import url(pygment_trac.css);
-
-/*******************************************************************************
 MeyerWeb Reset
 *******************************************************************************/
 
@@ -25,71 +18,40 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
   vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+  font: inherit;
 }
 
 ol, ul {
   list-style: none;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*******************************************************************************
-Theme Styles
-*******************************************************************************/
-
 body {
   box-sizing: border-box;
-  color:#373737;
-  font-size: 16px;
+  padding-top: 126px;
   border-top: 1px solid #4F8EF7;
+  background: url("img/ionicons-logo.png") no-repeat center 45px;
+  color:#373737;
   text-align: center;
+  font-size: 16px;
   font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  font-weight: 700;
-  color:#222222;
-  letter-spacing: -1px;
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+         only screen and (   min--moz-device-pixel-ratio: 1.3),
+         only screen and (        min-device-pixel-ratio: 1.3),
+         only screen and (             min-resolution: 124dpi)
+{ 
+  body {
+    background-image: url("img/ionicons-logo@2x.png");
+    background-size: 110px 67px;
+  }
 }
 
 h1 {
   color: #999;
-  font-size: 16px;
   font-weight: normal;
-}
-
-h2 {
-  padding-bottom: 10px;
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 21px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
   font-size: 16px;
 }
 
@@ -98,116 +60,32 @@ p {
 }
 
 a {
-  text-decoration: none;
-  text-shadow: none;
   color: #4F8EF7;
-
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -moz-transition: text-shadow 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -o-transition: text-shadow 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -ms-transition: text-shadow 0.5s ease;
+}
+a:hover, a:active, a:focus {
+  text-decoration: none;
 }
 
-em {
-  font-style: italic;
+.download {
+  margin-top: 73px;
 }
 
-strong {
-  font-weight: bold;
-}
-
-ul, ol, dl {
-  margin-bottom: 15px
-}
-
-ul li {
-  list-style: inside;
-  padding-left: 20px;
-}
-
-ol li {
-  list-style: decimal inside;
-  padding-left: 20px;
-}
-
-dl dt {
-  font-weight: bold;
-}
-
-dl dd {
-  padding-left: 20px;
-  font-style: italic;
-}
-
-dl p {
-  padding-left: 20px;
-  font-style: italic;
-}
-
-
-
-/*******************************************************************************
-Small Device Styles
-*******************************************************************************/
-
-@media screen and (max-width: 480px) {
-  body {
-    font-size:14px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 21px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
-
-  h5 {
-    font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12px;
-  }
-
-  code, pre {
-    min-width: 320px;
-    max-width: 480px;
-    font-size: 11px;
-  }
-
-}
-
-.header  {
-  margin: 10px auto;
-  max-width: 200px;
-  text-align: center;
-}
 .download a {
   display: inline-block;
-  background-color: white;
-  border: 2px solid #4F8EF7;
   padding: 12px 40px;
+  border: 2px solid #4F8EF7;
+  background-color: white;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 4px;
+  text-decoration: none;
 }
+
 .footer {
   margin: 30px auto;
   padding: 20px 0;
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   border-top: 1px solid #ddd;
 }
 
