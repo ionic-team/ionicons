@@ -96,14 +96,41 @@ input {
 input:focus {
   outline: none;
 }
+::-webkit-input-placeholder {
+   color: #999;
+   padding-left: 26px;
+}
+:-moz-placeholder {
+   color: #999;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+:-ms-input-placeholder {  
+   color: #999;
+}
+
+.search {
+  position: relative;
+  background: #F5F5F5;
+}
 .search input {
   padding: 4px 6px;
-  width: 100%;
+  width: 175px;
   border: 0;
   border-radius: 4px;
   background: #F5F5F5;
   text-align: center;
   font-size: 14px;
+}
+.search input:focus + i {
+  display: none;
+}
+.search i {
+  position: absolute;
+  top: 6px;
+  left: 68px;
+  color: #999;
 }
 
 ul {
