@@ -148,10 +148,10 @@ ul {
 li {
   position: relative;
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 37px;
-  margin: 12px 25px;
+  margin: 17px 25px;
   list-style: none;
   text-align: center;
   font-weight: normal;
