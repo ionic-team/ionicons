@@ -127,7 +127,7 @@ input:focus {
   text-align: center;
   font-size: 14px;
 }
-.search input:focus + i {
+.search input.has-text + i {
   display: none;
 }
 .search i {
@@ -138,7 +138,7 @@ input:focus {
 }
 
 ul {
-  margin: 70px auto;
+  margin: 50px auto;
   max-width: 700px;
   width: 100%;
   list-style: none;
@@ -148,31 +148,30 @@ ul {
 li {
   position: relative;
   display: inline-block;
-  padding-top: 18px;
-  padding-bottom: 25px;
-  width: 87px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 37px;
+  margin: 12px 25px;
   list-style: none;
   text-align: center;
   font-weight: normal;
   font-size: 32px;
   cursor: pointer;
 }
-li.zeroclipboard-is-hover {
+li.is-hover {
   color: #4F8EF7;
 }
 li div {
   position: absolute;
-  top: 50px;
-  left: -14px;
+  top: 46px;
+  left: -36px;
   z-index: 1000;
   display: none;
-  padding: 3px 8px 6px;
-  width: 102px;
-  border-radius: 4px;
+  width: 110px;
   text-align: center;
   font-size: 12px;
 }
-li.zeroclipboard-is-hover div {
+li.is-hover div {
   display: block;
 }
 #icons {

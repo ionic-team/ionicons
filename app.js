@@ -24,6 +24,8 @@ if (!String.prototype.trim) {
   iconsUL = document.getElementById("icons"),
   clipboardInfo = document.getElementById("clipboard-info");
 
+  ZeroClipboard.setDefaults({ hoverClass: "is-hover", forceHandCursor: true });
+
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
     
@@ -58,12 +60,12 @@ if (!String.prototype.trim) {
         icons[ iconElement.className ].tags.push(tags[y]);
       }
     }
-    iconElement.addEventListener("click", iconClick);
+    icons[ iconElement.className ].clip.on( 'dataRequested', iconClick);
   }
   totalResults = icons.length;
   
-  function iconClick(e) {
-    clipboardInfo.innerHTML = '<strong>' + e.currentTarget.className + '</strong> copied to clipboard';
+  function iconClick(client, args) {
+    clipboardInfo.innerHTML = '<strong>' + this.className.split(' ')[0] + '</strong> copied to clipboard';
     clipboardInfo.className = 'show-clipboard';
     clearTimeout(clipboardTimer);
     clipboardTimer = setTimeout(function(){
@@ -74,6 +76,7 @@ if (!String.prototype.trim) {
   // search
   searchInput.addEventListener("focus", function(){
     iconsUL.className = "search-init";
+    searchInput.className = "has-text"
     this.placeholder = "";
   });
   searchInput.addEventListener("blur", function(){
@@ -81,6 +84,7 @@ if (!String.prototype.trim) {
     this.placeholder = "Search";
     if(totalResults < 1 || this.value.trim() === "") {
       this.value = "";
+      this.className = "";
       showAll();
     }
   });
@@ -88,6 +92,7 @@ if (!String.prototype.trim) {
     var keyCode = e.which || e.keyCode;
     if(keyCode === 27) {
       this.value = "";
+      searchInput.className = "";
       this.blur();
     } else if(this.value.trim() === "") {
       showAll();
@@ -116,6 +121,7 @@ if (!String.prototype.trim) {
     }
 
     iconsUL.className = "search-results";
+    searchInput.className = "has-text";
 
     // set all to show
     for(x in icons) {
