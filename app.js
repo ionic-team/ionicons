@@ -61,6 +61,7 @@ if (!String.prototype.trim) {
       }
     }
     icons[ iconElement.className ].clip.on( 'dataRequested', iconClick);
+    icons[ iconElement.className ].clip.on( 'mouseover', iconMouseOver);
   }
   totalResults = icons.length;
   
@@ -74,12 +75,14 @@ if (!String.prototype.trim) {
   }
 
   // search
-  searchInput.addEventListener("focus", function(){
+  function onSearchFocus(){
     iconsUL.className = "search-init";
     searchInput.className = "has-text"
     this.placeholder = "";
-  });
-  searchInput.addEventListener("blur", function(){
+    cleanIsHover();
+  }
+  addEvent(searchInput, "focus", onSearchFocus);
+  function onSearchBlur(){
     iconsUL.className = "";
     this.placeholder = "Search";
     if(totalResults < 1 || this.value.trim() === "") {
@@ -87,8 +90,10 @@ if (!String.prototype.trim) {
       this.className = "";
       showAll();
     }
-  });
-  function onKeyUp(e) {
+    cleanIsHover();
+  }
+  addEvent(searchInput, "blur", onSearchBlur);
+  function onSearchKeyUp(e) {
     var keyCode = e.which || e.keyCode;
     if(keyCode === 27) {
       this.value = "";
@@ -98,12 +103,14 @@ if (!String.prototype.trim) {
       showAll();
       this.value = "";
       iconsUL.className = "search-init";
+      cleanIsHover();
     } else {
+      cleanIsHover();
       iconsUL.className = "search-results";
       searchQuery(this.value);
     }
   }
-  searchInput.addEventListener("keyup", onKeyUp);
+  addEvent(searchInput, "keyup", onSearchKeyUp);
 
   function searchQuery(query) {
     if(!query) return;
@@ -152,6 +159,7 @@ if (!String.prototype.trim) {
         if(icons[x].el.style.display !== "inline-block") {
           icons[x].el.style.display = "inline-block";
         }
+        icons[x].el.className = icons[x].el.className.replace(' is-hover', '');
       } else {
         if(icons[x].el.style.display !== "none") {
           icons[x].el.style.display = "none";
@@ -166,6 +174,34 @@ if (!String.prototype.trim) {
       icons[x].show = true;
       if(icons[x].el.style.display !== "inline-block") {
         icons[x].el.style.display = "inline-block";
+      }
+    }
+  }
+
+  function addEvent(el, ev, fn) {
+    if (el.addEventListener) {
+        el.addEventListener(ev, fn, false);
+    } else if (el.attachEvent) {
+        el.attachEvent('on' + ev, fn);
+    } else {
+        el['on' + ev] = fn;
+    }
+  }
+
+  // these are hacks because the flash object from zero clipboard
+  // gets confused and sometimes stays in hover state
+  function iconMouseOver(client, args) {
+    for(x in icons) {
+      if(icons[x].el.className.indexOf('is-hover') > -1 && this.className !== icons[x].el.className) {
+        icons[x].el.className = icons[x].el.className.replace(' is-hover', '');
+      }
+    }
+  }
+
+  function cleanIsHover() {
+    for(x in icons) {
+      if(icons[x].el.className.indexOf('is-hover') > -1) {
+        icons[x].el.className = icons[x].el.className.replace(' is-hover', '');
       }
     }
   }
