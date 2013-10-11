@@ -22,10 +22,6 @@ time, mark, audio, video {
   font: inherit;
 }
 
-ol, ul {
-  list-style: none;
-}
-
 body {
   box-sizing: border-box;
   padding-top: 126px;
@@ -92,6 +88,14 @@ a:hover, a:active, a:focus {
   color: white;
 }
 
+input {
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+}
+input:focus {
+  outline: none;
+}
 .search input {
   padding: 4px 6px;
   width: 100%;
@@ -101,19 +105,12 @@ a:hover, a:active, a:focus {
   text-align: center;
   font-size: 14px;
 }
-input {
-  font-weight: normal;
-  font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-appearance: none;
-}
-input:focus {
-  outline: none;
-}
 
 ul {
   margin: 70px auto;
   max-width: 700px;
   width: 100%;
+  list-style: none;
   text-align: left;
   font-size: 1px;
 }
@@ -123,6 +120,7 @@ li {
   padding-top: 18px;
   padding-bottom: 25px;
   width: 87px;
+  list-style: none;
   text-align: center;
   font-weight: normal;
   font-size: 32px;
@@ -133,7 +131,7 @@ li:hover {
 }
 li div {
   position: absolute;
-  top: 52px;
+  top: 50px;
   left: -14px;
   z-index: 1000;
   display: none;
