@@ -49,7 +49,7 @@ if (!String.prototype.trim) {
     tags = iconElement.className.split('-');
     for(y = 0; y < tags.length; y++) {
       tags[y] = tags[y].trim().toLowerCase();
-      if(tags[y].length > 1 && tags[y] !== "icon") {
+      if(tags[y].length > 0 && tags[y] !== "icon") {
         icons[ iconElement.className ].tags.push(tags[y]);
       }
     }
