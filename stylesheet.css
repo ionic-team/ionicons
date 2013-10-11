@@ -51,6 +51,10 @@ h1 {
   font-size: 16px;
 }
 
+strong {
+  font-weight: bold;
+}
+
 p {
   margin: 10px 0 15px 0;
 }
@@ -97,8 +101,8 @@ input:focus {
   outline: none;
 }
 ::-webkit-input-placeholder {
-   color: #999;
    padding-left: 26px;
+   color: #999;
 }
 :-moz-placeholder {
    color: #999;  
@@ -193,6 +197,23 @@ li:hover div {
 .links a {
   display: inline-block;
   padding: 5px 10px;
+}
+
+#clipboard-info {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 18px;
+  border: 1px solid #4e8ef7;
+  border-radius: 4px;
+  background: #EDF3FF;
+  color: #4e8ef7;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+#clipboard-info.show-clipboard {
+  opacity: 1;
 }
 
 

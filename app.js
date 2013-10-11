@@ -17,10 +17,12 @@ if (!String.prototype.trim) {
   el,
   isResult,
   totalResults,
+  clipboardTimer,
   icons = {},
   iconElements = document.getElementsByTagName("li"),
   searchInput = document.getElementById("search"),
-  iconsUL = document.getElementById("icons");
+  iconsUL = document.getElementById("icons"),
+  clipboardInfo = document.getElementById("clipboard-info");
 
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
@@ -58,9 +60,13 @@ if (!String.prototype.trim) {
   totalResults = icons.length;
   
   function iconClick(e) {
-    alert(e.currentTarget.className);
+    clipboardInfo.innerHTML = '<strong>' + e.currentTarget.className + '</strong> copied to clipboard';
+    clipboardInfo.className = 'show-clipboard';
+    clearTimeout(clipboardTimer);
+    clipboardTimer = setTimeout(function(){
+      clipboardInfo.className = '';
+    }, 2500);
   }
-
 
   // search
   searchInput.addEventListener("focus", function(){
