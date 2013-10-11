@@ -36,6 +36,8 @@ if (!String.prototype.trim) {
       continue;
     }
 
+    iconElement.setAttribute('data-clipboard-text', iconElement.className);
+
     el = document.createElement("div");
     el.innerHTML = iconElement.className;
     iconElement.appendChild(el);
@@ -46,7 +48,8 @@ if (!String.prototype.trim) {
       tags: (tags ? tags.split(',') : []),
       pack: (pack ? pack : 'default'),
       el: iconElement,
-      show: true
+      show: true,
+      clip: new ZeroClipboard(iconElement)
     };
     tags = iconElement.className.split('-');
     for(y = 0; y < tags.length; y++) {
@@ -60,9 +63,6 @@ if (!String.prototype.trim) {
   totalResults = icons.length;
   
   function iconClick(e) {
-    var clip = new ZeroClipboard();
-    clip.setText(e.currentTarget.className);
-
     clipboardInfo.innerHTML = '<strong>' + e.currentTarget.className + '</strong> copied to clipboard';
     clipboardInfo.className = 'show-clipboard';
     clearTimeout(clipboardTimer);
