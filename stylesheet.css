@@ -236,6 +236,7 @@ li.is-hover div {
   }
   ul {
     width: 320px;
+    padding: 0;
   }
   li {
     margin: 0;
