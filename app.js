@@ -60,6 +60,9 @@ if (!String.prototype.trim) {
   totalResults = icons.length;
   
   function iconClick(e) {
+    var clip = new ZeroClipboard();
+    clip.setText(e.currentTarget.className);
+
     clipboardInfo.innerHTML = '<strong>' + e.currentTarget.className + '</strong> copied to clipboard';
     clipboardInfo.className = 'show-clipboard';
     clearTimeout(clipboardTimer);
