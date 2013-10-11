@@ -153,11 +153,12 @@ ul {
 }
 li {
   position: relative;
+  z-index: 0;
   display: inline-block;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  width: 42px;
   margin: 9px 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 42px;
   list-style: none;
   text-align: center;
   font-weight: normal;
@@ -173,6 +174,7 @@ li div {
   left: -36px;
   z-index: 1000;
   display: none;
+  padding: 2px 0;
   width: 110px;
   text-align: center;
   font-size: 12px;
