@@ -145,6 +145,7 @@ input:focus {
 
 ul {
   margin: 40px auto;
+  padding-left: 5px;
   max-width: 700px;
   width: 100%;
   list-style: none;
@@ -223,6 +224,27 @@ li.is-hover div {
   opacity: 1;
 }
 
+@media (max-width: 568px) {
+  h1 {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  .download {
+    display: none;
+  }
+  ul {
+    width: 320px;
+  }
+  li {
+    margin: 0;
+    width:45px;
+  }
+  #global-zeroclipboard-html-bridge {
+    display: none;
+  }
+}
 
 /* @license
  * MyFonts Webfont Build ID 2656303, 2013-10-02T11:03:28-0400
