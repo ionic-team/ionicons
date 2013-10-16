@@ -67,9 +67,16 @@ p {
 
 a {
   color: #4F8EF7;
+  text-decoration: none;
+  opacity: .7;
+  transition-property: color;
+  transition-property: opacity;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
 }
 a:hover, a:active, a:focus {
-  text-decoration: none;
+  text-decoration: underline;
+  opacity: 1;
 }
 
 .download {
