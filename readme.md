@@ -1,6 +1,6 @@
 # Ionicons
 
-#### The premium icon font for [Ionic Framework](http://ionicframework.com/)
+The premium icon font for [Ionic Framework](http://ionicframework.com/). Visit [ionicons.com](http://ionicons.com) for a complete list of icons.
 
 
 ## Getting Started
@@ -16,7 +16,7 @@
 
 You can use [ionicons.com](http://ionicons.com) to easily find the icon you want to use. Once you've copied the desired icon's CSS classname, simply add the icon's classname to an HTML element.
 
-    <i class="icon-home></i>
+    <i class="icon-home"></i>
 
 
 ## License
