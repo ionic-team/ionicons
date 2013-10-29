@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'ionicons';
+	font-family: 'Ionicons';
 	src:url('fonts/ionicons.eot');
 	src:url('fonts/ionicons.eot?#iefix') format('embedded-opentype'),
 		url('fonts/ionicons.ttf') format('truetype'),
@@ -10,7 +10,7 @@
 }
 
 [class*="icon-"] {
-	font-family: 'ionicons';
+	font-family: 'Ionicons';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
