@@ -14,17 +14,13 @@ if (!String.prototype.trim) {
   iconElement,
   tags,
   pack,
-  el,
   isResult,
   totalResults,
   clipboardTimer,
   icons = {},
   iconElements = document.getElementsByTagName("li"),
   searchInput = document.getElementById("search"),
-  iconsUL = document.getElementById("icons"),
-  clipboardInfo = document.getElementById("clipboard-info");
-
-  ZeroClipboard.setDefaults({ hoverClass: "is-hover", forceHandCursor: true });
+  iconsUL = document.getElementById("icons");
 
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
@@ -38,48 +34,36 @@ if (!String.prototype.trim) {
       continue;
     }
 
-    iconElement.setAttribute('data-clipboard-text', iconElement.className);
-
-    el = document.createElement("div");
-    el.innerHTML = iconElement.className;
-    iconElement.appendChild(el);
-
     tags = iconElement.getAttribute("data-tags");
     pack = iconElement.getAttribute("data-pack");
-    icons[ iconElement.className ] = {
+
+    iconElement.icon = icons[ iconElement.className ] = {
+      name: iconElement.className,
       tags: (tags ? tags.split(',') : []),
       pack: (pack ? pack : 'default'),
       el: iconElement,
       show: true,
-      clip: new ZeroClipboard(iconElement)
+      code: getContentForIcon(iconElement.className)
     };
+
     tags = iconElement.className.split('-');
     for(y = 0; y < tags.length; y++) {
       tags[y] = tags[y].trim().toLowerCase();
       if(tags[y].length > 0 && tags[y] !== "icon") {
-        icons[ iconElement.className ].tags.push(tags[y]);
+        iconElement.icon.tags.push(tags[y]);
       }
     }
-    icons[ iconElement.className ].clip.on( 'dataRequested', iconClick);
-    icons[ iconElement.className ].clip.on( 'mouseover', iconMouseOver);
+    addEvent(iconElement, 'click', panelClick);
+    addEvent(iconElement, 'mouseover', iconMouseOver);
   }
   totalResults = icons.length;
-  
-  function iconClick(client, args) {
-    clipboardInfo.innerHTML = '<strong>' + this.className.split(' ')[0] + '</strong> copied to clipboard';
-    clipboardInfo.className = 'show-clipboard';
-    clearTimeout(clipboardTimer);
-    clipboardTimer = setTimeout(function(){
-      clipboardInfo.className = '';
-    }, 2500);
-  }
 
   // search
   function onSearchFocus(){
     iconsUL.className = "search-init";
     searchInput.className = "has-text"
     this.placeholder = "";
-    cleanIsHover();
+    hideIconPanel();
   }
   addEvent(searchInput, "focus", onSearchFocus);
   function onSearchBlur(){
@@ -90,7 +74,7 @@ if (!String.prototype.trim) {
       this.className = "";
       showAll();
     }
-    cleanIsHover();
+    hideIconPanel();
   }
   addEvent(searchInput, "blur", onSearchBlur);
   function onSearchKeyUp(e) {
@@ -103,9 +87,9 @@ if (!String.prototype.trim) {
       showAll();
       this.value = "";
       iconsUL.className = "search-init";
-      cleanIsHover();
+      hideIconPanel();
     } else {
-      cleanIsHover();
+      hideIconPanel();
       iconsUL.className = "search-results";
       searchQuery(this.value);
     }
@@ -188,20 +172,51 @@ if (!String.prototype.trim) {
     }
   }
 
-  // these are hacks because the flash object from zero clipboard
-  // gets confused and sometimes stays in hover state
-  function iconMouseOver(client, args) {
+  var iconPanel = document.getElementById("icon-panel");
+  var iconName = document.getElementById("icon-name");
+  var iconCode = document.getElementById("icon-code");
+
+  var mouseOverTimeout;
+  function iconMouseOver(e) {
+    if(e.currentTarget.className.indexOf("active") === -1) {
+      clearTimeout(mouseOverTimeout);
+      mouseOverTimeout = setTimeout(hideIconPanel, 20);
+    }
+  }
+
+  function panelClick(e) {
     for(x in icons) {
-      if(icons[x].el.className.indexOf('is-hover') > -1 && this.className !== icons[x].el.className) {
-        icons[x].el.className = icons[x].el.className.replace(' is-hover', '');
+      if(icons[x].el.className.indexOf("active") > -1) {
+        icons[x].el.className = icons[x].el.className.replace(" active", "");
+      }
+    }
+    iconPanel.style.top = (e.currentTarget.offsetTop + 60) + "px";
+    iconPanel.style.left = (e.currentTarget.offsetLeft - 85) + "px";
+    e.currentTarget.className += " active";
+    iconName.innerHTML = e.currentTarget.icon.name;
+    iconCode.innerHTML = e.currentTarget.icon.code;
+  }
+
+  function hideIconPanel() {
+    if(iconPanel.style.top !== "-9999px") {
+      iconPanel.style.top = "-9999px";
+    }
+    for(x in icons) {
+      if(icons[x].el.className.indexOf("active") > -1) {
+        icons[x].el.className = icons[x].el.className.replace(" active", "");
       }
     }
   }
 
-  function cleanIsHover() {
-    for(x in icons) {
-      if(icons[x].el.className.indexOf('is-hover') > -1) {
-        icons[x].el.className = icons[x].el.className.replace(' is-hover', '');
+  function getContentForIcon(className) {
+    var rules = document.styleSheets[0].cssRules;
+    for(var j=0; j<rules.length; j++) {
+      if(rules[j].selectorText === "." + className + "::before") {
+        var content = rules[j].style["content"];
+        if(content) {
+          var decimalValue = content.charCodeAt().toString(10).replace(/\D/g, ''); //clean the value
+          return "\\" + Number(decimalValue).toString(16);
+        }
       }
     }
   }

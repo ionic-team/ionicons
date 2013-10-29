@@ -163,33 +163,43 @@ li {
   position: relative;
   z-index: 0;
   display: inline-block;
-  margin: 9px 22px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 18px 22px 20px;
   width: 42px;
   list-style: none;
   text-align: center;
   font-weight: normal;
   font-size: 32px;
   cursor: pointer;
+  border-radius: 4px;
 }
-li.is-hover {
+li:hover {
   color: #4F8EF7;
 }
-li div {
+li.active {
+  color: #4F8EF7;
+}
+
+#icon-panel {
   position: absolute;
-  top: 46px;
-  left: -36px;
-  z-index: 1000;
-  display: none;
-  padding: 2px 0;
-  width: 110px;
+  top: -9999px;
+  left: -9999px;
+  background: white;
+  opacity: .96;
+  width: 260px;
+  height: 58px;
+  padding: 10px 2px;
+  border-radius: 4px;
   text-align: center;
+  font-size: 14px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+#icon-code {
   font-size: 12px;
+  padding-top: 10px;
 }
-li.is-hover div {
-  display: block;
-}
+
 #icons {
   transition: opacity .2s ease-in-out;
 }
@@ -214,23 +224,6 @@ li.is-hover div {
   padding: 5px 10px;
 }
 
-#clipboard-info {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 8px 18px;
-  border: 1px solid #4e8ef7;
-  border-radius: 4px;
-  background: #EDF3FF;
-  color: #4e8ef7;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-}
-#clipboard-info.show-clipboard {
-  opacity: 1;
-}
-
 @media (max-width: 568px) {
   h1 {
     font-size: 14px;
@@ -247,9 +240,13 @@ li.is-hover div {
   }
   li {
     margin: 0;
+    padding: 10px 0;
     width:45px;
   }
-  #global-zeroclipboard-html-bridge {
+  li:hover {
+    color: black;
+  }
+  #icon-panel {
     display: none;
   }
 }

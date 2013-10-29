@@ -1,0 +1,4 @@
+_site
+.*.sw*
+.sass-cache
+.DS_Store
