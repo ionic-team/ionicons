@@ -13,6 +13,10 @@ We intend for this icon pack to be used with [Ionic](http://ionicframework.com/)
  4. Ensure the font urls within `ionicons.css` properly reference the `font` path within your project.
  5. Include a reference to the `ionicons.css` file from every webpage you need to use it.
 
+Or install with [component](https://github.com/component/component):
+
+    $ component install driftyco/ionicons
+
 
 ## HTML Example
 
