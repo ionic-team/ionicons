@@ -81,6 +81,7 @@ a:hover, a:active, a:focus {
 
 .download {
   margin-top: 60px;
+  margin-bottom: 10px;
 }
 
 .download, .search {
@@ -104,8 +105,11 @@ a:hover, a:active, a:focus {
   background: #4F8EF7;
   color: white;
 }
-.download .version {
-  font-size: 10px;
+.version {
+  margin: 2px auto;
+  font-size: 12px;
+  color: #ccc;
+  font-weight: bold;
 }
 
 input {
