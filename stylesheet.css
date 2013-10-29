@@ -93,7 +93,7 @@ a:hover, a:active, a:focus {
 
 .download a {
   display: block;
-  padding: 12px 0 12px 21px;
+  padding: 12px 0;
   border: 2px solid #4F8EF7;
   border-radius: 4px;
   background-color: white;
