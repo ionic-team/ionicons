@@ -209,16 +209,19 @@ if (!String.prototype.trim) {
   }
 
   function getContentForIcon(className) {
-    var rules = document.styleSheets[0].cssRules;
-    for(var j=0; j<rules.length; j++) {
-      if(rules[j].selectorText === "." + className + "::before") {
-        var content = rules[j].style["content"];
-        if(content) {
-          var decimalValue = content.charCodeAt().toString(10).replace(/\D/g, ''); //clean the value
-          return "\\" + Number(decimalValue).toString(16);
+    try {
+      var rules = document.styleSheets[0].cssRules;
+      for(var j=0; j<rules.length; j++) {
+        if(rules[j].selectorText === "." + className + "::before") {
+          var content = rules[j].style["content"];
+          if(content) {
+            var decimalValue = content.charCodeAt().toString(10).replace(/\D/g, ''); //clean the value
+            return "\\" + Number(decimalValue).toString(16);
+          }
         }
       }
-    }
+    } catch(e) {}
   }
+
 
 })();
