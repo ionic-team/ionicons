@@ -186,6 +186,10 @@ if (!String.prototype.trim) {
 
   function panelClick(e) {
     if(e.currentTarget && e.currentTarget.icon) {
+      if(e.currentTarget.className.indexOf("active") > -1) {
+        hideIconPanel();
+        return;
+      }
       for(x in icons) {
         if(icons[x].el.className.indexOf("active") > -1) {
           icons[x].el.className = icons[x].el.className.replace(" active", "");
