@@ -185,16 +185,18 @@ if (!String.prototype.trim) {
   }
 
   function panelClick(e) {
-    for(x in icons) {
-      if(icons[x].el.className.indexOf("active") > -1) {
-        icons[x].el.className = icons[x].el.className.replace(" active", "");
+    if(e.currentTarget && e.currentTarget.icon) {
+      for(x in icons) {
+        if(icons[x].el.className.indexOf("active") > -1) {
+          icons[x].el.className = icons[x].el.className.replace(" active", "");
+        }
       }
+      iconPanel.style.top = (e.currentTarget.offsetTop + 60) + "px";
+      iconPanel.style.left = (e.currentTarget.offsetLeft - 85) + "px";
+      e.currentTarget.className += " active";
+      iconName.innerHTML = e.currentTarget.icon.name;
+      iconCode.innerHTML = (e.currentTarget.icon.code || "");
     }
-    iconPanel.style.top = (e.currentTarget.offsetTop + 60) + "px";
-    iconPanel.style.left = (e.currentTarget.offsetLeft - 85) + "px";
-    e.currentTarget.className += " active";
-    iconName.innerHTML = e.currentTarget.icon.name;
-    iconCode.innerHTML = e.currentTarget.icon.code;
   }
 
   function hideIconPanel() {
