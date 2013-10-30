@@ -109,7 +109,7 @@ a:hover, a:active, a:focus {
   margin: 2px auto;
   font-size: 12px;
   color: #ccc;
-  font-weight: bold;
+  font-family: "AvenirNextLTPro-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 input {
