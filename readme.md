@@ -1,6 +1,8 @@
 # Ionicons
 
-The premium icon font for [Ionic Framework](http://ionicframework.com/). Visit [ionicons.com](http://ionicons.com) and  check out the search feature, which has keywords identifying common icon names and styles. For example, if you search for “arrow” we call up every icon that could possibly be used as an arrow. We’ve also included each icon’s class name for easy copy/pasting when you’re developing!
+
+
+The premium icon font for [Ionic Framework](http://ionicframework.com/). Designed by [@helloimben](https://twitter.com/helloimben). Visit [ionicons.com](http://ionicons.com) and  check out the search feature, which has keywords identifying common icon names and styles. For example, if you search for “arrow” we call up every icon that could possibly be used as an arrow. We’ve also included each icon’s class name for easy copy/pasting when you’re developing!
 
 We intend for this icon pack to be used with [Ionic](http://ionicframework.com/), but it’s by no means limited to it. Use these icons wherever you see fit, personal or commercial. They are free to use and licensed under [MIT](http://opensource.org/licenses/MIT).
 
@@ -33,5 +35,3 @@ You can use [ionicons.com](http://ionicons.com) to easily find the icon you want
 
 Ionicons is licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-
-Created by [@helloimben](https://twitter.com/helloimben) for the [Ionic Framework](http://ionicframework.com/).
