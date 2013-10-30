@@ -468,6 +468,7 @@
 	content: "\e70b";
 }
 .icon-chatboxes:before {
+	content: "\e70c";
 }
 .icon-chatbox-working:before {
 	content: "\e70d";
