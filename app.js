@@ -143,7 +143,6 @@ if (!String.prototype.trim) {
         if(icons[x].el.style.display !== "inline-block") {
           icons[x].el.style.display = "inline-block";
         }
-        icons[x].el.className = icons[x].el.className.replace(' is-hover', '');
       } else {
         if(icons[x].el.style.display !== "none") {
           icons[x].el.style.display = "none";
