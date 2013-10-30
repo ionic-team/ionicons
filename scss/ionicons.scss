@@ -1,27 +1,31 @@
-@font-face {
-	font-family: 'ionicons';
-	src:url('fonts/ionicons.eot');
-	src:url('fonts/ionicons.eot?#iefix') format('embedded-opentype'),
-		url('fonts/ionicons.ttf') format('truetype'),
-		url('fonts/ionicons.woff') format('woff'),
-		url('fonts/ionicons.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+/*
+ * Variables
+ */
+$icon-font-path: "../fonts"
 
-.ion {
-	font-family: 'ionicons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+@font-face 
+	font-family: 'ionicons'
+	src:url('#{$icon-font-path}/ionicons.eot')
+	src:url('#{icon-font-path}/ionicons.eot?#iefix') format('embedded-opentype'),
+		url('#{icon-font-path}/ionicons.ttf') format('truetype'),
+		url('#{icon-font-path}/ionicons.woff') format('woff'),
+		url('#{icon-font-path}/ionicons.svg#icomoon') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+.ion 
+	font-family: 'ionicons'
+	speak: none
+	font-style: normal
+	font-weight: normal
+	font-variant: normal
+	text-transform: none
+	line-height: 1
 
 	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 
 .ion.icon-ios7-folder:before {
 	content: "\e60c";
