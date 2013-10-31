@@ -10,7 +10,7 @@
 	"designerURL": "http://bensperry.com",
 	"license": "MIT",
 	"licenseURL": "http://opensource.org/licenses/MIT",
-	"version": "Version 0.0",
+	"version": "Version 1.2.3",
 	"fontId": "Ionicons",
 	"psName": "Ionicons",
 	"subFamily": "Regular",
@@ -20,7 +20,7 @@
 </json>
 </metadata>
 <defs>
-<font id="Ionicons" horiz-adv-x="1024">
+<font id="ionicons" horiz-adv-x="1024">
 <font-face units-per-em="1024" ascent="960" descent="-64" />
 <missing-glyph horiz-adv-x="1024" />
 <glyph unicode="&#x20;" d="" horiz-adv-x="512" />
