@@ -33,7 +33,6 @@ def generate_scss(data):
   font_name = data['name']
   font_version = data['version']
   css_prefix = data['prefix']
-  scss_file_path = os.path.join(SCSS_FOLDER_PATH, '%s.scss' % (font_name.lower()))
   variables_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-variables.scss')
   icons_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-icons.scss')
 
@@ -41,6 +40,7 @@ def generate_scss(data):
   d.append('// Ionicons Variables')
   d.append('// --------------------------\n')
   d.append('$ionicons-font-path: "../fonts" !default;')
+  d.append('$ionicons-font-family: "%s" !default;' % (font_name) )
   d.append('$ionicons-version: "%s" !default;' % (font_version) )
   d.append('$ionicons-prefix: %s !default;' % (css_prefix) )
   d.append('')
@@ -55,24 +55,15 @@ def generate_scss(data):
   d.append('// Ionicons Icons')
   d.append('// --------------------------\n')
 
-  group = ['.ion', '.%s' % (data['name'].lower())]
+  group = [ '.%s' % (data['name'].lower()) ]
   for ionicon in data['icons']:
     group.append('.%s%s' % (css_prefix, ionicon['name']) )
 
   d.append( ',\n'.join(group) )
 
   d.append('{')
-  d.append(' font-family: "%s";' % (font_name) )
-  d.append(' speak: none;')
-  d.append(' font-style: normal;')
-  d.append(' font-weight: normal;')
-  d.append(' font-variant: normal;')
-  d.append(' text-transform: none;')
-  d.append(' line-height: 1;')
-  d.append(' -webkit-font-smoothing: antialiased;')
-  d.append(' -moz-osx-font-smoothing: grayscale;')
+  d.append('  @extend .ion;')
   d.append('}')
-  d.append('')
 
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
@@ -82,14 +73,15 @@ def generate_scss(data):
   f.write( '\n'.join(d) )
   f.close()
 
-  generate_css_from_scss(scss_file_path, font_name)
+  generate_css_from_scss(data)
 
 
-def generate_css_from_scss(scss_file_path, font_name):
+def generate_css_from_scss(data):
   print "Generate CSS From SCSS"
 
-  css_file_path = os.path.join(CSS_FOLDER_PATH, '%s.css' % (font_name.lower()))
-  css_min_file_path = os.path.join(CSS_FOLDER_PATH, '%s.min.css' % (font_name.lower()))
+  scss_file_path = os.path.join(SCSS_FOLDER_PATH, '%s.scss' % (data['name'].lower()))
+  css_file_path = os.path.join(CSS_FOLDER_PATH, '%s.css' % (data['name'].lower()))
+  css_min_file_path = os.path.join(CSS_FOLDER_PATH, '%s.min.css' % (data['name'].lower()))
 
   cmd = "sass %s %s" % (scss_file_path, css_file_path)
   call(cmd, shell=True)
