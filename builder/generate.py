@@ -34,25 +34,12 @@ def generate_scss(data):
   font_version = data['version']
   css_prefix = data['prefix']
   scss_file_path = os.path.join(SCSS_FOLDER_PATH, '%s.scss' % (font_name.lower()))
-  variables_file_path = os.path.join(SCSS_FOLDER_PATH, '_variables.scss')
-  path_file_path = os.path.join(SCSS_FOLDER_PATH, '_path.scss')
-  icons_file_path = os.path.join(SCSS_FOLDER_PATH, '_icons.scss')
-
-  d = []
-  append_license(font_name, font_version, d)
-  d.append('')
-  d.append('@import "variables";')
-  d.append('@import "path";')
-  d.append('@import "animation";')
-  d.append('@import "icons";')
-  f = open(scss_file_path, 'w')
-  f.write( '\n'.join(d) )
-  f.close()
+  variables_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-variables.scss')
+  icons_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-icons.scss')
 
   d = []
   d.append('// Ionicons Variables')
-  d.append('// --------------------------')
-  d.append('')
+  d.append('// --------------------------\n')
   d.append('$ionicons-font-path: "../fonts" !default;')
   d.append('$ionicons-version: "%s" !default;' % (font_version) )
   d.append('$ionicons-prefix: %s !default;' % (css_prefix) )
@@ -65,29 +52,10 @@ def generate_scss(data):
   f.close()
 
   d = []
-  d.append('// Ionicons Font Path')
-  d.append('// --------------------------')
-  d.append('')
-  d.append('@font-face {')
-  d.append(' font-family: "%s";' % (font_name) )
-  d.append(' src:url("#{$ionicons-font-path}/%s.eot?v=#{$ionicons-version}");' % (font_name.lower()) )
-  d.append(' src:url("#{$ionicons-font-path}/%s.eot?v=#{$ionicons-version}#iefix") format("embedded-opentype"),' % (font_name.lower()) )
-  d.append('  url("#{$ionicons-font-path}/%s.ttf?v=#{$ionicons-version}") format("truetype"),' % (font_name.lower()) )
-  d.append('  url("#{$ionicons-font-path}/%s.woff?v=#{$ionicons-version}") format("woff"),' % (font_name.lower()) )
-  d.append('  url("#{$ionicons-font-path}/%s.svg?v=#{$ionicons-version}#%s") format("svg");' % (font_name.lower(), font_name) )
-  d.append(' font-weight: normal;')
-  d.append(' font-style: normal;')
-  d.append('}')
-  f = open(path_file_path, 'w')
-  f.write( '\n'.join(d) )
-  f.close()
-
-  d = []
   d.append('// Ionicons Icons')
-  d.append('// --------------------------')
-  d.append('')
+  d.append('// --------------------------\n')
 
-  group = []
+  group = ['.ion', '.ionicon']
   for ionicon in data['icons']:
     group.append('.%s%s' % (css_prefix, ionicon['name']) )
 
@@ -155,12 +123,14 @@ def generate_cheatsheet(data):
 
   for ionicon in data['icons']:
     css_code = ionicon['code'].replace('0x', '\\')
-    html_code = ionicon['code'].replace('0x', '&amp;#x') + ';'
+    escaped_html_code = ionicon['code'].replace('0x', '&amp;#x') + ';'
+    html_code = ionicon['code'].replace('0x', '&#x') + ';'
     item_row = icon_row_template
 
     item_row = item_row.replace('{{name}}', ionicon['name'])
     item_row = item_row.replace('{{prefix}}', data['prefix'])
     item_row = item_row.replace('{{css_code}}', css_code)
+    item_row = item_row.replace('{{escaped_html_code}}', escaped_html_code)
     item_row = item_row.replace('{{html_code}}', html_code)
 
     content.append(item_row)
