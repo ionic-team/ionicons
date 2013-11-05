@@ -1,5 +1,6 @@
 import fontforge
 import os
+import md5
 import subprocess
 import tempfile
 import json
@@ -12,6 +13,7 @@ AUTO_WIDTH = False
 KERNING = 15
 
 cp = 0xf100
+m = md5.new()
 
 f = fontforge.font()
 f.encoding = 'UnicodeFull'
@@ -31,6 +33,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
   for filename in filenames:
     name, ext = os.path.splitext(filename)
     filePath = os.path.join(dirname, filename)
+    size = os.path.getsize(filePath)
 
     if ext in ['.svg', '.eps']:
 
@@ -83,6 +86,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
         filePath = tmpsvgfile.name
         # end hack
 
+      m.update(name + str(size) + ';')
       glyph = f.createChar( int(chr_code, 16) )
       glyph.importOutlines(filePath)
 
@@ -104,40 +108,48 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
 
   fontfile = '%s/%s' % (OUTPUT_FONT_DIR, font_name.lower())
 
-f.fontname = font_name
-f.familyname = font_name
-f.fullname = font_name
-f.generate(fontfile + '.ttf')
-f.generate(fontfile + '.svg')
+build_hash = m.hexdigest()
 
-# Fix SVG header for webkit
-# from: https://github.com/fontello/font-builder/blob/master/bin/fontconvert.py
-svgfile = open(fontfile + '.svg', 'r+')
-svgtext = svgfile.read()
-svgfile.seek(0)
-svgfile.write(svgtext.replace('''<svg>''', '''<svg xmlns="http://www.w3.org/2000/svg">'''))
-svgfile.close()
+if build_hash == manifest_data.get('build_hash'):
+  print "Source files unchanged, did not rebuild fonts"
 
-scriptPath = os.path.dirname(os.path.realpath(__file__))
-try:
-  subprocess.Popen([scriptPath + '/sfnt2woff', fontfile + '.ttf'], stdout=subprocess.PIPE)
-except OSError:
-  # If the local version of sfnt2woff fails (i.e., on Linux), try to use the
-  # global version. This allows us to avoid forcing OS X users to compile
-  # sfnt2woff from source, simplifying install.
-  subprocess.call(['sfnt2woff', fontfile + '.ttf'])
+else:
+  manifest_data['build_hash'] = build_hash
+  
+  f.fontname = font_name
+  f.familyname = font_name
+  f.fullname = font_name
+  f.generate(fontfile + '.ttf')
+  f.generate(fontfile + '.svg')
 
-# eotlitetool.py script to generate IE7-compatible .eot fonts
-subprocess.call('python ' + scriptPath + '/eotlitetool.py ' + fontfile + '.ttf -o ' + fontfile + '.eot', shell=True)
-subprocess.call('mv ' + fontfile + '.eotlite ' + fontfile + '.eot', shell=True)
+  # Fix SVG header for webkit
+  # from: https://github.com/fontello/font-builder/blob/master/bin/fontconvert.py
+  svgfile = open(fontfile + '.svg', 'r+')
+  svgtext = svgfile.read()
+  svgfile.seek(0)
+  svgfile.write(svgtext.replace('''<svg>''', '''<svg xmlns="http://www.w3.org/2000/svg">'''))
+  svgfile.close()
 
-# Hint the TTF file
-subprocess.call('ttfautohint -s -f -n ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
+  scriptPath = os.path.dirname(os.path.realpath(__file__))
+  try:
+    subprocess.Popen([scriptPath + '/sfnt2woff', fontfile + '.ttf'], stdout=subprocess.PIPE)
+  except OSError:
+    # If the local version of sfnt2woff fails (i.e., on Linux), try to use the
+    # global version. This allows us to avoid forcing OS X users to compile
+    # sfnt2woff from source, simplifying install.
+    subprocess.call(['sfnt2woff', fontfile + '.ttf'])
 
-manifest_data['icons'] = sorted(manifest_data['icons'], key=lambda k: k['name']) 
+  # eotlitetool.py script to generate IE7-compatible .eot fonts
+  subprocess.call('python ' + scriptPath + '/eotlitetool.py ' + fontfile + '.ttf -o ' + fontfile + '.eot', shell=True)
+  subprocess.call('mv ' + fontfile + '.eotlite ' + fontfile + '.eot', shell=True)
 
-print "Save Manifest, Icons: %s" % ( len(manifest_data['icons']) )
-manifest_file = open(MANIFEST_PATH, 'w')
-manifest_file.write( json.dumps(manifest_data, indent=2, separators=(',', ': ')) )
-manifest_file.close()
+  # Hint the TTF file
+  subprocess.call('ttfautohint -s -f -n ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
+
+  manifest_data['icons'] = sorted(manifest_data['icons'], key=lambda k: k['name']) 
+
+  print "Save Manifest, Icons: %s" % ( len(manifest_data['icons']) )
+  manifest_file = open(MANIFEST_PATH, 'w')
+  manifest_file.write( json.dumps(manifest_data, indent=2, separators=(',', ': ')) )
+  manifest_file.close()
 
