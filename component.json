@@ -1,16 +1,19 @@
 {
-	"name": "ionicons",
-	"repo": "driftyco/ionicons",
-	"description": "The premium icon font for Ionic Framework.",
-	"version": "v1.2.2",
-	"license": "MIT",
-	"styles": [
-		"ionicons.css"
-	],
-	"fonts": [
-		"fonts/ionicons.eot",
-		"fonts/ionicons.svg",
-		"fonts/ionicons.ttf",
-		"fonts/ionicons.woff"
-	]
+    "repo": "driftyco/ionicons",
+    "development": {},
+    "version": "1.3.0",
+    "styles": [
+        "css/ionicons.css"
+    ],
+    "name": "Ionicons",
+    "dependencies": {},
+    "keywords": [],
+    "license": "MIT",
+    "fonts": [
+        "fonts/ionicons.eot",
+        "fonts/ionicons.svg",
+        "fonts/ionicons.ttf",
+        "fonts/ionicons.woof"
+    ],
+    "description": "The premium icon font for Ionic Framework."
 }

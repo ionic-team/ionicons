@@ -1,7 +1,6 @@
 # Ionicons
 
 
-
 The premium icon font for [Ionic Framework](http://ionicframework.com/). Designed by [@helloimben](https://twitter.com/helloimben).
 
 Note: All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Drifty, nor vice versa.
@@ -30,12 +29,21 @@ Or perhaps you're known to use [bower](http://bower.io/)?
 
 ## HTML Example
 
-You can use [ionicons.com](http://ionicons.com) to easily find the icon you want to use. Once you've copied the desired icon's CSS classname, simply add the icon's classname to an HTML element.
+You can use [ionicons.com](http://ionicons.com) to easily find the icon you want to use. Once you've copied the desired icon's CSS classname, simply add the `icon` and icon's classname, such as `ion-home` to an HTML element.
 
-    <i class="icon-home"></i>
+    <i class="icon ion-home"></i>
 
 
 ## License
 
 Ionicons is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+## Ionicons: Font Builder
+
+While its certainly not required and the necessary CSS, SCSS, LESS and font files are already in this repo, Ionicons can also be built locally using Font Forge (Requies Python and a version of FontForge that includes Python scripting).
+
+ 1. Install Font Forge (a version of FontForge that includes Python scripting)
+ 2. Add the source `svg` files which should be apart of the font to the `src` folder.
+ 3. `python ./builder/generate.py`
 
