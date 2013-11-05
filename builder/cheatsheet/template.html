@@ -9,6 +9,12 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     body {
@@ -55,8 +61,13 @@
       padding: 10px 0 20px;
       margin-bottom: 20px;
     }
-    .ionicon {
-      padding-right: 30px;
+    .ion {
+      -webkit-touch-callout: text;
+      -webkit-user-select: text;
+      -khtml-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
     }
 
     .preview-icon { vertical-align: bottom; }
@@ -100,11 +111,23 @@
       margin-right: 3px;
       padding: 2px 5px;
       text-align: center;
+      -webkit-touch-callout: text;
+      -webkit-user-select: text;
+      -khtml-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
     }
 
-    .usage .name { width: 250px; }
-    .usage .html { width: 150px; }
-    .usage .css { width: 150px; }
+    .usage label { 
+      font-size: 12px; 
+      text-align: right; 
+      padding: 0 5px 0 35px;
+    }
+    .usage label:first-child { padding-left: 0; }
+    .usage .name { width: 200px; }
+    .usage .html { width: 100px; }
+    .usage .css { width: 100px; }
 
     footer {
       color: #888;

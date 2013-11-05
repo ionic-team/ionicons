@@ -40,9 +40,16 @@
     <span class="step">72</span>
   </div>
   <div class="usage">
-    <span class="ionicon">{{html_code}}</span>
+    <label>Selectable:</label>
+    <span class="ion">{{html_code}}</span>
+
+    <label>Classname:</label>
     <input class="name" type="text" readonly="readonly" onClick="this.select();" value="{{prefix}}{{name}}" />
+
+    <label>Escaped HTML:</label>
     <input class="html" type="text" readonly="readonly" onClick="this.select();" value="{{escaped_html_code}}" />
+
+    <label>CSS Content:</label>
     <input class="css" type="text" readonly="readonly" onClick="this.select();" value="{{css_code}}" />
   </div>
 </div>
