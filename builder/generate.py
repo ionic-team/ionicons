@@ -139,15 +139,6 @@ def generate_cheatsheet(data):
   f.close()
 
 
-def append_license(font_name, font_version, d):
-  d.append('/*!')
-  d.append('  %s, v%s' % (font_name, font_version) )
-  d.append('  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/')
-  d.append('  https://twitter.com/helloimben  https://twitter.com/ionicframework')
-  d.append('  MIT License: https://github.com/driftyco/ionicons')
-  d.append('*/')
-
-
 def generate_component_json(data):
   print "Generate component.json"
   d = {
