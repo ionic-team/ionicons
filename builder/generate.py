@@ -55,11 +55,11 @@ def generate_scss(data):
   d.append('// Ionicons Icons')
   d.append('// --------------------------\n')
 
-  group = ['.ion', '.ionicon']
+  group = ['.ion', '.%s' % (data['name'].lower())]
   for ionicon in data['icons']:
     group.append('.%s%s' % (css_prefix, ionicon['name']) )
 
-  d.append( ','.join(group) )
+  d.append( ',\n'.join(group) )
 
   d.append('{')
   d.append(' font-family: "%s";' % (font_name) )
