@@ -286,9 +286,9 @@ li.active {
 @import url("//hello.myfonts.net/count/28882f");*/
 
   
-@font-face {font-family: 'AvenirNextLTPro-Regular';src: url('fonts/28882F_0_0.eot');src: url('fonts/28882F_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/28882F_0_0.woff') format('woff'),url('fonts/28882F_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNextLTPro-Regular';src: url('site-fonts/28882F_0_0.eot');src: url('fsite-onts/28882F_0_0.eot?#iefix') format('embedded-opentype'),url('site-fonts/28882F_0_0.woff') format('woff'),url('site-fonts/28882F_0_0.ttf') format('truetype');}
  
   
-@font-face {font-family: 'AvenirNextLTPro-Medium';src: url('fonts/28882F_1_0.eot');src: url('fonts/28882F_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/28882F_1_0.woff') format('woff'),url('fonts/28882F_1_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirNextLTPro-Medium';src: url('site-fonts/28882F_1_0.eot');src: url('site-fonts/28882F_1_0.eot?#iefix') format('embedded-opentype'),url('site-fonts/28882F_1_0.woff') format('woff'),url('site-fonts/28882F_1_0.ttf') format('truetype');}
 
 
