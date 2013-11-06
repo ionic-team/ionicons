@@ -34,6 +34,27 @@ You can use [ionicons.com](http://ionicons.com) to easily find the icon you want
     <i class="icon ion-home"></i>
 
 
+## Build Instructions
+
+This repo already comes with all the files built and ready to go, but can also build the fonts from the source. Requires Python, FontForge and SASS:
+
+1) Install FontForge, which is the program that creates the font files from the SVG files:
+
+    $ brew install fontforge ttfautohint
+
+2) Install [SASS](http://sass-lang.com/)
+
+    $ gem install sass
+
+3) Add or subtract files from the `svg/` folder you'd like to be apart of the font files.
+
+4) Modify any settings in the `builder/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
+
+5) Run the build command:
+
+    python ./builder/generate.py
+
+
 ## License
 
 Ionicons is licensed under the [MIT license](http://opensource.org/licenses/MIT).
