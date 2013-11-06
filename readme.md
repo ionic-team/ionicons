@@ -37,13 +37,3 @@ You can use [ionicons.com](http://ionicons.com) to easily find the icon you want
 ## License
 
 Ionicons is licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-
-## Ionicons: Font Builder
-
-While its certainly not required and the necessary CSS, SCSS, LESS and font files are already in this repo, Ionicons can also be built locally using Font Forge (Requies Python and a version of FontForge that includes Python scripting).
-
- 1. Install Font Forge (a version of FontForge that includes Python scripting)
- 2. Add the source `svg` files which should be apart of the font to the `src` folder.
- 3. `python ./builder/generate.py`
-
