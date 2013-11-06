@@ -4,11 +4,13 @@ import md5
 import subprocess
 import tempfile
 import json
+import copy
 
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 INPUT_SVG_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'src')
 OUTPUT_FONT_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'fonts')
 MANIFEST_PATH = os.path.join(SCRIPT_PATH, '..', 'manifest.json')
+BUILD_DATA_PATH = os.path.join(SCRIPT_PATH, '..', 'build_data.json')
 AUTO_WIDTH = False
 KERNING = 15
 
@@ -26,6 +28,9 @@ manifest_file = open(MANIFEST_PATH, 'r')
 manifest_data = json.loads(manifest_file.read())
 manifest_file.close()
 print "Load Manifest, Icons: %s" % ( len(manifest_data['icons']) )
+
+build_data = copy.deepcopy(manifest_data)
+build_data['icons'] = []
 
 font_name = manifest_data['name']
 
@@ -66,6 +71,10 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
           'code': chr_code
         })
 
+      build_data['icons'].append({
+        'name': name,
+        'code': chr_code
+      })
 
       if ext in ['.svg']:
         # hack removal of <switch> </switch> tags
@@ -147,9 +156,15 @@ else:
   subprocess.call('ttfautohint -s -f -n ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
 
   manifest_data['icons'] = sorted(manifest_data['icons'], key=lambda k: k['name']) 
+  build_data['icons'] = sorted(build_data['icons'], key=lambda k: k['name']) 
 
   print "Save Manifest, Icons: %s" % ( len(manifest_data['icons']) )
-  manifest_file = open(MANIFEST_PATH, 'w')
-  manifest_file.write( json.dumps(manifest_data, indent=2, separators=(',', ': ')) )
-  manifest_file.close()
+  f = open(MANIFEST_PATH, 'w')
+  f.write( json.dumps(manifest_data, indent=2, separators=(',', ': ')) )
+  f.close()
+
+  print "Save Build, Icons: %s" % ( len(build_data['icons']) )
+  f = open(BUILD_DATA_PATH, 'w')
+  f.write( json.dumps(build_data, indent=2, separators=(',', ': ')) )
+  f.close()
 

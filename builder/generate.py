@@ -13,7 +13,7 @@ SCSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'scss')
 def main():
   generate_font_files()
 
-  data = get_manifest()
+  data = get_build_data()
 
   generate_scss(data)
   generate_cheatsheet(data)
@@ -241,12 +241,12 @@ def generate_bower_json(data):
   f.close()
 
 
-def get_manifest():
-  manifest_path = os.path.join(BUILDER_PATH, 'manifest.json')
-  f = open(manifest_path, 'r')
-  manifest_data = json.loads(f.read())
+def get_build_data():
+  build_data_path = os.path.join(BUILDER_PATH, 'build_data.json')
+  f = open(build_data_path, 'r')
+  data = json.loads(f.read())
   f.close()
-  return manifest_data
+  return data
 
 
 if __name__ == "__main__":
