@@ -33,6 +33,9 @@ build_data = copy.deepcopy(manifest_data)
 build_data['icons'] = []
 
 font_name = manifest_data['name']
+m.update(font_name + ';')
+m.update(manifest_data['version'] + ';')
+m.update(manifest_data['prefix'] + ';')
 
 for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
   for filename in filenames:
@@ -115,7 +118,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
     if AUTO_WIDTH:
       f.autoWidth(0, 0, 512)
 
-  fontfile = '%s/%s' % (OUTPUT_FONT_DIR, font_name.lower())
+  fontfile = '%s/ionicons' % (OUTPUT_FONT_DIR)
 
 build_hash = m.hexdigest()
 

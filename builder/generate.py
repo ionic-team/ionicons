@@ -79,9 +79,9 @@ def generate_scss(data):
 def generate_css_from_scss(data):
   print "Generate CSS From SCSS"
 
-  scss_file_path = os.path.join(SCSS_FOLDER_PATH, '%s.scss' % (data['name'].lower()))
-  css_file_path = os.path.join(CSS_FOLDER_PATH, '%s.css' % (data['name'].lower()))
-  css_min_file_path = os.path.join(CSS_FOLDER_PATH, '%s.min.css' % (data['name'].lower()))
+  scss_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons.scss')
+  css_file_path = os.path.join(CSS_FOLDER_PATH, 'ionicons.css')
+  css_min_file_path = os.path.join(CSS_FOLDER_PATH, 'ionicons.min.css')
 
   cmd = "sass %s %s" % (scss_file_path, css_file_path)
   call(cmd, shell=True)
@@ -94,17 +94,12 @@ def generate_css_from_scss(data):
 def generate_cheatsheet(data):
   print "Generate Cheatsheet"
 
-  css_file_path = os.path.join(CSS_FOLDER_PATH, '%s.css' % (data['name'].lower()))
   cheatsheet_file_path = os.path.join(ROOT_PATH, 'cheatsheet.html')
   template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
   icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'icon-row.html')
 
   f = open(template_path, 'r')
   template_html = f.read()
-  f.close()
-
-  f = open(css_file_path, 'r')
-  ionicons_css = f.read()
   f.close()
 
   f = open(icon_row_path, 'r')
@@ -128,10 +123,8 @@ def generate_cheatsheet(data):
     content.append(item_row)
 
   template_html = template_html.replace("{{font_name}}", data["name"])
-  template_html = template_html.replace("{{font_filename}}", data["name"].lower())
   template_html = template_html.replace("{{font_version}}", data["version"])
   template_html = template_html.replace("{{icon_count}}", str(len(data["icons"])) )
-  template_html = template_html.replace("{{ionicons_css}}", ionicons_css )
   template_html = template_html.replace("{{content}}", '\n'.join(content) )
 
   f = open(cheatsheet_file_path, 'w')
