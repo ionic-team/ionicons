@@ -18,12 +18,23 @@
 .ion-arrow-down-a,
 .ion-arrow-down-b,
 .ion-arrow-down-c,
+.ion-arrow-expand,
+.ion-arrow-graph-down-left,
+.ion-arrow-graph-down-right,
+.ion-arrow-graph-up-left,
+.ion-arrow-graph-up-right,
 .ion-arrow-left-a,
 .ion-arrow-left-b,
 .ion-arrow-left-c,
+.ion-arrow-move,
+.ion-arrow-resize,
+.ion-arrow-return-left,
+.ion-arrow-return-right,
 .ion-arrow-right-a,
 .ion-arrow-right-b,
 .ion-arrow-right-c,
+.ion-arrow-shrink,
+.ion-arrow-swap,
 .ion-arrow-up-a,
 .ion-arrow-up-b,
 .ion-arrow-up-c,
@@ -34,7 +45,12 @@
 .ion-battery-full,
 .ion-battery-half,
 .ion-battery-low,
+.ion-beaker,
+.ion-beer,
 .ion-bluetooth,
+.ion-bookmark,
+.ion-briefcase,
+.ion-calculator,
 .ion-calendar,
 .ion-camera,
 .ion-card,
@@ -52,35 +68,51 @@
 .ion-chevron-right,
 .ion-chevron-up,
 .ion-clipboard,
+.ion-clock,
 .ion-close,
 .ion-close-circled,
 .ion-close-round,
 .ion-cloud,
+.ion-code,
+.ion-code-download,
+.ion-code-working,
+.ion-coffee,
+.ion-compass,
 .ion-compose,
+.ion-connection-bars,
+.ion-contrast,
 .ion-disc,
 .ion-document,
 .ion-document-text,
 .ion-drag,
+.ion-earth,
+.ion-egg,
 .ion-eject,
 .ion-email,
 .ion-eye,
+.ion-female,
 .ion-filing,
 .ion-film-marker,
+.ion-flag,
 .ion-flash,
 .ion-flash-off,
 .ion-flask,
 .ion-folder,
+.ion-fork,
 .ion-forward,
 .ion-game-controller-a,
 .ion-game-controller-b,
 .ion-gear-a,
 .ion-gear-b,
 .ion-grid,
+.ion-hammer,
 .ion-headphone,
 .ion-heart,
 .ion-help,
+.ion-help-buoy,
 .ion-help-circled,
 .ion-home,
+.ion-icecream,
 .ion-icon-social-google-plus,
 .ion-icon-social-google-plus-outline,
 .ion-image,
@@ -97,6 +129,10 @@
 .ion-ios7-arrow-forward,
 .ion-ios7-arrow-left,
 .ion-ios7-arrow-right,
+.ion-ios7-arrow-thin-down,
+.ion-ios7-arrow-thin-left,
+.ion-ios7-arrow-thin-right,
+.ion-ios7-arrow-thin-up,
 .ion-ios7-arrow-up,
 .ion-ios7-at,
 .ion-ios7-at-outline,
@@ -108,8 +144,12 @@
 .ion-ios7-bookmarks-outline,
 .ion-ios7-box,
 .ion-ios7-box-outline,
+.ion-ios7-briefcase,
+.ion-ios7-briefcase-outline,
 .ion-ios7-browsers,
 .ion-ios7-browsers-outline,
+.ion-ios7-calculator,
+.ion-ios7-calculator-outline,
 .ion-ios7-calendar,
 .ion-ios7-calendar-outline,
 .ion-ios7-camera,
@@ -177,10 +217,14 @@
 .ion-ios7-ionic-outline,
 .ion-ios7-keypad,
 .ion-ios7-keypad-outline,
+.ion-ios7-lightbulb,
+.ion-ios7-lightbulb-outline,
 .ion-ios7-location,
 .ion-ios7-location-outline,
 .ion-ios7-locked,
 .ion-ios7-locked-outline,
+.ion-ios7-medkit,
+.ion-ios7-medkit-outline,
 .ion-ios7-mic,
 .ion-ios7-mic-off,
 .ion-ios7-mic-outline,
@@ -211,11 +255,15 @@
 .ion-ios7-personadd-outline,
 .ion-ios7-photos,
 .ion-ios7-photos-outline,
+.ion-ios7-pie,
+.ion-ios7-pie-outline,
 .ion-ios7-play,
 .ion-ios7-play-outline,
 .ion-ios7-plus,
 .ion-ios7-plus-empty,
 .ion-ios7-plus-outline,
+.ion-ios7-pricetag,
+.ion-ios7-pricetag-outline,
 .ion-ios7-printer,
 .ion-ios7-printer-outline,
 .ion-ios7-rainy,
@@ -227,6 +275,7 @@
 .ion-ios7-refresh,
 .ion-ios7-refresh-empty,
 .ion-ios7-refresh-outline,
+.ion-ios7-reload,
 .ion-ios7-rewind,
 .ion-ios7-rewind-outline,
 .ion-ios7-search,
@@ -235,6 +284,8 @@
 .ion-ios7-skipbackward-outline,
 .ion-ios7-skipforward,
 .ion-ios7-skipforward-outline,
+.ion-ios7-speedometer,
+.ion-ios7-speedometer-outline,
 .ion-ios7-star,
 .ion-ios7-star-outline,
 .ion-ios7-stopwatch,
@@ -245,6 +296,8 @@
 .ion-ios7-telephone-outline,
 .ion-ios7-thunderstorm,
 .ion-ios7-thunderstorm-outline,
+.ion-ios7-time,
+.ion-ios7-time-outline,
 .ion-ios7-timer,
 .ion-ios7-timer-outline,
 .ion-ios7-trash,
@@ -259,19 +312,35 @@
 .ion-ios7-videocam-outline,
 .ion-ios7-volume-high,
 .ion-ios7-volume-low,
+.ion-ios7-wineglass,
+.ion-ios7-wineglass-outline,
 .ion-ios7-world,
 .ion-ios7-world-outline,
 .ion-ipad,
 .ion-iphone,
 .ion-ipod,
+.ion-jet,
+.ion-key,
+.ion-knife,
 .ion-laptop,
 .ion-leaf,
+.ion-levels,
+.ion-lightbulb,
 .ion-link,
+.ion-load-a,
+.ion-load-b,
+.ion-load-c,
+.ion-load-d,
 .ion-location,
 .ion-locked,
+.ion-log-in,
+.ion-log-out,
 .ion-loop,
+.ion-magnet,
+.ion-male,
 .ion-man,
 .ion-map,
+.ion-medkit,
 .ion-mic-a,
 .ion-mic-b,
 .ion-mic-c,
@@ -283,23 +352,34 @@
 .ion-music-note,
 .ion-navicon,
 .ion-navicon-round,
+.ion-navigate,
+.ion-nuclear,
 .ion-paperclip,
 .ion-pause,
 .ion-person,
 .ion-person-add,
 .ion-person-stalker,
+.ion-pie-graph,
+.ion-pin,
+.ion-pinpoint,
+.ion-pizza,
 .ion-plane,
 .ion-play,
 .ion-plus,
 .ion-plus-circled,
 .ion-plus-round,
 .ion-pound,
+.ion-power,
+.ion-pricetag,
+.ion-pricetags,
 .ion-printer,
+.ion-radio-waves,
 .ion-record,
 .ion-refresh,
 .ion-reply,
 .ion-reply-all,
 .ion-search,
+.ion-settings,
 .ion-share,
 .ion-shuffle,
 .ion-skip-backward,
@@ -308,6 +388,8 @@
 .ion-social-android-outline,
 .ion-social-apple,
 .ion-social-apple-outline,
+.ion-social-bitcoin,
+.ion-social-bitcoin-outline,
 .ion-social-buffer,
 .ion-social-buffer-outline,
 .ion-social-designernews,
@@ -326,6 +408,8 @@
 .ion-social-hackernews-outline,
 .ion-social-linkedin,
 .ion-social-linkedin-outline,
+.ion-social-pinterest,
+.ion-social-pinterest-outline,
 .ion-social-reddit,
 .ion-social-reddit-outline,
 .ion-social-rss,
@@ -346,14 +430,21 @@
 .ion-social-yahoo-outline,
 .ion-social-youtube,
 .ion-social-youtube-outline,
+.ion-speakerphone,
+.ion-speedometer,
+.ion-spoon,
 .ion-star,
+.ion-stats-bars,
 .ion-stop,
+.ion-thermometer,
 .ion-thumbsdown,
 .ion-thumbsup,
 .ion-trash-a,
 .ion-trash-b,
+.ion-umbrella,
 .ion-unlocked,
 .ion-upload,
+.ion-usb,
 .ion-videocamera,
 .ion-volume-high,
 .ion-volume-low,
@@ -361,7 +452,9 @@
 .ion-volume-mute,
 .ion-waterdrop,
 .ion-wifi,
-.ion-woman {
+.ion-wineglass,
+.ion-woman,
+.ion-wrench {
   font-family: "Ionicons";
   speak: none;
   font-style: normal;
@@ -431,6 +524,21 @@
 .ion-arrow-down-c:before {
   content: "\f105"; }
 
+.ion-arrow-expand:before {
+  content: "\f25e"; }
+
+.ion-arrow-graph-down-left:before {
+  content: "\f25f"; }
+
+.ion-arrow-graph-down-right:before {
+  content: "\f260"; }
+
+.ion-arrow-graph-up-left:before {
+  content: "\f261"; }
+
+.ion-arrow-graph-up-right:before {
+  content: "\f262"; }
+
 .ion-arrow-left-a:before {
   content: "\f106"; }
 
@@ -440,6 +548,18 @@
 .ion-arrow-left-c:before {
   content: "\f108"; }
 
+.ion-arrow-move:before {
+  content: "\f263"; }
+
+.ion-arrow-resize:before {
+  content: "\f264"; }
+
+.ion-arrow-return-left:before {
+  content: "\f265"; }
+
+.ion-arrow-return-right:before {
+  content: "\f266"; }
+
 .ion-arrow-right-a:before {
   content: "\f109"; }
 
@@ -448,6 +568,12 @@
 
 .ion-arrow-right-c:before {
   content: "\f10b"; }
+
+.ion-arrow-shrink:before {
+  content: "\f267"; }
+
+.ion-arrow-swap:before {
+  content: "\f268"; }
 
 .ion-arrow-up-a:before {
   content: "\f10c"; }
@@ -479,8 +605,23 @@
 .ion-battery-low:before {
   content: "\f115"; }
 
+.ion-beaker:before {
+  content: "\f269"; }
+
+.ion-beer:before {
+  content: "\f26a"; }
+
 .ion-bluetooth:before {
   content: "\f116"; }
+
+.ion-bookmark:before {
+  content: "\f26b"; }
+
+.ion-briefcase:before {
+  content: "\f26c"; }
+
+.ion-calculator:before {
+  content: "\f26d"; }
 
 .ion-calendar:before {
   content: "\f117"; }
@@ -533,6 +674,9 @@
 .ion-clipboard:before {
   content: "\f127"; }
 
+.ion-clock:before {
+  content: "\f26e"; }
+
 .ion-close:before {
   content: "\f12a"; }
 
@@ -545,8 +689,29 @@
 .ion-cloud:before {
   content: "\f12b"; }
 
+.ion-code:before {
+  content: "\f271"; }
+
+.ion-code-download:before {
+  content: "\f26f"; }
+
+.ion-code-working:before {
+  content: "\f270"; }
+
+.ion-coffee:before {
+  content: "\f272"; }
+
+.ion-compass:before {
+  content: "\f273"; }
+
 .ion-compose:before {
   content: "\f12c"; }
+
+.ion-connection-bars:before {
+  content: "\f274"; }
+
+.ion-contrast:before {
+  content: "\f275"; }
 
 .ion-disc:before {
   content: "\f12d"; }
@@ -560,6 +725,12 @@
 .ion-drag:before {
   content: "\f130"; }
 
+.ion-earth:before {
+  content: "\f276"; }
+
+.ion-egg:before {
+  content: "\f277"; }
+
 .ion-eject:before {
   content: "\f131"; }
 
@@ -569,11 +740,17 @@
 .ion-eye:before {
   content: "\f133"; }
 
+.ion-female:before {
+  content: "\f278"; }
+
 .ion-filing:before {
   content: "\f134"; }
 
 .ion-film-marker:before {
   content: "\f135"; }
+
+.ion-flag:before {
+  content: "\f279"; }
 
 .ion-flash:before {
   content: "\f137"; }
@@ -586,6 +763,9 @@
 
 .ion-folder:before {
   content: "\f139"; }
+
+.ion-fork:before {
+  content: "\f27a"; }
 
 .ion-forward:before {
   content: "\f13a"; }
@@ -605,6 +785,9 @@
 .ion-grid:before {
   content: "\f13f"; }
 
+.ion-hammer:before {
+  content: "\f27b"; }
+
 .ion-headphone:before {
   content: "\f140"; }
 
@@ -614,11 +797,17 @@
 .ion-help:before {
   content: "\f143"; }
 
+.ion-help-buoy:before {
+  content: "\f27c"; }
+
 .ion-help-circled:before {
   content: "\f142"; }
 
 .ion-home:before {
   content: "\f144"; }
+
+.ion-icecream:before {
+  content: "\f27d"; }
 
 .ion-icon-social-google-plus:before {
   content: "\f146"; }
@@ -668,6 +857,18 @@
 .ion-ios7-arrow-right:before {
   content: "\f154"; }
 
+.ion-ios7-arrow-thin-down:before {
+  content: "\f27e"; }
+
+.ion-ios7-arrow-thin-left:before {
+  content: "\f27f"; }
+
+.ion-ios7-arrow-thin-right:before {
+  content: "\f280"; }
+
+.ion-ios7-arrow-thin-up:before {
+  content: "\f281"; }
+
 .ion-ios7-arrow-up:before {
   content: "\f155"; }
 
@@ -701,11 +902,23 @@
 .ion-ios7-box-outline:before {
   content: "\f15e"; }
 
+.ion-ios7-briefcase:before {
+  content: "\f283"; }
+
+.ion-ios7-briefcase-outline:before {
+  content: "\f282"; }
+
 .ion-ios7-browsers:before {
   content: "\f161"; }
 
 .ion-ios7-browsers-outline:before {
   content: "\f160"; }
+
+.ion-ios7-calculator:before {
+  content: "\f285"; }
+
+.ion-ios7-calculator-outline:before {
+  content: "\f284"; }
 
 .ion-ios7-calendar:before {
   content: "\f163"; }
@@ -908,6 +1121,12 @@
 .ion-ios7-keypad-outline:before {
   content: "\f1a3"; }
 
+.ion-ios7-lightbulb:before {
+  content: "\f287"; }
+
+.ion-ios7-lightbulb-outline:before {
+  content: "\f286"; }
+
 .ion-ios7-location:before {
   content: "\f1a6"; }
 
@@ -919,6 +1138,12 @@
 
 .ion-ios7-locked-outline:before {
   content: "\f1a7"; }
+
+.ion-ios7-medkit:before {
+  content: "\f289"; }
+
+.ion-ios7-medkit-outline:before {
+  content: "\f288"; }
 
 .ion-ios7-mic:before {
   content: "\f1ab"; }
@@ -1010,6 +1235,12 @@
 .ion-ios7-photos-outline:before {
   content: "\f1c5"; }
 
+.ion-ios7-pie:before {
+  content: "\f28b"; }
+
+.ion-ios7-pie-outline:before {
+  content: "\f28a"; }
+
 .ion-ios7-play:before {
   content: "\f1c8"; }
 
@@ -1024,6 +1255,12 @@
 
 .ion-ios7-plus-outline:before {
   content: "\f1ca"; }
+
+.ion-ios7-pricetag:before {
+  content: "\f28d"; }
+
+.ion-ios7-pricetag-outline:before {
+  content: "\f28c"; }
 
 .ion-ios7-printer:before {
   content: "\f1cd"; }
@@ -1058,6 +1295,9 @@
 .ion-ios7-refresh-outline:before {
   content: "\f1d5"; }
 
+.ion-ios7-reload:before {
+  content: "\f28e"; }
+
 .ion-ios7-rewind:before {
   content: "\f1d8"; }
 
@@ -1081,6 +1321,12 @@
 
 .ion-ios7-skipforward-outline:before {
   content: "\f1dd"; }
+
+.ion-ios7-speedometer:before {
+  content: "\f290"; }
+
+.ion-ios7-speedometer-outline:before {
+  content: "\f28f"; }
 
 .ion-ios7-star:before {
   content: "\f1e0"; }
@@ -1111,6 +1357,12 @@
 
 .ion-ios7-thunderstorm-outline:before {
   content: "\f1e7"; }
+
+.ion-ios7-time:before {
+  content: "\f292"; }
+
+.ion-ios7-time-outline:before {
+  content: "\f291"; }
 
 .ion-ios7-timer:before {
   content: "\f1ea"; }
@@ -1154,6 +1406,12 @@
 .ion-ios7-volume-low:before {
   content: "\f1f6"; }
 
+.ion-ios7-wineglass:before {
+  content: "\f294"; }
+
+.ion-ios7-wineglass-outline:before {
+  content: "\f293"; }
+
 .ion-ios7-world:before {
   content: "\f1f8"; }
 
@@ -1169,14 +1427,41 @@
 .ion-ipod:before {
   content: "\f1fb"; }
 
+.ion-jet:before {
+  content: "\f295"; }
+
+.ion-key:before {
+  content: "\f296"; }
+
+.ion-knife:before {
+  content: "\f297"; }
+
 .ion-laptop:before {
   content: "\f1fc"; }
 
 .ion-leaf:before {
   content: "\f1fd"; }
 
+.ion-levels:before {
+  content: "\f298"; }
+
+.ion-lightbulb:before {
+  content: "\f299"; }
+
 .ion-link:before {
   content: "\f1fe"; }
+
+.ion-load-a:before {
+  content: "\f29a"; }
+
+.ion-load-b:before {
+  content: "\f29b"; }
+
+.ion-load-c:before {
+  content: "\f29c"; }
+
+.ion-load-d:before {
+  content: "\f29d"; }
 
 .ion-location:before {
   content: "\f1ff"; }
@@ -1184,14 +1469,29 @@
 .ion-locked:before {
   content: "\f200"; }
 
+.ion-log-in:before {
+  content: "\f29e"; }
+
+.ion-log-out:before {
+  content: "\f29f"; }
+
 .ion-loop:before {
   content: "\f201"; }
+
+.ion-magnet:before {
+  content: "\f2a0"; }
+
+.ion-male:before {
+  content: "\f2a1"; }
 
 .ion-man:before {
   content: "\f202"; }
 
 .ion-map:before {
   content: "\f203"; }
+
+.ion-medkit:before {
+  content: "\f2a2"; }
 
 .ion-mic-a:before {
   content: "\f204"; }
@@ -1226,6 +1526,12 @@
 .ion-navicon-round:before {
   content: "\f20d"; }
 
+.ion-navigate:before {
+  content: "\f2a3"; }
+
+.ion-nuclear:before {
+  content: "\f2a4"; }
+
 .ion-paperclip:before {
   content: "\f20f"; }
 
@@ -1240,6 +1546,18 @@
 
 .ion-person-stalker:before {
   content: "\f212"; }
+
+.ion-pie-graph:before {
+  content: "\f2a5"; }
+
+.ion-pin:before {
+  content: "\f2a6"; }
+
+.ion-pinpoint:before {
+  content: "\f2a7"; }
+
+.ion-pizza:before {
+  content: "\f2a8"; }
 
 .ion-plane:before {
   content: "\f214"; }
@@ -1259,8 +1577,20 @@
 .ion-pound:before {
   content: "\f219"; }
 
+.ion-power:before {
+  content: "\f2a9"; }
+
+.ion-pricetag:before {
+  content: "\f2aa"; }
+
+.ion-pricetags:before {
+  content: "\f2ab"; }
+
 .ion-printer:before {
   content: "\f21a"; }
+
+.ion-radio-waves:before {
+  content: "\f2ac"; }
 
 .ion-record:before {
   content: "\f21b"; }
@@ -1276,6 +1606,9 @@
 
 .ion-search:before {
   content: "\f21f"; }
+
+.ion-settings:before {
+  content: "\f2ad"; }
 
 .ion-share:before {
   content: "\f220"; }
@@ -1300,6 +1633,12 @@
 
 .ion-social-apple-outline:before {
   content: "\f226"; }
+
+.ion-social-bitcoin:before {
+  content: "\f2af"; }
+
+.ion-social-bitcoin-outline:before {
+  content: "\f2ae"; }
 
 .ion-social-buffer:before {
   content: "\f229"; }
@@ -1354,6 +1693,12 @@
 
 .ion-social-linkedin-outline:before {
   content: "\f238"; }
+
+.ion-social-pinterest:before {
+  content: "\f2b1"; }
+
+.ion-social-pinterest-outline:before {
+  content: "\f2b0"; }
 
 .ion-social-reddit:before {
   content: "\f23b"; }
@@ -1415,11 +1760,26 @@
 .ion-social-youtube-outline:before {
   content: "\f24c"; }
 
+.ion-speakerphone:before {
+  content: "\f2b2"; }
+
+.ion-speedometer:before {
+  content: "\f2b3"; }
+
+.ion-spoon:before {
+  content: "\f2b4"; }
+
 .ion-star:before {
   content: "\f24e"; }
 
+.ion-stats-bars:before {
+  content: "\f2b5"; }
+
 .ion-stop:before {
   content: "\f24f"; }
+
+.ion-thermometer:before {
+  content: "\f2b6"; }
 
 .ion-thumbsdown:before {
   content: "\f250"; }
@@ -1433,11 +1793,17 @@
 .ion-trash-b:before {
   content: "\f253"; }
 
+.ion-umbrella:before {
+  content: "\f2b7"; }
+
 .ion-unlocked:before {
   content: "\f254"; }
 
 .ion-upload:before {
   content: "\f255"; }
+
+.ion-usb:before {
+  content: "\f2b8"; }
 
 .ion-videocamera:before {
   content: "\f256"; }
@@ -1460,5 +1826,11 @@
 .ion-wifi:before {
   content: "\f25c"; }
 
+.ion-wineglass:before {
+  content: "\f2b9"; }
+
 .ion-woman:before {
   content: "\f25d"; }
+
+.ion-wrench:before {
+  content: "\f2ba"; }

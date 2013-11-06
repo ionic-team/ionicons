@@ -8,12 +8,23 @@
 .ion-arrow-down-a,
 .ion-arrow-down-b,
 .ion-arrow-down-c,
+.ion-arrow-expand,
+.ion-arrow-graph-down-left,
+.ion-arrow-graph-down-right,
+.ion-arrow-graph-up-left,
+.ion-arrow-graph-up-right,
 .ion-arrow-left-a,
 .ion-arrow-left-b,
 .ion-arrow-left-c,
+.ion-arrow-move,
+.ion-arrow-resize,
+.ion-arrow-return-left,
+.ion-arrow-return-right,
 .ion-arrow-right-a,
 .ion-arrow-right-b,
 .ion-arrow-right-c,
+.ion-arrow-shrink,
+.ion-arrow-swap,
 .ion-arrow-up-a,
 .ion-arrow-up-b,
 .ion-arrow-up-c,
@@ -24,7 +35,12 @@
 .ion-battery-full,
 .ion-battery-half,
 .ion-battery-low,
+.ion-beaker,
+.ion-beer,
 .ion-bluetooth,
+.ion-bookmark,
+.ion-briefcase,
+.ion-calculator,
 .ion-calendar,
 .ion-camera,
 .ion-card,
@@ -42,35 +58,51 @@
 .ion-chevron-right,
 .ion-chevron-up,
 .ion-clipboard,
+.ion-clock,
 .ion-close,
 .ion-close-circled,
 .ion-close-round,
 .ion-cloud,
+.ion-code,
+.ion-code-download,
+.ion-code-working,
+.ion-coffee,
+.ion-compass,
 .ion-compose,
+.ion-connection-bars,
+.ion-contrast,
 .ion-disc,
 .ion-document,
 .ion-document-text,
 .ion-drag,
+.ion-earth,
+.ion-egg,
 .ion-eject,
 .ion-email,
 .ion-eye,
+.ion-female,
 .ion-filing,
 .ion-film-marker,
+.ion-flag,
 .ion-flash,
 .ion-flash-off,
 .ion-flask,
 .ion-folder,
+.ion-fork,
 .ion-forward,
 .ion-game-controller-a,
 .ion-game-controller-b,
 .ion-gear-a,
 .ion-gear-b,
 .ion-grid,
+.ion-hammer,
 .ion-headphone,
 .ion-heart,
 .ion-help,
+.ion-help-buoy,
 .ion-help-circled,
 .ion-home,
+.ion-icecream,
 .ion-icon-social-google-plus,
 .ion-icon-social-google-plus-outline,
 .ion-image,
@@ -87,6 +119,10 @@
 .ion-ios7-arrow-forward,
 .ion-ios7-arrow-left,
 .ion-ios7-arrow-right,
+.ion-ios7-arrow-thin-down,
+.ion-ios7-arrow-thin-left,
+.ion-ios7-arrow-thin-right,
+.ion-ios7-arrow-thin-up,
 .ion-ios7-arrow-up,
 .ion-ios7-at,
 .ion-ios7-at-outline,
@@ -98,8 +134,12 @@
 .ion-ios7-bookmarks-outline,
 .ion-ios7-box,
 .ion-ios7-box-outline,
+.ion-ios7-briefcase,
+.ion-ios7-briefcase-outline,
 .ion-ios7-browsers,
 .ion-ios7-browsers-outline,
+.ion-ios7-calculator,
+.ion-ios7-calculator-outline,
 .ion-ios7-calendar,
 .ion-ios7-calendar-outline,
 .ion-ios7-camera,
@@ -167,10 +207,14 @@
 .ion-ios7-ionic-outline,
 .ion-ios7-keypad,
 .ion-ios7-keypad-outline,
+.ion-ios7-lightbulb,
+.ion-ios7-lightbulb-outline,
 .ion-ios7-location,
 .ion-ios7-location-outline,
 .ion-ios7-locked,
 .ion-ios7-locked-outline,
+.ion-ios7-medkit,
+.ion-ios7-medkit-outline,
 .ion-ios7-mic,
 .ion-ios7-mic-off,
 .ion-ios7-mic-outline,
@@ -201,11 +245,15 @@
 .ion-ios7-personadd-outline,
 .ion-ios7-photos,
 .ion-ios7-photos-outline,
+.ion-ios7-pie,
+.ion-ios7-pie-outline,
 .ion-ios7-play,
 .ion-ios7-play-outline,
 .ion-ios7-plus,
 .ion-ios7-plus-empty,
 .ion-ios7-plus-outline,
+.ion-ios7-pricetag,
+.ion-ios7-pricetag-outline,
 .ion-ios7-printer,
 .ion-ios7-printer-outline,
 .ion-ios7-rainy,
@@ -217,6 +265,7 @@
 .ion-ios7-refresh,
 .ion-ios7-refresh-empty,
 .ion-ios7-refresh-outline,
+.ion-ios7-reload,
 .ion-ios7-rewind,
 .ion-ios7-rewind-outline,
 .ion-ios7-search,
@@ -225,6 +274,8 @@
 .ion-ios7-skipbackward-outline,
 .ion-ios7-skipforward,
 .ion-ios7-skipforward-outline,
+.ion-ios7-speedometer,
+.ion-ios7-speedometer-outline,
 .ion-ios7-star,
 .ion-ios7-star-outline,
 .ion-ios7-stopwatch,
@@ -235,6 +286,8 @@
 .ion-ios7-telephone-outline,
 .ion-ios7-thunderstorm,
 .ion-ios7-thunderstorm-outline,
+.ion-ios7-time,
+.ion-ios7-time-outline,
 .ion-ios7-timer,
 .ion-ios7-timer-outline,
 .ion-ios7-trash,
@@ -249,19 +302,35 @@
 .ion-ios7-videocam-outline,
 .ion-ios7-volume-high,
 .ion-ios7-volume-low,
+.ion-ios7-wineglass,
+.ion-ios7-wineglass-outline,
 .ion-ios7-world,
 .ion-ios7-world-outline,
 .ion-ipad,
 .ion-iphone,
 .ion-ipod,
+.ion-jet,
+.ion-key,
+.ion-knife,
 .ion-laptop,
 .ion-leaf,
+.ion-levels,
+.ion-lightbulb,
 .ion-link,
+.ion-load-a,
+.ion-load-b,
+.ion-load-c,
+.ion-load-d,
 .ion-location,
 .ion-locked,
+.ion-log-in,
+.ion-log-out,
 .ion-loop,
+.ion-magnet,
+.ion-male,
 .ion-man,
 .ion-map,
+.ion-medkit,
 .ion-mic-a,
 .ion-mic-b,
 .ion-mic-c,
@@ -273,23 +342,34 @@
 .ion-music-note,
 .ion-navicon,
 .ion-navicon-round,
+.ion-navigate,
+.ion-nuclear,
 .ion-paperclip,
 .ion-pause,
 .ion-person,
 .ion-person-add,
 .ion-person-stalker,
+.ion-pie-graph,
+.ion-pin,
+.ion-pinpoint,
+.ion-pizza,
 .ion-plane,
 .ion-play,
 .ion-plus,
 .ion-plus-circled,
 .ion-plus-round,
 .ion-pound,
+.ion-power,
+.ion-pricetag,
+.ion-pricetags,
 .ion-printer,
+.ion-radio-waves,
 .ion-record,
 .ion-refresh,
 .ion-reply,
 .ion-reply-all,
 .ion-search,
+.ion-settings,
 .ion-share,
 .ion-shuffle,
 .ion-skip-backward,
@@ -298,6 +378,8 @@
 .ion-social-android-outline,
 .ion-social-apple,
 .ion-social-apple-outline,
+.ion-social-bitcoin,
+.ion-social-bitcoin-outline,
 .ion-social-buffer,
 .ion-social-buffer-outline,
 .ion-social-designernews,
@@ -316,6 +398,8 @@
 .ion-social-hackernews-outline,
 .ion-social-linkedin,
 .ion-social-linkedin-outline,
+.ion-social-pinterest,
+.ion-social-pinterest-outline,
 .ion-social-reddit,
 .ion-social-reddit-outline,
 .ion-social-rss,
@@ -336,14 +420,21 @@
 .ion-social-yahoo-outline,
 .ion-social-youtube,
 .ion-social-youtube-outline,
+.ion-speakerphone,
+.ion-speedometer,
+.ion-spoon,
 .ion-star,
+.ion-stats-bars,
 .ion-stop,
+.ion-thermometer,
 .ion-thumbsdown,
 .ion-thumbsup,
 .ion-trash-a,
 .ion-trash-b,
+.ion-umbrella,
 .ion-unlocked,
 .ion-upload,
+.ion-usb,
 .ion-videocamera,
 .ion-volume-high,
 .ion-volume-low,
@@ -351,7 +442,9 @@
 .ion-volume-mute,
 .ion-waterdrop,
 .ion-wifi,
-.ion-woman
+.ion-wineglass,
+.ion-woman,
+.ion-wrench
 {
   @extend .ion;
 }
@@ -361,12 +454,23 @@
 .#{$ionicons-prefix}arrow-down-a:before { content: "\f103"; }
 .#{$ionicons-prefix}arrow-down-b:before { content: "\f104"; }
 .#{$ionicons-prefix}arrow-down-c:before { content: "\f105"; }
+.#{$ionicons-prefix}arrow-expand:before { content: "\f25e"; }
+.#{$ionicons-prefix}arrow-graph-down-left:before { content: "\f25f"; }
+.#{$ionicons-prefix}arrow-graph-down-right:before { content: "\f260"; }
+.#{$ionicons-prefix}arrow-graph-up-left:before { content: "\f261"; }
+.#{$ionicons-prefix}arrow-graph-up-right:before { content: "\f262"; }
 .#{$ionicons-prefix}arrow-left-a:before { content: "\f106"; }
 .#{$ionicons-prefix}arrow-left-b:before { content: "\f107"; }
 .#{$ionicons-prefix}arrow-left-c:before { content: "\f108"; }
+.#{$ionicons-prefix}arrow-move:before { content: "\f263"; }
+.#{$ionicons-prefix}arrow-resize:before { content: "\f264"; }
+.#{$ionicons-prefix}arrow-return-left:before { content: "\f265"; }
+.#{$ionicons-prefix}arrow-return-right:before { content: "\f266"; }
 .#{$ionicons-prefix}arrow-right-a:before { content: "\f109"; }
 .#{$ionicons-prefix}arrow-right-b:before { content: "\f10a"; }
 .#{$ionicons-prefix}arrow-right-c:before { content: "\f10b"; }
+.#{$ionicons-prefix}arrow-shrink:before { content: "\f267"; }
+.#{$ionicons-prefix}arrow-swap:before { content: "\f268"; }
 .#{$ionicons-prefix}arrow-up-a:before { content: "\f10c"; }
 .#{$ionicons-prefix}arrow-up-b:before { content: "\f10d"; }
 .#{$ionicons-prefix}arrow-up-c:before { content: "\f10e"; }
@@ -377,7 +481,12 @@
 .#{$ionicons-prefix}battery-full:before { content: "\f113"; }
 .#{$ionicons-prefix}battery-half:before { content: "\f114"; }
 .#{$ionicons-prefix}battery-low:before { content: "\f115"; }
+.#{$ionicons-prefix}beaker:before { content: "\f269"; }
+.#{$ionicons-prefix}beer:before { content: "\f26a"; }
 .#{$ionicons-prefix}bluetooth:before { content: "\f116"; }
+.#{$ionicons-prefix}bookmark:before { content: "\f26b"; }
+.#{$ionicons-prefix}briefcase:before { content: "\f26c"; }
+.#{$ionicons-prefix}calculator:before { content: "\f26d"; }
 .#{$ionicons-prefix}calendar:before { content: "\f117"; }
 .#{$ionicons-prefix}camera:before { content: "\f118"; }
 .#{$ionicons-prefix}card:before { content: "\f119"; }
@@ -395,35 +504,51 @@
 .#{$ionicons-prefix}chevron-right:before { content: "\f125"; }
 .#{$ionicons-prefix}chevron-up:before { content: "\f126"; }
 .#{$ionicons-prefix}clipboard:before { content: "\f127"; }
+.#{$ionicons-prefix}clock:before { content: "\f26e"; }
 .#{$ionicons-prefix}close:before { content: "\f12a"; }
 .#{$ionicons-prefix}close-circled:before { content: "\f128"; }
 .#{$ionicons-prefix}close-round:before { content: "\f129"; }
 .#{$ionicons-prefix}cloud:before { content: "\f12b"; }
+.#{$ionicons-prefix}code:before { content: "\f271"; }
+.#{$ionicons-prefix}code-download:before { content: "\f26f"; }
+.#{$ionicons-prefix}code-working:before { content: "\f270"; }
+.#{$ionicons-prefix}coffee:before { content: "\f272"; }
+.#{$ionicons-prefix}compass:before { content: "\f273"; }
 .#{$ionicons-prefix}compose:before { content: "\f12c"; }
+.#{$ionicons-prefix}connection-bars:before { content: "\f274"; }
+.#{$ionicons-prefix}contrast:before { content: "\f275"; }
 .#{$ionicons-prefix}disc:before { content: "\f12d"; }
 .#{$ionicons-prefix}document:before { content: "\f12f"; }
 .#{$ionicons-prefix}document-text:before { content: "\f12e"; }
 .#{$ionicons-prefix}drag:before { content: "\f130"; }
+.#{$ionicons-prefix}earth:before { content: "\f276"; }
+.#{$ionicons-prefix}egg:before { content: "\f277"; }
 .#{$ionicons-prefix}eject:before { content: "\f131"; }
 .#{$ionicons-prefix}email:before { content: "\f132"; }
 .#{$ionicons-prefix}eye:before { content: "\f133"; }
+.#{$ionicons-prefix}female:before { content: "\f278"; }
 .#{$ionicons-prefix}filing:before { content: "\f134"; }
 .#{$ionicons-prefix}film-marker:before { content: "\f135"; }
+.#{$ionicons-prefix}flag:before { content: "\f279"; }
 .#{$ionicons-prefix}flash:before { content: "\f137"; }
 .#{$ionicons-prefix}flash-off:before { content: "\f136"; }
 .#{$ionicons-prefix}flask:before { content: "\f138"; }
 .#{$ionicons-prefix}folder:before { content: "\f139"; }
+.#{$ionicons-prefix}fork:before { content: "\f27a"; }
 .#{$ionicons-prefix}forward:before { content: "\f13a"; }
 .#{$ionicons-prefix}game-controller-a:before { content: "\f13b"; }
 .#{$ionicons-prefix}game-controller-b:before { content: "\f13c"; }
 .#{$ionicons-prefix}gear-a:before { content: "\f13d"; }
 .#{$ionicons-prefix}gear-b:before { content: "\f13e"; }
 .#{$ionicons-prefix}grid:before { content: "\f13f"; }
+.#{$ionicons-prefix}hammer:before { content: "\f27b"; }
 .#{$ionicons-prefix}headphone:before { content: "\f140"; }
 .#{$ionicons-prefix}heart:before { content: "\f141"; }
 .#{$ionicons-prefix}help:before { content: "\f143"; }
+.#{$ionicons-prefix}help-buoy:before { content: "\f27c"; }
 .#{$ionicons-prefix}help-circled:before { content: "\f142"; }
 .#{$ionicons-prefix}home:before { content: "\f144"; }
+.#{$ionicons-prefix}icecream:before { content: "\f27d"; }
 .#{$ionicons-prefix}icon-social-google-plus:before { content: "\f146"; }
 .#{$ionicons-prefix}icon-social-google-plus-outline:before { content: "\f145"; }
 .#{$ionicons-prefix}image:before { content: "\f147"; }
@@ -440,6 +565,10 @@
 .#{$ionicons-prefix}ios7-arrow-forward:before { content: "\f152"; }
 .#{$ionicons-prefix}ios7-arrow-left:before { content: "\f153"; }
 .#{$ionicons-prefix}ios7-arrow-right:before { content: "\f154"; }
+.#{$ionicons-prefix}ios7-arrow-thin-down:before { content: "\f27e"; }
+.#{$ionicons-prefix}ios7-arrow-thin-left:before { content: "\f27f"; }
+.#{$ionicons-prefix}ios7-arrow-thin-right:before { content: "\f280"; }
+.#{$ionicons-prefix}ios7-arrow-thin-up:before { content: "\f281"; }
 .#{$ionicons-prefix}ios7-arrow-up:before { content: "\f155"; }
 .#{$ionicons-prefix}ios7-at:before { content: "\f157"; }
 .#{$ionicons-prefix}ios7-at-outline:before { content: "\f156"; }
@@ -451,8 +580,12 @@
 .#{$ionicons-prefix}ios7-bookmarks-outline:before { content: "\f15c"; }
 .#{$ionicons-prefix}ios7-box:before { content: "\f15f"; }
 .#{$ionicons-prefix}ios7-box-outline:before { content: "\f15e"; }
+.#{$ionicons-prefix}ios7-briefcase:before { content: "\f283"; }
+.#{$ionicons-prefix}ios7-briefcase-outline:before { content: "\f282"; }
 .#{$ionicons-prefix}ios7-browsers:before { content: "\f161"; }
 .#{$ionicons-prefix}ios7-browsers-outline:before { content: "\f160"; }
+.#{$ionicons-prefix}ios7-calculator:before { content: "\f285"; }
+.#{$ionicons-prefix}ios7-calculator-outline:before { content: "\f284"; }
 .#{$ionicons-prefix}ios7-calendar:before { content: "\f163"; }
 .#{$ionicons-prefix}ios7-calendar-outline:before { content: "\f162"; }
 .#{$ionicons-prefix}ios7-camera:before { content: "\f165"; }
@@ -520,10 +653,14 @@
 .#{$ionicons-prefix}ios7-ionic-outline:before { content: "\f1a2"; }
 .#{$ionicons-prefix}ios7-keypad:before { content: "\f1a4"; }
 .#{$ionicons-prefix}ios7-keypad-outline:before { content: "\f1a3"; }
+.#{$ionicons-prefix}ios7-lightbulb:before { content: "\f287"; }
+.#{$ionicons-prefix}ios7-lightbulb-outline:before { content: "\f286"; }
 .#{$ionicons-prefix}ios7-location:before { content: "\f1a6"; }
 .#{$ionicons-prefix}ios7-location-outline:before { content: "\f1a5"; }
 .#{$ionicons-prefix}ios7-locked:before { content: "\f1a8"; }
 .#{$ionicons-prefix}ios7-locked-outline:before { content: "\f1a7"; }
+.#{$ionicons-prefix}ios7-medkit:before { content: "\f289"; }
+.#{$ionicons-prefix}ios7-medkit-outline:before { content: "\f288"; }
 .#{$ionicons-prefix}ios7-mic:before { content: "\f1ab"; }
 .#{$ionicons-prefix}ios7-mic-off:before { content: "\f1a9"; }
 .#{$ionicons-prefix}ios7-mic-outline:before { content: "\f1aa"; }
@@ -554,11 +691,15 @@
 .#{$ionicons-prefix}ios7-personadd-outline:before { content: "\f1c3"; }
 .#{$ionicons-prefix}ios7-photos:before { content: "\f1c6"; }
 .#{$ionicons-prefix}ios7-photos-outline:before { content: "\f1c5"; }
+.#{$ionicons-prefix}ios7-pie:before { content: "\f28b"; }
+.#{$ionicons-prefix}ios7-pie-outline:before { content: "\f28a"; }
 .#{$ionicons-prefix}ios7-play:before { content: "\f1c8"; }
 .#{$ionicons-prefix}ios7-play-outline:before { content: "\f1c7"; }
 .#{$ionicons-prefix}ios7-plus:before { content: "\f1cb"; }
 .#{$ionicons-prefix}ios7-plus-empty:before { content: "\f1c9"; }
 .#{$ionicons-prefix}ios7-plus-outline:before { content: "\f1ca"; }
+.#{$ionicons-prefix}ios7-pricetag:before { content: "\f28d"; }
+.#{$ionicons-prefix}ios7-pricetag-outline:before { content: "\f28c"; }
 .#{$ionicons-prefix}ios7-printer:before { content: "\f1cd"; }
 .#{$ionicons-prefix}ios7-printer-outline:before { content: "\f1cc"; }
 .#{$ionicons-prefix}ios7-rainy:before { content: "\f1cf"; }
@@ -570,6 +711,7 @@
 .#{$ionicons-prefix}ios7-refresh:before { content: "\f1d6"; }
 .#{$ionicons-prefix}ios7-refresh-empty:before { content: "\f1d4"; }
 .#{$ionicons-prefix}ios7-refresh-outline:before { content: "\f1d5"; }
+.#{$ionicons-prefix}ios7-reload:before { content: "\f28e"; }
 .#{$ionicons-prefix}ios7-rewind:before { content: "\f1d8"; }
 .#{$ionicons-prefix}ios7-rewind-outline:before { content: "\f1d7"; }
 .#{$ionicons-prefix}ios7-search:before { content: "\f1da"; }
@@ -578,6 +720,8 @@
 .#{$ionicons-prefix}ios7-skipbackward-outline:before { content: "\f1db"; }
 .#{$ionicons-prefix}ios7-skipforward:before { content: "\f1de"; }
 .#{$ionicons-prefix}ios7-skipforward-outline:before { content: "\f1dd"; }
+.#{$ionicons-prefix}ios7-speedometer:before { content: "\f290"; }
+.#{$ionicons-prefix}ios7-speedometer-outline:before { content: "\f28f"; }
 .#{$ionicons-prefix}ios7-star:before { content: "\f1e0"; }
 .#{$ionicons-prefix}ios7-star-outline:before { content: "\f1df"; }
 .#{$ionicons-prefix}ios7-stopwatch:before { content: "\f1e2"; }
@@ -588,6 +732,8 @@
 .#{$ionicons-prefix}ios7-telephone-outline:before { content: "\f1e5"; }
 .#{$ionicons-prefix}ios7-thunderstorm:before { content: "\f1e8"; }
 .#{$ionicons-prefix}ios7-thunderstorm-outline:before { content: "\f1e7"; }
+.#{$ionicons-prefix}ios7-time:before { content: "\f292"; }
+.#{$ionicons-prefix}ios7-time-outline:before { content: "\f291"; }
 .#{$ionicons-prefix}ios7-timer:before { content: "\f1ea"; }
 .#{$ionicons-prefix}ios7-timer-outline:before { content: "\f1e9"; }
 .#{$ionicons-prefix}ios7-trash:before { content: "\f1ec"; }
@@ -602,19 +748,35 @@
 .#{$ionicons-prefix}ios7-videocam-outline:before { content: "\f1f3"; }
 .#{$ionicons-prefix}ios7-volume-high:before { content: "\f1f5"; }
 .#{$ionicons-prefix}ios7-volume-low:before { content: "\f1f6"; }
+.#{$ionicons-prefix}ios7-wineglass:before { content: "\f294"; }
+.#{$ionicons-prefix}ios7-wineglass-outline:before { content: "\f293"; }
 .#{$ionicons-prefix}ios7-world:before { content: "\f1f8"; }
 .#{$ionicons-prefix}ios7-world-outline:before { content: "\f1f7"; }
 .#{$ionicons-prefix}ipad:before { content: "\f1f9"; }
 .#{$ionicons-prefix}iphone:before { content: "\f1fa"; }
 .#{$ionicons-prefix}ipod:before { content: "\f1fb"; }
+.#{$ionicons-prefix}jet:before { content: "\f295"; }
+.#{$ionicons-prefix}key:before { content: "\f296"; }
+.#{$ionicons-prefix}knife:before { content: "\f297"; }
 .#{$ionicons-prefix}laptop:before { content: "\f1fc"; }
 .#{$ionicons-prefix}leaf:before { content: "\f1fd"; }
+.#{$ionicons-prefix}levels:before { content: "\f298"; }
+.#{$ionicons-prefix}lightbulb:before { content: "\f299"; }
 .#{$ionicons-prefix}link:before { content: "\f1fe"; }
+.#{$ionicons-prefix}load-a:before { content: "\f29a"; }
+.#{$ionicons-prefix}load-b:before { content: "\f29b"; }
+.#{$ionicons-prefix}load-c:before { content: "\f29c"; }
+.#{$ionicons-prefix}load-d:before { content: "\f29d"; }
 .#{$ionicons-prefix}location:before { content: "\f1ff"; }
 .#{$ionicons-prefix}locked:before { content: "\f200"; }
+.#{$ionicons-prefix}log-in:before { content: "\f29e"; }
+.#{$ionicons-prefix}log-out:before { content: "\f29f"; }
 .#{$ionicons-prefix}loop:before { content: "\f201"; }
+.#{$ionicons-prefix}magnet:before { content: "\f2a0"; }
+.#{$ionicons-prefix}male:before { content: "\f2a1"; }
 .#{$ionicons-prefix}man:before { content: "\f202"; }
 .#{$ionicons-prefix}map:before { content: "\f203"; }
+.#{$ionicons-prefix}medkit:before { content: "\f2a2"; }
 .#{$ionicons-prefix}mic-a:before { content: "\f204"; }
 .#{$ionicons-prefix}mic-b:before { content: "\f205"; }
 .#{$ionicons-prefix}mic-c:before { content: "\f206"; }
@@ -626,23 +788,34 @@
 .#{$ionicons-prefix}music-note:before { content: "\f20c"; }
 .#{$ionicons-prefix}navicon:before { content: "\f20e"; }
 .#{$ionicons-prefix}navicon-round:before { content: "\f20d"; }
+.#{$ionicons-prefix}navigate:before { content: "\f2a3"; }
+.#{$ionicons-prefix}nuclear:before { content: "\f2a4"; }
 .#{$ionicons-prefix}paperclip:before { content: "\f20f"; }
 .#{$ionicons-prefix}pause:before { content: "\f210"; }
 .#{$ionicons-prefix}person:before { content: "\f213"; }
 .#{$ionicons-prefix}person-add:before { content: "\f211"; }
 .#{$ionicons-prefix}person-stalker:before { content: "\f212"; }
+.#{$ionicons-prefix}pie-graph:before { content: "\f2a5"; }
+.#{$ionicons-prefix}pin:before { content: "\f2a6"; }
+.#{$ionicons-prefix}pinpoint:before { content: "\f2a7"; }
+.#{$ionicons-prefix}pizza:before { content: "\f2a8"; }
 .#{$ionicons-prefix}plane:before { content: "\f214"; }
 .#{$ionicons-prefix}play:before { content: "\f215"; }
 .#{$ionicons-prefix}plus:before { content: "\f218"; }
 .#{$ionicons-prefix}plus-circled:before { content: "\f216"; }
 .#{$ionicons-prefix}plus-round:before { content: "\f217"; }
 .#{$ionicons-prefix}pound:before { content: "\f219"; }
+.#{$ionicons-prefix}power:before { content: "\f2a9"; }
+.#{$ionicons-prefix}pricetag:before { content: "\f2aa"; }
+.#{$ionicons-prefix}pricetags:before { content: "\f2ab"; }
 .#{$ionicons-prefix}printer:before { content: "\f21a"; }
+.#{$ionicons-prefix}radio-waves:before { content: "\f2ac"; }
 .#{$ionicons-prefix}record:before { content: "\f21b"; }
 .#{$ionicons-prefix}refresh:before { content: "\f21c"; }
 .#{$ionicons-prefix}reply:before { content: "\f21e"; }
 .#{$ionicons-prefix}reply-all:before { content: "\f21d"; }
 .#{$ionicons-prefix}search:before { content: "\f21f"; }
+.#{$ionicons-prefix}settings:before { content: "\f2ad"; }
 .#{$ionicons-prefix}share:before { content: "\f220"; }
 .#{$ionicons-prefix}shuffle:before { content: "\f221"; }
 .#{$ionicons-prefix}skip-backward:before { content: "\f222"; }
@@ -651,6 +824,8 @@
 .#{$ionicons-prefix}social-android-outline:before { content: "\f224"; }
 .#{$ionicons-prefix}social-apple:before { content: "\f227"; }
 .#{$ionicons-prefix}social-apple-outline:before { content: "\f226"; }
+.#{$ionicons-prefix}social-bitcoin:before { content: "\f2af"; }
+.#{$ionicons-prefix}social-bitcoin-outline:before { content: "\f2ae"; }
 .#{$ionicons-prefix}social-buffer:before { content: "\f229"; }
 .#{$ionicons-prefix}social-buffer-outline:before { content: "\f228"; }
 .#{$ionicons-prefix}social-designernews:before { content: "\f22b"; }
@@ -669,6 +844,8 @@
 .#{$ionicons-prefix}social-hackernews-outline:before { content: "\f236"; }
 .#{$ionicons-prefix}social-linkedin:before { content: "\f239"; }
 .#{$ionicons-prefix}social-linkedin-outline:before { content: "\f238"; }
+.#{$ionicons-prefix}social-pinterest:before { content: "\f2b1"; }
+.#{$ionicons-prefix}social-pinterest-outline:before { content: "\f2b0"; }
 .#{$ionicons-prefix}social-reddit:before { content: "\f23b"; }
 .#{$ionicons-prefix}social-reddit-outline:before { content: "\f23a"; }
 .#{$ionicons-prefix}social-rss:before { content: "\f23d"; }
@@ -689,14 +866,21 @@
 .#{$ionicons-prefix}social-yahoo-outline:before { content: "\f24a"; }
 .#{$ionicons-prefix}social-youtube:before { content: "\f24d"; }
 .#{$ionicons-prefix}social-youtube-outline:before { content: "\f24c"; }
+.#{$ionicons-prefix}speakerphone:before { content: "\f2b2"; }
+.#{$ionicons-prefix}speedometer:before { content: "\f2b3"; }
+.#{$ionicons-prefix}spoon:before { content: "\f2b4"; }
 .#{$ionicons-prefix}star:before { content: "\f24e"; }
+.#{$ionicons-prefix}stats-bars:before { content: "\f2b5"; }
 .#{$ionicons-prefix}stop:before { content: "\f24f"; }
+.#{$ionicons-prefix}thermometer:before { content: "\f2b6"; }
 .#{$ionicons-prefix}thumbsdown:before { content: "\f250"; }
 .#{$ionicons-prefix}thumbsup:before { content: "\f251"; }
 .#{$ionicons-prefix}trash-a:before { content: "\f252"; }
 .#{$ionicons-prefix}trash-b:before { content: "\f253"; }
+.#{$ionicons-prefix}umbrella:before { content: "\f2b7"; }
 .#{$ionicons-prefix}unlocked:before { content: "\f254"; }
 .#{$ionicons-prefix}upload:before { content: "\f255"; }
+.#{$ionicons-prefix}usb:before { content: "\f2b8"; }
 .#{$ionicons-prefix}videocamera:before { content: "\f256"; }
 .#{$ionicons-prefix}volume-high:before { content: "\f257"; }
 .#{$ionicons-prefix}volume-low:before { content: "\f258"; }
@@ -704,4 +888,6 @@
 .#{$ionicons-prefix}volume-mute:before { content: "\f25a"; }
 .#{$ionicons-prefix}waterdrop:before { content: "\f25b"; }
 .#{$ionicons-prefix}wifi:before { content: "\f25c"; }
+.#{$ionicons-prefix}wineglass:before { content: "\f2b9"; }
 .#{$ionicons-prefix}woman:before { content: "\f25d"; }
+.#{$ionicons-prefix}wrench:before { content: "\f2ba"; }

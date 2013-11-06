@@ -1,5 +1,5 @@
 {
-  "build_hash": "cd2da65727042f2c6181be7bc958a281",
+  "build_hash": "8667539bd6a4f4c7a7668eeb477a408a",
   "prefix": "ion-",
   "version": "1.3.0",
   "name": "Ionicons",
@@ -29,6 +29,26 @@
       "name": "arrow-down-c"
     },
     {
+      "code": "0xf25e",
+      "name": "arrow-expand"
+    },
+    {
+      "code": "0xf25f",
+      "name": "arrow-graph-down-left"
+    },
+    {
+      "code": "0xf260",
+      "name": "arrow-graph-down-right"
+    },
+    {
+      "code": "0xf261",
+      "name": "arrow-graph-up-left"
+    },
+    {
+      "code": "0xf262",
+      "name": "arrow-graph-up-right"
+    },
+    {
       "code": "0xf106",
       "name": "arrow-left-a"
     },
@@ -41,6 +61,22 @@
       "name": "arrow-left-c"
     },
     {
+      "code": "0xf263",
+      "name": "arrow-move"
+    },
+    {
+      "code": "0xf264",
+      "name": "arrow-resize"
+    },
+    {
+      "code": "0xf265",
+      "name": "arrow-return-left"
+    },
+    {
+      "code": "0xf266",
+      "name": "arrow-return-right"
+    },
+    {
       "code": "0xf109",
       "name": "arrow-right-a"
     },
@@ -51,6 +87,14 @@
     {
       "code": "0xf10b",
       "name": "arrow-right-c"
+    },
+    {
+      "code": "0xf267",
+      "name": "arrow-shrink"
+    },
+    {
+      "code": "0xf268",
+      "name": "arrow-swap"
     },
     {
       "code": "0xf10c",
@@ -93,8 +137,28 @@
       "name": "battery-low"
     },
     {
+      "code": "0xf269",
+      "name": "beaker"
+    },
+    {
+      "code": "0xf26a",
+      "name": "beer"
+    },
+    {
       "code": "0xf116",
       "name": "bluetooth"
+    },
+    {
+      "code": "0xf26b",
+      "name": "bookmark"
+    },
+    {
+      "code": "0xf26c",
+      "name": "briefcase"
+    },
+    {
+      "code": "0xf26d",
+      "name": "calculator"
     },
     {
       "code": "0xf117",
@@ -165,6 +229,10 @@
       "name": "clipboard"
     },
     {
+      "code": "0xf26e",
+      "name": "clock"
+    },
+    {
       "code": "0xf12a",
       "name": "close"
     },
@@ -181,8 +249,36 @@
       "name": "cloud"
     },
     {
+      "code": "0xf271",
+      "name": "code"
+    },
+    {
+      "code": "0xf26f",
+      "name": "code-download"
+    },
+    {
+      "code": "0xf270",
+      "name": "code-working"
+    },
+    {
+      "code": "0xf272",
+      "name": "coffee"
+    },
+    {
+      "code": "0xf273",
+      "name": "compass"
+    },
+    {
       "code": "0xf12c",
       "name": "compose"
+    },
+    {
+      "code": "0xf274",
+      "name": "connection-bars"
+    },
+    {
+      "code": "0xf275",
+      "name": "contrast"
     },
     {
       "code": "0xf12d",
@@ -201,6 +297,14 @@
       "name": "drag"
     },
     {
+      "code": "0xf276",
+      "name": "earth"
+    },
+    {
+      "code": "0xf277",
+      "name": "egg"
+    },
+    {
       "code": "0xf131",
       "name": "eject"
     },
@@ -213,12 +317,20 @@
       "name": "eye"
     },
     {
+      "code": "0xf278",
+      "name": "female"
+    },
+    {
       "code": "0xf134",
       "name": "filing"
     },
     {
       "code": "0xf135",
       "name": "film-marker"
+    },
+    {
+      "code": "0xf279",
+      "name": "flag"
     },
     {
       "code": "0xf137",
@@ -235,6 +347,10 @@
     {
       "code": "0xf139",
       "name": "folder"
+    },
+    {
+      "code": "0xf27a",
+      "name": "fork"
     },
     {
       "code": "0xf13a",
@@ -261,6 +377,10 @@
       "name": "grid"
     },
     {
+      "code": "0xf27b",
+      "name": "hammer"
+    },
+    {
       "code": "0xf140",
       "name": "headphone"
     },
@@ -273,12 +393,20 @@
       "name": "help"
     },
     {
+      "code": "0xf27c",
+      "name": "help-buoy"
+    },
+    {
       "code": "0xf142",
       "name": "help-circled"
     },
     {
       "code": "0xf144",
       "name": "home"
+    },
+    {
+      "code": "0xf27d",
+      "name": "icecream"
     },
     {
       "code": "0xf146",
@@ -345,6 +473,22 @@
       "name": "ios7-arrow-right"
     },
     {
+      "code": "0xf27e",
+      "name": "ios7-arrow-thin-down"
+    },
+    {
+      "code": "0xf27f",
+      "name": "ios7-arrow-thin-left"
+    },
+    {
+      "code": "0xf280",
+      "name": "ios7-arrow-thin-right"
+    },
+    {
+      "code": "0xf281",
+      "name": "ios7-arrow-thin-up"
+    },
+    {
       "code": "0xf155",
       "name": "ios7-arrow-up"
     },
@@ -389,12 +533,28 @@
       "name": "ios7-box-outline"
     },
     {
+      "code": "0xf283",
+      "name": "ios7-briefcase"
+    },
+    {
+      "code": "0xf282",
+      "name": "ios7-briefcase-outline"
+    },
+    {
       "code": "0xf161",
       "name": "ios7-browsers"
     },
     {
       "code": "0xf160",
       "name": "ios7-browsers-outline"
+    },
+    {
+      "code": "0xf285",
+      "name": "ios7-calculator"
+    },
+    {
+      "code": "0xf284",
+      "name": "ios7-calculator-outline"
     },
     {
       "code": "0xf163",
@@ -665,6 +825,14 @@
       "name": "ios7-keypad-outline"
     },
     {
+      "code": "0xf287",
+      "name": "ios7-lightbulb"
+    },
+    {
+      "code": "0xf286",
+      "name": "ios7-lightbulb-outline"
+    },
+    {
       "code": "0xf1a6",
       "name": "ios7-location"
     },
@@ -679,6 +847,14 @@
     {
       "code": "0xf1a7",
       "name": "ios7-locked-outline"
+    },
+    {
+      "code": "0xf289",
+      "name": "ios7-medkit"
+    },
+    {
+      "code": "0xf288",
+      "name": "ios7-medkit-outline"
     },
     {
       "code": "0xf1ab",
@@ -801,6 +977,14 @@
       "name": "ios7-photos-outline"
     },
     {
+      "code": "0xf28b",
+      "name": "ios7-pie"
+    },
+    {
+      "code": "0xf28a",
+      "name": "ios7-pie-outline"
+    },
+    {
       "code": "0xf1c8",
       "name": "ios7-play"
     },
@@ -819,6 +1003,14 @@
     {
       "code": "0xf1ca",
       "name": "ios7-plus-outline"
+    },
+    {
+      "code": "0xf28d",
+      "name": "ios7-pricetag"
+    },
+    {
+      "code": "0xf28c",
+      "name": "ios7-pricetag-outline"
     },
     {
       "code": "0xf1cd",
@@ -865,6 +1057,10 @@
       "name": "ios7-refresh-outline"
     },
     {
+      "code": "0xf28e",
+      "name": "ios7-reload"
+    },
+    {
       "code": "0xf1d8",
       "name": "ios7-rewind"
     },
@@ -895,6 +1091,14 @@
     {
       "code": "0xf1dd",
       "name": "ios7-skipforward-outline"
+    },
+    {
+      "code": "0xf290",
+      "name": "ios7-speedometer"
+    },
+    {
+      "code": "0xf28f",
+      "name": "ios7-speedometer-outline"
     },
     {
       "code": "0xf1e0",
@@ -935,6 +1139,14 @@
     {
       "code": "0xf1e7",
       "name": "ios7-thunderstorm-outline"
+    },
+    {
+      "code": "0xf292",
+      "name": "ios7-time"
+    },
+    {
+      "code": "0xf291",
+      "name": "ios7-time-outline"
     },
     {
       "code": "0xf1ea",
@@ -993,6 +1205,14 @@
       "name": "ios7-volume-low"
     },
     {
+      "code": "0xf294",
+      "name": "ios7-wineglass"
+    },
+    {
+      "code": "0xf293",
+      "name": "ios7-wineglass-outline"
+    },
+    {
       "code": "0xf1f8",
       "name": "ios7-world"
     },
@@ -1013,6 +1233,18 @@
       "name": "ipod"
     },
     {
+      "code": "0xf295",
+      "name": "jet"
+    },
+    {
+      "code": "0xf296",
+      "name": "key"
+    },
+    {
+      "code": "0xf297",
+      "name": "knife"
+    },
+    {
       "code": "0xf1fc",
       "name": "laptop"
     },
@@ -1021,8 +1253,32 @@
       "name": "leaf"
     },
     {
+      "code": "0xf298",
+      "name": "levels"
+    },
+    {
+      "code": "0xf299",
+      "name": "lightbulb"
+    },
+    {
       "code": "0xf1fe",
       "name": "link"
+    },
+    {
+      "code": "0xf29a",
+      "name": "load-a"
+    },
+    {
+      "code": "0xf29b",
+      "name": "load-b"
+    },
+    {
+      "code": "0xf29c",
+      "name": "load-c"
+    },
+    {
+      "code": "0xf29d",
+      "name": "load-d"
     },
     {
       "code": "0xf1ff",
@@ -1033,8 +1289,24 @@
       "name": "locked"
     },
     {
+      "code": "0xf29e",
+      "name": "log-in"
+    },
+    {
+      "code": "0xf29f",
+      "name": "log-out"
+    },
+    {
       "code": "0xf201",
       "name": "loop"
+    },
+    {
+      "code": "0xf2a0",
+      "name": "magnet"
+    },
+    {
+      "code": "0xf2a1",
+      "name": "male"
     },
     {
       "code": "0xf202",
@@ -1043,6 +1315,10 @@
     {
       "code": "0xf203",
       "name": "map"
+    },
+    {
+      "code": "0xf2a2",
+      "name": "medkit"
     },
     {
       "code": "0xf204",
@@ -1089,6 +1365,14 @@
       "name": "navicon-round"
     },
     {
+      "code": "0xf2a3",
+      "name": "navigate"
+    },
+    {
+      "code": "0xf2a4",
+      "name": "nuclear"
+    },
+    {
       "code": "0xf20f",
       "name": "paperclip"
     },
@@ -1107,6 +1391,22 @@
     {
       "code": "0xf212",
       "name": "person-stalker"
+    },
+    {
+      "code": "0xf2a5",
+      "name": "pie-graph"
+    },
+    {
+      "code": "0xf2a6",
+      "name": "pin"
+    },
+    {
+      "code": "0xf2a7",
+      "name": "pinpoint"
+    },
+    {
+      "code": "0xf2a8",
+      "name": "pizza"
     },
     {
       "code": "0xf214",
@@ -1133,8 +1433,24 @@
       "name": "pound"
     },
     {
+      "code": "0xf2a9",
+      "name": "power"
+    },
+    {
+      "code": "0xf2aa",
+      "name": "pricetag"
+    },
+    {
+      "code": "0xf2ab",
+      "name": "pricetags"
+    },
+    {
       "code": "0xf21a",
       "name": "printer"
+    },
+    {
+      "code": "0xf2ac",
+      "name": "radio-waves"
     },
     {
       "code": "0xf21b",
@@ -1155,6 +1471,10 @@
     {
       "code": "0xf21f",
       "name": "search"
+    },
+    {
+      "code": "0xf2ad",
+      "name": "settings"
     },
     {
       "code": "0xf220",
@@ -1187,6 +1507,14 @@
     {
       "code": "0xf226",
       "name": "social-apple-outline"
+    },
+    {
+      "code": "0xf2af",
+      "name": "social-bitcoin"
+    },
+    {
+      "code": "0xf2ae",
+      "name": "social-bitcoin-outline"
     },
     {
       "code": "0xf229",
@@ -1259,6 +1587,14 @@
     {
       "code": "0xf238",
       "name": "social-linkedin-outline"
+    },
+    {
+      "code": "0xf2b1",
+      "name": "social-pinterest"
+    },
+    {
+      "code": "0xf2b0",
+      "name": "social-pinterest-outline"
     },
     {
       "code": "0xf23b",
@@ -1341,12 +1677,32 @@
       "name": "social-youtube-outline"
     },
     {
+      "code": "0xf2b2",
+      "name": "speakerphone"
+    },
+    {
+      "code": "0xf2b3",
+      "name": "speedometer"
+    },
+    {
+      "code": "0xf2b4",
+      "name": "spoon"
+    },
+    {
       "code": "0xf24e",
       "name": "star"
     },
     {
+      "code": "0xf2b5",
+      "name": "stats-bars"
+    },
+    {
       "code": "0xf24f",
       "name": "stop"
+    },
+    {
+      "code": "0xf2b6",
+      "name": "thermometer"
     },
     {
       "code": "0xf250",
@@ -1365,12 +1721,20 @@
       "name": "trash-b"
     },
     {
+      "code": "0xf2b7",
+      "name": "umbrella"
+    },
+    {
       "code": "0xf254",
       "name": "unlocked"
     },
     {
       "code": "0xf255",
       "name": "upload"
+    },
+    {
+      "code": "0xf2b8",
+      "name": "usb"
     },
     {
       "code": "0xf256",
@@ -1401,8 +1765,16 @@
       "name": "wifi"
     },
     {
+      "code": "0xf2b9",
+      "name": "wineglass"
+    },
+    {
       "code": "0xf25d",
       "name": "woman"
+    },
+    {
+      "code": "0xf2ba",
+      "name": "wrench"
     }
   ]
 }
