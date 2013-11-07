@@ -2,10 +2,10 @@
 // --------------------------
 
 .#{$ionicons-prefix}spin {
-  -webkit-animation: spin .8s infinite linear;
-  -moz-animation: spin .8s infinite linear;
-  -o-animation: spin .8s infinite linear;
-  animation: spin .8s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
 }
 
 @-moz-keyframes spin {
@@ -34,7 +34,9 @@
 .#{$ionicons-prefix}loading-b,
 .#{$ionicons-prefix}loading-c,
 .#{$ionicons-prefix}loading-d,
-.#{$ionicons-prefix}refreshing {
+.#{$ionicons-prefix}looping,
+.#{$ionicons-prefix}refreshing,
+.#{$ionicons-prefix}ios7-reloading {
   @extend .ion;
   @extend .#{$ionicons-prefix}spin;
 }
@@ -55,6 +57,14 @@
   @extend .#{$ionicons-prefix}load-d:before;
 }
 
+.#{$ionicons-prefix}looping:before { 
+  @extend .#{$ionicons-prefix}loop:before;
+}
+
 .#{$ionicons-prefix}refreshing:before { 
   @extend .#{$ionicons-prefix}refresh:before;
+}
+
+.#{$ionicons-prefix}ios7-reloading:before { 
+  @extend .#{$ionicons-prefix}ios7-reload:before;
 }
