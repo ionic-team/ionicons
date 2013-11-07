@@ -177,15 +177,17 @@ if (!String.prototype.trim) {
 
   var mouseOverTimeout;
   function iconMouseOver(e) {
-    if(e.currentTarget.className.indexOf("active") === -1) {
+    var target = (e.currentTarget) ? e.currentTarget : e.srcElement;
+    if(target.className.indexOf("active") === -1) {
       clearTimeout(mouseOverTimeout);
       mouseOverTimeout = setTimeout(hideIconPanel, 20);
     }
   }
 
   function panelClick(e) {
-    if(e.currentTarget && e.currentTarget.icon) {
-      if(e.currentTarget.className.indexOf("active") > -1) {
+    var target = (e.currentTarget) ? e.currentTarget : e.srcElement;
+    if(target && target.icon) {
+      if(target.className.indexOf("active") > -1) {
         hideIconPanel();
         return;
       }
@@ -196,9 +198,9 @@ if (!String.prototype.trim) {
       }
       iconPanel.style.top = (e.currentTarget.offsetTop + 60) + "px";
       iconPanel.style.left = (e.currentTarget.offsetLeft - 85) + "px";
-      e.currentTarget.className += " active";
-      iconName.innerHTML = e.currentTarget.icon.name;
-      iconCode.innerHTML = (e.currentTarget.icon.code || "");
+      target.className += " active";
+      iconName.innerHTML = target.icon.name;
+      iconCode.innerHTML = (target.icon.code || "");
     }
   }
 
