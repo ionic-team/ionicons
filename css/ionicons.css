@@ -1,4 +1,4 @@
-/*!
+/*
   Ionicons, v1.3.0
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
   https://twitter.com/helloimben  https://twitter.com/ionicframework
@@ -11,7 +11,11 @@
   font-weight: normal;
   font-style: normal; }
 
-.ion, .ionicons,
+.ion, .ion-loading-a,
+.ion-loading-b,
+.ion-loading-c,
+.ion-loading-d,
+.ion-refreshing, .ionicons,
 .ion-alert,
 .ion-alert-circled,
 .ion-archive,
@@ -455,6 +459,7 @@
 .ion-wineglass,
 .ion-woman,
 .ion-wrench {
+  display: inline-block;
   font-family: "Ionicons";
   speak: none;
   font-style: normal;
@@ -465,11 +470,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.ion-spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear; }
+.ion-spin, .ion-loading-a,
+.ion-loading-b,
+.ion-loading-c,
+.ion-loading-d,
+.ion-refreshing {
+  -webkit-animation: spin 0.8s infinite linear;
+  -moz-animation: spin 0.8s infinite linear;
+  -o-animation: spin 0.8s infinite linear;
+  animation: spin 0.8s infinite linear; }
 
 @-moz-keyframes spin {
   0% {
@@ -1451,16 +1460,16 @@
 .ion-link:before {
   content: "\f1fe"; }
 
-.ion-load-a:before {
+.ion-load-a:before, .ion-loading-a:before {
   content: "\f29a"; }
 
-.ion-load-b:before {
+.ion-load-b:before, .ion-loading-b:before {
   content: "\f29b"; }
 
-.ion-load-c:before {
+.ion-load-c:before, .ion-loading-c:before {
   content: "\f29c"; }
 
-.ion-load-d:before {
+.ion-load-d:before, .ion-loading-d:before {
   content: "\f29d"; }
 
 .ion-location:before {
@@ -1595,7 +1604,7 @@
 .ion-record:before {
   content: "\f21b"; }
 
-.ion-refresh:before {
+.ion-refresh:before, .ion-refreshing:before {
   content: "\f21c"; }
 
 .ion-reply:before {

@@ -2,10 +2,10 @@
 // --------------------------
 
 .#{$ionicons-prefix}spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
+  -webkit-animation: spin .8s infinite linear;
+  -moz-animation: spin .8s infinite linear;
+  -o-animation: spin .8s infinite linear;
+  animation: spin .8s infinite linear;
 }
 
 @-moz-keyframes spin {
@@ -27,4 +27,34 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(359deg); }
+}
+
+
+.#{$ionicons-prefix}loading-a,
+.#{$ionicons-prefix}loading-b,
+.#{$ionicons-prefix}loading-c,
+.#{$ionicons-prefix}loading-d,
+.#{$ionicons-prefix}refreshing {
+  @extend .ion;
+  @extend .#{$ionicons-prefix}spin;
+}
+
+.#{$ionicons-prefix}loading-a:before { 
+  @extend .#{$ionicons-prefix}load-a:before;
+}
+
+.#{$ionicons-prefix}loading-b:before { 
+  @extend .#{$ionicons-prefix}load-b:before;
+}
+
+.#{$ionicons-prefix}loading-c:before { 
+  @extend .#{$ionicons-prefix}load-c:before;
+}
+
+.#{$ionicons-prefix}loading-d:before { 
+  @extend .#{$ionicons-prefix}load-d:before;
+}
+
+.#{$ionicons-prefix}refreshing:before { 
+  @extend .#{$ionicons-prefix}refresh:before;
 }
