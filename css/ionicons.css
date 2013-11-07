@@ -1,4 +1,4 @@
-/*
+/*!
   Ionicons, v1.3.0
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
   https://twitter.com/helloimben  https://twitter.com/ionicframework
@@ -15,7 +15,9 @@
 .ion-loading-b,
 .ion-loading-c,
 .ion-loading-d,
-.ion-refreshing, .ionicons,
+.ion-looping,
+.ion-refreshing,
+.ion-ios7-reloading, .ionicons,
 .ion-alert,
 .ion-alert-circled,
 .ion-archive,
@@ -474,11 +476,13 @@
 .ion-loading-b,
 .ion-loading-c,
 .ion-loading-d,
-.ion-refreshing {
-  -webkit-animation: spin 0.8s infinite linear;
-  -moz-animation: spin 0.8s infinite linear;
-  -o-animation: spin 0.8s infinite linear;
-  animation: spin 0.8s infinite linear; }
+.ion-looping,
+.ion-refreshing,
+.ion-ios7-reloading {
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear; }
 
 @-moz-keyframes spin {
   0% {
@@ -1304,7 +1308,7 @@
 .ion-ios7-refresh-outline:before {
   content: "\f1d5"; }
 
-.ion-ios7-reload:before {
+.ion-ios7-reload:before, .ion-ios7-reloading:before {
   content: "\f28e"; }
 
 .ion-ios7-rewind:before {
@@ -1484,7 +1488,7 @@
 .ion-log-out:before {
   content: "\f29f"; }
 
-.ion-loop:before {
+.ion-loop:before, .ion-looping:before {
   content: "\f201"; }
 
 .ion-magnet:before {
