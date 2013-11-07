@@ -67,7 +67,7 @@ def generate_scss(data):
 
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.#{$ionicons-prefix}%s:before { content: "%s"; }' % (ionicon['name'], chr_code) )
+    d.append('.#{$ionicons-prefix}%s:before { content: $ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
   
   f = open(icons_file_path, 'w')
   f.write( '\n'.join(d) )
