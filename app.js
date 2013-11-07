@@ -196,8 +196,8 @@ if (!String.prototype.trim) {
           icons[x].el.className = icons[x].el.className.replace(" active", "");
         }
       }
-      iconPanel.style.top = (e.currentTarget.offsetTop + 60) + "px";
-      iconPanel.style.left = (e.currentTarget.offsetLeft - 85) + "px";
+      iconPanel.style.top = (target.offsetTop + 60) + "px";
+      iconPanel.style.left = (target.offsetLeft - 85) + "px";
       target.className += " active";
       iconName.innerHTML = target.icon.name;
       iconCode.innerHTML = (target.icon.code || "");
