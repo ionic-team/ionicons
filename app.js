@@ -231,7 +231,7 @@ if (!String.prototype.trim) {
   }
 
   if(location.hash && location.hash.length > 1) {
-    searchInput.value = location.hash.replace('#', '');
+    searchInput.value = location.hash.replace('#', '').replace(/%20/g, ' ');
     iconsUL.className = "search-results";
     searchQuery(searchInput.value);
   }
