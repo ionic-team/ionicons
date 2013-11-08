@@ -1,7 +1,7 @@
 {
-  "build_hash": "fe84ca3ae75b9dbb9662bac01a7fc8a6",
+  "build_hash": "3889e3da49c352910afa4128057bee28",
   "prefix": "ion-",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "name": "Ionicons",
   "icons": [
     {
@@ -623,6 +623,14 @@
     {
       "code": "0xf171",
       "name": "ios7-clock-outline"
+    },
+    {
+      "code": "0xf2bc",
+      "name": "ios7-close"
+    },
+    {
+      "code": "0xf2bb",
+      "name": "ios7-close-outline"
     },
     {
       "code": "0xf178",
