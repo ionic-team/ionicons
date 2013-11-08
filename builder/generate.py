@@ -57,7 +57,7 @@ def generate_scss(data):
 
   group = [ '.%s' % (data['name'].lower()) ]
   for ionicon in data['icons']:
-    group.append('.%s%s' % (css_prefix, ionicon['name']) )
+    group.append('.#{$ionicons-prefix}%s' % (ionicon['name']) )
 
   d.append( ',\n'.join(group) )
 
