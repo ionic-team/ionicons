@@ -230,5 +230,10 @@ if (!String.prototype.trim) {
     } catch(e) {}
   }
 
+  if(location.hash && location.hash.length > 1) {
+    searchInput.value = location.hash.replace('#', '');
+    iconsUL.className = "search-results";
+    searchQuery(searchInput.value);
+  }
 
 })();
