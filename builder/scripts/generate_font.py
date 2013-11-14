@@ -11,7 +11,7 @@ INPUT_SVG_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'src')
 OUTPUT_FONT_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'fonts')
 MANIFEST_PATH = os.path.join(SCRIPT_PATH, '..', 'manifest.json')
 BUILD_DATA_PATH = os.path.join(SCRIPT_PATH, '..', 'build_data.json')
-AUTO_WIDTH = False
+AUTO_WIDTH = True
 KERNING = 15
 
 cp = 0xf100

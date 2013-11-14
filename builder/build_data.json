@@ -1,7 +1,7 @@
 {
-  "build_hash": "a8f78b9242413cc16e767b9b214ab791",
+  "build_hash": "283bffe80f9777d67627afcd6d170661",
   "prefix": "ion-",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "name": "Ionicons",
   "icons": [
     {
@@ -627,6 +627,10 @@
     {
       "code": "0xf2bc",
       "name": "ios7-close"
+    },
+    {
+      "code": "0xf2bd",
+      "name": "ios7-close-empty"
     },
     {
       "code": "0xf2bb",

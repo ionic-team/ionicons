@@ -158,6 +158,7 @@
 .#{$ionicons-prefix}ios7-clock,
 .#{$ionicons-prefix}ios7-clock-outline,
 .#{$ionicons-prefix}ios7-close,
+.#{$ionicons-prefix}ios7-close-empty,
 .#{$ionicons-prefix}ios7-close-outline,
 .#{$ionicons-prefix}ios7-cloud,
 .#{$ionicons-prefix}ios7-cloud-download,
@@ -606,6 +607,7 @@
 .#{$ionicons-prefix}ios7-clock:before { content: $ionicon-var-ios7-clock; }
 .#{$ionicons-prefix}ios7-clock-outline:before { content: $ionicon-var-ios7-clock-outline; }
 .#{$ionicons-prefix}ios7-close:before { content: $ionicon-var-ios7-close; }
+.#{$ionicons-prefix}ios7-close-empty:before { content: $ionicon-var-ios7-close-empty; }
 .#{$ionicons-prefix}ios7-close-outline:before { content: $ionicon-var-ios7-close-outline; }
 .#{$ionicons-prefix}ios7-cloud:before { content: $ionicon-var-ios7-cloud; }
 .#{$ionicons-prefix}ios7-cloud-download:before { content: $ionicon-var-ios7-cloud-download; }
