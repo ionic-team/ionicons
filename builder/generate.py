@@ -150,7 +150,7 @@ def generate_component_json(data):
       "fonts/%s.eot" % (data['name'].lower()),
       "fonts/%s.svg" % (data['name'].lower()),
       "fonts/%s.ttf" % (data['name'].lower()),
-      "fonts/%s.woof" % (data['name'].lower())
+      "fonts/%s.woff" % (data['name'].lower())
     ]
   }
   txt = json.dumps(d, indent=4, separators=(',', ': '))
