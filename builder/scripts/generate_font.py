@@ -13,6 +13,7 @@ MANIFEST_PATH = os.path.join(SCRIPT_PATH, '..', 'manifest.json')
 BUILD_DATA_PATH = os.path.join(SCRIPT_PATH, '..', 'build_data.json')
 AUTO_WIDTH = True
 KERNING = 15
+STANDARD_WIDTH_ICONS = ['refresh', 'ios7-reload', 'load-a', 'load-b', 'load-c', 'load-d', 'loop']
 
 cp = 0xf100
 m = md5.new()
@@ -107,11 +108,12 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
         os.unlink(tmpsvgfile.name)
 
       # set glyph size explicitly or automatically depending on autowidth
-      if AUTO_WIDTH:
+      if AUTO_WIDTH and name not in STANDARD_WIDTH_ICONS:
         glyph.left_side_bearing = glyph.right_side_bearing = 0
         glyph.round()
       else:
         # force a manual size when autowidth is disabled
+        print " - Standard Width: %s" % (name)
         glyph.width = 512
 
     # resize glyphs if autowidth is enabled
