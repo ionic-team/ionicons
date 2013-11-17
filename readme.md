@@ -14,8 +14,8 @@ We intend for this icon pack to be used with [Ionic](http://ionicframework.com/)
 
  1. Download and extract the font pack
  2. Copy the `ionicons.css` to your project
- 3. Copy the `font` folder to your project
- 4. Ensure the font urls within `ionicons.css` properly reference the `font` path within your project.
+ 3. Copy the `fonts` folder to your project
+ 4. Ensure the font urls within `ionicons.css` properly reference the `fonts` path within your project.
  5. Include a reference to the `ionicons.css` file from every webpage you need to use it.
 
 Or install with [component](https://github.com/component/component):
