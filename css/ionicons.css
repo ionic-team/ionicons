@@ -1,4 +1,4 @@
-/*
+/*!
   Ionicons, v1.3.5
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
   https://twitter.com/helloimben  https://twitter.com/ionicframework
@@ -471,6 +471,7 @@
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
+  text-rendering: auto;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
