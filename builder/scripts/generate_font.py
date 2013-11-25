@@ -35,7 +35,6 @@ build_data['icons'] = []
 
 font_name = manifest_data['name']
 m.update(font_name + ';')
-m.update(manifest_data['version'] + ';')
 m.update(manifest_data['prefix'] + ';')
 
 for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
