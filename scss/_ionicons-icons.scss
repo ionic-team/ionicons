@@ -40,6 +40,7 @@
 .#{$ionicons-prefix}bluetooth,
 .#{$ionicons-prefix}bookmark,
 .#{$ionicons-prefix}briefcase,
+.#{$ionicons-prefix}bug,
 .#{$ionicons-prefix}calculator,
 .#{$ionicons-prefix}calendar,
 .#{$ionicons-prefix}camera,
@@ -76,6 +77,7 @@
 .#{$ionicons-prefix}document-text,
 .#{$ionicons-prefix}drag,
 .#{$ionicons-prefix}earth,
+.#{$ionicons-prefix}edit,
 .#{$ionicons-prefix}egg,
 .#{$ionicons-prefix}eject,
 .#{$ionicons-prefix}email,
@@ -89,6 +91,7 @@
 .#{$ionicons-prefix}flask,
 .#{$ionicons-prefix}folder,
 .#{$ionicons-prefix}fork,
+.#{$ionicons-prefix}fork-repo,
 .#{$ionicons-prefix}forward,
 .#{$ionicons-prefix}game-controller-a,
 .#{$ionicons-prefix}game-controller-b,
@@ -340,13 +343,16 @@
 .#{$ionicons-prefix}minus,
 .#{$ionicons-prefix}minus-circled,
 .#{$ionicons-prefix}minus-round,
+.#{$ionicons-prefix}model-s,
 .#{$ionicons-prefix}monitor,
 .#{$ionicons-prefix}more,
 .#{$ionicons-prefix}music-note,
 .#{$ionicons-prefix}navicon,
 .#{$ionicons-prefix}navicon-round,
 .#{$ionicons-prefix}navigate,
+.#{$ionicons-prefix}no-smoking,
 .#{$ionicons-prefix}nuclear,
+.#{$ionicons-prefix}paper-airplane,
 .#{$ionicons-prefix}paperclip,
 .#{$ionicons-prefix}pause,
 .#{$ionicons-prefix}person,
@@ -393,6 +399,7 @@
 .#{$ionicons-prefix}social-dropbox-outline,
 .#{$ionicons-prefix}social-facebook,
 .#{$ionicons-prefix}social-facebook-outline,
+.#{$ionicons-prefix}social-freebsd-devil,
 .#{$ionicons-prefix}social-github,
 .#{$ionicons-prefix}social-github-outline,
 .#{$ionicons-prefix}social-googleplus,
@@ -411,6 +418,7 @@
 .#{$ionicons-prefix}social-skype-outline,
 .#{$ionicons-prefix}social-tumblr,
 .#{$ionicons-prefix}social-tumblr-outline,
+.#{$ionicons-prefix}social-tux,
 .#{$ionicons-prefix}social-twitter,
 .#{$ionicons-prefix}social-twitter-outline,
 .#{$ionicons-prefix}social-vimeo,
@@ -489,6 +497,7 @@
 .#{$ionicons-prefix}bluetooth:before { content: $ionicon-var-bluetooth; }
 .#{$ionicons-prefix}bookmark:before { content: $ionicon-var-bookmark; }
 .#{$ionicons-prefix}briefcase:before { content: $ionicon-var-briefcase; }
+.#{$ionicons-prefix}bug:before { content: $ionicon-var-bug; }
 .#{$ionicons-prefix}calculator:before { content: $ionicon-var-calculator; }
 .#{$ionicons-prefix}calendar:before { content: $ionicon-var-calendar; }
 .#{$ionicons-prefix}camera:before { content: $ionicon-var-camera; }
@@ -525,6 +534,7 @@
 .#{$ionicons-prefix}document-text:before { content: $ionicon-var-document-text; }
 .#{$ionicons-prefix}drag:before { content: $ionicon-var-drag; }
 .#{$ionicons-prefix}earth:before { content: $ionicon-var-earth; }
+.#{$ionicons-prefix}edit:before { content: $ionicon-var-edit; }
 .#{$ionicons-prefix}egg:before { content: $ionicon-var-egg; }
 .#{$ionicons-prefix}eject:before { content: $ionicon-var-eject; }
 .#{$ionicons-prefix}email:before { content: $ionicon-var-email; }
@@ -538,6 +548,7 @@
 .#{$ionicons-prefix}flask:before { content: $ionicon-var-flask; }
 .#{$ionicons-prefix}folder:before { content: $ionicon-var-folder; }
 .#{$ionicons-prefix}fork:before { content: $ionicon-var-fork; }
+.#{$ionicons-prefix}fork-repo:before { content: $ionicon-var-fork-repo; }
 .#{$ionicons-prefix}forward:before { content: $ionicon-var-forward; }
 .#{$ionicons-prefix}game-controller-a:before { content: $ionicon-var-game-controller-a; }
 .#{$ionicons-prefix}game-controller-b:before { content: $ionicon-var-game-controller-b; }
@@ -789,13 +800,16 @@
 .#{$ionicons-prefix}minus:before { content: $ionicon-var-minus; }
 .#{$ionicons-prefix}minus-circled:before { content: $ionicon-var-minus-circled; }
 .#{$ionicons-prefix}minus-round:before { content: $ionicon-var-minus-round; }
+.#{$ionicons-prefix}model-s:before { content: $ionicon-var-model-s; }
 .#{$ionicons-prefix}monitor:before { content: $ionicon-var-monitor; }
 .#{$ionicons-prefix}more:before { content: $ionicon-var-more; }
 .#{$ionicons-prefix}music-note:before { content: $ionicon-var-music-note; }
 .#{$ionicons-prefix}navicon:before { content: $ionicon-var-navicon; }
 .#{$ionicons-prefix}navicon-round:before { content: $ionicon-var-navicon-round; }
 .#{$ionicons-prefix}navigate:before { content: $ionicon-var-navigate; }
+.#{$ionicons-prefix}no-smoking:before { content: $ionicon-var-no-smoking; }
 .#{$ionicons-prefix}nuclear:before { content: $ionicon-var-nuclear; }
+.#{$ionicons-prefix}paper-airplane:before { content: $ionicon-var-paper-airplane; }
 .#{$ionicons-prefix}paperclip:before { content: $ionicon-var-paperclip; }
 .#{$ionicons-prefix}pause:before { content: $ionicon-var-pause; }
 .#{$ionicons-prefix}person:before { content: $ionicon-var-person; }
@@ -842,6 +856,7 @@
 .#{$ionicons-prefix}social-dropbox-outline:before { content: $ionicon-var-social-dropbox-outline; }
 .#{$ionicons-prefix}social-facebook:before { content: $ionicon-var-social-facebook; }
 .#{$ionicons-prefix}social-facebook-outline:before { content: $ionicon-var-social-facebook-outline; }
+.#{$ionicons-prefix}social-freebsd-devil:before { content: $ionicon-var-social-freebsd-devil; }
 .#{$ionicons-prefix}social-github:before { content: $ionicon-var-social-github; }
 .#{$ionicons-prefix}social-github-outline:before { content: $ionicon-var-social-github-outline; }
 .#{$ionicons-prefix}social-googleplus:before { content: $ionicon-var-social-googleplus; }
@@ -860,6 +875,7 @@
 .#{$ionicons-prefix}social-skype-outline:before { content: $ionicon-var-social-skype-outline; }
 .#{$ionicons-prefix}social-tumblr:before { content: $ionicon-var-social-tumblr; }
 .#{$ionicons-prefix}social-tumblr-outline:before { content: $ionicon-var-social-tumblr-outline; }
+.#{$ionicons-prefix}social-tux:before { content: $ionicon-var-social-tux; }
 .#{$ionicons-prefix}social-twitter:before { content: $ionicon-var-social-twitter; }
 .#{$ionicons-prefix}social-twitter-outline:before { content: $ionicon-var-social-twitter-outline; }
 .#{$ionicons-prefix}social-vimeo:before { content: $ionicon-var-social-vimeo; }

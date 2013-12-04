@@ -1,13 +1,13 @@
 /*!
-  Ionicons, v1.3.6
+  Ionicons, v1.3.7
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
   https://twitter.com/helloimben  https://twitter.com/ionicframework
   MIT License: https://github.com/driftyco/ionicons
 */
 @font-face {
   font-family: "Ionicons";
-  src: url("../fonts/ionicons.eot?v=1.3.6");
-  src: url("../fonts/ionicons.eot?v=1.3.6#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=1.3.6") format("truetype"), url("../fonts/ionicons.woff?v=1.3.6") format("woff"), url("../fonts/ionicons.svg?v=1.3.6#Ionicons") format("svg");
+  src: url("../fonts/ionicons.eot?v=1.3.7");
+  src: url("../fonts/ionicons.eot?v=1.3.7#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=1.3.7") format("truetype"), url("../fonts/ionicons.woff?v=1.3.7") format("woff"), url("../fonts/ionicons.svg?v=1.3.7#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -56,6 +56,7 @@
 .ion-bluetooth,
 .ion-bookmark,
 .ion-briefcase,
+.ion-bug,
 .ion-calculator,
 .ion-calendar,
 .ion-camera,
@@ -92,6 +93,7 @@
 .ion-document-text,
 .ion-drag,
 .ion-earth,
+.ion-edit,
 .ion-egg,
 .ion-eject,
 .ion-email,
@@ -105,6 +107,7 @@
 .ion-flask,
 .ion-folder,
 .ion-fork,
+.ion-fork-repo,
 .ion-forward,
 .ion-game-controller-a,
 .ion-game-controller-b,
@@ -356,13 +359,16 @@
 .ion-minus,
 .ion-minus-circled,
 .ion-minus-round,
+.ion-model-s,
 .ion-monitor,
 .ion-more,
 .ion-music-note,
 .ion-navicon,
 .ion-navicon-round,
 .ion-navigate,
+.ion-no-smoking,
 .ion-nuclear,
+.ion-paper-airplane,
 .ion-paperclip,
 .ion-pause,
 .ion-person,
@@ -409,6 +415,7 @@
 .ion-social-dropbox-outline,
 .ion-social-facebook,
 .ion-social-facebook-outline,
+.ion-social-freebsd-devil,
 .ion-social-github,
 .ion-social-github-outline,
 .ion-social-googleplus,
@@ -427,6 +434,7 @@
 .ion-social-skype-outline,
 .ion-social-tumblr,
 .ion-social-tumblr-outline,
+.ion-social-tux,
 .ion-social-twitter,
 .ion-social-twitter-outline,
 .ion-social-vimeo,
@@ -642,6 +650,9 @@
 .ion-briefcase:before {
   content: "\f26c"; }
 
+.ion-bug:before {
+  content: "\f2be"; }
+
 .ion-calculator:before {
   content: "\f26d"; }
 
@@ -750,6 +761,9 @@
 .ion-earth:before {
   content: "\f276"; }
 
+.ion-edit:before {
+  content: "\f2bf"; }
+
 .ion-egg:before {
   content: "\f277"; }
 
@@ -788,6 +802,9 @@
 
 .ion-fork:before {
   content: "\f27a"; }
+
+.ion-fork-repo:before {
+  content: "\f2c0"; }
 
 .ion-forward:before {
   content: "\f13a"; }
@@ -1542,6 +1559,9 @@
 .ion-minus-round:before {
   content: "\f208"; }
 
+.ion-model-s:before {
+  content: "\f2c1"; }
+
 .ion-monitor:before {
   content: "\f20a"; }
 
@@ -1560,8 +1580,14 @@
 .ion-navigate:before {
   content: "\f2a3"; }
 
+.ion-no-smoking:before {
+  content: "\f2c2"; }
+
 .ion-nuclear:before {
   content: "\f2a4"; }
+
+.ion-paper-airplane:before {
+  content: "\f2c3"; }
 
 .ion-paperclip:before {
   content: "\f20f"; }
@@ -1701,6 +1727,9 @@
 .ion-social-facebook-outline:before {
   content: "\f230"; }
 
+.ion-social-freebsd-devil:before {
+  content: "\f2c4"; }
+
 .ion-social-github:before {
   content: "\f233"; }
 
@@ -1754,6 +1783,9 @@
 
 .ion-social-tumblr-outline:before {
   content: "\f240"; }
+
+.ion-social-tux:before {
+  content: "\f2c5"; }
 
 .ion-social-twitter:before {
   content: "\f243"; }

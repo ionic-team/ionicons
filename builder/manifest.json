@@ -1,7 +1,7 @@
 {
-  "build_hash": "8db8ae6fbd314cd1b43058781ec5848f",
+  "build_hash": "9c7f533f0d94b5f1793852fa644326f9",
   "prefix": "ion-",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "name": "Ionicons",
   "icons": [
     {
@@ -157,6 +157,10 @@
       "name": "briefcase"
     },
     {
+      "code": "0xf2be",
+      "name": "bug"
+    },
+    {
       "code": "0xf26d",
       "name": "calculator"
     },
@@ -301,6 +305,10 @@
       "name": "earth"
     },
     {
+      "code": "0xf2bf",
+      "name": "edit"
+    },
+    {
       "code": "0xf277",
       "name": "egg"
     },
@@ -351,6 +359,10 @@
     {
       "code": "0xf27a",
       "name": "fork"
+    },
+    {
+      "code": "0xf2c0",
+      "name": "fork-repo"
     },
     {
       "code": "0xf13a",
@@ -1357,6 +1369,10 @@
       "name": "minus-round"
     },
     {
+      "code": "0xf2c1",
+      "name": "model-s"
+    },
+    {
       "code": "0xf20a",
       "name": "monitor"
     },
@@ -1381,8 +1397,16 @@
       "name": "navigate"
     },
     {
+      "code": "0xf2c2",
+      "name": "no-smoking"
+    },
+    {
       "code": "0xf2a4",
       "name": "nuclear"
+    },
+    {
+      "code": "0xf2c3",
+      "name": "paper-airplane"
     },
     {
       "code": "0xf20f",
@@ -1569,6 +1593,10 @@
       "name": "social-facebook-outline"
     },
     {
+      "code": "0xf2c4",
+      "name": "social-freebsd-devil"
+    },
+    {
       "code": "0xf233",
       "name": "social-github"
     },
@@ -1639,6 +1667,10 @@
     {
       "code": "0xf240",
       "name": "social-tumblr-outline"
+    },
+    {
+      "code": "0xf2c5",
+      "name": "social-tux"
     },
     {
       "code": "0xf243",
