@@ -1,7 +1,7 @@
 {
-  "build_hash": "9c7f533f0d94b5f1793852fa644326f9",
+  "build_hash": "b00533d2baf717d9970fa1b1ded6de04",
   "prefix": "ion-",
-  "version": "1.3.7",
+  "version": "1.4.0",
   "name": "Ionicons",
   "icons": [
     {
@@ -11,6 +11,262 @@
     {
       "code": "0xf100",
       "name": "alert-circled"
+    },
+    {
+      "code": "0xf2c7",
+      "name": "android-add"
+    },
+    {
+      "code": "0xf2c6",
+      "name": "android-add-contact"
+    },
+    {
+      "code": "0xf2c8",
+      "name": "android-alarm"
+    },
+    {
+      "code": "0xf2c9",
+      "name": "android-archive"
+    },
+    {
+      "code": "0xf2ca",
+      "name": "android-arrow-back"
+    },
+    {
+      "code": "0xf2cb",
+      "name": "android-arrow-down-left"
+    },
+    {
+      "code": "0xf2cc",
+      "name": "android-arrow-down-right"
+    },
+    {
+      "code": "0xf2cd",
+      "name": "android-arrow-up-left"
+    },
+    {
+      "code": "0xf2ce",
+      "name": "android-arrow-up-right"
+    },
+    {
+      "code": "0xf2cf",
+      "name": "android-battery"
+    },
+    {
+      "code": "0xf2d0",
+      "name": "android-book"
+    },
+    {
+      "code": "0xf2d1",
+      "name": "android-calendar"
+    },
+    {
+      "code": "0xf2d2",
+      "name": "android-call"
+    },
+    {
+      "code": "0xf2d3",
+      "name": "android-camera"
+    },
+    {
+      "code": "0xf2d4",
+      "name": "android-chat"
+    },
+    {
+      "code": "0xf2d5",
+      "name": "android-checkmark"
+    },
+    {
+      "code": "0xf2d6",
+      "name": "android-clock"
+    },
+    {
+      "code": "0xf2d7",
+      "name": "android-close"
+    },
+    {
+      "code": "0xf2d8",
+      "name": "android-contact"
+    },
+    {
+      "code": "0xf2d9",
+      "name": "android-contacts"
+    },
+    {
+      "code": "0xf2da",
+      "name": "android-data"
+    },
+    {
+      "code": "0xf2db",
+      "name": "android-developer"
+    },
+    {
+      "code": "0xf2dc",
+      "name": "android-display"
+    },
+    {
+      "code": "0xf2dd",
+      "name": "android-download"
+    },
+    {
+      "code": "0xf2de",
+      "name": "android-dropdown"
+    },
+    {
+      "code": "0xf2df",
+      "name": "android-earth"
+    },
+    {
+      "code": "0xf2e0",
+      "name": "android-folder"
+    },
+    {
+      "code": "0xf2e1",
+      "name": "android-forums"
+    },
+    {
+      "code": "0xf2e2",
+      "name": "android-friends"
+    },
+    {
+      "code": "0xf2e3",
+      "name": "android-hand"
+    },
+    {
+      "code": "0xf2e4",
+      "name": "android-image"
+    },
+    {
+      "code": "0xf2e5",
+      "name": "android-inbox"
+    },
+    {
+      "code": "0xf2e6",
+      "name": "android-information"
+    },
+    {
+      "code": "0xf2e7",
+      "name": "android-keypad"
+    },
+    {
+      "code": "0xf2e8",
+      "name": "android-lightbulb"
+    },
+    {
+      "code": "0xf2e9",
+      "name": "android-locate"
+    },
+    {
+      "code": "0xf2ea",
+      "name": "android-location"
+    },
+    {
+      "code": "0xf2eb",
+      "name": "android-mail"
+    },
+    {
+      "code": "0xf2ec",
+      "name": "android-microphone"
+    },
+    {
+      "code": "0xf2ed",
+      "name": "android-mixer"
+    },
+    {
+      "code": "0xf2ee",
+      "name": "android-more"
+    },
+    {
+      "code": "0xf2ef",
+      "name": "android-note"
+    },
+    {
+      "code": "0xf2f0",
+      "name": "android-playstore"
+    },
+    {
+      "code": "0xf2f1",
+      "name": "android-printer"
+    },
+    {
+      "code": "0xf2f2",
+      "name": "android-promotion"
+    },
+    {
+      "code": "0xf2f3",
+      "name": "android-reminder"
+    },
+    {
+      "code": "0xf2f4",
+      "name": "android-remove"
+    },
+    {
+      "code": "0xf2f5",
+      "name": "android-search"
+    },
+    {
+      "code": "0xf2f6",
+      "name": "android-send"
+    },
+    {
+      "code": "0xf2f7",
+      "name": "android-settings"
+    },
+    {
+      "code": "0xf2f8",
+      "name": "android-share"
+    },
+    {
+      "code": "0xf2fa",
+      "name": "android-social"
+    },
+    {
+      "code": "0xf2f9",
+      "name": "android-social-user"
+    },
+    {
+      "code": "0xf2fb",
+      "name": "android-sort"
+    },
+    {
+      "code": "0xf2fc",
+      "name": "android-star"
+    },
+    {
+      "code": "0xf2fd",
+      "name": "android-stopwatch"
+    },
+    {
+      "code": "0xf2fe",
+      "name": "android-storage"
+    },
+    {
+      "code": "0xf2ff",
+      "name": "android-system-back"
+    },
+    {
+      "code": "0xf300",
+      "name": "android-system-home"
+    },
+    {
+      "code": "0xf301",
+      "name": "android-system-windows"
+    },
+    {
+      "code": "0xf302",
+      "name": "android-timer"
+    },
+    {
+      "code": "0xf303",
+      "name": "android-trash"
+    },
+    {
+      "code": "0xf304",
+      "name": "android-volume"
+    },
+    {
+      "code": "0xf305",
+      "name": "android-wifi"
     },
     {
       "code": "0xf102",
@@ -323,6 +579,10 @@
     {
       "code": "0xf133",
       "name": "eye"
+    },
+    {
+      "code": "0xf306",
+      "name": "eye-disabled"
     },
     {
       "code": "0xf278",
@@ -675,6 +935,14 @@
     {
       "code": "0xf17a",
       "name": "ios7-cloudy"
+    },
+    {
+      "code": "0xf308",
+      "name": "ios7-cloudy-night"
+    },
+    {
+      "code": "0xf307",
+      "name": "ios7-cloudy-night-outline"
     },
     {
       "code": "0xf179",
@@ -1117,6 +1385,10 @@
       "name": "ios7-skipforward-outline"
     },
     {
+      "code": "0xf309",
+      "name": "ios7-snowy"
+    },
+    {
       "code": "0xf290",
       "name": "ios7-speedometer"
     },
@@ -1453,6 +1725,10 @@
       "name": "play"
     },
     {
+      "code": "0xf30a",
+      "name": "playstation"
+    },
+    {
       "code": "0xf218",
       "name": "plus"
     },
@@ -1741,6 +2017,10 @@
       "name": "stats-bars"
     },
     {
+      "code": "0xf30b",
+      "name": "steam"
+    },
+    {
       "code": "0xf24f",
       "name": "stop"
     },
@@ -1819,6 +2099,10 @@
     {
       "code": "0xf2ba",
       "name": "wrench"
+    },
+    {
+      "code": "0xf30c",
+      "name": "xbox"
     }
   ]
 }
