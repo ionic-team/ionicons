@@ -39,7 +39,8 @@ def rename_svg_glyph_names(data):
   for ionicon in data['icons']:
     # uniF2CA
     org_name = 'uni%s' % (ionicon['code'].replace('0x', '').upper())
-    svg_text = svg_text.replace(org_name, ionicon['name'])    
+    ion_name = 'ion-%s' % (ionicon['name'])
+    svg_text = svg_text.replace(org_name, ion_name)
 
   svg_file.write(svg_text)
   svg_file.close()
