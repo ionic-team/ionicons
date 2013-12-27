@@ -15,6 +15,7 @@ def main():
 
   data = get_build_data()
 
+  rename_svg_glyph_names(data)
   generate_scss(data)
   generate_cheatsheet(data)
   generate_component_json(data)
@@ -26,6 +27,22 @@ def generate_font_files():
   print "Generate Fonts"
   cmd = "fontforge -script %s/scripts/generate_font.py" % (BUILDER_PATH)
   call(cmd, shell=True)
+
+
+def rename_svg_glyph_names(data):
+  # hacky and slow (but safe) way to rename glyph-name attributes
+  svg_path = os.path.join(FONTS_FOLDER_PATH, 'ionicons.svg')
+  svg_file = open(svg_path, 'r+')
+  svg_text = svg_file.read()
+  svg_file.seek(0)
+
+  for ionicon in data['icons']:
+    # uniF2CA
+    org_name = 'uni%s' % (ionicon['code'].replace('0x', '').upper())
+    svg_text = svg_text.replace(org_name, ionicon['name'])    
+
+  svg_file.write(svg_text)
+  svg_file.close()
 
 
 def generate_scss(data):
