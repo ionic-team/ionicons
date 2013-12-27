@@ -1,3 +1,7 @@
+# Font generation script from FontCustom
+# https://github.com/FontCustom/fontcustom/
+# http://fontcustom.com/
+
 import fontforge
 import os
 import md5
