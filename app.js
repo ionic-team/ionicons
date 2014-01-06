@@ -43,7 +43,8 @@ if (!String.prototype.trim) {
       pack: (pack ? pack : 'default'),
       el: iconElement,
       show: true,
-      code: getContentForIcon(iconElement.className)
+      code: getContentForIcon(iconElement.className),
+      animation: (iconElement.getAttribute("data-animation") === "true")
     };
 
     tags = iconElement.className.split('-');
@@ -174,6 +175,7 @@ if (!String.prototype.trim) {
   var iconPanel = document.getElementById("icon-panel");
   var iconName = document.getElementById("icon-name");
   var iconCode = document.getElementById("icon-code");
+  var animateLink = document.getElementById("animate-link");
 
   var mouseOverTimeout;
   function iconMouseOver(e) {
@@ -201,6 +203,8 @@ if (!String.prototype.trim) {
       target.className += " active";
       iconName.innerHTML = target.icon.name;
       iconCode.innerHTML = (target.icon.code || "");
+
+      animateLink.style.display = (target.icon.animation ? "" : "none");
     }
   }
 
