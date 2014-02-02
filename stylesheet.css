@@ -269,8 +269,8 @@ li.active {
 .cdn input {
   display: block;
   margin: 0 auto;
-  padding: 0 12px;
-  width: 450px;
+  padding: 0;
+  width: 470px;
   height: 30px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -282,7 +282,7 @@ li.active {
   vertical-align: middle;
   font-size: 14px;
   line-height: 1.33;
-  line-height: 1.428571429;
+  text-align: center;
   -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
