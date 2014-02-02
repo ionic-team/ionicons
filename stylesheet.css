@@ -258,6 +258,40 @@ li.active {
   }
 }
 
+.cdn {
+  padding-top: 40px;
+}
+
+.cdn p {
+  margin: 6px 0;
+}
+
+.cdn input {
+  display: block;
+  margin: 0 auto;
+  padding: 0 12px;
+  width: 450px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  background-image: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  color: #333;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.33;
+  line-height: 1.428571429;
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.cdn input:focus {
+  border-color: #4F8EF7;
+  outline: 0;
+}
+
 /* @license
  * MyFonts Webfont Build ID 2656303, 2013-10-02T11:03:28-0400
  * 
