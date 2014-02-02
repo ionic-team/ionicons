@@ -234,7 +234,7 @@ if (!String.prototype.trim) {
     } catch(e) {}
   }
 
-  if(location.hash && location.hash.length > 1) {
+  if(location.hash && location.hash.length > 1 && location.hash !== '#cdn') {
     searchInput.value = location.hash.replace('#', '').replace(/%20/g, ' ');
     iconsUL.className = "search-results";
     searchQuery(searchInput.value);
