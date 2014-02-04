@@ -201,7 +201,7 @@ if (!String.prototype.trim) {
       iconPanel.style.top = (target.offsetTop + 60) + "px";
       iconPanel.style.left = (target.offsetLeft - 85) + "px";
       target.className += " active";
-      iconName.innerHTML = target.icon.name;
+      iconName.value = target.icon.name;
       iconCode.innerHTML = (target.icon.code || "");
 
       animateLink.style.display = (target.icon.animation ? "" : "none");

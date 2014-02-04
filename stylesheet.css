@@ -69,10 +69,10 @@ a {
   color: #4F8EF7;
   text-decoration: none;
   opacity: .7;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
   transition-property: color;
   transition-property: opacity;
-  transition-duration: .1s;
-  transition-timing-function: ease-in-out;
 }
 a:hover, a:active, a:focus {
   text-decoration: underline;
@@ -107,8 +107,8 @@ a:hover, a:active, a:focus {
 }
 .version {
   margin: 2px auto;
-  font-size: 12px;
   color: #ccc;
+  font-size: 12px;
   font-family: "AvenirNextLTPro-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -172,12 +172,12 @@ li {
   display: inline-block;
   padding: 22px;
   width: 42px;
+  border-radius: 4px;
   list-style: none;
   text-align: center;
   font-weight: normal;
   font-size: 32px;
   cursor: pointer;
-  border-radius: 4px;
 }
 li:hover {
   color: #4F8EF7;
@@ -190,21 +190,30 @@ li.active {
   position: absolute;
   top: -9999px;
   left: -9999px;
-  background: white;
-  opacity: .96;
+  padding: 10px 2px;
   width: 260px;
   height: 58px;
-  padding: 10px 2px;
   border-radius: 4px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   text-align: center;
   font-size: 14px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  opacity: .96;
+}
+
+#icon-name {
+  display: block;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  border: 0;
 }
 
 #icon-code {
-  font-size: 12px;
   padding-top: 10px;
+  font-size: 12px;
 }
 
 #icons {
@@ -242,8 +251,8 @@ li.active {
     display: none;
   }
   ul {
-    width: 320px;
     padding: 0;
+    width: 320px;
   }
   li {
     margin: 0;
@@ -280,16 +289,16 @@ li.active {
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
   color: #333;
   vertical-align: middle;
+  text-align: center;
   font-size: 14px;
   line-height: 1.33;
-  text-align: center;
   -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 .cdn input:focus {
-  border-color: #4F8EF7;
   outline: 0;
+  border-color: #4F8EF7;
 }
 
 /* @license
