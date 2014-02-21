@@ -191,7 +191,7 @@ def generate_composer_json(data):
         "name": "Ben Sperry",
         "email": "ben@drifty.com",
         "role": "Designer",
-        "homepage": "https://twitter.com/helloimben"
+        "homepage": "https://twitter.com/benjsperry"
       },
       {
         "name": "Adam Bradley",
