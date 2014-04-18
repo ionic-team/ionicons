@@ -46,7 +46,7 @@ This repo already comes with all the files built and ready to go, but can also b
 
     $ gem install sass
 
-3) Add or subtract files from the `svg/` folder you'd like to be apart of the font files.
+3) Add or subtract files from the `src/` folder you'd like to be apart of the font files.
 
 4) Modify any settings in the `builder/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
 
