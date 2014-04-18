@@ -8,7 +8,7 @@
         "tests"
     ],
     "version": "1.4.1",
-    "name": "Ionicons",
+    "name": "Ionicons-less",
     "license": "MIT",
     "authors": [
         "Ben Sperry <ben@drifty.com>",
@@ -26,6 +26,6 @@
         "css/ionicons.css",
         "fonts/*"
     ],
-    "homepage": "https://github.com/driftyco/ionicons",
+    "homepage": "https://github.com/lancehudson/ionicons-less",
     "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework"
 }
