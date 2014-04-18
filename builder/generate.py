@@ -8,6 +8,7 @@ ROOT_PATH = os.path.join(BUILDER_PATH, '..')
 FONTS_FOLDER_PATH = os.path.join(ROOT_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'css')
 SCSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'scss')
+LESS_FOLDER_PATH = os.path.join(ROOT_PATH, 'less')
 
 
 def main():
@@ -17,6 +18,7 @@ def main():
 
   rename_svg_glyph_names(data)
   generate_scss(data)
+  generate_less(data)
   generate_cheatsheet(data)
   generate_component_json(data)
   generate_composer_json(data)
@@ -44,6 +46,58 @@ def rename_svg_glyph_names(data):
 
   svg_file.write(svg_text)
   svg_file.close()
+
+
+def generate_less(data):
+  print "Generate LESS"
+  font_name = data['name']
+  font_version = data['version']
+  css_prefix = data['prefix']
+  variables_file_path = os.path.join(LESS_FOLDER_PATH, '_ionicons-variables.less')
+  icons_file_path = os.path.join(LESS_FOLDER_PATH, '_ionicons-icons.less')
+
+  d = []
+  d.append('/*!');
+  d.append('Ionicons, v%s' % (font_version) );
+  d.append('Created by Ben Sperry for the Ionic Framework, http://ionicons.com/');
+  d.append('https://twitter.com/benjsperry  https://twitter.com/ionicframework');
+  d.append('MIT License: https://github.com/driftyco/ionicons');
+  d.append('*/');
+  d.append('// Ionicons Variables')
+  d.append('// --------------------------\n')
+  d.append('@ionicons-font-path: "../fonts";')
+  d.append('@ionicons-font-family: "%s";' % (font_name) )
+  d.append('@ionicons-version: "%s";' % (font_version) )
+  d.append('@ionicons-prefix: %s;' % (css_prefix) )
+  d.append('')
+  for ionicon in data['icons']:
+    chr_code = ionicon['code'].replace('0x', '\\')
+    d.append('@ionicon-var-%s: "%s";' % (ionicon['name'], chr_code) )
+  f = open(variables_file_path, 'w')
+  f.write( '\n'.join(d) )
+  f.close()
+
+  d = []
+  d.append('// Ionicons Icons')
+  d.append('// --------------------------\n')
+
+  group = [ '.%s' % (data['name'].lower()) ]
+  for ionicon in data['icons']:
+    group.append('.@{ionicons-prefix}%s' % (ionicon['name']) )
+
+  d.append( ',\n'.join(group) )
+
+  d.append('{')
+  d.append('  &:extend(.ion);')
+  d.append('}')
+
+  for ionicon in data['icons']:
+    chr_code = ionicon['code'].replace('0x', '\\')
+    d.append('.@{ionicons-prefix}%s:before { content: @ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
+  
+  f = open(icons_file_path, 'w')
+  f.write( '\n'.join(d) )
+  f.close()
 
 
 def generate_scss(data):
