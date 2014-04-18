@@ -1,11 +1,11 @@
 {
-    "repo": "driftyco/ionicons",
+    "repo": "lancehudson/ionicons-less",
     "development": {},
     "version": "1.4.1",
     "styles": [
         "css/ionicons.css"
     ],
-    "name": "Ionicons",
+    "name": "Ionicons-less",
     "dependencies": {},
     "keywords": [],
     "license": "MIT",
