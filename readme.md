@@ -36,13 +36,13 @@ You can use [ionicons.com](http://ionicons.com) to easily find the icon you want
 
 ## Build Instructions
 
-This repo already comes with all the files built and ready to go, but can also build the fonts from the source. Requires Python, FontForge and SASS:
+This repo already comes with all the files built and ready to go, but can also build the fonts from the source. Requires Python, FontForge and Sass:
 
 1) Install FontForge, which is the program that creates the font files from the SVG files:
 
     $ brew install fontforge ttfautohint
 
-2) Install [SASS](http://sass-lang.com/)
+2) Install [Sass](http://sass-lang.com/)
 
     $ gem install sass
 
