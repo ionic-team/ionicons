@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2014-2-1: Created.
+2014-3-18: Created.
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Sat Feb  1 23:50:49 2014
- By Adam Bradley
-Created by Adam Bradley with FontForge 2.0 (http://fontforge.sf.net)
+Created by FontForge 20120731 at Tue Mar 18 16:37:12 2014
+ By acarr
+Created by acarr with FontForge 2.0 (http://fontforge.sf.net)
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -22,7 +22,7 @@ Created by Adam Bradley with FontForge 2.0 (http://fontforge.sf.net)
     bbox="-0.5 -64.0026 512.487 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F100-F30C"
+    unicode-range="U+F100-F30E"
   />
     <missing-glyph />
     <glyph glyph-name="ion-alert-circled" unicode="&#xf100;" 
@@ -717,6 +717,8 @@ d="M0 128v16h352v-16h-352zM0 184v16h352v-16h-352zM0 240v16h352v-16h-352z" />
 d="M0 320h384v-256h-384v256zM192 180l163 124h-326zM16 80h352v214l-115 -88l68 -77l-2 -2l-79 70l-48 -37l-48 37l-79 -70l-2 2l68 77l-115 88v-214z" />
     <glyph glyph-name="ion-ios7-email" unicode="&#xf187;" horiz-adv-x="384" 
 d="M384 64h-384v242l131 -100l-68 -77l2 -2l79 70l48 -37l48 37l79 -70l2 2l-68 77l131 100v-242zM376 320l-184 -140l-184 140h368z" />
+    <glyph glyph-name="ion-ios7-expand" unicode="&#xf30d;" horiz-adv-x="364" 
+d="M214 152l8 8l92 -92l50 50v-108h-108l50 50zM150 232l-8 -8l-92 92l-50 -50v108h108l-50 -50z" />
     <glyph glyph-name="ion-ios7-eye-outline" unicode="&#xf188;" horiz-adv-x="384" 
 d="M383 192l1 -1l-6 -6c-21 -21 -47 -48 -78 -69c-36 -24 -72 -36 -108 -36c-83 0 -130 49 -185 105l-7 7l1 1c39 40 67 64 94 81c32 20 63 30 97 30c83 0 146 -60 191 -112zM192 288c-62 0 -111 -36 -170 -96c24 -24 48 -50 76 -68c30 -20 60 -28 94 -28
 c75 0 133 56 171 95c-26 29 -50 50 -74 66c-32 21 -64 31 -97 31zM192 112c-44 0 -80 36 -80 80s36 80 80 80s80 -36 80 -80s-36 -80 -80 -80zM192 256c-35 0 -64 -29 -64 -64s29 -64 64 -64s64 29 64 64s-29 64 -64 64zM224 192h16v0c0 -26 -22 -48 -48 -48s-48 21 -48 48
@@ -986,6 +988,8 @@ s36 53 36 85s-13 62 -36 85z" />
     <glyph glyph-name="ion-ios7-search" unicode="&#xf1da;" horiz-adv-x="384" 
 d="M384 23l-23 -23l-113 113c-26 -21 -60 -33 -96 -33c-84 0 -152 68 -152 152s68 152 152 152s152 -68 152 -152c0 -36 -12 -69 -33 -95zM56 135c26 -26 60 -39 96 -39s70 14 96 40s40 60 40 96s-14 70 -40 96s-60 40 -96 40s-70 -14 -96 -40s-40 -60 -40 -96
 s14 -71 40 -97z" />
+    <glyph glyph-name="ion-ios7-shrink" unicode="&#xf30e;" horiz-adv-x="364" 
+d="M364 18l-8 -8l-92 92l-50 -50v108h108l-50 -50zM0 366l8 8l92 -92l50 50v-108h-108l50 50z" />
     <glyph glyph-name="ion-ios7-skipbackward-outline" unicode="&#xf1db;" horiz-adv-x="320" 
 d="M0 352h79v-142l241 142v-320l-241 142v-142h-79v320zM80 192l7 -4l217 -128v264v0l-217 -128zM16 336v-288h47v126v8v28v126h-47z" />
     <glyph glyph-name="ion-ios7-skipbackward" unicode="&#xf1dc;" horiz-adv-x="320" 

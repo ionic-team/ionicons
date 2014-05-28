@@ -1,5 +1,5 @@
 {
-  "build_hash": "",
+  "build_hash": "b00533d2baf717d9970fa1b1ded6de04",
   "prefix": "ion-",
   "version": "1.4.1",
   "name": "Ionicons",
@@ -1001,6 +1001,10 @@
       "name": "ios7-email-outline"
     },
     {
+      "code": "0xf30d",
+      "name": "ios7-expand"
+    },
+    {
       "code": "0xf189",
       "name": "ios7-eye"
     },
@@ -1367,6 +1371,10 @@
     {
       "code": "0xf1d9",
       "name": "ios7-search-strong"
+    },
+    {
+      "code": "0xf30e",
+      "name": "ios7-shrink"
     },
     {
       "code": "0xf1dc",
