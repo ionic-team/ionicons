@@ -1,7 +1,7 @@
 {
-  "build_hash": "b00533d2baf717d9970fa1b1ded6de04",
+  "build_hash": "",
   "prefix": "ion-",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "name": "Ionicons",
   "icons": [
     {
@@ -39,6 +39,10 @@
     {
       "code": "0xf2cc",
       "name": "android-arrow-down-right"
+    },
+    {
+      "code": "0xf30f",
+      "name": "android-arrow-forward"
     },
     {
       "code": "0xf2cd",
@@ -107,6 +111,10 @@
     {
       "code": "0xf2dd",
       "name": "android-download"
+    },
+    {
+      "code": "0xf310",
+      "name": "android-drawer"
     },
     {
       "code": "0xf2de",
@@ -229,6 +237,10 @@
       "name": "android-sort"
     },
     {
+      "code": "0xf311",
+      "name": "android-stair-drawer"
+    },
+    {
       "code": "0xf2fc",
       "name": "android-star"
     },
@@ -261,12 +273,20 @@
       "name": "android-trash"
     },
     {
+      "code": "0xf312",
+      "name": "android-user-menu"
+    },
+    {
       "code": "0xf304",
       "name": "android-volume"
     },
     {
       "code": "0xf305",
       "name": "android-wifi"
+    },
+    {
+      "code": "0xf313",
+      "name": "aperture"
     },
     {
       "code": "0xf102",
@@ -365,6 +385,10 @@
       "name": "arrow-up-c"
     },
     {
+      "code": "0xf314",
+      "name": "asterisk"
+    },
+    {
       "code": "0xf10f",
       "name": "at"
     },
@@ -405,6 +429,10 @@
       "name": "bluetooth"
     },
     {
+      "code": "0xf315",
+      "name": "bonfire"
+    },
+    {
       "code": "0xf26b",
       "name": "bookmark"
     },
@@ -431,6 +459,10 @@
     {
       "code": "0xf119",
       "name": "card"
+    },
+    {
+      "code": "0xf316",
+      "name": "cash"
     },
     {
       "code": "0xf11b",
@@ -505,6 +537,10 @@
       "name": "close-round"
     },
     {
+      "code": "0xf317",
+      "name": "closed-captioning"
+    },
+    {
       "code": "0xf12b",
       "name": "cloud"
     },
@@ -539,6 +575,10 @@
     {
       "code": "0xf275",
       "name": "contrast"
+    },
+    {
+      "code": "0xf318",
+      "name": "cube"
     },
     {
       "code": "0xf12d",
@@ -597,8 +637,16 @@
       "name": "film-marker"
     },
     {
+      "code": "0xf319",
+      "name": "fireball"
+    },
+    {
       "code": "0xf279",
       "name": "flag"
+    },
+    {
+      "code": "0xf31a",
+      "name": "flame"
     },
     {
       "code": "0xf137",
@@ -629,6 +677,10 @@
       "name": "forward"
     },
     {
+      "code": "0xf31b",
+      "name": "funnel"
+    },
+    {
       "code": "0xf13b",
       "name": "game-controller-a"
     },
@@ -653,12 +705,20 @@
       "name": "hammer"
     },
     {
+      "code": "0xf31c",
+      "name": "happy"
+    },
+    {
       "code": "0xf140",
       "name": "headphone"
     },
     {
       "code": "0xf141",
       "name": "heart"
+    },
+    {
+      "code": "0xf31d",
+      "name": "heart-broken"
     },
     {
       "code": "0xf143",
@@ -725,6 +785,22 @@
       "name": "ios7-albums-outline"
     },
     {
+      "code": "0xf31f",
+      "name": "ios7-americanfootball"
+    },
+    {
+      "code": "0xf31e",
+      "name": "ios7-americanfootball-outline"
+    },
+    {
+      "code": "0xf321",
+      "name": "ios7-analytics"
+    },
+    {
+      "code": "0xf320",
+      "name": "ios7-analytics-outline"
+    },
+    {
       "code": "0xf150",
       "name": "ios7-arrow-back"
     },
@@ -771,6 +847,30 @@
     {
       "code": "0xf156",
       "name": "ios7-at-outline"
+    },
+    {
+      "code": "0xf323",
+      "name": "ios7-barcode"
+    },
+    {
+      "code": "0xf322",
+      "name": "ios7-barcode-outline"
+    },
+    {
+      "code": "0xf325",
+      "name": "ios7-baseball"
+    },
+    {
+      "code": "0xf324",
+      "name": "ios7-baseball-outline"
+    },
+    {
+      "code": "0xf327",
+      "name": "ios7-basketball"
+    },
+    {
+      "code": "0xf326",
+      "name": "ios7-basketball-outline"
     },
     {
       "code": "0xf159",
@@ -1053,6 +1153,14 @@
       "name": "ios7-folder-outline"
     },
     {
+      "code": "0xf329",
+      "name": "ios7-football"
+    },
+    {
+      "code": "0xf328",
+      "name": "ios7-football-outline"
+    },
+    {
       "code": "0xf195",
       "name": "ios7-gear"
     },
@@ -1087,6 +1195,14 @@
     {
       "code": "0xf19b",
       "name": "ios7-help-outline"
+    },
+    {
+      "code": "0xf32b",
+      "name": "ios7-home"
+    },
+    {
+      "code": "0xf32a",
+      "name": "ios7-home-outline"
     },
     {
       "code": "0xf19e",
@@ -1143,6 +1259,14 @@
     {
       "code": "0xf1a7",
       "name": "ios7-locked-outline"
+    },
+    {
+      "code": "0xf32d",
+      "name": "ios7-loop"
+    },
+    {
+      "code": "0xf32c",
+      "name": "ios7-loop-strong"
     },
     {
       "code": "0xf289",
@@ -1217,6 +1341,14 @@
       "name": "ios7-navigate-outline"
     },
     {
+      "code": "0xf32f",
+      "name": "ios7-paper"
+    },
+    {
+      "code": "0xf32e",
+      "name": "ios7-paper-outline"
+    },
+    {
       "code": "0xf1ba",
       "name": "ios7-paperplane"
     },
@@ -1239,6 +1371,14 @@
     {
       "code": "0xf1bd",
       "name": "ios7-pause-outline"
+    },
+    {
+      "code": "0xf331",
+      "name": "ios7-paw"
+    },
+    {
+      "code": "0xf330",
+      "name": "ios7-paw-outline"
     },
     {
       "code": "0xf1c0",
@@ -1309,12 +1449,28 @@
       "name": "ios7-pricetag-outline"
     },
     {
+      "code": "0xf333",
+      "name": "ios7-pricetags"
+    },
+    {
+      "code": "0xf332",
+      "name": "ios7-pricetags-outline"
+    },
+    {
       "code": "0xf1cd",
       "name": "ios7-printer"
     },
     {
       "code": "0xf1cc",
       "name": "ios7-printer-outline"
+    },
+    {
+      "code": "0xf335",
+      "name": "ios7-pulse"
+    },
+    {
+      "code": "0xf334",
+      "name": "ios7-pulse-strong"
     },
     {
       "code": "0xf1cf",
@@ -1357,6 +1513,14 @@
       "name": "ios7-reload"
     },
     {
+      "code": "0xf337",
+      "name": "ios7-reverse-camera"
+    },
+    {
+      "code": "0xf336",
+      "name": "ios7-reverse-camera-outline"
+    },
+    {
       "code": "0xf1d8",
       "name": "ios7-rewind"
     },
@@ -1371,6 +1535,14 @@
     {
       "code": "0xf1d9",
       "name": "ios7-search-strong"
+    },
+    {
+      "code": "0xf339",
+      "name": "ios7-settings"
+    },
+    {
+      "code": "0xf338",
+      "name": "ios7-settings-strong"
     },
     {
       "code": "0xf30e",
@@ -1409,6 +1581,10 @@
       "name": "ios7-star"
     },
     {
+      "code": "0xf33a",
+      "name": "ios7-star-half"
+    },
+    {
       "code": "0xf1df",
       "name": "ios7-star-outline"
     },
@@ -1437,6 +1613,14 @@
       "name": "ios7-telephone-outline"
     },
     {
+      "code": "0xf33c",
+      "name": "ios7-tennisball"
+    },
+    {
+      "code": "0xf33b",
+      "name": "ios7-tennisball-outline"
+    },
+    {
       "code": "0xf1e8",
       "name": "ios7-thunderstorm"
     },
@@ -1459,6 +1643,14 @@
     {
       "code": "0xf1e9",
       "name": "ios7-timer-outline"
+    },
+    {
+      "code": "0xf33e",
+      "name": "ios7-toggle"
+    },
+    {
+      "code": "0xf33d",
+      "name": "ios7-toggle-outline"
     },
     {
       "code": "0xf1ec",
@@ -1625,6 +1817,10 @@
       "name": "medkit"
     },
     {
+      "code": "0xf33f",
+      "name": "merge"
+    },
+    {
       "code": "0xf204",
       "name": "mic-a"
     },
@@ -1661,6 +1857,10 @@
       "name": "more"
     },
     {
+      "code": "0xf340",
+      "name": "mouse"
+    },
+    {
       "code": "0xf20c",
       "name": "music-note"
     },
@@ -1677,12 +1877,20 @@
       "name": "navigate"
     },
     {
+      "code": "0xf341",
+      "name": "network"
+    },
+    {
       "code": "0xf2c2",
       "name": "no-smoking"
     },
     {
       "code": "0xf2a4",
       "name": "nuclear"
+    },
+    {
+      "code": "0xf342",
+      "name": "outlet"
     },
     {
       "code": "0xf2c3",
@@ -1729,6 +1937,10 @@
       "name": "plane"
     },
     {
+      "code": "0xf343",
+      "name": "planet"
+    },
+    {
       "code": "0xf215",
       "name": "play"
     },
@@ -1747,6 +1959,10 @@
     {
       "code": "0xf217",
       "name": "plus-round"
+    },
+    {
+      "code": "0xf344",
+      "name": "podium"
     },
     {
       "code": "0xf219",
@@ -1769,6 +1985,18 @@
       "name": "printer"
     },
     {
+      "code": "0xf345",
+      "name": "pull-request"
+    },
+    {
+      "code": "0xf346",
+      "name": "qr-scanner"
+    },
+    {
+      "code": "0xf347",
+      "name": "quote"
+    },
+    {
       "code": "0xf2ac",
       "name": "radio-waves"
     },
@@ -1787,6 +2015,22 @@
     {
       "code": "0xf21d",
       "name": "reply-all"
+    },
+    {
+      "code": "0xf348",
+      "name": "ribbon-a"
+    },
+    {
+      "code": "0xf349",
+      "name": "ribbon-b"
+    },
+    {
+      "code": "0xf34a",
+      "name": "sad"
+    },
+    {
+      "code": "0xf34b",
+      "name": "scissors"
     },
     {
       "code": "0xf21f",
@@ -1877,6 +2121,14 @@
       "name": "social-facebook-outline"
     },
     {
+      "code": "0xf34d",
+      "name": "social-foursquare"
+    },
+    {
+      "code": "0xf34c",
+      "name": "social-foursquare-outline"
+    },
+    {
       "code": "0xf2c4",
       "name": "social-freebsd-devil"
     },
@@ -1887,6 +2139,14 @@
     {
       "code": "0xf232",
       "name": "social-github-outline"
+    },
+    {
+      "code": "0xf34f",
+      "name": "social-google"
+    },
+    {
+      "code": "0xf34e",
+      "name": "social-google-outline"
     },
     {
       "code": "0xf235",
@@ -1903,6 +2163,14 @@
     {
       "code": "0xf236",
       "name": "social-hackernews-outline"
+    },
+    {
+      "code": "0xf351",
+      "name": "social-instagram"
+    },
+    {
+      "code": "0xf350",
+      "name": "social-instagram-outline"
     },
     {
       "code": "0xf239",
@@ -1963,6 +2231,14 @@
     {
       "code": "0xf242",
       "name": "social-twitter-outline"
+    },
+    {
+      "code": "0xf353",
+      "name": "social-usd"
+    },
+    {
+      "code": "0xf352",
+      "name": "social-usd-outline"
     },
     {
       "code": "0xf245",
@@ -2045,6 +2321,14 @@
       "name": "thumbsup"
     },
     {
+      "code": "0xf355",
+      "name": "toggle"
+    },
+    {
+      "code": "0xf354",
+      "name": "toggle-filled"
+    },
+    {
       "code": "0xf252",
       "name": "trash-a"
     },
@@ -2053,8 +2337,16 @@
       "name": "trash-b"
     },
     {
+      "code": "0xf356",
+      "name": "trophie"
+    },
+    {
       "code": "0xf2b7",
       "name": "umbrella"
+    },
+    {
+      "code": "0xf357",
+      "name": "university"
     },
     {
       "code": "0xf254",
@@ -2087,6 +2379,10 @@
     {
       "code": "0xf25a",
       "name": "volume-mute"
+    },
+    {
+      "code": "0xf358",
+      "name": "wand"
     },
     {
       "code": "0xf25b",
