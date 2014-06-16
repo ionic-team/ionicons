@@ -83,7 +83,7 @@ def generate_less(data):
 
   group = [ '.%s' % (data['name'].lower()) ]
   for ionicon in data['icons']:
-    group.append('.@{ionicons-prefix}%s' % (ionicon['name']) )
+    group.append('.@{ionicons-prefix}%s:before' % (ionicon['name']) )
 
   d.append( ',\n'.join(group) )
 
@@ -94,7 +94,7 @@ def generate_less(data):
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
     d.append('.@{ionicons-prefix}%s:before { content: @ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
-  
+
   f = open(icons_file_path, 'w')
   f.write( '\n'.join(d) )
   f.close()
@@ -129,7 +129,7 @@ def generate_scss(data):
 
   group = [ '.%s' % (data['name'].lower()) ]
   for ionicon in data['icons']:
-    group.append('.#{$ionicons-prefix}%s' % (ionicon['name']) )
+    group.append('.#{$ionicons-prefix}%s:before' % (ionicon['name']) )
 
   d.append( ',\n'.join(group) )
 
@@ -140,7 +140,7 @@ def generate_scss(data):
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
     d.append('.#{$ionicons-prefix}%s:before { content: $ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
-  
+
   f = open(icons_file_path, 'w')
   f.write( '\n'.join(d) )
   f.close()
@@ -284,7 +284,7 @@ def generate_bower_json(data):
     ],
     "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework",
     "main": [
-      "css/%s.css" % (data['name'].lower()), 
+      "css/%s.css" % (data['name'].lower()),
       "fonts/*"
     ],
     "keywords": [ "fonts", "icon font", "icons", "ionic", "web font"],
