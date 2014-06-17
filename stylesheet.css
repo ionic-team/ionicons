@@ -152,7 +152,7 @@ input:focus {
 }
 .search i {
   position: absolute;
-  top: 6px;
+  top: 3px;
   left: 68px;
   color: #999;
 }
