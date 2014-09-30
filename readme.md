@@ -52,7 +52,7 @@ This repo already comes with all the files built and ready to go, but can also b
 
 5) Run the build command:
 
-    python ./builder/generate.py
+    $ python ./builder/generate.py
 
 
 ## License
