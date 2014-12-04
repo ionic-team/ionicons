@@ -24,7 +24,7 @@ if (!String.prototype.trim) {
 
   for(x = 0, l = iconElements.length; x < l; x++) {
     iconElement = iconElements[x];
-    
+
     if(iconElement.className.length < 6) {
       continue;
     }
@@ -99,9 +99,9 @@ if (!String.prototype.trim) {
 
   function searchQuery(query) {
     if(!query) return;
-    
+
     totalResults = 0;
-    
+
     query = query.trim().toLowerCase();
 
     var terms = query.split(' ');
@@ -175,7 +175,6 @@ if (!String.prototype.trim) {
   var iconPanel = document.getElementById("icon-panel");
   var iconName = document.getElementById("icon-name");
   var iconCode = document.getElementById("icon-code");
-  var animateLink = document.getElementById("animate-link");
 
   var mouseOverTimeout;
   function iconMouseOver(e) {
@@ -203,8 +202,6 @@ if (!String.prototype.trim) {
       target.className += " active";
       iconName.value = target.icon.name;
       iconCode.innerHTML = (target.icon.code || "");
-
-      animateLink.style.display = (target.icon.animation ? "" : "none");
     }
   }
 
