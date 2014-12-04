@@ -17,7 +17,6 @@ MANIFEST_PATH = os.path.join(SCRIPT_PATH, '..', 'manifest.json')
 BUILD_DATA_PATH = os.path.join(SCRIPT_PATH, '..', 'build_data.json')
 AUTO_WIDTH = True
 KERNING = 15
-STANDARD_WIDTH_ICONS = ['refresh', 'ios7-reload', 'load-a', 'load-b', 'load-c', 'load-d', 'loop']
 
 cp = 0xf100
 m = md5.new()
@@ -59,7 +58,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
       if chr_code is None:
         # this is a new src icon
         print 'New Icon: \n - %s' % (name)
-        
+
         while True:
           chr_code = '0x%x' % (cp)
           already_exists = False
@@ -71,7 +70,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
               continue
           if not already_exists:
             break
-          
+
         print ' - %s' % chr_code
         manifest_data['icons'].append({
           'name': name,
@@ -111,13 +110,9 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
         os.unlink(tmpsvgfile.name)
 
       # set glyph size explicitly or automatically depending on autowidth
-      if AUTO_WIDTH and name not in STANDARD_WIDTH_ICONS:
+      if AUTO_WIDTH:
         glyph.left_side_bearing = glyph.right_side_bearing = 0
         glyph.round()
-      else:
-        # force a manual size when autowidth is disabled
-        print " - Standard Width: %s" % (name)
-        glyph.width = 512
 
     # resize glyphs if autowidth is enabled
     if AUTO_WIDTH:
@@ -132,7 +127,7 @@ if build_hash == manifest_data.get('build_hash'):
 
 else:
   manifest_data['build_hash'] = build_hash
-  
+
   f.fontname = font_name
   f.familyname = font_name
   f.fullname = font_name
@@ -163,8 +158,8 @@ else:
   # Hint the TTF file
   subprocess.call('ttfautohint -s -f -n ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
 
-  manifest_data['icons'] = sorted(manifest_data['icons'], key=lambda k: k['name']) 
-  build_data['icons'] = sorted(build_data['icons'], key=lambda k: k['name']) 
+  manifest_data['icons'] = sorted(manifest_data['icons'], key=lambda k: k['name'])
+  build_data['icons'] = sorted(build_data['icons'], key=lambda k: k['name'])
 
   print "Save Manifest, Icons: %s" % ( len(manifest_data['icons']) )
   f = open(MANIFEST_PATH, 'w')
