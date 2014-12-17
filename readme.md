@@ -26,6 +26,13 @@ Or perhaps you're known to use [bower](http://bower.io/)?
    
     $ bower install ionicons
 
+Or install with Ionic CLI (required ionic 1.2.13)?
+   
+    $ ionic add ionicons
+    
+Reference CSS file
+
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
 ## HTML Example
 
