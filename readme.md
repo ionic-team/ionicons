@@ -1,5 +1,8 @@
 # Ionicons
 
+## Build Icons
+
+Build icons needs to be prefixed with "build" to avoid conflicts with existing similar icons ex: build-cart.svg
 
 The premium icon font for [Ionic Framework](http://ionicframework.com/). Designed by [@benjsperry](https://twitter.com/benjsperry).
 
