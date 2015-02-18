@@ -1,5 +1,5 @@
 {
-  "build_hash": "a2c6f31123a3cc8385d45bf46c5dde82",
+  "build_hash": "ced881b448188bf13c3c0c087ba14515",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -2699,6 +2699,10 @@
     {
       "code": "0xf4eb",
       "name": "social-snapchat-outline"
+    },
+    {
+      "code": "0xf13b",
+      "name": "social-stumbleupon"
     },
     {
       "code": "0xf241",
