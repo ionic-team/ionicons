@@ -12,7 +12,9 @@
  font-style: normal;
 }
 
-.ion {
+.ionicons,
+[class^="#{$ionicons-prefix}"], 
+[class*=" #{$ionicons-prefix}"] {
   display: inline-block;
   font-family: $ionicons-font-family;
   speak: none;

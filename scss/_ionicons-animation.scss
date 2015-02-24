@@ -37,7 +37,6 @@
 .#{$ionicons-prefix}looping,
 .#{$ionicons-prefix}refreshing,
 .#{$ionicons-prefix}ios7-reloading {
-  @extend .ion;
   @extend .#{$ionicons-prefix}spin;
 }
 
