@@ -1,8 +1,12 @@
 // Ionicons Icons
 // --------------------------
 
+@function unicode($str){
+    @return unquote("\"") + $str + unquote("\"");
+}
+
 @each $ionicons-name, $ionicons-value in $ionicons {
     .#{$ionicons-prefix}#{$ionicons-name}:before {
-        content: $ionicons-value;
+        content: unicode($ionicons-value);
     }
 }
