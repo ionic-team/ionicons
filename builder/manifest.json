@@ -1,5 +1,5 @@
 {
-  "build_hash": "c4d289ca9b5556e64fd8ea424a122bcc",
+  "build_hash": "3fdfb31da05e8ea1ff5808a8be0bfd28",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -699,6 +699,22 @@
     {
       "code": "0xf138",
       "name": "build-cart"
+    },
+    {
+      "code": "0xf13c",
+      "name": "build-order-status"
+    },
+    {
+      "code": "0xf146",
+      "name": "build-rewards"
+    },
+    {
+      "code": "0xf145",
+      "name": "build-rewards-color"
+    },
+    {
+      "code": "0xf14c",
+      "name": "build-user"
     },
     {
       "code": "0xf26d",
