@@ -176,6 +176,10 @@
 .#{$ionicons-prefix}briefcase:before,
 .#{$ionicons-prefix}bug:before,
 .#{$ionicons-prefix}build-cart:before,
+.#{$ionicons-prefix}build-order-status:before,
+.#{$ionicons-prefix}build-rewards:before,
+.#{$ionicons-prefix}build-rewards-color:before,
+.#{$ionicons-prefix}build-user:before,
 .#{$ionicons-prefix}calculator:before,
 .#{$ionicons-prefix}calendar:before,
 .#{$ionicons-prefix}camera:before,
@@ -914,6 +918,10 @@
 .#{$ionicons-prefix}briefcase:before { content: $ionicon-var-briefcase; }
 .#{$ionicons-prefix}bug:before { content: $ionicon-var-bug; }
 .#{$ionicons-prefix}build-cart:before { content: $ionicon-var-build-cart; }
+.#{$ionicons-prefix}build-order-status:before { content: $ionicon-var-build-order-status; }
+.#{$ionicons-prefix}build-rewards:before { content: $ionicon-var-build-rewards; }
+.#{$ionicons-prefix}build-rewards-color:before { content: $ionicon-var-build-rewards-color; }
+.#{$ionicons-prefix}build-user:before { content: $ionicon-var-build-user; }
 .#{$ionicons-prefix}calculator:before { content: $ionicon-var-calculator; }
 .#{$ionicons-prefix}calendar:before { content: $ionicon-var-calendar; }
 .#{$ionicons-prefix}camera:before { content: $ionicon-var-camera; }
