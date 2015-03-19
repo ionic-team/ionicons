@@ -214,6 +214,8 @@
 .#{$ionicons-prefix}connection-bars:before,
 .#{$ionicons-prefix}contrast:before,
 .#{$ionicons-prefix}crop:before,
+.#{$ionicons-prefix}crop-landscape:before,
+.#{$ionicons-prefix}crop-portrait:before,
 .#{$ionicons-prefix}cube:before,
 .#{$ionicons-prefix}disc:before,
 .#{$ionicons-prefix}document:before,
@@ -611,6 +613,7 @@
 .#{$ionicons-prefix}reply-all:before,
 .#{$ionicons-prefix}ribbon-a:before,
 .#{$ionicons-prefix}ribbon-b:before,
+.#{$ionicons-prefix}rotate-clockwise:before,
 .#{$ionicons-prefix}sad:before,
 .#{$ionicons-prefix}sad-outline:before,
 .#{$ionicons-prefix}scissors:before,
@@ -740,7 +743,9 @@
 .#{$ionicons-prefix}wineglass:before,
 .#{$ionicons-prefix}woman:before,
 .#{$ionicons-prefix}wrench:before,
-.#{$ionicons-prefix}xbox:before
+.#{$ionicons-prefix}xbox:before,
+.#{$ionicons-prefix}zoom-in:before,
+.#{$ionicons-prefix}zoom-out:before
 {
   @extend .ion;
 }
@@ -956,6 +961,8 @@
 .#{$ionicons-prefix}connection-bars:before { content: $ionicon-var-connection-bars; }
 .#{$ionicons-prefix}contrast:before { content: $ionicon-var-contrast; }
 .#{$ionicons-prefix}crop:before { content: $ionicon-var-crop; }
+.#{$ionicons-prefix}crop-landscape:before { content: $ionicon-var-crop-landscape; }
+.#{$ionicons-prefix}crop-portrait:before { content: $ionicon-var-crop-portrait; }
 .#{$ionicons-prefix}cube:before { content: $ionicon-var-cube; }
 .#{$ionicons-prefix}disc:before { content: $ionicon-var-disc; }
 .#{$ionicons-prefix}document:before { content: $ionicon-var-document; }
@@ -1353,6 +1360,7 @@
 .#{$ionicons-prefix}reply-all:before { content: $ionicon-var-reply-all; }
 .#{$ionicons-prefix}ribbon-a:before { content: $ionicon-var-ribbon-a; }
 .#{$ionicons-prefix}ribbon-b:before { content: $ionicon-var-ribbon-b; }
+.#{$ionicons-prefix}rotate-clockwise:before { content: $ionicon-var-rotate-clockwise; }
 .#{$ionicons-prefix}sad:before { content: $ionicon-var-sad; }
 .#{$ionicons-prefix}sad-outline:before { content: $ionicon-var-sad-outline; }
 .#{$ionicons-prefix}scissors:before { content: $ionicon-var-scissors; }
@@ -1483,3 +1491,5 @@
 .#{$ionicons-prefix}woman:before { content: $ionicon-var-woman; }
 .#{$ionicons-prefix}wrench:before { content: $ionicon-var-wrench; }
 .#{$ionicons-prefix}xbox:before { content: $ionicon-var-xbox; }
+.#{$ionicons-prefix}zoom-in:before { content: $ionicon-var-zoom-in; }
+.#{$ionicons-prefix}zoom-out:before { content: $ionicon-var-zoom-out; }
