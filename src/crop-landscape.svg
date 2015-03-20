@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="512px" height="512px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Layer_1">
+        <g>
+            <g>
+                <path d="M425.173,118.997L425.173,132.372L368.074,132.372L368.074,118.997L425.173,118.997Z" style="fill:black;"/>
+            </g>
+            <g>
+                <path d="M329.803,118.997L329.803,132.372L272.704,132.372L272.704,118.997L329.803,118.997Z" style="fill:black;"/>
+            </g>
+            <g>
+                <path d="M234.433,118.997L234.433,132.372L177.333,132.372L177.333,118.997L234.433,118.997Z" style="fill:black;"/>
+            </g>
+            <g>
+                <path d="M139.063,118.997L139.063,132.372L81.9633,132.372L81.9633,118.997L139.063,118.997Z" style="fill:black;"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M425.173,353.461L425.173,366.836L368.074,366.836L368.074,353.461L425.173,353.461Z" style="fill:black;"/>
+            </g>
+            <g>
+                <path d="M329.803,353.461L329.803,366.836L272.704,366.836L272.704,353.461L329.803,353.461Z" style="fill:black;"/>
+            </g>
+            <g>
+                <path d="M234.433,353.461L234.433,366.836L177.333,366.836L177.333,353.461L234.433,353.461Z" style="fill:black;"/>
+            </g>
+            <g>
+                <path d="M139.063,353.461L139.063,366.836L81.9633,366.836L81.9633,353.461L139.063,353.461Z" style="fill:black;"/>
+            </g>
+        </g>
+        <g>
+            <rect x="449.118" y="118.997" width="14.23" height="57.0993" style="fill:black;"/>
+        </g>
+        <g>
+            <rect x="45.125" y="118.997" width="14.23" height="57.0993" style="fill:black;"/>
+        </g>
+        <g>
+            <rect x="449.118" y="214.367" width="14.23" height="57.0993" style="fill:black;"/>
+        </g>
+        <g>
+            <rect x="45.125" y="214.367" width="14.23" height="57.0993" style="fill:black;"/>
+        </g>
+        <g>
+            <rect x="449.118" y="309.737" width="14.23" height="57.0993" style="fill:black;"/>
+        </g>
+        <g>
+            <rect x="45.125" y="309.737" width="14.23" height="57.0993" style="fill:black;"/>
+        </g>
+    </g>
+</svg>

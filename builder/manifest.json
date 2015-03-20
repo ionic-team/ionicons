@@ -1,5 +1,5 @@
 {
-  "build_hash": "3fdfb31da05e8ea1ff5808a8be0bfd28",
+  "build_hash": "9f6842db0f73e7276f483e617ab81626",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -851,6 +851,14 @@
     {
       "code": "0xf3c1",
       "name": "crop"
+    },
+    {
+      "code": "0xf14d",
+      "name": "crop-landscape"
+    },
+    {
+      "code": "0xf14e",
+      "name": "crop-portrait"
     },
     {
       "code": "0xf318",
@@ -2441,6 +2449,10 @@
       "name": "ribbon-b"
     },
     {
+      "code": "0xf14f",
+      "name": "rotate-clockwise"
+    },
+    {
       "code": "0xf34a",
       "name": "sad"
     },
@@ -2959,6 +2971,18 @@
     {
       "code": "0xf30c",
       "name": "xbox"
+    },
+    {
+      "code": "0xf152",
+      "name": "zoom-in"
+    },
+    {
+      "code": "0xf150",
+      "name": "zoom-out"
+    },
+    {
+      "code": "0xf151",
+      "name": "zoomin"
     }
   ]
 }

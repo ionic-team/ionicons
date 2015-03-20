@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="512px" height="512px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Layer_1">
+        <g>
+            <g>
+                <rect x="129.317" y="71.9802" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+            <g>
+                <rect x="129.317" y="167.35" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+            <g>
+                <rect x="129.317" y="262.72" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+            <g>
+                <rect x="129.317" y="358.091" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <rect x="363.781" y="71.9802" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+            <g>
+                <rect x="363.781" y="167.35" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+            <g>
+                <rect x="363.781" y="262.72" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+            <g>
+                <rect x="363.781" y="358.091" width="13.3752" height="57.0993" style="fill:black;"/>
+            </g>
+        </g>
+        <g>
+            <path d="M129.317,48.0353L129.317,33.8053L186.416,33.8053L186.416,48.0353L129.317,48.0353Z" style="fill:black;"/>
+        </g>
+        <g>
+            <path d="M129.317,452.028L129.317,437.798L186.416,437.798L186.416,452.028L129.317,452.028Z" style="fill:black;"/>
+        </g>
+        <g>
+            <path d="M224.687,48.0353L224.687,33.8053L281.786,33.8053L281.786,48.0353L224.687,48.0353Z" style="fill:black;"/>
+        </g>
+        <g>
+            <path d="M224.687,452.028L224.687,437.798L281.786,437.798L281.786,452.028L224.687,452.028Z" style="fill:black;"/>
+        </g>
+        <g>
+            <path d="M320.057,48.0353L320.057,33.8053L377.156,33.8053L377.156,48.0353L320.057,48.0353Z" style="fill:black;"/>
+        </g>
+        <g>
+            <path d="M320.057,452.028L320.057,437.798L377.156,437.798L377.156,452.028L320.057,452.028Z" style="fill:black;"/>
+        </g>
+    </g>
+</svg>
