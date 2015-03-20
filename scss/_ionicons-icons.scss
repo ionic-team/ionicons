@@ -17,7 +17,11 @@
 .#{$ionicons-prefix}calendar:before,
 .#{$ionicons-prefix}card:before,
 .#{$ionicons-prefix}chatbox:before,
+.#{$ionicons-prefix}chatbox-working:before,
 .#{$ionicons-prefix}chatboxes:before,
+.#{$ionicons-prefix}chatbubble:before,
+.#{$ionicons-prefix}chatbubble-working:before,
+.#{$ionicons-prefix}chatbubbles:before,
 .#{$ionicons-prefix}chevron-down:before,
 .#{$ionicons-prefix}chevron-left:before,
 .#{$ionicons-prefix}chevron-right:before,
@@ -57,7 +61,11 @@
 .#{$ionicons-prefix}calendar:before { content: $ionicon-var-calendar; }
 .#{$ionicons-prefix}card:before { content: $ionicon-var-card; }
 .#{$ionicons-prefix}chatbox:before { content: $ionicon-var-chatbox; }
+.#{$ionicons-prefix}chatbox-working:before { content: $ionicon-var-chatbox-working; }
 .#{$ionicons-prefix}chatboxes:before { content: $ionicon-var-chatboxes; }
+.#{$ionicons-prefix}chatbubble:before { content: $ionicon-var-chatbubble; }
+.#{$ionicons-prefix}chatbubble-working:before { content: $ionicon-var-chatbubble-working; }
+.#{$ionicons-prefix}chatbubbles:before { content: $ionicon-var-chatbubbles; }
 .#{$ionicons-prefix}chevron-down:before { content: $ionicon-var-chevron-down; }
 .#{$ionicons-prefix}chevron-left:before { content: $ionicon-var-chevron-left; }
 .#{$ionicons-prefix}chevron-right:before { content: $ionicon-var-chevron-right; }

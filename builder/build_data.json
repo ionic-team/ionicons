@@ -1,5 +1,5 @@
 {
-  "build_hash": "378659efcb0085ecf6a37e46b58cea08",
+  "build_hash": "141acea01997551babb4dbc81a137179",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -65,8 +65,24 @@
       "name": "chatbox"
     },
     {
+      "code": "0xf11a",
+      "name": "chatbox-working"
+    },
+    {
       "code": "0xf11c",
       "name": "chatboxes"
+    },
+    {
+      "code": "0xf11e",
+      "name": "chatbubble"
+    },
+    {
+      "code": "0xf11d",
+      "name": "chatbubble-working"
+    },
+    {
+      "code": "0xf11f",
+      "name": "chatbubbles"
     },
     {
       "code": "0xf123",

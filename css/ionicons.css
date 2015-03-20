@@ -11,7 +11,7 @@
   Modified icons to fit ionicon’s grid from original.
 */
 @font-face { font-family: "Ionicons"; src: url("../fonts/ionicons.eot?v=2.0.0"); src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("../fonts/ionicons.woff?v=2.0.0") format("woff"), url("../fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg"); font-weight: normal; font-style: normal; }
-.ion, .ionicons, .ion-android-close:before, .ion-briefcase:before, .ion-build-cart:before, .ion-build-order-status:before, .ion-build-rewards:before, .ion-build-rewards-color:before, .ion-build-social-facebooklike:before, .ion-build-social-googleplusone:before, .ion-build-social-stumbleupon:before, .ion-build-user:before, .ion-build-zoom-in:before, .ion-build-zoom-out:before, .ion-calendar:before, .ion-card:before, .ion-chatbox:before, .ion-chatboxes:before, .ion-chevron-down:before, .ion-chevron-left:before, .ion-chevron-right:before, .ion-crop-landscape:before, .ion-crop-portrait:before, .ion-edit:before, .ion-email:before, .ion-heart:before, .ion-home:before, .ion-ios-pricetag:before, .ion-iphone:before, .ion-location:before, .ion-locked:before, .ion-person:before, .ion-printer:before, .ion-rotate-clockwise:before, .ion-search:before, .ion-social-facebook:before, .ion-social-googleplus:before, .ion-social-pinterest:before, .ion-social-twitter:before { display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ion, .ionicons, .ion-android-close:before, .ion-briefcase:before, .ion-build-cart:before, .ion-build-order-status:before, .ion-build-rewards:before, .ion-build-rewards-color:before, .ion-build-social-facebooklike:before, .ion-build-social-googleplusone:before, .ion-build-social-stumbleupon:before, .ion-build-user:before, .ion-build-zoom-in:before, .ion-build-zoom-out:before, .ion-calendar:before, .ion-card:before, .ion-chatbox:before, .ion-chatbox-working:before, .ion-chatboxes:before, .ion-chatbubble:before, .ion-chatbubble-working:before, .ion-chatbubbles:before, .ion-chevron-down:before, .ion-chevron-left:before, .ion-chevron-right:before, .ion-crop-landscape:before, .ion-crop-portrait:before, .ion-edit:before, .ion-email:before, .ion-heart:before, .ion-home:before, .ion-ios-pricetag:before, .ion-iphone:before, .ion-location:before, .ion-locked:before, .ion-person:before, .ion-printer:before, .ion-rotate-clockwise:before, .ion-search:before, .ion-social-facebook:before, .ion-social-googleplus:before, .ion-social-pinterest:before, .ion-social-twitter:before { display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .ion-android-close:before { content: ""; }
 
@@ -43,7 +43,15 @@
 
 .ion-chatbox:before { content: ""; }
 
+.ion-chatbox-working:before { content: ""; }
+
 .ion-chatboxes:before { content: ""; }
+
+.ion-chatbubble:before { content: ""; }
+
+.ion-chatbubble-working:before { content: ""; }
+
+.ion-chatbubbles:before { content: ""; }
 
 .ion-chevron-down:before { content: ""; }
 
