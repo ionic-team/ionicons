@@ -1,5 +1,5 @@
 {
-  "build_hash": "d5b8313dacd8db927b8c68f591ea054f",
+  "build_hash": "378659efcb0085ecf6a37e46b58cea08",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -711,6 +711,18 @@
     {
       "code": "0xf145",
       "name": "build-rewards-color"
+    },
+    {
+      "code": "0xf155",
+      "name": "build-social-facebooklike"
+    },
+    {
+      "code": "0xf156",
+      "name": "build-social-googleplusone"
+    },
+    {
+      "code": "0xf157",
+      "name": "build-social-stumbleupon"
     },
     {
       "code": "0xf14c",
