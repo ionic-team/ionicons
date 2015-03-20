@@ -2,6 +2,7 @@
 // --------------------------
 
 .ionicons,
+.#{$ionicons-prefix}android-close:before,
 .#{$ionicons-prefix}briefcase:before,
 .#{$ionicons-prefix}build-cart:before,
 .#{$ionicons-prefix}build-order-status:before,
@@ -14,6 +15,8 @@
 .#{$ionicons-prefix}card:before,
 .#{$ionicons-prefix}chatboxes:before,
 .#{$ionicons-prefix}chevron-down:before,
+.#{$ionicons-prefix}chevron-left:before,
+.#{$ionicons-prefix}chevron-right:before,
 .#{$ionicons-prefix}crop-landscape:before,
 .#{$ionicons-prefix}crop-portrait:before,
 .#{$ionicons-prefix}edit:before,
@@ -35,6 +38,7 @@
 {
   @extend .ion;
 }
+.#{$ionicons-prefix}android-close:before { content: $ionicon-var-android-close; }
 .#{$ionicons-prefix}briefcase:before { content: $ionicon-var-briefcase; }
 .#{$ionicons-prefix}build-cart:before { content: $ionicon-var-build-cart; }
 .#{$ionicons-prefix}build-order-status:before { content: $ionicon-var-build-order-status; }
@@ -47,6 +51,8 @@
 .#{$ionicons-prefix}card:before { content: $ionicon-var-card; }
 .#{$ionicons-prefix}chatboxes:before { content: $ionicon-var-chatboxes; }
 .#{$ionicons-prefix}chevron-down:before { content: $ionicon-var-chevron-down; }
+.#{$ionicons-prefix}chevron-left:before { content: $ionicon-var-chevron-left; }
+.#{$ionicons-prefix}chevron-right:before { content: $ionicon-var-chevron-right; }
 .#{$ionicons-prefix}crop-landscape:before { content: $ionicon-var-crop-landscape; }
 .#{$ionicons-prefix}crop-portrait:before { content: $ionicon-var-crop-portrait; }
 .#{$ionicons-prefix}edit:before { content: $ionicon-var-edit; }

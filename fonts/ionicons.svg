@@ -5,7 +5,7 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20141217 at Fri Mar 20 09:33:15 2015
+Created by FontForge 20141217 at Fri Mar 20 14:43:32 2015
  By Adrian_Miller
 Copyright (c) 2015, Adrian_Miller
 </metadata>
@@ -22,9 +22,11 @@ Copyright (c) 2015, Adrian_Miller
     bbox="-0.5 -64 481 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F117-F2BF"
+    unicode-range="U+F117-F2D7"
   />
     <missing-glyph />
+    <glyph glyph-name="ion-android-close" unicode="&#xf2d7;" horiz-adv-x="298" 
+d="M298 311l-119 -119l119 -119l-30 -30l-119 119l-119 -119l-30 30l119 119l-119 119l30 30l119 -119l119 119z" />
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
 d="M240 176v8h208v-176c0 -4 -4 -8 -8 -8h-432c-4 0 -8 4 -8 8v176h208v-8h32zM440 304c4 0 8 -4 8 -8v-96h-208v8h-32v-8h-208v96c0 4 4 8 8 8h120v31c1 28 22 49 51 49h90c30 0 50 -21 51 -49v-31h120zM288 332v1c0 10 -9 19 -19 19h-90c-10 0 -19 -9 -19 -19v-1v-1v-27
 h128v27v1z" />
@@ -58,6 +60,10 @@ d="M246 82l26 -18c-4 -21 -29 -32 -52 -32h-90c-8 0 -11 -2 -13 -3l-53 -45v48h-16c-
 h-101c-35 0 -63 27 -63 60v98v70c0 33 21 60 56 60h217z" />
     <glyph glyph-name="ion-chevron-down" unicode="&#xf123;" 
 d="M224 150v0v0l174 167c4 4 12 4 16 0l31 -30c4 -4 4 -12 0 -16l-213 -204c-2 -2 -5 -3 -8 -3s-6 1 -8 3l-213 204c-4 4 -4 12 0 16l31 30c4 4 12 4 16 0z" />
+    <glyph glyph-name="ion-chevron-left" unicode="&#xf124;" horiz-adv-x="256" 
+d="M86 192l167 -174c4 -4 4 -12 0 -16l-30 -31c-4 -4 -12 -4 -16 0l-204 213c-2 2 -3 5 -3 8s1 6 3 8l204 213c4 4 12 3 16 -1l30 -30c4 -4 4 -12 0 -16l-167 -174v0v0z" />
+    <glyph glyph-name="ion-chevron-right" unicode="&#xf125;" horiz-adv-x="256" 
+d="M170 192v0v0l-167 174c-4 4 -4 12 0 16l30 30c4 4 12 5 16 1l204 -213c2 -2 3 -5 3 -8s-1 -6 -3 -8l-204 -213c-4 -4 -12 -4 -16 0l-30 31c-4 4 -4 12 0 16z" />
     <glyph glyph-name="ion-crop-landscape" unicode="&#xf14d;" horiz-adv-x="418" 
 d="M380 329v-13h-57v13h57zM285 329v-13h-57v13h57zM189 329v-13h-57v13h57zM94 329v-13h-57v13h57zM380 95v-14h-57v14h57zM285 95v-14h-57v14h57zM189 95v-14h-57v14h57zM94 95v-14h-57v14h57zM404 272v57h14v-57h-14zM0 272v57h14v-57h-14zM404 177v57h14v-57h-14zM0 177
 v57h14v-57h-14zM404 81v57h14v-57h-14zM0 81v57h14v-57h-14z" />
