@@ -4,6 +4,11 @@
 
 Build icons needs to be prefixed with "build" to avoid conflicts with existing similar icons ex: build-cart.svg
 
+Add any new icons to the src/ folder.
+
+Move any unused icons to the svg/ folder.
+
+
 The premium icon font for [Ionic Framework](http://ionicframework.com/). Designed by [@benjsperry](https://twitter.com/benjsperry).
 
 Note: All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Drifty, nor vice versa.
