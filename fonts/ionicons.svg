@@ -5,7 +5,7 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20141217 at Fri Mar 20 16:22:24 2015
+Created by FontForge 20141217 at Fri Mar 20 16:29:43 2015
  By Adrian_Miller
 Copyright (c) 2015, Adrian_Miller
 </metadata>
@@ -22,7 +22,7 @@ Copyright (c) 2015, Adrian_Miller
     bbox="-0.5 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F117-F48D"
+    unicode-range="U+F117-F48F"
   />
     <missing-glyph />
     <glyph glyph-name="ion-android-close" unicode="&#xf2d7;" horiz-adv-x="298" 
@@ -106,6 +106,8 @@ d="M382 352c46 -47 46 -124 0 -171l-174 -181l-174 181c-46 47 -46 124 0 171c40 42 
 d="M384 160h-48v-160h-96v128h-96v-128h-96v160h-48l192 224z" />
     <glyph glyph-name="ion-ios-pricetag" unicode="&#xf48d;" 
 d="M304 320c0 11 5 16 16 16s16 -5 16 -16s-5 -16 -16 -16s-16 5 -16 16zM256 416h160v-160l-256 -288l-160 160zM320 288c9 0 16 4 22 10s10 13 10 22s-4 16 -10 22s-13 10 -22 10s-16 -4 -22 -10s-10 -13 -10 -22s4 -16 10 -22s13 -10 22 -10z" />
+    <glyph glyph-name="ion-ios-pricetags" unicode="&#xf48f;" horiz-adv-x="448" 
+d="M432 384h16v-144l-240 -272l-13 13l237 266v137zM256 416h160v-32v-16v-112l-221 -253l-12 -11l-23 -24l-160 160zM320 288c18 0 32 14 32 32s-14 32 -32 32s-32 -14 -32 -32s14 -32 32 -32zM304 320c0 11 5 16 16 16s16 -5 16 -16s-5 -16 -16 -16s-16 5 -16 16z" />
     <glyph glyph-name="ion-iphone" unicode="&#xf1fa;" horiz-adv-x="192" 
 d="M168 384c13 0 24 -11 24 -24v-336c0 -13 -11 -24 -24 -24h-144c-13 0 -24 11 -24 24v336c0 13 11 24 24 24h144zM80 348v0c0 -2 2 -4 4 -4h24c2 0 4 2 4 4v0c0 2 -2 4 -4 4h-24c-2 0 -4 -2 -4 -4zM68 352c-2 0 -4 -2 -4 -4s2 -4 4 -4s4 2 4 4s-2 4 -4 4zM96 16
 c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM176 64v256h-160v-256h160z" />
