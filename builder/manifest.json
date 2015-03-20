@@ -1,5 +1,5 @@
 {
-  "build_hash": "9f6842db0f73e7276f483e617ab81626",
+  "build_hash": "49ee7672ab35bec97a518c090091ec9e",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -715,6 +715,14 @@
     {
       "code": "0xf14c",
       "name": "build-user"
+    },
+    {
+      "code": "0xf153",
+      "name": "build-zoom-in"
+    },
+    {
+      "code": "0xf154",
+      "name": "build-zoom-out"
     },
     {
       "code": "0xf26d",
