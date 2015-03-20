@@ -3,11 +3,11 @@
 <!--
 2015-3-20: Created with FontForge (http://fontforge.org)
 -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20150302 at Fri Mar 20 15:33:19 2015
- By Carly_Culver
-Copyright (c) 2015, Carly_Culver
+Created by FontForge 20141217 at Fri Mar 20 15:59:54 2015
+ By Adrian_Miller
+Copyright (c) 2015, Adrian_Miller
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -22,7 +22,7 @@ Copyright (c) 2015, Carly_Culver
     bbox="-0.5 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F117-F2D7"
+    unicode-range="U+F117-F48D"
   />
     <missing-glyph />
     <glyph glyph-name="ion-android-close" unicode="&#xf2d7;" horiz-adv-x="298" 
@@ -67,6 +67,8 @@ c0 4 4 8 8 8h56v-41c0 -22 24 -39 48 -39s48 17 48 39v41h128v-41c0 -22 25 -39 49 -
     <glyph glyph-name="ion-card" unicode="&#xf119;" 
 d="M420 352c16 0 28 -12 28 -28v0v-264v0c0 -16 -12 -28 -28 -28h-392c-16 0 -28 12 -28 28v0v0v264v0v0c0 16 12 28 28 28h392zM45 320c-7 0 -12 -5 -13 -12v-20h384v20c-1 7 -6 12 -13 12h-358zM403 64c7 0 12 5 13 12v116h-384v-116c1 -7 6 -12 13 -12h358zM64 128v16
 h192v-16h-192zM64 96v16h96v-16h-96zM320 96v48h64v-48h-64z" />
+    <glyph glyph-name="ion-chatbox" unicode="&#xf11b;" horiz-adv-x="416" 
+d="M76 48c-42 0 -76 31 -76 71v209c0 40 34 72 76 72h264c42 0 76 -32 76 -72v-209c0 -40 -34 -71 -76 -71h-4v-64s-79 54 -86 59s-7 5 -21 5h-153z" />
     <glyph glyph-name="ion-chatboxes" unicode="&#xf11c;" horiz-adv-x="416" 
 d="M246 82l26 -18c-4 -21 -29 -32 -52 -32h-90c-8 0 -11 -2 -13 -3l-53 -45v48h-16c-26 0 -48 16 -48 41v129c0 25 20 45 46 45h2v-101c0 -33 29 -59 64 -59h117c10 0 14 -3 17 -5zM353 400c35 0 63 -27 63 -60v-168c0 -33 -28 -60 -63 -60h-17v-64l-75 60c-2 2 -7 4 -17 4
 h-101c-35 0 -63 27 -63 60v98v70c0 33 21 60 56 60h217z" />
@@ -91,6 +93,8 @@ c8 -4 83 -56 132 -88l-83 -93c-2 -2 -2 -4 -1 -5s4 -1 6 1l98 83c15 -10 25 -16 27 -
 d="M382 352c46 -47 46 -124 0 -171l-174 -181l-174 181c-46 47 -46 124 0 171c40 42 107 42 147 0l27 -28l28 28c40 42 106 42 146 0z" />
     <glyph glyph-name="ion-home" unicode="&#xf144;" horiz-adv-x="384" 
 d="M384 160h-48v-160h-96v128h-96v-128h-96v160h-48l192 224z" />
+    <glyph glyph-name="ion-ios-pricetag" unicode="&#xf48d;" horiz-adv-x="416" 
+d="M304 320c0 11 5 16 16 16s16 -5 16 -16s-5 -16 -16 -16s-16 5 -16 16zM256 416h160v-160l-256 -288l-160 160zM320 288c9 0 16 4 22 10s10 13 10 22s-4 16 -10 22s-13 10 -22 10s-16 -4 -22 -10s-10 -13 -10 -22s4 -16 10 -22s13 -10 22 -10z" />
     <glyph glyph-name="ion-iphone" unicode="&#xf1fa;" horiz-adv-x="192" 
 d="M168 384c13 0 24 -11 24 -24v-336c0 -13 -11 -24 -24 -24h-144c-13 0 -24 11 -24 24v336c0 13 11 24 24 24h144zM80 348v0c0 -2 2 -4 4 -4h24c2 0 4 2 4 4v0c0 2 -2 4 -4 4h-24c-2 0 -4 -2 -4 -4zM68 352c-2 0 -4 -2 -4 -4s2 -4 4 -4s4 2 4 4s-2 4 -4 4zM96 16
 c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM176 64v256h-160v-256h160z" />

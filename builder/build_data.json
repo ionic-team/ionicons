@@ -1,5 +1,5 @@
 {
-  "build_hash": "d5b8313dacd8db927b8c68f591ea054f",
+  "build_hash": "378659efcb0085ecf6a37e46b58cea08",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -61,6 +61,10 @@
       "name": "card"
     },
     {
+      "code": "0xf11b",
+      "name": "chatbox"
+    },
+    {
       "code": "0xf11c",
       "name": "chatboxes"
     },
@@ -99,6 +103,10 @@
     {
       "code": "0xf144",
       "name": "home"
+    },
+    {
+      "code": "0xf48d",
+      "name": "ios-pricetag"
     },
     {
       "code": "0xf1fa",
