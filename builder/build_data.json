@@ -1,9 +1,13 @@
 {
-  "build_hash": "9f6842db0f73e7276f483e617ab81626",
+  "build_hash": "49ee7672ab35bec97a518c090091ec9e",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
   "icons": [
+    {
+      "code": "0xf2d7",
+      "name": "android-close"
+    },
     {
       "code": "0xf26c",
       "name": "briefcase"
@@ -51,6 +55,14 @@
     {
       "code": "0xf123",
       "name": "chevron-down"
+    },
+    {
+      "code": "0xf124",
+      "name": "chevron-left"
+    },
+    {
+      "code": "0xf125",
+      "name": "chevron-right"
     },
     {
       "code": "0xf14d",
