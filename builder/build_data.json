@@ -1,5 +1,5 @@
 {
-  "build_hash": "cc3d9f2ac6d138a26ffe22f0cace7809",
+  "build_hash": "02441854716c34c869640518c7588dad",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -129,6 +129,14 @@
       "name": "ios-pricetags"
     },
     {
+      "code": "0xf4b3",
+      "name": "ios-star"
+    },
+    {
+      "code": "0xf4b2",
+      "name": "ios-star-outline"
+    },
+    {
       "code": "0xf1fa",
       "name": "iphone"
     },
@@ -171,6 +179,10 @@
     {
       "code": "0xf243",
       "name": "social-twitter"
+    },
+    {
+      "code": "0xf24e",
+      "name": "star"
     }
   ]
 }
