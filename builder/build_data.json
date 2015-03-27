@@ -1,9 +1,17 @@
 {
-  "build_hash": "02441854716c34c869640518c7588dad",
+  "build_hash": "1a65f93b80592522378c974fe32d3603",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
   "icons": [
+    {
+      "code": "0xf373",
+      "name": "android-checkbox-outline"
+    },
+    {
+      "code": "0xf372",
+      "name": "android-checkbox-outline-blank"
+    },
     {
       "code": "0xf2d7",
       "name": "android-close"
@@ -183,6 +191,14 @@
     {
       "code": "0xf24e",
       "name": "star"
+    },
+    {
+      "code": "0xf250",
+      "name": "thumbsdown"
+    },
+    {
+      "code": "0xf251",
+      "name": "thumbsup"
     }
   ]
 }

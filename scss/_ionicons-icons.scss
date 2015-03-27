@@ -2,6 +2,8 @@
 // --------------------------
 
 .ionicons,
+.#{$ionicons-prefix}android-checkbox-outline:before,
+.#{$ionicons-prefix}android-checkbox-outline-blank:before,
 .#{$ionicons-prefix}android-close:before,
 .#{$ionicons-prefix}briefcase:before,
 .#{$ionicons-prefix}build-cart:before,
@@ -46,10 +48,14 @@
 .#{$ionicons-prefix}social-googleplus:before,
 .#{$ionicons-prefix}social-pinterest:before,
 .#{$ionicons-prefix}social-twitter:before,
-.#{$ionicons-prefix}star:before
+.#{$ionicons-prefix}star:before,
+.#{$ionicons-prefix}thumbsdown:before,
+.#{$ionicons-prefix}thumbsup:before
 {
   @extend .ion;
 }
+.#{$ionicons-prefix}android-checkbox-outline:before { content: $ionicon-var-android-checkbox-outline; }
+.#{$ionicons-prefix}android-checkbox-outline-blank:before { content: $ionicon-var-android-checkbox-outline-blank; }
 .#{$ionicons-prefix}android-close:before { content: $ionicon-var-android-close; }
 .#{$ionicons-prefix}briefcase:before { content: $ionicon-var-briefcase; }
 .#{$ionicons-prefix}build-cart:before { content: $ionicon-var-build-cart; }
@@ -95,3 +101,5 @@
 .#{$ionicons-prefix}social-pinterest:before { content: $ionicon-var-social-pinterest; }
 .#{$ionicons-prefix}social-twitter:before { content: $ionicon-var-social-twitter; }
 .#{$ionicons-prefix}star:before { content: $ionicon-var-star; }
+.#{$ionicons-prefix}thumbsdown:before { content: $ionicon-var-thumbsdown; }
+.#{$ionicons-prefix}thumbsup:before { content: $ionicon-var-thumbsup; }
