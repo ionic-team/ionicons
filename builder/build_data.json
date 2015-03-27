@@ -1,5 +1,5 @@
 {
-  "build_hash": "1a65f93b80592522378c974fe32d3603",
+  "build_hash": "af5aa78ca3cf2548c11efd86f01c20eb",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -15,6 +15,14 @@
     {
       "code": "0xf2d7",
       "name": "android-close"
+    },
+    {
+      "code": "0xf388",
+      "name": "android-favorite"
+    },
+    {
+      "code": "0xf387",
+      "name": "android-favorite-outline"
     },
     {
       "code": "0xf26c",

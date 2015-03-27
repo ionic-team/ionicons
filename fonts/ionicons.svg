@@ -5,7 +5,7 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20141217 at Fri Mar 27 10:31:26 2015
+Created by FontForge 20141217 at Fri Mar 27 13:59:25 2015
  By Adrian_Miller
 Copyright (c) 2015, Adrian_Miller
 </metadata>
@@ -31,6 +31,11 @@ d="M341 341h-298v-298h298v298zM341 384v0c23 0 43 -20 43 -43v-298c0 -23 -20 -43 -
 d="M105 233l66 -66l183 183l30 -30l-213 -213l-96 96zM341 43v170h43v-170c0 -23 -20 -43 -43 -43h-298c-23 0 -43 20 -43 43v298c0 23 20 43 43 43h213v-43h-213v-298h298z" />
     <glyph glyph-name="ion-android-close" unicode="&#xf2d7;" horiz-adv-x="298" 
 d="M298 311l-119 -119l119 -119l-30 -30l-119 119l-119 -119l-30 30l119 119l-119 119l30 30l119 -119l119 119z" />
+    <glyph glyph-name="ion-android-favorite-outline" unicode="&#xf387;" horiz-adv-x="416" 
+d="M302 384c64 0 114 -50 114 -115c0 -80 -71 -144 -178 -242l-30 -27l-30 27c-107 98 -178 162 -178 242c0 65 50 115 114 115c36 0 71 -17 94 -44c23 27 58 44 94 44zM221 55c50 46 94 86 123 122c28 35 40 63 40 92c0 23 -9 44 -24 59s-35 24 -58 24
+c-26 0 -53 -13 -70 -33l-24 -29l-24 29c-17 20 -44 33 -70 33c-23 0 -43 -9 -58 -24s-24 -36 -24 -59c0 -29 12 -57 40 -92c29 -36 73 -76 123 -122l4 -4l9 -8l9 8z" />
+    <glyph glyph-name="ion-android-favorite" unicode="&#xf388;" horiz-adv-x="416" 
+d="M208 0l-30 27c-107 98 -178 162 -178 242c0 65 50 115 114 115c36 0 71 -17 94 -44c23 27 58 44 94 44c64 0 114 -50 114 -115c0 -80 -71 -144 -178 -242z" />
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
 d="M240 176v8h208v-176c0 -4 -4 -8 -8 -8h-432c-4 0 -8 4 -8 8v176h208v-8h32zM440 304c4 0 8 -4 8 -8v-96h-208v8h-32v-8h-208v96c0 4 4 8 8 8h120v31c1 28 22 49 51 49h90c30 0 50 -21 51 -49v-31h120zM288 332v1c0 10 -9 19 -19 19h-90c-10 0 -19 -9 -19 -19v-1v-1v-27
 h128v27v1z" />
