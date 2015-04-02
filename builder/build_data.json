@@ -1,5 +1,5 @@
 {
-  "build_hash": "af5aa78ca3cf2548c11efd86f01c20eb",
+  "build_hash": "03f249b54c7d9113828084c0e6dde60f",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -147,6 +147,10 @@
     {
       "code": "0xf4b3",
       "name": "ios-star"
+    },
+    {
+      "code": "0xf4b1",
+      "name": "ios-star-half"
     },
     {
       "code": "0xf4b2",

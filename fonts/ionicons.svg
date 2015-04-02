@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-3-27: Created with FontForge (http://fontforge.org)
+2015-4-2: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20141217 at Fri Mar 27 13:59:25 2015
+Created by FontForge 20141217 at Thu Apr  2 11:44:25 2015
  By Adrian_Miller
 Copyright (c) 2015, Adrian_Miller
 </metadata>
@@ -117,6 +117,8 @@ d="M384 160h-48v-160h-96v128h-96v-128h-96v160h-48l192 224z" />
 d="M304 320c0 11 5 16 16 16s16 -5 16 -16s-5 -16 -16 -16s-16 5 -16 16zM256 416h160v-160l-256 -288l-160 160zM320 288c9 0 16 4 22 10s10 13 10 22s-4 16 -10 22s-13 10 -22 10s-16 -4 -22 -10s-10 -13 -10 -22s4 -16 10 -22s13 -10 22 -10z" />
     <glyph glyph-name="ion-ios-pricetags" unicode="&#xf48f;" 
 d="M432 384h16v-144l-240 -272l-13 13l237 266v137zM256 416h160v-32v-16v-112l-221 -253l-12 -11l-23 -24l-160 160zM320 288c18 0 32 14 32 32s-14 32 -32 32s-32 -14 -32 -32s14 -32 32 -32zM304 320c0 11 5 16 16 16s16 -5 16 -16s-5 -16 -16 -16s-16 5 -16 16z" />
+    <glyph glyph-name="ion-ios-star-half" unicode="&#xf4b1;" 
+d="M140 143l-140 98h171l53 159l53 -159h171l-140 -98l54 -159l-138 99l-138 -99zM224 347v-244l107 -76l-43 122l108 75h-131z" />
     <glyph glyph-name="ion-ios-star-outline" unicode="&#xf4b2;" 
 d="M448 241l-140 -98l54 -159l-138 99l-138 -99l54 159l-140 98h171l53 159l53 -159h171zM331 27l-43 122l108 75h-131l-41 123l-41 -123h-131l108 -75l-43 -122l107 76z" />
     <glyph glyph-name="ion-ios-star" unicode="&#xf4b3;" 
