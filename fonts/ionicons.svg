@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-4-2: Created with FontForge (http://fontforge.org)
+2015-4-6: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20141217 at Thu Apr  2 11:44:25 2015
+Created by FontForge 20141217 at Mon Apr  6 13:50:17 2015
  By Adrian_Miller
 Copyright (c) 2015, Adrian_Miller
 </metadata>
@@ -162,5 +162,8 @@ c-9 34 -1 62 1 87h-103c-19 0 -34 15 -34 34c0 15 10 29 24 33zM336 352c-9 0 -16 -7
     <glyph glyph-name="ion-thumbsup" unicode="&#xf251;" horiz-adv-x="384" 
 d="M360 189c10 -5 18 -17 18 -29c0 -14 -8 -25 -20 -30c4 -5 6 -12 6 -19c0 -14 -8 -25 -20 -30c3 -5 5 -11 5 -17c0 -18 -11 -24 -35 -30s-74 -12 -126 -9c-23 1 -55 7 -76 7v-32h-112v240h112v-16c15 1 31 4 40 14c22 23 40 65 40 108c0 19 -1 29 4 34c13 13 44 -9 52 -37
 c9 -34 1 -62 -1 -87h103c19 0 34 -15 34 -34c0 -15 -10 -29 -24 -33zM48 32c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16z" />
+    <glyph glyph-name="ion-unlocked" unicode="&#xf254;" horiz-adv-x="384" 
+d="M22 -32c-12 0 -22 10 -22 22v212c0 12 10 22 22 22h3h19v31c0 42 17 87 43 115s64 46 105 46v0v0c41 0 79 -18 105 -46c20 -21 33 -51 39 -82h-53c-5 18 -13 35 -24 47v0v1c-18 19 -42 29 -67 29v0v0c-25 0 -49 -10 -67 -29v-1v0c-18 -19 -28 -53 -28 -80v-31h265
+c12 0 22 -10 22 -22v-212c0 -12 -10 -22 -22 -22h-340z" />
   </font>
 </defs></svg>

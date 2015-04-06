@@ -53,7 +53,8 @@
 .#{$ionicons-prefix}social-twitter:before,
 .#{$ionicons-prefix}star:before,
 .#{$ionicons-prefix}thumbsdown:before,
-.#{$ionicons-prefix}thumbsup:before
+.#{$ionicons-prefix}thumbsup:before,
+.#{$ionicons-prefix}unlocked:before
 {
   @extend .ion;
 }
@@ -109,3 +110,4 @@
 .#{$ionicons-prefix}star:before { content: $ionicon-var-star; }
 .#{$ionicons-prefix}thumbsdown:before { content: $ionicon-var-thumbsdown; }
 .#{$ionicons-prefix}thumbsup:before { content: $ionicon-var-thumbsup; }
+.#{$ionicons-prefix}unlocked:before { content: $ionicon-var-unlocked; }

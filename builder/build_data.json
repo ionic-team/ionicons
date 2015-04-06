@@ -1,5 +1,5 @@
 {
-  "build_hash": "03f249b54c7d9113828084c0e6dde60f",
+  "build_hash": "13bf2b864d6205773a80e4f0e2062c51",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -211,6 +211,10 @@
     {
       "code": "0xf251",
       "name": "thumbsup"
+    },
+    {
+      "code": "0xf254",
+      "name": "unlocked"
     }
   ]
 }
