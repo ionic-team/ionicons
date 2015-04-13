@@ -9,6 +9,8 @@
 .#{$ionicons-prefix}android-favorite-outline:before,
 .#{$ionicons-prefix}briefcase:before,
 .#{$ionicons-prefix}build-cart:before,
+.#{$ionicons-prefix}build-logo:before,
+.#{$ionicons-prefix}build-logo-simplified:before,
 .#{$ionicons-prefix}build-order-status:before,
 .#{$ionicons-prefix}build-rewards:before,
 .#{$ionicons-prefix}build-rewards-color:before,
@@ -65,6 +67,8 @@
 .#{$ionicons-prefix}android-favorite-outline:before { content: $ionicon-var-android-favorite-outline; }
 .#{$ionicons-prefix}briefcase:before { content: $ionicon-var-briefcase; }
 .#{$ionicons-prefix}build-cart:before { content: $ionicon-var-build-cart; }
+.#{$ionicons-prefix}build-logo:before { content: $ionicon-var-build-logo; }
+.#{$ionicons-prefix}build-logo-simplified:before { content: $ionicon-var-build-logo-simplified; }
 .#{$ionicons-prefix}build-order-status:before { content: $ionicon-var-build-order-status; }
 .#{$ionicons-prefix}build-rewards:before { content: $ionicon-var-build-rewards; }
 .#{$ionicons-prefix}build-rewards-color:before { content: $ionicon-var-build-rewards-color; }
