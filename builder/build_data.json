@@ -1,5 +1,5 @@
 {
-  "build_hash": "81905de7562aace3643c9a7f4487ff92",
+  "build_hash": "22eafc59b8a1db2cd3a0db0244944e78",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -201,12 +201,28 @@
       "name": "social-googleplus"
     },
     {
+      "code": "0xf350",
+      "name": "social-instagram-outline"
+    },
+    {
+      "code": "0xf238",
+      "name": "social-linkedin-outline"
+    },
+    {
       "code": "0xf2b1",
       "name": "social-pinterest"
     },
     {
+      "code": "0xf241",
+      "name": "social-tumblr"
+    },
+    {
       "code": "0xf243",
       "name": "social-twitter"
+    },
+    {
+      "code": "0xf24c",
+      "name": "social-youtube-outline"
     },
     {
       "code": "0xf24e",
