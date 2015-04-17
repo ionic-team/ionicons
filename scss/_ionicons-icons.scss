@@ -21,6 +21,7 @@
 .#{$ionicons-prefix}build-zoom-in:before,
 .#{$ionicons-prefix}build-zoom-out:before,
 .#{$ionicons-prefix}calendar:before,
+.#{$ionicons-prefix}camera:before,
 .#{$ionicons-prefix}card:before,
 .#{$ionicons-prefix}chatbox:before,
 .#{$ionicons-prefix}chatbox-working:before,
@@ -83,6 +84,7 @@
 .#{$ionicons-prefix}build-zoom-in:before { content: $ionicon-var-build-zoom-in; }
 .#{$ionicons-prefix}build-zoom-out:before { content: $ionicon-var-build-zoom-out; }
 .#{$ionicons-prefix}calendar:before { content: $ionicon-var-calendar; }
+.#{$ionicons-prefix}camera:before { content: $ionicon-var-camera; }
 .#{$ionicons-prefix}card:before { content: $ionicon-var-card; }
 .#{$ionicons-prefix}chatbox:before { content: $ionicon-var-chatbox; }
 .#{$ionicons-prefix}chatbox-working:before { content: $ionicon-var-chatbox-working; }

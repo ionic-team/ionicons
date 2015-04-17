@@ -1,5 +1,5 @@
 {
-  "build_hash": "22eafc59b8a1db2cd3a0db0244944e78",
+  "build_hash": "9b3fd9054467a5e2cd66c5fca1a813e8",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -79,6 +79,10 @@
     {
       "code": "0xf117",
       "name": "calendar"
+    },
+    {
+      "code": "0xf118",
+      "name": "camera"
     },
     {
       "code": "0xf119",
