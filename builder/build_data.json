@@ -1,5 +1,5 @@
 {
-  "build_hash": "9b3fd9054467a5e2cd66c5fca1a813e8",
+  "build_hash": "3008981710931a8f2604c248d7bb9e70",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -123,6 +123,10 @@
     {
       "code": "0xf125",
       "name": "chevron-right"
+    },
+    {
+      "code": "0xf126",
+      "name": "chevron-up"
     },
     {
       "code": "0xf14d",
