@@ -1,5 +1,5 @@
 {
-  "build_hash": "a2c6f31123a3cc8385d45bf46c5dde82",
+  "build_hash": "55ef8993923c74fc1aa70f5217046392",
   "prefix": "ion-",
   "version": "2.0.1",
   "name": "Ionicons",
@@ -419,6 +419,10 @@
     {
       "code": "0xf3aa",
       "name": "android-restaurant"
+    },
+    {
+      "code": "0xf4fa",
+      "name": "android-run"
     },
     {
       "code": "0xf3ab",
