@@ -1,5 +1,5 @@
 {
-  "build_hash": "e8e0d461cc44800af15d879d18b2b7e2",
+  "build_hash": "a2c6f31123a3cc8385d45bf46c5dde82",
   "prefix": "ion-",
   "version": "2.0.1",
   "name": "Ionicons",
@@ -2655,6 +2655,14 @@
     {
       "code": "0xf2b0",
       "name": "social-pinterest-outline"
+    },
+    {
+      "code": "0xf4f8",
+      "name": "social-pound"
+    },
+    {
+      "code": "0xf4f9",
+      "name": "social-pound-outline"
     },
     {
       "code": "0xf4e9",
