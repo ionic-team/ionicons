@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-5-4: Created with FontForge (http://fontforge.org)
+2015-6-1: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20141217 at Mon May  4 15:15:34 2015
- By Adrian_Miller
-Copyright (c) 2015, Adrian_Miller
+Created by FontForge 20141217 at Mon Jun  1 13:52:12 2015
+ By Adrian Miller
+Copyright (c) 2015, Adrian Miller
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -119,6 +119,9 @@ d="M86 192l167 -174c4 -4 4 -12 0 -16l-30 -31c-4 -4 -12 -4 -16 0l-204 213c-2 2 -3
 d="M170 192v0v0l-167 174c-4 4 -4 12 0 16l30 30c4 4 12 5 16 1l204 -213c2 -2 3 -5 3 -8s-1 -6 -3 -8l-204 -213c-4 -4 -12 -4 -16 0l-30 31c-4 4 -4 12 0 16z" />
     <glyph glyph-name="ion-chevron-up" unicode="&#xf126;" 
 d="M224 234l-174 -167c-4 -4 -12 -4 -16 0l-31 30c-4 4 -4 12 0 16l213 204c2 2 5 3 8 3s6 -1 8 -3l213 -204c4 -4 4 -12 0 -16l-31 -30c-4 -4 -12 -4 -16 0l-174 167v0v0z" />
+    <glyph glyph-name="ion-close" unicode="&#xf12a;" horiz-adv-x="384" 
+d="M380 61c3 -3 4 -6 4 -10s-1 -7 -4 -10l-38 -37c-3 -3 -5 -4 -9 -4s-7 1 -10 4l-131 131l-131 -131c-3 -3 -5 -4 -9 -4s-7 1 -10 4l-38 37c-3 3 -4 6 -4 10s1 7 4 10l132 131l-132 130c-5 5 -5 15 0 20l37 38c3 2 6 4 10 4s7 -1 10 -4l131 -130l131 130c3 2 6 4 10 4
+s7 -1 10 -4l37 -38c5 -5 5 -14 0 -19l-132 -130z" />
     <glyph glyph-name="ion-crop-landscape" unicode="&#xf14d;" horiz-adv-x="418" 
 d="M380 329v-13h-57v13h57zM285 329v-13h-57v13h57zM189 329v-13h-57v13h57zM94 329v-13h-57v13h57zM380 95v-14h-57v14h57zM285 95v-14h-57v14h57zM189 95v-14h-57v14h57zM94 95v-14h-57v14h57zM404 272v57h14v-57h-14zM0 272v57h14v-57h-14zM404 177v57h14v-57h-14zM0 177
 v57h14v-57h-14zM404 81v57h14v-57h-14zM0 81v57h14v-57h-14z" />

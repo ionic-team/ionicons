@@ -1,5 +1,5 @@
 {
-  "build_hash": "ea765ca9d2957b03d6eeae80466fb2b8",
+  "build_hash": "df7c59a29040d51762d018642994165d",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -127,6 +127,10 @@
     {
       "code": "0xf126",
       "name": "chevron-up"
+    },
+    {
+      "code": "0xf12a",
+      "name": "close"
     },
     {
       "code": "0xf14d",
