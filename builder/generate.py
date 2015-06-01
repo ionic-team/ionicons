@@ -27,7 +27,7 @@ def main():
 
 def generate_font_files():
   print "Generate Fonts"
-  cmd = "fontforge -script %s/scripts/generate_font.py" % (BUILDER_PATH)
+  cmd = "fontforge -script '%s/scripts/generate_font.py'" % (BUILDER_PATH)
   call(cmd, shell=True)
 
 
@@ -155,11 +155,11 @@ def generate_css_from_scss(data):
   css_file_path = os.path.join(CSS_FOLDER_PATH, 'ionicons.css')
   css_min_file_path = os.path.join(CSS_FOLDER_PATH, 'ionicons.min.css')
 
-  cmd = "sass %s %s --style compact" % (scss_file_path, css_file_path)
+  cmd = "sass '%s' '%s' --style compact" % (scss_file_path, css_file_path)
   call(cmd, shell=True)
 
   print "Generate Minified CSS From SCSS"
-  cmd = "sass %s %s --style compressed" % (scss_file_path, css_min_file_path)
+  cmd = "sass '%s' '%s' --style compressed" % (scss_file_path, css_min_file_path)
   call(cmd, shell=True)
 
 
