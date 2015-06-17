@@ -1,5 +1,5 @@
 {
-  "build_hash": "df7c59a29040d51762d018642994165d",
+  "build_hash": "eeca2c9cf6946b800ae1082ffde502ce",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -23,6 +23,10 @@
     {
       "code": "0xf387",
       "name": "android-favorite-outline"
+    },
+    {
+      "code": "0xf10e",
+      "name": "arrow-up-c"
     },
     {
       "code": "0xf26c",
@@ -153,6 +157,10 @@
       "name": "heart"
     },
     {
+      "code": "0xf142",
+      "name": "help-circled"
+    },
+    {
       "code": "0xf144",
       "name": "home"
     },
@@ -187,6 +195,10 @@
     {
       "code": "0xf200",
       "name": "locked"
+    },
+    {
+      "code": "0xf201",
+      "name": "loop"
     },
     {
       "code": "0xf213",

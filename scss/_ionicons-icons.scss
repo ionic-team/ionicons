@@ -7,6 +7,7 @@
 .#{$ionicons-prefix}android-close:before,
 .#{$ionicons-prefix}android-favorite:before,
 .#{$ionicons-prefix}android-favorite-outline:before,
+.#{$ionicons-prefix}arrow-up-c:before,
 .#{$ionicons-prefix}briefcase:before,
 .#{$ionicons-prefix}build-cart:before,
 .#{$ionicons-prefix}build-logo:before,
@@ -39,6 +40,7 @@
 .#{$ionicons-prefix}edit:before,
 .#{$ionicons-prefix}email:before,
 .#{$ionicons-prefix}heart:before,
+.#{$ionicons-prefix}help-circled:before,
 .#{$ionicons-prefix}home:before,
 .#{$ionicons-prefix}ios-pricetag:before,
 .#{$ionicons-prefix}ios-pricetags:before,
@@ -48,6 +50,7 @@
 .#{$ionicons-prefix}iphone:before,
 .#{$ionicons-prefix}location:before,
 .#{$ionicons-prefix}locked:before,
+.#{$ionicons-prefix}loop:before,
 .#{$ionicons-prefix}person:before,
 .#{$ionicons-prefix}printer:before,
 .#{$ionicons-prefix}rotate-clockwise:before,
@@ -74,6 +77,7 @@
 .#{$ionicons-prefix}android-close:before { content: $ionicon-var-android-close; }
 .#{$ionicons-prefix}android-favorite:before { content: $ionicon-var-android-favorite; }
 .#{$ionicons-prefix}android-favorite-outline:before { content: $ionicon-var-android-favorite-outline; }
+.#{$ionicons-prefix}arrow-up-c:before { content: $ionicon-var-arrow-up-c; }
 .#{$ionicons-prefix}briefcase:before { content: $ionicon-var-briefcase; }
 .#{$ionicons-prefix}build-cart:before { content: $ionicon-var-build-cart; }
 .#{$ionicons-prefix}build-logo:before { content: $ionicon-var-build-logo; }
@@ -106,6 +110,7 @@
 .#{$ionicons-prefix}edit:before { content: $ionicon-var-edit; }
 .#{$ionicons-prefix}email:before { content: $ionicon-var-email; }
 .#{$ionicons-prefix}heart:before { content: $ionicon-var-heart; }
+.#{$ionicons-prefix}help-circled:before { content: $ionicon-var-help-circled; }
 .#{$ionicons-prefix}home:before { content: $ionicon-var-home; }
 .#{$ionicons-prefix}ios-pricetag:before { content: $ionicon-var-ios-pricetag; }
 .#{$ionicons-prefix}ios-pricetags:before { content: $ionicon-var-ios-pricetags; }
@@ -115,6 +120,7 @@
 .#{$ionicons-prefix}iphone:before { content: $ionicon-var-iphone; }
 .#{$ionicons-prefix}location:before { content: $ionicon-var-location; }
 .#{$ionicons-prefix}locked:before { content: $ionicon-var-locked; }
+.#{$ionicons-prefix}loop:before { content: $ionicon-var-loop; }
 .#{$ionicons-prefix}person:before { content: $ionicon-var-person; }
 .#{$ionicons-prefix}printer:before { content: $ionicon-var-printer; }
 .#{$ionicons-prefix}rotate-clockwise:before { content: $ionicon-var-rotate-clockwise; }
