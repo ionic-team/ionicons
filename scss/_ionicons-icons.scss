@@ -30,6 +30,7 @@
 .#{$ionicons-prefix}chatbubble:before,
 .#{$ionicons-prefix}chatbubble-working:before,
 .#{$ionicons-prefix}chatbubbles:before,
+.#{$ionicons-prefix}checkmark:before,
 .#{$ionicons-prefix}chevron-down:before,
 .#{$ionicons-prefix}chevron-left:before,
 .#{$ionicons-prefix}chevron-right:before,
@@ -100,6 +101,7 @@
 .#{$ionicons-prefix}chatbubble:before { content: $ionicon-var-chatbubble; }
 .#{$ionicons-prefix}chatbubble-working:before { content: $ionicon-var-chatbubble-working; }
 .#{$ionicons-prefix}chatbubbles:before { content: $ionicon-var-chatbubbles; }
+.#{$ionicons-prefix}checkmark:before { content: $ionicon-var-checkmark; }
 .#{$ionicons-prefix}chevron-down:before { content: $ionicon-var-chevron-down; }
 .#{$ionicons-prefix}chevron-left:before { content: $ionicon-var-chevron-left; }
 .#{$ionicons-prefix}chevron-right:before { content: $ionicon-var-chevron-right; }
