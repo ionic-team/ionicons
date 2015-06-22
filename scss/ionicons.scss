@@ -13,3 +13,10 @@
 
 @import "ionicons-font";
 @import "ionicons-icons";
+
+@mixin ion-icon($icon-value) {
+  &:before {
+    @extend .ion;
+    content: $icon-value;
+  }
+}
