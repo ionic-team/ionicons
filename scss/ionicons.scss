@@ -18,5 +18,6 @@
   &:before {
     @extend .ion;
     content: $icon-value;
+    @content;
   }
 }
