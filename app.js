@@ -174,7 +174,6 @@ if (!String.prototype.trim) {
 
   var iconPanel = document.getElementById("icon-panel");
   var iconName = document.getElementById("icon-name");
-  var iconCode = document.getElementById("icon-code");
 
   var mouseOverTimeout;
   function iconMouseOver(e) {
@@ -201,7 +200,6 @@ if (!String.prototype.trim) {
       iconPanel.style.left = (target.offsetLeft - 85) + "px";
       target.className += " active";
       iconName.value = target.icon.name;
-      iconCode.innerHTML = (target.icon.code || "");
     }
   }
 

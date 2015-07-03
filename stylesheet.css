@@ -190,9 +190,8 @@ li.active {
   position: absolute;
   top: -9999px;
   left: -9999px;
-  padding: 10px 2px;
+  padding: 20px 2px;
   width: 260px;
-  height: 58px;
   border-radius: 4px;
   background: white;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
