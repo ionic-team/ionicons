@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-6-18: Created with FontForge (http://fontforge.org)
+2015-7-22: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Thu Jun 18 13:47:52 2015
+Created by FontForge 20150302 at Wed Jul 22 13:28:17 2015
  By Carly Culver
 Copyright (c) 2015, Carly Culver
 </metadata>
@@ -113,6 +113,9 @@ d="M208 -1c-115 0 -208 89 -208 200s93 201 208 201s208 -90 208 -201c0 -40 -12 -77
     <glyph glyph-name="ion-chatbubbles" unicode="&#xf11f;" horiz-adv-x="416" 
 d="M25 57c-1 1 0 2 -1 3c-15 22 -24 49 -24 77c0 42 19 80 49 106c-2 -11 -4 -22 -4 -34c0 -92 78 -168 174 -168c15 0 30 2 44 6c-27 -32 -69 -53 -115 -53c-20 0 -40 5 -58 12h-1v0c-2 1 -5 2 -8 2s-6 -1 -9 -2l-56 -22l12 63c0 4 -1 7 -3 10v0zM242 400
 c96 0 174 -76 174 -168c0 -33 -11 -64 -28 -90c-1 -1 -1 -2 -2 -3v0c-2 -4 -3 -8 -3 -12l17 -74l-69 26c-3 1 -6 2 -10 2c-3 0 -6 -1 -9 -2v0l-2 -1c-8 -3 -16 -5 -24 -7c-14 -4 -29 -6 -44 -6c-96 0 -173 75 -173 167c0 12 1 24 3 35c16 76 86 133 170 133z" />
+    <glyph glyph-name="ion-checkmark-circled" unicode="&#xf120;" 
+d="M224 416c124 0 224 -100 224 -224s-100 -224 -224 -224s-224 100 -224 224s100 224 224 224zM339 267c1 1 1 2 1 3s0 3 -1 4l-31 24c-1 1 -3 1 -4 1s-2 0 -3 -1l-111 -143s-44 42 -45 43s-4 3 -6 3s-3 -2 -4 -3l-25 -25l-1 -1c-1 -1 -1 -3 -1 -4s0 -2 1 -3l2 -1
+s78 -75 79 -76s3 -3 5 -3s4 2 5 3z" />
     <glyph glyph-name="ion-checkmark" unicode="&#xf122;" horiz-adv-x="416" 
 d="M414 338c1 -2 2 -4 2 -6s-1 -4 -2 -6l-249 -320c-2 -2 -5 -6 -9 -6s-8 3 -10 5s-141 136 -141 136l-3 3c-1 2 -2 4 -2 6s1 3 2 5l2 2c14 15 42 44 44 46s4 6 8 6s8 -4 10 -6s80 -78 80 -78l200 257c2 2 4 2 6 2s5 -1 7 -2z" />
     <glyph glyph-name="ion-chevron-down" unicode="&#xf123;" 

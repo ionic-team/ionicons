@@ -1,5 +1,5 @@
 {
-  "build_hash": "863abf27674456de559a90f8a54ad454",
+  "build_hash": "f7b091fa6405f061804d83f69ab80da8",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -119,6 +119,10 @@
     {
       "code": "0xf122",
       "name": "checkmark"
+    },
+    {
+      "code": "0xf120",
+      "name": "checkmark-circled"
     },
     {
       "code": "0xf123",
