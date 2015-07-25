@@ -1,5 +1,5 @@
 {
-  "build_hash": "9df77d7cf69468d767f7fe01fa091cff",
+  "build_hash": "67c79d16e460c2688df6ca25bf893fe3",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -2323,6 +2323,10 @@
     {
       "code": "0xf341",
       "name": "network"
+    },
+    {
+      "code": "0xf15a",
+      "name": "niche-cart"
     },
     {
       "code": "0xf2c2",

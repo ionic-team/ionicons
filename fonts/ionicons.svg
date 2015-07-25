@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-7-22: Created with FontForge (http://fontforge.org)
+2015-7-24: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Wed Jul 22 13:28:17 2015
+Created by FontForge 20150302 at Fri Jul 24 17:26:10 2015
  By Carly Culver
 Copyright (c) 2015, Carly Culver
 </metadata>
@@ -169,6 +169,10 @@ c-18 19 -42 29 -67 29v0v0c-25 0 -49 -10 -67 -29v-1v0c-18 -19 -28 -53 -28 -80z" /
     <glyph glyph-name="ion-loop" unicode="&#xf201;" horiz-adv-x="334" 
 d="M184 148v-58c49 8 86 50 86 102c0 16 -4 30 -10 44c-3 6 -5 12 -9 17l47 43c1 -1 2 -3 3 -4c21 -28 33 -62 33 -100v-4c-2 -72 -47 -131 -111 -154c-12 -4 -26 -8 -39 -9v-57l-76 67l-26 23l44 39zM0 196c2 72 48 133 113 155c12 4 24 7 37 8v57l76 -67l26 -23l-44 -39
 l-59 -51l1 58c-49 -8 -86 -51 -86 -102c0 -16 4 -31 10 -45c3 -6 5 -11 9 -16l-47 -44c-1 2 -2 3 -3 5c-20 28 -33 63 -33 100v4z" />
+    <glyph glyph-name="ion-niche-cart" unicode="&#xf15a;" horiz-adv-x="451" 
+d="M110 94c19 0 35 -16 35 -35s-16 -35 -35 -35s-35 16 -35 35s16 35 35 35zM287 94c19 0 35 -16 35 -35s-16 -35 -35 -35s-35 16 -35 35s16 35 35 35zM132 296v25h24v-25h-24zM81 296v25h24v-25h-24zM182 296v25h25v-25h-25zM233 296v25h25v-25h-25zM284 296v25h24v-25h-24
+zM233 244v25h25v-25h-25zM284 244v25h24v-25h-24zM182 244v25h25v-25h-25zM132 244v25h24v-25h-24zM81 244v25h24v-25h-24zM132 193v25h24v-25h-24zM182 193v25h25v-25h-25zM233 193v25h25v-25h-25zM75 131c-21 0 -26 16 -27 19l-48 148c-1 2 0 4 2 5l29 10h1c2 0 4 -1 4 -2
+l40 -124c3 -9 13 -16 22 -16h195c9 0 19 7 21 16l49 193c1 3 4 5 7 5h77c2 0 4 -2 4 -4v-31c0 -2 -2 -4 -4 -4h-37c-9 0 -19 -8 -21 -17l-47 -184c-1 -3 -5 -14 -24 -14h-243z" />
     <glyph glyph-name="ion-person" unicode="&#xf213;" horiz-adv-x="384" 
 d="M384 0h-192h-192s0 26 2 40c2 11 17 25 81 49c63 23 60 12 60 55c0 28 -14 11 -23 64c-4 21 -6 7 -14 40c-4 17 3 19 2 27s-2 16 -4 33c-2 21 18 76 88 76s90 -55 88 -76c-2 -17 -3 -25 -4 -33s6 -10 2 -27c-8 -33 -10 -19 -14 -40c-9 -53 -23 -36 -23 -64
 c0 -43 -3 -32 60 -55c64 -24 79 -38 81 -49c2 -14 2 -40 2 -40z" />
