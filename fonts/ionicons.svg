@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-7-24: Created with FontForge (http://fontforge.org)
+2015-7-27: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Fri Jul 24 17:26:10 2015
- By Carly Culver
-Copyright (c) 2015, Carly Culver
+Created by FontForge 20150715 at Mon Jul 27 15:06:56 2015
+ By Dani Dirks
+Copyright (c) 2015, Dani Dirks
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -41,6 +41,12 @@ d="M9 259l105 100c6 6 14 9 23 9s16 -3 22 -9l106 -100c12 -12 12 -31 0 -43s-34 -12
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
 d="M240 176v8h208v-176c0 -4 -4 -8 -8 -8h-432c-4 0 -8 4 -8 8v176h208v-8h32zM440 304c4 0 8 -4 8 -8v-96h-208v8h-32v-8h-208v96c0 4 4 8 8 8h120v31c1 28 22 49 51 49h90c30 0 50 -21 51 -49v-31h120zM288 332v1c0 10 -9 19 -19 19h-90c-10 0 -19 -9 -19 -19v-1v-1v-27
 h128v27v1z" />
+    <glyph glyph-name="ion-build-cart-large" unicode="&#xf15b;" horiz-adv-x="509" 
+d="M451 140c-2 -5 -9 -10 -16 -10h-298c-7 0 -13 4 -15 10l-54 176c-2 6 -8 10 -15 10h-41c-7 0 -12 4 -12 10v29c0 6 5 11 12 11h84c7 0 14 -4 16 -10l54 -176c2 -6 8 -10 15 -10h213c7 0 14 4 16 9l44 114c2 5 9 9 15 7l32 -10c6 -2 9 -8 7 -13zM456 63
+c0 -19 -15 -34 -34 -34s-33 15 -33 34s14 33 33 33s34 -14 34 -33zM195 63c0 -19 -15 -34 -34 -34s-34 15 -34 34s15 33 34 33s34 -14 34 -33z" />
+    <glyph glyph-name="ion-build-cart-small" unicode="&#xf15c;" horiz-adv-x="356" 
+d="M316 141c-1 -6 -6 -10 -11 -10h-209c-5 0 -9 4 -10 10l-38 178c-1 6 -6 10 -11 10h-29c-5 0 -8 5 -8 11v29c0 6 3 11 8 11h60c5 0 9 -5 10 -11l38 -178c1 -6 6 -10 11 -10h149c5 0 10 4 11 10l31 115c1 6 7 9 11 7l22 -10c4 -2 6 -7 5 -13zM317 63c0 -19 -15 -34 -34 -34
+s-34 15 -34 34s15 34 34 34s34 -15 34 -34zM154 63c0 -19 -15 -34 -34 -34s-34 15 -34 34s15 34 34 34s34 -15 34 -34z" />
     <glyph glyph-name="ion-build-cart" unicode="&#xf138;" horiz-adv-x="451" 
 d="M400 141c-2 -6 -8 -10 -14 -10h-264c-6 0 -12 4 -14 10l-48 178c-2 6 -7 10 -13 10h-36c-6 0 -11 5 -11 11v29c0 6 5 11 11 11h75c6 0 11 -5 13 -11l48 -178c2 -6 7 -10 13 -10h190c6 0 12 4 14 10l39 115c2 6 7 9 13 7l28 -10c6 -2 9 -7 7 -13zM396 63
 c0 -19 -15 -34 -34 -34s-34 15 -34 34s15 34 34 34s34 -15 34 -34zM175 63c0 -19 -15 -34 -34 -34s-34 15 -34 34s15 34 34 34s34 -15 34 -34z" />
