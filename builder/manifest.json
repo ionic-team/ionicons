@@ -1,5 +1,5 @@
 {
-  "build_hash": "67c79d16e460c2688df6ca25bf893fe3",
+  "build_hash": "3f944f104991f0c0a39a3bc609e8d1de",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -699,6 +699,14 @@
     {
       "code": "0xf138",
       "name": "build-cart"
+    },
+    {
+      "code": "0xf15b",
+      "name": "build-cart-large"
+    },
+    {
+      "code": "0xf15c",
+      "name": "build-cart-small"
     },
     {
       "code": "0xf159",
