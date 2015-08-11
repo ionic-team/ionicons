@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-7-27: Created with FontForge (http://fontforge.org)
+2015-8-10: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150715 at Mon Jul 27 15:06:56 2015
- By Dani Dirks
-Copyright (c) 2015, Dani Dirks
+Created by FontForge 20150715 at Mon Aug 10 10:17:05 2015
+ By Jason Merino
+Copyright (c) 2015, Jason Merino
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -25,6 +25,8 @@ Copyright (c) 2015, Dani Dirks
     unicode-range="U+F10E-F4B3"
   />
     <missing-glyph />
+    <glyph glyph-name="ion-android-arrow-dropdown" unicode="&#xf35f;" horiz-adv-x="256" 
+d="M0 256h256l-128 -128z" />
     <glyph glyph-name="ion-android-checkbox-outline-blank" unicode="&#xf372;" horiz-adv-x="384" 
 d="M341 341h-298v-298h298v298zM341 384v0c23 0 43 -20 43 -43v-298c0 -23 -20 -43 -43 -43h-298c-23 0 -43 20 -43 43v298c0 23 20 43 43 43h298z" />
     <glyph glyph-name="ion-android-checkbox-outline" unicode="&#xf373;" horiz-adv-x="384" 
