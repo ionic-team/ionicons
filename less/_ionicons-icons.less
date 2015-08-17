@@ -2,6 +2,7 @@
 // --------------------------
 
 .ionicons,
+.@{ionicons-prefix}android-arrow-dropdown:before,
 .@{ionicons-prefix}android-checkbox-outline:before,
 .@{ionicons-prefix}android-checkbox-outline-blank:before,
 .@{ionicons-prefix}android-close:before,
@@ -77,6 +78,7 @@
 {
   &:extend(.ion);
 }
+.@{ionicons-prefix}android-arrow-dropdown:before { content: @ionicon-var-android-arrow-dropdown; }
 .@{ionicons-prefix}android-checkbox-outline:before { content: @ionicon-var-android-checkbox-outline; }
 .@{ionicons-prefix}android-checkbox-outline-blank:before { content: @ionicon-var-android-checkbox-outline-blank; }
 .@{ionicons-prefix}android-close:before { content: @ionicon-var-android-close; }

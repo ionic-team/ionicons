@@ -1,9 +1,13 @@
 {
-  "build_hash": "67c79d16e460c2688df6ca25bf893fe3",
+  "build_hash": "3f944f104991f0c0a39a3bc609e8d1de",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
   "icons": [
+    {
+      "code": "0xf35f",
+      "name": "android-arrow-dropdown"
+    },
     {
       "code": "0xf373",
       "name": "android-checkbox-outline"

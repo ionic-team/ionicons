@@ -11,148 +11,152 @@
   Modified icons to fit ionicon’s grid from original.
 */
 @font-face { font-family: "Ionicons"; src: url("../fonts/ionicons.eot?v=2.0.0"); src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("../fonts/ionicons.woff?v=2.0.0") format("woff"), url("../fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg"); font-weight: normal; font-style: normal; }
-.ion, .ionicons, .ion-android-checkbox-outline:before, .ion-android-checkbox-outline-blank:before, .ion-android-close:before, .ion-android-favorite:before, .ion-android-favorite-outline:before, .ion-arrow-up-c:before, .ion-briefcase:before, .ion-build-cart:before, .ion-build-cart-large:before, .ion-build-cart-small:before, .ion-build-logo:before, .ion-build-logo-simplified:before, .ion-build-order-status:before, .ion-build-rewards:before, .ion-build-rewards-color:before, .ion-build-social-facebooklike:before, .ion-build-social-googleplusone:before, .ion-build-social-stumbleupon:before, .ion-build-user:before, .ion-build-zoom-in:before, .ion-build-zoom-out:before, .ion-calendar:before, .ion-camera:before, .ion-card:before, .ion-chatbox:before, .ion-chatbox-working:before, .ion-chatboxes:before, .ion-chatbubble:before, .ion-chatbubble-working:before, .ion-chatbubbles:before, .ion-checkmark:before, .ion-checkmark-circled:before, .ion-chevron-down:before, .ion-chevron-left:before, .ion-chevron-right:before, .ion-chevron-up:before, .ion-close:before, .ion-crop-landscape:before, .ion-crop-portrait:before, .ion-edit:before, .ion-email:before, .ion-heart:before, .ion-help-circled:before, .ion-home:before, .ion-ios-pricetag:before, .ion-ios-pricetags:before, .ion-ios-star:before, .ion-ios-star-half:before, .ion-ios-star-outline:before, .ion-iphone:before, .ion-location:before, .ion-locked:before, .ion-loop:before, .ion-niche-cart:before, .ion-person:before, .ion-printer:before, .ion-rotate-clockwise:before, .ion-search:before, .ion-social-facebook:before, .ion-social-googleplus:before, .ion-social-instagram-outline:before, .ion-social-linkedin-outline:before, .ion-social-pinterest:before, .ion-social-tumblr:before, .ion-social-twitter:before, .ion-social-youtube-outline:before, .ion-star:before, .ion-thumbsdown:before, .ion-thumbsup:before, .ion-trash-a:before, .ion-trash-b:before, .ion-unlocked:before { display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ion, .ionicons, .ion-android-arrow-dropdown:before, .ion-android-checkbox-outline:before, .ion-android-checkbox-outline-blank:before, .ion-android-close:before, .ion-android-favorite:before, .ion-android-favorite-outline:before, .ion-arrow-up-c:before, .ion-briefcase:before, .ion-build-cart:before, .ion-build-cart-large:before, .ion-build-cart-small:before, .ion-build-logo:before, .ion-build-logo-simplified:before, .ion-build-order-status:before, .ion-build-rewards:before, .ion-build-rewards-color:before, .ion-build-social-facebooklike:before, .ion-build-social-googleplusone:before, .ion-build-social-stumbleupon:before, .ion-build-user:before, .ion-build-zoom-in:before, .ion-build-zoom-out:before, .ion-calendar:before, .ion-camera:before, .ion-card:before, .ion-chatbox:before, .ion-chatbox-working:before, .ion-chatboxes:before, .ion-chatbubble:before, .ion-chatbubble-working:before, .ion-chatbubbles:before, .ion-checkmark:before, .ion-checkmark-circled:before, .ion-chevron-down:before, .ion-chevron-left:before, .ion-chevron-right:before, .ion-chevron-up:before, .ion-close:before, .ion-crop-landscape:before, .ion-crop-portrait:before, .ion-edit:before, .ion-email:before, .ion-heart:before, .ion-help-circled:before, .ion-home:before, .ion-ios-pricetag:before, .ion-ios-pricetags:before, .ion-ios-star:before, .ion-ios-star-half:before, .ion-ios-star-outline:before, .ion-iphone:before, .ion-location:before, .ion-locked:before, .ion-loop:before, .ion-niche-cart:before, .ion-person:before, .ion-printer:before, .ion-rotate-clockwise:before, .ion-search:before, .ion-social-facebook:before, .ion-social-googleplus:before, .ion-social-instagram-outline:before, .ion-social-linkedin-outline:before, .ion-social-pinterest:before, .ion-social-tumblr:before, .ion-social-twitter:before, .ion-social-youtube-outline:before, .ion-star:before, .ion-thumbsdown:before, .ion-thumbsup:before, .ion-trash-a:before, .ion-trash-b:before, .ion-unlocked:before { display: inline-block; font-family: "Ionicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-.ion-android-checkbox-outline:before { content: "\f373"; }
+.ion-android-arrow-dropdown:before { content: ""; }
 
-.ion-android-checkbox-outline-blank:before { content: "\f372"; }
+.ion-android-checkbox-outline:before { content: ""; }
 
-.ion-android-close:before { content: "\f2d7"; }
+.ion-android-checkbox-outline-blank:before { content: ""; }
 
-.ion-android-favorite:before { content: "\f388"; }
+.ion-android-close:before { content: ""; }
 
-.ion-android-favorite-outline:before { content: "\f387"; }
+.ion-android-favorite:before { content: ""; }
 
-.ion-arrow-up-c:before { content: "\f10e"; }
+.ion-android-favorite-outline:before { content: ""; }
 
-.ion-briefcase:before { content: "\f26c"; }
+.ion-arrow-up-c:before { content: ""; }
 
-.ion-build-cart:before { content: "\f138"; }
+.ion-briefcase:before { content: ""; }
 
-.ion-build-cart-large:before { content: "\f15b"; }
+.ion-build-cart:before { content: ""; }
 
-.ion-build-cart-small:before { content: "\f15c"; }
+.ion-build-cart-large:before { content: ""; }
 
-.ion-build-logo:before { content: "\f159"; }
+.ion-build-cart-small:before { content: ""; }
 
-.ion-build-logo-simplified:before { content: "\f158"; }
+.ion-build-logo:before { content: ""; }
 
-.ion-build-order-status:before { content: "\f13c"; }
+.ion-build-logo-simplified:before { content: ""; }
 
-.ion-build-rewards:before { content: "\f146"; }
+.ion-build-order-status:before { content: ""; }
 
-.ion-build-rewards-color:before { content: "\f145"; }
+.ion-build-rewards:before { content: ""; }
 
-.ion-build-social-facebooklike:before { content: "\f155"; }
+.ion-build-rewards-color:before { content: ""; }
 
-.ion-build-social-googleplusone:before { content: "\f156"; }
+.ion-build-social-facebooklike:before { content: ""; }
 
-.ion-build-social-stumbleupon:before { content: "\f157"; }
+.ion-build-social-googleplusone:before { content: ""; }
 
-.ion-build-user:before { content: "\f14c"; }
+.ion-build-social-stumbleupon:before { content: ""; }
 
-.ion-build-zoom-in:before { content: "\f153"; }
+.ion-build-user:before { content: ""; }
 
-.ion-build-zoom-out:before { content: "\f154"; }
+.ion-build-zoom-in:before { content: ""; }
 
-.ion-calendar:before { content: "\f117"; }
+.ion-build-zoom-out:before { content: ""; }
 
-.ion-camera:before { content: "\f118"; }
+.ion-calendar:before { content: ""; }
 
-.ion-card:before { content: "\f119"; }
+.ion-camera:before { content: ""; }
 
-.ion-chatbox:before { content: "\f11b"; }
+.ion-card:before { content: ""; }
 
-.ion-chatbox-working:before { content: "\f11a"; }
+.ion-chatbox:before { content: ""; }
 
-.ion-chatboxes:before { content: "\f11c"; }
+.ion-chatbox-working:before { content: ""; }
 
-.ion-chatbubble:before { content: "\f11e"; }
+.ion-chatboxes:before { content: ""; }
 
-.ion-chatbubble-working:before { content: "\f11d"; }
+.ion-chatbubble:before { content: ""; }
 
-.ion-chatbubbles:before { content: "\f11f"; }
+.ion-chatbubble-working:before { content: ""; }
 
-.ion-checkmark:before { content: "\f122"; }
+.ion-chatbubbles:before { content: ""; }
 
-.ion-checkmark-circled:before { content: "\f120"; }
+.ion-checkmark:before { content: ""; }
 
-.ion-chevron-down:before { content: "\f123"; }
+.ion-checkmark-circled:before { content: ""; }
 
-.ion-chevron-left:before { content: "\f124"; }
+.ion-chevron-down:before { content: ""; }
 
-.ion-chevron-right:before { content: "\f125"; }
+.ion-chevron-left:before { content: ""; }
 
-.ion-chevron-up:before { content: "\f126"; }
+.ion-chevron-right:before { content: ""; }
 
-.ion-close:before { content: "\f12a"; }
+.ion-chevron-up:before { content: ""; }
 
-.ion-crop-landscape:before { content: "\f14d"; }
+.ion-close:before { content: ""; }
 
-.ion-crop-portrait:before { content: "\f14e"; }
+.ion-crop-landscape:before { content: ""; }
 
-.ion-edit:before { content: "\f2bf"; }
+.ion-crop-portrait:before { content: ""; }
 
-.ion-email:before { content: "\f132"; }
+.ion-edit:before { content: ""; }
 
-.ion-heart:before { content: "\f141"; }
+.ion-email:before { content: ""; }
 
-.ion-help-circled:before { content: "\f142"; }
+.ion-heart:before { content: ""; }
 
-.ion-home:before { content: "\f144"; }
+.ion-help-circled:before { content: ""; }
 
-.ion-ios-pricetag:before { content: "\f48d"; }
+.ion-home:before { content: ""; }
 
-.ion-ios-pricetags:before { content: "\f48f"; }
+.ion-ios-pricetag:before { content: ""; }
 
-.ion-ios-star:before { content: "\f4b3"; }
+.ion-ios-pricetags:before { content: ""; }
 
-.ion-ios-star-half:before { content: "\f4b1"; }
+.ion-ios-star:before { content: ""; }
 
-.ion-ios-star-outline:before { content: "\f4b2"; }
+.ion-ios-star-half:before { content: ""; }
 
-.ion-iphone:before { content: "\f1fa"; }
+.ion-ios-star-outline:before { content: ""; }
 
-.ion-location:before { content: "\f1ff"; }
+.ion-iphone:before { content: ""; }
 
-.ion-locked:before { content: "\f200"; }
+.ion-location:before { content: ""; }
 
-.ion-loop:before { content: "\f201"; }
+.ion-locked:before { content: ""; }
 
-.ion-niche-cart:before { content: "\f15a"; }
+.ion-loop:before { content: ""; }
 
-.ion-person:before { content: "\f213"; }
+.ion-niche-cart:before { content: ""; }
 
-.ion-printer:before { content: "\f21a"; }
+.ion-person:before { content: ""; }
 
-.ion-rotate-clockwise:before { content: "\f14f"; }
+.ion-printer:before { content: ""; }
 
-.ion-search:before { content: "\f21f"; }
+.ion-rotate-clockwise:before { content: ""; }
 
-.ion-social-facebook:before { content: "\f231"; }
+.ion-search:before { content: ""; }
 
-.ion-social-googleplus:before { content: "\f235"; }
+.ion-social-facebook:before { content: ""; }
 
-.ion-social-instagram-outline:before { content: "\f350"; }
+.ion-social-googleplus:before { content: ""; }
 
-.ion-social-linkedin-outline:before { content: "\f238"; }
+.ion-social-instagram-outline:before { content: ""; }
 
-.ion-social-pinterest:before { content: "\f2b1"; }
+.ion-social-linkedin-outline:before { content: ""; }
 
-.ion-social-tumblr:before { content: "\f241"; }
+.ion-social-pinterest:before { content: ""; }
 
-.ion-social-twitter:before { content: "\f243"; }
+.ion-social-tumblr:before { content: ""; }
 
-.ion-social-youtube-outline:before { content: "\f24c"; }
+.ion-social-twitter:before { content: ""; }
 
-.ion-star:before { content: "\f24e"; }
+.ion-social-youtube-outline:before { content: ""; }
 
-.ion-thumbsdown:before { content: "\f250"; }
+.ion-star:before { content: ""; }
 
-.ion-thumbsup:before { content: "\f251"; }
+.ion-thumbsdown:before { content: ""; }
 
-.ion-trash-a:before { content: "\f252"; }
+.ion-thumbsup:before { content: ""; }
 
-.ion-trash-b:before { content: "\f253"; }
+.ion-trash-a:before { content: ""; }
 
-.ion-unlocked:before { content: "\f254"; }
+.ion-trash-b:before { content: ""; }
+
+.ion-unlocked:before { content: ""; }
+
+/*# sourceMappingURL=ionicons.css.map */
