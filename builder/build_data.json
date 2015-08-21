@@ -1,5 +1,5 @@
 {
-  "build_hash": "3f944f104991f0c0a39a3bc609e8d1de",
+  "build_hash": "4c754349f6ac10c81470398c1be809cc",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -227,6 +227,10 @@
     {
       "code": "0xf213",
       "name": "person"
+    },
+    {
+      "code": "0xf215",
+      "name": "play"
     },
     {
       "code": "0xf21a",
