@@ -1,5 +1,5 @@
 {
-  "build_hash": "e8e0d461cc44800af15d879d18b2b7e2",
+  "build_hash": "a2c6f31123a3cc8385d45bf46c5dde82",
   "prefix": "ion-",
   "version": "2.0.1",
   "name": "Ionicons",
@@ -549,6 +549,10 @@
       "name": "arrow-expand"
     },
     {
+      "code": "0xf27e",
+      "name": "arrow-expand-alt"
+    },
+    {
       "code": "0xf25f",
       "name": "arrow-graph-down-left"
     },
@@ -607,6 +611,10 @@
     {
       "code": "0xf267",
       "name": "arrow-shrink"
+    },
+    {
+      "code": "0xf28b",
+      "name": "arrow-shrink-alt"
     },
     {
       "code": "0xf268",
