@@ -1,5 +1,5 @@
 # Ionicons
-
+[![中文说明](http://awesomes.oss-cn-beijing.aliyuncs.com/readme.png)](http://www.awesomes.cn/repo/driftyco/ionicons)
 
 The premium icon font for [Ionic](http://ionicframework.com/). Designed by [@benjsperry](https://twitter.com/benjsperry).
 
