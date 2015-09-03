@@ -1,5 +1,5 @@
 {
-  "build_hash": "67333e02e29c41ddbe0544368b5ea4a5",
+  "build_hash": "a671451dd03b272a6924bed16c5d7b2d",
   "prefix": "ion-",
   "version": "3.0.0",
   "name": "Ionicons",
@@ -1250,19 +1250,11 @@
     },
     {
       "code": "0xf1c8",
-      "name": "ios-more-horizontal"
+      "name": "ios-more"
     },
     {
       "code": "0xf1c7",
-      "name": "ios-more-horizontal-outline"
-    },
-    {
-      "code": "0xf1ca",
-      "name": "ios-more-vertical"
-    },
-    {
-      "code": "0xf1c9",
-      "name": "ios-more-vertical-outline"
+      "name": "ios-more-outline"
     },
     {
       "code": "0xf1cb",
@@ -2777,12 +2769,8 @@
       "name": "md-moon"
     },
     {
-      "code": "0xf32f",
-      "name": "md-more-horizontal"
-    },
-    {
-      "code": "0xf330",
-      "name": "md-more-vertical"
+      "code": "0xf1c9",
+      "name": "md-more"
     },
     {
       "code": "0xf331",
