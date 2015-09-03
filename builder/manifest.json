@@ -1,5 +1,5 @@
 {
-  "build_hash": "b1f11910259816ae2ed8635f7f2c1036",
+  "build_hash": "67333e02e29c41ddbe0544368b5ea4a5",
   "prefix": "ion-",
   "version": "3.0.0",
   "name": "Ionicons",
@@ -1597,12 +1597,12 @@
       "name": "ios-refresh"
     },
     {
-      "code": "0xf49a",
-      "name": "ios-refresh-empty"
+      "code": "0xf226",
+      "name": "ios-refresh-circle"
     },
     {
-      "code": "0xf49b",
-      "name": "ios-refresh-outline"
+      "code": "0xf224",
+      "name": "ios-refresh-circle-outline"
     },
     {
       "code": "0xf1fc",
@@ -2969,6 +2969,10 @@
       "name": "md-refresh"
     },
     {
+      "code": "0xf228",
+      "name": "md-refresh-circle"
+    },
+    {
       "code": "0xf368",
       "name": "md-remove"
     },
@@ -3245,112 +3249,56 @@
       "name": "social-android"
     },
     {
-      "code": "0xf224",
-      "name": "social-android-outline"
-    },
-    {
       "code": "0xf4d9",
       "name": "social-angular"
-    },
-    {
-      "code": "0xf4d8",
-      "name": "social-angular-outline"
     },
     {
       "code": "0xf227",
       "name": "social-apple"
     },
     {
-      "code": "0xf226",
-      "name": "social-apple-outline"
-    },
-    {
       "code": "0xf2af",
       "name": "social-bitcoin"
-    },
-    {
-      "code": "0xf2ae",
-      "name": "social-bitcoin-outline"
     },
     {
       "code": "0xf229",
       "name": "social-buffer"
     },
     {
-      "code": "0xf228",
-      "name": "social-buffer-outline"
-    },
-    {
       "code": "0xf4db",
       "name": "social-chrome"
-    },
-    {
-      "code": "0xf4da",
-      "name": "social-chrome-outline"
     },
     {
       "code": "0xf4dd",
       "name": "social-codepen"
     },
     {
-      "code": "0xf4dc",
-      "name": "social-codepen-outline"
-    },
-    {
       "code": "0xf4df",
       "name": "social-css3"
-    },
-    {
-      "code": "0xf4de",
-      "name": "social-css3-outline"
     },
     {
       "code": "0xf22b",
       "name": "social-designernews"
     },
     {
-      "code": "0xf22a",
-      "name": "social-designernews-outline"
-    },
-    {
       "code": "0xf22d",
       "name": "social-dribbble"
-    },
-    {
-      "code": "0xf22c",
-      "name": "social-dribbble-outline"
     },
     {
       "code": "0xf22f",
       "name": "social-dropbox"
     },
     {
-      "code": "0xf22e",
-      "name": "social-dropbox-outline"
-    },
-    {
       "code": "0xf4e1",
       "name": "social-euro"
-    },
-    {
-      "code": "0xf4e0",
-      "name": "social-euro-outline"
     },
     {
       "code": "0xf231",
       "name": "social-facebook"
     },
     {
-      "code": "0xf230",
-      "name": "social-facebook-outline"
-    },
-    {
       "code": "0xf34d",
       "name": "social-foursquare"
-    },
-    {
-      "code": "0xf34c",
-      "name": "social-foursquare-outline"
     },
     {
       "code": "0xf2c4",
@@ -3361,64 +3309,32 @@
       "name": "social-github"
     },
     {
-      "code": "0xf232",
-      "name": "social-github-outline"
-    },
-    {
       "code": "0xf34f",
       "name": "social-google"
-    },
-    {
-      "code": "0xf34e",
-      "name": "social-google-outline"
     },
     {
       "code": "0xf235",
       "name": "social-googleplus"
     },
     {
-      "code": "0xf234",
-      "name": "social-googleplus-outline"
-    },
-    {
       "code": "0xf237",
       "name": "social-hackernews"
-    },
-    {
-      "code": "0xf236",
-      "name": "social-hackernews-outline"
     },
     {
       "code": "0xf4e3",
       "name": "social-html5"
     },
     {
-      "code": "0xf4e2",
-      "name": "social-html5-outline"
-    },
-    {
       "code": "0xf351",
       "name": "social-instagram"
-    },
-    {
-      "code": "0xf350",
-      "name": "social-instagram-outline"
     },
     {
       "code": "0xf4e5",
       "name": "social-javascript"
     },
     {
-      "code": "0xf4e4",
-      "name": "social-javascript-outline"
-    },
-    {
       "code": "0xf239",
       "name": "social-linkedin"
-    },
-    {
-      "code": "0xf238",
-      "name": "social-linkedin-outline"
     },
     {
       "code": "0xf4e6",
@@ -3437,10 +3353,6 @@
       "name": "social-pinterest"
     },
     {
-      "code": "0xf2b0",
-      "name": "social-pinterest-outline"
-    },
-    {
       "code": "0xf3ab",
       "name": "social-playstation"
     },
@@ -3453,16 +3365,8 @@
       "name": "social-reddit"
     },
     {
-      "code": "0xf23a",
-      "name": "social-reddit-outline"
-    },
-    {
       "code": "0xf23d",
       "name": "social-rss"
-    },
-    {
-      "code": "0xf23c",
-      "name": "social-rss-outline"
     },
     {
       "code": "0xf4ea",
@@ -3473,16 +3377,8 @@
       "name": "social-skype"
     },
     {
-      "code": "0xf23e",
-      "name": "social-skype-outline"
-    },
-    {
       "code": "0xf4ec",
       "name": "social-snapchat"
-    },
-    {
-      "code": "0xf4eb",
-      "name": "social-snapchat-outline"
     },
     {
       "code": "0xf3ac",
@@ -3493,10 +3389,6 @@
       "name": "social-tumblr"
     },
     {
-      "code": "0xf240",
-      "name": "social-tumblr-outline"
-    },
-    {
       "code": "0xf2c5",
       "name": "social-tux"
     },
@@ -3505,56 +3397,28 @@
       "name": "social-twitch"
     },
     {
-      "code": "0xf4ed",
-      "name": "social-twitch-outline"
-    },
-    {
       "code": "0xf243",
       "name": "social-twitter"
-    },
-    {
-      "code": "0xf242",
-      "name": "social-twitter-outline"
     },
     {
       "code": "0xf353",
       "name": "social-usd"
     },
     {
-      "code": "0xf352",
-      "name": "social-usd-outline"
-    },
-    {
       "code": "0xf245",
       "name": "social-vimeo"
-    },
-    {
-      "code": "0xf244",
-      "name": "social-vimeo-outline"
     },
     {
       "code": "0xf4f0",
       "name": "social-whatsapp"
     },
     {
-      "code": "0xf4ef",
-      "name": "social-whatsapp-outline"
-    },
-    {
       "code": "0xf247",
       "name": "social-windows"
     },
     {
-      "code": "0xf246",
-      "name": "social-windows-outline"
-    },
-    {
       "code": "0xf249",
       "name": "social-wordpress"
-    },
-    {
-      "code": "0xf248",
-      "name": "social-wordpress-outline"
     },
     {
       "code": "0xf3ad",
@@ -3565,24 +3429,12 @@
       "name": "social-yahoo"
     },
     {
-      "code": "0xf24a",
-      "name": "social-yahoo-outline"
-    },
-    {
       "code": "0xf4f2",
       "name": "social-yen"
     },
     {
-      "code": "0xf4f1",
-      "name": "social-yen-outline"
-    },
-    {
       "code": "0xf24d",
       "name": "social-youtube"
-    },
-    {
-      "code": "0xf24c",
-      "name": "social-youtube-outline"
     }
   ]
 }
