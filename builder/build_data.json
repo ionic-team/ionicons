@@ -1,5 +1,5 @@
 {
-  "build_hash": "16063a6f0430fd3b6975ea365907f4bf",
+  "build_hash": "6040ac16cb27650164fbf22a28a66ebb",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -31,6 +31,10 @@
     {
       "code": "0xf2e0",
       "name": "android-folder"
+    },
+    {
+      "code": "0xf2f7",
+      "name": "android-settings"
     },
     {
       "code": "0xf10e",
@@ -187,6 +191,14 @@
     {
       "code": "0xf144",
       "name": "home"
+    },
+    {
+      "code": "0xf453",
+      "name": "ios-list-outline"
+    },
+    {
+      "code": "0xf489",
+      "name": "ios-plus-empty"
     },
     {
       "code": "0xf48d",

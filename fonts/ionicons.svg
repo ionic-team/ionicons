@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-9-1: Created with FontForge (http://fontforge.org)
+2015-9-2: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Tue Sep  1 16:39:14 2015
+Created by FontForge 20150828 at Wed Sep  2 17:13:03 2015
  By Brandon Mains
 Copyright (c) 2015, Brandon Mains
 </metadata>
@@ -40,6 +40,10 @@ c-26 0 -53 -13 -70 -33l-24 -29l-24 29c-17 20 -44 33 -70 33c-23 0 -43 -9 -58 -24s
 d="M208 0l-30 27c-107 98 -178 162 -178 242c0 65 50 115 114 115c36 0 71 -17 94 -44c23 27 58 44 94 44c64 0 114 -50 114 -115c0 -80 -71 -144 -178 -242z" />
     <glyph glyph-name="ion-android-folder" unicode="&#xf2e0;" 
 d="M181 352l43 -48h181c23 0 43 -20 43 -43v-186c0 -23 -20 -43 -43 -43h-362c-23 0 -43 20 -43 43v234c0 23 20 43 43 43h138z" />
+    <glyph glyph-name="ion-android-settings" unicode="&#xf2f7;" horiz-adv-x="416" 
+d="M366 171l47 -34c3 -3 4 -10 2 -14l-43 -71c-2 -4 -7 -7 -12 -5l-54 21c-12 -8 -23 -16 -36 -21l-8 -55c-1 -4 -6 -8 -11 -8h-85c-5 0 -10 3 -11 8l-8 55c-13 5 -25 13 -36 21l-54 -21c-4 -2 -10 1 -12 5l-43 71c-3 5 -2 11 2 14l45 34c0 7 -1 14 -1 21s1 14 1 21l-46 34
+c-3 3 -4 10 -2 14l43 71c2 4 7 7 12 5l54 -21c12 8 23 16 36 21l8 55c1 4 6 8 11 8h85c5 0 10 -4 11 -8l7 -55c13 -5 25 -13 36 -21l53 21c4 2 11 -1 13 -5l43 -71c3 -5 2 -11 -2 -14l-45 -34c0 -7 1 -14 1 -21s0 -15 -1 -21zM207 119c41 0 75 32 75 73s-34 73 -75 73
+s-74 -32 -74 -73s33 -73 74 -73z" />
     <glyph glyph-name="ion-arrow-up-c" unicode="&#xf10e;" horiz-adv-x="274" 
 d="M9 259l105 100c6 6 14 9 23 9s16 -3 22 -9l106 -100c12 -12 12 -31 0 -43s-34 -12 -46 0l-50 48v-217c0 -17 -14 -31 -32 -31s-32 14 -32 31v217l-50 -49c-12 -12 -34 -12 -46 0s-12 32 0 44z" />
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
@@ -158,6 +162,11 @@ c-19 0 -34 -4 -47 -13c-19 -13 -28 -34 -28 -68h49c0 9 -1 19 4 27s13 15 26 15s19 -
 c12 9 21 17 25 23z" />
     <glyph glyph-name="ion-home" unicode="&#xf144;" horiz-adv-x="384" 
 d="M384 160h-48v-160h-96v128h-96v-128h-96v160h-48l192 224z" />
+    <glyph glyph-name="ion-ios-list-outline" unicode="&#xf453;" horiz-adv-x="384" 
+d="M368 368h-352v-352h352v352zM384 384v0v-384h-384v384h384zM128 280v16h192v-16h-192zM128 184v16h192v-16h-192zM128 88v16h192v-16h-192zM64 288c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16s-16 7 -16 16zM64 192c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16
+s-16 7 -16 16zM64 96c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16s-16 7 -16 16z" />
+    <glyph glyph-name="ion-ios-plus-empty" unicode="&#xf489;" horiz-adv-x="256" 
+d="M256 183h-120v-119h-17v119h-119v17h119v120h17v-120h120v-17z" />
     <glyph glyph-name="ion-ios-pricetag" unicode="&#xf48d;" horiz-adv-x="416" 
 d="M304 320c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16s-16 7 -16 16zM256 416h160v-160l-256 -288l-160 160zM320 288c18 0 32 14 32 32s-14 32 -32 32s-32 -14 -32 -32s14 -32 32 -32z" />
     <glyph glyph-name="ion-ios-pricetags" unicode="&#xf48f;" 
