@@ -1,5 +1,5 @@
 {
-  "build_hash": "6040ac16cb27650164fbf22a28a66ebb",
+  "build_hash": "1fb1aaca3ee9077397a5b9743ba56ca3",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -165,6 +165,14 @@
       "name": "close"
     },
     {
+      "code": "0xf15d",
+      "name": "closed-box"
+    },
+    {
+      "code": "0xf12c",
+      "name": "compose"
+    },
+    {
       "code": "0xf14d",
       "name": "crop-landscape"
     },
@@ -191,6 +199,10 @@
     {
       "code": "0xf144",
       "name": "home"
+    },
+    {
+      "code": "0xf3f6",
+      "name": "ios-camera"
     },
     {
       "code": "0xf453",
@@ -253,6 +265,10 @@
       "name": "printer"
     },
     {
+      "code": "0xf347",
+      "name": "quote"
+    },
+    {
       "code": "0xf14f",
       "name": "rotate-clockwise"
     },
@@ -311,6 +327,10 @@
     {
       "code": "0xf253",
       "name": "trash-b"
+    },
+    {
+      "code": "0xf15e",
+      "name": "truck"
     },
     {
       "code": "0xf254",
