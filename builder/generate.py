@@ -155,7 +155,6 @@ def generate_scss(data):
   font_version = data['version']
   css_prefix = data['prefix']
   variables_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-variables.scss')
-  common_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-common.scss')
   icons_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-icons.scss')
 
   d = []
@@ -166,27 +165,12 @@ def generate_scss(data):
   d.append('$ionicons-version: "%s" !default;' % (font_version) )
   d.append('$ionicons-prefix: %s !default;' % (css_prefix) )
   d.append('')
+  d.append('$ionicon-vars: (')
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('$ionicon-var-%s: "%s";' % (ionicon['name'], chr_code) )
+    d.append('  %s: "%s",' % (ionicon['name'], chr_code) )
+  d.append(');')
   f = open(variables_file_path, 'w')
-  f.write( '\n'.join(d) )
-  f.close()
-
-  d = []
-  d.append('// Ionicons Common CSS')
-  d.append('// --------------------------\n')
-
-  group = [ '.%s' % (data['name'].lower()) ]
-  for ionicon in data['icons']:
-    group.append('.#{$ionicons-prefix}%s:before' % (ionicon['name']) )
-
-  d.append( ',\n'.join(group) )
-
-  d.append('{')
-  d.append('  @extend .ion;')
-  d.append('}')
-  f = open(common_file_path, 'w')
   f.write( '\n'.join(d) )
   f.close()
 
@@ -194,9 +178,15 @@ def generate_scss(data):
   d.append('// Ionicons Icon CSS')
   d.append('// --------------------------\n')
 
-  for ionicon in data['icons']:
-    chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.#{$ionicons-prefix}%s:before { content: $ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
+  d.append('@each $icon-class, $unicode in $ionicon-vars{')
+  d.append('  .ionicons,')
+  d.append('  .#{$ionicons-prefix}#{$icon-class}:before{')
+  d.append('    @extend .ion;')
+  d.append('  }')
+  d.append('  .#{$ionicons-prefix}#{$icon-class}:before {')
+  d.append('    content: $unicode;')
+  d.append('  }')
+  d.append('};')
 
   f = open(icons_file_path, 'w')
   f.write( '\n'.join(d) )
