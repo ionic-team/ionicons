@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<g>
-	<rect x="248" y="352" width="16" height="96"/>
-	<path d="M399.3,183.6c0-1.2,0.2-2.4,0.2-3.6c0-64.3-52.8-116.4-116.8-116.4c-46.1,0-85.8,27.1-104.4,66.3
-		c-8.1-4.1-17.1-6.4-26.8-6.4c-29.6,0-54.1,23.6-58.9,52C57.4,187.6,32,222.2,32,261.8c0,49.7,40.1,90.2,89.6,90.2H182h31h35V205.8
-		l-54.7,54.5l-11.6-11.6l74.5-74.3l74.5,74.3l-11.8,11.6L264,205.8V352h134c45,0,82-37.3,82-82.8C480,223.7,444.5,183.7,399.3,183.6
-		z"/>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px"
+	 height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g id="boxes" display="none">
+	<rect display="inline" opacity="0.1" width="512" height="512"/>
+</g>
+<g id="icons">
+	<g>
+		<rect x="248" y="336" width="16" height="112"/>
+		<path d="M413.012,178.113C406.146,113.895,354.041,64,288,64c-44.838,0-86.535,22.812-109.396,57.715
+			C170.658,118.056,161.821,116,152.5,116c-34.208,0-61.981,27.487-62.477,61.577C55.092,188.613,32,220.158,32,256
+			c0,43.906,35.594,80,79.5,80H248V191.412l-70.788,70.635l-11.663-11.604L256.105,160l90.487,90.467L334.85,262.07L264,191.412V336
+			h136.5c43.906,0,79.5-36.094,79.5-80C480,216.352,450.973,184.116,413.012,178.113z"/>
+	</g>
 </g>
 </svg>

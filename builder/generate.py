@@ -5,6 +5,8 @@ import json
 
 BUILDER_PATH = os.path.dirname(os.path.abspath(__file__))
 ROOT_PATH = os.path.join(BUILDER_PATH, '..')
+INPUT_SVG_DIR = os.path.join(ROOT_PATH, 'src')
+DATA_PATH = os.path.join(ROOT_PATH, 'data')
 FONTS_FOLDER_PATH = os.path.join(ROOT_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'css')
 SCSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'scss')
@@ -16,13 +18,60 @@ def main():
 
   data = get_build_data()
 
+  generate_data_files(data)
   rename_svg_glyph_names(data)
   generate_scss(data)
   generate_less(data)
   generate_cheatsheet(data)
-  generate_component_json(data)
-  generate_composer_json(data)
-  generate_bower_json(data)
+  generate_mode_cheatsheet(data)
+
+
+def generate_data_files(data):
+  print "Generate Data Files"
+  icon_names = []
+  mode_icons = []
+  generic_icons = []
+
+  for ionicon in data['icons']:
+    name = ""
+    if ionicon['name'].startswith('ios-'):
+      name = ionicon['name'][4:]
+
+    elif ionicon['name'].startswith('md-'):
+      name = ionicon['name'][3:]
+
+    elif ionicon['name'].startswith('social-'):
+      name = ionicon['name'][7:]
+
+    if name not in icon_names:
+      icon_names.append(name)
+
+  for icon_name in icon_names:
+    ios_svg = os.path.join(INPUT_SVG_DIR, 'ios-%s.svg' % (icon_name))
+    md_svg = os.path.join(INPUT_SVG_DIR, 'md-%s.svg' % (icon_name))
+    social_svg = os.path.join(INPUT_SVG_DIR, 'social-%s.svg' % (icon_name))
+
+    if os.path.isfile(ios_svg) and os.path.isfile(md_svg):
+      mode_icons.append('"%s":1' % icon_name)
+
+    elif os.path.isfile(social_svg):
+      generic_icons.append('"%s":1' % icon_name)
+
+    elif '-outline' in icon_name:
+      continue
+
+    else:
+      print 'wtf %s' % icon_name
+
+  output = '{\n' +  ',\n'.join(mode_icons) + '\n}'
+  f = open(os.path.join(DATA_PATH, 'mode-icons.json'), 'w')
+  f.write(output)
+  f.close()
+
+  output = '{\n' +  ',\n'.join(generic_icons) + '\n}'
+  f = open(os.path.join(DATA_PATH, 'generic-icons.json'), 'w')
+  f.write(output)
+  f.close()
 
 
 def generate_font_files():
@@ -116,30 +165,28 @@ def generate_scss(data):
   d.append('$ionicons-version: "%s" !default;' % (font_version) )
   d.append('$ionicons-prefix: %s !default;' % (css_prefix) )
   d.append('')
+  d.append('$ionicon-vars: (')
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('$ionicon-var-%s: "%s";' % (ionicon['name'], chr_code) )
+    d.append('  %s: "%s",' % (ionicon['name'], chr_code) )
+  d.append(');')
   f = open(variables_file_path, 'w')
   f.write( '\n'.join(d) )
   f.close()
 
   d = []
-  d.append('// Ionicons Icons')
+  d.append('// Ionicons Icon CSS')
   d.append('// --------------------------\n')
 
-  group = [ '.%s' % (data['name'].lower()) ]
-  for ionicon in data['icons']:
-    group.append('.#{$ionicons-prefix}%s:before' % (ionicon['name']) )
-
-  d.append( ',\n'.join(group) )
-
-  d.append('{')
-  d.append('  @extend .ion;')
-  d.append('}')
-
-  for ionicon in data['icons']:
-    chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.#{$ionicons-prefix}%s:before { content: $ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
+  d.append('@each $icon-class, $unicode in $ionicon-vars{')
+  d.append('  .ionicons,')
+  d.append('  .#{$ionicons-prefix}#{$icon-class}:before{')
+  d.append('    @extend .ion;')
+  d.append('  }')
+  d.append('  .#{$ionicons-prefix}#{$icon-class}:before {')
+  d.append('    content: $unicode;')
+  d.append('  }')
+  d.append('};')
 
   f = open(icons_file_path, 'w')
   f.write( '\n'.join(d) )
@@ -149,16 +196,19 @@ def generate_scss(data):
 
 
 def generate_css_from_scss(data):
-  print "Generate CSS From SCSS"
+  compile_scss_to_css('ionicons', data)
+  compile_scss_to_css('ionicons-core', data)
 
-  scss_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons.scss')
-  css_file_path = os.path.join(CSS_FOLDER_PATH, 'ionicons.css')
-  css_min_file_path = os.path.join(CSS_FOLDER_PATH, 'ionicons.min.css')
 
+def compile_scss_to_css(filename, data):
+  scss_file_path = os.path.join(SCSS_FOLDER_PATH, '%s.scss' % filename)
+  css_file_path = os.path.join(CSS_FOLDER_PATH, '%s.css' % filename)
+  css_min_file_path = os.path.join(CSS_FOLDER_PATH, '%s.min.css' % filename)
+
+  print "Generate CSS From %s" % filename
   cmd = "sass %s %s --style compact" % (scss_file_path, css_file_path)
   call(cmd, shell=True)
 
-  print "Generate Minified CSS From SCSS"
   cmd = "sass %s %s --style compressed" % (scss_file_path, css_min_file_path)
   call(cmd, shell=True)
 
@@ -194,6 +244,7 @@ def generate_cheatsheet(data):
 
     content.append(item_row)
 
+  template_html = template_html.replace("{{title}}", 'Cheatsheet')
   template_html = template_html.replace("{{font_name}}", data["name"])
   template_html = template_html.replace("{{font_version}}", data["version"])
   template_html = template_html.replace("{{icon_count}}", str(len(data["icons"])) )
@@ -204,105 +255,65 @@ def generate_cheatsheet(data):
   f.close()
 
 
-def generate_component_json(data):
-  print "Generate component.json"
-  d = {
-    "name": data['name'],
-    "repo": "driftyco/ionicons",
-    "description": "The premium icon font for Ionic Framework.",
-    "version": data['version'],
-    "keywords": [],
-    "dependencies": {},
-    "development": {},
-    "license": "MIT",
-    "styles": [
-      "css/%s.css" % (data['name'].lower())
-    ],
-    "fonts": [
-      "fonts/%s.eot" % (data['name'].lower()),
-      "fonts/%s.svg" % (data['name'].lower()),
-      "fonts/%s.ttf" % (data['name'].lower()),
-      "fonts/%s.woff" % (data['name'].lower())
-    ]
-  }
-  txt = json.dumps(d, indent=4, separators=(',', ': '))
+def generate_mode_cheatsheet(data):
+  print "Generate Mode Cheatsheet"
 
-  component_file_path = os.path.join(ROOT_PATH, 'component.json')
-  f = open(component_file_path, 'w')
-  f.write(txt)
+  cheatsheet_file_path = os.path.join(ROOT_PATH, 'mode-cheatsheet.html')
+  template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
+  icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'mode-icon-row.html')
+
+  f = open(template_path, 'r')
+  template_html = f.read()
   f.close()
 
-
-def generate_composer_json(data):
-  print "Generate composer.json"
-  d = {
-    "name": "driftyco/ionicons",
-    "description": "The premium icon font for Ionic Framework.",
-    "keywords": [ "fonts", "icon font", "icons", "ionic", "web font"],
-    "homepage": "http://ionicons.com/",
-    "authors": [
-      {
-        "name": "Ben Sperry",
-        "email": "ben@drifty.com",
-        "role": "Designer",
-        "homepage": "https://twitter.com/benjsperry"
-      },
-      {
-        "name": "Adam Bradley",
-        "email": "adam@drifty.com",
-        "role": "Developer",
-        "homepage": "https://twitter.com/adamdbradley"
-      },
-      {
-        "name": "Max Lynch",
-        "email": "max@drifty.com",
-        "role": "Developer",
-        "homepage": "https://twitter.com/maxlynch"
-      }
-    ],
-    "extra": {},
-    "license": [ "MIT" ]
-  }
-  txt = json.dumps(d, indent=4, separators=(',', ': '))
-
-  composer_file_path = os.path.join(ROOT_PATH, 'composer.json')
-  f = open(composer_file_path, 'w')
-  f.write(txt)
+  f = open(icon_row_path, 'r')
+  icon_row_template = f.read()
   f.close()
 
+  content = []
+  icon_names = []
 
-def generate_bower_json(data):
-  print "Generate bower.json"
-  d = {
-    "name": data['name'],
-    "version": data['version'],
-    "homepage": "https://github.com/driftyco/ionicons",
-    "authors": [
-      "Ben Sperry <ben@drifty.com>",
-      "Adam Bradley <adam@drifty.com>",
-      "Max Lynch <max@drifty.com>"
-    ],
-    "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework",
-    "main": [
-      "css/%s.css" % (data['name'].lower()),
-      "fonts/*"
-    ],
-    "keywords": [ "fonts", "icon font", "icons", "ionic", "web font"],
-    "license": "MIT",
-    "ignore": [
-      "**/.*",
-      "builder",
-      "node_modules",
-      "bower_components",
-      "test",
-      "tests"
-    ]
-  }
-  txt = json.dumps(d, indent=4, separators=(',', ': '))
 
-  bower_file_path = os.path.join(ROOT_PATH, 'bower.json')
-  f = open(bower_file_path, 'w')
-  f.write(txt)
+  content.append('''
+  <div class="mode-row">
+    <div class="mode-col">
+      <strong>Icon Name</strong>
+    </div>
+    <div class="mode-col align-center">
+      <strong>iOS</strong>
+    </div>
+    <div class="mode-col align-center">
+      <strong>Material Design</strong>
+    </div>
+  </div>
+  ''')
+
+  for ionicon in data['icons']:
+    name = ""
+    if ionicon['name'].startswith('ios-'):
+      name = ionicon['name'][4:]
+
+    elif ionicon['name'].startswith('md-'):
+      name = ionicon['name'][3:]
+
+    if name not in icon_names and not name.endswith('-outline'):
+      icon_names.append(name)
+
+
+  for icon_name in icon_names:
+    item_row = icon_row_template.replace('{{name}}', icon_name)
+    item_row = item_row.replace('{{prefix}}', data['prefix'])
+
+    content.append(item_row)
+
+  template_html = template_html.replace("{{title}}", 'Mode Cheatsheet')
+  template_html = template_html.replace("{{font_name}}", data["name"])
+  template_html = template_html.replace("{{font_version}}", data["version"])
+  template_html = template_html.replace("{{icon_count}}", str(len(icon_names)) )
+  template_html = template_html.replace("{{content}}", '\n'.join(content) )
+
+  f = open(cheatsheet_file_path, 'w')
+  f.write(template_html)
   f.close()
 
 

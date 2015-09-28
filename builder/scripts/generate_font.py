@@ -33,6 +33,23 @@ manifest_data = json.loads(manifest_file.read())
 manifest_file.close()
 print "Load Manifest, Icons: %s" % ( len(manifest_data['icons']) )
 
+
+# ensure each icon is actually used in the manifest
+clean_manifest_data = copy.deepcopy(manifest_data)
+clean_manifest_data['icons'] = []
+for ionicon in manifest_data['icons']:
+  svg_path = os.path.join(INPUT_SVG_DIR, '%s.svg' % (ionicon['name']))
+  if os.path.isfile(svg_path):
+    clean_manifest_data['icons'].append({
+      "code": ionicon['code'],
+      "name": ionicon['name']
+    })
+  else:
+    print 'removed from manifest: %s' % (ionicon['name'])
+
+manifest_data = copy.deepcopy(clean_manifest_data)
+
+
 build_data = copy.deepcopy(manifest_data)
 build_data['icons'] = []
 

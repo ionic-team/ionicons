@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-<![CDATA[
-	.st0{fill:#010101;}
-]]>
-</style>
+	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
 <g>
-	<rect x="247" y="96" class="st0" width="18" height="56"/>
-	<rect x="247" y="356" class="st0" width="18" height="60"/>
-	<rect x="360" y="247" class="st0" width="56" height="18"/>
-	<rect x="96" y="247" class="st0" width="60" height="18"/>
-	
-		<rect x="339" y="317.4" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 834.4009 337.0126)" class="st0" width="16.8" height="47.8"/>
-	
-		<rect x="162.2" y="140.7" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 407.7248 160.277)" class="st0" width="16.8" height="47.9"/>
-	
-		<rect x="339" y="140.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 218.1171 -197.4504)" class="st0" width="16.8" height="47.8"/>
-	
-		<rect x="162.2" y="317.4" transform="matrix(0.707 0.7072 -0.7072 0.707 291.3531 -20.7056)" class="st0" width="16.8" height="47.9"/>
-	<path class="st0" d="M256,331.8c-41.8,0-75.8-34-75.8-75.8s34-75.8,75.8-75.8c41.8,0,75.8,34,75.8,75.8S297.8,331.8,256,331.8z
-		 M256,197.1c-32.5,0-58.9,26.4-58.9,58.9s26.4,58.9,58.9,58.9c32.5,0,58.9-26.4,58.9-58.9S288.5,197.1,256,197.1z"/>
+	<g>
+		<g>
+			<rect x="248" y="400" width="16" height="64"/>
+			<rect x="248" y="48" width="16" height="64"/>
+		</g>
+		<g>
+			<rect x="48" y="248" width="64" height="16"/>
+			<rect x="400" y="248" width="64" height="16"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="123.5" y="348.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 307.5492 18.4121)" width="16" height="64"/>
+			<rect x="372.5" y="99.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 204.4508 -230.4895)" width="16" height="64"/>
+		</g>
+		<g>
+			<rect x="123.5" y="99.5" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 317.5879 131.5492)" width="16" height="64"/>
+			<rect x="372.5" y="348.5" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 918.4895 380.4508)" width="16" height="64"/>
+		</g>
+	</g>
+	<path d="M256,176c44.1,0,80,35.9,80,80c0,44.1-35.9,80-80,80c-44.1,0-80-35.9-80-80C176,211.9,211.9,176,256,176 M256,160
+		c-52.9,0-96,43.1-96,96s43.1,96,96,96c52.9,0,96-43.1,96-96S308.9,160,256,160L256,160z"/>
 </g>
 </svg>

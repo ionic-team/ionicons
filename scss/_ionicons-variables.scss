@@ -3,739 +3,863 @@
 
 $ionicons-font-path: "../fonts" !default;
 $ionicons-font-family: "Ionicons" !default;
-$ionicons-version: "2.0.1" !default;
+$ionicons-version: "3.0.0" !default;
 $ionicons-prefix: ion- !default;
 
-$ionicon-var-alert: "\f101";
-$ionicon-var-alert-circled: "\f100";
-$ionicon-var-android-add: "\f2c7";
-$ionicon-var-android-add-circle: "\f359";
-$ionicon-var-android-alarm-clock: "\f35a";
-$ionicon-var-android-alert: "\f35b";
-$ionicon-var-android-apps: "\f35c";
-$ionicon-var-android-archive: "\f2c9";
-$ionicon-var-android-arrow-back: "\f2ca";
-$ionicon-var-android-arrow-down: "\f35d";
-$ionicon-var-android-arrow-dropdown: "\f35f";
-$ionicon-var-android-arrow-dropdown-circle: "\f35e";
-$ionicon-var-android-arrow-dropleft: "\f361";
-$ionicon-var-android-arrow-dropleft-circle: "\f360";
-$ionicon-var-android-arrow-dropright: "\f363";
-$ionicon-var-android-arrow-dropright-circle: "\f362";
-$ionicon-var-android-arrow-dropup: "\f365";
-$ionicon-var-android-arrow-dropup-circle: "\f364";
-$ionicon-var-android-arrow-forward: "\f30f";
-$ionicon-var-android-arrow-up: "\f366";
-$ionicon-var-android-attach: "\f367";
-$ionicon-var-android-bar: "\f368";
-$ionicon-var-android-bicycle: "\f369";
-$ionicon-var-android-boat: "\f36a";
-$ionicon-var-android-bookmark: "\f36b";
-$ionicon-var-android-bulb: "\f36c";
-$ionicon-var-android-bus: "\f36d";
-$ionicon-var-android-calendar: "\f2d1";
-$ionicon-var-android-call: "\f2d2";
-$ionicon-var-android-camera: "\f2d3";
-$ionicon-var-android-cancel: "\f36e";
-$ionicon-var-android-car: "\f36f";
-$ionicon-var-android-cart: "\f370";
-$ionicon-var-android-chat: "\f2d4";
-$ionicon-var-android-checkbox: "\f374";
-$ionicon-var-android-checkbox-blank: "\f371";
-$ionicon-var-android-checkbox-outline: "\f373";
-$ionicon-var-android-checkbox-outline-blank: "\f372";
-$ionicon-var-android-checkmark-circle: "\f375";
-$ionicon-var-android-clipboard: "\f376";
-$ionicon-var-android-close: "\f2d7";
-$ionicon-var-android-cloud: "\f37a";
-$ionicon-var-android-cloud-circle: "\f377";
-$ionicon-var-android-cloud-done: "\f378";
-$ionicon-var-android-cloud-outline: "\f379";
-$ionicon-var-android-color-palette: "\f37b";
-$ionicon-var-android-compass: "\f37c";
-$ionicon-var-android-contact: "\f2d8";
-$ionicon-var-android-contacts: "\f2d9";
-$ionicon-var-android-contract: "\f37d";
-$ionicon-var-android-create: "\f37e";
-$ionicon-var-android-delete: "\f37f";
-$ionicon-var-android-desktop: "\f380";
-$ionicon-var-android-document: "\f381";
-$ionicon-var-android-done: "\f383";
-$ionicon-var-android-done-all: "\f382";
-$ionicon-var-android-download: "\f2dd";
-$ionicon-var-android-drafts: "\f384";
-$ionicon-var-android-exit: "\f385";
-$ionicon-var-android-expand: "\f386";
-$ionicon-var-android-favorite: "\f388";
-$ionicon-var-android-favorite-outline: "\f387";
-$ionicon-var-android-film: "\f389";
-$ionicon-var-android-folder: "\f2e0";
-$ionicon-var-android-folder-open: "\f38a";
-$ionicon-var-android-funnel: "\f38b";
-$ionicon-var-android-globe: "\f38c";
-$ionicon-var-android-hand: "\f2e3";
-$ionicon-var-android-hangout: "\f38d";
-$ionicon-var-android-happy: "\f38e";
-$ionicon-var-android-home: "\f38f";
-$ionicon-var-android-image: "\f2e4";
-$ionicon-var-android-laptop: "\f390";
-$ionicon-var-android-list: "\f391";
-$ionicon-var-android-locate: "\f2e9";
-$ionicon-var-android-lock: "\f392";
-$ionicon-var-android-mail: "\f2eb";
-$ionicon-var-android-map: "\f393";
-$ionicon-var-android-menu: "\f394";
-$ionicon-var-android-microphone: "\f2ec";
-$ionicon-var-android-microphone-off: "\f395";
-$ionicon-var-android-more-horizontal: "\f396";
-$ionicon-var-android-more-vertical: "\f397";
-$ionicon-var-android-navigate: "\f398";
-$ionicon-var-android-notifications: "\f39b";
-$ionicon-var-android-notifications-none: "\f399";
-$ionicon-var-android-notifications-off: "\f39a";
-$ionicon-var-android-open: "\f39c";
-$ionicon-var-android-options: "\f39d";
-$ionicon-var-android-people: "\f39e";
-$ionicon-var-android-person: "\f3a0";
-$ionicon-var-android-person-add: "\f39f";
-$ionicon-var-android-phone-landscape: "\f3a1";
-$ionicon-var-android-phone-portrait: "\f3a2";
-$ionicon-var-android-pin: "\f3a3";
-$ionicon-var-android-plane: "\f3a4";
-$ionicon-var-android-playstore: "\f2f0";
-$ionicon-var-android-print: "\f3a5";
-$ionicon-var-android-radio-button-off: "\f3a6";
-$ionicon-var-android-radio-button-on: "\f3a7";
-$ionicon-var-android-refresh: "\f3a8";
-$ionicon-var-android-remove: "\f2f4";
-$ionicon-var-android-remove-circle: "\f3a9";
-$ionicon-var-android-restaurant: "\f3aa";
-$ionicon-var-android-sad: "\f3ab";
-$ionicon-var-android-search: "\f2f5";
-$ionicon-var-android-send: "\f2f6";
-$ionicon-var-android-settings: "\f2f7";
-$ionicon-var-android-share: "\f2f8";
-$ionicon-var-android-share-alt: "\f3ac";
-$ionicon-var-android-star: "\f2fc";
-$ionicon-var-android-star-half: "\f3ad";
-$ionicon-var-android-star-outline: "\f3ae";
-$ionicon-var-android-stopwatch: "\f2fd";
-$ionicon-var-android-subway: "\f3af";
-$ionicon-var-android-sunny: "\f3b0";
-$ionicon-var-android-sync: "\f3b1";
-$ionicon-var-android-textsms: "\f3b2";
-$ionicon-var-android-time: "\f3b3";
-$ionicon-var-android-train: "\f3b4";
-$ionicon-var-android-unlock: "\f3b5";
-$ionicon-var-android-upload: "\f3b6";
-$ionicon-var-android-volume-down: "\f3b7";
-$ionicon-var-android-volume-mute: "\f3b8";
-$ionicon-var-android-volume-off: "\f3b9";
-$ionicon-var-android-volume-up: "\f3ba";
-$ionicon-var-android-walk: "\f3bb";
-$ionicon-var-android-warning: "\f3bc";
-$ionicon-var-android-watch: "\f3bd";
-$ionicon-var-android-wifi: "\f305";
-$ionicon-var-aperture: "\f313";
-$ionicon-var-archive: "\f102";
-$ionicon-var-arrow-down-a: "\f103";
-$ionicon-var-arrow-down-b: "\f104";
-$ionicon-var-arrow-down-c: "\f105";
-$ionicon-var-arrow-expand: "\f25e";
-$ionicon-var-arrow-graph-down-left: "\f25f";
-$ionicon-var-arrow-graph-down-right: "\f260";
-$ionicon-var-arrow-graph-up-left: "\f261";
-$ionicon-var-arrow-graph-up-right: "\f262";
-$ionicon-var-arrow-left-a: "\f106";
-$ionicon-var-arrow-left-b: "\f107";
-$ionicon-var-arrow-left-c: "\f108";
-$ionicon-var-arrow-move: "\f263";
-$ionicon-var-arrow-resize: "\f264";
-$ionicon-var-arrow-return-left: "\f265";
-$ionicon-var-arrow-return-right: "\f266";
-$ionicon-var-arrow-right-a: "\f109";
-$ionicon-var-arrow-right-b: "\f10a";
-$ionicon-var-arrow-right-c: "\f10b";
-$ionicon-var-arrow-shrink: "\f267";
-$ionicon-var-arrow-swap: "\f268";
-$ionicon-var-arrow-up-a: "\f10c";
-$ionicon-var-arrow-up-b: "\f10d";
-$ionicon-var-arrow-up-c: "\f10e";
-$ionicon-var-asterisk: "\f314";
-$ionicon-var-at: "\f10f";
-$ionicon-var-backspace: "\f3bf";
-$ionicon-var-backspace-outline: "\f3be";
-$ionicon-var-bag: "\f110";
-$ionicon-var-battery-charging: "\f111";
-$ionicon-var-battery-empty: "\f112";
-$ionicon-var-battery-full: "\f113";
-$ionicon-var-battery-half: "\f114";
-$ionicon-var-battery-low: "\f115";
-$ionicon-var-beaker: "\f269";
-$ionicon-var-beer: "\f26a";
-$ionicon-var-bluetooth: "\f116";
-$ionicon-var-bonfire: "\f315";
-$ionicon-var-bookmark: "\f26b";
-$ionicon-var-bowtie: "\f3c0";
-$ionicon-var-briefcase: "\f26c";
-$ionicon-var-bug: "\f2be";
-$ionicon-var-calculator: "\f26d";
-$ionicon-var-calendar: "\f117";
-$ionicon-var-camera: "\f118";
-$ionicon-var-card: "\f119";
-$ionicon-var-cash: "\f316";
-$ionicon-var-chatbox: "\f11b";
-$ionicon-var-chatbox-working: "\f11a";
-$ionicon-var-chatboxes: "\f11c";
-$ionicon-var-chatbubble: "\f11e";
-$ionicon-var-chatbubble-working: "\f11d";
-$ionicon-var-chatbubbles: "\f11f";
-$ionicon-var-checkmark: "\f122";
-$ionicon-var-checkmark-circled: "\f120";
-$ionicon-var-checkmark-round: "\f121";
-$ionicon-var-chevron-down: "\f123";
-$ionicon-var-chevron-left: "\f124";
-$ionicon-var-chevron-right: "\f125";
-$ionicon-var-chevron-up: "\f126";
-$ionicon-var-clipboard: "\f127";
-$ionicon-var-clock: "\f26e";
-$ionicon-var-close: "\f12a";
-$ionicon-var-close-circled: "\f128";
-$ionicon-var-close-round: "\f129";
-$ionicon-var-closed-captioning: "\f317";
-$ionicon-var-cloud: "\f12b";
-$ionicon-var-code: "\f271";
-$ionicon-var-code-download: "\f26f";
-$ionicon-var-code-working: "\f270";
-$ionicon-var-coffee: "\f272";
-$ionicon-var-compass: "\f273";
-$ionicon-var-compose: "\f12c";
-$ionicon-var-connection-bars: "\f274";
-$ionicon-var-contrast: "\f275";
-$ionicon-var-crop: "\f3c1";
-$ionicon-var-cube: "\f318";
-$ionicon-var-disc: "\f12d";
-$ionicon-var-document: "\f12f";
-$ionicon-var-document-text: "\f12e";
-$ionicon-var-drag: "\f130";
-$ionicon-var-earth: "\f276";
-$ionicon-var-easel: "\f3c2";
-$ionicon-var-edit: "\f2bf";
-$ionicon-var-egg: "\f277";
-$ionicon-var-eject: "\f131";
-$ionicon-var-email: "\f132";
-$ionicon-var-email-unread: "\f3c3";
-$ionicon-var-erlenmeyer-flask: "\f3c5";
-$ionicon-var-erlenmeyer-flask-bubbles: "\f3c4";
-$ionicon-var-eye: "\f133";
-$ionicon-var-eye-disabled: "\f306";
-$ionicon-var-female: "\f278";
-$ionicon-var-filing: "\f134";
-$ionicon-var-film-marker: "\f135";
-$ionicon-var-fireball: "\f319";
-$ionicon-var-flag: "\f279";
-$ionicon-var-flame: "\f31a";
-$ionicon-var-flash: "\f137";
-$ionicon-var-flash-off: "\f136";
-$ionicon-var-folder: "\f139";
-$ionicon-var-fork: "\f27a";
-$ionicon-var-fork-repo: "\f2c0";
-$ionicon-var-forward: "\f13a";
-$ionicon-var-funnel: "\f31b";
-$ionicon-var-gear-a: "\f13d";
-$ionicon-var-gear-b: "\f13e";
-$ionicon-var-grid: "\f13f";
-$ionicon-var-hammer: "\f27b";
-$ionicon-var-happy: "\f31c";
-$ionicon-var-happy-outline: "\f3c6";
-$ionicon-var-headphone: "\f140";
-$ionicon-var-heart: "\f141";
-$ionicon-var-heart-broken: "\f31d";
-$ionicon-var-help: "\f143";
-$ionicon-var-help-buoy: "\f27c";
-$ionicon-var-help-circled: "\f142";
-$ionicon-var-home: "\f144";
-$ionicon-var-icecream: "\f27d";
-$ionicon-var-image: "\f147";
-$ionicon-var-images: "\f148";
-$ionicon-var-information: "\f14a";
-$ionicon-var-information-circled: "\f149";
-$ionicon-var-ionic: "\f14b";
-$ionicon-var-ios-alarm: "\f3c8";
-$ionicon-var-ios-alarm-outline: "\f3c7";
-$ionicon-var-ios-albums: "\f3ca";
-$ionicon-var-ios-albums-outline: "\f3c9";
-$ionicon-var-ios-americanfootball: "\f3cc";
-$ionicon-var-ios-americanfootball-outline: "\f3cb";
-$ionicon-var-ios-analytics: "\f3ce";
-$ionicon-var-ios-analytics-outline: "\f3cd";
-$ionicon-var-ios-arrow-back: "\f3cf";
-$ionicon-var-ios-arrow-down: "\f3d0";
-$ionicon-var-ios-arrow-forward: "\f3d1";
-$ionicon-var-ios-arrow-left: "\f3d2";
-$ionicon-var-ios-arrow-right: "\f3d3";
-$ionicon-var-ios-arrow-thin-down: "\f3d4";
-$ionicon-var-ios-arrow-thin-left: "\f3d5";
-$ionicon-var-ios-arrow-thin-right: "\f3d6";
-$ionicon-var-ios-arrow-thin-up: "\f3d7";
-$ionicon-var-ios-arrow-up: "\f3d8";
-$ionicon-var-ios-at: "\f3da";
-$ionicon-var-ios-at-outline: "\f3d9";
-$ionicon-var-ios-barcode: "\f3dc";
-$ionicon-var-ios-barcode-outline: "\f3db";
-$ionicon-var-ios-baseball: "\f3de";
-$ionicon-var-ios-baseball-outline: "\f3dd";
-$ionicon-var-ios-basketball: "\f3e0";
-$ionicon-var-ios-basketball-outline: "\f3df";
-$ionicon-var-ios-bell: "\f3e2";
-$ionicon-var-ios-bell-outline: "\f3e1";
-$ionicon-var-ios-body: "\f3e4";
-$ionicon-var-ios-body-outline: "\f3e3";
-$ionicon-var-ios-bolt: "\f3e6";
-$ionicon-var-ios-bolt-outline: "\f3e5";
-$ionicon-var-ios-book: "\f3e8";
-$ionicon-var-ios-book-outline: "\f3e7";
-$ionicon-var-ios-bookmarks: "\f3ea";
-$ionicon-var-ios-bookmarks-outline: "\f3e9";
-$ionicon-var-ios-box: "\f3ec";
-$ionicon-var-ios-box-outline: "\f3eb";
-$ionicon-var-ios-briefcase: "\f3ee";
-$ionicon-var-ios-briefcase-outline: "\f3ed";
-$ionicon-var-ios-browsers: "\f3f0";
-$ionicon-var-ios-browsers-outline: "\f3ef";
-$ionicon-var-ios-calculator: "\f3f2";
-$ionicon-var-ios-calculator-outline: "\f3f1";
-$ionicon-var-ios-calendar: "\f3f4";
-$ionicon-var-ios-calendar-outline: "\f3f3";
-$ionicon-var-ios-camera: "\f3f6";
-$ionicon-var-ios-camera-outline: "\f3f5";
-$ionicon-var-ios-cart: "\f3f8";
-$ionicon-var-ios-cart-outline: "\f3f7";
-$ionicon-var-ios-chatboxes: "\f3fa";
-$ionicon-var-ios-chatboxes-outline: "\f3f9";
-$ionicon-var-ios-chatbubble: "\f3fc";
-$ionicon-var-ios-chatbubble-outline: "\f3fb";
-$ionicon-var-ios-checkmark: "\f3ff";
-$ionicon-var-ios-checkmark-empty: "\f3fd";
-$ionicon-var-ios-checkmark-outline: "\f3fe";
-$ionicon-var-ios-circle-filled: "\f400";
-$ionicon-var-ios-circle-outline: "\f401";
-$ionicon-var-ios-clock: "\f403";
-$ionicon-var-ios-clock-outline: "\f402";
-$ionicon-var-ios-close: "\f406";
-$ionicon-var-ios-close-empty: "\f404";
-$ionicon-var-ios-close-outline: "\f405";
-$ionicon-var-ios-cloud: "\f40c";
-$ionicon-var-ios-cloud-download: "\f408";
-$ionicon-var-ios-cloud-download-outline: "\f407";
-$ionicon-var-ios-cloud-outline: "\f409";
-$ionicon-var-ios-cloud-upload: "\f40b";
-$ionicon-var-ios-cloud-upload-outline: "\f40a";
-$ionicon-var-ios-cloudy: "\f410";
-$ionicon-var-ios-cloudy-night: "\f40e";
-$ionicon-var-ios-cloudy-night-outline: "\f40d";
-$ionicon-var-ios-cloudy-outline: "\f40f";
-$ionicon-var-ios-cog: "\f412";
-$ionicon-var-ios-cog-outline: "\f411";
-$ionicon-var-ios-color-filter: "\f414";
-$ionicon-var-ios-color-filter-outline: "\f413";
-$ionicon-var-ios-color-wand: "\f416";
-$ionicon-var-ios-color-wand-outline: "\f415";
-$ionicon-var-ios-compose: "\f418";
-$ionicon-var-ios-compose-outline: "\f417";
-$ionicon-var-ios-contact: "\f41a";
-$ionicon-var-ios-contact-outline: "\f419";
-$ionicon-var-ios-copy: "\f41c";
-$ionicon-var-ios-copy-outline: "\f41b";
-$ionicon-var-ios-crop: "\f41e";
-$ionicon-var-ios-crop-strong: "\f41d";
-$ionicon-var-ios-download: "\f420";
-$ionicon-var-ios-download-outline: "\f41f";
-$ionicon-var-ios-drag: "\f421";
-$ionicon-var-ios-email: "\f423";
-$ionicon-var-ios-email-outline: "\f422";
-$ionicon-var-ios-eye: "\f425";
-$ionicon-var-ios-eye-outline: "\f424";
-$ionicon-var-ios-fastforward: "\f427";
-$ionicon-var-ios-fastforward-outline: "\f426";
-$ionicon-var-ios-filing: "\f429";
-$ionicon-var-ios-filing-outline: "\f428";
-$ionicon-var-ios-film: "\f42b";
-$ionicon-var-ios-film-outline: "\f42a";
-$ionicon-var-ios-flag: "\f42d";
-$ionicon-var-ios-flag-outline: "\f42c";
-$ionicon-var-ios-flame: "\f42f";
-$ionicon-var-ios-flame-outline: "\f42e";
-$ionicon-var-ios-flask: "\f431";
-$ionicon-var-ios-flask-outline: "\f430";
-$ionicon-var-ios-flower: "\f433";
-$ionicon-var-ios-flower-outline: "\f432";
-$ionicon-var-ios-folder: "\f435";
-$ionicon-var-ios-folder-outline: "\f434";
-$ionicon-var-ios-football: "\f437";
-$ionicon-var-ios-football-outline: "\f436";
-$ionicon-var-ios-game-controller-a: "\f439";
-$ionicon-var-ios-game-controller-a-outline: "\f438";
-$ionicon-var-ios-game-controller-b: "\f43b";
-$ionicon-var-ios-game-controller-b-outline: "\f43a";
-$ionicon-var-ios-gear: "\f43d";
-$ionicon-var-ios-gear-outline: "\f43c";
-$ionicon-var-ios-glasses: "\f43f";
-$ionicon-var-ios-glasses-outline: "\f43e";
-$ionicon-var-ios-grid-view: "\f441";
-$ionicon-var-ios-grid-view-outline: "\f440";
-$ionicon-var-ios-heart: "\f443";
-$ionicon-var-ios-heart-outline: "\f442";
-$ionicon-var-ios-help: "\f446";
-$ionicon-var-ios-help-empty: "\f444";
-$ionicon-var-ios-help-outline: "\f445";
-$ionicon-var-ios-home: "\f448";
-$ionicon-var-ios-home-outline: "\f447";
-$ionicon-var-ios-infinite: "\f44a";
-$ionicon-var-ios-infinite-outline: "\f449";
-$ionicon-var-ios-information: "\f44d";
-$ionicon-var-ios-information-empty: "\f44b";
-$ionicon-var-ios-information-outline: "\f44c";
-$ionicon-var-ios-ionic-outline: "\f44e";
-$ionicon-var-ios-keypad: "\f450";
-$ionicon-var-ios-keypad-outline: "\f44f";
-$ionicon-var-ios-lightbulb: "\f452";
-$ionicon-var-ios-lightbulb-outline: "\f451";
-$ionicon-var-ios-list: "\f454";
-$ionicon-var-ios-list-outline: "\f453";
-$ionicon-var-ios-location: "\f456";
-$ionicon-var-ios-location-outline: "\f455";
-$ionicon-var-ios-locked: "\f458";
-$ionicon-var-ios-locked-outline: "\f457";
-$ionicon-var-ios-loop: "\f45a";
-$ionicon-var-ios-loop-strong: "\f459";
-$ionicon-var-ios-medical: "\f45c";
-$ionicon-var-ios-medical-outline: "\f45b";
-$ionicon-var-ios-medkit: "\f45e";
-$ionicon-var-ios-medkit-outline: "\f45d";
-$ionicon-var-ios-mic: "\f461";
-$ionicon-var-ios-mic-off: "\f45f";
-$ionicon-var-ios-mic-outline: "\f460";
-$ionicon-var-ios-minus: "\f464";
-$ionicon-var-ios-minus-empty: "\f462";
-$ionicon-var-ios-minus-outline: "\f463";
-$ionicon-var-ios-monitor: "\f466";
-$ionicon-var-ios-monitor-outline: "\f465";
-$ionicon-var-ios-moon: "\f468";
-$ionicon-var-ios-moon-outline: "\f467";
-$ionicon-var-ios-more: "\f46a";
-$ionicon-var-ios-more-outline: "\f469";
-$ionicon-var-ios-musical-note: "\f46b";
-$ionicon-var-ios-musical-notes: "\f46c";
-$ionicon-var-ios-navigate: "\f46e";
-$ionicon-var-ios-navigate-outline: "\f46d";
-$ionicon-var-ios-nutrition: "\f470";
-$ionicon-var-ios-nutrition-outline: "\f46f";
-$ionicon-var-ios-paper: "\f472";
-$ionicon-var-ios-paper-outline: "\f471";
-$ionicon-var-ios-paperplane: "\f474";
-$ionicon-var-ios-paperplane-outline: "\f473";
-$ionicon-var-ios-partlysunny: "\f476";
-$ionicon-var-ios-partlysunny-outline: "\f475";
-$ionicon-var-ios-pause: "\f478";
-$ionicon-var-ios-pause-outline: "\f477";
-$ionicon-var-ios-paw: "\f47a";
-$ionicon-var-ios-paw-outline: "\f479";
-$ionicon-var-ios-people: "\f47c";
-$ionicon-var-ios-people-outline: "\f47b";
-$ionicon-var-ios-person: "\f47e";
-$ionicon-var-ios-person-outline: "\f47d";
-$ionicon-var-ios-personadd: "\f480";
-$ionicon-var-ios-personadd-outline: "\f47f";
-$ionicon-var-ios-photos: "\f482";
-$ionicon-var-ios-photos-outline: "\f481";
-$ionicon-var-ios-pie: "\f484";
-$ionicon-var-ios-pie-outline: "\f483";
-$ionicon-var-ios-pint: "\f486";
-$ionicon-var-ios-pint-outline: "\f485";
-$ionicon-var-ios-play: "\f488";
-$ionicon-var-ios-play-outline: "\f487";
-$ionicon-var-ios-plus: "\f48b";
-$ionicon-var-ios-plus-empty: "\f489";
-$ionicon-var-ios-plus-outline: "\f48a";
-$ionicon-var-ios-pricetag: "\f48d";
-$ionicon-var-ios-pricetag-outline: "\f48c";
-$ionicon-var-ios-pricetags: "\f48f";
-$ionicon-var-ios-pricetags-outline: "\f48e";
-$ionicon-var-ios-printer: "\f491";
-$ionicon-var-ios-printer-outline: "\f490";
-$ionicon-var-ios-pulse: "\f493";
-$ionicon-var-ios-pulse-strong: "\f492";
-$ionicon-var-ios-rainy: "\f495";
-$ionicon-var-ios-rainy-outline: "\f494";
-$ionicon-var-ios-recording: "\f497";
-$ionicon-var-ios-recording-outline: "\f496";
-$ionicon-var-ios-redo: "\f499";
-$ionicon-var-ios-redo-outline: "\f498";
-$ionicon-var-ios-refresh: "\f49c";
-$ionicon-var-ios-refresh-empty: "\f49a";
-$ionicon-var-ios-refresh-outline: "\f49b";
-$ionicon-var-ios-reload: "\f49d";
-$ionicon-var-ios-reverse-camera: "\f49f";
-$ionicon-var-ios-reverse-camera-outline: "\f49e";
-$ionicon-var-ios-rewind: "\f4a1";
-$ionicon-var-ios-rewind-outline: "\f4a0";
-$ionicon-var-ios-rose: "\f4a3";
-$ionicon-var-ios-rose-outline: "\f4a2";
-$ionicon-var-ios-search: "\f4a5";
-$ionicon-var-ios-search-strong: "\f4a4";
-$ionicon-var-ios-settings: "\f4a7";
-$ionicon-var-ios-settings-strong: "\f4a6";
-$ionicon-var-ios-shuffle: "\f4a9";
-$ionicon-var-ios-shuffle-strong: "\f4a8";
-$ionicon-var-ios-skipbackward: "\f4ab";
-$ionicon-var-ios-skipbackward-outline: "\f4aa";
-$ionicon-var-ios-skipforward: "\f4ad";
-$ionicon-var-ios-skipforward-outline: "\f4ac";
-$ionicon-var-ios-snowy: "\f4ae";
-$ionicon-var-ios-speedometer: "\f4b0";
-$ionicon-var-ios-speedometer-outline: "\f4af";
-$ionicon-var-ios-star: "\f4b3";
-$ionicon-var-ios-star-half: "\f4b1";
-$ionicon-var-ios-star-outline: "\f4b2";
-$ionicon-var-ios-stopwatch: "\f4b5";
-$ionicon-var-ios-stopwatch-outline: "\f4b4";
-$ionicon-var-ios-sunny: "\f4b7";
-$ionicon-var-ios-sunny-outline: "\f4b6";
-$ionicon-var-ios-telephone: "\f4b9";
-$ionicon-var-ios-telephone-outline: "\f4b8";
-$ionicon-var-ios-tennisball: "\f4bb";
-$ionicon-var-ios-tennisball-outline: "\f4ba";
-$ionicon-var-ios-thunderstorm: "\f4bd";
-$ionicon-var-ios-thunderstorm-outline: "\f4bc";
-$ionicon-var-ios-time: "\f4bf";
-$ionicon-var-ios-time-outline: "\f4be";
-$ionicon-var-ios-timer: "\f4c1";
-$ionicon-var-ios-timer-outline: "\f4c0";
-$ionicon-var-ios-toggle: "\f4c3";
-$ionicon-var-ios-toggle-outline: "\f4c2";
-$ionicon-var-ios-trash: "\f4c5";
-$ionicon-var-ios-trash-outline: "\f4c4";
-$ionicon-var-ios-undo: "\f4c7";
-$ionicon-var-ios-undo-outline: "\f4c6";
-$ionicon-var-ios-unlocked: "\f4c9";
-$ionicon-var-ios-unlocked-outline: "\f4c8";
-$ionicon-var-ios-upload: "\f4cb";
-$ionicon-var-ios-upload-outline: "\f4ca";
-$ionicon-var-ios-videocam: "\f4cd";
-$ionicon-var-ios-videocam-outline: "\f4cc";
-$ionicon-var-ios-volume-high: "\f4ce";
-$ionicon-var-ios-volume-low: "\f4cf";
-$ionicon-var-ios-wineglass: "\f4d1";
-$ionicon-var-ios-wineglass-outline: "\f4d0";
-$ionicon-var-ios-world: "\f4d3";
-$ionicon-var-ios-world-outline: "\f4d2";
-$ionicon-var-ipad: "\f1f9";
-$ionicon-var-iphone: "\f1fa";
-$ionicon-var-ipod: "\f1fb";
-$ionicon-var-jet: "\f295";
-$ionicon-var-key: "\f296";
-$ionicon-var-knife: "\f297";
-$ionicon-var-laptop: "\f1fc";
-$ionicon-var-leaf: "\f1fd";
-$ionicon-var-levels: "\f298";
-$ionicon-var-lightbulb: "\f299";
-$ionicon-var-link: "\f1fe";
-$ionicon-var-load-a: "\f29a";
-$ionicon-var-load-b: "\f29b";
-$ionicon-var-load-c: "\f29c";
-$ionicon-var-load-d: "\f29d";
-$ionicon-var-location: "\f1ff";
-$ionicon-var-lock-combination: "\f4d4";
-$ionicon-var-locked: "\f200";
-$ionicon-var-log-in: "\f29e";
-$ionicon-var-log-out: "\f29f";
-$ionicon-var-loop: "\f201";
-$ionicon-var-magnet: "\f2a0";
-$ionicon-var-male: "\f2a1";
-$ionicon-var-man: "\f202";
-$ionicon-var-map: "\f203";
-$ionicon-var-medkit: "\f2a2";
-$ionicon-var-merge: "\f33f";
-$ionicon-var-mic-a: "\f204";
-$ionicon-var-mic-b: "\f205";
-$ionicon-var-mic-c: "\f206";
-$ionicon-var-minus: "\f209";
-$ionicon-var-minus-circled: "\f207";
-$ionicon-var-minus-round: "\f208";
-$ionicon-var-model-s: "\f2c1";
-$ionicon-var-monitor: "\f20a";
-$ionicon-var-more: "\f20b";
-$ionicon-var-mouse: "\f340";
-$ionicon-var-music-note: "\f20c";
-$ionicon-var-navicon: "\f20e";
-$ionicon-var-navicon-round: "\f20d";
-$ionicon-var-navigate: "\f2a3";
-$ionicon-var-network: "\f341";
-$ionicon-var-no-smoking: "\f2c2";
-$ionicon-var-nuclear: "\f2a4";
-$ionicon-var-outlet: "\f342";
-$ionicon-var-paintbrush: "\f4d5";
-$ionicon-var-paintbucket: "\f4d6";
-$ionicon-var-paper-airplane: "\f2c3";
-$ionicon-var-paperclip: "\f20f";
-$ionicon-var-pause: "\f210";
-$ionicon-var-person: "\f213";
-$ionicon-var-person-add: "\f211";
-$ionicon-var-person-stalker: "\f212";
-$ionicon-var-pie-graph: "\f2a5";
-$ionicon-var-pin: "\f2a6";
-$ionicon-var-pinpoint: "\f2a7";
-$ionicon-var-pizza: "\f2a8";
-$ionicon-var-plane: "\f214";
-$ionicon-var-planet: "\f343";
-$ionicon-var-play: "\f215";
-$ionicon-var-playstation: "\f30a";
-$ionicon-var-plus: "\f218";
-$ionicon-var-plus-circled: "\f216";
-$ionicon-var-plus-round: "\f217";
-$ionicon-var-podium: "\f344";
-$ionicon-var-pound: "\f219";
-$ionicon-var-power: "\f2a9";
-$ionicon-var-pricetag: "\f2aa";
-$ionicon-var-pricetags: "\f2ab";
-$ionicon-var-printer: "\f21a";
-$ionicon-var-pull-request: "\f345";
-$ionicon-var-qr-scanner: "\f346";
-$ionicon-var-quote: "\f347";
-$ionicon-var-radio-waves: "\f2ac";
-$ionicon-var-record: "\f21b";
-$ionicon-var-refresh: "\f21c";
-$ionicon-var-reply: "\f21e";
-$ionicon-var-reply-all: "\f21d";
-$ionicon-var-ribbon-a: "\f348";
-$ionicon-var-ribbon-b: "\f349";
-$ionicon-var-sad: "\f34a";
-$ionicon-var-sad-outline: "\f4d7";
-$ionicon-var-scissors: "\f34b";
-$ionicon-var-search: "\f21f";
-$ionicon-var-settings: "\f2ad";
-$ionicon-var-share: "\f220";
-$ionicon-var-shuffle: "\f221";
-$ionicon-var-skip-backward: "\f222";
-$ionicon-var-skip-forward: "\f223";
-$ionicon-var-social-android: "\f225";
-$ionicon-var-social-android-outline: "\f224";
-$ionicon-var-social-angular: "\f4d9";
-$ionicon-var-social-angular-outline: "\f4d8";
-$ionicon-var-social-apple: "\f227";
-$ionicon-var-social-apple-outline: "\f226";
-$ionicon-var-social-bitcoin: "\f2af";
-$ionicon-var-social-bitcoin-outline: "\f2ae";
-$ionicon-var-social-buffer: "\f229";
-$ionicon-var-social-buffer-outline: "\f228";
-$ionicon-var-social-chrome: "\f4db";
-$ionicon-var-social-chrome-outline: "\f4da";
-$ionicon-var-social-codepen: "\f4dd";
-$ionicon-var-social-codepen-outline: "\f4dc";
-$ionicon-var-social-css3: "\f4df";
-$ionicon-var-social-css3-outline: "\f4de";
-$ionicon-var-social-designernews: "\f22b";
-$ionicon-var-social-designernews-outline: "\f22a";
-$ionicon-var-social-dribbble: "\f22d";
-$ionicon-var-social-dribbble-outline: "\f22c";
-$ionicon-var-social-dropbox: "\f22f";
-$ionicon-var-social-dropbox-outline: "\f22e";
-$ionicon-var-social-euro: "\f4e1";
-$ionicon-var-social-euro-outline: "\f4e0";
-$ionicon-var-social-facebook: "\f231";
-$ionicon-var-social-facebook-outline: "\f230";
-$ionicon-var-social-foursquare: "\f34d";
-$ionicon-var-social-foursquare-outline: "\f34c";
-$ionicon-var-social-freebsd-devil: "\f2c4";
-$ionicon-var-social-github: "\f233";
-$ionicon-var-social-github-outline: "\f232";
-$ionicon-var-social-google: "\f34f";
-$ionicon-var-social-google-outline: "\f34e";
-$ionicon-var-social-googleplus: "\f235";
-$ionicon-var-social-googleplus-outline: "\f234";
-$ionicon-var-social-hackernews: "\f237";
-$ionicon-var-social-hackernews-outline: "\f236";
-$ionicon-var-social-html5: "\f4e3";
-$ionicon-var-social-html5-outline: "\f4e2";
-$ionicon-var-social-instagram: "\f351";
-$ionicon-var-social-instagram-outline: "\f350";
-$ionicon-var-social-javascript: "\f4e5";
-$ionicon-var-social-javascript-outline: "\f4e4";
-$ionicon-var-social-linkedin: "\f239";
-$ionicon-var-social-linkedin-outline: "\f238";
-$ionicon-var-social-markdown: "\f4e6";
-$ionicon-var-social-nodejs: "\f4e7";
-$ionicon-var-social-octocat: "\f4e8";
-$ionicon-var-social-pinterest: "\f2b1";
-$ionicon-var-social-pinterest-outline: "\f2b0";
-$ionicon-var-social-python: "\f4e9";
-$ionicon-var-social-reddit: "\f23b";
-$ionicon-var-social-reddit-outline: "\f23a";
-$ionicon-var-social-rss: "\f23d";
-$ionicon-var-social-rss-outline: "\f23c";
-$ionicon-var-social-sass: "\f4ea";
-$ionicon-var-social-skype: "\f23f";
-$ionicon-var-social-skype-outline: "\f23e";
-$ionicon-var-social-snapchat: "\f4ec";
-$ionicon-var-social-snapchat-outline: "\f4eb";
-$ionicon-var-social-tumblr: "\f241";
-$ionicon-var-social-tumblr-outline: "\f240";
-$ionicon-var-social-tux: "\f2c5";
-$ionicon-var-social-twitch: "\f4ee";
-$ionicon-var-social-twitch-outline: "\f4ed";
-$ionicon-var-social-twitter: "\f243";
-$ionicon-var-social-twitter-outline: "\f242";
-$ionicon-var-social-usd: "\f353";
-$ionicon-var-social-usd-outline: "\f352";
-$ionicon-var-social-vimeo: "\f245";
-$ionicon-var-social-vimeo-outline: "\f244";
-$ionicon-var-social-whatsapp: "\f4f0";
-$ionicon-var-social-whatsapp-outline: "\f4ef";
-$ionicon-var-social-windows: "\f247";
-$ionicon-var-social-windows-outline: "\f246";
-$ionicon-var-social-wordpress: "\f249";
-$ionicon-var-social-wordpress-outline: "\f248";
-$ionicon-var-social-yahoo: "\f24b";
-$ionicon-var-social-yahoo-outline: "\f24a";
-$ionicon-var-social-yen: "\f4f2";
-$ionicon-var-social-yen-outline: "\f4f1";
-$ionicon-var-social-youtube: "\f24d";
-$ionicon-var-social-youtube-outline: "\f24c";
-$ionicon-var-soup-can: "\f4f4";
-$ionicon-var-soup-can-outline: "\f4f3";
-$ionicon-var-speakerphone: "\f2b2";
-$ionicon-var-speedometer: "\f2b3";
-$ionicon-var-spoon: "\f2b4";
-$ionicon-var-star: "\f24e";
-$ionicon-var-stats-bars: "\f2b5";
-$ionicon-var-steam: "\f30b";
-$ionicon-var-stop: "\f24f";
-$ionicon-var-thermometer: "\f2b6";
-$ionicon-var-thumbsdown: "\f250";
-$ionicon-var-thumbsup: "\f251";
-$ionicon-var-toggle: "\f355";
-$ionicon-var-toggle-filled: "\f354";
-$ionicon-var-transgender: "\f4f5";
-$ionicon-var-trash-a: "\f252";
-$ionicon-var-trash-b: "\f253";
-$ionicon-var-trophy: "\f356";
-$ionicon-var-tshirt: "\f4f7";
-$ionicon-var-tshirt-outline: "\f4f6";
-$ionicon-var-umbrella: "\f2b7";
-$ionicon-var-university: "\f357";
-$ionicon-var-unlocked: "\f254";
-$ionicon-var-upload: "\f255";
-$ionicon-var-usb: "\f2b8";
-$ionicon-var-videocamera: "\f256";
-$ionicon-var-volume-high: "\f257";
-$ionicon-var-volume-low: "\f258";
-$ionicon-var-volume-medium: "\f259";
-$ionicon-var-volume-mute: "\f25a";
-$ionicon-var-wand: "\f358";
-$ionicon-var-waterdrop: "\f25b";
-$ionicon-var-wifi: "\f25c";
-$ionicon-var-wineglass: "\f2b9";
-$ionicon-var-woman: "\f25d";
-$ionicon-var-wrench: "\f2ba";
-$ionicon-var-xbox: "\f30c";
+$ionicon-vars: (
+  ios-add: "\f102",
+  ios-add-circle: "\f101",
+  ios-add-circle-outline: "\f100",
+  ios-alarm: "\f3c8",
+  ios-alarm-outline: "\f3c7",
+  ios-albums: "\f3ca",
+  ios-albums-outline: "\f3c9",
+  ios-alert: "\f104",
+  ios-alert-outline: "\f103",
+  ios-american-football: "\f106",
+  ios-american-football-outline: "\f105",
+  ios-analytics: "\f3ce",
+  ios-analytics-outline: "\f3cd",
+  ios-aperture: "\f108",
+  ios-aperture-outline: "\f107",
+  ios-apps: "\f10a",
+  ios-apps-outline: "\f109",
+  ios-appstore: "\f10c",
+  ios-appstore-outline: "\f10b",
+  ios-archive: "\f10e",
+  ios-archive-outline: "\f10d",
+  ios-arrow-back: "\f3cf",
+  ios-arrow-down: "\f3d0",
+  ios-arrow-dropdown: "\f110",
+  ios-arrow-dropdown-circle: "\f10f",
+  ios-arrow-dropleft: "\f112",
+  ios-arrow-dropleft-circle: "\f111",
+  ios-arrow-dropright: "\f114",
+  ios-arrow-dropright-circle: "\f113",
+  ios-arrow-dropup: "\f116",
+  ios-arrow-dropup-circle: "\f115",
+  ios-arrow-forward: "\f3d1",
+  ios-arrow-round-back: "\f117",
+  ios-arrow-round-down: "\f118",
+  ios-arrow-round-forward: "\f119",
+  ios-arrow-round-up: "\f11a",
+  ios-arrow-up: "\f3d8",
+  ios-at: "\f3da",
+  ios-at-outline: "\f3d9",
+  ios-attach: "\f11b",
+  ios-backspace: "\f11d",
+  ios-backspace-outline: "\f11c",
+  ios-barcode: "\f3dc",
+  ios-barcode-outline: "\f3db",
+  ios-baseball: "\f3de",
+  ios-baseball-outline: "\f3dd",
+  ios-basket: "\f11f",
+  ios-basket-outline: "\f11e",
+  ios-basketball: "\f3e0",
+  ios-basketball-outline: "\f3df",
+  ios-battery-charging: "\f120",
+  ios-battery-dead: "\f121",
+  ios-battery-full: "\f122",
+  ios-beaker: "\f124",
+  ios-beaker-outline: "\f123",
+  ios-beer: "\f126",
+  ios-beer-outline: "\f125",
+  ios-bicycle: "\f127",
+  ios-bluetooth: "\f128",
+  ios-boat: "\f12a",
+  ios-boat-outline: "\f129",
+  ios-body: "\f3e4",
+  ios-body-outline: "\f3e3",
+  ios-bonfire: "\f12c",
+  ios-bonfire-outline: "\f12b",
+  ios-book: "\f3e8",
+  ios-book-outline: "\f3e7",
+  ios-bookmark: "\f12e",
+  ios-bookmark-outline: "\f12d",
+  ios-bookmarks: "\f3ea",
+  ios-bookmarks-outline: "\f3e9",
+  ios-bowtie: "\f130",
+  ios-bowtie-outline: "\f12f",
+  ios-briefcase: "\f3ee",
+  ios-briefcase-outline: "\f3ed",
+  ios-browsers: "\f3f0",
+  ios-browsers-outline: "\f3ef",
+  ios-brush: "\f132",
+  ios-brush-outline: "\f131",
+  ios-bug: "\f134",
+  ios-bug-outline: "\f133",
+  ios-build: "\f136",
+  ios-build-outline: "\f135",
+  ios-bulb: "\f138",
+  ios-bulb-outline: "\f137",
+  ios-bus: "\f13a",
+  ios-bus-outline: "\f139",
+  ios-cafe: "\f13c",
+  ios-cafe-outline: "\f13b",
+  ios-calculator: "\f3f2",
+  ios-calculator-outline: "\f3f1",
+  ios-calendar: "\f3f4",
+  ios-calendar-outline: "\f3f3",
+  ios-call: "\f13e",
+  ios-call-outline: "\f13d",
+  ios-camera: "\f3f6",
+  ios-camera-outline: "\f3f5",
+  ios-car: "\f140",
+  ios-car-outline: "\f13f",
+  ios-card: "\f142",
+  ios-card-outline: "\f141",
+  ios-cart: "\f3f8",
+  ios-cart-outline: "\f3f7",
+  ios-cash: "\f144",
+  ios-cash-outline: "\f143",
+  ios-chatboxes: "\f3fa",
+  ios-chatboxes-outline: "\f3f9",
+  ios-chatbubbles: "\f146",
+  ios-chatbubbles-outline: "\f145",
+  ios-checkbox: "\f148",
+  ios-checkbox-outline: "\f147",
+  ios-checkmark: "\f3ff",
+  ios-checkmark-circle: "\f14a",
+  ios-checkmark-circle-outline: "\f149",
+  ios-clipboard: "\f14c",
+  ios-clipboard-outline: "\f14b",
+  ios-clock: "\f403",
+  ios-clock-outline: "\f402",
+  ios-close: "\f406",
+  ios-close-circle: "\f14e",
+  ios-close-circle-outline: "\f14d",
+  ios-closed-captioning: "\f150",
+  ios-closed-captioning-outline: "\f14f",
+  ios-cloud: "\f40c",
+  ios-cloud-circle: "\f152",
+  ios-cloud-circle-outline: "\f151",
+  ios-cloud-done: "\f154",
+  ios-cloud-done-outline: "\f153",
+  ios-cloud-download: "\f408",
+  ios-cloud-download-outline: "\f407",
+  ios-cloud-outline: "\f409",
+  ios-cloud-upload: "\f40b",
+  ios-cloud-upload-outline: "\f40a",
+  ios-cloudy: "\f410",
+  ios-cloudy-night: "\f40e",
+  ios-cloudy-night-outline: "\f40d",
+  ios-cloudy-outline: "\f40f",
+  ios-code: "\f157",
+  ios-code-download: "\f155",
+  ios-code-working: "\f156",
+  ios-cog: "\f412",
+  ios-cog-outline: "\f411",
+  ios-color-fill: "\f159",
+  ios-color-fill-outline: "\f158",
+  ios-color-filter: "\f414",
+  ios-color-filter-outline: "\f413",
+  ios-color-palette: "\f15b",
+  ios-color-palette-outline: "\f15a",
+  ios-color-wand: "\f416",
+  ios-color-wand-outline: "\f415",
+  ios-compass: "\f15d",
+  ios-compass-outline: "\f15c",
+  ios-construct: "\f15f",
+  ios-construct-outline: "\f15e",
+  ios-contact: "\f41a",
+  ios-contact-outline: "\f419",
+  ios-contacts: "\f161",
+  ios-contacts-outline: "\f160",
+  ios-contract: "\f162",
+  ios-contrast: "\f163",
+  ios-copy: "\f41c",
+  ios-copy-outline: "\f41b",
+  ios-create: "\f165",
+  ios-create-outline: "\f164",
+  ios-crop: "\f41e",
+  ios-crop-outline: "\f166",
+  ios-cube: "\f168",
+  ios-cube-outline: "\f167",
+  ios-cut: "\f16a",
+  ios-cut-outline: "\f169",
+  ios-desktop: "\f16c",
+  ios-desktop-outline: "\f16b",
+  ios-disc: "\f16e",
+  ios-disc-outline: "\f16d",
+  ios-document: "\f170",
+  ios-document-outline: "\f16f",
+  ios-done-all: "\f171",
+  ios-download: "\f420",
+  ios-download-outline: "\f41f",
+  ios-easel: "\f173",
+  ios-easel-outline: "\f172",
+  ios-egg: "\f175",
+  ios-egg-outline: "\f174",
+  ios-exit: "\f177",
+  ios-exit-outline: "\f176",
+  ios-expand: "\f178",
+  ios-eye: "\f425",
+  ios-eye-off: "\f17a",
+  ios-eye-off-outline: "\f179",
+  ios-eye-outline: "\f424",
+  ios-fastforward: "\f427",
+  ios-fastforward-outline: "\f426",
+  ios-female: "\f17b",
+  ios-filing: "\f429",
+  ios-filing-outline: "\f428",
+  ios-film: "\f42b",
+  ios-film-outline: "\f42a",
+  ios-finger-print: "\f17c",
+  ios-flag: "\f42d",
+  ios-flag-outline: "\f42c",
+  ios-flame: "\f42f",
+  ios-flame-outline: "\f42e",
+  ios-flash: "\f17e",
+  ios-flash-outline: "\f17d",
+  ios-flask: "\f431",
+  ios-flask-outline: "\f430",
+  ios-flower: "\f433",
+  ios-flower-outline: "\f432",
+  ios-folder: "\f435",
+  ios-folder-open: "\f180",
+  ios-folder-open-outline: "\f17f",
+  ios-folder-outline: "\f434",
+  ios-football: "\f437",
+  ios-football-outline: "\f436",
+  ios-funnel: "\f182",
+  ios-funnel-outline: "\f181",
+  ios-game-controller-a: "\f439",
+  ios-game-controller-a-outline: "\f438",
+  ios-game-controller-b: "\f43b",
+  ios-game-controller-b-outline: "\f43a",
+  ios-git-branch: "\f183",
+  ios-git-commit: "\f184",
+  ios-git-compare: "\f185",
+  ios-git-merge: "\f186",
+  ios-git-network: "\f187",
+  ios-git-pull-request: "\f188",
+  ios-glasses: "\f43f",
+  ios-glasses-outline: "\f43e",
+  ios-globe: "\f18a",
+  ios-globe-outline: "\f189",
+  ios-grid: "\f18c",
+  ios-grid-outline: "\f18b",
+  ios-hammer: "\f18e",
+  ios-hammer-outline: "\f18d",
+  ios-hand: "\f190",
+  ios-hand-outline: "\f18f",
+  ios-happy: "\f192",
+  ios-happy-outline: "\f191",
+  ios-headset: "\f194",
+  ios-headset-outline: "\f193",
+  ios-heart: "\f443",
+  ios-heart-outline: "\f442",
+  ios-help: "\f446",
+  ios-help-buoy: "\f196",
+  ios-help-buoy-outline: "\f195",
+  ios-help-circle: "\f198",
+  ios-help-circle-outline: "\f197",
+  ios-home: "\f448",
+  ios-home-outline: "\f447",
+  ios-ice-cream: "\f19a",
+  ios-ice-cream-outline: "\f199",
+  ios-image: "\f19c",
+  ios-image-outline: "\f19b",
+  ios-images: "\f19e",
+  ios-images-outline: "\f19d",
+  ios-infinite: "\f44a",
+  ios-infinite-outline: "\f449",
+  ios-information: "\f44d",
+  ios-information-circle: "\f1a0",
+  ios-information-circle-outline: "\f19f",
+  ios-ionic: "\f1a1",
+  ios-ionic-outline: "\f44e",
+  ios-ionitron: "\f1a3",
+  ios-ionitron-outline: "\f1a2",
+  ios-jet: "\f1a5",
+  ios-jet-outline: "\f1a4",
+  ios-key: "\f1a7",
+  ios-key-outline: "\f1a6",
+  ios-keypad: "\f450",
+  ios-keypad-outline: "\f44f",
+  ios-laptop: "\f1a8",
+  ios-leaf: "\f1aa",
+  ios-leaf-outline: "\f1a9",
+  ios-list: "\f454",
+  ios-list-box: "\f1ac",
+  ios-list-box-outline: "\f1ab",
+  ios-locate: "\f1ae",
+  ios-locate-outline: "\f1ad",
+  ios-lock: "\f1b0",
+  ios-lock-outline: "\f1af",
+  ios-log-in: "\f1b1",
+  ios-log-out: "\f1b2",
+  ios-magnet: "\f1b4",
+  ios-magnet-outline: "\f1b3",
+  ios-mail: "\f1b8",
+  ios-mail-open: "\f1b6",
+  ios-mail-open-outline: "\f1b5",
+  ios-mail-outline: "\f1b7",
+  ios-male: "\f1b9",
+  ios-man: "\f1bb",
+  ios-man-outline: "\f1ba",
+  ios-map: "\f1bd",
+  ios-map-outline: "\f1bc",
+  ios-medal: "\f1bf",
+  ios-medal-outline: "\f1be",
+  ios-medical: "\f45c",
+  ios-medical-outline: "\f45b",
+  ios-medkit: "\f45e",
+  ios-medkit-outline: "\f45d",
+  ios-megaphone: "\f1c1",
+  ios-megaphone-outline: "\f1c0",
+  ios-menu: "\f1c3",
+  ios-menu-outline: "\f1c2",
+  ios-mic: "\f461",
+  ios-mic-off: "\f45f",
+  ios-mic-off-outline: "\f1c4",
+  ios-mic-outline: "\f460",
+  ios-microphone: "\f1c6",
+  ios-microphone-outline: "\f1c5",
+  ios-moon: "\f468",
+  ios-moon-outline: "\f467",
+  ios-more: "\f1c8",
+  ios-more-outline: "\f1c7",
+  ios-move: "\f1cb",
+  ios-musical-note: "\f46b",
+  ios-musical-note-outline: "\f1cc",
+  ios-musical-notes: "\f46c",
+  ios-musical-notes-outline: "\f1cd",
+  ios-navigate: "\f46e",
+  ios-navigate-outline: "\f46d",
+  ios-no-smoking: "\f1cf",
+  ios-no-smoking-outline: "\f1ce",
+  ios-notifications: "\f1d3",
+  ios-notifications-off: "\f1d1",
+  ios-notifications-off-outline: "\f1d0",
+  ios-notifications-outline: "\f1d2",
+  ios-nuclear: "\f1d5",
+  ios-nuclear-outline: "\f1d4",
+  ios-nutrition: "\f470",
+  ios-nutrition-outline: "\f46f",
+  ios-open: "\f1d7",
+  ios-open-outline: "\f1d6",
+  ios-options: "\f1d9",
+  ios-options-outline: "\f1d8",
+  ios-outlet: "\f1db",
+  ios-outlet-outline: "\f1da",
+  ios-paper: "\f472",
+  ios-paper-outline: "\f471",
+  ios-paper-plane: "\f1dd",
+  ios-paper-plane-outline: "\f1dc",
+  ios-partly-sunny: "\f1df",
+  ios-partly-sunny-outline: "\f1de",
+  ios-pause: "\f478",
+  ios-pause-outline: "\f477",
+  ios-paw: "\f47a",
+  ios-paw-outline: "\f479",
+  ios-people: "\f47c",
+  ios-people-outline: "\f47b",
+  ios-person: "\f47e",
+  ios-person-add: "\f1e1",
+  ios-person-add-outline: "\f1e0",
+  ios-person-outline: "\f47d",
+  ios-phone-landscape: "\f1e2",
+  ios-phone-portrait: "\f1e3",
+  ios-photos: "\f482",
+  ios-photos-outline: "\f481",
+  ios-pie: "\f484",
+  ios-pie-outline: "\f483",
+  ios-pin: "\f1e5",
+  ios-pin-outline: "\f1e4",
+  ios-pint: "\f486",
+  ios-pint-outline: "\f485",
+  ios-pizza: "\f1e7",
+  ios-pizza-outline: "\f1e6",
+  ios-plane: "\f1e9",
+  ios-plane-outline: "\f1e8",
+  ios-planet: "\f1eb",
+  ios-planet-outline: "\f1ea",
+  ios-play: "\f488",
+  ios-play-outline: "\f487",
+  ios-podium: "\f1ed",
+  ios-podium-outline: "\f1ec",
+  ios-power: "\f1ef",
+  ios-power-outline: "\f1ee",
+  ios-pricetag: "\f48d",
+  ios-pricetag-outline: "\f48c",
+  ios-pricetags: "\f48f",
+  ios-pricetags-outline: "\f48e",
+  ios-print: "\f1f1",
+  ios-print-outline: "\f1f0",
+  ios-pulse: "\f493",
+  ios-pulse-outline: "\f1f2",
+  ios-qr-scanner: "\f1f3",
+  ios-quote: "\f1f5",
+  ios-quote-outline: "\f1f4",
+  ios-radio: "\f1f9",
+  ios-radio-button-off: "\f1f6",
+  ios-radio-button-on: "\f1f7",
+  ios-radio-outline: "\f1f8",
+  ios-rainy: "\f495",
+  ios-rainy-outline: "\f494",
+  ios-recording: "\f497",
+  ios-recording-outline: "\f496",
+  ios-redo: "\f499",
+  ios-redo-outline: "\f498",
+  ios-refresh: "\f49c",
+  ios-refresh-circle: "\f226",
+  ios-refresh-circle-outline: "\f224",
+  ios-remove: "\f1fc",
+  ios-remove-circle: "\f1fb",
+  ios-remove-circle-outline: "\f1fa",
+  ios-reorder: "\f1fd",
+  ios-repeat: "\f1fe",
+  ios-resize: "\f1ff",
+  ios-restaurant: "\f201",
+  ios-restaurant-outline: "\f200",
+  ios-return-left: "\f202",
+  ios-return-right: "\f203",
+  ios-reverse-camera: "\f49f",
+  ios-reverse-camera-outline: "\f49e",
+  ios-rewind: "\f4a1",
+  ios-rewind-outline: "\f4a0",
+  ios-ribbon: "\f205",
+  ios-ribbon-outline: "\f204",
+  ios-rose: "\f4a3",
+  ios-rose-outline: "\f4a2",
+  ios-sad: "\f207",
+  ios-sad-outline: "\f206",
+  ios-school: "\f209",
+  ios-school-outline: "\f208",
+  ios-search: "\f4a5",
+  ios-search-outline: "\f20a",
+  ios-send: "\f20c",
+  ios-send-outline: "\f20b",
+  ios-settings: "\f4a7",
+  ios-settings-outline: "\f20d",
+  ios-share: "\f211",
+  ios-share-alt: "\f20f",
+  ios-share-alt-outline: "\f20e",
+  ios-share-outline: "\f210",
+  ios-shirt: "\f213",
+  ios-shirt-outline: "\f212",
+  ios-shuffle: "\f4a9",
+  ios-skip-backward: "\f215",
+  ios-skip-backward-outline: "\f214",
+  ios-skip-forward: "\f217",
+  ios-skip-forward-outline: "\f216",
+  ios-snow: "\f218",
+  ios-speedometer: "\f4b0",
+  ios-speedometer-outline: "\f4af",
+  ios-square: "\f21a",
+  ios-square-outline: "\f219",
+  ios-star: "\f4b3",
+  ios-star-half: "\f4b1",
+  ios-star-outline: "\f4b2",
+  ios-stats: "\f21c",
+  ios-stats-outline: "\f21b",
+  ios-stopwatch: "\f4b5",
+  ios-stopwatch-outline: "\f4b4",
+  ios-subway: "\f21e",
+  ios-subway-outline: "\f21d",
+  ios-sunny: "\f4b7",
+  ios-sunny-outline: "\f4b6",
+  ios-swap: "\f21f",
+  ios-switch: "\f221",
+  ios-switch-outline: "\f220",
+  ios-sync: "\f222",
+  ios-tablet-landscape: "\f223",
+  ios-tablet-portrait: "\f24e",
+  ios-tennisball: "\f4bb",
+  ios-tennisball-outline: "\f4ba",
+  ios-text: "\f250",
+  ios-text-outline: "\f24f",
+  ios-thermometer: "\f252",
+  ios-thermometer-outline: "\f251",
+  ios-thumbs-down: "\f254",
+  ios-thumbs-down-outline: "\f253",
+  ios-thumbs-up: "\f256",
+  ios-thumbs-up-outline: "\f255",
+  ios-thunderstorm: "\f4bd",
+  ios-thunderstorm-outline: "\f4bc",
+  ios-time: "\f4bf",
+  ios-time-outline: "\f4be",
+  ios-timer: "\f4c1",
+  ios-timer-outline: "\f4c0",
+  ios-train: "\f258",
+  ios-train-outline: "\f257",
+  ios-transgender: "\f259",
+  ios-trash: "\f4c5",
+  ios-trash-outline: "\f4c4",
+  ios-trending-down: "\f25a",
+  ios-trending-up: "\f25b",
+  ios-trophy: "\f25d",
+  ios-trophy-outline: "\f25c",
+  ios-umbrella: "\f25f",
+  ios-umbrella-outline: "\f25e",
+  ios-undo: "\f4c7",
+  ios-undo-outline: "\f4c6",
+  ios-unlock: "\f261",
+  ios-unlock-outline: "\f260",
+  ios-videocam: "\f4cd",
+  ios-videocam-outline: "\f4cc",
+  ios-volume-down: "\f262",
+  ios-volume-mute: "\f263",
+  ios-volume-off: "\f264",
+  ios-volume-up: "\f265",
+  ios-walk: "\f266",
+  ios-warning: "\f268",
+  ios-warning-outline: "\f267",
+  ios-watch: "\f269",
+  ios-water: "\f26b",
+  ios-water-outline: "\f26a",
+  ios-wifi: "\f26d",
+  ios-wifi-outline: "\f26c",
+  ios-wine: "\f26f",
+  ios-wine-outline: "\f26e",
+  ios-woman: "\f271",
+  ios-woman-outline: "\f270",
+  md-add: "\f273",
+  md-add-circle: "\f272",
+  md-alarm: "\f274",
+  md-albums: "\f275",
+  md-alert: "\f276",
+  md-american-football: "\f277",
+  md-analytics: "\f278",
+  md-aperture: "\f279",
+  md-apps: "\f27a",
+  md-appstore: "\f27b",
+  md-archive: "\f27c",
+  md-arrow-back: "\f27d",
+  md-arrow-down: "\f27e",
+  md-arrow-dropdown: "\f280",
+  md-arrow-dropdown-circle: "\f27f",
+  md-arrow-dropleft: "\f282",
+  md-arrow-dropleft-circle: "\f281",
+  md-arrow-dropright: "\f284",
+  md-arrow-dropright-circle: "\f283",
+  md-arrow-dropup: "\f286",
+  md-arrow-dropup-circle: "\f285",
+  md-arrow-forward: "\f287",
+  md-arrow-round-back: "\f288",
+  md-arrow-round-down: "\f289",
+  md-arrow-round-forward: "\f28a",
+  md-arrow-round-up: "\f28b",
+  md-arrow-up: "\f28c",
+  md-at: "\f28d",
+  md-attach: "\f28e",
+  md-backspace: "\f28f",
+  md-barcode: "\f290",
+  md-baseball: "\f291",
+  md-basket: "\f292",
+  md-basketball: "\f293",
+  md-battery-charging: "\f294",
+  md-battery-dead: "\f295",
+  md-battery-full: "\f296",
+  md-beaker: "\f297",
+  md-beer: "\f298",
+  md-bicycle: "\f299",
+  md-bluetooth: "\f29a",
+  md-boat: "\f29b",
+  md-body: "\f29c",
+  md-bonfire: "\f29d",
+  md-book: "\f29e",
+  md-bookmark: "\f29f",
+  md-bookmarks: "\f2a0",
+  md-bowtie: "\f2a1",
+  md-briefcase: "\f2a2",
+  md-browsers: "\f2a3",
+  md-brush: "\f2a4",
+  md-bug: "\f2a5",
+  md-build: "\f2a6",
+  md-bulb: "\f2a7",
+  md-bus: "\f2a8",
+  md-cafe: "\f2a9",
+  md-calculator: "\f2aa",
+  md-calendar: "\f2ab",
+  md-call: "\f2ac",
+  md-camera: "\f2ad",
+  md-car: "\f2b2",
+  md-card: "\f2b3",
+  md-cart: "\f2b4",
+  md-cash: "\f2b5",
+  md-chatboxes: "\f2b6",
+  md-chatbubbles: "\f2b7",
+  md-checkbox: "\f2b9",
+  md-checkbox-outline: "\f2b8",
+  md-checkmark: "\f2bc",
+  md-checkmark-circle: "\f2bb",
+  md-checkmark-circle-outline: "\f2ba",
+  md-clipboard: "\f2bd",
+  md-clock: "\f2be",
+  md-close: "\f2c0",
+  md-close-circle: "\f2bf",
+  md-closed-captioning: "\f2c1",
+  md-cloud: "\f2c9",
+  md-cloud-circle: "\f2c2",
+  md-cloud-done: "\f2c3",
+  md-cloud-download: "\f2c6",
+  md-cloud-outline: "\f2c7",
+  md-cloud-upload: "\f2c8",
+  md-cloudy: "\f2cb",
+  md-cloudy-night: "\f2ca",
+  md-code: "\f2ce",
+  md-code-download: "\f2cc",
+  md-code-working: "\f2cd",
+  md-cog: "\f2cf",
+  md-color-fill: "\f2d0",
+  md-color-filter: "\f2d1",
+  md-color-palette: "\f2d2",
+  md-color-wand: "\f2d3",
+  md-compass: "\f2d4",
+  md-construct: "\f2d5",
+  md-contact: "\f2d6",
+  md-contacts: "\f2d7",
+  md-contract: "\f2d8",
+  md-contrast: "\f2d9",
+  md-copy: "\f2da",
+  md-create: "\f2db",
+  md-crop: "\f2dc",
+  md-cube: "\f2dd",
+  md-cut: "\f2de",
+  md-desktop: "\f2df",
+  md-disc: "\f2e0",
+  md-document: "\f2e1",
+  md-done-all: "\f2e2",
+  md-download: "\f2e3",
+  md-easel: "\f2e4",
+  md-egg: "\f2e5",
+  md-exit: "\f2e6",
+  md-expand: "\f2e7",
+  md-eye: "\f2e9",
+  md-eye-off: "\f2e8",
+  md-fastforward: "\f2ea",
+  md-female: "\f2eb",
+  md-filing: "\f2ec",
+  md-film: "\f2ed",
+  md-finger-print: "\f2ee",
+  md-flag: "\f2ef",
+  md-flame: "\f2f0",
+  md-flash: "\f2f1",
+  md-flask: "\f2f2",
+  md-flower: "\f2f3",
+  md-folder: "\f2f5",
+  md-folder-open: "\f2f4",
+  md-football: "\f2f6",
+  md-funnel: "\f2f7",
+  md-game-controller-a: "\f2f8",
+  md-game-controller-b: "\f2f9",
+  md-git-branch: "\f2fa",
+  md-git-commit: "\f2fb",
+  md-git-compare: "\f2fc",
+  md-git-merge: "\f2fd",
+  md-git-network: "\f2fe",
+  md-git-pull-request: "\f2ff",
+  md-glasses: "\f300",
+  md-globe: "\f301",
+  md-grid: "\f302",
+  md-hammer: "\f303",
+  md-hand: "\f304",
+  md-happy: "\f305",
+  md-headset: "\f306",
+  md-heart: "\f308",
+  md-heart-outline: "\f307",
+  md-help: "\f30b",
+  md-help-buoy: "\f309",
+  md-help-circle: "\f30a",
+  md-home: "\f30c",
+  md-ice-cream: "\f30d",
+  md-image: "\f30e",
+  md-images: "\f30f",
+  md-infinite: "\f310",
+  md-information: "\f312",
+  md-information-circle: "\f311",
+  md-ionic: "\f313",
+  md-ionitron: "\f314",
+  md-jet: "\f315",
+  md-key: "\f316",
+  md-keypad: "\f317",
+  md-laptop: "\f318",
+  md-leaf: "\f319",
+  md-list: "\f31b",
+  md-list-box: "\f31a",
+  md-locate: "\f31c",
+  md-lock: "\f31d",
+  md-log-in: "\f31e",
+  md-log-out: "\f31f",
+  md-magnet: "\f320",
+  md-mail: "\f322",
+  md-mail-open: "\f321",
+  md-male: "\f323",
+  md-man: "\f324",
+  md-map: "\f325",
+  md-medal: "\f326",
+  md-medical: "\f327",
+  md-medkit: "\f328",
+  md-megaphone: "\f329",
+  md-menu: "\f32a",
+  md-mic: "\f32c",
+  md-mic-off: "\f32b",
+  md-microphone: "\f32d",
+  md-moon: "\f32e",
+  md-more: "\f1c9",
+  md-move: "\f331",
+  md-musical-note: "\f332",
+  md-musical-notes: "\f333",
+  md-navigate: "\f334",
+  md-no-smoking: "\f335",
+  md-notifications: "\f338",
+  md-notifications-off: "\f336",
+  md-notifications-outline: "\f337",
+  md-nuclear: "\f339",
+  md-nutrition: "\f33a",
+  md-open: "\f33b",
+  md-options: "\f33c",
+  md-outlet: "\f33d",
+  md-paper: "\f33f",
+  md-paper-plane: "\f33e",
+  md-partly-sunny: "\f340",
+  md-pause: "\f341",
+  md-paw: "\f342",
+  md-people: "\f343",
+  md-person: "\f345",
+  md-person-add: "\f344",
+  md-phone-landscape: "\f346",
+  md-phone-portrait: "\f347",
+  md-photos: "\f348",
+  md-pie: "\f349",
+  md-pin: "\f34a",
+  md-pint: "\f34b",
+  md-pizza: "\f354",
+  md-plane: "\f355",
+  md-planet: "\f356",
+  md-play: "\f357",
+  md-podium: "\f358",
+  md-power: "\f359",
+  md-pricetag: "\f35a",
+  md-pricetags: "\f35b",
+  md-print: "\f35c",
+  md-pulse: "\f35d",
+  md-qr-scanner: "\f35e",
+  md-quote: "\f35f",
+  md-radio: "\f362",
+  md-radio-button-off: "\f360",
+  md-radio-button-on: "\f361",
+  md-rainy: "\f363",
+  md-recording: "\f364",
+  md-redo: "\f365",
+  md-refresh: "\f366",
+  md-refresh-circle: "\f228",
+  md-remove: "\f368",
+  md-remove-circle: "\f367",
+  md-reorder: "\f369",
+  md-repeat: "\f36a",
+  md-resize: "\f36b",
+  md-restaurant: "\f36c",
+  md-return-left: "\f36d",
+  md-return-right: "\f36e",
+  md-reverse-camera: "\f36f",
+  md-rewind: "\f370",
+  md-ribbon: "\f371",
+  md-rose: "\f372",
+  md-sad: "\f373",
+  md-school: "\f374",
+  md-search: "\f375",
+  md-send: "\f376",
+  md-settings: "\f377",
+  md-share: "\f379",
+  md-share-alt: "\f378",
+  md-shirt: "\f37a",
+  md-shuffle: "\f37b",
+  md-skip-backward: "\f37c",
+  md-skip-forward: "\f37d",
+  md-snow: "\f37e",
+  md-speedometer: "\f37f",
+  md-square: "\f381",
+  md-square-outline: "\f380",
+  md-star: "\f384",
+  md-star-half: "\f382",
+  md-star-outline: "\f383",
+  md-stats: "\f385",
+  md-stopwatch: "\f386",
+  md-subway: "\f387",
+  md-sunny: "\f388",
+  md-swap: "\f389",
+  md-switch: "\f38a",
+  md-sync: "\f38b",
+  md-tablet-landscape: "\f38c",
+  md-tablet-portrait: "\f38d",
+  md-tennisball: "\f38e",
+  md-text: "\f38f",
+  md-thermometer: "\f390",
+  md-thumbs-down: "\f391",
+  md-thumbs-up: "\f392",
+  md-thunderstorm: "\f393",
+  md-time: "\f394",
+  md-timer: "\f395",
+  md-train: "\f396",
+  md-transgender: "\f397",
+  md-trash: "\f398",
+  md-trending-down: "\f399",
+  md-trending-up: "\f39a",
+  md-trophy: "\f39b",
+  md-umbrella: "\f39c",
+  md-undo: "\f39d",
+  md-unlock: "\f39e",
+  md-videocam: "\f39f",
+  md-volume-down: "\f3a0",
+  md-volume-mute: "\f3a1",
+  md-volume-off: "\f3a2",
+  md-volume-up: "\f3a3",
+  md-walk: "\f3a4",
+  md-warning: "\f3a5",
+  md-watch: "\f3a6",
+  md-water: "\f3a7",
+  md-wifi: "\f3a8",
+  md-wine: "\f3a9",
+  md-woman: "\f3aa",
+  social-android: "\f225",
+  social-angular: "\f4d9",
+  social-apple: "\f227",
+  social-bitcoin: "\f2af",
+  social-buffer: "\f229",
+  social-chrome: "\f4db",
+  social-codepen: "\f4dd",
+  social-css3: "\f4df",
+  social-designernews: "\f22b",
+  social-dribbble: "\f22d",
+  social-dropbox: "\f22f",
+  social-euro: "\f4e1",
+  social-facebook: "\f231",
+  social-foursquare: "\f34d",
+  social-freebsd-devil: "\f2c4",
+  social-github: "\f233",
+  social-google: "\f34f",
+  social-googleplus: "\f235",
+  social-hackernews: "\f237",
+  social-html5: "\f4e3",
+  social-instagram: "\f351",
+  social-javascript: "\f4e5",
+  social-linkedin: "\f239",
+  social-markdown: "\f4e6",
+  social-nodejs: "\f4e7",
+  social-octocat: "\f4e8",
+  social-pinterest: "\f2b1",
+  social-playstation: "\f3ab",
+  social-python: "\f4e9",
+  social-reddit: "\f23b",
+  social-rss: "\f23d",
+  social-sass: "\f4ea",
+  social-skype: "\f23f",
+  social-snapchat: "\f4ec",
+  social-steam: "\f3ac",
+  social-tumblr: "\f241",
+  social-tux: "\f2c5",
+  social-twitch: "\f4ee",
+  social-twitter: "\f243",
+  social-usd: "\f353",
+  social-vimeo: "\f245",
+  social-whatsapp: "\f4f0",
+  social-windows: "\f247",
+  social-wordpress: "\f249",
+  social-xbox: "\f3ad",
+  social-yahoo: "\f24b",
+  social-yen: "\f4f2",
+  social-youtube: "\f24d",
+);
