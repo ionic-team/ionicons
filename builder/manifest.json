@@ -1,5 +1,5 @@
 {
-  "build_hash": "50e1b91c54c257b393b83307fd3561a7",
+  "build_hash": "9544db289e116cde85ee59bd36598f21",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -717,6 +717,10 @@
       "name": "build-logo-simplified"
     },
     {
+      "code": "0xf15f",
+      "name": "build-order-box"
+    },
+    {
       "code": "0xf13c",
       "name": "build-order-status"
     },
@@ -739,6 +743,10 @@
     {
       "code": "0xf157",
       "name": "build-social-stumbleupon"
+    },
+    {
+      "code": "0xf160",
+      "name": "build-truck"
     },
     {
       "code": "0xf14c",
