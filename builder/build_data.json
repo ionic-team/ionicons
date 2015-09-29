@@ -1,5 +1,5 @@
 {
-  "build_hash": "1fb1aaca3ee9077397a5b9743ba56ca3",
+  "build_hash": "3e0d3c91b3dde5d9c64c5a6c000d9eae",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -247,6 +247,10 @@
     {
       "code": "0xf201",
       "name": "loop"
+    },
+    {
+      "code": "0xf20d",
+      "name": "navicon-round"
     },
     {
       "code": "0xf15a",
