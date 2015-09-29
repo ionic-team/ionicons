@@ -1,5 +1,5 @@
 {
-  "build_hash": "50e1b91c54c257b393b83307fd3561a7",
+  "build_hash": "934e93138426af8f0bcf3663bdd757b9",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -45,6 +45,10 @@
       "name": "briefcase"
     },
     {
+      "code": "0xf165",
+      "name": "build-box"
+    },
+    {
       "code": "0xf138",
       "name": "build-cart"
     },
@@ -57,16 +61,16 @@
       "name": "build-cart-small"
     },
     {
+      "code": "0xf166",
+      "name": "build-delivery-truck"
+    },
+    {
       "code": "0xf159",
       "name": "build-logo"
     },
     {
       "code": "0xf158",
       "name": "build-logo-simplified"
-    },
-    {
-      "code": "0xf15f",
-      "name": "build-order-box"
     },
     {
       "code": "0xf13c",
@@ -91,10 +95,6 @@
     {
       "code": "0xf157",
       "name": "build-social-stumbleupon"
-    },
-    {
-      "code": "0xf160",
-      "name": "build-truck"
     },
     {
       "code": "0xf14c",

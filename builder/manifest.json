@@ -1,5 +1,5 @@
 {
-  "build_hash": "9544db289e116cde85ee59bd36598f21",
+  "build_hash": "d1fa551f200e6baefaac968f012902ce",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -697,6 +697,10 @@
       "name": "bug"
     },
     {
+      "code": "0xf165",
+      "name": "build-box"
+    },
+    {
       "code": "0xf138",
       "name": "build-cart"
     },
@@ -709,6 +713,10 @@
       "name": "build-cart-small"
     },
     {
+      "code": "0xf166",
+      "name": "build-delivery-truck"
+    },
+    {
       "code": "0xf159",
       "name": "build-logo"
     },
@@ -719,6 +727,10 @@
     {
       "code": "0xf15f",
       "name": "build-order-box"
+    },
+    {
+      "code": "0xf164",
+      "name": "build-order-box-01"
     },
     {
       "code": "0xf13c",
@@ -747,6 +759,14 @@
     {
       "code": "0xf160",
       "name": "build-truck"
+    },
+    {
+      "code": "0xf162",
+      "name": "build-truck-01"
+    },
+    {
+      "code": "0xf161",
+      "name": "build-truck2"
     },
     {
       "code": "0xf14c",
@@ -2355,6 +2375,10 @@
     {
       "code": "0xf2a4",
       "name": "nuclear"
+    },
+    {
+      "code": "0xf163",
+      "name": "order-box2-01"
     },
     {
       "code": "0xf342",
