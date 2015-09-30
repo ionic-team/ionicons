@@ -697,10 +697,6 @@
       "name": "bug"
     },
     {
-      "code": "0xf165",
-      "name": "build-box"
-    },
-    {
       "code": "0xf138",
       "name": "build-cart"
     },
@@ -713,24 +709,12 @@
       "name": "build-cart-small"
     },
     {
-      "code": "0xf166",
-      "name": "build-delivery-truck"
-    },
-    {
       "code": "0xf159",
       "name": "build-logo"
     },
     {
       "code": "0xf158",
       "name": "build-logo-simplified"
-    },
-    {
-      "code": "0xf15f",
-      "name": "build-order-box"
-    },
-    {
-      "code": "0xf164",
-      "name": "build-order-box-01"
     },
     {
       "code": "0xf13c",
@@ -755,18 +739,6 @@
     {
       "code": "0xf157",
       "name": "build-social-stumbleupon"
-    },
-    {
-      "code": "0xf160",
-      "name": "build-truck"
-    },
-    {
-      "code": "0xf162",
-      "name": "build-truck-01"
-    },
-    {
-      "code": "0xf161",
-      "name": "build-truck2"
     },
     {
       "code": "0xf14c",
@@ -2971,10 +2943,6 @@
     {
       "code": "0xf356",
       "name": "trophy"
-    },
-    {
-      "code": "0xf15e",
-      "name": "truck"
     },
     {
       "code": "0xf4f7",
