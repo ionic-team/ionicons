@@ -1,5 +1,5 @@
 {
-  "build_hash": "9544db289e116cde85ee59bd36598f21",
+  "build_hash": "d1fa551f200e6baefaac968f012902ce",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -717,10 +717,6 @@
       "name": "build-logo-simplified"
     },
     {
-      "code": "0xf15f",
-      "name": "build-order-box"
-    },
-    {
       "code": "0xf13c",
       "name": "build-order-status"
     },
@@ -743,10 +739,6 @@
     {
       "code": "0xf157",
       "name": "build-social-stumbleupon"
-    },
-    {
-      "code": "0xf160",
-      "name": "build-truck"
     },
     {
       "code": "0xf14c",
@@ -2357,6 +2349,10 @@
       "name": "nuclear"
     },
     {
+      "code": "0xf163",
+      "name": "order-box2-01"
+    },
+    {
       "code": "0xf342",
       "name": "outlet"
     },
@@ -2947,10 +2943,6 @@
     {
       "code": "0xf356",
       "name": "trophy"
-    },
-    {
-      "code": "0xf15e",
-      "name": "truck"
     },
     {
       "code": "0xf4f7",
