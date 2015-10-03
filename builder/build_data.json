@@ -1,5 +1,5 @@
 {
-  "build_hash": "934e93138426af8f0bcf3663bdd757b9",
+  "build_hash": "d1fa551f200e6baefaac968f012902ce",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -45,7 +45,7 @@
       "name": "briefcase"
     },
     {
-      "code": "0xf165",
+      "code": "0xf15e",
       "name": "build-box"
     },
     {
@@ -61,7 +61,7 @@
       "name": "build-cart-small"
     },
     {
-      "code": "0xf166",
+      "code": "0xf15f",
       "name": "build-delivery-truck"
     },
     {
@@ -235,6 +235,10 @@
     {
       "code": "0xf4b2",
       "name": "ios-star-outline"
+    },
+    {
+      "code": "0xf4b6",
+      "name": "ios-sunny-outline"
     },
     {
       "code": "0xf1fa",
