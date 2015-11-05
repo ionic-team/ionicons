@@ -1,5 +1,5 @@
 {
-  "build_hash": "d1fa551f200e6baefaac968f012902ce",
+  "build_hash": "92ec25a6efb8681d1be6ccd5bd7cd33a",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -239,6 +239,10 @@
     {
       "code": "0xf4b6",
       "name": "ios-sunny-outline"
+    },
+    {
+      "code": "0xf4b9",
+      "name": "ios-telephone"
     },
     {
       "code": "0xf1fa",
