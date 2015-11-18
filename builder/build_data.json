@@ -1,5 +1,5 @@
 {
-  "build_hash": "92ec25a6efb8681d1be6ccd5bd7cd33a",
+  "build_hash": "20e2538b86cda5e5018e0bf5f50a1380",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -207,6 +207,10 @@
     {
       "code": "0xf3f6",
       "name": "ios-camera"
+    },
+    {
+      "code": "0xf422",
+      "name": "ios-email-outline"
     },
     {
       "code": "0xf453",

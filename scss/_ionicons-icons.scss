@@ -53,6 +53,7 @@
 .#{$ionicons-prefix}help-circled:before,
 .#{$ionicons-prefix}home:before,
 .#{$ionicons-prefix}ios-camera:before,
+.#{$ionicons-prefix}ios-email-outline:before,
 .#{$ionicons-prefix}ios-list-outline:before,
 .#{$ionicons-prefix}ios-plus-empty:before,
 .#{$ionicons-prefix}ios-pricetag:before,
@@ -142,6 +143,7 @@
 .#{$ionicons-prefix}help-circled:before { content: $ionicon-var-help-circled; }
 .#{$ionicons-prefix}home:before { content: $ionicon-var-home; }
 .#{$ionicons-prefix}ios-camera:before { content: $ionicon-var-ios-camera; }
+.#{$ionicons-prefix}ios-email-outline:before { content: $ionicon-var-ios-email-outline; }
 .#{$ionicons-prefix}ios-list-outline:before { content: $ionicon-var-ios-list-outline; }
 .#{$ionicons-prefix}ios-plus-empty:before { content: $ionicon-var-ios-plus-empty; }
 .#{$ionicons-prefix}ios-pricetag:before { content: $ionicon-var-ios-pricetag; }
