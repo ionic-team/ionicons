@@ -1,11 +1,14 @@
 from subprocess import call
 import os
+import subprocess
 import json
+import codecs
 
 
 BUILDER_PATH = os.path.dirname(os.path.abspath(__file__))
 ROOT_PATH = os.path.join(BUILDER_PATH, '..')
 INPUT_SVG_DIR = os.path.join(ROOT_PATH, 'src')
+OUTPUT_SVG_DIR = os.path.join(ROOT_PATH, 'svg')
 DATA_PATH = os.path.join(ROOT_PATH, 'data')
 FONTS_FOLDER_PATH = os.path.join(ROOT_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'css')
@@ -22,6 +25,7 @@ def main():
   rename_svg_glyph_names(data)
   generate_scss(data)
   generate_less(data)
+  generate_svg_files()
   generate_cheatsheet(data)
   generate_mode_cheatsheet(data)
 
@@ -64,12 +68,13 @@ def generate_data_files(data):
       print 'wtf %s' % icon_name
 
   output = '{\n' +  ',\n'.join(mode_icons) + '\n}'
-  f = open(os.path.join(DATA_PATH, 'mode-icons.json'), 'w')
+
+  f = codecs.open(os.path.join(DATA_PATH, 'mode-icons.json'), 'w', 'utf-8')
   f.write(output)
   f.close()
 
   output = '{\n' +  ',\n'.join(generic_icons) + '\n}'
-  f = open(os.path.join(DATA_PATH, 'generic-icons.json'), 'w')
+  f = codecs.open(os.path.join(DATA_PATH, 'generic-icons.json'), 'w', 'utf-8')
   f.write(output)
   f.close()
 
@@ -80,10 +85,16 @@ def generate_font_files():
   call(cmd, shell=True)
 
 
+def generate_svg_files():
+  print "Generate SVG Files"
+  cmd = 'svgo -f %s -o %s' % (INPUT_SVG_DIR, OUTPUT_SVG_DIR)
+  subprocess.call([cmd], shell=True)
+
+
 def rename_svg_glyph_names(data):
   # hacky and slow (but safe) way to rename glyph-name attributes
   svg_path = os.path.join(FONTS_FOLDER_PATH, 'ionicons.svg')
-  svg_file = open(svg_path, 'r+')
+  svg_file = codecs.open(svg_path, 'r+', 'utf-8')
   svg_text = svg_file.read()
   svg_file.seek(0)
 
@@ -122,8 +133,9 @@ def generate_less(data):
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
     d.append('@ionicon-var-%s: "%s";' % (ionicon['name'], chr_code) )
-  f = open(variables_file_path, 'w')
-  f.write( '\n'.join(d) )
+
+  f = codecs.open(variables_file_path, 'w', 'utf-8')
+  f.write( u'\n'.join(d) )
   f.close()
 
   d = []
@@ -144,7 +156,7 @@ def generate_less(data):
     chr_code = ionicon['code'].replace('0x', '\\')
     d.append('.@{ionicons-prefix}%s:before { content: @ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
 
-  f = open(icons_file_path, 'w')
+  f = codecs.open(icons_file_path, 'w', 'utf-8')
   f.write( '\n'.join(d) )
   f.close()
 
@@ -159,21 +171,20 @@ def generate_scss(data):
   icons_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-icons.scss')
 
   d = []
+  d.append('@charset "UTF-8";')
   d.append('// Ionicons Variables')
   d.append('// --------------------------\n')
   d.append('$ionicons-font-path: "../fonts" !default;')
   d.append('$ionicons-font-family: "%s" !default;' % (font_name) )
   d.append('$ionicons-version: "%s" !default;' % (font_version) )
   d.append('$ionicons-prefix: %s !default;' % (css_prefix) )
-  d.append('')
-  for ionicon in data['icons']:
-    chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('$ionicon-var-%s: "%s";' % (ionicon['name'], chr_code) )
-  f = open(variables_file_path, 'w')
-  f.write( '\n'.join(d) )
+
+  f = codecs.open(variables_file_path, 'w', 'utf-8')
+  f.write( u'\n'.join(d) )
   f.close()
 
   d = []
+  d.append('@charset "UTF-8";')
   d.append('// Ionicons Common CSS')
   d.append('// --------------------------\n')
 
@@ -186,19 +197,21 @@ def generate_scss(data):
   d.append('{')
   d.append('  @extend .ion;')
   d.append('}')
-  f = open(common_file_path, 'w')
+
+  f = codecs.open(common_file_path, 'w', 'utf-8')
   f.write( '\n'.join(d) )
   f.close()
 
   d = []
+  d.append('@charset "UTF-8";')
   d.append('// Ionicons Icon CSS')
   d.append('// --------------------------\n')
 
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.#{$ionicons-prefix}%s:before { content: $ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
+    d.append('.#{$ionicons-prefix}%s:before { content: "%s"; }' % (ionicon['name'], chr_code) )
 
-  f = open(icons_file_path, 'w')
+  f = codecs.open(icons_file_path, 'w', 'utf-8')
   f.write( '\n'.join(d) )
   f.close()
 
@@ -230,11 +243,11 @@ def generate_cheatsheet(data):
   template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
   icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'icon-row.html')
 
-  f = open(template_path, 'r')
+  f = codecs.open(template_path, 'r', 'utf-8')
   template_html = f.read()
   f.close()
 
-  f = open(icon_row_path, 'r')
+  f = codecs.open(icon_row_path, 'r', 'utf-8')
   icon_row_template = f.read()
   f.close()
 
@@ -260,7 +273,7 @@ def generate_cheatsheet(data):
   template_html = template_html.replace("{{icon_count}}", str(len(data["icons"])) )
   template_html = template_html.replace("{{content}}", '\n'.join(content) )
 
-  f = open(cheatsheet_file_path, 'w')
+  f = codecs.open(cheatsheet_file_path, 'w', 'utf-8')
   f.write(template_html)
   f.close()
 
@@ -272,11 +285,11 @@ def generate_mode_cheatsheet(data):
   template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
   icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'mode-icon-row.html')
 
-  f = open(template_path, 'r')
+  f = codecs.open(template_path, 'r', 'utf-8')
   template_html = f.read()
   f.close()
 
-  f = open(icon_row_path, 'r')
+  f = codecs.open(icon_row_path, 'r', 'utf-8')
   icon_row_template = f.read()
   f.close()
 
@@ -322,14 +335,15 @@ def generate_mode_cheatsheet(data):
   template_html = template_html.replace("{{icon_count}}", str(len(icon_names)) )
   template_html = template_html.replace("{{content}}", '\n'.join(content) )
 
-  f = open(cheatsheet_file_path, 'w')
+  f = codecs.open(cheatsheet_file_path, 'w', 'utf-8')
   f.write(template_html)
   f.close()
 
 
 def get_build_data():
   build_data_path = os.path.join(BUILDER_PATH, 'build_data.json')
-  f = open(build_data_path, 'r')
+
+  f = codecs.open(build_data_path, 'r', 'utf-8')
   data = json.loads(f.read())
   f.close()
   return data

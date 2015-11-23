@@ -1,5 +1,5 @@
 {
-  "build_hash": "a671451dd03b272a6924bed16c5d7b2d",
+  "build_hash": "faa81642273235dd6549f63dd7e23431",
   "prefix": "ion-",
   "version": "3.0.0",
   "name": "Ionicons",
@@ -1097,6 +1097,14 @@
       "name": "ios-leaf-outline"
     },
     {
+      "code": "0xf22a",
+      "name": "ios-link"
+    },
+    {
+      "code": "0xf1ca",
+      "name": "ios-link-outline"
+    },
+    {
       "code": "0xf454",
       "name": "ios-list"
     },
@@ -1755,6 +1763,10 @@
     {
       "code": "0xf218",
       "name": "ios-snow"
+    },
+    {
+      "code": "0xf22c",
+      "name": "ios-snow-outline"
     },
     {
       "code": "0xf4b0",
@@ -2683,6 +2695,10 @@
     {
       "code": "0xf319",
       "name": "md-leaf"
+    },
+    {
+      "code": "0xf22e",
+      "name": "md-link"
     },
     {
       "code": "0xf31b",

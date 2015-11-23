@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // Ionicons Common CSS
 // --------------------------
 
@@ -275,6 +276,8 @@
 .#{$ionicons-prefix}ios-laptop:before,
 .#{$ionicons-prefix}ios-leaf:before,
 .#{$ionicons-prefix}ios-leaf-outline:before,
+.#{$ionicons-prefix}ios-link:before,
+.#{$ionicons-prefix}ios-link-outline:before,
 .#{$ionicons-prefix}ios-list:before,
 .#{$ionicons-prefix}ios-list-box:before,
 .#{$ionicons-prefix}ios-list-box-outline:before,
@@ -440,6 +443,7 @@
 .#{$ionicons-prefix}ios-skip-forward:before,
 .#{$ionicons-prefix}ios-skip-forward-outline:before,
 .#{$ionicons-prefix}ios-snow:before,
+.#{$ionicons-prefix}ios-snow-outline:before,
 .#{$ionicons-prefix}ios-speedometer:before,
 .#{$ionicons-prefix}ios-speedometer-outline:before,
 .#{$ionicons-prefix}ios-square:before,
@@ -672,6 +676,7 @@
 .#{$ionicons-prefix}md-keypad:before,
 .#{$ionicons-prefix}md-laptop:before,
 .#{$ionicons-prefix}md-leaf:before,
+.#{$ionicons-prefix}md-link:before,
 .#{$ionicons-prefix}md-list:before,
 .#{$ionicons-prefix}md-list-box:before,
 .#{$ionicons-prefix}md-locate:before,

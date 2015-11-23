@@ -556,6 +556,10 @@
 
 .ion-ios-leaf-outline:before { content: "\f1a9"; }
 
+.ion-ios-link:before { content: "\f22a"; }
+
+.ion-ios-link-outline:before { content: "\f1ca"; }
+
 .ion-ios-list:before { content: "\f454"; }
 
 .ion-ios-list-box:before { content: "\f1ac"; }
@@ -885,6 +889,8 @@
 .ion-ios-skip-forward-outline:before { content: "\f216"; }
 
 .ion-ios-snow:before { content: "\f218"; }
+
+.ion-ios-snow-outline:before { content: "\f22c"; }
 
 .ion-ios-speedometer:before { content: "\f4b0"; }
 
@@ -1350,6 +1356,8 @@
 
 .ion-md-leaf:before { content: "\f319"; }
 
+.ion-md-link:before { content: "\f22e"; }
+
 .ion-md-list:before { content: "\f31b"; }
 
 .ion-md-list-box:before { content: "\f31a"; }
@@ -1719,3 +1727,5 @@
 .ion-social-yen:before { content: "\f4f2"; }
 
 .ion-social-youtube:before { content: "\f24d"; }
+
+/*# sourceMappingURL=ionicons-core.css.map */

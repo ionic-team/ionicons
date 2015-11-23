@@ -38,11 +38,15 @@ This repo already comes with all the files built and ready to go, but can also b
 
     $ gem install sass
 
-3) Add or subtract files from the `src/` folder you'd like to be apart of the font files.
+3) Install [SVGO](https://github.com/svg/svgo)
 
-4) Modify any settings in the `builder/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
+    $ npm install -g svgo
 
-5) Run the build command:
+4) Add or subtract files from the `src/` folder you'd like to be apart of the font files.
+
+5) Modify any settings in the `builder/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
+
+6) Run the build command:
 
     python ./builder/generate.py
 
