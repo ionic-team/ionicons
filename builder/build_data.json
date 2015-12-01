@@ -1,5 +1,5 @@
 {
-  "build_hash": "20e2538b86cda5e5018e0bf5f50a1380",
+  "build_hash": "a66a85be33e6441a7acade31a53f145e",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -33,8 +33,16 @@
       "name": "android-folder"
     },
     {
+      "code": "0xf3aa",
+      "name": "android-restaurant"
+    },
+    {
       "code": "0xf2f7",
       "name": "android-settings"
+    },
+    {
+      "code": "0xf262",
+      "name": "arrow-graph-up-right"
     },
     {
       "code": "0xf10e",
@@ -109,6 +117,10 @@
       "name": "build-zoom-out"
     },
     {
+      "code": "0xf26d",
+      "name": "calculator"
+    },
+    {
       "code": "0xf117",
       "name": "calendar"
     },
@@ -119,6 +131,10 @@
     {
       "code": "0xf119",
       "name": "card"
+    },
+    {
+      "code": "0xf316",
+      "name": "cash"
     },
     {
       "code": "0xf11b",
@@ -169,12 +185,20 @@
       "name": "chevron-up"
     },
     {
+      "code": "0xf127",
+      "name": "clipboard"
+    },
+    {
       "code": "0xf12a",
       "name": "close"
     },
     {
       "code": "0xf12c",
       "name": "compose"
+    },
+    {
+      "code": "0xf274",
+      "name": "connection-bars"
     },
     {
       "code": "0xf14d",
@@ -191,6 +215,10 @@
     {
       "code": "0xf132",
       "name": "email"
+    },
+    {
+      "code": "0xf3c5",
+      "name": "erlenmeyer-flask"
     },
     {
       "code": "0xf141",
@@ -211,6 +239,10 @@
     {
       "code": "0xf422",
       "name": "ios-email-outline"
+    },
+    {
+      "code": "0xf439",
+      "name": "ios-game-controller-a"
     },
     {
       "code": "0xf453",
@@ -265,6 +297,14 @@
       "name": "loop"
     },
     {
+      "code": "0xf2a2",
+      "name": "medkit"
+    },
+    {
+      "code": "0xf20a",
+      "name": "monitor"
+    },
+    {
       "code": "0xf20d",
       "name": "navicon-round"
     },
@@ -277,12 +317,24 @@
       "name": "person"
     },
     {
+      "code": "0xf212",
+      "name": "person-stalker"
+    },
+    {
       "code": "0xf215",
       "name": "play"
     },
     {
+      "code": "0xf2ab",
+      "name": "pricetags"
+    },
+    {
       "code": "0xf21a",
       "name": "printer"
+    },
+    {
+      "code": "0xf345",
+      "name": "pull-request"
     },
     {
       "code": "0xf347",
@@ -325,6 +377,10 @@
       "name": "social-twitter"
     },
     {
+      "code": "0xf353",
+      "name": "social-usd"
+    },
+    {
       "code": "0xf24c",
       "name": "social-youtube-outline"
     },
@@ -349,8 +405,16 @@
       "name": "trash-b"
     },
     {
+      "code": "0xf357",
+      "name": "university"
+    },
+    {
       "code": "0xf254",
       "name": "unlocked"
+    },
+    {
+      "code": "0xf358",
+      "name": "wand"
     }
   ]
 }
