@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-12-1: Created with FontForge (http://fontforge.org)
+2015-12-2: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150618 at Tue Dec  1 11:38:38 2015
+Created by FontForge 20150618 at Wed Dec  2 14:43:48 2015
  By Mark Weiss
 Copyright (c) 2015, Mark Weiss
 </metadata>
@@ -22,7 +22,7 @@ Copyright (c) 2015, Mark Weiss
     bbox="-0.5 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F10E-F4B9"
+    unicode-range="U+F102-F4B9"
   />
     <missing-glyph />
     <glyph glyph-name="ion-android-arrow-dropdown" unicode="&#xf35f;" horiz-adv-x="256" 
@@ -46,6 +46,8 @@ d="M116 168l-91 89c-34 33 -34 86 0 119l153 -148zM264 206l-33 -31l150 -145l-30 -3
 d="M366 171l47 -34c3 -3 4 -10 2 -14l-43 -71c-2 -4 -7 -7 -12 -5l-54 21c-12 -8 -23 -16 -36 -21l-8 -55c-1 -4 -6 -8 -11 -8h-85c-5 0 -10 3 -11 8l-8 55c-13 5 -25 13 -36 21l-54 -21c-4 -2 -10 1 -12 5l-43 71c-3 5 -2 11 2 14l45 34c0 7 -1 14 -1 21s1 14 1 21l-46 34
 c-3 3 -4 10 -2 14l43 71c2 4 7 7 12 5l54 -21c12 8 23 16 36 21l8 55c1 4 6 8 11 8h85c5 0 10 -4 11 -8l7 -55c13 -5 25 -13 36 -21l53 21c4 2 11 -1 13 -5l43 -71c3 -5 2 -11 -2 -14l-45 -34c0 -7 1 -14 1 -21s0 -15 -1 -21zM207 119c41 0 75 32 75 73s-34 73 -75 73
 s-74 -32 -74 -73s33 -73 74 -73z" />
+    <glyph glyph-name="ion-archive" unicode="&#xf102;" 
+d="M224 140l-128 116h80v96h96v-96h80zM433 151c11 -6 17 -19 15 -32l-9 -67c-2 -13 -9 -20 -28 -20h-374c-18 0 -26 7 -28 20l-9 67c-2 13 3 26 14 32l72 55h42l-62 -62h50c2 0 5 -1 6 -3l18 -45h168l18 45c1 2 3 3 5 3h51l-62 62h42z" />
     <glyph glyph-name="ion-arrow-graph-up-right" unicode="&#xf262;" 
 d="M288 320h160v-160l-61 61l-131 -141l-107 112l-149 -128l149 203l107 -107l94 98z" />
     <glyph glyph-name="ion-arrow-up-c" unicode="&#xf10e;" horiz-adv-x="274" 
