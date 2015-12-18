@@ -1,5 +1,5 @@
 {
-  "build_hash": "2a3dd6365ea33683925256e07c40b20e",
+  "build_hash": "01dd78699e2f95d79686389e34be95c1",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -305,6 +305,10 @@
       "name": "medkit"
     },
     {
+      "code": "0xf209",
+      "name": "minus"
+    },
+    {
       "code": "0xf20a",
       "name": "monitor"
     },
@@ -327,6 +331,10 @@
     {
       "code": "0xf215",
       "name": "play"
+    },
+    {
+      "code": "0xf218",
+      "name": "plus"
     },
     {
       "code": "0xf2ab",
