@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-12-18: Created with FontForge (http://fontforge.org)
+2015-12-23: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Fri Dec 18 09:10:53 2015
+Created by FontForge 20150302 at Wed Dec 23 14:32:03 2015
  By Carly Culver
 Copyright (c) 2015, Carly Culver
 </metadata>
@@ -266,6 +266,9 @@ c0 -43 -3 -32 60 -55c64 -24 79 -38 81 -49c2 -14 2 -40 2 -40z" />
 d="M309 215c7 -6 11 -14 11 -23s-4 -17 -11 -23l-278 -166c-4 -2 -7 -3 -11 -3c-11 0 -20 9 -20 20v0v344v0c0 11 9 20 20 20c4 0 8 -1 11 -3z" />
     <glyph glyph-name="ion-plus" unicode="&#xf218;" horiz-adv-x="384" 
 d="M384 224v-64h-160v-160h-64v160h-160v64h160v160h64v-160h160z" />
+    <glyph glyph-name="ion-pricetag" unicode="&#xf2aa;" 
+d="M439 187c12 -12 12 -31 0 -43l-165 -167c-11 -11 -30 -11 -42 -1l-3 3l-206 209l-6 5c-6 7 -9 15 -10 24v0v2v0l-7 98v4v0c0 12 4 24 13 33l49 49c8 9 20 13 31 13h4l100 -4v0c12 0 22 -4 30 -12v0l2 -2v0l210 -211v0v0zM112 256c26 0 48 22 48 48s-22 48 -48 48
+s-48 -22 -48 -48s22 -48 48 -48z" />
     <glyph glyph-name="ion-pricetags" unicode="&#xf2ab;" 
 d="M440 209c10 -11 11 -28 0 -39l-29 -29c11 11 10 28 0 39v0v0l-190 191v0l-1 1h-1c-8 7 -16 12 -27 12v0l-90 3h-4c-9 0 -19 -3 -26 -10l28 27c8 8 17 12 27 12h4l90 -4v0c11 0 19 -4 27 -11h1l1 -1v0l190 -191v0v0zM396 166v0c11 -11 11 -29 0 -40l-108 -109v1l-26 -27
 l-2 -2l-13 -13c-10 -10 -26 -10 -37 -1l-3 3l-186 188l-5 5c-5 6 -9 14 -10 22v0v2v0l-6 88v3v1c0 11 4 21 12 29l44 45l1 1l1 1c7 6 17 9 26 9h4l90 -3v0c11 0 19 -4 27 -11v0l2 -1v0l189 -191v0zM79 308c-12 -8 -21 -21 -21 -37c0 -24 19 -43 43 -43c16 0 29 9 37 21
