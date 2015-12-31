@@ -1,5 +1,5 @@
 {
-  "build_hash": "ad800f0a21ffca514ef5031206a5df08",
+  "build_hash": "304130850ce6c30ffaf46cf145096fce",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -395,6 +395,10 @@
     {
       "code": "0xf353",
       "name": "social-usd"
+    },
+    {
+      "code": "0xf24d",
+      "name": "social-youtube"
     },
     {
       "code": "0xf24c",
