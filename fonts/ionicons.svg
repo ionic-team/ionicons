@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-12-23: Created with FontForge (http://fontforge.org)
+2015-12-30: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Wed Dec 23 14:32:03 2015
+Created by FontForge 20150302 at Wed Dec 30 17:06:13 2015
  By Carly Culver
 Copyright (c) 2015, Carly Culver
 </metadata>
@@ -317,6 +317,9 @@ s-16 5 -26 8v-107c6 1 10 2 14 3c11 3 20 8 27 13s11 11 14 18z" />
 d="M265 352c65 0 119 -1 168 -3h1h1c23 0 42 -22 42 -49v-2v-1c2 -34 3 -69 3 -105v0v0c0 -36 -1 -70 -3 -104v-2v-1c0 -14 -5 -26 -14 -36c-8 -9 -17 -13 -28 -13h-1h-1c-53 -2 -108 -4 -166 -4h-11v0v0h-11c-58 0 -114 2 -166 4h-1h-1c-11 0 -20 4 -28 13
 c-9 10 -14 22 -14 36v1v2c-2 34 -3 69 -3 104v0v0c0 35 1 71 3 105v1v1c0 27 19 49 42 49h1h1c50 2 103 4 168 4h9h9zM265 384v0c58 0 115 0 170 -3c41 0 74 -36 74 -81c2 -36 3 -72 3 -108s-1 -71 -3 -107c0 -45 -33 -81 -74 -81c-55 -3 -111 -4 -168 -4h-11h-11
 c-57 0 -113 1 -168 4c-41 0 -74 36 -74 81c-2 36 -3 71 -3 107s2 71 4 107c0 45 32 82 73 82c55 2 112 3 170 3h9h9zM207 94v197l145 -99z" />
+    <glyph glyph-name="ion-social-youtube" unicode="&#xf24d;" horiz-adv-x="512" 
+d="M509 299c2 -36 3 -71 3 -107s-1 -71 -3 -107c0 -45 -33 -81 -74 -81c-58 -3 -118 -4 -179 -4s-121 1 -179 4c-41 0 -74 36 -74 81c-2 36 -3 71 -3 107s2 71 4 107c0 45 32 81 73 81c55 3 112 4 170 4h9h9c58 0 115 -1 170 -4c41 0 74 -36 74 -81zM207 94l145 98l-145 99
+v-197z" />
     <glyph glyph-name="ion-star" unicode="&#xf24e;" 
 d="M448 248l-139 -104l55 -176l-140 112l-140 -112l55 176l-139 104h172l52 168l53 -168h171z" />
     <glyph glyph-name="ion-thumbsdown" unicode="&#xf250;" horiz-adv-x="384" 
