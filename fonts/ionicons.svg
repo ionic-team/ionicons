@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-12-30: Created with FontForge (http://fontforge.org)
+2016-1-5: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Wed Dec 30 17:06:13 2015
+Created by FontForge 20150302 at Tue Jan  5 11:05:04 2016
  By Carly Culver
-Copyright (c) 2015, Carly Culver
+Copyright (c) 2016, Carly Culver
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -110,6 +110,8 @@ h-35z" />
     <glyph glyph-name="ion-build-social-stumbleupon" unicode="&#xf157;" horiz-adv-x="512" 
 d="M424 243h88v-71c0 -63 -51 -114 -114 -114s-114 50 -115 113v71l35 -16l52 15v-71c0 -15 12 -27 27 -27s27 12 27 27v73zM318 286l-35 16v31c0 15 -12 27 -27 27s-27 -12 -27 -27v-163c-1 -62 -52 -112 -115 -112s-114 51 -114 114v71h88v-70c0 -15 12 -27 27 -27
 s27 12 27 27v165c2 61 52 110 114 110s112 -50 114 -111v-36z" />
+    <glyph glyph-name="ion-build-social-youtube-outline" unicode="&#xf160;" horiz-adv-x="0" 
+ />
     <glyph glyph-name="ion-build-user" unicode="&#xf14c;" horiz-adv-x="356" 
 d="M340 136l-97 26c-18 -20 -40 -34 -65 -34s-47 14 -65 34l-97 -26c-9 -2 -16 -12 -16 -21v-143c0 -9 8 -17 17 -17h322c9 0 17 8 17 17v143c0 9 -7 19 -16 21zM178 178c53 0 97 55 97 122s-44 122 -97 122s-97 -55 -97 -122s44 -122 97 -122z" />
     <glyph glyph-name="ion-build-zoom-in" unicode="&#xf153;" horiz-adv-x="399" 
