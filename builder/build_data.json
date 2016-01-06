@@ -1,5 +1,5 @@
 {
-  "build_hash": "faa81642273235dd6549f63dd7e23431",
+  "build_hash": "",
   "prefix": "ion-",
   "version": "3.0.0",
   "name": "Ionicons",
@@ -15,6 +15,10 @@
     {
       "code": "0xf100",
       "name": "ios-add-circle-outline"
+    },
+    {
+      "code": "0xf102",
+      "name": "ios-add-outline"
     },
     {
       "code": "0xf3c8",
@@ -93,8 +97,16 @@
       "name": "ios-arrow-back"
     },
     {
+      "code": "0xf3cf",
+      "name": "ios-arrow-back-outline"
+    },
+    {
       "code": "0xf3d0",
       "name": "ios-arrow-down"
+    },
+    {
+      "code": "0xf3d0",
+      "name": "ios-arrow-down-outline"
     },
     {
       "code": "0xf110",
@@ -105,12 +117,28 @@
       "name": "ios-arrow-dropdown-circle"
     },
     {
+      "code": "0xf10f",
+      "name": "ios-arrow-dropdown-circle-outline"
+    },
+    {
+      "code": "0xf110",
+      "name": "ios-arrow-dropdown-outline"
+    },
+    {
       "code": "0xf112",
       "name": "ios-arrow-dropleft"
     },
     {
       "code": "0xf111",
       "name": "ios-arrow-dropleft-circle"
+    },
+    {
+      "code": "0xf111",
+      "name": "ios-arrow-dropleft-circle-outline"
+    },
+    {
+      "code": "0xf112",
+      "name": "ios-arrow-dropleft-outline"
     },
     {
       "code": "0xf114",
@@ -121,6 +149,14 @@
       "name": "ios-arrow-dropright-circle"
     },
     {
+      "code": "0xf113",
+      "name": "ios-arrow-dropright-circle-outline"
+    },
+    {
+      "code": "0xf114",
+      "name": "ios-arrow-dropright-outline"
+    },
+    {
       "code": "0xf116",
       "name": "ios-arrow-dropup"
     },
@@ -129,28 +165,60 @@
       "name": "ios-arrow-dropup-circle"
     },
     {
+      "code": "0xf115",
+      "name": "ios-arrow-dropup-circle-outline"
+    },
+    {
+      "code": "0xf116",
+      "name": "ios-arrow-dropup-outline"
+    },
+    {
       "code": "0xf3d1",
       "name": "ios-arrow-forward"
+    },
+    {
+      "code": "0xf3d1",
+      "name": "ios-arrow-forward-outline"
     },
     {
       "code": "0xf117",
       "name": "ios-arrow-round-back"
     },
     {
+      "code": "0xf117",
+      "name": "ios-arrow-round-back-outline"
+    },
+    {
       "code": "0xf118",
       "name": "ios-arrow-round-down"
+    },
+    {
+      "code": "0xf118",
+      "name": "ios-arrow-round-down-outline"
     },
     {
       "code": "0xf119",
       "name": "ios-arrow-round-forward"
     },
     {
+      "code": "0xf119",
+      "name": "ios-arrow-round-forward-outline"
+    },
+    {
       "code": "0xf11a",
       "name": "ios-arrow-round-up"
     },
     {
+      "code": "0xf11a",
+      "name": "ios-arrow-round-up-outline"
+    },
+    {
       "code": "0xf3d8",
       "name": "ios-arrow-up"
+    },
+    {
+      "code": "0xf3d8",
+      "name": "ios-arrow-up-outline"
     },
     {
       "code": "0xf3da",
@@ -163,6 +231,10 @@
     {
       "code": "0xf11b",
       "name": "ios-attach"
+    },
+    {
+      "code": "0xf11b",
+      "name": "ios-attach-outline"
     },
     {
       "code": "0xf11d",
@@ -209,12 +281,24 @@
       "name": "ios-battery-charging"
     },
     {
+      "code": "0xf120",
+      "name": "ios-battery-charging-outline"
+    },
+    {
       "code": "0xf121",
       "name": "ios-battery-dead"
     },
     {
+      "code": "0xf121",
+      "name": "ios-battery-dead-outline"
+    },
+    {
       "code": "0xf122",
       "name": "ios-battery-full"
+    },
+    {
+      "code": "0xf122",
+      "name": "ios-battery-full-outline"
     },
     {
       "code": "0xf124",
@@ -237,8 +321,16 @@
       "name": "ios-bicycle"
     },
     {
+      "code": "0xf127",
+      "name": "ios-bicycle-outline"
+    },
+    {
       "code": "0xf128",
       "name": "ios-bluetooth"
+    },
+    {
+      "code": "0xf128",
+      "name": "ios-bluetooth-outline"
     },
     {
       "code": "0xf12a",
@@ -461,6 +553,10 @@
       "name": "ios-checkmark-circle-outline"
     },
     {
+      "code": "0xf3ff",
+      "name": "ios-checkmark-outline"
+    },
+    {
       "code": "0xf14c",
       "name": "ios-clipboard"
     },
@@ -487,6 +583,10 @@
     {
       "code": "0xf14d",
       "name": "ios-close-circle-outline"
+    },
+    {
+      "code": "0xf406",
+      "name": "ios-close-outline"
     },
     {
       "code": "0xf150",
@@ -561,8 +661,20 @@
       "name": "ios-code-download"
     },
     {
+      "code": "0xf155",
+      "name": "ios-code-download-outline"
+    },
+    {
+      "code": "0xf157",
+      "name": "ios-code-outline"
+    },
+    {
       "code": "0xf156",
       "name": "ios-code-working"
+    },
+    {
+      "code": "0xf156",
+      "name": "ios-code-working-outline"
     },
     {
       "code": "0xf412",
@@ -641,8 +753,16 @@
       "name": "ios-contract"
     },
     {
+      "code": "0xf162",
+      "name": "ios-contract-outline"
+    },
+    {
       "code": "0xf163",
       "name": "ios-contrast"
+    },
+    {
+      "code": "0xf163",
+      "name": "ios-contrast-outline"
     },
     {
       "code": "0xf41c",
@@ -713,6 +833,10 @@
       "name": "ios-done-all"
     },
     {
+      "code": "0xf171",
+      "name": "ios-done-all-outline"
+    },
+    {
       "code": "0xf420",
       "name": "ios-download"
     },
@@ -749,6 +873,10 @@
       "name": "ios-expand"
     },
     {
+      "code": "0xf178",
+      "name": "ios-expand-outline"
+    },
+    {
       "code": "0xf425",
       "name": "ios-eye"
     },
@@ -777,6 +905,10 @@
       "name": "ios-female"
     },
     {
+      "code": "0xf17b",
+      "name": "ios-female-outline"
+    },
+    {
       "code": "0xf429",
       "name": "ios-filing"
     },
@@ -795,6 +927,10 @@
     {
       "code": "0xf17c",
       "name": "ios-finger-print"
+    },
+    {
+      "code": "0xf17c",
+      "name": "ios-finger-print-outline"
     },
     {
       "code": "0xf42d",
@@ -889,24 +1025,48 @@
       "name": "ios-git-branch"
     },
     {
+      "code": "0xf183",
+      "name": "ios-git-branch-outline"
+    },
+    {
       "code": "0xf184",
       "name": "ios-git-commit"
+    },
+    {
+      "code": "0xf184",
+      "name": "ios-git-commit-outline"
     },
     {
       "code": "0xf185",
       "name": "ios-git-compare"
     },
     {
+      "code": "0xf185",
+      "name": "ios-git-compare-outline"
+    },
+    {
       "code": "0xf186",
       "name": "ios-git-merge"
+    },
+    {
+      "code": "0xf186",
+      "name": "ios-git-merge-outline"
     },
     {
       "code": "0xf187",
       "name": "ios-git-network"
     },
     {
+      "code": "0xf187",
+      "name": "ios-git-network-outline"
+    },
+    {
       "code": "0xf188",
       "name": "ios-git-pull-request"
+    },
+    {
+      "code": "0xf188",
+      "name": "ios-git-pull-request-outline"
     },
     {
       "code": "0xf43f",
@@ -993,6 +1153,10 @@
       "name": "ios-help-circle-outline"
     },
     {
+      "code": "0xf446",
+      "name": "ios-help-outline"
+    },
+    {
       "code": "0xf448",
       "name": "ios-home"
     },
@@ -1045,6 +1209,10 @@
       "name": "ios-information-circle-outline"
     },
     {
+      "code": "0xf44d",
+      "name": "ios-information-outline"
+    },
+    {
       "code": "0xf1a1",
       "name": "ios-ionic"
     },
@@ -1089,6 +1257,10 @@
       "name": "ios-laptop"
     },
     {
+      "code": "0xf1a8",
+      "name": "ios-laptop-outline"
+    },
+    {
       "code": "0xf1aa",
       "name": "ios-leaf"
     },
@@ -1117,6 +1289,10 @@
       "name": "ios-list-box-outline"
     },
     {
+      "code": "0xf454",
+      "name": "ios-list-outline"
+    },
+    {
       "code": "0xf1ae",
       "name": "ios-locate"
     },
@@ -1137,8 +1313,16 @@
       "name": "ios-log-in"
     },
     {
+      "code": "0xf1b1",
+      "name": "ios-log-in-outline"
+    },
+    {
       "code": "0xf1b2",
       "name": "ios-log-out"
+    },
+    {
+      "code": "0xf1b2",
+      "name": "ios-log-out-outline"
     },
     {
       "code": "0xf1b4",
@@ -1167,6 +1351,10 @@
     {
       "code": "0xf1b9",
       "name": "ios-male"
+    },
+    {
+      "code": "0xf1b9",
+      "name": "ios-male-outline"
     },
     {
       "code": "0xf1bb",
@@ -1267,6 +1455,10 @@
     {
       "code": "0xf1cb",
       "name": "ios-move"
+    },
+    {
+      "code": "0xf1cb",
+      "name": "ios-move-outline"
     },
     {
       "code": "0xf46b",
@@ -1425,8 +1617,16 @@
       "name": "ios-phone-landscape"
     },
     {
+      "code": "0xf1e2",
+      "name": "ios-phone-landscape-outline"
+    },
+    {
       "code": "0xf1e3",
       "name": "ios-phone-portrait"
+    },
+    {
+      "code": "0xf1e3",
+      "name": "ios-phone-portrait-outline"
     },
     {
       "code": "0xf482",
@@ -1545,6 +1745,10 @@
       "name": "ios-qr-scanner"
     },
     {
+      "code": "0xf1f3",
+      "name": "ios-qr-scanner-outline"
+    },
+    {
       "code": "0xf1f5",
       "name": "ios-quote"
     },
@@ -1561,8 +1765,16 @@
       "name": "ios-radio-button-off"
     },
     {
+      "code": "0xf1f6",
+      "name": "ios-radio-button-off-outline"
+    },
+    {
       "code": "0xf1f7",
       "name": "ios-radio-button-on"
+    },
+    {
+      "code": "0xf1f7",
+      "name": "ios-radio-button-on-outline"
     },
     {
       "code": "0xf1f8",
@@ -1605,6 +1817,10 @@
       "name": "ios-refresh-circle-outline"
     },
     {
+      "code": "0xf49c",
+      "name": "ios-refresh-outline"
+    },
+    {
       "code": "0xf1fc",
       "name": "ios-remove"
     },
@@ -1617,16 +1833,32 @@
       "name": "ios-remove-circle-outline"
     },
     {
+      "code": "0xf1fc",
+      "name": "ios-remove-outline"
+    },
+    {
       "code": "0xf1fd",
       "name": "ios-reorder"
+    },
+    {
+      "code": "0xf1fd",
+      "name": "ios-reorder-outline"
     },
     {
       "code": "0xf1fe",
       "name": "ios-repeat"
     },
     {
+      "code": "0xf1fe",
+      "name": "ios-repeat-outline"
+    },
+    {
       "code": "0xf1ff",
       "name": "ios-resize"
+    },
+    {
+      "code": "0xf1ff",
+      "name": "ios-resize-outline"
     },
     {
       "code": "0xf201",
@@ -1641,8 +1873,16 @@
       "name": "ios-return-left"
     },
     {
+      "code": "0xf202",
+      "name": "ios-return-left-outline"
+    },
+    {
       "code": "0xf203",
       "name": "ios-return-right"
+    },
+    {
+      "code": "0xf203",
+      "name": "ios-return-right-outline"
     },
     {
       "code": "0xf49f",
@@ -1745,6 +1985,10 @@
       "name": "ios-shuffle"
     },
     {
+      "code": "0xf4a9",
+      "name": "ios-shuffle-outline"
+    },
+    {
       "code": "0xf215",
       "name": "ios-skip-backward"
     },
@@ -1793,6 +2037,10 @@
       "name": "ios-star-half"
     },
     {
+      "code": "0xf4b1",
+      "name": "ios-star-half-outline"
+    },
+    {
       "code": "0xf4b2",
       "name": "ios-star-outline"
     },
@@ -1833,6 +2081,10 @@
       "name": "ios-swap"
     },
     {
+      "code": "0xf21f",
+      "name": "ios-swap-outline"
+    },
+    {
       "code": "0xf221",
       "name": "ios-switch"
     },
@@ -1845,12 +2097,24 @@
       "name": "ios-sync"
     },
     {
+      "code": "0xf222",
+      "name": "ios-sync-outline"
+    },
+    {
       "code": "0xf223",
       "name": "ios-tablet-landscape"
     },
     {
+      "code": "0xf223",
+      "name": "ios-tablet-landscape-outline"
+    },
+    {
       "code": "0xf24e",
       "name": "ios-tablet-portrait"
+    },
+    {
+      "code": "0xf24e",
+      "name": "ios-tablet-portrait-outline"
     },
     {
       "code": "0xf4bb",
@@ -1929,6 +2193,10 @@
       "name": "ios-transgender"
     },
     {
+      "code": "0xf259",
+      "name": "ios-transgender-outline"
+    },
+    {
       "code": "0xf4c5",
       "name": "ios-trash"
     },
@@ -1941,8 +2209,16 @@
       "name": "ios-trending-down"
     },
     {
+      "code": "0xf25a",
+      "name": "ios-trending-down-outline"
+    },
+    {
       "code": "0xf25b",
       "name": "ios-trending-up"
+    },
+    {
+      "code": "0xf25b",
+      "name": "ios-trending-up-outline"
     },
     {
       "code": "0xf25d",
@@ -1989,20 +2265,40 @@
       "name": "ios-volume-down"
     },
     {
+      "code": "0xf262",
+      "name": "ios-volume-down-outline"
+    },
+    {
       "code": "0xf263",
       "name": "ios-volume-mute"
+    },
+    {
+      "code": "0xf263",
+      "name": "ios-volume-mute-outline"
     },
     {
       "code": "0xf264",
       "name": "ios-volume-off"
     },
     {
+      "code": "0xf264",
+      "name": "ios-volume-off-outline"
+    },
+    {
       "code": "0xf265",
       "name": "ios-volume-up"
     },
     {
+      "code": "0xf265",
+      "name": "ios-volume-up-outline"
+    },
+    {
       "code": "0xf266",
       "name": "ios-walk"
+    },
+    {
+      "code": "0xf266",
+      "name": "ios-walk-outline"
     },
     {
       "code": "0xf268",
@@ -2015,6 +2311,10 @@
     {
       "code": "0xf269",
       "name": "ios-watch"
+    },
+    {
+      "code": "0xf269",
+      "name": "ios-watch-outline"
     },
     {
       "code": "0xf26b",

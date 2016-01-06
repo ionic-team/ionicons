@@ -28,6 +28,13 @@ def main():
   generate_svg_files()
   generate_cheatsheet(data)
   generate_mode_cheatsheet(data)
+  generate_icon_comparison(data)
+
+
+def generate_font_files():
+  print "Generate Fonts"
+  cmd = "fontforge -script %s/scripts/generate_font.py" % (BUILDER_PATH)
+  call(cmd, shell=True)
 
 
 def generate_data_files(data):
@@ -79,12 +86,6 @@ def generate_data_files(data):
   f.close()
 
 
-def generate_font_files():
-  print "Generate Fonts"
-  cmd = "fontforge -script %s/scripts/generate_font.py" % (BUILDER_PATH)
-  call(cmd, shell=True)
-
-
 def generate_svg_files():
   print "Generate SVG Files"
   cmd = 'svgo -f %s -o %s' % (INPUT_SVG_DIR, OUTPUT_SVG_DIR)
@@ -108,6 +109,62 @@ def rename_svg_glyph_names(data):
   svg_file.close()
 
 
+def generate_scss(data):
+  print "Generate SCSS"
+  font_name = data['name']
+  font_version = data['version']
+  css_prefix = data['prefix']
+  variables_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-variables.scss')
+  common_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-common.scss')
+  icons_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-icons.scss')
+
+  d = []
+  d.append('@charset "UTF-8";')
+  d.append('// Ionicons Variables')
+  d.append('// --------------------------\n')
+  d.append('$ionicons-font-path: "../fonts" !default;')
+  d.append('$ionicons-font-family: "%s" !default;' % (font_name) )
+  d.append('$ionicons-version: "%s" !default;' % (font_version) )
+
+  f = codecs.open(variables_file_path, 'w', 'utf-8')
+  f.write( u'\n'.join(d) )
+  f.close()
+
+  d = []
+  d.append('@charset "UTF-8";')
+  d.append('// Ionicons Common CSS')
+  d.append('// --------------------------\n')
+
+  group = [ '.%s' % (data['name'].lower()) ]
+  for ionicon in data['icons']:
+    group.append('.%s%s:before' % (css_prefix, ionicon['name']) )
+
+  d.append( ',\n'.join(group) )
+
+  d.append('{')
+  d.append('  @extend .ion;')
+  d.append('}')
+
+  f = codecs.open(common_file_path, 'w', 'utf-8')
+  f.write( '\n'.join(d) )
+  f.close()
+
+  d = []
+  d.append('@charset "UTF-8";')
+  d.append('// Ionicons Icon Font CSS')
+  d.append('// --------------------------\n')
+
+  for ionicon in data['icons']:
+    chr_code = ionicon['code'].replace('0x', '\\')
+    d.append('.%s%s:before { content: "%s"; }' % (css_prefix, ionicon['name'], chr_code) )
+
+  f = codecs.open(icons_file_path, 'w', 'utf-8')
+  f.write( '\n'.join(d) )
+  f.close()
+
+  generate_css_from_scss(data)
+
+
 def generate_less(data):
   print "Generate LESS"
   font_name = data['name']
@@ -128,7 +185,6 @@ def generate_less(data):
   d.append('@ionicons-font-path: "../fonts";')
   d.append('@ionicons-font-family: "%s";' % (font_name) )
   d.append('@ionicons-version: "%s";' % (font_version) )
-  d.append('@ionicons-prefix: %s;' % (css_prefix) )
   d.append('')
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
@@ -144,7 +200,7 @@ def generate_less(data):
 
   group = [ '.%s' % (data['name'].lower()) ]
   for ionicon in data['icons']:
-    group.append('.@{ionicons-prefix}%s:before' % (ionicon['name']) )
+    group.append('.%s%s:before' % (css_prefix, ionicon['name']) )
 
   d.append( ',\n'.join(group) )
 
@@ -154,68 +210,11 @@ def generate_less(data):
 
   for ionicon in data['icons']:
     chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.@{ionicons-prefix}%s:before { content: @ionicon-var-%s; }' % (ionicon['name'], ionicon['name']) )
+    d.append('.%s%s:before { content: @ionicon-var-%s; }' % (css_prefix, ionicon['name'], ionicon['name']) )
 
   f = codecs.open(icons_file_path, 'w', 'utf-8')
   f.write( '\n'.join(d) )
   f.close()
-
-
-def generate_scss(data):
-  print "Generate SCSS"
-  font_name = data['name']
-  font_version = data['version']
-  css_prefix = data['prefix']
-  variables_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-variables.scss')
-  common_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-common.scss')
-  icons_file_path = os.path.join(SCSS_FOLDER_PATH, '_ionicons-icons.scss')
-
-  d = []
-  d.append('@charset "UTF-8";')
-  d.append('// Ionicons Variables')
-  d.append('// --------------------------\n')
-  d.append('$ionicons-font-path: "../fonts" !default;')
-  d.append('$ionicons-font-family: "%s" !default;' % (font_name) )
-  d.append('$ionicons-version: "%s" !default;' % (font_version) )
-  d.append('$ionicons-prefix: %s !default;' % (css_prefix) )
-
-  f = codecs.open(variables_file_path, 'w', 'utf-8')
-  f.write( u'\n'.join(d) )
-  f.close()
-
-  d = []
-  d.append('@charset "UTF-8";')
-  d.append('// Ionicons Common CSS')
-  d.append('// --------------------------\n')
-
-  group = [ '.%s' % (data['name'].lower()) ]
-  for ionicon in data['icons']:
-    group.append('.#{$ionicons-prefix}%s:before' % (ionicon['name']) )
-
-  d.append( ',\n'.join(group) )
-
-  d.append('{')
-  d.append('  @extend .ion;')
-  d.append('}')
-
-  f = codecs.open(common_file_path, 'w', 'utf-8')
-  f.write( '\n'.join(d) )
-  f.close()
-
-  d = []
-  d.append('@charset "UTF-8";')
-  d.append('// Ionicons Icon CSS')
-  d.append('// --------------------------\n')
-
-  for ionicon in data['icons']:
-    chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.#{$ionicons-prefix}%s:before { content: "%s"; }' % (ionicon['name'], chr_code) )
-
-  f = codecs.open(icons_file_path, 'w', 'utf-8')
-  f.write( '\n'.join(d) )
-  f.close()
-
-  generate_css_from_scss(data)
 
 
 def generate_css_from_scss(data):
@@ -340,6 +339,73 @@ def generate_mode_cheatsheet(data):
   f.close()
 
 
+def generate_icon_comparison(data):
+  print "Generate Icon Comparison"
+
+  comparison_file_path = os.path.join(ROOT_PATH, 'icon-comparison.html')
+  template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
+  icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'icon-comparison-row.html')
+
+  f = codecs.open(template_path, 'r', 'utf-8')
+  template_html = f.read()
+  f.close()
+
+  f = codecs.open(icon_row_path, 'r', 'utf-8')
+  icon_row_template = f.read()
+  f.close()
+
+  content = []
+  icon_count = 0
+
+  content.append('''
+    <div class="comparison-row">
+      <div class="comparison-col">
+        <h2>Source SVG</h2>
+      </div>
+      <div class="comparison-col">
+        <h2>Optimized SVG</h2>
+      </div>
+      <div class="comparison-col">
+        <h2>Icon Font</h2>
+      </div>
+    </div>
+  ''')
+
+  for ionicon in data['icons']:
+    src_svg_file = os.path.join(INPUT_SVG_DIR, '%s.svg' % (ionicon['name']))
+    if not os.path.isfile(src_svg_file):
+      continue
+
+    icon_count += 1
+    item_row = icon_row_template.replace('{{name}}', ionicon['name'])
+    item_row = item_row.replace('{{prefix}}', data['prefix'])
+
+    src_svg = 'src/%s.svg' % (ionicon['name'])
+    item_row = item_row.replace('{{src_svg}}', src_svg)
+
+    src_svg_size = os.path.getsize(src_svg_file)
+    item_row = item_row.replace('{{src_svg_size}}', str(src_svg_size))
+
+    optimized_svg = 'svg/%s.svg' % (ionicon['name'])
+    item_row = item_row.replace('{{optimized_svg}}', optimized_svg)
+
+    optimized_svg_file = os.path.join(OUTPUT_SVG_DIR, '%s.svg' % (ionicon['name']))
+    optimized_svg_size = os.path.getsize(optimized_svg_file)
+    item_row = item_row.replace('{{optimized_svg_size}}', str(optimized_svg_size))
+
+    content.append(item_row)
+
+  template_html = template_html.replace("{{title}}", 'Icon Format Comparison')
+  template_html = template_html.replace("{{font_name}}", data["name"])
+  template_html = template_html.replace("{{font_version}}", data["version"])
+  template_html = template_html.replace("{{icon_count}}", str(icon_count) )
+  template_html = template_html.replace("{{content}}", '\n'.join(content) )
+
+  f = codecs.open(comparison_file_path, 'w', 'utf-8')
+  f.write(template_html)
+  f.close()
+
+
 def get_build_data():
   build_data_path = os.path.join(BUILDER_PATH, 'build_data.json')
 
@@ -347,7 +413,6 @@ def get_build_data():
   data = json.loads(f.read())
   f.close()
   return data
-
 
 if __name__ == "__main__":
   main()

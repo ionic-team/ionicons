@@ -99,6 +99,16 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
         'code': chr_code
       })
 
+      if 'ios-' in name and '-outline' not in name:
+          # check if this ios icon has an outline version
+          outline_filename = '%s-outline.svg' % (name)
+          outline_filePath = os.path.join(dirname, outline_filename)
+          if not os.path.isfile(outline_filePath):
+              build_data['icons'].append({
+                'name': '%s-outline' % (name),
+                'code': chr_code
+              })
+
       if ext in ['.svg']:
         # hack removal of <switch> </switch> tags
         svgfile = open(filePath, 'r+')
@@ -187,4 +197,3 @@ else:
   f = open(BUILD_DATA_PATH, 'w')
   f.write( json.dumps(build_data, indent=2, separators=(',', ': ')) )
   f.close()
-

@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-11-23: Created with FontForge (http://fontforge.org)
+2016-1-6: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150913 at Mon Nov 23 16:25:17 2015
+Created by FontForge 20150913 at Wed Jan  6 09:01:45 2016
  By Adam Bradley
-Copyright (c) 2015, Adam Bradley
+Copyright (c) 2016, Adam Bradley
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="416" >
@@ -2492,8 +2492,8 @@ d="M113 371l79 -66l-114 -71l-78 63zM0 172l78 62l114 -70l-79 -66zM192 164l114 70l
     <glyph glyph-name="ion-social-euro" unicode="&#xf4e1;" horiz-adv-x="320" 
 d="M138 176h124l-7 -48h-117v-13c0 -44 15 -63 79 -63c26 0 56 3 93 9l10 -65c-38 -9 -71 -12 -106 -12c-115 0 -164 41 -164 117v27h-50v48h50v48h-50v48h50v11c0 76 49 117 164 117c35 0 68 -3 106 -12l-10 -65c-37 6 -67 9 -93 9c-64 0 -79 -22 -79 -58v-2h138l-7 -48
 h-131v-48z" />
-    <glyph glyph-name="ion-social-facebook" unicode="&#xf231;" horiz-adv-x="192" 
-d="M128 256h64l-8 -64h-56v-192h-83v192h-45v64h45v43c0 54 23 85 91 85h56v-64h-34c-27 0 -30 -9 -30 -26v-38z" />
+    <glyph glyph-name="ion-social-facebook" unicode="&#xf231;" horiz-adv-x="384" 
+d="M363 384c12 0 21 -9 21 -21v-342c0 -12 -9 -21 -21 -21h-107v152h50l7 56h-57v36c0 17 5 28 29 28h35v52c-5 1 -28 2 -49 2c-44 0 -79 -27 -79 -77v-41h-46v-56h46v-152h-171c-12 0 -21 9 -21 21v342c0 12 9 21 21 21h342z" />
     <glyph glyph-name="ion-social-foursquare" unicode="&#xf34d;" horiz-adv-x="320" 
 d="M281 416c35 0 45 -20 37 -57c-10 -49 -40 -202 -43 -213c-3 -13 -8 -34 -39 -34h-72c-3 0 -3 0 -6 -3c-2 -2 -115 -133 -115 -133c-9 -10 -23 -8 -28 -6s-15 8 -15 26v380s10 40 43 40h238zM275 146c3 11 33 164 43 213zM267 351c2 9 -5 16 -12 16h-191
 c-9 0 -15 -8 -15 -15v-296c0 -1 1 -1 2 0c0 0 70 84 78 94s11 11 23 11h64c9 0 14 8 15 12s8 43 10 51s-6 16 -13 16h-82c-10 0 -18 8 -18 18v13c0 10 8 17 18 17h96s14 6 15 12z" />
