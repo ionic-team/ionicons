@@ -10,6 +10,48 @@
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+.ion-android-logo:before { content: "\f225"; }
+
+.ion-angular-logo:before { content: "\f227"; }
+
+.ion-apple-logo:before { content: "\f229"; }
+
+.ion-bitcoin-logo:before { content: "\f22b"; }
+
+.ion-buffer-logo:before { content: "\f22d"; }
+
+.ion-chrome-logo:before { content: "\f22f"; }
+
+.ion-codepen-logo:before { content: "\f230"; }
+
+.ion-css3-logo:before { content: "\f231"; }
+
+.ion-designernews-logo:before { content: "\f232"; }
+
+.ion-dribbble-logo:before { content: "\f233"; }
+
+.ion-dropbox-logo:before { content: "\f234"; }
+
+.ion-euro-logo:before { content: "\f235"; }
+
+.ion-facebook-logo:before { content: "\f236"; }
+
+.ion-foursquare-logo:before { content: "\f237"; }
+
+.ion-freebsd-devil-logo:before { content: "\f238"; }
+
+.ion-github-logo:before { content: "\f239"; }
+
+.ion-google-logo:before { content: "\f23a"; }
+
+.ion-googleplus-logo:before { content: "\f23b"; }
+
+.ion-hackernews-logo:before { content: "\f23c"; }
+
+.ion-html5-logo:before { content: "\f23d"; }
+
+.ion-instagram-logo:before { content: "\f23e"; }
+
 .ion-ios-add:before { content: "\f102"; }
 
 .ion-ios-add-circle:before { content: "\f101"; }
@@ -1182,6 +1224,12 @@
 
 .ion-ios-woman-outline:before { content: "\f270"; }
 
+.ion-javascript-logo:before { content: "\f23f"; }
+
+.ion-linkedin-logo:before { content: "\f240"; }
+
+.ion-markdown-logo:before { content: "\f241"; }
+
 .ion-md-add:before { content: "\f273"; }
 
 .ion-md-add-circle:before { content: "\f272"; }
@@ -1782,100 +1830,52 @@
 
 .ion-md-woman:before { content: "\f3aa"; }
 
-.ion-social-android:before { content: "\f225"; }
+.ion-nodejs-logo:before { content: "\f242"; }
 
-.ion-social-angular:before { content: "\f4d9"; }
+.ion-octocat-logo:before { content: "\f243"; }
 
-.ion-social-apple:before { content: "\f227"; }
+.ion-pinterest-logo:before { content: "\f244"; }
 
-.ion-social-bitcoin:before { content: "\f2af"; }
+.ion-playstation-logo:before { content: "\f245"; }
 
-.ion-social-buffer:before { content: "\f229"; }
+.ion-python-logo:before { content: "\f246"; }
 
-.ion-social-chrome:before { content: "\f4db"; }
+.ion-reddit-logo:before { content: "\f247"; }
 
-.ion-social-codepen:before { content: "\f4dd"; }
+.ion-rss-logo:before { content: "\f248"; }
 
-.ion-social-css3:before { content: "\f4df"; }
+.ion-sass-logo:before { content: "\f249"; }
 
-.ion-social-designernews:before { content: "\f22b"; }
+.ion-skype-logo:before { content: "\f24a"; }
 
-.ion-social-dribbble:before { content: "\f22d"; }
+.ion-snapchat-logo:before { content: "\f24b"; }
 
-.ion-social-dropbox:before { content: "\f22f"; }
+.ion-steam-logo:before { content: "\f24c"; }
 
-.ion-social-euro:before { content: "\f4e1"; }
+.ion-tumblr-logo:before { content: "\f24d"; }
 
-.ion-social-facebook:before { content: "\f231"; }
+.ion-tux-logo:before { content: "\f2ae"; }
 
-.ion-social-foursquare:before { content: "\f34d"; }
+.ion-twitch-logo:before { content: "\f2af"; }
 
-.ion-social-freebsd-devil:before { content: "\f2c4"; }
+.ion-twitter-logo:before { content: "\f2b0"; }
 
-.ion-social-github:before { content: "\f233"; }
+.ion-usd-logo:before { content: "\f2b1"; }
 
-.ion-social-google:before { content: "\f34f"; }
+.ion-vimeo-logo:before { content: "\f2c4"; }
 
-.ion-social-googleplus:before { content: "\f235"; }
+.ion-whatsapp-logo:before { content: "\f2c5"; }
 
-.ion-social-hackernews:before { content: "\f237"; }
+.ion-windows-logo:before { content: "\f32f"; }
 
-.ion-social-html5:before { content: "\f4e3"; }
+.ion-wordpress-logo:before { content: "\f330"; }
 
-.ion-social-instagram:before { content: "\f351"; }
+.ion-xbox-logo:before { content: "\f34c"; }
 
-.ion-social-javascript:before { content: "\f4e5"; }
+.ion-yahoo-logo:before { content: "\f34d"; }
 
-.ion-social-linkedin:before { content: "\f239"; }
+.ion-yen-logo:before { content: "\f34e"; }
 
-.ion-social-markdown:before { content: "\f4e6"; }
-
-.ion-social-nodejs:before { content: "\f4e7"; }
-
-.ion-social-octocat:before { content: "\f4e8"; }
-
-.ion-social-pinterest:before { content: "\f2b1"; }
-
-.ion-social-playstation:before { content: "\f3ab"; }
-
-.ion-social-python:before { content: "\f4e9"; }
-
-.ion-social-reddit:before { content: "\f23b"; }
-
-.ion-social-rss:before { content: "\f23d"; }
-
-.ion-social-sass:before { content: "\f4ea"; }
-
-.ion-social-skype:before { content: "\f23f"; }
-
-.ion-social-snapchat:before { content: "\f4ec"; }
-
-.ion-social-steam:before { content: "\f3ac"; }
-
-.ion-social-tumblr:before { content: "\f241"; }
-
-.ion-social-tux:before { content: "\f2c5"; }
-
-.ion-social-twitch:before { content: "\f4ee"; }
-
-.ion-social-twitter:before { content: "\f243"; }
-
-.ion-social-usd:before { content: "\f353"; }
-
-.ion-social-vimeo:before { content: "\f245"; }
-
-.ion-social-whatsapp:before { content: "\f4f0"; }
-
-.ion-social-windows:before { content: "\f247"; }
-
-.ion-social-wordpress:before { content: "\f249"; }
-
-.ion-social-xbox:before { content: "\f3ad"; }
-
-.ion-social-yahoo:before { content: "\f24b"; }
-
-.ion-social-yen:before { content: "\f4f2"; }
-
-.ion-social-youtube:before { content: "\f24d"; }
+.ion-youtube-logo:before { content: "\f34f"; }
 
 /*# sourceMappingURL=ionicons-core.css.map */

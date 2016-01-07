@@ -1,5 +1,6 @@
 from subprocess import call
 import os
+import shutil
 import subprocess
 import json
 import codecs
@@ -51,8 +52,8 @@ def generate_data_files(data):
     elif ionicon['name'].startswith('md-'):
       name = ionicon['name'][3:]
 
-    elif ionicon['name'].startswith('social-'):
-      name = ionicon['name'][7:]
+    elif ionicon['name'].endswith('-logo'):
+      name = ionicon['name'].replace('-logo', '')
 
     if name not in icon_names:
       icon_names.append(name)
@@ -60,12 +61,12 @@ def generate_data_files(data):
   for icon_name in icon_names:
     ios_svg = os.path.join(INPUT_SVG_DIR, 'ios-%s.svg' % (icon_name))
     md_svg = os.path.join(INPUT_SVG_DIR, 'md-%s.svg' % (icon_name))
-    social_svg = os.path.join(INPUT_SVG_DIR, 'social-%s.svg' % (icon_name))
+    logo_svg = os.path.join(INPUT_SVG_DIR, '%s-logo.svg' % (icon_name))
 
     if os.path.isfile(ios_svg) and os.path.isfile(md_svg):
       mode_icons.append('"%s":1' % icon_name)
 
-    elif os.path.isfile(social_svg):
+    elif os.path.isfile(logo_svg):
       generic_icons.append('"%s":1' % icon_name)
 
     elif '-outline' in icon_name:
@@ -88,6 +89,9 @@ def generate_data_files(data):
 
 def generate_svg_files():
   print "Generate SVG Files"
+  shutil.rmtree(OUTPUT_SVG_DIR)
+  if not os.path.exists(OUTPUT_SVG_DIR):
+    os.makedirs(OUTPUT_SVG_DIR)
   cmd = 'svgo -f %s -o %s' % (INPUT_SVG_DIR, OUTPUT_SVG_DIR)
   subprocess.call([cmd], shell=True)
 
