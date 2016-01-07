@@ -4,6 +4,7 @@ import shutil
 import subprocess
 import json
 import codecs
+from collections import OrderedDict
 
 
 BUILDER_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -42,7 +43,16 @@ def generate_data_files(data):
   print "Generate Data Files"
   icon_names = []
   mode_icons = []
-  generic_icons = []
+  logo_icons = []
+  all_icons = {}
+  tag_data = get_tag_data()
+
+  def get_code_by_name(icon_name):
+    for ionicon in data['icons']:
+      if ionicon['name'] == icon_name:
+        return ionicon['code']
+
+    return ''
 
   for ionicon in data['icons']:
     name = ""
@@ -66,8 +76,39 @@ def generate_data_files(data):
     if os.path.isfile(ios_svg) and os.path.isfile(md_svg):
       mode_icons.append('"%s":1' % icon_name)
 
+      all_icons[icon_name] = {
+        'icons': [
+          {
+            'code': get_code_by_name('ios-%s' % (icon_name)),
+            'name': 'ios-%s' % (icon_name)
+          },
+          {
+            'code': get_code_by_name('ios-%s-outline' % (icon_name)),
+            'name': 'ios-%s-outline' % (icon_name)
+          },
+          {
+            'code': get_code_by_name('md-%s' % (icon_name)),
+            'name': 'md-%s' % (icon_name)
+          }
+        ],
+        'tags': tag_data.get(icon_name) or icon_name.split('-')
+      }
+
     elif os.path.isfile(logo_svg):
-      generic_icons.append('"%s":1' % icon_name)
+      logo_icons.append('"%s":1' % icon_name)
+
+      tags = icon_name.split('-')
+      tags.append('logo')
+
+      all_icons[icon_name] = {
+        'icons': [
+          {
+            'code': get_code_by_name('%s-logo' % (icon_name)),
+            'name': '%s-logo' % (icon_name) or icon_name.split('-')
+          }
+        ],
+        'tags': tag_data.get('%s-logo' % (icon_name)) or []
+      }
 
     elif '-outline' in icon_name:
       continue
@@ -81,9 +122,15 @@ def generate_data_files(data):
   f.write(output)
   f.close()
 
-  output = '{\n' +  ',\n'.join(generic_icons) + '\n}'
-  f = codecs.open(os.path.join(DATA_PATH, 'generic-icons.json'), 'w', 'utf-8')
+  output = '{\n' +  ',\n'.join(logo_icons) + '\n}'
+  f = codecs.open(os.path.join(DATA_PATH, 'logo-icons.json'), 'w', 'utf-8')
   f.write(output)
+  f.close()
+
+  all_icons = OrderedDict(sorted(all_icons.items(), key=lambda t: t[0]))
+
+  f = codecs.open(os.path.join(DATA_PATH, 'all-icons.json'), 'w', 'utf-8')
+  f.write( json.dumps(all_icons, separators=(',', ':')) )
   f.close()
 
 
@@ -414,6 +461,15 @@ def get_build_data():
   build_data_path = os.path.join(BUILDER_PATH, 'build_data.json')
 
   f = codecs.open(build_data_path, 'r', 'utf-8')
+  data = json.loads(f.read())
+  f.close()
+  return data
+
+
+def get_tag_data():
+  tag_data_path = os.path.join(BUILDER_PATH, 'tags.json')
+
+  f = codecs.open(tag_data_path, 'r', 'utf-8')
   data = json.loads(f.read())
   f.close()
   return data
