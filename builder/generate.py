@@ -291,7 +291,6 @@ def generate_mode_cheatsheet(data):
   content = []
   icon_names = []
 
-
   content.append('''
   <div class="mode-row">
     <div class="mode-col">
@@ -382,7 +381,7 @@ def generate_icon_comparison(data):
     src_svg_size = os.path.getsize(src_svg_file)
     item_row = item_row.replace('{{src_svg_size}}', str(src_svg_size))
 
-    optimized_svg = 'svg/%s.svg' % (ionicon['name'])
+    optimized_svg = 'dist/svg/%s.svg' % (ionicon['name'])
     item_row = item_row.replace('{{optimized_svg}}', optimized_svg)
 
     optimized_svg_file = os.path.join(OUTPUT_SVG_DIR, '%s.svg' % (ionicon['name']))
