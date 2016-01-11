@@ -127,7 +127,7 @@ def generate_data_files(data):
 
   all_icons = OrderedDict(sorted(all_icons.items(), key=lambda t: t[0]))
 
-  f = codecs.open(os.path.join(DATA_PATH, 'all-icons.json'), 'w', 'utf-8')
+  f = codecs.open(os.path.join(DATA_PATH, 'ionicons.json'), 'w', 'utf-8')
   f.write( json.dumps(all_icons, separators=(',', ':')) )
   f.close()
 
@@ -518,7 +518,7 @@ def generate_site_index_file():
       return ADV_ICON_TMPL % (non_outline_icons[0]['name'], non_outline_icons[0]['name'])
 
 
-  f = codecs.open(os.path.join(DATA_PATH, 'all-icons.json'), 'r', 'utf-8')
+  f = codecs.open(os.path.join(DATA_PATH, 'ionicons.json'), 'r', 'utf-8')
   data = json.loads(f.read())
   f.close()
   all_icons = data.items()
