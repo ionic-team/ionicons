@@ -1,93 +1,9 @@
 {
-  "build_hash": "57feda16a91a912e506d64530f65442c",
+  "build_hash": "259c592d7dc03e4169a4ca133ea2a34d",
   "prefix": "ion-",
   "version": "3.0.0",
   "name": "Ionicons",
   "icons": [
-    {
-      "code": "0xf225",
-      "name": "android-logo"
-    },
-    {
-      "code": "0xf227",
-      "name": "angular-logo"
-    },
-    {
-      "code": "0xf229",
-      "name": "apple-logo"
-    },
-    {
-      "code": "0xf22b",
-      "name": "bitcoin-logo"
-    },
-    {
-      "code": "0xf22d",
-      "name": "buffer-logo"
-    },
-    {
-      "code": "0xf22f",
-      "name": "chrome-logo"
-    },
-    {
-      "code": "0xf230",
-      "name": "codepen-logo"
-    },
-    {
-      "code": "0xf231",
-      "name": "css3-logo"
-    },
-    {
-      "code": "0xf232",
-      "name": "designernews-logo"
-    },
-    {
-      "code": "0xf233",
-      "name": "dribbble-logo"
-    },
-    {
-      "code": "0xf234",
-      "name": "dropbox-logo"
-    },
-    {
-      "code": "0xf235",
-      "name": "euro-logo"
-    },
-    {
-      "code": "0xf236",
-      "name": "facebook-logo"
-    },
-    {
-      "code": "0xf237",
-      "name": "foursquare-logo"
-    },
-    {
-      "code": "0xf238",
-      "name": "freebsd-devil-logo"
-    },
-    {
-      "code": "0xf239",
-      "name": "github-logo"
-    },
-    {
-      "code": "0xf23a",
-      "name": "google-logo"
-    },
-    {
-      "code": "0xf23b",
-      "name": "googleplus-logo"
-    },
-    {
-      "code": "0xf23c",
-      "name": "hackernews-logo"
-    },
-    {
-      "code": "0xf23d",
-      "name": "html5-logo"
-    },
-    {
-      "code": "0xf23e",
-      "name": "instagram-logo"
-    },
     {
       "code": "0xf102",
       "name": "ios-add"
@@ -2133,16 +2049,196 @@
       "name": "ios-woman-outline"
     },
     {
+      "code": "0xf225",
+      "name": "logo-android"
+    },
+    {
+      "code": "0xf227",
+      "name": "logo-angular"
+    },
+    {
+      "code": "0xf229",
+      "name": "logo-apple"
+    },
+    {
+      "code": "0xf22b",
+      "name": "logo-bitcoin"
+    },
+    {
+      "code": "0xf22d",
+      "name": "logo-buffer"
+    },
+    {
+      "code": "0xf22f",
+      "name": "logo-chrome"
+    },
+    {
+      "code": "0xf230",
+      "name": "logo-codepen"
+    },
+    {
+      "code": "0xf231",
+      "name": "logo-css3"
+    },
+    {
+      "code": "0xf232",
+      "name": "logo-designernews"
+    },
+    {
+      "code": "0xf233",
+      "name": "logo-dribbble"
+    },
+    {
+      "code": "0xf234",
+      "name": "logo-dropbox"
+    },
+    {
+      "code": "0xf235",
+      "name": "logo-euro"
+    },
+    {
+      "code": "0xf236",
+      "name": "logo-facebook"
+    },
+    {
+      "code": "0xf237",
+      "name": "logo-foursquare"
+    },
+    {
+      "code": "0xf238",
+      "name": "logo-freebsd-devil"
+    },
+    {
+      "code": "0xf239",
+      "name": "logo-github"
+    },
+    {
+      "code": "0xf23a",
+      "name": "logo-google"
+    },
+    {
+      "code": "0xf23b",
+      "name": "logo-googleplus"
+    },
+    {
+      "code": "0xf23c",
+      "name": "logo-hackernews"
+    },
+    {
+      "code": "0xf23d",
+      "name": "logo-html5"
+    },
+    {
+      "code": "0xf23e",
+      "name": "logo-instagram"
+    },
+    {
       "code": "0xf23f",
-      "name": "javascript-logo"
+      "name": "logo-javascript"
     },
     {
       "code": "0xf240",
-      "name": "linkedin-logo"
+      "name": "logo-linkedin"
     },
     {
       "code": "0xf241",
-      "name": "markdown-logo"
+      "name": "logo-markdown"
+    },
+    {
+      "code": "0xf242",
+      "name": "logo-nodejs"
+    },
+    {
+      "code": "0xf243",
+      "name": "logo-octocat"
+    },
+    {
+      "code": "0xf244",
+      "name": "logo-pinterest"
+    },
+    {
+      "code": "0xf245",
+      "name": "logo-playstation"
+    },
+    {
+      "code": "0xf246",
+      "name": "logo-python"
+    },
+    {
+      "code": "0xf247",
+      "name": "logo-reddit"
+    },
+    {
+      "code": "0xf248",
+      "name": "logo-rss"
+    },
+    {
+      "code": "0xf249",
+      "name": "logo-sass"
+    },
+    {
+      "code": "0xf24a",
+      "name": "logo-skype"
+    },
+    {
+      "code": "0xf24b",
+      "name": "logo-snapchat"
+    },
+    {
+      "code": "0xf24c",
+      "name": "logo-steam"
+    },
+    {
+      "code": "0xf24d",
+      "name": "logo-tumblr"
+    },
+    {
+      "code": "0xf2ae",
+      "name": "logo-tux"
+    },
+    {
+      "code": "0xf2af",
+      "name": "logo-twitch"
+    },
+    {
+      "code": "0xf2b0",
+      "name": "logo-twitter"
+    },
+    {
+      "code": "0xf2b1",
+      "name": "logo-usd"
+    },
+    {
+      "code": "0xf2c4",
+      "name": "logo-vimeo"
+    },
+    {
+      "code": "0xf2c5",
+      "name": "logo-whatsapp"
+    },
+    {
+      "code": "0xf32f",
+      "name": "logo-windows"
+    },
+    {
+      "code": "0xf330",
+      "name": "logo-wordpress"
+    },
+    {
+      "code": "0xf34c",
+      "name": "logo-xbox"
+    },
+    {
+      "code": "0xf34d",
+      "name": "logo-yahoo"
+    },
+    {
+      "code": "0xf34e",
+      "name": "logo-yen"
+    },
+    {
+      "code": "0xf34f",
+      "name": "logo-youtube"
     },
     {
       "code": "0xf273",
@@ -3343,102 +3439,6 @@
     {
       "code": "0xf3aa",
       "name": "md-woman"
-    },
-    {
-      "code": "0xf242",
-      "name": "nodejs-logo"
-    },
-    {
-      "code": "0xf243",
-      "name": "octocat-logo"
-    },
-    {
-      "code": "0xf244",
-      "name": "pinterest-logo"
-    },
-    {
-      "code": "0xf245",
-      "name": "playstation-logo"
-    },
-    {
-      "code": "0xf246",
-      "name": "python-logo"
-    },
-    {
-      "code": "0xf247",
-      "name": "reddit-logo"
-    },
-    {
-      "code": "0xf248",
-      "name": "rss-logo"
-    },
-    {
-      "code": "0xf249",
-      "name": "sass-logo"
-    },
-    {
-      "code": "0xf24a",
-      "name": "skype-logo"
-    },
-    {
-      "code": "0xf24b",
-      "name": "snapchat-logo"
-    },
-    {
-      "code": "0xf24c",
-      "name": "steam-logo"
-    },
-    {
-      "code": "0xf24d",
-      "name": "tumblr-logo"
-    },
-    {
-      "code": "0xf2ae",
-      "name": "tux-logo"
-    },
-    {
-      "code": "0xf2af",
-      "name": "twitch-logo"
-    },
-    {
-      "code": "0xf2b0",
-      "name": "twitter-logo"
-    },
-    {
-      "code": "0xf2b1",
-      "name": "usd-logo"
-    },
-    {
-      "code": "0xf2c4",
-      "name": "vimeo-logo"
-    },
-    {
-      "code": "0xf2c5",
-      "name": "whatsapp-logo"
-    },
-    {
-      "code": "0xf32f",
-      "name": "windows-logo"
-    },
-    {
-      "code": "0xf330",
-      "name": "wordpress-logo"
-    },
-    {
-      "code": "0xf34c",
-      "name": "xbox-logo"
-    },
-    {
-      "code": "0xf34d",
-      "name": "yahoo-logo"
-    },
-    {
-      "code": "0xf34e",
-      "name": "yen-logo"
-    },
-    {
-      "code": "0xf34f",
-      "name": "youtube-logo"
     }
   ]
 }

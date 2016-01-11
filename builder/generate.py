@@ -63,8 +63,8 @@ def generate_data_files(data):
     elif ionicon['name'].startswith('md-'):
       name = ionicon['name'][3:]
 
-    elif ionicon['name'].endswith('-logo'):
-      name = ionicon['name'].replace('-logo', '')
+    elif ionicon['name'].startswith('logo-'):
+      name = ionicon['name'][5:]
 
     if name not in icon_names:
       icon_names.append(name)
@@ -72,7 +72,7 @@ def generate_data_files(data):
   for icon_name in icon_names:
     ios_svg = os.path.join(INPUT_SVG_DIR, 'ios-%s.svg' % (icon_name))
     md_svg = os.path.join(INPUT_SVG_DIR, 'md-%s.svg' % (icon_name))
-    logo_svg = os.path.join(INPUT_SVG_DIR, '%s-logo.svg' % (icon_name))
+    logo_svg = os.path.join(INPUT_SVG_DIR, 'logo-%s.svg' % (icon_name))
 
     if os.path.isfile(ios_svg) and os.path.isfile(md_svg):
       mode_icons.append('"%s":1' % icon_name)
@@ -104,11 +104,11 @@ def generate_data_files(data):
       all_icons[icon_name] = {
         'icons': [
           {
-            'code': get_code_by_name('%s-logo' % (icon_name)),
-            'name': '%s-logo' % (icon_name) or icon_name.split('-')
+            'code': get_code_by_name('logo-%s' % (icon_name)),
+            'name': 'logo-%s' % (icon_name) or icon_name.split('-')
           }
         ],
-        'tags': tag_data.get('%s-logo' % (icon_name)) or []
+        'tags': tag_data.get('logo-%s' % (icon_name)) or []
       }
 
     elif '-outline' in icon_name:
@@ -533,7 +533,9 @@ def generate_site_index_file():
                                   build_usage_block(icons))
     section_part_2 = USAGE_TMPL % (set_name, build_advanced_icon(icons))
     OUTPUT += (section_part_1 + section_part_2)
-  f2 = codecs.open('ionic-site/ionicons-data.html', 'w', 'utf-8')
+
+  html_path = os.path.join(BUILDER_PATH, 'ionic-site', 'ionicons-data.html')
+  f2 = codecs.open(html_path, 'w', 'utf-8')
   f2.write(OUTPUT)
   f2.close()
 
