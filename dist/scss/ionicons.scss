@@ -18,6 +18,7 @@
  font-family: $ionicons-font-family;
  src:url("#{$ionicons-font-path}/ionicons.eot?v=#{$ionicons-version}");
  src:url("#{$ionicons-font-path}/ionicons.eot?v=#{$ionicons-version}#iefix") format("embedded-opentype"),
+  url("#{$ionicons-font-path}/ionicons.woff2?v=#{$ionicons-version}") format("woff2"),
   url("#{$ionicons-font-path}/ionicons.woff?v=#{$ionicons-version}") format("woff"),
   url("#{$ionicons-font-path}/ionicons.ttf?v=#{$ionicons-version}") format("truetype"),
   url("#{$ionicons-font-path}/ionicons.svg?v=#{$ionicons-version}#Ionicons") format("svg");

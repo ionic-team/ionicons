@@ -12,7 +12,7 @@ import copy
 
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 INPUT_SVG_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'src')
-OUTPUT_FONT_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'fonts')
+OUTPUT_FONT_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'dist', 'fonts')
 MANIFEST_PATH = os.path.join(SCRIPT_PATH, '..', 'manifest.json')
 BUILD_DATA_PATH = os.path.join(SCRIPT_PATH, '..', 'build_data.json')
 AUTO_WIDTH = True
@@ -158,7 +158,11 @@ else:
   f.fontname = font_name
   f.familyname = font_name
   f.fullname = font_name
+
+  print 'Generate TTF Font File'
   f.generate(fontfile + '.ttf')
+
+  print 'Generate SVG Font File'
   f.generate(fontfile + '.svg')
 
   # Fix SVG header for webkit
@@ -179,11 +183,15 @@ else:
     subprocess.call(['sfnt2woff', fontfile + '.ttf'])
 
   # eotlitetool.py script to generate IE7-compatible .eot fonts
+  print 'Generate EOT Font File'
   subprocess.call('python ' + scriptPath + '/eotlitetool.py ' + fontfile + '.ttf -o ' + fontfile + '.eot', shell=True)
   subprocess.call('mv ' + fontfile + '.eotlite ' + fontfile + '.eot', shell=True)
 
-  # Hint the TTF file
+  print 'Hint TTF file'
   subprocess.call('ttfautohint -s -f -n ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
+
+  print 'Generate WOFF2 Font File'
+  subprocess.call('woff2_compress ' + fontfile + '.ttf', shell=True)
 
   manifest_data['icons'] = sorted(manifest_data['icons'], key=lambda k: k['name'])
   build_data['icons'] = sorted(build_data['icons'], key=lambda k: k['name'])
