@@ -36,6 +36,16 @@
     "metrics",
     "track"
   ],
+  "android": [
+    "android",
+    "google",
+    "mobile",
+    "logo"
+  ],
+  "angular": [
+    "angular",
+    "logo"
+  ],
   "aperture": [
     "aperture",
     "dark",
@@ -44,11 +54,19 @@
     "light",
     "settings"
   ],
+  "apple": [
+    "apple",
+    "mac",
+    "mobile",
+    "logo"
+  ],
   "apps": [
-    "apps"
+    "apps",
+    "applications"
   ],
   "appstore": [
-    "appstore"
+    "appstore",
+    "store"
   ],
   "archive": [
     "archive",
@@ -183,6 +201,13 @@
   "bicycle": [
     "bicycle"
   ],
+  "bitcoin": [
+    "bitcoin",
+    "currency",
+    "money",
+    "logo",
+    "trade"
+  ],
   "bluetooth": [
     "bluetooth",
     "cloud",
@@ -227,6 +252,11 @@
   ],
   "brush": [
     "brush"
+  ],
+  "buffer": [
+    "buffer",
+    "share",
+    "logo"
   ],
   "bug": [
     "bug",
@@ -312,6 +342,10 @@
     "checkmark",
     "circle"
   ],
+  "chrome": [
+    "chrome",
+    "logo"
+  ],
   "clipboard": [
     "clipboard",
     "write"
@@ -393,6 +427,10 @@
     "program",
     "working"
   ],
+  "codepen": [
+    "codepen",
+    "logo"
+  ],
   "cog": [
     "cog",
     "gear",
@@ -456,6 +494,10 @@
   "crop": [
     "crop"
   ],
+  "css3": [
+    "css3",
+    "logo"
+  ],
   "cube": [
     "box",
     "container",
@@ -464,6 +506,12 @@
   ],
   "cut": [
     "cut"
+  ],
+  "designernews": [
+    "design",
+    "designernews",
+    "post",
+    "logo"
   ],
   "desktop": [
     "desktop"
@@ -486,6 +534,16 @@
     "download",
     "export"
   ],
+  "dribbble": [
+    "design",
+    "dribbble",
+    "logo"
+  ],
+  "dropbox": [
+    "dropbox",
+    "logo",
+    "upload"
+  ],
   "easel": [
     "easel"
   ],
@@ -495,6 +553,10 @@
     "birth",
     "egg",
     "twitter"
+  ],
+  "euro": [
+    "euro",
+    "logo"
   ],
   "exit": [
     "exit"
@@ -512,6 +574,13 @@
   "eye-off": [
     "eye",
     "off"
+  ],
+  "facebook": [
+    "facebook",
+    "like",
+    "post",
+    "share",
+    "logo"
   ],
   "fastforward": [
     "fastforward",
@@ -573,6 +642,17 @@
   "football": [
     "football"
   ],
+  "foursquare": [
+    "checkin",
+    "foursquare",
+    "logo"
+  ],
+  "freebsd-devil": [
+    "devil",
+    "freebsd",
+    "logo",
+    "unix"
+  ],
   "funnel": [
     "funnel",
     "sort"
@@ -614,6 +694,11 @@
     "pull",
     "request"
   ],
+  "github": [
+    "code",
+    "github",
+    "logo"
+  ],
   "glasses": [
     "glasses",
     "look",
@@ -624,9 +709,30 @@
   "globe": [
     "globe"
   ],
+  "google": [
+    "follow",
+    "google",
+    "post",
+    "share",
+    "logo"
+  ],
+  "googleplus": [
+    "follow",
+    "googleplus",
+    "post",
+    "share",
+    "logo"
+  ],
   "grid": [
     "grid",
     "menu"
+  ],
+  "hackernews": [
+    "discuss",
+    "hackernews",
+    "karma",
+    "logo",
+    "upvotes"
   ],
   "hammer": [
     "hammer",
@@ -672,6 +778,10 @@
     "home",
     "house"
   ],
+  "html5": [
+    "html5",
+    "logo"
+  ],
   "ice-cream": [
     "cream",
     "ice"
@@ -699,6 +809,12 @@
     "circle",
     "information"
   ],
+  "instagram": [
+    "camera",
+    "instagram",
+    "photo",
+    "logo"
+  ],
   "ionic": [
     "badass",
     "framework",
@@ -708,6 +824,10 @@
   ],
   "ionitron": [
     "ionitron"
+  ],
+  "javascript": [
+    "javascript",
+    "logo"
   ],
   "jet": [
     "fly",
@@ -741,6 +861,11 @@
     "chain",
     "href",
     "link"
+  ],
+  "linkedin": [
+    "connect",
+    "linkedin",
+    "logo"
   ],
   "list": [
     "list"
@@ -800,6 +925,10 @@
     "map",
     "navigation",
     "pin"
+  ],
+  "markdown": [
+    "markdown",
+    "logo"
   ],
   "medal": [
     "medal"
@@ -888,6 +1017,10 @@
     "smoking",
     "warning"
   ],
+  "nodejs": [
+    "nodejs",
+    "logo"
+  ],
   "notifications": [
     "notifications"
   ],
@@ -903,6 +1036,10 @@
   ],
   "nutrition": [
     "nutrition"
+  ],
+  "octocat": [
+    "octocat",
+    "logo"
   ],
   "open": [
     "open"
@@ -992,6 +1129,10 @@
   "pint": [
     "pint"
   ],
+  "pinterest": [
+    "pinterest",
+    "logo"
+  ],
   "pizza": [
     "drink",
     "eat",
@@ -1017,6 +1158,12 @@
     "play",
     "right",
     "watch"
+  ],
+  "playstation": [
+    "fun",
+    "games",
+    "playstation",
+    "logo"
   ],
   "podium": [
     "award",
@@ -1056,6 +1203,10 @@
     "pulse",
     "rate"
   ],
+  "python": [
+    "python",
+    "logo"
+  ],
   "qr-scanner": [
     "qr",
     "reader",
@@ -1091,6 +1242,13 @@
     "recording",
     "tape",
     "voicemail"
+  ],
+  "reddit": [
+    "karma",
+    "news",
+    "reddit",
+    "logo",
+    "upvotes"
   ],
   "redo": [
     "forward",
@@ -1152,11 +1310,20 @@
   "rose": [
     "rose"
   ],
+  "rss": [
+    "blogging",
+    "rss",
+    "logo"
+  ],
   "sad": [
     "bad",
     "cry",
     "no",
     "sad"
+  ],
+  "sass": [
+    "sass",
+    "logo"
   ],
   "school": [
     "school"
@@ -1200,261 +1367,17 @@
     "next",
     "skip"
   ],
-  "snow": [
-    "snow"
-  ],
-  "android-logo": [
-    "android",
-    "mobile",
-    "logo"
-  ],
-  "angular-logo": [
-    "angular",
-    "logo"
-  ],
-  "apple-logo": [
-    "apple",
-    "mac",
-    "mobile",
-    "logo"
-  ],
-  "bitcoin-logo": [
-    "bitcoin",
-    "currency",
-    "money",
-    "logo",
-    "trade"
-  ],
-  "buffer-logo": [
-    "buffer",
-    "share",
-    "logo"
-  ],
-  "chrome-logo": [
-    "chrome",
-    "logo"
-  ],
-  "codepen-logo": [
-    "codepen",
-    "logo"
-  ],
-  "css3-logo": [
-    "css3",
-    "logo"
-  ],
-  "designernews-logo": [
-    "design",
-    "designernews",
-    "post",
-    "logo"
-  ],
-  "dribbble-logo": [
-    "design",
-    "dribbble",
-    "logo"
-  ],
-  "dropbox-logo": [
-    "dropbox",
-    "logo",
-    "upload"
-  ],
-  "euro-logo": [
-    "euro",
-    "logo"
-  ],
-  "facebook-logo": [
-    "facebook",
-    "like",
-    "post",
-    "share",
-    "logo"
-  ],
-  "foursquare-logo": [
-    "checkin",
-    "foursquare",
-    "logo"
-  ],
-  "freebsd-devil-logo": [
-    "devil",
-    "freebsd",
-    "logo",
-    "unix"
-  ],
-  "github-logo": [
-    "code",
-    "github",
-    "logo"
-  ],
-  "google-logo": [
-    "follow",
-    "google",
-    "post",
-    "share",
-    "logo"
-  ],
-  "googleplus-logo": [
-    "follow",
-    "googleplus",
-    "post",
-    "share",
-    "logo"
-  ],
-  "hackernews-logo": [
-    "discuss",
-    "hackernews",
-    "karma",
-    "logo",
-    "upvotes"
-  ],
-  "html5-logo": [
-    "html5",
-    "logo"
-  ],
-  "instagram-logo": [
-    "camera",
-    "instagram",
-    "photo",
-    "logo"
-  ],
-  "javascript-logo": [
-    "javascript",
-    "logo"
-  ],
-  "linkedin-logo": [
-    "connect",
-    "linkedin",
-    "logo"
-  ],
-  "markdown-logo": [
-    "markdown",
-    "logo"
-  ],
-  "nodejs-logo": [
-    "nodejs",
-    "logo"
-  ],
-  "octocat-logo": [
-    "octocat",
-    "logo"
-  ],
-  "pinterest-logo": [
-    "pinterest",
-    "logo"
-  ],
-  "playstation-logo": [
-    "fun",
-    "games",
-    "playstation",
-    "logo"
-  ],
-  "python-logo": [
-    "python",
-    "logo"
-  ],
-  "reddit-logo": [
-    "karma",
-    "news",
-    "reddit",
-    "logo",
-    "upvotes"
-  ],
-  "rss-logo": [
-    "blogging",
-    "rss",
-    "logo"
-  ],
-  "sass-logo": [
-    "sass",
-    "logo"
-  ],
-  "skype-logo": [
+  "skype": [
     "call",
     "skype",
     "logo"
   ],
-  "snapchat-logo": [
+  "snapchat": [
     "snapchat",
     "logo"
   ],
-  "steam-logo": [
-    "fun",
-    "games",
-    "logo",
-    "steam"
-  ],
-  "tumblr-logo": [
-    "blogging",
-    "logo",
-    "tumblr"
-  ],
-  "tux-logo": [
-    "linux",
-    "opensource",
-    "logo",
-    "tux"
-  ],
-  "twitch-logo": [
-    "logo",
-    "twitch"
-  ],
-  "twitter-logo": [
-    "follow",
-    "post",
-    "share",
-    "logo",
-    "twitter"
-  ],
-  "usd-logo": [
-    "cash",
-    "currency",
-    "money",
-    "logo",
-    "trade",
-    "usd"
-  ],
-  "vimeo-logo": [
-    "share",
-    "logo",
-    "video",
-    "view",
-    "vimeo",
-    "watch"
-  ],
-  "whatsapp-logo": [
-    "logo",
-    "whatsapp"
-  ],
-  "windows-logo": [
-    "pc",
-    "logo",
-    "windows"
-  ],
-  "wordpress-logo": [
-    "blogging",
-    "logo",
-    "wordpress"
-  ],
-  "xbox-logo": [
-    "fun",
-    "games",
-    "logo",
-    "xbox"
-  ],
-  "yahoo-logo": [
-    "logo",
-    "yahoo"
-  ],
-  "yen-logo": [
-    "logo",
-    "yen"
-  ],
-  "youtube-logo": [
-    "share",
-    "logo",
-    "video",
-    "view",
-    "watch",
-    "youtube"
+  "snow": [
+    "snow"
   ],
   "speedometer": [
     "drive",
@@ -1477,6 +1400,12 @@
   ],
   "stats": [
     "stats"
+  ],
+  "steam": [
+    "fun",
+    "games",
+    "logo",
+    "steam"
   ],
   "stopwatch": [
     "stopwatch"
@@ -1581,6 +1510,28 @@
     "trophy",
     "win"
   ],
+  "tumblr": [
+    "blogging",
+    "logo",
+    "tumblr"
+  ],
+  "tux": [
+    "linux",
+    "opensource",
+    "logo",
+    "tux"
+  ],
+  "twitch": [
+    "logo",
+    "twitch"
+  ],
+  "twitter": [
+    "follow",
+    "post",
+    "share",
+    "logo",
+    "twitter"
+  ],
   "umbrella": [
     "dry",
     "rain",
@@ -1595,11 +1546,27 @@
   "unlock": [
     "unlock"
   ],
+  "usd": [
+    "cash",
+    "currency",
+    "money",
+    "logo",
+    "trade",
+    "usd"
+  ],
   "videocam": [
     "camera",
     "film",
     "movie",
     "videocam"
+  ],
+  "vimeo": [
+    "share",
+    "logo",
+    "video",
+    "view",
+    "vimeo",
+    "watch"
   ],
   "volume-down": [
     "down",
@@ -1630,11 +1597,20 @@
   "water": [
     "water"
   ],
+  "whatsapp": [
+    "logo",
+    "whatsapp"
+  ],
   "wifi": [
     "bars",
     "connection",
     "internet",
     "wifi"
+  ],
+  "windows": [
+    "pc",
+    "logo",
+    "windows"
   ],
   "wine": [
     "wine"
@@ -1645,5 +1621,32 @@
     "girl",
     "lady",
     "woman"
+  ],
+  "wordpress": [
+    "blogging",
+    "logo",
+    "wordpress"
+  ],
+  "xbox": [
+    "fun",
+    "games",
+    "logo",
+    "xbox"
+  ],
+  "yahoo": [
+    "logo",
+    "yahoo"
+  ],
+  "yen": [
+    "logo",
+    "yen"
+  ],
+  "youtube": [
+    "share",
+    "logo",
+    "video",
+    "view",
+    "watch",
+    "youtube"
   ]
 }

@@ -98,9 +98,6 @@ def generate_data_files(data):
     elif os.path.isfile(logo_svg):
       logo_icons.append('"%s":1' % icon_name)
 
-      tags = icon_name.split('-')
-      tags.append('logo')
-
       all_icons[icon_name] = {
         'icons': [
           {
@@ -108,7 +105,7 @@ def generate_data_files(data):
             'name': 'logo-%s' % (icon_name) or icon_name.split('-')
           }
         ],
-        'tags': tag_data.get('logo-%s' % (icon_name)) or []
+        'tags': tag_data.get(icon_name) or icon_name.split('-')
       }
 
     elif '-outline' in icon_name:
