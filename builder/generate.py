@@ -9,13 +9,13 @@ from collections import OrderedDict
 
 BUILDER_PATH = os.path.dirname(os.path.abspath(__file__))
 ROOT_PATH = os.path.join(BUILDER_PATH, '..')
+DIST_PATH = os.path.join(ROOT_PATH, 'dist')
 INPUT_SVG_DIR = os.path.join(ROOT_PATH, 'src')
-OUTPUT_SVG_DIR = os.path.join(ROOT_PATH, 'svg')
-DATA_PATH = os.path.join(ROOT_PATH, 'data')
-FONTS_FOLDER_PATH = os.path.join(ROOT_PATH, 'fonts')
-CSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'css')
-SCSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'scss')
-LESS_FOLDER_PATH = os.path.join(ROOT_PATH, 'less')
+OUTPUT_SVG_DIR = os.path.join(DIST_PATH, 'svg')
+DATA_PATH = os.path.join(DIST_PATH, 'data')
+FONTS_FOLDER_PATH = os.path.join(DIST_PATH, 'fonts')
+CSS_FOLDER_PATH = os.path.join(DIST_PATH, 'css')
+SCSS_FOLDER_PATH = os.path.join(DIST_PATH, 'scss')
 
 
 def main():
@@ -26,7 +26,6 @@ def main():
   generate_data_files(data)
   rename_svg_glyph_names(data)
   generate_scss(data)
-  generate_less(data)
   generate_svg_files()
   generate_cheatsheet(data)
   generate_mode_cheatsheet(data)
@@ -212,58 +211,6 @@ def generate_scss(data):
   f.close()
 
   generate_css_from_scss(data)
-
-
-def generate_less(data):
-  print "Generate LESS"
-  font_name = data['name']
-  font_version = data['version']
-  css_prefix = data['prefix']
-  variables_file_path = os.path.join(LESS_FOLDER_PATH, '_ionicons-variables.less')
-  icons_file_path = os.path.join(LESS_FOLDER_PATH, '_ionicons-icons.less')
-
-  d = []
-  d.append('/*!');
-  d.append('Ionicons, v%s' % (font_version) );
-  d.append('Created by Ben Sperry for the Ionic Framework, http://ionicons.com/');
-  d.append('https://twitter.com/benjsperry  https://twitter.com/ionicframework');
-  d.append('MIT License: https://github.com/driftyco/ionicons');
-  d.append('*/');
-  d.append('// Ionicons Variables')
-  d.append('// --------------------------\n')
-  d.append('@ionicons-font-path: "../fonts";')
-  d.append('@ionicons-font-family: "%s";' % (font_name) )
-  d.append('@ionicons-version: "%s";' % (font_version) )
-  d.append('')
-  for ionicon in data['icons']:
-    chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('@ionicon-var-%s: "%s";' % (ionicon['name'], chr_code) )
-
-  f = codecs.open(variables_file_path, 'w', 'utf-8')
-  f.write( u'\n'.join(d) )
-  f.close()
-
-  d = []
-  d.append('// Ionicons Icons')
-  d.append('// --------------------------\n')
-
-  group = [ '.%s' % (data['name'].lower()) ]
-  for ionicon in data['icons']:
-    group.append('.%s%s:before' % (css_prefix, ionicon['name']) )
-
-  d.append( ',\n'.join(group) )
-
-  d.append('{')
-  d.append('  &:extend(.ion);')
-  d.append('}')
-
-  for ionicon in data['icons']:
-    chr_code = ionicon['code'].replace('0x', '\\')
-    d.append('.%s%s:before { content: @ionicon-var-%s; }' % (css_prefix, ionicon['name'], ionicon['name']) )
-
-  f = codecs.open(icons_file_path, 'w', 'utf-8')
-  f.write( '\n'.join(d) )
-  f.close()
 
 
 def generate_css_from_scss(data):
