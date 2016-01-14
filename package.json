@@ -1,7 +1,7 @@
 {
   "name": "ionicons",
   "description": "Premium icons for Ionic.",
-  "version": "3.0.0-alpha.2",
+  "version": "3.0.0-alpha.3",
   "files": ["dist"],
   "keywords": ["ionicons", "ionic", "icon", "svg", "font", "mobile"],
   "homepage": "http://ionicons.com/",

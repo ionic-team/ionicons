@@ -407,6 +407,14 @@ def get_build_data():
   f = codecs.open(build_data_path, 'r', 'utf-8')
   data = json.loads(f.read())
   f.close()
+  
+  package_json_path = os.path.join(ROOT_PATH, 'package.json')
+  f = codecs.open(package_json_path, 'r', 'utf-8')
+  package_data = json.loads(f.read())
+  f.close()
+  
+  data['version'] = package_data['version']
+  
   return data
 
 
