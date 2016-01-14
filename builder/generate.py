@@ -30,7 +30,6 @@ def main():
   generate_cheatsheet(data)
   generate_mode_cheatsheet(data)
   generate_icon_comparison(data)
-  generate_site_index_file()
 
 
 def generate_font_files():
@@ -426,69 +425,6 @@ def get_tag_data():
   f.close()
   return data
 
-
-def generate_site_index_file():
-
-  BASE_TMPL = """
-  <div id="%s" style="display:none;">
-      <h2 class="title">%s</h2>
-      <ul class="modal-icons">%s</ul>
-  """
-
-  ICON_TMPL = """
-    <li>
-      <i class="%s"></i>
-      <code>%s</code>
-    </li>
-  """
-
-  USAGE_TMPL = """
-    <h4 class="modal-subtitle">Usage:</h4>
-    {%% highlight html %%}
-
-    <!--Basic: auto-select the icon based on the platform -->
-    <ion-icon name="%s"></ion-icon>
-
-    <!-- Advanced: explicity set the icon for each platform -->
-    %s
-    {%% endhighlight %%}
-  </div>
-  """
-
-  def build_usage_block(icons):
-    output = ""
-    for i in icons:
-      output += ICON_TMPL % ('ion-'+i['name'], i['name'])
-    return output
-
-  def build_advanced_icon(icons):
-    output = ""
-    ADV_ICON_TMPL = '<ion-icon ios="%s" md="%s"></ion-icon>'
-    non_outline_icons = [i for i in icons if '-outline' not in i['name']]
-    if (len(non_outline_icons) >= 2):
-      return ADV_ICON_TMPL % (non_outline_icons[0]['name'],
-                              non_outline_icons[1]['name'])
-    if (len(non_outline_icons) == 1):
-      return ADV_ICON_TMPL % (non_outline_icons[0]['name'], non_outline_icons[0]['name'])
-
-
-  f = codecs.open(os.path.join(DATA_PATH, 'ionicons.json'), 'r', 'utf-8')
-  data = json.loads(f.read())
-  f.close()
-  all_icons = data.items()
-  OUTPUT = ""
-  for icon_set in all_icons:
-    set_name = icon_set[0]
-    icons = icon_set[1]['icons']
-    section_part_1 = BASE_TMPL % (set_name, set_name,
-                                  build_usage_block(icons))
-    section_part_2 = USAGE_TMPL % (set_name, build_advanced_icon(icons))
-    OUTPUT += (section_part_1 + section_part_2)
-
-  html_path = os.path.join(BUILDER_PATH, 'ionic-site', 'ionicons-data.html')
-  f2 = codecs.open(html_path, 'w', 'utf-8')
-  f2.write(OUTPUT)
-  f2.close()
 
 if __name__ == "__main__":
   main()
