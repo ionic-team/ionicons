@@ -127,7 +127,7 @@ def generate_data_files(data):
   all_icons = OrderedDict(sorted(all_icons.items(), key=lambda t: t[0]))
 
   f = codecs.open(os.path.join(DATA_PATH, 'ionicons.json'), 'w', 'utf-8')
-  f.write( json.dumps(all_icons, separators=(',', ':')) )
+  f.write( json.dumps(all_icons, indent=2, separators=(',', ': ')) )
   f.close()
 
 
