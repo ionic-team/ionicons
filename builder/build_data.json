@@ -1,9 +1,13 @@
 {
-  "build_hash": "4f542090ff2ca44ebed900c482fce026",
+  "build_hash": "1eed7649c171efd2a20710a6a7ef3a46",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
   "icons": [
+    {
+      "code": "0xf100",
+      "name": "alert-circled"
+    },
     {
       "code": "0xf35f",
       "name": "android-arrow-dropdown"
@@ -199,6 +203,10 @@
     {
       "code": "0xf12a",
       "name": "close"
+    },
+    {
+      "code": "0xf128",
+      "name": "close-circled"
     },
     {
       "code": "0xf12c",
