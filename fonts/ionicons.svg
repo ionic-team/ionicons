@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-2-1: Created with FontForge (http://fontforge.org)
+2016-2-5: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150715 at Mon Feb  1 15:21:49 2016
- By Dani Dirks
-Copyright (c) 2016, Dani Dirks
+Created by FontForge 20150302 at Fri Feb  5 09:56:23 2016
+ By Carly Culver
+Copyright (c) 2016, Carly Culver
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -19,7 +19,7 @@ Copyright (c) 2016, Dani Dirks
     panose-1="2 0 5 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="-0.5 -64 512 448"
+    bbox="-0.5 -75 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
     unicode-range="U+F100-F4B9"
@@ -116,6 +116,10 @@ s27 12 27 27v165c2 61 52 110 114 110s112 -50 114 -111v-36z" />
  />
     <glyph glyph-name="ion-build-user" unicode="&#xf14c;" horiz-adv-x="356" 
 d="M340 136l-97 26c-18 -20 -40 -34 -65 -34s-47 14 -65 34l-97 -26c-9 -2 -16 -12 -16 -21v-143c0 -9 8 -17 17 -17h322c9 0 17 8 17 17v143c0 9 -7 19 -16 21zM178 178c53 0 97 55 97 122s-44 122 -97 122s-97 -55 -97 -122s44 -122 97 -122z" />
+    <glyph glyph-name="ion-build-view-grid" unicode="&#xf161;" 
+d="M0 178v179h187v-179h-187zM0 -75v179h187v-179h-187zM261 178v179h187v-179h-187zM261 -75v179h187v-179h-187z" />
+    <glyph glyph-name="ion-build-view-list" unicode="&#xf162;" 
+d="M0 262v95h105v-95h-105zM0 94v95h105v-95h-105zM0 -75v96h105v-96h-105zM162 262v95h286v-95h-286zM162 94v95h286v-95h-286zM162 -75v96h286v-96h-286z" />
     <glyph glyph-name="ion-build-zoom-in" unicode="&#xf153;" horiz-adv-x="399" 
 d="M399 33l-24 -24l-118 118c-27 -22 -61 -35 -99 -35c-87 0 -158 71 -158 158s71 158 158 158s158 -71 158 -158c0 -37 -13 -72 -35 -99zM58 150c27 -27 62 -42 100 -42s73 15 100 42s41 62 41 100s-14 73 -41 100s-62 42 -100 42s-73 -15 -100 -42s-41 -62 -41 -100
 s14 -73 41 -100zM149 174v65h-62v22h62v65h21v-65h62v-22h-62v-65h-21z" />
