@@ -16,4 +16,4 @@
 
 ## 许可协议
 
-使用 [MIT](http://opensource.org/licenses/MIT) 授权许可协议
+使用 [MIT](http://opensource.org/licenses/MIT) 许可协议
