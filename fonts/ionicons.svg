@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-2-5: Created with FontForge (http://fontforge.org)
+2016-2-18: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Fri Feb  5 09:56:23 2016
- By Carly Culver
-Copyright (c) 2016, Carly Culver
+Created by FontForge 20150828 at Thu Feb 18 17:43:12 2016
+ By Mark Weiss
+Copyright (c) 2016, Mark Weiss
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -194,6 +194,9 @@ v57h14v-57h-14zM404 81v57h14v-57h-14zM0 81v57h14v-57h-14z" />
     <glyph glyph-name="ion-crop-portrait" unicode="&#xf14e;" horiz-adv-x="248" 
 d="M0 319v57h13v-57h-13zM0 224v57h13v-57h-13zM0 128v57h13v-57h-13zM0 33v57h13v-57h-13zM234 319v57h14v-57h-14zM234 224v57h14v-57h-14zM234 128v57h14v-57h-14zM234 33v57h14v-57h-14zM0 400v14h57v-14h-57zM0 -4v14h57v-14h-57zM95 400v14h57v-14h-57zM95 -4v14h57
 v-14h-57zM191 400v14h57v-14h-57zM191 -4v14h57v-14h-57z" />
+    <glyph glyph-name="ion-cube" unicode="&#xf318;" 
+d="M435 280c7 0 13 -6 13 -12v-183c0 -9 -6 -17 -14 -22v-1l-175 -92v-1c-2 -1 -4 -1 -6 -1c-7 0 -13 6 -13 12v185c0 9 5 17 13 22v0l3 2l172 89l2 1c2 1 3 1 5 1zM422 329c0 0 8 -3 8 -9c0 -7 -8 -11 -8 -11l-183 -97l-2 -1c-4 -2 -8 -3 -13 -3s-9 1 -13 3l-2 1l-183 96
+s-8 5 -8 12c0 6 8 9 8 9l181 82s11 5 17 5s17 -5 17 -5zM195 187c8 -5 13 -13 13 -22v-185c0 -6 -6 -12 -13 -12c-2 0 -4 1 -6 2v0l-175 92v1c-8 5 -14 13 -14 22v183c0 6 6 12 13 12c2 0 4 0 5 -1l2 -1l171 -89z" />
     <glyph glyph-name="ion-edit" unicode="&#xf2bf;" 
 d="M381 259l-250 -251l-91 91l251 250zM440 360c12 -12 11 -32 -2 -45l-45 -45l-91 91l45 45c13 13 33 14 45 2zM32 85l85 -85l-117 -32z" />
     <glyph glyph-name="ion-email" unicode="&#xf132;" horiz-adv-x="416" 
