@@ -59,6 +59,7 @@
 .#{$ionicons-prefix}connection-bars:before,
 .#{$ionicons-prefix}crop-landscape:before,
 .#{$ionicons-prefix}crop-portrait:before,
+.#{$ionicons-prefix}cube:before,
 .#{$ionicons-prefix}edit:before,
 .#{$ionicons-prefix}email:before,
 .#{$ionicons-prefix}erlenmeyer-flask:before,
@@ -175,6 +176,7 @@
 .#{$ionicons-prefix}connection-bars:before { content: $ionicon-var-connection-bars; }
 .#{$ionicons-prefix}crop-landscape:before { content: $ionicon-var-crop-landscape; }
 .#{$ionicons-prefix}crop-portrait:before { content: $ionicon-var-crop-portrait; }
+.#{$ionicons-prefix}cube:before { content: $ionicon-var-cube; }
 .#{$ionicons-prefix}edit:before { content: $ionicon-var-edit; }
 .#{$ionicons-prefix}email:before { content: $ionicon-var-email; }
 .#{$ionicons-prefix}erlenmeyer-flask:before { content: $ionicon-var-erlenmeyer-flask; }

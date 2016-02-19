@@ -1,5 +1,5 @@
 {
-  "build_hash": "6a4497c91199151f3bdddd76c52cb88e",
+  "build_hash": "9c51bffabde293c9e4e744498ca26890",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -231,6 +231,10 @@
     {
       "code": "0xf14e",
       "name": "crop-portrait"
+    },
+    {
+      "code": "0xf318",
+      "name": "cube"
     },
     {
       "code": "0xf2bf",
