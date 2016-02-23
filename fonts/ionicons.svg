@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-2-18: Created with FontForge (http://fontforge.org)
+2016-2-23: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Thu Feb 18 17:43:12 2016
- By Mark Weiss
-Copyright (c) 2016, Mark Weiss
+Created by FontForge 20150302 at Tue Feb 23 11:24:07 2016
+ By Carly Culver
+Copyright (c) 2016, Carly Culver
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -19,7 +19,7 @@ Copyright (c) 2016, Mark Weiss
     panose-1="2 0 5 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="-0.5 -75 512 448"
+    bbox="-0.5 -75 612.617 448"
     underline-thickness="25.6"
     underline-position="-51.2"
     unicode-range="U+F100-F4B9"
@@ -62,9 +62,9 @@ d="M206 -25h-2c-1 1 -3 2 -4 3c-65 32 -131 63 -196 94c-3 1 -4 4 -4 7v227c0 3 1 5 
 v212c0 3 -1 5 -4 6c-56 25 -111 51 -166 76c-6 3 -12 6 -19 9v-5v-208c0 -3 1 -4 4 -5l132 -63c17 -8 35 -17 53 -26zM407 304c-2 -1 -3 -1 -4 -2c-16 -8 -33 -16 -49 -24c-3 -1 -3 -3 -3 -6v-93c0 -3 -1 -5 -4 -7c-16 -9 -33 -17 -49 -26c-1 -1 -2 -1 -4 -2v104
 c-2 -1 -4 -1 -5 -2c-19 -10 -39 -20 -58 -29c-3 -1 -3 -3 -3 -6c0 -68 -1 -136 -1 -204c0 -1 1 -2 1 -4c2 1 3 1 4 2c57 27 115 54 172 81c3 1 4 2 4 5v166c0 15 -1 31 -1 47zM277 260c-1 1 -2 1 -2 1l-165 78c-1 1 -4 1 -5 0c-14 -6 -29 -13 -43 -19c-7 -3 -14 -7 -22 -10
 c2 -1 4 -1 5 -2c17 -8 34 -15 51 -23c39 -18 78 -36 117 -53c1 -1 3 -1 4 0c20 9 40 18 60 28zM385 312c-1 1 -1 1 -2 1l-165 75c-1 1 -4 1 -5 0c-14 -6 -29 -12 -43 -19c-1 0 -2 -1 -3 -2c18 -8 35 -16 53 -24l117 -51c1 -1 4 -2 5 -1c14 7 28 14 43 21z" />
-    <glyph glyph-name="ion-build-cart-large" unicode="&#xf15b;" horiz-adv-x="509" 
-d="M451 140c-2 -5 -9 -10 -16 -10h-298c-7 0 -13 4 -15 10l-54 176c-2 6 -8 10 -15 10h-41c-7 0 -12 4 -12 10v29c0 6 5 11 12 11h84c7 0 14 -4 16 -10l54 -176c2 -6 8 -10 15 -10h213c7 0 14 4 16 9l44 114c2 5 9 9 15 7l32 -10c6 -2 9 -8 7 -13zM456 63
-c0 -19 -15 -34 -34 -34s-33 15 -33 34s14 33 33 33s34 -14 34 -33zM195 63c0 -19 -15 -34 -34 -34s-34 15 -34 34s15 33 34 33s34 -14 34 -33z" />
+    <glyph glyph-name="ion-build-cart-large" unicode="&#xf15b;" horiz-adv-x="613" 
+d="M555 88c-2 -6 -9 -9 -16 -9h-402c-7 0 -13 4 -15 10l-54 176c-2 6 -8 10 -15 10h-41c-7 0 -12 4 -12 10v29c0 6 5 11 12 11h84c7 0 14 -4 16 -10l54 -176c2 -6 8 -11 15 -11h317c7 0 14 4 16 10l44 114c2 6 10 9 16 7l31 -10c6 -2 9 -8 7 -13zM560 12
+c0 -19 -15 -34 -34 -34s-33 15 -33 34s14 33 33 33s34 -14 34 -33zM195 12c0 -19 -15 -34 -34 -34c-18 0 -34 15 -34 34s15 33 34 33s34 -14 34 -33z" />
     <glyph glyph-name="ion-build-cart-small" unicode="&#xf15c;" horiz-adv-x="356" 
 d="M316 141c-1 -6 -6 -10 -11 -10h-209c-5 0 -9 4 -10 10l-38 178c-1 6 -6 10 -11 10h-29c-5 0 -8 5 -8 11v29c0 6 3 11 8 11h60c5 0 9 -5 10 -11l38 -178c1 -6 6 -10 11 -10h149c5 0 10 4 11 10l31 115c1 6 7 9 11 7l22 -10c4 -2 6 -7 5 -13zM317 63c0 -19 -15 -34 -34 -34
 s-34 15 -34 34s15 34 34 34s34 -15 34 -34zM154 63c0 -19 -15 -34 -34 -34s-34 15 -34 34s15 34 34 34s34 -15 34 -34z" />
