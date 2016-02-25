@@ -1,0 +1,29 @@
+{
+  "name": "ionicons",
+  "description": "Premium icons for Ionic.",
+  "version": "3.0.0-alpha.3",
+  "files": ["dist"],
+  "keywords": ["ionicons", "ionic", "icon", "svg", "font", "mobile"],
+  "homepage": "http://ionicons.com/",
+  "author": {
+    "name": "Ben Sperry",
+    "web": "https://twitter.com/bensperry"
+  },
+  "contributors": [
+    {
+      "name": "Adam Bradley",
+      "web": "http://twitter.com/adamdbradley"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/driftyco/ionicons.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/driftyco/ionicons/issues"
+  },
+  "license": "MIT",
+  "engines" : {
+    "node" : ">=0.10.3"
+  }
+}

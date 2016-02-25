@@ -1,0 +1,44 @@
+@import "ionicons-variables";
+/*!
+  Ionicons, v#{$ionicons-version}
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/benjsperry  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
+
+  Android-style icons originally built by Google’s
+  Material Design Icons: https://github.com/google/material-design-icons
+  used under CC BY http://creativecommons.org/licenses/by/4.0/
+  Modified icons to fit ionicon’s grid from original.
+*/
+
+// Ionicons
+// --------------------------
+
+@font-face {
+ font-family: "Ionicons";
+ src:url("#{$ionicons-font-path}/ionicons.eot?v=#{$ionicons-version}");
+ src:url("#{$ionicons-font-path}/ionicons.eot?v=#{$ionicons-version}#iefix") format("embedded-opentype"),
+  url("#{$ionicons-font-path}/ionicons.woff2?v=#{$ionicons-version}") format("woff2"),
+  url("#{$ionicons-font-path}/ionicons.woff?v=#{$ionicons-version}") format("woff"),
+  url("#{$ionicons-font-path}/ionicons.ttf?v=#{$ionicons-version}") format("truetype"),
+  url("#{$ionicons-font-path}/ionicons.svg?v=#{$ionicons-version}#Ionicons") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+
+.ion {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "ionicons-common";
+@import "ionicons-icons";

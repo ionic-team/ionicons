@@ -1,0 +1,3742 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ionicons v3.0.0-alpha.3 Mode Cheatsheet</title>
+  <style>
+    * {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      background: #fff;
+      color: #444;
+      font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    a, a:visited {
+      color: #888;
+      text-decoration: underline;
+    }
+    a:hover, a:focus { color: #000; }
+
+    header {
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      color: #888;
+      float: left;
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    header a {
+      float: right;
+      font-size: 14px;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1200px;
+      min-width: 960px;
+      padding: 0 20px;
+      width: 95%;
+    }
+
+    .icon-row {
+      border-bottom: 1px dotted #ccc;
+      padding: 10px 0 20px;
+      margin-bottom: 20px;
+    }
+    .ion {
+      -webkit-touch-callout: text;
+      -webkit-user-select: text;
+      -khtml-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+
+    .preview-icon { vertical-align: bottom; }
+
+    .preview-scale {
+      color: #888;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .step {
+      display: inline-block;
+      line-height: 1;
+      position: relative;
+      width: 10%;
+    }
+
+    .step i {
+      -webkit-transition: opacity .3s;
+      -moz-transition: opacity .3s;
+      -ms-transition: opacity .3s;
+      -o-transition: opacity .3s;
+      transition: opacity .3s;
+    }
+
+    .step:hover i { opacity: .3; }
+
+    .size-12 { font-size: 12px; }
+    .size-14 { font-size: 14px; }
+    .size-16 { font-size: 16px; }
+    .size-18 { font-size: 18px; }
+    .size-21 { font-size: 21px; }
+    .size-24 { font-size: 24px; }
+    .size-32 { font-size: 32px; }
+    .size-48 { font-size: 48px; }
+    .size-64 { font-size: 64px; }
+    .size-96 { font-size: 96px; }
+
+    .usage { margin-top: 10px; }
+    .usage input {
+      font-family: monospace;
+      margin-right: 3px;
+      padding: 2px 5px;
+      text-align: center;
+      -webkit-touch-callout: text;
+      -webkit-user-select: text;
+      -khtml-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+
+    .usage label {
+      font-size: 12px;
+      text-align: right;
+      padding: 0 3px 0 60px;
+    }
+    .usage label:first-child { padding-left: 0; }
+    .usage .name { width: 180px; }
+    .usage .html { width: 80px; }
+    .usage .css { width: 80px; }
+
+    .mode-row {
+      border-bottom: 1px dotted #ccc;
+      padding: 0 0 10px;
+      margin-bottom: 10px;
+    }
+
+    .mode-col {
+      display: inline-block;
+      width: 25%;
+    }
+
+    .mode-row .icon {
+      font-size: 32px;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .comparison-row {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .comparison-col {
+      flex: 1;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .comparison-icon {
+      height: 136px;
+    }
+
+    .comparison-col img {
+      width: 100%;
+      max-width: 128px;
+    }
+
+    .comparison-col .icon {
+      font-size: 128px;
+      line-height: 0;
+      color: black;
+    }
+
+    footer {
+      color: #888;
+      font-size: 12px;
+      padding: 20px 0;
+    }
+  </style>
+  <link href="dist/css/ionicons.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Ionicons v3.0.0-alpha.3 Mode Cheatsheet, 294 icons:</h1>
+      <p><a href="http://ionicons.com/">Ionicons Homepage</a></p>
+    </header>
+    <div class="content">
+      
+  <div class="mode-row">
+    <div class="mode-col">
+      <strong>Icon Name</strong>
+    </div>
+    <div class="mode-col align-center">
+      <strong>iOS</strong>
+    </div>
+    <div class="mode-col align-center">
+      <strong>Material Design</strong>
+    </div>
+  </div>
+  
+<div class="mode-row">
+  <div class="mode-col">
+    add
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-add"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-add"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    add-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-add-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-add-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    alarm
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-alarm"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-alarm"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    albums
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-albums"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-albums"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    alert
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-alert"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-alert"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    american-football
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-american-football"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-american-football"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    analytics
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-analytics"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-analytics"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    aperture
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-aperture"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-aperture"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    apps
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-apps"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-apps"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    appstore
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-appstore"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-appstore"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    archive
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-archive"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-archive"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-back
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-back"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-back"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-down
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-down"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-down"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropdown
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropdown"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropdown"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropdown-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropdown-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropdown-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropleft
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropleft"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropleft"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropleft-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropleft-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropleft-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropright
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropright"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropright"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropright-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropright-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropright-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropup
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropup"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropup"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-dropup-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-dropup-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-dropup-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-forward
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-forward"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-forward"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-round-back
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-round-back"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-round-back"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-round-down
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-round-down"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-round-down"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-round-forward
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-round-forward"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-round-forward"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-round-up
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-round-up"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-round-up"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    arrow-up
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-arrow-up"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-arrow-up"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    at
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-at"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-at"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    attach
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-attach"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-attach"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    backspace
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-backspace"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-backspace"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    barcode
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-barcode"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-barcode"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    baseball
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-baseball"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-baseball"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    basket
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-basket"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-basket"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    basketball
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-basketball"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-basketball"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    battery-charging
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-battery-charging"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-battery-charging"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    battery-dead
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-battery-dead"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-battery-dead"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    battery-full
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-battery-full"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-battery-full"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    beaker
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-beaker"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-beaker"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    beer
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-beer"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-beer"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bicycle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bicycle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bicycle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bluetooth
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bluetooth"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bluetooth"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    boat
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-boat"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-boat"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    body
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-body"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-body"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bonfire
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bonfire"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bonfire"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    book
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-book"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-book"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bookmark
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bookmark"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bookmark"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bookmarks
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bookmarks"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bookmarks"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bowtie
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bowtie"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bowtie"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    briefcase
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-briefcase"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-briefcase"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    browsers
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-browsers"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-browsers"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    brush
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-brush"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-brush"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bug
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bug"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bug"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    build
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-build"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-build"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bulb
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bulb"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bulb"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    bus
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-bus"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-bus"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cafe
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cafe"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cafe"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    calculator
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-calculator"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-calculator"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    calendar
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-calendar"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-calendar"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    call
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-call"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-call"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    camera
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-camera"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-camera"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    car
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-car"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-car"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    card
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-card"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-card"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cart
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cart"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cart"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cash
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cash"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cash"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    chatboxes
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-chatboxes"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-chatboxes"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    chatbubbles
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-chatbubbles"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-chatbubbles"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    checkbox
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-checkbox"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-checkbox"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    checkmark
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-checkmark"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-checkmark"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    checkmark-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-checkmark-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-checkmark-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    clipboard
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-clipboard"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-clipboard"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    clock
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-clock"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-clock"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    close
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-close"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-close"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    close-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-close-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-close-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    closed-captioning
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-closed-captioning"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-closed-captioning"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloud
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloud"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloud"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloud-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloud-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloud-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloud-done
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloud-done"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloud-done"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloud-download
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloud-download"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloud-download"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloud-upload
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloud-upload"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloud-upload"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloudy
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloudy"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloudy"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cloudy-night
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cloudy-night"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cloudy-night"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    code
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-code"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-code"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    code-download
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-code-download"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-code-download"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    code-working
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-code-working"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-code-working"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cog
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cog"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cog"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    color-fill
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-color-fill"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-color-fill"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    color-filter
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-color-filter"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-color-filter"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    color-palette
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-color-palette"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-color-palette"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    color-wand
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-color-wand"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-color-wand"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    compass
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-compass"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-compass"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    construct
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-construct"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-construct"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    contact
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-contact"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-contact"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    contacts
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-contacts"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-contacts"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    contract
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-contract"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-contract"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    contrast
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-contrast"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-contrast"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    copy
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-copy"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-copy"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    create
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-create"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-create"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    crop
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-crop"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-crop"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cube
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cube"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cube"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    cut
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-cut"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-cut"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    desktop
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-desktop"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-desktop"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    disc
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-disc"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-disc"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    document
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-document"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-document"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    done-all
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-done-all"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-done-all"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    download
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-download"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-download"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    easel
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-easel"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-easel"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    egg
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-egg"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-egg"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    exit
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-exit"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-exit"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    expand
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-expand"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-expand"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    eye
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-eye"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-eye"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    eye-off
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-eye-off"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-eye-off"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    fastforward
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-fastforward"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-fastforward"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    female
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-female"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-female"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    filing
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-filing"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-filing"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    film
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-film"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-film"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    finger-print
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-finger-print"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-finger-print"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    flag
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-flag"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-flag"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    flame
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-flame"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-flame"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    flash
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-flash"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-flash"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    flask
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-flask"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-flask"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    flower
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-flower"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-flower"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    folder
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-folder"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-folder"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    folder-open
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-folder-open"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-folder-open"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    football
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-football"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-football"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    funnel
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-funnel"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-funnel"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    game-controller-a
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-game-controller-a"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-game-controller-a"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    game-controller-b
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-game-controller-b"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-game-controller-b"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    git-branch
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-git-branch"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-git-branch"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    git-commit
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-git-commit"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-git-commit"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    git-compare
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-git-compare"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-git-compare"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    git-merge
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-git-merge"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-git-merge"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    git-network
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-git-network"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-git-network"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    git-pull-request
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-git-pull-request"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-git-pull-request"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    glasses
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-glasses"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-glasses"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    globe
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-globe"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-globe"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    grid
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-grid"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-grid"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    hammer
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-hammer"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-hammer"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    hand
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-hand"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-hand"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    happy
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-happy"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-happy"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    headset
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-headset"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-headset"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    heart
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-heart"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-heart"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    help
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-help"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-help"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    help-buoy
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-help-buoy"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-help-buoy"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    help-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-help-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-help-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    home
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-home"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-home"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    ice-cream
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-ice-cream"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-ice-cream"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    image
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-image"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-image"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    images
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-images"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-images"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    infinite
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-infinite"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-infinite"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    information
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-information"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-information"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    information-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-information-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-information-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    ionic
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-ionic"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-ionic"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    ionitron
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-ionitron"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-ionitron"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    jet
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-jet"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-jet"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    key
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-key"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-key"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    keypad
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-keypad"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-keypad"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    laptop
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-laptop"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-laptop"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    leaf
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-leaf"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-leaf"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    link
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-link"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-link"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    list
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-list"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-list"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    list-box
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-list-box"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-list-box"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    locate
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-locate"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-locate"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    lock
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-lock"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-lock"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    log-in
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-log-in"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-log-in"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    log-out
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-log-out"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-log-out"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    magnet
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-magnet"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-magnet"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    mail
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-mail"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-mail"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    mail-open
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-mail-open"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-mail-open"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    male
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-male"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-male"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    man
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-man"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-man"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    map
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-map"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-map"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    medal
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-medal"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-medal"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    medical
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-medical"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-medical"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    medkit
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-medkit"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-medkit"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    megaphone
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-megaphone"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-megaphone"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    menu
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-menu"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-menu"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    mic
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-mic"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-mic"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    mic-off
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-mic-off"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-mic-off"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    microphone
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-microphone"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-microphone"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    moon
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-moon"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-moon"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    more
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-more"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-more"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    move
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-move"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-move"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    musical-note
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-musical-note"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-musical-note"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    musical-notes
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-musical-notes"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-musical-notes"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    navigate
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-navigate"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-navigate"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    no-smoking
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-no-smoking"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-no-smoking"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    notifications
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-notifications"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-notifications"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    notifications-off
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-notifications-off"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-notifications-off"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    nuclear
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-nuclear"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-nuclear"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    nutrition
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-nutrition"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-nutrition"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    open
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-open"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-open"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    options
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-options"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-options"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    outlet
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-outlet"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-outlet"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    paper
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-paper"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-paper"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    paper-plane
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-paper-plane"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-paper-plane"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    partly-sunny
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-partly-sunny"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-partly-sunny"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pause
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pause"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pause"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    paw
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-paw"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-paw"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    people
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-people"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-people"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    person
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-person"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-person"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    person-add
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-person-add"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-person-add"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    phone-landscape
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-phone-landscape"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-phone-landscape"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    phone-portrait
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-phone-portrait"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-phone-portrait"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    photos
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-photos"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-photos"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pie
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pie"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pie"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pin
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pin"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pin"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pint
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pint"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pint"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pizza
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pizza"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pizza"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    plane
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-plane"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-plane"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    planet
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-planet"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-planet"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    play
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-play"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-play"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    podium
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-podium"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-podium"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    power
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-power"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-power"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pricetag
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pricetag"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pricetag"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pricetags
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pricetags"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pricetags"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    print
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-print"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-print"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    pulse
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-pulse"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-pulse"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    qr-scanner
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-qr-scanner"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-qr-scanner"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    quote
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-quote"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-quote"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    radio
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-radio"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-radio"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    radio-button-off
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-radio-button-off"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-radio-button-off"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    radio-button-on
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-radio-button-on"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-radio-button-on"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    rainy
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-rainy"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-rainy"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    recording
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-recording"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-recording"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    redo
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-redo"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-redo"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    refresh
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-refresh"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-refresh"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    refresh-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-refresh-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-refresh-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    remove
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-remove"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-remove"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    remove-circle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-remove-circle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-remove-circle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    reorder
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-reorder"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-reorder"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    repeat
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-repeat"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-repeat"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    resize
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-resize"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-resize"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    restaurant
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-restaurant"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-restaurant"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    return-left
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-return-left"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-return-left"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    return-right
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-return-right"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-return-right"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    reverse-camera
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-reverse-camera"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-reverse-camera"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    rewind
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-rewind"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-rewind"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    ribbon
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-ribbon"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-ribbon"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    rose
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-rose"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-rose"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    sad
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-sad"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-sad"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    school
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-school"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-school"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    search
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-search"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-search"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    send
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-send"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-send"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    settings
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-settings"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-settings"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    share
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-share"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-share"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    share-alt
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-share-alt"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-share-alt"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    shirt
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-shirt"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-shirt"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    shuffle
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-shuffle"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-shuffle"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    skip-backward
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-skip-backward"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-skip-backward"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    skip-forward
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-skip-forward"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-skip-forward"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    snow
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-snow"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-snow"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    speedometer
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-speedometer"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-speedometer"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    square
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-square"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-square"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    star
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-star"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-star"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    star-half
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-star-half"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-star-half"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    stats
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-stats"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-stats"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    stopwatch
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-stopwatch"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-stopwatch"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    subway
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-subway"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-subway"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    sunny
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-sunny"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-sunny"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    swap
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-swap"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-swap"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    switch
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-switch"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-switch"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    sync
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-sync"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-sync"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    tablet-landscape
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-tablet-landscape"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-tablet-landscape"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    tablet-portrait
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-tablet-portrait"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-tablet-portrait"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    tennisball
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-tennisball"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-tennisball"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    text
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-text"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-text"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    thermometer
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-thermometer"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-thermometer"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    thumbs-down
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-thumbs-down"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-thumbs-down"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    thumbs-up
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-thumbs-up"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-thumbs-up"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    thunderstorm
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-thunderstorm"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-thunderstorm"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    time
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-time"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-time"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    timer
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-timer"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-timer"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    train
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-train"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-train"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    transgender
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-transgender"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-transgender"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    trash
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-trash"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-trash"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    trending-down
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-trending-down"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-trending-down"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    trending-up
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-trending-up"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-trending-up"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    trophy
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-trophy"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-trophy"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    umbrella
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-umbrella"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-umbrella"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    undo
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-undo"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-undo"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    unlock
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-unlock"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-unlock"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    videocam
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-videocam"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-videocam"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    volume-down
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-volume-down"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-volume-down"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    volume-mute
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-volume-mute"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-volume-mute"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    volume-off
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-volume-off"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-volume-off"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    volume-up
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-volume-up"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-volume-up"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    walk
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-walk"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-walk"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    warning
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-warning"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-warning"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    watch
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-watch"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-watch"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    water
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-water"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-water"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    wifi
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-wifi"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-wifi"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    wine
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-wine"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-wine"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    woman
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-woman"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-woman"></i>
+  </div>
+</div>
+
+<div class="mode-row">
+  <div class="mode-col">
+    
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-ios-"></i>
+  </div>
+  <div class="mode-col align-center">
+    <i class="icon ion-md-"></i>
+  </div>
+</div>
+
+    </div>
+    <footer>
+      Made with love by the <a href="http://ionicframework.com/">Ionic Framework</a>
+    </footer>
+  </div>
+</body>
+</html>

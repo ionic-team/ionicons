@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{font_name}} v{{font_version}} Cheatsheet</title>
+  <title>{{font_name}} v{{font_version}} {{title}}</title>
   <style>
     * {
       -moz-box-sizing: border-box;
@@ -94,7 +94,7 @@
     }
 
     .step:hover i { opacity: .3; }
-    
+
     .size-12 { font-size: 12px; }
     .size-14 { font-size: 14px; }
     .size-16 { font-size: 16px; }
@@ -105,7 +105,7 @@
     .size-48 { font-size: 48px; }
     .size-64 { font-size: 64px; }
     .size-96 { font-size: 96px; }
-    
+
     .usage { margin-top: 10px; }
     .usage input {
       font-family: monospace;
@@ -120,9 +120,9 @@
       user-select: text;
     }
 
-    .usage label { 
-      font-size: 12px; 
-      text-align: right; 
+    .usage label {
+      font-size: 12px;
+      text-align: right;
       padding: 0 3px 0 60px;
     }
     .usage label:first-child { padding-left: 0; }
@@ -130,19 +130,65 @@
     .usage .html { width: 80px; }
     .usage .css { width: 80px; }
 
+    .mode-row {
+      border-bottom: 1px dotted #ccc;
+      padding: 0 0 10px;
+      margin-bottom: 10px;
+    }
+
+    .mode-col {
+      display: inline-block;
+      width: 25%;
+    }
+
+    .mode-row .icon {
+      font-size: 32px;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .comparison-row {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .comparison-col {
+      flex: 1;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .comparison-icon {
+      height: 136px;
+    }
+
+    .comparison-col img {
+      width: 100%;
+      max-width: 128px;
+    }
+
+    .comparison-col .icon {
+      font-size: 128px;
+      line-height: 0;
+      color: black;
+    }
+
     footer {
       color: #888;
       font-size: 12px;
       padding: 20px 0;
     }
   </style>
-  <link href="css/ionicons.css" rel="stylesheet" type="text/css" />
+  <link href="dist/css/ionicons.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <div class="container">
     <header>
-      <h1>{{font_name}} v{{font_version}} Cheatsheet, {{icon_count}} icons:</h1>
+      <h1>{{font_name}} v{{font_version}} {{title}}, {{icon_count}} icons:</h1>
       <p><a href="http://ionicons.com/">Ionicons Homepage</a></p>
     </header>
     <div class="content">
