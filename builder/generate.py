@@ -125,7 +125,7 @@ def generate_data_files(data):
 
   all_icons = OrderedDict(sorted(all_icons.items(), key=lambda t: t[0]))
 
-  f = codecs.open(os.path.join(DATA_PATH, 'ionicons.json'), 'w', 'utf-8')
+  f = codecs.open(os.path.join(DATA_PATH, 'dmicons.json'), 'w', 'utf-8')
   f.write( json.dumps(all_icons, indent=2, separators=(',', ': ')) )
   f.close()
 
@@ -141,7 +141,7 @@ def generate_svg_files():
 
 def rename_svg_glyph_names(data):
   # hacky and slow (but safe) way to rename glyph-name attributes
-  svg_path = os.path.join(FONTS_FOLDER_PATH, 'ionicons.svg')
+  svg_path = os.path.join(FONTS_FOLDER_PATH, 'dmicons.svg')
   svg_file = codecs.open(svg_path, 'r+', 'utf-8')
   svg_text = svg_file.read()
   svg_file.seek(0)
@@ -161,17 +161,17 @@ def generate_scss(data):
   font_name = data['name']
   font_version = data['version']
   css_prefix = data['prefix']
-  variables_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-variables.scss')
-  common_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-common.scss')
-  icons_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-icons.scss')
+  variables_file_path = os.path.join(SCSS_FOLDER_PATH, 'dmicons-variables.scss')
+  common_file_path = os.path.join(SCSS_FOLDER_PATH, 'dmicons-common.scss')
+  icons_file_path = os.path.join(SCSS_FOLDER_PATH, 'dmicons-icons.scss')
 
   d = []
   d.append('@charset "UTF-8";')
-  d.append('// Ionicons Variables')
+  d.append('// DMicons Variables')
   d.append('// --------------------------\n')
-  d.append('$ionicons-font-path: "../fonts" !default;')
-  d.append('$ionicons-font-family: "%s" !default;' % (font_name) )
-  d.append('$ionicons-version: "%s" !default;' % (font_version) )
+  d.append('$dmicons-font-path: "../fonts" !default;')
+  d.append('$dmicons-font-family: "%s" !default;' % (font_name) )
+  d.append('$dmicons-version: "%s" !default;' % (font_version) )
 
   f = codecs.open(variables_file_path, 'w', 'utf-8')
   f.write( u'\n'.join(d) )
@@ -179,7 +179,7 @@ def generate_scss(data):
 
   d = []
   d.append('@charset "UTF-8";')
-  d.append('// Ionicons Common CSS')
+  d.append('// DMicons Common CSS')
   d.append('// --------------------------\n')
 
   group = [ '.%s' % (data['name'].lower()) ]
@@ -198,7 +198,7 @@ def generate_scss(data):
 
   d = []
   d.append('@charset "UTF-8";')
-  d.append('// Ionicons Icon Font CSS')
+  d.append('// DMicons Icon Font CSS')
   d.append('// --------------------------\n')
 
   for ionicon in data['icons']:
@@ -213,8 +213,8 @@ def generate_scss(data):
 
 
 def generate_css_from_scss(data):
-  compile_scss_to_css('ionicons', data)
-  compile_scss_to_css('ionicons-core', data)
+  compile_scss_to_css('dmicons', data)
+  compile_scss_to_css('dmicons-core', data)
 
 
 def compile_scss_to_css(filename, data):
