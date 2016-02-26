@@ -1,14 +1,9 @@
 {
-  "name": "ionicons",
-  "description": "Premium icons for Ionic.",
-  "version": "3.0.0-alpha.3",
+  "name": "dm-icons",
+  "description": "Premium icons for DM.",
+  "version": "1.0.0",
   "files": ["dist"],
-  "keywords": ["ionicons", "ionic", "icon", "svg", "font", "mobile"],
-  "homepage": "http://ionicons.com/",
-  "author": {
-    "name": "Ben Sperry",
-    "web": "https://twitter.com/bensperry"
-  },
+  "keywords": ["icons", "icon", "svg", "font", "mobile"],
   "contributors": [
     {
       "name": "Adam Bradley",
@@ -17,10 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/driftyco/ionicons.git"
-  },
-  "bugs": {
-    "url" : "https://github.com/driftyco/ionicons/issues"
+    "url": "https://github.com/dmelearn/dm-icons.git"
   },
   "license": "MIT",
   "engines" : {
