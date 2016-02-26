@@ -1,5 +1,179 @@
 {
-  "build_hash": "259c592d7dc03e4169a4ca133ea2a34d",
+  "build_hash": "35d889bc9e0ac1c9abc72f1f282edd06",
   "prefix": "dm-",
-  "name": "DMicons"
+  "name": "DMicons",
+  "icons": [
+    {
+      "code": "0xf100",
+      "name": "arrow-back"
+    },
+    {
+      "code": "0xf101",
+      "name": "arrow-down"
+    },
+    {
+      "code": "0xf103",
+      "name": "arrow-dropdown"
+    },
+    {
+      "code": "0xf102",
+      "name": "arrow-dropdown-circle"
+    },
+    {
+      "code": "0xf105",
+      "name": "arrow-dropleft"
+    },
+    {
+      "code": "0xf104",
+      "name": "arrow-dropleft-circle"
+    },
+    {
+      "code": "0xf107",
+      "name": "arrow-dropright"
+    },
+    {
+      "code": "0xf106",
+      "name": "arrow-dropright-circle"
+    },
+    {
+      "code": "0xf109",
+      "name": "arrow-dropup"
+    },
+    {
+      "code": "0xf108",
+      "name": "arrow-dropup-circle"
+    },
+    {
+      "code": "0xf10a",
+      "name": "arrow-forward"
+    },
+    {
+      "code": "0xf10b",
+      "name": "arrow-round-back"
+    },
+    {
+      "code": "0xf10c",
+      "name": "arrow-round-down"
+    },
+    {
+      "code": "0xf10d",
+      "name": "arrow-round-forward"
+    },
+    {
+      "code": "0xf10e",
+      "name": "arrow-round-up"
+    },
+    {
+      "code": "0xf10f",
+      "name": "arrow-up"
+    },
+    {
+      "code": "0xf110",
+      "name": "bookmark"
+    },
+    {
+      "code": "0xf111",
+      "name": "close"
+    },
+    {
+      "code": "0xf112",
+      "name": "cog"
+    },
+    {
+      "code": "0xf113",
+      "name": "grid"
+    },
+    {
+      "code": "0xf114",
+      "name": "help"
+    },
+    {
+      "code": "0xf115",
+      "name": "info"
+    },
+    {
+      "code": "0xf116",
+      "name": "list"
+    },
+    {
+      "code": "0xf117",
+      "name": "lock"
+    },
+    {
+      "code": "0xf118",
+      "name": "logout"
+    },
+    {
+      "code": "0xf119",
+      "name": "ribbon"
+    },
+    {
+      "code": "0xf11a",
+      "name": "rows"
+    },
+    {
+      "code": "0xf11b",
+      "name": "school"
+    },
+    {
+      "code": "0xf11c",
+      "name": "search"
+    },
+    {
+      "code": "0xf11d",
+      "name": "settings"
+    },
+    {
+      "code": "0xf11e",
+      "name": "skip-backward"
+    },
+    {
+      "code": "0xf11f",
+      "name": "skip-forward"
+    },
+    {
+      "code": "0xf121",
+      "name": "star"
+    },
+    {
+      "code": "0xf120",
+      "name": "star-half"
+    },
+    {
+      "code": "0xf122",
+      "name": "tags"
+    },
+    {
+      "code": "0xf123",
+      "name": "time"
+    },
+    {
+      "code": "0xf124",
+      "name": "trash"
+    },
+    {
+      "code": "0xf125",
+      "name": "trophy"
+    },
+    {
+      "code": "0xf126",
+      "name": "unlock"
+    },
+    {
+      "code": "0xf127",
+      "name": "user"
+    },
+    {
+      "code": "0xf128",
+      "name": "volume-off"
+    },
+    {
+      "code": "0xf129",
+      "name": "volume-up"
+    },
+    {
+      "code": "0xf12a",
+      "name": "warning"
+    }
+  ]
 }
