@@ -1,5 +1,5 @@
 {
-  "build_hash": "84af7933f965f673c7c496b7a6c80078",
+  "build_hash": "252c37c26edd2822b00d918a9fc83f84",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -719,6 +719,10 @@
     {
       "code": "0xf159",
       "name": "build-logo"
+    },
+    {
+      "code": "0xf164",
+      "name": "build-logo-door"
     },
     {
       "code": "0xf158",
