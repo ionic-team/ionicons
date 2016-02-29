@@ -22,6 +22,7 @@
 .#{$ionicons-prefix}build-cart-small:before,
 .#{$ionicons-prefix}build-delivery-truck:before,
 .#{$ionicons-prefix}build-logo:before,
+.#{$ionicons-prefix}build-logo-door:before,
 .#{$ionicons-prefix}build-logo-simplified:before,
 .#{$ionicons-prefix}build-order-status:before,
 .#{$ionicons-prefix}build-rewards:before,
@@ -139,6 +140,7 @@
 .#{$ionicons-prefix}build-cart-small:before { content: $ionicon-var-build-cart-small; }
 .#{$ionicons-prefix}build-delivery-truck:before { content: $ionicon-var-build-delivery-truck; }
 .#{$ionicons-prefix}build-logo:before { content: $ionicon-var-build-logo; }
+.#{$ionicons-prefix}build-logo-door:before { content: $ionicon-var-build-logo-door; }
 .#{$ionicons-prefix}build-logo-simplified:before { content: $ionicon-var-build-logo-simplified; }
 .#{$ionicons-prefix}build-order-status:before { content: $ionicon-var-build-order-status; }
 .#{$ionicons-prefix}build-rewards:before { content: $ionicon-var-build-rewards; }
