@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-2-29: Created with FontForge (http://fontforge.org)
+2016-3-3: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150302 at Mon Feb 29 12:14:57 2016
+Created by FontForge 20150302 at Thu Mar  3 09:15:31 2016
  By Carly Culver
 Copyright (c) 2016, Carly Culver
 </metadata>
@@ -268,6 +268,8 @@ d="M437 384c6 0 11 -5 11 -11v-266c0 -6 -5 -11 -11 -11h-426c-6 0 -11 5 -11 11v266
     <glyph glyph-name="ion-navicon-round" unicode="&#xf20d;" horiz-adv-x="384" 
 d="M353 224c17 0 31 -14 31 -32s-14 -32 -31 -32h-322c-17 0 -31 14 -31 32s14 32 31 32h322zM353 352c17 0 31 -14 31 -32s-14 -32 -31 -32h-322c-17 0 -31 14 -31 32s14 32 31 32h322zM353 96c17 0 31 -14 31 -32s-14 -32 -31 -32h-322c-17 0 -31 14 -31 32s14 32 31 32
 h322z" />
+    <glyph glyph-name="ion-navicon" unicode="&#xf20e;" horiz-adv-x="320" 
+d="M0 175v32h320v-32h-320zM0 271v32h320v-32h-320zM0 79v32h320v-32h-320z" />
     <glyph glyph-name="ion-niche-cart" unicode="&#xf15a;" horiz-adv-x="451" 
 d="M110 94c19 0 35 -16 35 -35s-16 -35 -35 -35s-35 16 -35 35s16 35 35 35zM287 94c19 0 35 -16 35 -35s-16 -35 -35 -35s-35 16 -35 35s16 35 35 35zM132 296v25h24v-25h-24zM81 296v25h24v-25h-24zM182 296v25h25v-25h-25zM233 296v25h25v-25h-25zM284 296v25h24v-25h-24
 zM233 244v25h25v-25h-25zM284 244v25h24v-25h-24zM182 244v25h25v-25h-25zM132 244v25h24v-25h-24zM81 244v25h24v-25h-24zM132 193v25h24v-25h-24zM182 193v25h25v-25h-25zM233 193v25h25v-25h-25zM75 131c-21 0 -26 16 -27 19l-48 148c-1 2 0 4 2 5l29 10h1c2 0 4 -1 4 -2
