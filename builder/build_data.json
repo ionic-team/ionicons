@@ -1,5 +1,5 @@
 {
-  "build_hash": "af006a93859a6cdb3ffa4682b4c96fd1",
+  "build_hash": "d4581c84135fa24df2499f0ab0155ce6",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -339,6 +339,10 @@
     {
       "code": "0xf20a",
       "name": "monitor"
+    },
+    {
+      "code": "0xf20e",
+      "name": "navicon"
     },
     {
       "code": "0xf20d",
