@@ -11,7 +11,7 @@
   Modified icons to fit ionicon’s grid from original.
 */
 @font-face { font-family: "DMicons"; src: url("../fonts/dmicons.eot?v=1.0.0"); src: url("../fonts/dmicons.eot?v=1.0.0#iefix") format("embedded-opentype"), url("../fonts/dmicons.woff2?v=1.0.0") format("woff2"), url("../fonts/dmicons.woff?v=1.0.0") format("woff"), url("../fonts/dmicons.ttf?v=1.0.0") format("truetype"), url("../fonts/dmicons.svg?v=1.0.0#DMicons") format("svg"); font-weight: normal; font-style: normal; }
-.ion, .dmicons, .dm-arrow-back:before, .dm-arrow-down:before, .dm-arrow-dropdown:before, .dm-arrow-dropdown-circle:before, .dm-arrow-dropleft:before, .dm-arrow-dropleft-circle:before, .dm-arrow-dropright:before, .dm-arrow-dropright-circle:before, .dm-arrow-dropup:before, .dm-arrow-dropup-circle:before, .dm-arrow-forward:before, .dm-arrow-round-back:before, .dm-arrow-round-down:before, .dm-arrow-round-forward:before, .dm-arrow-round-up:before, .dm-arrow-up:before, .dm-bookmark:before, .dm-close:before, .dm-cog:before, .dm-grid:before, .dm-help:before, .dm-info:before, .dm-list:before, .dm-lock:before, .dm-logout:before, .dm-ribbon:before, .dm-rows:before, .dm-school:before, .dm-search:before, .dm-settings:before, .dm-skip-backward:before, .dm-skip-forward:before, .dm-star:before, .dm-star-half:before, .dm-tags:before, .dm-time:before, .dm-trash:before, .dm-trophy:before, .dm-unlock:before, .dm-user:before, .dm-volume-off:before, .dm-volume-up:before, .dm-warning:before { display: inline-block; font-family: "DMicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ion, .dmicons, .dm-arrow-back:before, .dm-arrow-down:before, .dm-arrow-dropdown:before, .dm-arrow-dropdown-circle:before, .dm-arrow-dropleft:before, .dm-arrow-dropleft-circle:before, .dm-arrow-dropright:before, .dm-arrow-dropright-circle:before, .dm-arrow-dropup:before, .dm-arrow-dropup-circle:before, .dm-arrow-forward:before, .dm-arrow-round-back:before, .dm-arrow-round-down:before, .dm-arrow-round-forward:before, .dm-arrow-round-up:before, .dm-arrow-up:before, .dm-bookmark:before, .dm-close:before, .dm-cog:before, .dm-doc-text:before, .dm-email:before, .dm-grid:before, .dm-help:before, .dm-info:before, .dm-list:before, .dm-lock:before, .dm-logout:before, .dm-ribbon:before, .dm-rows:before, .dm-school:before, .dm-search:before, .dm-settings:before, .dm-skip-backward:before, .dm-skip-forward:before, .dm-star:before, .dm-star-half:before, .dm-tags:before, .dm-tick:before, .dm-time:before, .dm-trash:before, .dm-trophy:before, .dm-unlock:before, .dm-user:before, .dm-volume-off:before, .dm-volume-up:before, .dm-warning:before { display: inline-block; font-family: "DMicons"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; text-rendering: auto; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .dm-arrow-back:before { content: "\f100"; }
 
@@ -51,6 +51,10 @@
 
 .dm-cog:before { content: "\f112"; }
 
+.dm-doc-text:before { content: "\f12c"; }
+
+.dm-email:before { content: "\f12d"; }
+
 .dm-grid:before { content: "\f113"; }
 
 .dm-help:before { content: "\f114"; }
@@ -82,6 +86,8 @@
 .dm-star-half:before { content: "\f120"; }
 
 .dm-tags:before { content: "\f122"; }
+
+.dm-tick:before { content: "\f12b"; }
 
 .dm-time:before { content: "\f123"; }
 

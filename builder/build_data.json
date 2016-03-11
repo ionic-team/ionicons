@@ -1,5 +1,5 @@
 {
-  "build_hash": "aae9d31be244f047e8e9005d2f5cc581",
+  "build_hash": "4eefe46f3b800680da61275e83865454",
   "prefix": "dm-",
   "name": "DMicons",
   "icons": [
@@ -80,6 +80,14 @@
       "name": "cog"
     },
     {
+      "code": "0xf12c",
+      "name": "doc-text"
+    },
+    {
+      "code": "0xf12d",
+      "name": "email"
+    },
+    {
       "code": "0xf113",
       "name": "grid"
     },
@@ -142,6 +150,10 @@
     {
       "code": "0xf122",
       "name": "tags"
+    },
+    {
+      "code": "0xf12b",
+      "name": "tick"
     },
     {
       "code": "0xf123",

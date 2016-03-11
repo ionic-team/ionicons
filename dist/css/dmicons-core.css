@@ -48,6 +48,10 @@
 
 .dm-cog:before { content: "\f112"; }
 
+.dm-doc-text:before { content: "\f12c"; }
+
+.dm-email:before { content: "\f12d"; }
+
 .dm-grid:before { content: "\f113"; }
 
 .dm-help:before { content: "\f114"; }
@@ -79,6 +83,8 @@
 .dm-star-half:before { content: "\f120"; }
 
 .dm-tags:before { content: "\f122"; }
+
+.dm-tick:before { content: "\f12b"; }
 
 .dm-time:before { content: "\f123"; }
 
