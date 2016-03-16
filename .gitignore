@@ -3,3 +3,4 @@ _site
 *.scssc
 *.swp
 .DS_Store
+bower_components
