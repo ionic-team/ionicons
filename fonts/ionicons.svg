@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-3-16: Created with FontForge (http://fontforge.org)
+2016-4-12: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150913 at Wed Mar 16 08:47:26 2016
- By Tauseef Jamadar
-Copyright (c) 2016, Tauseef Jamadar
+Created by FontForge 20150302 at Tue Apr 12 11:01:08 2016
+ By Carly Culver
+Copyright (c) 2016, Carly Culver
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -52,6 +52,8 @@ s-74 -32 -74 -73s33 -73 74 -73z" />
 d="M224 140l-128 116h80v96h96v-96h80zM433 151c11 -6 17 -19 15 -32l-9 -67c-2 -13 -9 -20 -28 -20h-374c-18 0 -26 7 -28 20l-9 67c-2 13 3 26 14 32l72 55h42l-62 -62h50c2 0 5 -1 6 -3l18 -45h168l18 45c1 2 3 3 5 3h51l-62 62h42z" />
     <glyph glyph-name="ion-arrow-graph-up-right" unicode="&#xf262;" 
 d="M288 320h160v-160l-61 61l-131 -141l-107 112l-149 -128l149 203l107 -107l94 98z" />
+    <glyph glyph-name="ion-arrow-return-left" unicode="&#xf265;" horiz-adv-x="384" 
+d="M128 352v-64h248c4 0 8 -4 8 -8v-240c0 -4 -4 -8 -8 -8h-304c-4 0 -8 4 -8 8v48c0 4 4 8 8 8h248v128h-192v-64l-128 96z" />
     <glyph glyph-name="ion-arrow-up-c" unicode="&#xf10e;" horiz-adv-x="274" 
 d="M9 259l105 100c6 6 14 9 23 9s16 -3 22 -9l106 -100c12 -12 12 -31 0 -43s-34 -12 -46 0l-50 48v-217c0 -17 -14 -31 -32 -31s-32 14 -32 31v217l-50 -49c-12 -12 -34 -12 -46 0s-12 32 0 44z" />
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
