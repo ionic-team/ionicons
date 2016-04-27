@@ -1,5 +1,5 @@
 {
-  "build_hash": "13cbd1e411660c9283cccb01330d6557",
+  "build_hash": "f501f5c2aabd2db1c3c9f969346943f4",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -65,6 +65,10 @@
       "name": "briefcase"
     },
     {
+      "code": "0xf165",
+      "name": "build-bluetarp"
+    },
+    {
       "code": "0xf15e",
       "name": "build-box"
     },
@@ -95,6 +99,10 @@
     {
       "code": "0xf158",
       "name": "build-logo-simplified"
+    },
+    {
+      "code": "0xf166",
+      "name": "build-nay"
     },
     {
       "code": "0xf13c",
