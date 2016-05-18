@@ -68,8 +68,20 @@
       "name": "arrow-up"
     },
     {
+      "code": "0xf12e",
+      "name": "assess"
+    },
+    {
       "code": "0xf110",
       "name": "bookmark"
+    },
+    {
+      "code": "0xf130",
+      "name": "circ"
+    },
+    {
+      "code": "0xf12f",
+      "name": "circ-line"
     },
     {
       "code": "0xf111",
@@ -98,6 +110,10 @@
     {
       "code": "0xf115",
       "name": "info"
+    },
+    {
+      "code": "0xf131",
+      "name": "instruc"
     },
     {
       "code": "0xf116",
