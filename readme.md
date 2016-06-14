@@ -24,7 +24,12 @@ Or install with [component](https://github.com/componentjs/component):
     
 Or perhaps you're known to use [bower](http://bower.io/)?
    
-    $ bower install ionicons
+    $ bower install ionicons 
+
+    
+Or npm [bower](http://bower.io/)?
+   
+    $ npm install ionicons
 
 
 ## HTML Example
