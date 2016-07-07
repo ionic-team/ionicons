@@ -46,6 +46,8 @@
 
 .dm-bookmark:before { content: "\f110"; }
 
+.dm-check:before { content: "\f132"; }
+
 .dm-circ:before { content: "\f130"; }
 
 .dm-circ-line:before { content: "\f12f"; }
@@ -65,6 +67,8 @@
 .dm-info:before { content: "\f115"; }
 
 .dm-instruc:before { content: "\f131"; }
+
+.dm-key:before { content: "\f133"; }
 
 .dm-list:before { content: "\f116"; }
 
