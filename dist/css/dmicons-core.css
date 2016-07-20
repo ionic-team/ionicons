@@ -60,6 +60,8 @@
 
 .dm-email:before { content: "\f12d"; }
 
+.dm-glossary:before { content: "\f134"; }
+
 .dm-grid:before { content: "\f113"; }
 
 .dm-help:before { content: "\f114"; }
@@ -75,6 +77,8 @@
 .dm-lock:before { content: "\f117"; }
 
 .dm-logout:before { content: "\f118"; }
+
+.dm-reset:before { content: "\f135"; }
 
 .dm-ribbon:before { content: "\f119"; }
 
