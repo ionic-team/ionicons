@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DMicons v3.0.3 Icon Format Comparison</title>
+  <style>
+    * {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      background: #fff;
+      color: #444;
+      font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    a, a:visited {
+      color: #888;
+      text-decoration: underline;
+    }
+    a:hover, a:focus { color: #000; }
+
+    header {
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      color: #888;
+      float: left;
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    header a {
+      float: right;
+      font-size: 14px;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1200px;
+      min-width: 960px;
+      padding: 0 20px;
+      width: 95%;
+    }
+
+    .icon-row {
+      border-bottom: 1px dotted #ccc;
+      padding: 10px 0 20px;
+      margin-bottom: 20px;
+    }
+    .ion {
+      -webkit-touch-callout: text;
+      -webkit-user-select: text;
+      -khtml-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+
+    .preview-icon { vertical-align: bottom; }
+
+    .preview-scale {
+      color: #888;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .step {
+      display: inline-block;
+      line-height: 1;
+      position: relative;
+      width: 10%;
+    }
+
+    .step i {
+      -webkit-transition: opacity .3s;
+      -moz-transition: opacity .3s;
+      -ms-transition: opacity .3s;
+      -o-transition: opacity .3s;
+      transition: opacity .3s;
+    }
+
+    .step:hover i { opacity: .3; }
+
+    .size-12 { font-size: 12px; }
+    .size-14 { font-size: 14px; }
+    .size-16 { font-size: 16px; }
+    .size-18 { font-size: 18px; }
+    .size-21 { font-size: 21px; }
+    .size-24 { font-size: 24px; }
+    .size-32 { font-size: 32px; }
+    .size-48 { font-size: 48px; }
+    .size-64 { font-size: 64px; }
+    .size-96 { font-size: 96px; }
+
+    .usage { margin-top: 10px; }
+    .usage input {
+      font-family: monospace;
+      margin-right: 3px;
+      padding: 2px 5px;
+      text-align: center;
+      -webkit-touch-callout: text;
+      -webkit-user-select: text;
+      -khtml-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+
+    .usage label {
+      font-size: 12px;
+      text-align: right;
+      padding: 0 3px 0 60px;
+    }
+    .usage label:first-child { padding-left: 0; }
+    .usage .name { width: 180px; }
+    .usage .html { width: 80px; }
+    .usage .css { width: 80px; }
+
+    .mode-row {
+      border-bottom: 1px dotted #ccc;
+      padding: 0 0 10px;
+      margin-bottom: 10px;
+    }
+
+    .mode-col {
+      display: inline-block;
+      width: 25%;
+    }
+
+    .mode-row .icon {
+      font-size: 32px;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .comparison-row {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+    }
+
+    .comparison-col {
+      flex: 1;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .comparison-icon {
+      height: 136px;
+    }
+
+    .comparison-col img {
+      width: 100%;
+      max-width: 128px;
+    }
+
+    .comparison-col .icon {
+      font-size: 128px;
+      line-height: 0;
+      color: black;
+    }
+
+    footer {
+      color: #888;
+      font-size: 12px;
+      padding: 20px 0;
+    }
+  </style>
+  <link href="dist/css/dmicons.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>DMicons v3.0.3 Icon Format Comparison, 55 icons:</h1>
+    </header>
+    <div class="content">
+      
+    <div class="comparison-row">
+      <div class="comparison-col">
+        <h2>Source SVG</h2>
+      </div>
+      <div class="comparison-col">
+        <h2>Optimized SVG</h2>
+      </div>
+      <div class="comparison-col">
+        <h2>Icon Font</h2>
+      </div>
+    </div>
+  
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-back.svg">
+    </div>
+    <div>
+      Source SVG: arrow-back, 553 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-back.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-back, 267 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-back"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-back
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-down.svg">
+    </div>
+    <div>
+      Source SVG: arrow-down, 553 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-down.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-down, 267 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-down"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-down
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropdown.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropdown, 947 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropdown.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropdown, 546 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropdown"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropdown
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropdown-circle.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropdown-circle, 709 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropdown-circle.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropdown-circle, 402 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropdown-circle"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropdown-circle
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropleft.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropleft, 947 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropleft.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropleft, 546 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropleft"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropleft
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropleft-circle.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropleft-circle, 709 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropleft-circle.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropleft-circle, 402 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropleft-circle"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropleft-circle
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropright.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropright, 949 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropright.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropright, 546 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropright"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropright
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropright-circle.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropright-circle, 713 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropright-circle.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropright-circle, 404 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropright-circle"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropright-circle
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropup.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropup, 952 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropup.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropup, 548 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropup"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropup
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-dropup-circle.svg">
+    </div>
+    <div>
+      Source SVG: arrow-dropup-circle, 713 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-dropup-circle.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-dropup-circle, 404 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-dropup-circle"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-dropup-circle
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-forward.svg">
+    </div>
+    <div>
+      Source SVG: arrow-forward, 552 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-forward.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-forward, 268 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-forward"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-forward
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-round-back.svg">
+    </div>
+    <div>
+      Source SVG: arrow-round-back, 882 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-round-back.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-round-back, 568 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-round-back"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-round-back
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-round-down.svg">
+    </div>
+    <div>
+      Source SVG: arrow-round-down, 883 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-round-down.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-round-down, 573 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-round-down"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-round-down
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-round-forward.svg">
+    </div>
+    <div>
+      Source SVG: arrow-round-forward, 875 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-round-forward.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-round-forward, 562 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-round-forward"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-round-forward
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-round-up.svg">
+    </div>
+    <div>
+      Source SVG: arrow-round-up, 876 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-round-up.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-round-up, 573 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-round-up"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-round-up
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/arrow-up.svg">
+    </div>
+    <div>
+      Source SVG: arrow-up, 552 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/arrow-up.svg">
+    </div>
+    <div>
+      Optimized SVG: arrow-up, 268 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-arrow-up"></i>
+    </div>
+    <div>
+      Icon Font: dm-arrow-up
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/assess.svg">
+    </div>
+    <div>
+      Source SVG: assess, 923 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/assess.svg">
+    </div>
+    <div>
+      Optimized SVG: assess, 596 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-assess"></i>
+    </div>
+    <div>
+      Icon Font: dm-assess
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/bookmark.svg">
+    </div>
+    <div>
+      Source SVG: bookmark, 517 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/bookmark.svg">
+    </div>
+    <div>
+      Optimized SVG: bookmark, 237 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-bookmark"></i>
+    </div>
+    <div>
+      Icon Font: dm-bookmark
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/check.svg">
+    </div>
+    <div>
+      Source SVG: check, 1066 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/check.svg">
+    </div>
+    <div>
+      Optimized SVG: check, 719 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-check"></i>
+    </div>
+    <div>
+      Icon Font: dm-check
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/circ.svg">
+    </div>
+    <div>
+      Source SVG: circ, 587 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/circ.svg">
+    </div>
+    <div>
+      Optimized SVG: circ, 279 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-circ"></i>
+    </div>
+    <div>
+      Icon Font: dm-circ
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/circ-line.svg">
+    </div>
+    <div>
+      Source SVG: circ-line, 782 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/circ-line.svg">
+    </div>
+    <div>
+      Optimized SVG: circ-line, 436 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-circ-line"></i>
+    </div>
+    <div>
+      Icon Font: dm-circ-line
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/close.svg">
+    </div>
+    <div>
+      Source SVG: close, 777 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/close.svg">
+    </div>
+    <div>
+      Optimized SVG: close, 464 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-close"></i>
+    </div>
+    <div>
+      Icon Font: dm-close
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/cog.svg">
+    </div>
+    <div>
+      Source SVG: cog, 1671 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/cog.svg">
+    </div>
+    <div>
+      Optimized SVG: cog, 1248 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-cog"></i>
+    </div>
+    <div>
+      Icon Font: dm-cog
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/cross.svg">
+    </div>
+    <div>
+      Source SVG: cross, 952 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/cross.svg">
+    </div>
+    <div>
+      Optimized SVG: cross, 616 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-cross"></i>
+    </div>
+    <div>
+      Icon Font: dm-cross
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/doc-text.svg">
+    </div>
+    <div>
+      Source SVG: doc-text, 1664 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/doc-text.svg">
+    </div>
+    <div>
+      Optimized SVG: doc-text, 1210 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-doc-text"></i>
+    </div>
+    <div>
+      Icon Font: dm-doc-text
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/email.svg">
+    </div>
+    <div>
+      Source SVG: email, 1601 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/email.svg">
+    </div>
+    <div>
+      Optimized SVG: email, 1140 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-email"></i>
+    </div>
+    <div>
+      Icon Font: dm-email
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/glossary.svg">
+    </div>
+    <div>
+      Source SVG: glossary, 1497 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/glossary.svg">
+    </div>
+    <div>
+      Optimized SVG: glossary, 997 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-glossary"></i>
+    </div>
+    <div>
+      Icon Font: dm-glossary
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/grid.svg">
+    </div>
+    <div>
+      Source SVG: grid, 867 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/grid.svg">
+    </div>
+    <div>
+      Optimized SVG: grid, 471 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-grid"></i>
+    </div>
+    <div>
+      Icon Font: dm-grid
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/help.svg">
+    </div>
+    <div>
+      Source SVG: help, 868 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/help.svg">
+    </div>
+    <div>
+      Optimized SVG: help, 517 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-help"></i>
+    </div>
+    <div>
+      Icon Font: dm-help
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/info.svg">
+    </div>
+    <div>
+      Source SVG: info, 682 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/info.svg">
+    </div>
+    <div>
+      Optimized SVG: info, 350 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-info"></i>
+    </div>
+    <div>
+      Icon Font: dm-info
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/instruc.svg">
+    </div>
+    <div>
+      Source SVG: instruc, 1146 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/instruc.svg">
+    </div>
+    <div>
+      Optimized SVG: instruc, 784 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-instruc"></i>
+    </div>
+    <div>
+      Icon Font: dm-instruc
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/key.svg">
+    </div>
+    <div>
+      Source SVG: key, 581 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/key.svg">
+    </div>
+    <div>
+      Optimized SVG: key, 566 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-key"></i>
+    </div>
+    <div>
+      Icon Font: dm-key
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/list.svg">
+    </div>
+    <div>
+      Source SVG: list, 842 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/list.svg">
+    </div>
+    <div>
+      Optimized SVG: list, 390 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-list"></i>
+    </div>
+    <div>
+      Icon Font: dm-list
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/lock.svg">
+    </div>
+    <div>
+      Source SVG: lock, 1066 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/lock.svg">
+    </div>
+    <div>
+      Optimized SVG: lock, 693 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-lock"></i>
+    </div>
+    <div>
+      Icon Font: dm-lock
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/logout.svg">
+    </div>
+    <div>
+      Source SVG: logout, 878 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/logout.svg">
+    </div>
+    <div>
+      Optimized SVG: logout, 517 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-logout"></i>
+    </div>
+    <div>
+      Icon Font: dm-logout
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/reset.svg">
+    </div>
+    <div>
+      Source SVG: reset, 1125 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/reset.svg">
+    </div>
+    <div>
+      Optimized SVG: reset, 713 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-reset"></i>
+    </div>
+    <div>
+      Icon Font: dm-reset
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/ribbon.svg">
+    </div>
+    <div>
+      Source SVG: ribbon, 1348 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/ribbon.svg">
+    </div>
+    <div>
+      Optimized SVG: ribbon, 874 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-ribbon"></i>
+    </div>
+    <div>
+      Icon Font: dm-ribbon
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/rows.svg">
+    </div>
+    <div>
+      Source SVG: rows, 691 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/rows.svg">
+    </div>
+    <div>
+      Optimized SVG: rows, 258 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-rows"></i>
+    </div>
+    <div>
+      Icon Font: dm-rows
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/school.svg">
+    </div>
+    <div>
+      Source SVG: school, 788 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/school.svg">
+    </div>
+    <div>
+      Optimized SVG: school, 407 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-school"></i>
+    </div>
+    <div>
+      Icon Font: dm-school
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/search.svg">
+    </div>
+    <div>
+      Source SVG: search, 982 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/search.svg">
+    </div>
+    <div>
+      Optimized SVG: search, 628 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-search"></i>
+    </div>
+    <div>
+      Icon Font: dm-search
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/settings.svg">
+    </div>
+    <div>
+      Source SVG: settings, 827 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/settings.svg">
+    </div>
+    <div>
+      Optimized SVG: settings, 521 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-settings"></i>
+    </div>
+    <div>
+      Icon Font: dm-settings
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/skip-backward.svg">
+    </div>
+    <div>
+      Source SVG: skip-backward, 544 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/skip-backward.svg">
+    </div>
+    <div>
+      Optimized SVG: skip-backward, 245 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-skip-backward"></i>
+    </div>
+    <div>
+      Icon Font: dm-skip-backward
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/skip-forward.svg">
+    </div>
+    <div>
+      Source SVG: skip-forward, 550 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/skip-forward.svg">
+    </div>
+    <div>
+      Optimized SVG: skip-forward, 251 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-skip-forward"></i>
+    </div>
+    <div>
+      Icon Font: dm-skip-forward
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/star.svg">
+    </div>
+    <div>
+      Source SVG: star, 626 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/star.svg">
+    </div>
+    <div>
+      Optimized SVG: star, 334 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-star"></i>
+    </div>
+    <div>
+      Icon Font: dm-star
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/star-half.svg">
+    </div>
+    <div>
+      Source SVG: star-half, 799 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/star-half.svg">
+    </div>
+    <div>
+      Optimized SVG: star-half, 493 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-star-half"></i>
+    </div>
+    <div>
+      Icon Font: dm-star-half
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/tags.svg">
+    </div>
+    <div>
+      Source SVG: tags, 1122 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/tags.svg">
+    </div>
+    <div>
+      Optimized SVG: tags, 732 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-tags"></i>
+    </div>
+    <div>
+      Icon Font: dm-tags
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/tick.svg">
+    </div>
+    <div>
+      Source SVG: tick, 644 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/tick.svg">
+    </div>
+    <div>
+      Optimized SVG: tick, 359 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-tick"></i>
+    </div>
+    <div>
+      Icon Font: dm-tick
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/time.svg">
+    </div>
+    <div>
+      Source SVG: time, 929 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/time.svg">
+    </div>
+    <div>
+      Optimized SVG: time, 503 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-time"></i>
+    </div>
+    <div>
+      Icon Font: dm-time
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/trash.svg">
+    </div>
+    <div>
+      Source SVG: trash, 673 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/trash.svg">
+    </div>
+    <div>
+      Optimized SVG: trash, 367 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-trash"></i>
+    </div>
+    <div>
+      Icon Font: dm-trash
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/trophy.svg">
+    </div>
+    <div>
+      Source SVG: trophy, 1377 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/trophy.svg">
+    </div>
+    <div>
+      Optimized SVG: trophy, 1000 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-trophy"></i>
+    </div>
+    <div>
+      Icon Font: dm-trophy
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/unlock.svg">
+    </div>
+    <div>
+      Source SVG: unlock, 1038 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/unlock.svg">
+    </div>
+    <div>
+      Optimized SVG: unlock, 672 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-unlock"></i>
+    </div>
+    <div>
+      Icon Font: dm-unlock
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/user.svg">
+    </div>
+    <div>
+      Source SVG: user, 887 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/user.svg">
+    </div>
+    <div>
+      Optimized SVG: user, 503 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-user"></i>
+    </div>
+    <div>
+      Icon Font: dm-user
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/volume-off.svg">
+    </div>
+    <div>
+      Source SVG: volume-off, 1277 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/volume-off.svg">
+    </div>
+    <div>
+      Optimized SVG: volume-off, 778 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-volume-off"></i>
+    </div>
+    <div>
+      Icon Font: dm-volume-off
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/volume-up.svg">
+    </div>
+    <div>
+      Source SVG: volume-up, 836 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/volume-up.svg">
+    </div>
+    <div>
+      Optimized SVG: volume-up, 494 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-volume-up"></i>
+    </div>
+    <div>
+      Icon Font: dm-volume-up
+    </div>
+  </div>
+</div>
+
+<div class="comparison-row">
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="src/warning.svg">
+    </div>
+    <div>
+      Source SVG: warning, 620 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <img src="dist/svg/warning.svg">
+    </div>
+    <div>
+      Optimized SVG: warning, 307 bytes
+    </div>
+  </div>
+  <div class="comparison-col">
+    <div class="comparison-icon">
+      <i class="icon dm-warning"></i>
+    </div>
+    <div>
+      Icon Font: dm-warning
+    </div>
+  </div>
+</div>
+
+    </div>
+    <footer>
+      Made with love by the <a href="http://ionicframework.com/">Ionic Framework</a>
+    </footer>
+  </div>
+</body>
+</html>
