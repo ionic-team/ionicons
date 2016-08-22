@@ -56,6 +56,8 @@
 
 .dm-cog:before { content: "\f112"; }
 
+.dm-cross:before { content: "\f136"; }
+
 .dm-doc-text:before { content: "\f12c"; }
 
 .dm-email:before { content: "\f12d"; }

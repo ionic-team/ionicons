@@ -1,5 +1,5 @@
 {
-  "build_hash": "f8d1a42efd6e5418a3052fa24ace5fea",
+  "build_hash": "f7818eef383b2a03047b07f96aaca2cf",
   "prefix": "dm-",
   "name": "DMicons",
   "icons": [
@@ -94,6 +94,10 @@
     {
       "code": "0xf112",
       "name": "cog"
+    },
+    {
+      "code": "0xf136",
+      "name": "cross"
     },
     {
       "code": "0xf12c",
