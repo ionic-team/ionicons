@@ -1,5 +1,10 @@
 # CHANGES
 
+### v3.0.3
+- Update the instruc icon
+- Update arrow circles with thicker lines
+- Add cross icon
+
 ### v3.0.2
 - Added reset icon
 - Added glossary icon
