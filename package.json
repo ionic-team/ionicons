@@ -25,5 +25,6 @@
   "license": "MIT",
   "engines" : {
     "node" : ">=0.10.3"
-  }
+  },
+  "main": "package.json"
 }
