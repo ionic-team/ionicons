@@ -1,5 +1,8 @@
 # CHANGES
 
+### v3.0.4
+- 
+
 ### v3.0.3
 - Update the instruc icon
 - Update arrow circles with thicker lines
