@@ -22,10 +22,14 @@ Or install with [component](https://github.com/componentjs/component):
 
     $ component install driftyco/ionicons
     
+
 Or perhaps you're known to use [bower](http://bower.io/)?
    
     $ bower install ionicons
 
+Or [npm](https://www.npmjs.com/package/ionicons)?
+  
+    $ npm install ionicons --save
 
 ## HTML Example
 
