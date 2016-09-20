@@ -1,5 +1,5 @@
 {
-  "build_hash": "f7818eef383b2a03047b07f96aaca2cf",
+  "build_hash": "0cdc051cecb80c9bfb31ead4f119955b",
   "prefix": "dm-",
   "name": "DMicons",
   "icons": [
@@ -108,6 +108,10 @@
       "name": "email"
     },
     {
+      "code": "0xf137",
+      "name": "eye"
+    },
+    {
       "code": "0xf134",
       "name": "glossary"
     },
@@ -120,12 +124,20 @@
       "name": "help"
     },
     {
+      "code": "0xf138",
+      "name": "help-line"
+    },
+    {
       "code": "0xf115",
       "name": "info"
     },
     {
       "code": "0xf131",
       "name": "instruc"
+    },
+    {
+      "code": "0xf139",
+      "name": "instruc-line"
     },
     {
       "code": "0xf133",
