@@ -1,7 +1,10 @@
 # CHANGES
 
 ### v3.0.4
-- 
+- Update reset icon
+- Add help-line icon
+- Add eye icon
+- Add instruc-line icon
 
 ### v3.0.3
 - Update the instruc icon
