@@ -1,5 +1,5 @@
 {
-  "build_hash": "36ddd0ff9947cc790dac10e88facd749",
+  "build_hash": "ce6e57175a65efb5d27ea5cca57c71da",
   "prefix": "ion-",
   "version": "2.0.1",
   "name": "Ionicons",
@@ -2443,6 +2443,10 @@
     {
       "code": "0xf220",
       "name": "share"
+    },
+    {
+      "code": "0xf13b",
+      "name": "shipt-barcode-scanner"
     },
     {
       "code": "0xf138",
