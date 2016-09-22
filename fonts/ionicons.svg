@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-4-26: Created with FontForge (http://fontforge.org)
+2016-9-22: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Tue Apr 26 17:49:30 2016
- By Mark Weiss
-Copyright (c) 2016, Mark Weiss
+Created by FontForge 20160407 at Thu Sep 22 15:28:01 2016
+ By Carly Culver
+Copyright (c) 2016, Carly Culver
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -127,6 +127,8 @@ s27 12 27 27v165c2 61 52 110 114 110s112 -50 114 -111v-36z" />
     <glyph glyph-name="ion-build-user" unicode="&#xf14c;" horiz-adv-x="512" 
 d="M256 448c141 0 256 -115 256 -256s-115 -256 -256 -256s-256 115 -256 256s115 256 256 256zM416 19c42 39 76 116 76 173v0c0 130 -106 236 -236 236s-236 -106 -236 -236v0c0 -57 34 -134 76 -173c39 28 98 32 110 65c1 6 1 10 1 13c-43 5 -74 15 -74 27v0v0v0h1
 c36 38 -34 239 123 251c18 0 31 -5 38 -11c116 4 53 -209 86 -239v0l1 -1c0 -12 -32 -22 -76 -27c0 -5 1 -10 1 -13c12 -32 70 -37 109 -65z" />
+    <glyph glyph-name="ion-build-view-gallery" unicode="&#xf167;" 
+d="M0 -24v432h448v-432h-448z" />
     <glyph glyph-name="ion-build-view-grid" unicode="&#xf161;" 
 d="M0 178v179h187v-179h-187zM0 -75v179h187v-179h-187zM261 178v179h187v-179h-187zM261 -75v179h187v-179h-187z" />
     <glyph glyph-name="ion-build-view-list" unicode="&#xf162;" 
