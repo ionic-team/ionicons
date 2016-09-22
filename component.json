@@ -5,7 +5,7 @@
     "styles": [
         "css/ionicons.css"
     ],
-    "name": "Ionicons",
+    "name": "shipt-ionicons",
     "dependencies": {},
     "keywords": [],
     "license": "MIT",
