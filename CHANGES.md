@@ -1,5 +1,8 @@
 # CHANGES
 
+### v3.0.5
+- Thicker lines
+
 ### v3.0.4
 - Update reset icon
 - Add help-line icon

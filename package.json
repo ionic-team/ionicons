@@ -1,7 +1,7 @@
 {
   "name": "dm-icons",
   "description": "Premium icons for Digital Media",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "files": ["dist"],
   "keywords": ["icons", "icon", "svg", "font", "mobile"],
   "contributors": [
