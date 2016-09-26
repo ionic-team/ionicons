@@ -1,0 +1,21 @@
+{
+  "name": "dm-icons",
+  "description": "Premium icons for Digital Media",
+  "version": "3.0.5",
+  "files": ["dist"],
+  "keywords": ["icons", "icon", "svg", "font", "mobile"],
+  "contributors": [
+    {
+      "name": "Adam Bradley",
+      "web": "http://twitter.com/adamdbradley"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmelearn/dm-icons.git"
+  },
+  "license": "MIT",
+  "engines" : {
+    "node" : ">=0.10.3"
+  }
+}
