@@ -2,23 +2,31 @@
 //   running the generate.py script
 // ===============================================
 $ionicon-var-shipt-barcode-scanner: "\f13b";
+$ionicon-var-shipt-checkbox-selected: "\f13c;";
+$ionicon-var-shipt-checkbox-unselected: "\f145";
 
 // Content Mapping
 // ===============================================
-.ion-shipt-barcode-scanner:before {
+.ion-shipt-barcode-scanner:before,
+.ion-shipt-checkbox-selected:before,
+.ion-shipt-checkbox-unselected:before {
   content: $ionicon-var-shipt-barcode-scanner;
 }
 
 // Style Inheritance
 // ===============================================
-.#{$ionicons-prefix}shipt-barcode-scanner:before
+.#{$ionicons-prefix}shipt-barcode-scanner:before,
+.#{$ionicons-prefix}shipt-checkbox-selected:before,
+.#{$ionicons-prefix}shipt-checkbox-unselected:before
 {
   @extend .ion;
 }
 
 // Styling
 // ===============================================
-.ion-shipt-barcode-scanner {
+.ion-shipt-barcode-scanner,
+.ion-shipt-checkbox-selected,
+.ion-shipt-checkbox-unselected {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;

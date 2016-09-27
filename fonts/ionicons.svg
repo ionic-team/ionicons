@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-9-22: Created with FontForge (http://fontforge.org)
+2016-9-27: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20160407 at Thu Sep 22 15:49:38 2016
+Created by FontForge 20160407 at Tue Sep 27 15:16:13 2016
  By Connor Eggleston
 Copyright (c) 2016, Connor Eggleston
 </metadata>
@@ -1781,6 +1781,10 @@ d="M3 374h50c2 0 4 -2 4 -4s-2 -4 -4 -4h-45v-45c0 -2 -2 -4 -4 -4s-4 2 -4 4v49c0 2
 c2 0 5 -2 5 -4v-147c0 -2 -2 -4 -4 -4s-4 2 -4 4v147c0 2 1 4 3 4zM118 333c2 0 5 -2 5 -4v-147c0 -2 -2 -4 -4 -4s-4 2 -4 4v147c0 2 1 4 3 4zM147 333c2 0 5 -2 5 -4v-147c0 -2 -3 -4 -5 -4s-4 2 -4 4v147c0 2 2 4 4 4zM184 333c2 0 4 -2 4 -4v-147c0 -2 -2 -4 -4 -4
 s-4 2 -4 4v147c0 2 2 4 4 4zM212 333c2 0 5 -2 5 -4v-147c0 -2 -2 -4 -4 -4s-4 2 -4 4v147c0 2 1 4 3 4zM249 333c2 0 5 -2 5 -4v-147c0 -2 -2 -4 -4 -4s-4 2 -4 4v147c0 2 1 4 3 4zM278 333c2 0 5 -2 5 -4v-147c0 -2 -2 -4 -4 -4s-5 2 -5 4v147c0 2 2 4 4 4zM315 333
 c2 0 4 -2 4 -4v-172c0 -2 -2 -4 -4 -4s-4 2 -4 4v172c0 2 2 4 4 4zM4 170c2 0 4 -3 4 -5v-45h45c2 0 4 -2 4 -4s-2 -4 -4 -4h-49c-2 0 -4 2 -4 4v49c0 2 2 5 4 5zM356 170c2 0 4 -3 4 -5v-49c0 -2 -2 -4 -4 -4h-49c-2 0 -4 2 -4 4s2 4 4 4h45v45c0 2 1 4 3 4z" />
+    <glyph glyph-name="ion-shipt-checkbox-selected" unicode="&#xf13c;" horiz-adv-x="338" 
+d="M0 19v338h338v-338h-338zM26 331v-286h286v286h-286zM143 154l104 104l18 -18l-122 -122l-70 70l18 18z" />
+    <glyph glyph-name="ion-shipt-checkbox-unselected" unicode="&#xf145;" horiz-adv-x="266" 
+d="M0 110v266h266v-266h-266zM20 356v-225h226v225h-226z" />
     <glyph glyph-name="ion-shuffle" unicode="&#xf221;" 
 d="M338 267c-52 0 -83 -43 -120 -92c-41 -55 -88 -120 -171 -120h-47v63h47c52 0 84 47 121 96c41 55 87 116 170 116h29v54l81 -81l-81 -84v48h-29zM121 230c-21 21 -42 35 -74 36c-34 1 -47 0 -47 0v63h47c48 0 83 -20 113 -48c-10 -12 -19 -24 -28 -36
 c-4 -5 -7 -10 -11 -15zM367 118v47l81 -84l-81 -81v54h-29c-50 0 -87 23 -117 53c12 14 22 28 32 41c2 3 5 6 7 9c22 -24 46 -39 78 -39h29z" />
