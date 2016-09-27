@@ -9,6 +9,7 @@ FONTS_FOLDER_PATH = os.path.join(ROOT_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'css')
 SCSS_FOLDER_PATH = os.path.join(ROOT_PATH, 'scss')
 LESS_FOLDER_PATH = os.path.join(ROOT_PATH, 'less')
+QML_FOLDER_PATH = os.path.join(ROOT_PATH, 'qml')
 
 
 def main():
@@ -23,6 +24,7 @@ def main():
   generate_component_json(data)
   generate_composer_json(data)
   generate_bower_json(data)
+  generate_qml(data)
 
 
 def generate_font_files():
@@ -47,6 +49,23 @@ def rename_svg_glyph_names(data):
   svg_file.write(svg_text)
   svg_file.close()
 
+def generate_qml(data):
+  print "Generate QML"
+  d = []
+
+  # generate QML friendly codepoint
+  d.append('var img = {');
+
+  for ionicon in data['icons']:
+    chr_code = ionicon['code'].replace('0x', '\\u')
+    d.append('\t"%s": "%s",' % (ionicon['name'], chr_code) )
+
+  d.append('}')
+
+  qml_file_path = os.path.join(QML_FOLDER_PATH, 'ionicons.js')
+  f = open(qml_file_path, 'w')
+  f.write( '\n'.join(d) )
+  f.close()
 
 def generate_less(data):
   print "Generate LESS"
