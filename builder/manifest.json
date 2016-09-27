@@ -1,5 +1,5 @@
 {
-  "build_hash": "a2c6f31123a3cc8385d45bf46c5dde82",
+  "build_hash": "102e91e05ae51050949869d74866b1e7",
   "prefix": "ion-",
   "version": "2.0.1",
   "name": "Ionicons",
@@ -2443,6 +2443,22 @@
     {
       "code": "0xf220",
       "name": "share"
+    },
+    {
+      "code": "0xf13b",
+      "name": "shipt-barcode-scanner"
+    },
+    {
+      "code": "0xf138",
+      "name": "shipt-beer"
+    },
+    {
+      "code": "0xf13c",
+      "name": "shipt-checkbox-selected"
+    },
+    {
+      "code": "0xf145",
+      "name": "shipt-checkbox-unselected"
     },
     {
       "code": "0xf221",
