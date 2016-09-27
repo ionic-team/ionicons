@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ionicons.js</file>
+        <file>../fonts/ionicons.ttf</file>
+    </qresource>
+</RCC>
