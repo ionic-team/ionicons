@@ -1,5 +1,5 @@
 {
-  "build_hash": "a2c6f31123a3cc8385d45bf46c5dde82",
+  "build_hash": "56f4ae371231d0bcb436439e0767aa5e",
   "prefix": "ion-",
   "version": "2.0.1",
   "name": "Ionicons",
@@ -633,6 +633,10 @@
       "name": "at"
     },
     {
+      "code": "0xf138",
+      "name": "atlas"
+    },
+    {
       "code": "0xf3bf",
       "name": "backspace"
     },
@@ -825,6 +829,10 @@
       "name": "connection-bars"
     },
     {
+      "code": "0xf13b",
+      "name": "consul"
+    },
+    {
       "code": "0xf275",
       "name": "contrast"
     },
@@ -971,6 +979,10 @@
     {
       "code": "0xf3c6",
       "name": "happy-outline"
+    },
+    {
+      "code": "0xf14d",
+      "name": "hashicorp"
     },
     {
       "code": "0xf140",
@@ -2281,6 +2293,10 @@
       "name": "outlet"
     },
     {
+      "code": "0xf13c",
+      "name": "packer"
+    },
+    {
       "code": "0xf4d5",
       "name": "paintbrush"
     },
@@ -2825,6 +2841,10 @@
       "name": "stop"
     },
     {
+      "code": "0xf145",
+      "name": "terraform"
+    },
+    {
       "code": "0xf2b6",
       "name": "thermometer"
     },
@@ -2887,6 +2907,14 @@
     {
       "code": "0xf2b8",
       "name": "usb"
+    },
+    {
+      "code": "0xf146",
+      "name": "vagrant"
+    },
+    {
+      "code": "0xf14c",
+      "name": "vault"
     },
     {
       "code": "0xf256",
