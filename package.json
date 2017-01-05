@@ -1,0 +1,23 @@
+{
+  "name": "ionicons",
+  "version": "4.0.0",
+  "description": "Build.com Ionicons",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildcom/ionicons.git"
+  },
+  "keywords": [
+    "icons",
+    "fonts"
+  ],
+  "author": "Build.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildcom/ionicons/issues"
+  },
+  "homepage": "https://github.com/buildcom/ionicons#readme"
+}
