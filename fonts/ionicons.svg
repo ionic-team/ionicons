@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-9-22: Created with FontForge (http://fontforge.org)
+2017-1-10: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20160407 at Thu Sep 22 15:28:01 2016
- By Carly Culver
-Copyright (c) 2016, Carly Culver
+Created by FontForge 20150828 at Tue Jan 10 15:05:19 2017
+ By Joe Bill
+Copyright (c) 2017, Joe Bill
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -219,6 +219,9 @@ c8 -4 83 -56 132 -88l-83 -93c-2 -2 -2 -4 -1 -5s4 -1 6 1l98 83c15 -10 25 -16 27 -
 d="M375 52c6 -9 9 -20 9 -32c0 -28 -16 -52 -63 -52h-258c-47 0 -63 24 -63 52c0 12 3 23 9 32l49 73l49 77c13 20 21 44 21 70v92s-14 34 -16 43c-2 8 1 9 17 9h126c16 0 18 -1 16 -9c-2 -9 -15 -22 -15 -42v-93c0 -26 6 -50 19 -70zM345 7c3 3 7 8 7 14c0 5 -2 10 -4 14
 l-101 150c-16 26 -23 56 -23 87v112h-64v-112c0 -32 -9 -62 -25 -87l-99 -150c-2 -4 -4 -9 -4 -14c0 -6 3 -11 6 -14c4 -4 12 -7 25 -7h258c13 0 20 3 24 7zM325 37c1 -2 3 -6 3 -8c0 -7 -6 -15 -14 -15h-244c-7 0 -14 6 -14 14c0 3 1 6 3 8l81 124h103l82 -124v1zM238 106
 c2 -1 4 -2 6 -2s3 0 5 2c1 2 3 4 3 6s-1 4 -3 6c-1 2 -3 2 -5 2s-4 0 -6 -2c-1 -2 -2 -4 -2 -6s0 -4 2 -6zM285 47c4 2 4 7 2 11l-23 36c-1 2 -4 4 -7 4c-2 0 -3 0 -4 -1c-4 -2 -4 -7 -2 -11l23 -36c1 -2 5 -4 7 -4c1 0 3 0 4 1z" />
+    <glyph glyph-name="ion-eye" unicode="&#xf133;" 
+d="M224 320c99 0 172 -70 224 -129c-51 -50 -124 -127 -224 -127s-157 60 -224 128c78 79 142 128 224 128zM224 101c49 0 90 41 90 91s-41 91 -90 91s-90 -41 -90 -91s41 -91 90 -91zM224 224c0 -18 14 -32 32 -32c8 0 14 3 20 7v-7c0 -29 -23 -53 -52 -53s-52 24 -52 53
+s23 53 52 53h8c-5 -6 -8 -13 -8 -21z" />
     <glyph glyph-name="ion-heart" unicode="&#xf141;" horiz-adv-x="416" 
 d="M382 352c46 -47 46 -124 0 -171l-174 -181l-174 181c-46 47 -46 124 0 171c40 42 107 42 147 0l27 -28l28 28c40 42 106 42 146 0z" />
     <glyph glyph-name="ion-help-circled" unicode="&#xf142;" 
