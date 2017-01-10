@@ -1,6 +1,7 @@
 from subprocess import call
 import os
 import json
+import codecs
 
 
 BUILDER_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -34,7 +35,7 @@ def generate_font_files():
 def rename_svg_glyph_names(data):
   # hacky and slow (but safe) way to rename glyph-name attributes
   svg_path = os.path.join(FONTS_FOLDER_PATH, 'ionicons.svg')
-  svg_file = open(svg_path, 'r+')
+  svg_file = codecs.open(svg_path, 'r+', 'utf-8')
   svg_text = svg_file.read()
   svg_file.seek(0)
 
