@@ -1,5 +1,5 @@
 {
-  "build_hash": "062416759f2b37e5c1ed2f8da8fdf858",
+  "build_hash": "0e2246875c9ae16e6c41eca9e3bc0fb9",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -267,6 +267,10 @@
     {
       "code": "0xf3c5",
       "name": "erlenmeyer-flask"
+    },
+    {
+      "code": "0xf133",
+      "name": "eye"
     },
     {
       "code": "0xf141",
