@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-1-10: Created with FontForge (http://fontforge.org)
+2017-1-18: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Tue Jan 10 15:05:19 2017
- By Joe Bill
-Copyright (c) 2017, Joe Bill
+Created by FontForge 20170103 at Wed Jan 18 15:26:53 2017
+ By Tauseef Jamadar
+Copyright (c) 2017, Tauseef Jamadar
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -22,7 +22,7 @@ Copyright (c) 2017, Joe Bill
     bbox="-0.5 -75 580.569 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F100-F4B9"
+    unicode-range="U+F100-F4D5"
   />
     <missing-glyph />
     <glyph glyph-name="ion-alert-circled" unicode="&#xf100;" 
@@ -290,6 +290,9 @@ d="M0 175v32h320v-32h-320zM0 271v32h320v-32h-320zM0 79v32h320v-32h-320z" />
 d="M110 94c19 0 35 -16 35 -35s-16 -35 -35 -35s-35 16 -35 35s16 35 35 35zM287 94c19 0 35 -16 35 -35s-16 -35 -35 -35s-35 16 -35 35s16 35 35 35zM132 296v25h24v-25h-24zM81 296v25h24v-25h-24zM182 296v25h25v-25h-25zM233 296v25h25v-25h-25zM284 296v25h24v-25h-24
 zM233 244v25h25v-25h-25zM284 244v25h24v-25h-24zM182 244v25h25v-25h-25zM132 244v25h24v-25h-24zM81 244v25h24v-25h-24zM132 193v25h24v-25h-24zM182 193v25h25v-25h-25zM233 193v25h25v-25h-25zM75 131c-21 0 -26 16 -27 19l-48 148c-1 2 0 4 2 5l29 10h1c2 0 4 -1 4 -2
 l40 -124c3 -9 13 -16 22 -16h195c9 0 19 7 21 16l49 193c1 3 4 5 7 5h77c2 0 4 -2 4 -4v-31c0 -2 -2 -4 -4 -4h-37c-9 0 -19 -8 -21 -17l-47 -184c-1 -3 -5 -14 -24 -14h-243z" />
+    <glyph glyph-name="ion-paintbrush" unicode="&#xf4d5;" 
+d="M118 165c52 0 102 -41 90 -102c-11 -52 -54 -71 -90 -77c-30 -5 -100 0 -118 35c24 9 34 26 34 49c0 49 32 95 84 95zM436 388c13 -13 17 -30 5 -45l-154 -175c2 -9 1 -17 -3 -23l-50 -58v0v0c-2 -2 -4 -2 -6 0c-1 1 -1 2 -1 3v1c2 53 -41 87 -89 90v0h-2s-2 0 -2 1
+c-2 2 -2 4 0 6l59 49c6 4 14 4 23 2l175 154c15 12 32 8 45 -5zM134 188v0v0v0z" />
     <glyph glyph-name="ion-person-stalker" unicode="&#xf212;" 
 d="M393 123c42 -16 52 -26 53 -33c2 -9 2 -90 2 -90h-98c0 18 0 71 -1 77c-1 10 -1 29 -55 50c-8 3 -14 5 -19 7c18 8 15 15 15 28c0 19 -9 11 -15 47c-2 14 -4 5 -9 28c-3 12 1 12 1 18s-1 10 -2 22c-1 14 11 52 57 52s59 -38 58 -52c-1 -12 -2 -16 -2 -22
 c-1 -6 4 -6 1 -18c-5 -23 -7 -14 -9 -28c-6 -36 -16 -28 -16 -47c0 -29 -2 -23 39 -39zM325 0h-163h-162s0 65 2 77c2 10 15 22 69 43c54 20 50 17 50 55c0 24 -12 8 -20 54c-3 18 -5 7 -11 36c-3 15 2 16 1 23s-2 14 -3 29c-2 19 15 67 74 67s77 -49 75 -67
