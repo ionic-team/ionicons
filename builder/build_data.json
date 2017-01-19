@@ -1,5 +1,5 @@
 {
-  "build_hash": "0e2246875c9ae16e6c41eca9e3bc0fb9",
+  "build_hash": "aea8e0d77386b6953d728345fca3bd81",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -375,6 +375,10 @@
     {
       "code": "0xf15a",
       "name": "niche-cart"
+    },
+    {
+      "code": "0xf4d5",
+      "name": "paintbrush"
     },
     {
       "code": "0xf213",
