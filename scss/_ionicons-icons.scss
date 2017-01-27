@@ -107,6 +107,7 @@
 .#{$ionicons-prefix}quote:before,
 .#{$ionicons-prefix}rotate-clockwise:before,
 .#{$ionicons-prefix}search:before,
+.#{$ionicons-prefix}shippingbox:before,
 .#{$ionicons-prefix}social-facebook:before,
 .#{$ionicons-prefix}social-googleplus:before,
 .#{$ionicons-prefix}social-instagram-outline:before,
@@ -124,6 +125,7 @@
 .#{$ionicons-prefix}trash-b:before,
 .#{$ionicons-prefix}university:before,
 .#{$ionicons-prefix}unlocked:before,
+.#{$ionicons-prefix}us-flag:before,
 .#{$ionicons-prefix}wand:before
 {
   @extend .ion;
@@ -233,6 +235,7 @@
 .#{$ionicons-prefix}quote:before { content: $ionicon-var-quote; }
 .#{$ionicons-prefix}rotate-clockwise:before { content: $ionicon-var-rotate-clockwise; }
 .#{$ionicons-prefix}search:before { content: $ionicon-var-search; }
+.#{$ionicons-prefix}shippingbox:before { content: $ionicon-var-shippingbox; }
 .#{$ionicons-prefix}social-facebook:before { content: $ionicon-var-social-facebook; }
 .#{$ionicons-prefix}social-googleplus:before { content: $ionicon-var-social-googleplus; }
 .#{$ionicons-prefix}social-instagram-outline:before { content: $ionicon-var-social-instagram-outline; }
@@ -250,4 +253,5 @@
 .#{$ionicons-prefix}trash-b:before { content: $ionicon-var-trash-b; }
 .#{$ionicons-prefix}university:before { content: $ionicon-var-university; }
 .#{$ionicons-prefix}unlocked:before { content: $ionicon-var-unlocked; }
+.#{$ionicons-prefix}us-flag:before { content: $ionicon-var-us-flag; }
 .#{$ionicons-prefix}wand:before { content: $ionicon-var-wand; }

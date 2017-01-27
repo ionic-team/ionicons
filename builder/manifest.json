@@ -1,5 +1,5 @@
 {
-  "build_hash": "9fcb8a3fa0279f415963c227286b52ac",
+  "build_hash": "7b7f3838c54ce6a845676f08bfdcd6fc",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -2561,6 +2561,14 @@
       "name": "share"
     },
     {
+      "code": "0xf168",
+      "name": "shippingBox"
+    },
+    {
+      "code": "0xf16a",
+      "name": "shippingbox"
+    },
+    {
       "code": "0xf221",
       "name": "shuffle"
     },
@@ -3003,6 +3011,14 @@
     {
       "code": "0xf255",
       "name": "upload"
+    },
+    {
+      "code": "0xf16b",
+      "name": "us-flag"
+    },
+    {
+      "code": "0xf169",
+      "name": "usFlag"
     },
     {
       "code": "0xf2b8",

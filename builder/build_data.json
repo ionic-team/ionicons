@@ -1,5 +1,5 @@
 {
-  "build_hash": "aea8e0d77386b6953d728345fca3bd81",
+  "build_hash": "a20bab6451fa942c87ab4406d3442e58",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -425,6 +425,10 @@
       "name": "search"
     },
     {
+      "code": "0xf16a",
+      "name": "shippingbox"
+    },
+    {
       "code": "0xf231",
       "name": "social-facebook"
     },
@@ -491,6 +495,10 @@
     {
       "code": "0xf254",
       "name": "unlocked"
+    },
+    {
+      "code": "0xf16b",
+      "name": "us-flag"
     },
     {
       "code": "0xf358",
