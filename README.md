@@ -11,16 +11,7 @@ Build icons needs to be prefixed with `build-` to avoid conflicts with existing 
 ## Updating Documentation
 
 You can view the (theoretical latest cheatsheet for icons we support [here](http://buildcom.github.io/ionicons/cheatsheet.html))
-
-To update this cheatsheet, you'll have to update the `gh-pages` branch.
-
-```shell
-git pull origin master
-git checkout gh-pages
-git merge master
-git push origin gh-pages
-```
-
+The cheasheet is updated via master branch.
 
 # More Info
 
