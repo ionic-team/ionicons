@@ -1,5 +1,5 @@
 {
-  "build_hash": "7b7f3838c54ce6a845676f08bfdcd6fc",
+  "build_hash": "bc45fe0deb655043c0e8551f3f949674",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -2561,6 +2561,10 @@
       "name": "share"
     },
     {
+      "code": "0xf16c",
+      "name": "shipBox"
+    },
+    {
       "code": "0xf168",
       "name": "shippingBox"
     },
@@ -2951,6 +2955,10 @@
     {
       "code": "0xf24f",
       "name": "stop"
+    },
+    {
+      "code": "0xf16d",
+      "name": "test"
     },
     {
       "code": "0xf2b6",
