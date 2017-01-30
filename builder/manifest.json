@@ -2561,14 +2561,6 @@
       "name": "share"
     },
     {
-      "code": "0xf16c",
-      "name": "shipBox"
-    },
-    {
-      "code": "0xf168",
-      "name": "shippingBox"
-    },
-    {
       "code": "0xf16a",
       "name": "shippingbox"
     },
@@ -2957,10 +2949,6 @@
       "name": "stop"
     },
     {
-      "code": "0xf16d",
-      "name": "test"
-    },
-    {
       "code": "0xf2b6",
       "name": "thermometer"
     },
@@ -3023,10 +3011,6 @@
     {
       "code": "0xf16b",
       "name": "us-flag"
-    },
-    {
-      "code": "0xf169",
-      "name": "usFlag"
     },
     {
       "code": "0xf2b8",
