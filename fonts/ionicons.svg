@@ -5,7 +5,7 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170103 at Mon Feb  6 09:44:31 2017
+Created by FontForge 20170103 at Mon Feb  6 13:40:00 2017
  By Andre Harris
 Copyright (c) 2017, Andre Harris
 </metadata>
@@ -281,6 +281,8 @@ h64v-64h64v64h64z" />
 d="M0 160v64h384v-64h-384z" />
     <glyph glyph-name="ion-monitor" unicode="&#xf20a;" 
 d="M437 384c6 0 11 -5 11 -11v-266c0 -6 -5 -11 -11 -11h-426c-6 0 -11 5 -11 11v266c0 6 5 11 11 11h426zM416 128v224h-384v-224h384zM270 0h-92c-28 0 -42 3 -30 12s30 16 30 23c0 4 1 45 1 45h45h45s1 -41 1 -45c0 -7 18 -14 30 -23s-2 -12 -30 -12z" />
+    <glyph glyph-name="ion-more" unicode="&#xf20b;" horiz-adv-x="384" 
+d="M50 144c-28 0 -50 21 -50 48c0 26 22 48 50 48s50 -22 50 -48c0 -27 -22 -48 -50 -48zM192 144c-28 0 -50 21 -50 48c0 26 22 48 50 48s50 -22 50 -48c0 -27 -22 -48 -50 -48zM334 144c-28 0 -50 21 -50 48c0 26 22 48 50 48s50 -22 50 -48c0 -27 -22 -48 -50 -48z" />
     <glyph glyph-name="ion-navicon-round" unicode="&#xf20d;" horiz-adv-x="384" 
 d="M353 224c17 0 31 -14 31 -32s-14 -32 -31 -32h-322c-17 0 -31 14 -31 32s14 32 31 32h322zM353 352c17 0 31 -14 31 -32s-14 -32 -31 -32h-322c-17 0 -31 14 -31 32s14 32 31 32h322zM353 96c17 0 31 -14 31 -32s-14 -32 -31 -32h-322c-17 0 -31 14 -31 32s14 32 31 32
 h322z" />
