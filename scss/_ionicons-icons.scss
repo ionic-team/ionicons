@@ -92,11 +92,13 @@
 .#{$ionicons-prefix}medkit:before,
 .#{$ionicons-prefix}minus:before,
 .#{$ionicons-prefix}monitor:before,
+.#{$ionicons-prefix}more:before,
 .#{$ionicons-prefix}navicon:before,
 .#{$ionicons-prefix}navicon-round:before,
 .#{$ionicons-prefix}niche-cart:before,
 .#{$ionicons-prefix}paintbrush:before,
 .#{$ionicons-prefix}person:before,
+.#{$ionicons-prefix}person-add:before,
 .#{$ionicons-prefix}person-stalker:before,
 .#{$ionicons-prefix}play:before,
 .#{$ionicons-prefix}plus:before,
@@ -220,11 +222,13 @@
 .#{$ionicons-prefix}medkit:before { content: $ionicon-var-medkit; }
 .#{$ionicons-prefix}minus:before { content: $ionicon-var-minus; }
 .#{$ionicons-prefix}monitor:before { content: $ionicon-var-monitor; }
+.#{$ionicons-prefix}more:before { content: $ionicon-var-more; }
 .#{$ionicons-prefix}navicon:before { content: $ionicon-var-navicon; }
 .#{$ionicons-prefix}navicon-round:before { content: $ionicon-var-navicon-round; }
 .#{$ionicons-prefix}niche-cart:before { content: $ionicon-var-niche-cart; }
 .#{$ionicons-prefix}paintbrush:before { content: $ionicon-var-paintbrush; }
 .#{$ionicons-prefix}person:before { content: $ionicon-var-person; }
+.#{$ionicons-prefix}person-add:before { content: $ionicon-var-person-add; }
 .#{$ionicons-prefix}person-stalker:before { content: $ionicon-var-person-stalker; }
 .#{$ionicons-prefix}play:before { content: $ionicon-var-play; }
 .#{$ionicons-prefix}plus:before { content: $ionicon-var-plus; }

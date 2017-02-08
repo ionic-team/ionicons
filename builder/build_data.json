@@ -1,5 +1,5 @@
 {
-  "build_hash": "fbba3ba1cd3f1fdb321977c4996d7d25",
+  "build_hash": "65f7c54d117a3d2f7c686f4005a9bf7d",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -365,6 +365,10 @@
       "name": "monitor"
     },
     {
+      "code": "0xf20b",
+      "name": "more"
+    },
+    {
       "code": "0xf20e",
       "name": "navicon"
     },
@@ -383,6 +387,10 @@
     {
       "code": "0xf213",
       "name": "person"
+    },
+    {
+      "code": "0xf211",
+      "name": "person-add"
     },
     {
       "code": "0xf212",
