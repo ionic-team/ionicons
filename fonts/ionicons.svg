@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-2-6: Created with FontForge (http://fontforge.org)
+2017-2-9: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170103 at Mon Feb  6 13:40:00 2017
- By Andre Harris
-Copyright (c) 2017, Andre Harris
+Created by FontForge 20170103 at Thu Feb  9 08:48:11 2017
+ By Tauseef Jamadar
+Copyright (c) 2017, Tauseef Jamadar
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -230,6 +230,8 @@ c-19 0 -34 -4 -47 -13c-19 -13 -28 -34 -28 -68h49c0 9 -1 19 4 27s13 15 26 15s19 -
 c12 9 21 17 25 23z" />
     <glyph glyph-name="ion-home" unicode="&#xf144;" horiz-adv-x="384" 
 d="M384 160h-48v-160h-96v128h-96v-128h-96v160h-48l192 224z" />
+    <glyph glyph-name="ion-ios-book" unicode="&#xf3e8;" horiz-adv-x="384" 
+d="M100 384c35 0 67 -10 84 -31v-353h-2c-8 36 -42 64 -82 64c-34 0 -65 -16 -78 -42h-5h-11h-6v9v264v9v1c0 53 45 79 100 79zM284 384c55 0 100 -26 100 -79v-1v-4v-261v-17h-6h-11h-5c-17 30 -44 42 -78 42c-40 0 -74 -28 -82 -64h-2v353c17 21 50 31 84 31z" />
     <glyph glyph-name="ion-ios-camera" unicode="&#xf3f6;" horiz-adv-x="384" 
 d="M354 288c18 0 30 -13 30 -31v-176c0 -18 -12 -33 -30 -33h-320c-18 0 -34 15 -34 33v176c0 18 16 31 34 31h13v16h34v-16h13c32 36 43 48 55 48h88c12 0 23 -12 55 -48h62zM192 88c47 0 86 38 86 85s-39 85 -86 85s-86 -38 -86 -85s39 -85 86 -85zM305 239v17h-17v-17h17
 zM192 242c38 0 70 -31 70 -69s-32 -69 -70 -69s-70 31 -70 69s32 69 70 69zM192 141c18 0 32 14 32 32s-14 32 -32 32s-32 -14 -32 -32s14 -32 32 -32z" />
