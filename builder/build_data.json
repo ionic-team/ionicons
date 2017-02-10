@@ -1,5 +1,5 @@
 {
-  "build_hash": "720932bd0714f254655ded0c3125142a",
+  "build_hash": "5711f1a5ac2fc02ccebb6c5cd2833c5a",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -65,6 +65,10 @@
       "name": "briefcase"
     },
     {
+      "code": "0xf169",
+      "name": "build-asterisk-projects"
+    },
+    {
       "code": "0xf165",
       "name": "build-bluetarp"
     },
@@ -103,6 +107,10 @@
     {
       "code": "0xf166",
       "name": "build-nay"
+    },
+    {
+      "code": "0xf168",
+      "name": "build-order-add"
     },
     {
       "code": "0xf13c",
