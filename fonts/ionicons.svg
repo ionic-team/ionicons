@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-2-9: Created with FontForge (http://fontforge.org)
+2017-2-10: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170103 at Thu Feb  9 08:48:11 2017
- By Tauseef Jamadar
-Copyright (c) 2017, Tauseef Jamadar
+Created by FontForge 20170103 at Fri Feb 10 11:29:01 2017
+ By Andre Harris
+Copyright (c) 2017, Andre Harris
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -102,6 +102,9 @@ l3 7h1v-8h-1v7v0l-2 -7h-1l-3 7v0v-7h-1v8v0z" />
     <glyph glyph-name="ion-build-nay" unicode="&#xf166;" horiz-adv-x="368" 
 d="M297 125c17 23 27 50 27 81c0 54 -31 101 -75 124c-5 3 -10 5 -15 7c-2 1 -3 0 -4 1c-8 3 -16 5 -24 6c-7 1 -14 2 -22 2c-31 0 -59 -10 -82 -27zM184 66c31 0 59 10 82 27l-195 195c-17 -23 -27 -51 -27 -82c0 -53 30 -99 74 -123c5 -3 10 -5 15 -7c1 -1 3 -1 5 -2
 c8 -3 16 -5 24 -6c7 -1 14 -2 22 -2zM273 367c57 -31 95 -92 95 -161c0 -102 -82 -184 -184 -184c-19 0 -38 3 -56 9c-1 1 -3 1 -4 2c-10 3 -19 7 -28 12h-1c-57 31 -95 92 -95 161c0 102 82 184 184 184c19 0 37 -3 55 -9c1 -1 4 0 5 -1c10 -3 19 -7 28 -12z" />
+    <glyph glyph-name="ion-build-order-add" unicode="&#xf168;" horiz-adv-x="488" 
+d="M0 81v355h355v-355h-355zM45 338c0 15 11 26 26 26s27 -11 27 -26s-12 -27 -27 -27s-26 12 -26 27zM45 258c0 15 11 27 26 27s27 -12 27 -27s-12 -26 -27 -26s-26 11 -26 26zM45 179c0 15 11 26 26 26s27 -11 27 -26s-12 -27 -27 -27s-26 12 -26 27zM124 325v26h186v-26
+h-186zM124 245v27h186v-27h-186zM124 166v26h186v-26h-186zM223 81c0 73 59 132 132 132s133 -59 133 -132s-60 -133 -133 -133s-132 60 -132 133zM223 81c0 73 59 132 132 132s133 -59 133 -132s-60 -133 -133 -133s-132 60 -132 133zM355 147v-133zM291 81h129z" />
     <glyph glyph-name="ion-build-order-status" unicode="&#xf13c;" horiz-adv-x="481" 
 d="M0 -14v319h481v-319h-481zM26 245v0h92c3 0 4 2 4 5v29c0 3 -1 4 -4 4h-92c-3 0 -4 -1 -4 -4v-29c0 -3 1 -5 4 -5zM304 61v0v15c0 3 -1 5 -4 5h-143c-3 0 -5 -2 -5 -5v-15c0 -3 2 -5 5 -5h143c3 0 4 2 4 5zM328 107v0v16c0 3 -1 5 -4 5h-167c-3 0 -5 -2 -5 -5v-16
 c0 -3 2 -4 5 -4h167c3 0 4 1 4 4zM338 155v0v15c0 3 -1 5 -4 5h-177c-3 0 -5 -2 -5 -5v-15c0 -3 2 -5 5 -5h177c3 0 4 2 4 5zM39 395l-39 -64h481l-40 64h-402z" />

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.35 49.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #63666a;
+        stroke-miterlimit: 10;
+        stroke-width: 2.35px;
+      }
+
+      .cls-2 {
+        fill: #63666a;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>addorders_icon</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g>
+      <rect class="cls-1" x="1.18" y="1.18" width="34.22" height="34.22"/>
+      <g>
+        <circle class="cls-2" cx="8.07" cy="10.63" r="2.55"/>
+        <circle class="cls-2" cx="8.07" cy="18.29" r="2.55"/>
+        <circle class="cls-2" cx="8.07" cy="25.95" r="2.55"/>
+        <rect class="cls-2" x="13.18" y="9.35" width="17.87" height="2.55"/>
+        <rect class="cls-2" x="13.18" y="17.01" width="17.87" height="2.55"/>
+        <rect class="cls-2" x="13.18" y="24.67" width="17.87" height="2.55"/>
+      </g>
+      <g>
+        <circle class="cls-3" cx="35.41" cy="35.4" r="12.77"/>
+        <circle class="cls-1" cx="35.41" cy="35.4" r="12.77"/>
+      </g>
+      <line class="cls-1" x1="35.4" y1="29.02" x2="35.4" y2="41.79"/>
+      <line class="cls-1" x1="29.19" y1="35.36" x2="41.62" y2="35.36"/>
+    </g>
+  </g>
+</svg>

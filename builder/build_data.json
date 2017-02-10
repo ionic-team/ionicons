@@ -1,5 +1,5 @@
 {
-  "build_hash": "720932bd0714f254655ded0c3125142a",
+  "build_hash": "415ea5b3c707aa1720324031b650af47",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -103,6 +103,10 @@
     {
       "code": "0xf166",
       "name": "build-nay"
+    },
+    {
+      "code": "0xf168",
+      "name": "build-order-add"
     },
     {
       "code": "0xf13c",
