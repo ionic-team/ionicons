@@ -5,7 +5,7 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170103 at Fri Feb 10 11:29:01 2017
+Created by FontForge 20170103 at Fri Feb 10 13:31:00 2017
  By Andre Harris
 Copyright (c) 2017, Andre Harris
 </metadata>
@@ -59,6 +59,8 @@ d="M9 259l105 100c6 6 14 9 23 9s16 -3 22 -9l106 -100c12 -12 12 -31 0 -43s-34 -12
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
 d="M240 176v8h208v-176c0 -4 -4 -8 -8 -8h-432c-4 0 -8 4 -8 8v176h208v-8h32zM440 304c4 0 8 -4 8 -8v-96h-208v8h-32v-8h-208v96c0 4 4 8 8 8h120v31c1 28 22 49 51 49h90c30 0 50 -21 51 -49v-31h120zM288 332v1c0 10 -9 19 -19 19h-90c-10 0 -19 -9 -19 -19v-1v-1v-27
 h128v27v1z" />
+    <glyph glyph-name="ion-build-asterisk-projects" unicode="&#xf169;" horiz-adv-x="502" 
+d="M0 192c0 139 112 251 251 251s251 -112 251 -251s-112 -251 -251 -251s-251 112 -251 251zM376 210v-41h-81l56 -53l-24 -23l-54 55v-81h-41v81l-55 -56l-25 24l55 53h-77v41h77l-55 56l25 25l55 -55v77h41v-77l54 55l23 -25l-55 -56h81z" />
     <glyph glyph-name="ion-build-bluetarp" unicode="&#xf165;" horiz-adv-x="393" 
 d="M0 192c65 66 129 132 196 200c8 -14 17 -25 22 -38c7 -21 20 -37 42 -44c25 -8 43 -25 52 -50c7 -21 23 -33 42 -42c11 -5 22 -11 32 -18c9 -6 10 -11 1 -17c-8 -6 -17 -12 -26 -15c-26 -9 -44 -26 -53 -52c-7 -19 -20 -32 -39 -39c-28 -10 -48 -27 -56 -56
 c-3 -10 -11 -18 -17 -28c-66 67 -131 133 -196 199z" />
