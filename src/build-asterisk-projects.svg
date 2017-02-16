@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#00A499;}
-	.st1{fill:#FFFFFF;}
-</style>
-<g>
-	<circle class="st0" cx="25" cy="25" r="24.5"/>
-	<polygon class="st1" points="37.2,23.2 29.3,23.2 34.7,17.8 32.4,15.3 27.2,20.7 27.2,13.2 23.2,13.2 23.2,20.7 17.8,15.3 
-		15.3,17.8 20.7,23.2 13.2,23.2 13.2,27.2 20.7,27.2 15.3,32.4 17.8,34.8 23.2,29.3 23.2,37.2 27.2,37.2 27.2,29.3 32.4,34.7 
-		34.8,32.4 29.3,27.2 37.2,27.2 	"/>
-</g>
-</svg>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432.3 432.3"><title>build-asterisk-projects</title><path d="M255.85,39.9C136.47,39.9,39.7,136.67,39.7,256s96.77,216.2,216.15,216.2S472,375.43,472,256,375.23,39.9,255.85,39.9ZM363.48,275.46h-69.7l48.52,45.88-21.17,20.29L275.26,294v69.7H240V294l-47.64,48.52L170.3,321.35l47.64-45.88H151.75v-35.3h66.17l-47.64-47.64,22.06-22.06L240,218.11V151.95h35.29v66.17l45.88-47.64,20.29,22.06-47.64,47.64h69.7Z" transform="translate(-39.7 -39.9)"/></svg>
