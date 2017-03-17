@@ -1,5 +1,5 @@
 {
-  "build_hash": "270bb372fdc14a4a926f2c61ba5c5909",
+  "build_hash": "b020654bf233b09f02ac9df12038f93d",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -447,6 +447,14 @@
     {
       "code": "0xf16a",
       "name": "shippingbox"
+    },
+    {
+      "code": "0xf225",
+      "name": "social-android"
+    },
+    {
+      "code": "0xf227",
+      "name": "social-apple"
     },
     {
       "code": "0xf231",

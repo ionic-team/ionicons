@@ -113,6 +113,8 @@
 .#{$ionicons-prefix}rotate-clockwise:before,
 .#{$ionicons-prefix}search:before,
 .#{$ionicons-prefix}shippingbox:before,
+.#{$ionicons-prefix}social-android:before,
+.#{$ionicons-prefix}social-apple:before,
 .#{$ionicons-prefix}social-facebook:before,
 .#{$ionicons-prefix}social-googleplus:before,
 .#{$ionicons-prefix}social-instagram-outline:before,
@@ -246,6 +248,8 @@
 .#{$ionicons-prefix}rotate-clockwise:before { content: $ionicon-var-rotate-clockwise; }
 .#{$ionicons-prefix}search:before { content: $ionicon-var-search; }
 .#{$ionicons-prefix}shippingbox:before { content: $ionicon-var-shippingbox; }
+.#{$ionicons-prefix}social-android:before { content: $ionicon-var-social-android; }
+.#{$ionicons-prefix}social-apple:before { content: $ionicon-var-social-apple; }
 .#{$ionicons-prefix}social-facebook:before { content: $ionicon-var-social-facebook; }
 .#{$ionicons-prefix}social-googleplus:before { content: $ionicon-var-social-googleplus; }
 .#{$ionicons-prefix}social-instagram-outline:before { content: $ionicon-var-social-instagram-outline; }
