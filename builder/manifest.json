@@ -1,5 +1,5 @@
 {
-  "build_hash": "20a5aaa9762b58a28d6279d2691015ad",
+  "build_hash": "dca163bdf5b89c9b1b6d5d9ae1c5c29d",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -695,6 +695,10 @@
     {
       "code": "0xf2be",
       "name": "bug"
+    },
+    {
+      "code": "0xf16c",
+      "name": "build-add-to-projects"
     },
     {
       "code": "0xf169",
