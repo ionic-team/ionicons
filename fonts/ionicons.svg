@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-3-17: Created with FontForge (http://fontforge.org)
+2017-3-27: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Fri Mar 17 15:09:27 2017
- By Joe Bill
-Copyright (c) 2017, Joe Bill
+Created by FontForge 20170103 at Mon Mar 27 15:00:05 2017
+ By Andre Harris
+Copyright (c) 2017, Andre Harris
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -59,6 +59,9 @@ d="M9 259l105 100c6 6 14 9 23 9s16 -3 22 -9l106 -100c12 -12 12 -31 0 -43s-34 -12
     <glyph glyph-name="ion-briefcase" unicode="&#xf26c;" 
 d="M240 176v8h208v-176c0 -4 -4 -8 -8 -8h-432c-4 0 -8 4 -8 8v176h208v-8h32zM440 304c4 0 8 -4 8 -8v-96h-208v8h-32v-8h-208v96c0 4 4 8 8 8h120v31c1 28 22 49 51 49h90c30 0 50 -21 51 -49v-31h120zM288 332v1c0 10 -9 19 -19 19h-90c-10 0 -19 -9 -19 -19v-1v-1v-27
 h128v27v1z" />
+    <glyph glyph-name="ion-build-add-to-projects" unicode="&#xf16c;" horiz-adv-x="503" 
+d="M477 294h-451c3 30 5 59 10 86c1 7 12 17 19 17c43 2 85 3 128 0c10 -1 22 -11 30 -20c14 -15 29 -21 49 -21c59 1 118 0 177 0c32 0 34 -2 36 -34c1 -9 0 -18 2 -28zM503 249c-4 -77 -10 -152 -14 -229c-2 -28 -9 -34 -37 -34h-398c-30 0 -35 4 -37 34
+c-6 77 -11 154 -16 231c-3 24 2 29 28 29h224h219c29 0 32 -3 31 -31zM336 147h-71v71h-28v-71h-71v-28h71v-71h28v71h71v28z" />
     <glyph glyph-name="ion-build-asterisk-projects" unicode="&#xf169;" horiz-adv-x="512" 
 d="M256 448c141 0 256 -115 256 -256s-115 -256 -256 -256s-256 115 -256 256s115 256 256 256zM383 169l1 42h-83l56 56l-24 26l-54 -56v78h-42v-78l-56 56l-26 -26l56 -56h-78v-42h78l-56 -54l26 -25l56 57v-82h42v82l54 -56l25 24l-57 54h82z" />
     <glyph glyph-name="ion-build-bluetarp" unicode="&#xf165;" horiz-adv-x="393" 
