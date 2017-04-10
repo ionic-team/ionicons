@@ -24,9 +24,8 @@ time, mark, audio, video {
 
 body {
   box-sizing: border-box;
-  padding-top: 136px;
   border-top: 1px solid #4F8EF7;
-  background: url("img/ionicons-logo.png") no-repeat center 45px;
+  background: url("img/ionicons-logo.png") no-repeat center 65px;
   color:#373737;
   text-align: center;
   font-size: 16px;
@@ -300,6 +299,55 @@ li.active {
   border-color: #4F8EF7;
 }
 
+#snap-bar {
+  background: #2e64c3;
+  color: white;
+  text-align: center;
+  padding: 7px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 136px;
+  font-family: 'AvenirNextLTPro-Medium';
+}
+#snap-bar strong {
+  text-transform: uppercase;
+  margin-right: 0px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  }
+
+#snap-bar a {
+  color: rgba(255, 255, 255, .9);
+  transition: .3s color;
+}
+
+#snap-bar a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#snap-bar i {
+  font-size: 18px;
+  vertical-align: -7%;
+}
+
+#snap-bar i + .navbar {
+    margin-top: 22px;
+
+
+}
+@media (max-width: $screen-xs-max) {
+  #snap-bar i + .navbar {
+    padding-top: 20px;
+    margin-top:0;
+    position: relative;
+  }
+}
+
+
 /* @license
  * MyFonts Webfont Build ID 2656303, 2013-10-02T11:03:28-0400
  *
@@ -332,5 +380,3 @@ li.active {
 
 
 @font-face {font-family: 'AvenirNextLTPro-Medium';src: url('site-fonts/28882F_1_0.eot');src: url('site-fonts/28882F_1_0.eot?#iefix') format('embedded-opentype'),url('site-fonts/28882F_1_0.woff') format('woff'),url('site-fonts/28882F_1_0.ttf') format('truetype');}
-
-
