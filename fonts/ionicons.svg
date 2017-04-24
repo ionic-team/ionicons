@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-3-27: Created with FontForge (http://fontforge.org)
+2017-4-24: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170103 at Mon Mar 27 15:00:05 2017
- By Andre Harris
-Copyright (c) 2017, Andre Harris
+Created by FontForge 20150828 at Mon Apr 24 11:19:21 2017
+ By Joe Bill
+Copyright (c) 2017, Joe Bill
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -306,6 +306,8 @@ l40 -124c3 -9 13 -16 22 -16h195c9 0 19 7 21 16l49 193c1 3 4 5 7 5h77c2 0 4 -2 4 
     <glyph glyph-name="ion-paintbrush" unicode="&#xf4d5;" 
 d="M118 165c52 0 102 -41 90 -102c-11 -52 -54 -71 -90 -77c-30 -5 -100 0 -118 35c24 9 34 26 34 49c0 49 32 95 84 95zM436 388c13 -13 17 -30 5 -45l-154 -175c2 -9 1 -17 -3 -23l-50 -58v0v0c-2 -2 -4 -2 -6 0c-1 1 -1 2 -1 3v1c2 53 -41 87 -89 90v0h-2s-2 0 -2 1
 c-2 2 -2 4 0 6l59 49c6 4 14 4 23 2l175 154c15 12 32 8 45 -5zM134 188v0v0v0z" />
+    <glyph glyph-name="ion-paper-airplane" unicode="&#xf2c3;" 
+d="M0 176l448 240l-112 -448l-112 112l-80 -112l-16 160zM319 31l80 323l-322 -173l83 -31l192 154l-128 -176z" />
     <glyph glyph-name="ion-person-add" unicode="&#xf211;" 
 d="M397 120h-42v51h-51v42h51v51h42v-51h51v-42h-51v-51zM384 0h-192h-192s0 26 2 40c2 11 17 25 81 49c63 23 60 12 60 55c0 28 -14 11 -23 64c-4 21 -6 7 -14 40c-4 17 3 19 2 27s-2 16 -4 33c-2 21 18 76 88 76s90 -55 88 -76c-2 -17 -3 -25 -4 -33s6 -10 2 -27
 c-8 -33 -10 -19 -14 -40c-9 -53 -23 -36 -23 -64c0 -43 -3 -32 60 -55c64 -24 79 -38 81 -49c2 -14 2 -40 2 -40z" />
