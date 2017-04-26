@@ -1,5 +1,5 @@
 {
-  "build_hash": "20a5aaa9762b58a28d6279d2691015ad",
+  "build_hash": "dca163bdf5b89c9b1b6d5d9ae1c5c29d",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -399,6 +399,10 @@
     {
       "code": "0xf4d5",
       "name": "paintbrush"
+    },
+    {
+      "code": "0xf2c3",
+      "name": "paper-airplane"
     },
     {
       "code": "0xf213",
