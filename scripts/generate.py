@@ -1,5 +1,5 @@
 from subprocess import call
-import os
+import os, errno
 import shutil
 import subprocess
 import json
@@ -7,18 +7,33 @@ import codecs
 from collections import OrderedDict
 
 
-BUILDER_PATH = os.path.dirname(os.path.abspath(__file__))
-ROOT_PATH = os.path.join(BUILDER_PATH, '..')
+SCRIPTS_PATH = os.path.dirname(os.path.abspath(__file__))
+ROOT_PATH = os.path.join(SCRIPTS_PATH, '..')
+SRC_PATH = os.path.join(ROOT_PATH, 'src')
 DIST_PATH = os.path.join(ROOT_PATH, 'dist')
-INPUT_SVG_DIR = os.path.join(ROOT_PATH, 'src')
+DOCS_PATH = os.path.join(ROOT_PATH, 'docs')
+INPUT_SVG_DIR = os.path.join(SRC_PATH, 'svg')
 OUTPUT_SVG_DIR = os.path.join(DIST_PATH, 'svg')
 DATA_PATH = os.path.join(DIST_PATH, 'data')
 FONTS_FOLDER_PATH = os.path.join(DIST_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(DIST_PATH, 'css')
-SCSS_FOLDER_PATH = os.path.join(DIST_PATH, 'scss')
+INPUT_SCSS_FOLDER_PATH = os.path.join(SRC_PATH, 'scss')
+OUTPUT_SCSS_FOLDER_PATH = os.path.join(DIST_PATH, 'scss')
 
 
 def main():
+  try:
+    os.makedirs(DIST_PATH)
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise
+
+  try:
+    os.makedirs(OUTPUT_SVG_DIR)
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise
+
   generate_font_files()
 
   data = get_build_data()
@@ -30,16 +45,21 @@ def main():
   generate_cheatsheet(data)
   generate_mode_cheatsheet(data)
   generate_icon_comparison(data)
-  generate_site_index_file()
 
 
 def generate_font_files():
   print "Generate Fonts"
-  cmd = "fontforge -script %s/scripts/generate_font.py" % (BUILDER_PATH)
+  cmd = "fontforge -script %s/font/generate_font.py" % (SCRIPTS_PATH)
   call(cmd, shell=True)
 
 
 def generate_data_files(data):
+  try:
+    os.makedirs(DATA_PATH)
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise
+
   print "Generate Data Files"
   icon_names = []
   mode_icons = []
@@ -158,13 +178,32 @@ def rename_svg_glyph_names(data):
 
 
 def generate_scss(data):
+  try:
+    os.makedirs(OUTPUT_SCSS_FOLDER_PATH)
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise
+
   print "Generate SCSS"
   font_name = data['name']
   font_version = data['version']
   css_prefix = data['prefix']
-  variables_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-variables.scss')
-  common_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-common.scss')
-  icons_file_path = os.path.join(SCSS_FOLDER_PATH, 'ionicons-icons.scss')
+
+  ionicons_core_file_path_input = os.path.join(INPUT_SCSS_FOLDER_PATH, 'ionicons-core.scss')
+  ionicons_core_file_path_output = os.path.join(OUTPUT_SCSS_FOLDER_PATH, 'ionicons-core.scss')
+  shutil.copyfile(ionicons_core_file_path_input, ionicons_core_file_path_output)
+
+  ionicons_scc_file_path_input = os.path.join(INPUT_SCSS_FOLDER_PATH, 'ionicons.scss')
+  ionicons_scc_file_path_output = os.path.join(OUTPUT_SCSS_FOLDER_PATH, 'ionicons.scss')
+  shutil.copyfile(ionicons_scc_file_path_input, ionicons_scc_file_path_output)
+
+  variables_file_path_input = os.path.join(INPUT_SCSS_FOLDER_PATH, 'ionicons-variables.scss')
+  variables_file_path = os.path.join(OUTPUT_SCSS_FOLDER_PATH, 'ionicons-variables.scss')
+  shutil.copyfile(variables_file_path_input, variables_file_path)
+
+  common_file_path = os.path.join(OUTPUT_SCSS_FOLDER_PATH, 'ionicons-common.scss')
+  icons_file_path = os.path.join(OUTPUT_SCSS_FOLDER_PATH, 'ionicons-icons.scss')
+
 
   d = []
   d.append('@charset "UTF-8";')
@@ -214,12 +253,18 @@ def generate_scss(data):
 
 
 def generate_css_from_scss(data):
+  try:
+    os.makedirs(CSS_FOLDER_PATH)
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise
+
   compile_scss_to_css('ionicons', data)
   compile_scss_to_css('ionicons-core', data)
 
 
 def compile_scss_to_css(filename, data):
-  scss_file_path = os.path.join(SCSS_FOLDER_PATH, '%s.scss' % filename)
+  scss_file_path = os.path.join(OUTPUT_SCSS_FOLDER_PATH, '%s.scss' % filename)
   css_file_path = os.path.join(CSS_FOLDER_PATH, '%s.css' % filename)
   css_min_file_path = os.path.join(CSS_FOLDER_PATH, '%s.min.css' % filename)
 
@@ -234,9 +279,9 @@ def compile_scss_to_css(filename, data):
 def generate_cheatsheet(data):
   print "Generate Cheatsheet"
 
-  cheatsheet_file_path = os.path.join(ROOT_PATH, 'cheatsheet.html')
-  template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
-  icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'icon-row.html')
+  cheatsheet_file_path = os.path.join(DOCS_PATH, 'cheatsheet.html')
+  template_path = os.path.join(SRC_PATH, 'cheatsheet', 'template.html')
+  icon_row_path = os.path.join(SRC_PATH, 'cheatsheet', 'icon-row.html')
 
   f = codecs.open(template_path, 'r', 'utf-8')
   template_html = f.read()
@@ -276,9 +321,9 @@ def generate_cheatsheet(data):
 def generate_mode_cheatsheet(data):
   print "Generate Mode Cheatsheet"
 
-  cheatsheet_file_path = os.path.join(ROOT_PATH, 'mode-cheatsheet.html')
-  template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
-  icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'mode-icon-row.html')
+  cheatsheet_file_path = os.path.join(DOCS_PATH, 'mode-cheatsheet.html')
+  template_path = os.path.join(SRC_PATH, 'cheatsheet', 'template.html')
+  icon_row_path = os.path.join(SRC_PATH, 'cheatsheet', 'mode-icon-row.html')
 
   f = codecs.open(template_path, 'r', 'utf-8')
   template_html = f.read()
@@ -337,9 +382,9 @@ def generate_mode_cheatsheet(data):
 def generate_icon_comparison(data):
   print "Generate Icon Comparison"
 
-  comparison_file_path = os.path.join(ROOT_PATH, 'icon-comparison.html')
-  template_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'template.html')
-  icon_row_path = os.path.join(BUILDER_PATH, 'cheatsheet', 'icon-comparison-row.html')
+  comparison_file_path = os.path.join(DOCS_PATH, 'icon-comparison.html')
+  template_path = os.path.join(SRC_PATH, 'cheatsheet', 'template.html')
+  icon_row_path = os.path.join(SRC_PATH, 'cheatsheet', 'icon-comparison-row.html')
 
   f = codecs.open(template_path, 'r', 'utf-8')
   template_html = f.read()
@@ -402,93 +447,30 @@ def generate_icon_comparison(data):
 
 
 def get_build_data():
-  build_data_path = os.path.join(BUILDER_PATH, 'build_data.json')
+  build_data_path = os.path.join(SCRIPTS_PATH, 'build_data.json')
 
   f = codecs.open(build_data_path, 'r', 'utf-8')
   data = json.loads(f.read())
   f.close()
-  
+
   package_json_path = os.path.join(ROOT_PATH, 'package.json')
   f = codecs.open(package_json_path, 'r', 'utf-8')
   package_data = json.loads(f.read())
   f.close()
-  
+
   data['version'] = package_data['version']
-  
+
   return data
 
 
 def get_tag_data():
-  tag_data_path = os.path.join(BUILDER_PATH, 'tags.json')
+  tag_data_path = os.path.join(SCRIPTS_PATH, 'tags.json')
 
   f = codecs.open(tag_data_path, 'r', 'utf-8')
   data = json.loads(f.read())
   f.close()
   return data
 
-
-def generate_site_index_file():
-
-  BASE_TMPL = """
-  <div id="%s" style="display:none;">
-      <h2 class="title">%s</h2>
-      <ul class="modal-icons">%s</ul>
-  """
-
-  ICON_TMPL = """
-    <li>
-      <i class="%s"></i>
-      <code>%s</code>
-    </li>
-  """
-
-  USAGE_TMPL = """
-    <h4 class="modal-subtitle">Usage:</h4>
-    {%% highlight html %%}
-
-    <!--Basic: auto-select the icon based on the platform -->
-    <ion-icon name="%s"></ion-icon>
-
-    <!-- Advanced: explicity set the icon for each platform -->
-    %s
-    {%% endhighlight %%}
-  </div>
-  """
-
-  def build_usage_block(icons):
-    output = ""
-    for i in icons:
-      output += ICON_TMPL % ('ion-'+i['name'], i['name'])
-    return output
-
-  def build_advanced_icon(icons):
-    output = ""
-    ADV_ICON_TMPL = '<ion-icon ios="%s" md="%s"></ion-icon>'
-    non_outline_icons = [i for i in icons if '-outline' not in i['name']]
-    if (len(non_outline_icons) >= 2):
-      return ADV_ICON_TMPL % (non_outline_icons[0]['name'],
-                              non_outline_icons[1]['name'])
-    if (len(non_outline_icons) == 1):
-      return ADV_ICON_TMPL % (non_outline_icons[0]['name'], non_outline_icons[0]['name'])
-
-
-  f = codecs.open(os.path.join(DATA_PATH, 'ionicons.json'), 'r', 'utf-8')
-  data = json.loads(f.read())
-  f.close()
-  all_icons = data.items()
-  OUTPUT = ""
-  for icon_set in all_icons:
-    set_name = icon_set[0]
-    icons = icon_set[1]['icons']
-    section_part_1 = BASE_TMPL % (set_name, set_name,
-                                  build_usage_block(icons))
-    section_part_2 = USAGE_TMPL % (set_name, build_advanced_icon(icons))
-    OUTPUT += (section_part_1 + section_part_2)
-
-  html_path = os.path.join(BUILDER_PATH, 'ionic-site', 'ionicons-data.html')
-  f2 = codecs.open(html_path, 'w', 'utf-8')
-  f2.write(OUTPUT)
-  f2.close()
 
 if __name__ == "__main__":
   main()

@@ -13,6 +13,7 @@ import copy
 SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 INPUT_SVG_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'src')
 OUTPUT_FONT_DIR = os.path.join(SCRIPT_PATH, '..', '..', 'dist', 'fonts')
+OUTPUT_IONICONS_FONT_DIR = os.path.join(OUTPUT_FONT_DIR, 'ionicons')
 MANIFEST_PATH = os.path.join(SCRIPT_PATH, '..', 'manifest.json')
 BUILD_DATA_PATH = os.path.join(SCRIPT_PATH, '..', 'build_data.json')
 AUTO_WIDTH = True
@@ -33,6 +34,17 @@ manifest_data = json.loads(manifest_file.read())
 manifest_file.close()
 print "Load Manifest, Icons: %s" % ( len(manifest_data['icons']) )
 
+try:
+  os.makedirs(OUTPUT_FONT_DIR)
+except OSError as e:
+  if e.errno != errno.EEXIST:
+    raise
+
+try:
+  os.makedirs(OUTPUT_IONICONS_FONT_DIR)
+except OSError as e:
+  if e.errno != errno.EEXIST:
+    raise
 
 # ensure each icon is actually used in the manifest
 clean_manifest_data = copy.deepcopy(manifest_data)
@@ -48,7 +60,6 @@ for ionicon in manifest_data['icons']:
     print 'removed from manifest: %s' % (ionicon['name'])
 
 manifest_data = copy.deepcopy(clean_manifest_data)
-
 
 build_data = copy.deepcopy(manifest_data)
 build_data['icons'] = []
@@ -149,7 +160,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
 
 build_hash = m.hexdigest()
 
-if build_hash == manifest_data.get('build_hash'):
+if build_hash == manifest_data.get('build_hash') and False:
   print "Source files unchanged, did not rebuild fonts"
 
 else:
