@@ -1,9 +1,36 @@
 {
   "name": "ionicons",
+  "version": "4.0.0-0",
   "description": "Premium icons for Ionic.",
-  "version": "3.0.0-alpha.3",
-  "files": ["dist"],
-  "keywords": ["ionicons", "ionic", "icon", "svg", "font", "mobile"],
+  "files": [
+    "dist/"
+  ],
+  "browser": "dist/ionicons.js",
+  "main": "dist/collection/index.js",
+  "types": "dist/collection/index.d.ts",
+  "scripts": {
+    "build": "stencil build --dev && python scripts/generate.py && node scripts/svj.js",
+    "deploy": "np",
+    "prepublishOnly": "npm run build",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "@ionic/jpml": "0.0.3",
+    "@stencil/core": "next",
+    "np": "2.16.0"
+  },
+  "keywords": [
+    "ionicons",
+    "ionic",
+    "icon",
+    "svg",
+    "font",
+    "mobile",
+    "web component",
+    "component",
+    "custom element"
+  ],
   "homepage": "http://ionicons.com/",
   "author": {
     "name": "Ben Sperry",
@@ -20,10 +47,7 @@
     "url": "https://github.com/driftyco/ionicons.git"
   },
   "bugs": {
-    "url" : "https://github.com/driftyco/ionicons/issues"
+    "url": "https://github.com/driftyco/ionicons/issues"
   },
-  "license": "MIT",
-  "engines" : {
-    "node" : ">=0.10.3"
-  }
+  "license": "MIT"
 }
