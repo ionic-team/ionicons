@@ -398,17 +398,24 @@ def generate_icon_comparison(data):
   icon_count = 0
 
   content.append('''
-    <div class="comparison-row">
-      <div class="comparison-col">
+  <table class="comparison-table">
+    <tr class="comparison-row">
+      <td class="comparison-col">
         <h2>Source SVG</h2>
-      </div>
-      <div class="comparison-col">
+      </td>
+      <td class="comparison-col">
         <h2>Optimized SVG</h2>
-      </div>
-      <div class="comparison-col">
+      </td>
+      <td class="comparison-col">
+        <h2>Custom Element</h2>
+      </td>
+      <td class="comparison-col">
         <h2>Icon Font</h2>
-      </div>
-    </div>
+      </td>
+      <td class="comparison-col">
+        <h2>PNG, 64x64</h2>
+      </td>
+    </tr>
   ''')
 
   for ionicon in data['icons']:
@@ -420,20 +427,18 @@ def generate_icon_comparison(data):
     item_row = icon_row_template.replace('{{name}}', ionicon['name'])
     item_row = item_row.replace('{{prefix}}', data['prefix'])
 
-    src_svg = 'src/%s.svg' % (ionicon['name'])
+    src_svg = 'build/svg/%s.svg' % (ionicon['name'])
     item_row = item_row.replace('{{src_svg}}', src_svg)
 
-    src_svg_size = os.path.getsize(src_svg_file)
-    item_row = item_row.replace('{{src_svg_size}}', str(src_svg_size))
-
-    optimized_svg = 'dist/svg/%s.svg' % (ionicon['name'])
+    optimized_svg = 'build/svg/%s.svg' % (ionicon['name'])
     item_row = item_row.replace('{{optimized_svg}}', optimized_svg)
 
-    optimized_svg_file = os.path.join(OUTPUT_SVG_DIR, '%s.svg' % (ionicon['name']))
-    optimized_svg_size = os.path.getsize(optimized_svg_file)
-    item_row = item_row.replace('{{optimized_svg_size}}', str(optimized_svg_size))
+    png_64 = 'build/png/64/%s.png' % (ionicon['name'])
+    item_row = item_row.replace('{{png_64}}', png_64)
 
     content.append(item_row)
+
+  content.append('</table>')
 
   template_html = template_html.replace("{{title}}", 'Icon Format Comparison')
   template_html = template_html.replace("{{font_name}}", data["name"])

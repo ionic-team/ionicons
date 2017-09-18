@@ -9,7 +9,10 @@
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
   "scripts": {
-    "build": "stencil build --dev && python scripts/generate.py && node scripts/svj.js",
+    "build": "stencil build --dev && python scripts/generate.py && npm run svj && npm run png && npm run docs",
+    "svj": "node scripts/svj.js",
+    "png": "node scripts/png.js",
+    "docs": "node scripts/docs.js",
     "deploy": "np",
     "prepublishOnly": "npm run build",
     "serve": "stencil-dev-server",
@@ -18,7 +21,9 @@
   "devDependencies": {
     "@ionic/jpml": "0.0.3",
     "@stencil/core": "next",
-    "np": "2.16.0"
+    "fs-extra": "^4.0.2",
+    "np": "2.16.0",
+    "svg2png": "^4.1.1"
   },
   "keywords": [
     "ionicons",
