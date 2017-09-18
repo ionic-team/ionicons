@@ -160,7 +160,7 @@ for dirname, dirnames, filenames in os.walk(INPUT_SVG_DIR):
 
 build_hash = m.hexdigest()
 
-if build_hash == manifest_data.get('build_hash') and False:
+if build_hash == manifest_data.get('build_hash'):
   print "Source files unchanged, did not rebuild fonts"
 
 else:
