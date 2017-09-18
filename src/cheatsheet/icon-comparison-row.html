@@ -1,26 +1,42 @@
-<div class="comparison-row">
-  <div class="comparison-col">
+<tr class="comparison-row">
+  <td class="comparison-col">
     <div class="comparison-icon">
       <img src="{{src_svg}}">
     </div>
     <div>
-      Source SVG: {{name}}, {{src_svg_size}} bytes
+      Source SVG: {{name}}
     </div>
-  </div>
-  <div class="comparison-col">
+  </td>
+  <td class="comparison-col">
     <div class="comparison-icon">
       <img src="{{optimized_svg}}">
     </div>
     <div>
-      Optimized SVG: {{name}}, {{optimized_svg_size}} bytes
+      Optimized SVG: {{name}}
     </div>
-  </div>
-  <div class="comparison-col">
+  </td>
+  <td class="comparison-col">
+    <div class="comparison-icon">
+      <ion-icon name="{{name}}"></ion-icon>
+    </div>
+    <div>
+      Custom Element: &lt;ion-icon name="{{name}}"&gt;
+    </div>
+  </td>
+  <td class="comparison-col">
     <div class="comparison-icon">
       <i class="icon {{prefix}}{{name}}"></i>
     </div>
     <div>
       Icon Font: {{prefix}}{{name}}
     </div>
-  </div>
-</div>
+  </td>
+  <td class="comparison-col">
+    <div class="comparison-icon">
+      <img src="{{png_64}}">
+    </div>
+    <div>
+      PNG, 64x64: {{name}}
+    </div>
+  </td>
+</tr>

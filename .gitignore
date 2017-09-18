@@ -3,3 +3,4 @@
 *.swp
 node_modules
 dist
+tmp
