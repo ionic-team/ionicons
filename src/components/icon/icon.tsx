@@ -69,7 +69,7 @@ export class Icon {
     }
 
     // only allow alpha characters and dash
-    const invalidChars = iconName.replace(/[a-z]|-/g, '');
+    const invalidChars = iconName.replace(/[a-z]|-|\d/g, '');
     if (invalidChars !== '') {
       console.error(`invalid characters in ion-icon name: ${invalidChars}`);
       return null;
