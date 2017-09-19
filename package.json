@@ -22,7 +22,7 @@
     "start": "npm run dev"
   },
   "devDependencies": {
-    "@ionic/jpml": "0.0.3",
+    "@ionic/jpml": "0.0.4",
     "@stencil/core": "next",
     "@stencil/utils": "latest",
     "fs-extra": "^4.0.2",
