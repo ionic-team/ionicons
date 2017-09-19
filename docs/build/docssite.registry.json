@@ -1,0 +1,15 @@
+{
+  "namespace": "DocsSite",
+  "components": [
+    [
+      "LANDING-PAGE",
+      "uabply83",
+      {
+        "$": "oeqibtl5"
+      }
+    ]
+  ],
+  "loader": "docssite.js",
+  "core": "docssite/docssite.ypzmzpql.js",
+  "corePolyfilled": "docssite/docssite.e26hcszc.pf.js"
+}

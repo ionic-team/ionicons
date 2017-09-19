@@ -9,7 +9,9 @@
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
   "scripts": {
-    "build": "stencil build && python scripts/generate.py && npm run svj && npm run png",
+    "build": "npm run build-icon && python scripts/generate.py && npm run svj && npm run png",
+    "build-icon": "stencil build --config src/components/stencil.config.js",
+    "build-docs": "stencil build --prerender --config src/docs/stencil.config.js",
     "svj": "node scripts/svj.js",
     "png": "node scripts/png.js",
     "deploy": "np --any-branch",
