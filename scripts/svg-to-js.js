@@ -4,7 +4,7 @@ var jpml = require('@ionic/jpml');
 var fs = require('fs-extra');
 var path = require('path');
 
-const OUT_DIR = path.join(__dirname, '..', 'dist', 'ionicons', 'svj');
+const OUT_DIR = path.join(__dirname, '..', 'dist', 'ionicons', 'svg');
 
 fs.emptyDirSync(OUT_DIR);
 
@@ -15,7 +15,7 @@ jpml.generate({
     return path.toLowerCase().split('.').pop() === 'svg';
   },
   fileName: function(path) {
-    return path.replace('.svg', '.svj');
+    return path.replace('.svg', '.js');
   },
   key: function(path) {
     return path.replace('.svg', '');

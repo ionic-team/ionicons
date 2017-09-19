@@ -6,7 +6,7 @@ import { Component, Prop, State } from '@stencil/core';
   host: {
     theme: 'icon'
   },
-  assetsDir: 'svj'
+  assetsDir: 'svg'
 })
 export class Icon {
   mode: string;
@@ -160,7 +160,7 @@ function loadSvgContent(iconName: string, callback: {(loadedSvgContent: string):
   var scriptElm = document.createElement('script');
   scriptElm.charset = 'utf-8';
   scriptElm.async = true;
-  scriptElm.src = `${publicPath}svj/${iconName}.svj`;
+  scriptElm.src = `${publicPath}svg/${iconName}.js`;
 
   // create a fallback timeout if something goes wrong
   var tmrId = setTimeout(onScriptComplete, 120000);
