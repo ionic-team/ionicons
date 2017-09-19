@@ -10,7 +10,7 @@
   "types": "dist/collection/index.d.ts",
   "scripts": {
     "build": "npm run build.icon && python scripts/generate.py && npm run svj && npm run png",
-    "build.icon": "stencil build --config src/components/stencil.config.js",
+    "build.icon": "stencil build",
     "build.docs": "stencil build --prerender --config src/docs/stencil.config.js",
     "dev.docs": "sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"httpster -d docs/\" ",
     "svj": "node scripts/svj.js",
