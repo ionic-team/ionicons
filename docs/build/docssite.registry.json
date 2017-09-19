@@ -2,14 +2,36 @@
   "namespace": "DocsSite",
   "components": [
     [
-      "LANDING-PAGE",
-      "uabply83",
+      "ICON-SEARCH",
+      "icon-search",
       {
-        "$": "oeqibtl5"
+        "$": "icon-search"
+      },
+      0,
+      [
+        [
+          "focusin",
+          "focusin"
+        ],
+        [
+          "focusout",
+          "focusout"
+        ],
+        [
+          "keyup",
+          "keyup"
+        ]
+      ]
+    ],
+    [
+      "LANDING-PAGE",
+      "landing-page",
+      {
+        "$": "landing-page"
       }
     ]
   ],
   "loader": "docssite.js",
-  "core": "docssite/docssite.ypzmzpql.js",
-  "corePolyfilled": "docssite/docssite.e26hcszc.pf.js"
+  "core": "docssite/docssite.core.js",
+  "corePolyfilled": "docssite/docssite.core.pf.js"
 }

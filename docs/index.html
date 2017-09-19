@@ -1,19 +1,40 @@
-<!DOCTYPE html><html dir="ltr" lang="en"><head><style data-styles="">landing-page.💎{visibility:inherit;}</style> <meta charset="utf-8"> <title>Ionicons: The premium icon font for Ionic Framework</title> <meta name="description" content="Ionicons is an open-sourced and MIT licensed icon pack."> <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"> <meta name="format-detection" content="telephone=no"> <meta name="msapplication-tap-highlight" content="no"> <meta name="theme-color" content="#16161d"> <link rel="manifest" href="/manifest.json"> <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico"> 
-<meta name="prerendered"><link rel="canonical" href="/"></head>
-<body> <landing-page data-ssrv="0" class="💎"><div data-ssrc="0.0"><h1 data-ssrc="0.0"><!--s.0.0-->The premium icon font for <!--/--> <a href="http://ionicframework.com/" data-ssrc="0.1"><!--s.0.0-->Ionic Framework<!--/--> </a><!--s.0.2-->.<!--/--> </h1><h2 data-ssrc="0.1"><!--s.0.0-->100% free and open source. MIT Licensed.<!--/--> </h2><div data-ssrc="0.2"><span class="twitter-share" data-ssrc="0.0"><a href="https://twitter.com/share" data-via="ionicframework" data-hashtags="icons,webdev,mobile" data-related="benjsperry,maxlynch,adamdbradley,drifty" class="twitter-share-button" data-ssrc="0.0"><!--s.0.0-->Tweet<!--/--> </a></span><span class="twitter-follow" data-ssrc="0.1"><a href="https://twitter.com/ionicframework" class="twitter-follow-button" data-ssrc="0.0"><!--s.0.0-->Follow @ionicframework<!--/--> </a></span><span class="github-star" data-ssrc="0.2"><iframe src="http://ghbtns.com/github-btn.html?user=ionic-team&amp;repo=ionicons&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20" data-ssrc="0.0."></iframe></span></div><div class="search" data-ssrc="0.3"><input id="search" type="search" placeholder="Search" data-ssrc="0.0."></div></div></landing-page> <script>
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ionicons: The premium icon pack for Ionic Framework</title>
+  <meta name="description" content="Ionicons is an open-sourced and MIT licensed icon pack." />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="theme-color" content="#16161d">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
+  <script src="/build/docssite.js"></script>
+</head>
+<body>
+
+  <landing-page></landing-page>
+
+  <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-44023830-2', 'ionicons.com');
     ga('send', 'pageview');
-  </script> <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('service worker registered', reg))
-          .catch(err => console.log('service worker error', err));
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      // auto-unregister service worker during dev mode
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister().then(() => {
+          location.reload(true);
+        });
       });
     }
-  </script> <script>/*! Built with http://stenciljs.com */
-!function(e,t,s,i,r,c,o,n,a){for((e[s]=e[s]||{}).components=o=o||[],(n=t.createElement("style")).setAttribute("data-styles",""),n.innerHTML=(o.map(function(e){return e[0]}).join(",")+"{visibility:hidden}.💎{visibility:inherit}").toLowerCase(),t.head.insertBefore(n,t.head.firstChild),s=s.toLowerCase(),a=(n=t.scripts).length-1;0<=a;a--)if(n[a].src&&n[a].src.split("/").pop()===s+".js"){i=n[a].src.replace(s+".js",s+"/");break}(n=t.createElement("script")).src=i+(e.customElements&&e.fetch?r:"docssite.e26hcszc.pf.js"),n.setAttribute("data-path",i),n.setAttribute("data-core",r),t.head.appendChild(n)}(window,document,"DocsSite","/build/docssite/","docssite.ypzmzpql.js",0,[["LANDING-PAGE","uabply83",{$:"oeqibtl5"}]]);</script></body></html>
+  </script>
+
+</body>
+</html>

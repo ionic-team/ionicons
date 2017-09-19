@@ -24,11 +24,11 @@ const fileManifest = [
   },
   {
     "url": "build/docssite.js",
-    "revision": "d794e6a83ac34908f56810310244ea5a"
+    "revision": "2d4e3ecb1ce373bbbf162b9dfecd675f"
   },
   {
     "url": "build/docssite.registry.json",
-    "revision": "7dbfe23e8ad014ed68ee82173ce65f8d"
+    "revision": "d115642fd0adf6504d4a8bd5df960bde"
   },
   {
     "url": "build/docssite/docssite.e26hcszc.pf.js",
@@ -39,12 +39,20 @@ const fileManifest = [
     "revision": "279da5e7fc84d233c5c51a86cf93b127"
   },
   {
+    "url": "build/docssite/eheipi0c.css",
+    "revision": "b4afbb64f1eb64168808392ffb5debc5"
+  },
+  {
     "url": "build/docssite/oeqibtl5.css",
     "revision": "66591f2b35f95ab0aa69523ab9a72281"
   },
   {
-    "url": "build/docssite/uabply83.js",
-    "revision": "a2068d23ef1e39c6af82fbb38eacfd89"
+    "url": "build/docssite/pzcxpt7v.js",
+    "revision": "adb01506d4777067b84868f3ad4ac381"
+  },
+  {
+    "url": "build/docssite/qeg9454v.js",
+    "revision": "323c4606031c3e1e7a41591d9725d256"
   },
   {
     "url": "cheatsheet.html",
@@ -56,7 +64,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "3d61dd22a9eae97a13285cead1009cbb"
+    "revision": "631a02d7c865f29231ea4968fbfeb86d"
   },
   {
     "url": "mode-cheatsheet.html",

@@ -31,9 +31,7 @@ export class LandingPage {
         </span>
       </div>
 
-      <div class="search">
-        <input id="search" type="search" placeholder="Search"/>
-      </div>
+      <icon-search></icon-search>
 
     </div>
   }
