@@ -1,11 +1,16 @@
 console.log('Build JPML files');
 
 var jpml = require('@ionic/jpml');
+var fs = require('fs-extra');
+var path = require('path');
 
+const OUT_DIR = path.join(__dirname, '..', 'dist', 'ionicons', 'svj');
+
+fs.emptyDirSync(OUT_DIR);
 
 jpml.generate({
   include: ['dist/svg/'],
-  outDir: 'src/components/icon/svj/',
+  outDir: OUT_DIR,
   filter: function(path) {
     return path.toLowerCase().split('.').pop() === 'svg';
   },
