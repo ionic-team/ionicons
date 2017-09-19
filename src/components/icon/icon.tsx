@@ -9,7 +9,7 @@ import { Component, Prop, State } from '@stencil/core';
   assetsDir: 'svg'
 })
 export class Icon {
-  mode: string;
+  @Prop({ context: 'mode' }) mode: string;
 
   /**
    * @input {string} Specifies the label to use for accessibility. Defaults to the icon name.
