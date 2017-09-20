@@ -26,6 +26,8 @@ jpml.generate({
     return path.replace('.svg', '');
   },
   wrapper: function(content, key) {
+    content = content.replace('<svg ', '<svg width="1em" height="1em" ');
+
     return "loadIonicon('" + content.replace(/'/g, "\\\'") + "','" + key + "');"
   }
 });
