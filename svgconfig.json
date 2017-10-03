@@ -1,0 +1,17 @@
+{
+    "mode": {
+        "symbol": {
+            "dest": "./symbol",
+            "sprite": "sprite.symbol.svg",
+            "bust": false,
+            "example": false
+        }
+    },
+    "svg": {
+        "xmlDeclaration": false,
+        "doctypeDeclaration": false,
+        "namespaceIDs": false,
+        "namespaceClassnames": false,
+        "dimensionAttributes": false
+    }
+}
