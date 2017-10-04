@@ -7,6 +7,20 @@ Build icons needs to be prefixed with `build-` to avoid conflicts with existing 
 * Add any new icons to the `src/` folder.
 * Move any unused icons to the `svg/` folder.
 
+## SVG Symbol Generation
+
+To add an SVG to the symbol sprite sheet, simply put the SVG file in the src folder then:
+
+1) npm install
+2) npm run svg
+
+This will generate symbol/sprite.symbol.svg which must be checked in. NodeStore will copy this file from the symbol folder into its public/svg folder.
+
+Going forward, we are moving away from ioncons fonts and are instead using the svg sprite sheet, so none of the below instructions should apply.
+
+
+
+
 
 ## Updating Documentation
 
