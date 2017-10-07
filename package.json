@@ -1,11 +1,8 @@
 {
   "name": "ionicons",
-  "version": "5.5.1",
+  "version": "5.5.2",
   "description": "Build.com Ionicons",
   "main": "index.html",
-  "scripts": {
-    "svg": "svg-sprite --config svgconfig.json src/*.svg"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/buildcom/ionicons.git"
@@ -18,9 +15,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/buildcom/ionicons/issues"
-  },
-  "devDependencies": {
-    "svg-sprite": "1.3.7"
   },
   "homepage": "https://github.com/buildcom/ionicons#readme"
 }
