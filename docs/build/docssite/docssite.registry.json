@@ -1,0 +1,64 @@
+{
+  "namespace": "DocsSite",
+  "components": [
+    [
+      "footer-bar",
+      [
+        "o6eid29s",
+        "hixhjesy"
+      ],
+      1,
+      0,
+      2
+    ],
+    [
+      "header-bar",
+      [
+        "xxbxrciy",
+        "q9s6sxoc"
+      ],
+      1,
+      0,
+      2
+    ],
+    [
+      "icon-search",
+      [
+        "wa7ufsfs",
+        "153lcfgm"
+      ],
+      1,
+      [
+        [
+          "data",
+          5
+        ],
+        [
+          "search",
+          5
+        ]
+      ],
+      2,
+      0,
+      [
+        [
+          "keyup",
+          "keyup"
+        ]
+      ]
+    ],
+    [
+      "landing-page",
+      [
+        "77eqc9v8",
+        "ntaisy2x"
+      ],
+      1,
+      0,
+      2
+    ]
+  ],
+  "core": "docssite.5tr7rp1t.js",
+  "coreSsr": "docssite.io9mgyrg.js",
+  "corePolyfilled": "docssite.epxolfvl.js"
+}

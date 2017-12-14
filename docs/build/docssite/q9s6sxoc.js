@@ -1,0 +1,4 @@
+/*! Built with http://stenciljs.com (es5) */
+
+DocsSite.loadStyles("header-bar","header-bar{display:block;font-family:\"Helvetica Neue\",Helvetica,Arial,sans-serif}header{display:flex;width:100%;justify-content:space-between}nav{display:block}a{margin:5px;color:gray;text-decoration:none}a:hover{text-decoration:underline}\nheader-bar.hydrated{visibility:inherit}");
+DocsSite.loadComponents("q9s6sxoc",function(n,o,e,r){"use strict";var t=function(){function n(){}return n.prototype.render=function(){return o("header",null,o("div",null,o("a",{href:"/"},"Ionicons")),o("nav",null,o("a",{href:"https://github.com/ionic-team/ionicons"},"Github"),o("a",{href:"https://ionicframework.com/"},"Ionic")))},n}();n["header-bar"]=t},["header-bar",0,{}]);;

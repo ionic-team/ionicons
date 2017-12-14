@@ -1,0 +1,25 @@
+
+header-bar {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav {
+  display: block;
+}
+
+a {
+  margin: 5px;
+  color: gray;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
