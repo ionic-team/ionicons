@@ -4,6 +4,7 @@
       "tag": "ion-icon",
       "componentClass": "Icon",
       "componentPath": "icon/icon.js",
+      "styles": {},
       "assetPaths": [
         "icon/svg"
       ],
@@ -54,7 +55,7 @@
   ],
   "compiler": {
     "name": "@stencil/core",
-    "version": "0.0.8-5",
-    "typescriptVersion": "2.6.1"
+    "version": "0.0.9-1",
+    "typescriptVersion": "2.6.2"
   }
 }

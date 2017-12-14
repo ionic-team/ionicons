@@ -1,1 +1,1 @@
-loadIonicon('<svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M128 320l128-128 128 128z"/></svg>','md-arrow-dropup');
+loadIonicon('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M128 320l128-128 128 128z"/></svg>','md-arrow-dropup');
