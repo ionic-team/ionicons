@@ -6,4 +6,8 @@ ion-icon {
     height: 1em;
     width: 1em;
   }
+
+  .icon-inner > svg {
+    fill: currentColor;
+  }
 }
