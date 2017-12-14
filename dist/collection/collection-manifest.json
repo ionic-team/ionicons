@@ -1,0 +1,60 @@
+{
+  "components": [
+    {
+      "tag": "ion-icon",
+      "componentClass": "Icon",
+      "componentPath": "icon/icon.js",
+      "assetPaths": [
+        "icon/svg"
+      ],
+      "props": [
+        {
+          "name": "ariaLabel",
+          "type": "string"
+        },
+        {
+          "name": "ios",
+          "type": "string"
+        },
+        {
+          "name": "md",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "states": [
+        {
+          "name": "svgContent"
+        }
+      ],
+      "context": [
+        {
+          "name": "mode",
+          "id": "mode"
+        },
+        {
+          "name": "isServer",
+          "id": "isServer"
+        }
+      ],
+      "host": {
+        "theme": "icon"
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "components": [
+        "ion-icon"
+      ]
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.0.8-5",
+    "typescriptVersion": "2.6.1"
+  }
+}

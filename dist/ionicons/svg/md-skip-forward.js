@@ -1,0 +1,1 @@
+loadIonicon('<svg width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 64v384l277.3-192L64 64zM384 64h64v384h-64z"/></svg>','md-skip-forward');
