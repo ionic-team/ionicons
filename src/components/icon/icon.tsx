@@ -6,7 +6,11 @@ import { Component, Prop, State } from '@stencil/core';
   host: {
     theme: 'icon'
   },
-  assetsDir: 'svg'
+  assetsDir: 'svg',
+  styleUrls: {
+    ios: 'icon.ios.scss',
+    md: 'icon.md.scss'
+  }
 })
 export class Icon {
   @Prop({ context: 'mode' }) mode: string;
