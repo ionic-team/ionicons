@@ -1,4 +1,3 @@
-import { } from '@stencil/core';
 export class Icon {
     constructor() {
         /**
