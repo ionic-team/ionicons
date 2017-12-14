@@ -1,4 +1,0 @@
-/*! Built with http://stenciljs.com (es5) */
-
-DocsSite.loadStyles("landing-page","main{font-family:\"Helvetica Neue\",Helvetica,Arial,sans-serif;text-align:center;margin:0 auto;max-width:800px}h1{font-size:24px}h3{font-size:16px;font-weight:400;color:gray}\nlanding-page.hydrated{visibility:inherit}");
-DocsSite.loadComponents("ntaisy2x",function(n,e,o,i){"use strict";var r=function(){function n(){}return n.prototype.render=function(){return e("main",null,e("header-bar",null),e("div",null,e("h1",null,"Beautifully crafted open source icons."),e("h3",null,"Premium designed icons for use in web, iOS, and Android applications. Load as a web component, SVG, PNG or font icon. 100% free and open source.")),e("icon-search",null),e("footer-bar",null))},n}();n["landing-page"]=r},["landing-page",0,{}]);;
