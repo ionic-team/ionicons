@@ -7,38 +7,33 @@ import { Component, Prop, State } from '@stencil/core';
     theme: 'icon'
   },
   assetsDir: 'svg',
-  styleUrls: {
-    ios: 'icon.ios.scss',
-    md: 'icon.md.scss'
-  }
+  styleUrl: 'icon.scss'
 })
 export class Icon {
   @Prop({ context: 'mode' }) mode: string;
 
   /**
-   * @input {string} Specifies the label to use for accessibility. Defaults to the icon name.
+   * Specifies the label to use for accessibility. Defaults to the icon name.
    */
-  @Prop() ariaLabel: string = '';
+  @Prop() ariaLabel = '';
 
   /**
-   * @input {string} Specifies which icon to use. The appropriate icon will be used based on the mode.
+   * Specifies which icon to use on `ios` mode.
+   */
+  @Prop() ios = '';
+
+  /**
+   * Specifies which icon to use on `md` mode.
+   */
+  @Prop() md = '';
+
+  /**
+   * Specifies which icon to use. The appropriate icon will be used based on the mode.
    * For more information, see [Ionicons](/docs/ionicons/).
    */
-  @Prop() name: string = '';
-
-  /**
-   * @input {string} Specifies which icon to use on `ios` mode.
-   */
-  @Prop() ios: string = '';
-
-  /**
-   * @input {string} Specifies which icon to use on `md` mode.
-   */
-  @Prop() md: string = '';
-
+  @Prop() name = '';
 
   @Prop({ context: 'isServer'}) private isServer: boolean;
-
 
   @State() private svgContent: string = null;
 

@@ -1,13 +1,14 @@
 ion-icon {
   display: inline-block;
   font-size: inherit;
+}
 
-  .icon-inner {
-    height: 1em;
-    width: 1em;
-  }
+ion-icon .icon-inner {
+  height: 1em;
+  width: 1em;
+}
 
-  .icon-inner > svg {
-    fill: currentColor;
-  }
+ion-icon svg {
+  fill: currentColor;
+  stroke: currentColor;
 }

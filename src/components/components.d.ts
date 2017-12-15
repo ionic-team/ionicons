@@ -30,9 +30,9 @@ declare global {
   namespace JSXElements {
     export interface IonIconAttributes extends HTMLAttributes {
       ariaLabel?: string;
-      name?: string;
       ios?: string;
       md?: string;
+      name?: string;
     }
   }
 }
