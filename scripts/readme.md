@@ -25,14 +25,10 @@ This repo already comes with all the files built and ready to go, but can also b
 
     https://github.com/google/woff2
 
-3) Install [Sass](http://sass-lang.com/)
+3) Add or subtract files from the `src/` folder you'd like to be apart of the build.
 
-    $ gem install sass
+4) Modify any settings in the `scripts/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
 
-4) Add or subtract files from the `src/` folder you'd like to be apart of the build.
-
-5) Modify any settings in the `scripts/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
-
-6) Run the build command:
+5) Run the build command:
 
     npm run build

@@ -5,15 +5,16 @@
   "files": [
     "dist/"
   ],
-  "browser": "dist/ionicons.js",
-  "main": "dist/collection/index.js",
-  "types": "dist/collection/index.d.ts",
+  "main": "dist/ionicons.js",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.docs && npm run build.data",
+    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.docs && npm run build.data && npm run icon-copy",
     "build.icon": "stencil build",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
+    "build.css": "node scripts/build-css.js",
+    "icon-copy": "node scripts/copy-svg-to-dist.js",
     "mode.comparison": "node scripts/mode-comparison.js",
     "dev": "npm run build.data && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "generate": "python scripts/generate.py",
@@ -23,10 +24,11 @@
   },
   "devDependencies": {
     "@ionic/jpml": "latest",
-    "@stencil/core": "0.0.9-1",
+    "@stencil/core": "0.0.9-4",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "fs-extra": "4.0.2",
+    "node-sass": "4.7.2",
     "np": "2.17.0",
     "svg2png": "4.1.1",
     "svgo": "1.0.3"

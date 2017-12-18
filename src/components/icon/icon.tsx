@@ -33,6 +33,8 @@ export class Icon {
    */
   @Prop() name = '';
 
+  @Prop({ context: 'publicPath'}) private publicPath: string;
+
   @Prop({ context: 'isServer'}) private isServer: boolean;
 
   @State() private svgContent: string = null;
@@ -124,7 +126,7 @@ export class Icon {
 
     // haven't loaded this svg yet
     // start the request
-    loadSvgContent(iconName, loadedSvgContent => {
+    loadSvgContent(iconName, this.publicPath, loadedSvgContent => {
       // we're finished loading the svg content!
       // set to this.svgContent so we do another render
       this.svgContent = loadedSvgContent;
@@ -137,7 +139,7 @@ export class Icon {
 }
 
 
-function loadSvgContent(iconName: string, callback: {(loadedSvgContent: string): void}) {
+function loadSvgContent(iconName: string, publicPath: string, callback: {(loadedSvgContent: string): void}) {
   // static since all IonIcons use this same function and pointing at global/shared data
   // passed in callback will have instance info
 

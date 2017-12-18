@@ -3,8 +3,7 @@ exports.config = {
   generateDistribution: true,
   generateWWW: false,
   distDir: 'dist/',
-  srcDir: 'src/components/',
-  emptyDist: false
+  srcDir: 'src/components/'
 };
 
 exports.devServer = {

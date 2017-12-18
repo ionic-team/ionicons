@@ -5,7 +5,6 @@ var fs = require('fs-extra');
 var path = require('path');
 
 const OUT_DIR = [
-  path.join(__dirname, '..', 'dist', 'ionicons', 'svg'),
   path.join(__dirname, '..', 'dist', 'collection', 'icon', 'svg')
 ];
 
