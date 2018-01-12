@@ -41,32 +41,21 @@ export class Icon {
 
 
   private get iconName() {
-    // if no name was passed set iconName to null
-    if (!this.name) {
-      return null;
-    }
-
     let iconName = this.name.toLowerCase();
 
     // default to "md" if somehow the mode wasn't set
     const mode = this.mode || 'md';
 
-    if (!(/^md-|^ios-|^logo-/.test(iconName))) {
-      // this does not have one of the defaults
-      // so lets auto add in the mode prefix for them
-      iconName = mode + '-' + iconName;
-
-    } else if (this.ios && mode === 'ios') {
-      // if an icon was passed in using the ios or md attributes
-      // set the iconName to whatever was passed in
-      // when we're also on that mode
-      // basically, use the ios attribute when you're on ios
-      iconName = this.ios;
-
+    // if an icon was passed in using the ios or md attributes
+    // set the iconName to whatever was passed in
+    if (this.ios && mode === 'ios') {
+      iconName = this.ios.toLowerCase();
     } else if (this.md && mode === 'md') {
-      // use the md attribute when you're in md mode
-      // and the md attribute has been set
-      iconName = this.md;
+      iconName = this.md.toLowerCase();
+    // this does not have one of the defaults
+    // so lets auto add in the mode prefix for them
+    } else if (iconName && !(/^md-|^ios-|^logo-/.test(iconName))) {
+      iconName = mode + '-' + iconName;
     }
 
     // only allow alpha characters and dash
