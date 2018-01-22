@@ -7,7 +7,7 @@ import { Component, Prop, State } from '@stencil/core';
     theme: 'icon'
   },
   assetsDir: 'svg',
-  styleUrl: 'icon.scss'
+  styleUrl: 'icon.css'
 })
 export class Icon {
   @Prop({ context: 'mode' }) mode: string;
