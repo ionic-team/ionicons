@@ -12,10 +12,10 @@ SCRIPTS_PATH = os.path.dirname(os.path.abspath(__file__))
 ROOT_PATH = os.path.join(SCRIPTS_PATH, '..')
 SRC_PATH = os.path.join(ROOT_PATH, 'src')
 DIST_PATH = os.path.join(ROOT_PATH, 'dist')
-DOCS_PATH = os.path.join(ROOT_PATH, 'docs')
 INPUT_SVG_DIR = os.path.join(SRC_PATH, 'svg')
 OUTPUT_SVG_DIR = os.path.join(DIST_PATH, 'svg')
 DATA_PATH = os.path.join(DIST_PATH, 'data')
+TMP_PATH = os.path.join(ROOT_PATH, 'tmp')
 FONTS_FOLDER_PATH = os.path.join(DIST_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(DIST_PATH, 'css')
 INPUT_SCSS_FOLDER_PATH = os.path.join(SRC_PATH, 'scss')
@@ -204,49 +204,10 @@ def generate_scss(data):
 def generate_cheatsheet(data):
   print "Generate Cheatsheet"
 
-  cheatsheet_file_path = os.path.join(DOCS_PATH, 'cheatsheet.html')
-  template_path = os.path.join(SRC_PATH, 'cheatsheet', 'template.html')
-  icon_row_path = os.path.join(SRC_PATH, 'cheatsheet', 'icon-row.html')
+  if not os.path.exists(TMP_PATH):
+    os.makedirs(TMP_PATH)
 
-  f = codecs.open(template_path, 'r', 'utf-8')
-  template_html = f.read()
-  f.close()
-
-  f = codecs.open(icon_row_path, 'r', 'utf-8')
-  icon_row_template = f.read()
-  f.close()
-
-  content = []
-
-  for ionicon in data['icons']:
-    css_code = ionicon['code'].replace('0x', '\\')
-    escaped_html_code = ionicon['code'].replace('0x', '&amp;#x') + ';'
-    html_code = ionicon['code'].replace('0x', '&#x') + ';'
-    item_row = icon_row_template
-
-    item_row = item_row.replace('{{name}}', ionicon['name'])
-    item_row = item_row.replace('{{prefix}}', data['prefix'])
-    item_row = item_row.replace('{{css_code}}', css_code)
-    item_row = item_row.replace('{{escaped_html_code}}', escaped_html_code)
-    item_row = item_row.replace('{{html_code}}', html_code)
-
-    content.append(item_row)
-
-  template_html = template_html.replace("{{title}}", 'Cheatsheet')
-  template_html = template_html.replace("{{font_name}}", data["name"])
-  template_html = template_html.replace("{{font_version}}", data["version"])
-  template_html = template_html.replace("{{icon_count}}", str(len(data["icons"])) )
-  template_html = template_html.replace("{{content}}", '\n'.join(content) )
-
-  f = codecs.open(cheatsheet_file_path, 'w', 'utf-8')
-  f.write(template_html)
-  f.close()
-
-
-def generate_cheatsheet(data):
-  print "Generate Cheatsheet"
-
-  cheatsheet_file_path = os.path.join(DOCS_PATH, 'cheatsheet.html')
+  cheatsheet_file_path = os.path.join(TMP_PATH, 'cheatsheet.html')
   template_path = os.path.join(SRC_PATH, 'cheatsheet', 'template.html')
   icon_row_path = os.path.join(SRC_PATH, 'cheatsheet', 'icon-row.html')
 
