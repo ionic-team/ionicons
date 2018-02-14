@@ -5,12 +5,21 @@
  */
 
 
+declare global {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+  }
+}
+
+
+
 import {
   FooterBar as FooterBar
 } from './components/footer-bar/footer-bar';
 
 declare global {
-  interface HTMLFooterBarElement extends FooterBar, HTMLElement {
+  interface HTMLFooterBarElement extends FooterBar, HTMLStencilElement {
   }
   var HTMLFooterBarElement: {
     prototype: HTMLFooterBarElement;
@@ -40,7 +49,7 @@ import {
 } from './components/header-bar/header-bar';
 
 declare global {
-  interface HTMLHeaderBarElement extends HeaderBar, HTMLElement {
+  interface HTMLHeaderBarElement extends HeaderBar, HTMLStencilElement {
   }
   var HTMLHeaderBarElement: {
     prototype: HTMLHeaderBarElement;
@@ -70,7 +79,7 @@ import {
 } from './components/icon-search/icon-search';
 
 declare global {
-  interface HTMLIconSearchElement extends IconSearch, HTMLElement {
+  interface HTMLIconSearchElement extends IconSearch, HTMLStencilElement {
   }
   var HTMLIconSearchElement: {
     prototype: HTMLIconSearchElement;
@@ -100,7 +109,7 @@ import {
 } from './components/landing-page/landing-page';
 
 declare global {
-  interface HTMLLandingPageElement extends LandingPage, HTMLElement {
+  interface HTMLLandingPageElement extends LandingPage, HTMLStencilElement {
   }
   var HTMLLandingPageElement: {
     prototype: HTMLLandingPageElement;
@@ -124,3 +133,4 @@ declare global {
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }

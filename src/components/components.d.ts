@@ -5,12 +5,21 @@
  */
 
 
+declare global {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+  }
+}
+
+
+
 import {
   Icon as IonIcon
 } from './icon/icon';
 
 declare global {
-  interface HTMLIonIconElement extends IonIcon, HTMLElement {
+  interface HTMLIonIconElement extends IonIcon, HTMLStencilElement {
   }
   var HTMLIonIconElement: {
     prototype: HTMLIonIconElement;
@@ -37,3 +46,4 @@ declare global {
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }

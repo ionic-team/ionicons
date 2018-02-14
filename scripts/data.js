@@ -7,7 +7,6 @@ const SRC_SVG_DIR = path.join(SRC_DIR, 'svg');
 const SRC_JSON = path.join(SRC_DIR, 'data.json');
 const DST_DIR = path.join(ROOT_DIR, 'dist');
 const DST_JSON = path.join(DST_DIR, 'ionicons/data.json');
-const DOCS_JSON = path.join(ROOT_DIR, 'docs/data.json');
 
 
 console.log('checking icon data: ' + SRC_JSON);
@@ -42,4 +41,3 @@ srcData.icons.forEach(i => {
 
 let content = JSON.stringify(srcData);
 fs.writeFileSync(DST_JSON, content);
-fs.writeFileSync(DOCS_JSON, content);
