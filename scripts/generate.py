@@ -15,7 +15,6 @@ DIST_PATH = os.path.join(ROOT_PATH, 'dist')
 INPUT_SVG_DIR = os.path.join(SRC_PATH, 'svg')
 OUTPUT_SVG_DIR = os.path.join(DIST_PATH, 'svg')
 DATA_PATH = os.path.join(DIST_PATH, 'data')
-TMP_PATH = os.path.join(ROOT_PATH, 'tmp')
 FONTS_FOLDER_PATH = os.path.join(DIST_PATH, 'fonts')
 CSS_FOLDER_PATH = os.path.join(DIST_PATH, 'css')
 INPUT_SCSS_FOLDER_PATH = os.path.join(SRC_PATH, 'scss')
@@ -204,10 +203,7 @@ def generate_scss(data):
 def generate_cheatsheet(data):
   print "Generate Cheatsheet"
 
-  if not os.path.exists(TMP_PATH):
-    os.makedirs(TMP_PATH)
-
-  cheatsheet_file_path = os.path.join(TMP_PATH, 'cheatsheet.html')
+  cheatsheet_file_path = os.path.join(DIST_PATH, 'cheatsheet.html')
   template_path = os.path.join(SRC_PATH, 'cheatsheet', 'template.html')
   icon_row_path = os.path.join(SRC_PATH, 'cheatsheet', 'icon-row.html')
 
