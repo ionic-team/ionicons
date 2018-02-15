@@ -10,7 +10,20 @@ import { Component, Prop, State } from '@stencil/core';
   styleUrl: 'icon.css'
 })
 export class Icon {
+  @State() private svgContent: string = null;
+
+  @Prop({ context: 'isServer'}) private isServer: boolean;
+
+  @Prop({ context: 'publicPath'}) private publicPath: string;
+
   @Prop({ context: 'mode' }) mode: string;
+
+  /**
+   * The color to use from your Sass `$colors` map.
+   * Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`.
+   * For more information, see [Theming your App](/docs/theming/theming-your-app).
+   */
+  @Prop() color: string;
 
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -33,11 +46,11 @@ export class Icon {
    */
   @Prop() name = '';
 
-  @Prop({ context: 'publicPath'}) private publicPath: string;
-
-  @Prop({ context: 'isServer'}) private isServer: boolean;
-
-  @State() private svgContent: string = null;
+  /**
+   * The size of the icon.
+   * Available options are: `"small"` and `"large"`.
+   */
+  @Prop() size: string;
 
 
   private get iconName() {
@@ -82,15 +95,24 @@ export class Icon {
       // come up with the label based on the icon name
       const iconName = this.iconName;
       if (iconName) {
-        attrs['aria-label'] = iconName
-                                .replace('ios-', '')
-                                .replace('md-', '')
-                                .replace('-outline', '')
-                                .replace(/\-/g, ' ');
+        attrs['aria-label'] =
+          iconName
+            .replace('ios-', '')
+            .replace('md-', '')
+            .replace('-outline', '')
+            .replace(/\-/g, ' ');
       }
     }
 
-    return attrs;
+    const iconClasses = {};
+    if (this.size) {
+      iconClasses[`icon-${this.size}`] = true;
+    }
+
+    return {
+      ...attrs,
+      class: iconClasses
+    };
   }
 
 
