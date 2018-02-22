@@ -3,7 +3,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'header-bar',
-  styleUrl: 'header-bar.scss',
+  styleUrl: 'header-bar.css',
   scoped: true
 })
 export class HeaderBar {

@@ -3,7 +3,7 @@ import { Component, Listen, State } from '@stencil/core';
 
 @Component({
   tag: 'icon-search',
-  styleUrl: 'icon-search.scss',
+  styleUrl: 'icon-search.css',
   scoped: true
 })
 export class LandingPage {

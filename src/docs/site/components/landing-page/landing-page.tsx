@@ -3,7 +3,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'landing-page',
-  styleUrl: 'landing-page.scss',
+  styleUrl: 'landing-page.css',
   scoped: true
 })
 export class LandingPage {
