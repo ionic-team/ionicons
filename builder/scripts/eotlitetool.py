@@ -453,7 +453,7 @@ def main():
     for f in args:
         data = readfont(f)
         if len(data) == 0:
-            print 'Error reading %s' % f
+            print('Error reading %s' % f)
         else:
             eot = eotname(f)
             header = make_eot_header(data)
