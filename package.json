@@ -20,7 +20,7 @@
     "generate": "python scripts/generate.py",
     "svg-to-js": "node scripts/svg-to-js.js",
     "png": "node scripts/png.js",
-    "deploy": "npm run build && np --any-branch"
+    "release": "npm run build && np --any-branch"
   },
   "devDependencies": {
     "@ionic/jpml": "latest",
