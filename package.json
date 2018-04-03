@@ -18,6 +18,7 @@
     "mode.comparison": "node scripts/mode-comparison.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "generate": "python scripts/generate.py",
+    "optimize": "svgo --config=.svgo.yml src/svg",
     "svg-to-js": "node scripts/svg-to-js.js",
     "png": "node scripts/png.js",
     "deploy": "npm run build && np --any-branch"
