@@ -12,6 +12,7 @@ SCRIPTS_PATH = os.path.dirname(os.path.abspath(__file__))
 ROOT_PATH = os.path.join(SCRIPTS_PATH, '..')
 SRC_PATH = os.path.join(ROOT_PATH, 'src')
 DIST_PATH = os.path.join(ROOT_PATH, 'dist')
+SVGO_CONFIG_PATH = os.path.join(ROOT_PATH, '.svgo.yml')
 INPUT_SVG_DIR = os.path.join(SRC_PATH, 'svg')
 OUTPUT_SVG_DIR = os.path.join(DIST_PATH, 'svg')
 DATA_PATH = os.path.join(DIST_PATH, 'data')
@@ -88,7 +89,7 @@ def generate_svg_files():
   if not os.path.exists(OUTPUT_SVG_DIR):
     os.makedirs(OUTPUT_SVG_DIR)
 
-  cmd = 'svgo -f %s -o %s' % (INPUT_SVG_DIR, OUTPUT_SVG_DIR)
+  cmd = 'svgo -f %s -o %s --config=%s' % (INPUT_SVG_DIR, OUTPUT_SVG_DIR, SVGO_CONFIG_PATH)
   cwd = os.path.join(os.path.dirname(__file__), '../node_modules/svgo/bin')
   subprocess.call([cmd], shell=True, cwd=cwd)
 
