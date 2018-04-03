@@ -3,6 +3,9 @@
  * It contains typing information for all components that exist in this project
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
+
+import '@stencil/core';
+
 declare global {
   namespace JSX {
     interface Element {}
@@ -13,127 +16,117 @@ declare global {
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
     componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
   }
 
   interface HTMLAttributes {}
 }
 
 
-import {
-  FooterBar as FooterBar
-} from './components/footer-bar/footer-bar';
-
 declare global {
-  interface HTMLFooterBarElement extends FooterBar, HTMLStencilElement {
+  interface HTMLFooterBarElement extends HTMLStencilElement {
+
   }
   var HTMLFooterBarElement: {
     prototype: HTMLFooterBarElement;
     new (): HTMLFooterBarElement;
   };
   interface HTMLElementTagNameMap {
-    "footer-bar": HTMLFooterBarElement;
+    'footer-bar': HTMLFooterBarElement;
   }
   interface ElementTagNameMap {
-    "footer-bar": HTMLFooterBarElement;
+    'footer-bar': HTMLFooterBarElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "footer-bar": JSXElements.FooterBarAttributes;
+      'footer-bar': JSXElements.FooterBarAttributes;
     }
   }
   namespace JSXElements {
     export interface FooterBarAttributes extends HTMLAttributes {
-      
+
     }
   }
 }
 
 
-import {
-  HeaderBar as HeaderBar
-} from './components/header-bar/header-bar';
-
 declare global {
-  interface HTMLHeaderBarElement extends HeaderBar, HTMLStencilElement {
+  interface HTMLHeaderBarElement extends HTMLStencilElement {
+
   }
   var HTMLHeaderBarElement: {
     prototype: HTMLHeaderBarElement;
     new (): HTMLHeaderBarElement;
   };
   interface HTMLElementTagNameMap {
-    "header-bar": HTMLHeaderBarElement;
+    'header-bar': HTMLHeaderBarElement;
   }
   interface ElementTagNameMap {
-    "header-bar": HTMLHeaderBarElement;
+    'header-bar': HTMLHeaderBarElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "header-bar": JSXElements.HeaderBarAttributes;
+      'header-bar': JSXElements.HeaderBarAttributes;
     }
   }
   namespace JSXElements {
     export interface HeaderBarAttributes extends HTMLAttributes {
-      
+
     }
   }
 }
 
 
-import {
-  LandingPage as IconSearch
-} from './components/icon-search/icon-search';
-
 declare global {
-  interface HTMLIconSearchElement extends IconSearch, HTMLStencilElement {
+  interface HTMLIconSearchElement extends HTMLStencilElement {
+
   }
   var HTMLIconSearchElement: {
     prototype: HTMLIconSearchElement;
     new (): HTMLIconSearchElement;
   };
   interface HTMLElementTagNameMap {
-    "icon-search": HTMLIconSearchElement;
+    'icon-search': HTMLIconSearchElement;
   }
   interface ElementTagNameMap {
-    "icon-search": HTMLIconSearchElement;
+    'icon-search': HTMLIconSearchElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "icon-search": JSXElements.IconSearchAttributes;
+      'icon-search': JSXElements.IconSearchAttributes;
     }
   }
   namespace JSXElements {
     export interface IconSearchAttributes extends HTMLAttributes {
-      
+
     }
   }
 }
 
 
-import {
-  LandingPage as LandingPage
-} from './components/landing-page/landing-page';
-
 declare global {
-  interface HTMLLandingPageElement extends LandingPage, HTMLStencilElement {
+  interface HTMLLandingPageElement extends HTMLStencilElement {
+
   }
   var HTMLLandingPageElement: {
     prototype: HTMLLandingPageElement;
     new (): HTMLLandingPageElement;
   };
   interface HTMLElementTagNameMap {
-    "landing-page": HTMLLandingPageElement;
+    'landing-page': HTMLLandingPageElement;
   }
   interface ElementTagNameMap {
-    "landing-page": HTMLLandingPageElement;
+    'landing-page': HTMLLandingPageElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "landing-page": JSXElements.LandingPageAttributes;
+      'landing-page': JSXElements.LandingPageAttributes;
     }
   }
   namespace JSXElements {
     export interface LandingPageAttributes extends HTMLAttributes {
-      
+
     }
   }
 }

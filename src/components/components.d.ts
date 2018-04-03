@@ -3,6 +3,9 @@
  * It contains typing information for all components that exist in this project
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
+
+import '@stencil/core';
+
 declare global {
   namespace JSX {
     interface Element {}
@@ -13,42 +16,82 @@ declare global {
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
     componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
   }
 
   interface HTMLAttributes {}
 }
 
 
-import {
-  Icon as IonIcon
-} from './icon/icon';
-
 declare global {
-  interface HTMLIonIconElement extends IonIcon, HTMLStencilElement {
+  interface HTMLIonIconElement extends HTMLStencilElement {
+    /**
+     * Specifies the label to use for accessibility. Defaults to the icon name.
+     */
+    'ariaLabel': string;
+    /**
+     * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
+     */
+    'color': string;
+    /**
+     * Specifies which icon to use on `ios` mode.
+     */
+    'ios': string;
+    /**
+     * Specifies which icon to use on `md` mode.
+     */
+    'md': string;
+    /**
+     * Specifies which icon to use. The appropriate icon will be used based on the mode. For more information, see [Ionicons](/docs/ionicons/).
+     */
+    'name': string;
+    /**
+     * The size of the icon. Available options are: `"small"` and `"large"`.
+     */
+    'size': string;
   }
   var HTMLIonIconElement: {
     prototype: HTMLIonIconElement;
     new (): HTMLIonIconElement;
   };
   interface HTMLElementTagNameMap {
-    "ion-icon": HTMLIonIconElement;
+    'ion-icon': HTMLIonIconElement;
   }
   interface ElementTagNameMap {
-    "ion-icon": HTMLIonIconElement;
+    'ion-icon': HTMLIonIconElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "ion-icon": JSXElements.IonIconAttributes;
+      'ion-icon': JSXElements.IonIconAttributes;
     }
   }
   namespace JSXElements {
     export interface IonIconAttributes extends HTMLAttributes {
-      ariaLabel?: string;
-      color?: string;
-      ios?: string;
-      md?: string;
-      name?: string;
-      size?: string;
+      /**
+       * Specifies the label to use for accessibility. Defaults to the icon name.
+       */
+      'ariaLabel'?: string;
+      /**
+       * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
+       */
+      'color'?: string;
+      /**
+       * Specifies which icon to use on `ios` mode.
+       */
+      'ios'?: string;
+      /**
+       * Specifies which icon to use on `md` mode.
+       */
+      'md'?: string;
+      /**
+       * Specifies which icon to use. The appropriate icon will be used based on the mode. For more information, see [Ionicons](/docs/ionicons/).
+       */
+      'name'?: string;
+      /**
+       * The size of the icon. Available options are: `"small"` and `"large"`.
+       */
+      'size'?: string;
     }
   }
 }

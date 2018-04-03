@@ -1,9 +1,12 @@
 exports.config = {
   namespace: 'ionicons',
-  generateDistribution: true,
-  generateWWW: false,
-  distDir: 'dist/',
-  srcDir: 'src/components/'
+  srcDir: 'src/components/',
+  outputTargets: [
+    {
+      type: 'dist',
+      dir: 'dist'
+    }
+  ]
 };
 
 exports.devServer = {
