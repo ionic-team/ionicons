@@ -8,6 +8,7 @@ exports.config = {
       serviceWorker: false
     }
   ],
+  globalStyle: 'site/global/style.css',
   copy: [
     { src: '../../../dist/css/ionicons.min.css', dest: './css/ionicons.min.css' },
     { src: '../../../dist/fonts/', dest: './fonts/' },

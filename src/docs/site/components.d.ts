@@ -25,9 +25,15 @@ declare global {
 
 
 declare global {
-  interface HTMLFooterBarElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface FooterBar {
+
+    }
   }
+
+  interface HTMLFooterBarElement extends StencilComponents.FooterBar, HTMLStencilElement {}
+
   var HTMLFooterBarElement: {
     prototype: HTMLFooterBarElement;
     new (): HTMLFooterBarElement;
@@ -52,9 +58,15 @@ declare global {
 
 
 declare global {
-  interface HTMLHeaderBarElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface HeaderBar {
+
+    }
   }
+
+  interface HTMLHeaderBarElement extends StencilComponents.HeaderBar, HTMLStencilElement {}
+
   var HTMLHeaderBarElement: {
     prototype: HTMLHeaderBarElement;
     new (): HTMLHeaderBarElement;
@@ -79,9 +91,15 @@ declare global {
 
 
 declare global {
-  interface HTMLIconSearchElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface IconSearch {
+
+    }
   }
+
+  interface HTMLIconSearchElement extends StencilComponents.IconSearch, HTMLStencilElement {}
+
   var HTMLIconSearchElement: {
     prototype: HTMLIconSearchElement;
     new (): HTMLIconSearchElement;
@@ -106,9 +124,15 @@ declare global {
 
 
 declare global {
-  interface HTMLLandingPageElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface LandingPage {
+
+    }
   }
+
+  interface HTMLLandingPageElement extends StencilComponents.LandingPage, HTMLStencilElement {}
+
   var HTMLLandingPageElement: {
     prototype: HTMLLandingPageElement;
     new (): HTMLLandingPageElement;
