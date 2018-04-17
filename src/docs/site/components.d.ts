@@ -155,4 +155,37 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface ToastBar {
+
+    }
+  }
+
+  interface HTMLToastBarElement extends StencilComponents.ToastBar, HTMLStencilElement {}
+
+  var HTMLToastBarElement: {
+    prototype: HTMLToastBarElement;
+    new (): HTMLToastBarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'toast-bar': HTMLToastBarElement;
+  }
+  interface ElementTagNameMap {
+    'toast-bar': HTMLToastBarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'toast-bar': JSXElements.ToastBarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ToastBarAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }

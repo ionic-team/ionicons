@@ -106,7 +106,7 @@ export class LandingPage {
   }
 
   handleCodeClick(ev: MouseEvent) {
-    const codeEl = this.el.querySelector('.icon-selection-bar__section code');
+    const codeEl = this.el.querySelector('.icon-selection-bar__section:first-child');
     const el = document.createElement('textarea');
 
     el.value = `<ion-icon name="${this.activeIcon}"></ion-icon>`;
@@ -133,6 +133,7 @@ export class LandingPage {
   render() {
     const results = this.filterIcons();
     const activeIcon = this.data.find(o => o.name === this.activeIcon);
+    const snippetLength = (`<ion-icon name="${this.activeIcon}"></ion-icon>`.length * 8) + 32;
     let activeDownloadLinks = null;
 
     if (activeIcon) {
@@ -239,14 +240,14 @@ export class LandingPage {
               {activeIcon && <h4>{activeIcon.name}</h4>}
               {activeIcon &&
                 <div class="icon-selection-bar__details">
-                  <div class="icon-selection-bar__section">
+                  <div class="icon-selection-bar__section" style={{maxWidth: snippetLength + 'px'}}>
                     <h6>Web component code</h6>
                     <code>
                       <span class="hover-highlight" onClick={ev => this.handleCodeClick(ev)}>
                         {'<'}<span class="yellow">ion-icon</span>&nbsp;<span class="orange">name</span>{'='}<span class="green">{`"${activeIcon.name}"`}</span>{'>'}{'</'}<span class="yellow">ion-icon</span>{'>'}
                       </span>
-                      <div class="confirmation"><i class="ion ion-md-checkmark"></i>Copied</div>
                     </code>
+                    <div class="confirmation"><i class="ion ion-md-checkmark"></i>Copied</div>
                   </div>
                   { activeDownloadLinks }
                 </div>
