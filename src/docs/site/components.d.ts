@@ -160,7 +160,7 @@ declare global {
 
   namespace StencilComponents {
     interface ToastBar {
-
+      'activeIcon': any;
     }
   }
 
@@ -183,7 +183,7 @@ declare global {
   }
   namespace JSXElements {
     export interface ToastBarAttributes extends HTMLAttributes {
-
+      'activeIcon'?: any;
     }
   }
 }

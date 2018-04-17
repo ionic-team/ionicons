@@ -1,4 +1,4 @@
-import { Element, Component, Listen, State } from '@stencil/core';
+import { Component, Listen, State } from '@stencil/core';
 
 
 @Component({
@@ -8,8 +8,6 @@ import { Element, Component, Listen, State } from '@stencil/core';
 })
 export class LandingPage {
 
-  @Element() el: Element;
-
   @State() data: IconData[] = [];
 
   @State() search: string = '';
@@ -18,7 +16,6 @@ export class LandingPage {
 
   @State() visibleIconType: string = 'md';
 
-  @State() isCodeCopied: any = '';
 
   @Listen('keyup')
   @Listen('search')
@@ -105,70 +102,9 @@ export class LandingPage {
     }
   }
 
-  handleCodeClick(ev: MouseEvent) {
-    const codeEl = this.el.querySelector('.icon-selection-bar__section:first-child');
-    const el = document.createElement('textarea');
-
-    el.value = `<ion-icon name="${this.activeIcon}"></ion-icon>`;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-
-
-    if (this.isCodeCopied.length) {
-      clearTimeout(this.isCodeCopied);
-      this.isCodeCopied = '';
-    }
-    codeEl.classList.add('copied');
-    this.isCodeCopied = setTimeout(()=>{
-      codeEl.classList.remove('copied');
-      this.isCodeCopied = '';
-    }, 1500);
-  }
-
   render() {
     const results = this.filterIcons();
     const activeIcon = this.data.find(o => o.name === this.activeIcon);
-    const snippetLength = (`<ion-icon name="${this.activeIcon}"></ion-icon>`.length * 8) + 32;
-    let activeDownloadLinks = null;
-
-    if (activeIcon) {
-      activeDownloadLinks = activeIcon.icons.map((name) => {
-        const type = name.substr(0, name.indexOf('-'));
-
-        let heading;
-        switch (type) {
-          case 'ios':
-            heading = 'iOS STYLE';
-            break;
-          case 'md':
-            heading = 'MATERIAL STYLE';
-            break;
-          case 'logo':
-            heading = 'LOGO';
-            break;
-        }
-
-        return (
-          <div class="icon-selection-bar__section">
-            <h6>{ heading }</h6>
-            <div class="btn-group">
-              <div class="btn btn--gray btn--small btn--icon">
-                <i class={'ion ion-' + name}></i>
-              </div>
-              <div class="btn btn--gray btn--small">
-                <i class='ion ion-md-download'></i>
-                SVG
-              </div>
-            </div>
-          </div>
-        )
-      })
-    }
 
     return (
       <div class="icon-search">
@@ -234,27 +170,7 @@ export class LandingPage {
           : ''}
         </div>
 
-        <div class={`icon-selection-bar ${activeIcon ? 'isVisible' : 'isHidden'}`} onClick={ev => ev.stopPropagation()}>
-          <div class="container">
-            <div class="icon-selection-bar--inner">
-              {activeIcon && <h4>{activeIcon.name}</h4>}
-              {activeIcon &&
-                <div class="icon-selection-bar__details">
-                  <div class="icon-selection-bar__section" style={{maxWidth: snippetLength + 'px'}}>
-                    <h6>Web component code</h6>
-                    <code>
-                      <span class="hover-highlight" onClick={ev => this.handleCodeClick(ev)}>
-                        {'<'}<span class="yellow">ion-icon</span>&nbsp;<span class="orange">name</span>{'='}<span class="green">{`"${activeIcon.name}"`}</span>{'>'}{'</'}<span class="yellow">ion-icon</span>{'>'}
-                      </span>
-                    </code>
-                    <div class="confirmation"><i class="ion ion-md-checkmark"></i>Copied</div>
-                  </div>
-                  { activeDownloadLinks }
-                </div>
-              }
-            </div>
-          </div>
-        </div>
+        <toast-bar activeIcon={activeIcon}></toast-bar>
 
       </div>
     )
@@ -264,6 +180,5 @@ export class LandingPage {
 interface IconData {
   name: string,
   icons: Array<string>,
-  tags: Array<string>,
-  isActive: boolean
+  tags: Array<string>
 }
