@@ -61,7 +61,8 @@ declare global {
 
   namespace StencilComponents {
     interface HeaderBar {
-
+      'isSearchVisible': boolean;
+      'query': string;
     }
   }
 
@@ -84,7 +85,41 @@ declare global {
   }
   namespace JSXElements {
     export interface HeaderBarAttributes extends HTMLAttributes {
+      'isSearchVisible'?: boolean;
+      'query'?: string;
+    }
+  }
+}
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface IconList {
+      'query': string;
+    }
+  }
+
+  interface HTMLIconListElement extends StencilComponents.IconList, HTMLStencilElement {}
+
+  var HTMLIconListElement: {
+    prototype: HTMLIconListElement;
+    new (): HTMLIconListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'icon-list': HTMLIconListElement;
+  }
+  interface ElementTagNameMap {
+    'icon-list': HTMLIconListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'icon-list': JSXElements.IconListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface IconListAttributes extends HTMLAttributes {
+      'query'?: string;
     }
   }
 }
@@ -94,7 +129,9 @@ declare global {
 
   namespace StencilComponents {
     interface IconSearch {
-
+      'autofocus': string;
+      'query': string;
+      'size': string;
     }
   }
 
@@ -117,7 +154,10 @@ declare global {
   }
   namespace JSXElements {
     export interface IconSearchAttributes extends HTMLAttributes {
-
+      'autofocus'?: string;
+      'onHasSearched'?: (event: CustomEvent) => void;
+      'query'?: string;
+      'size'?: string;
     }
   }
 }
