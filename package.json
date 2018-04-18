@@ -9,11 +9,12 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.docs && npm run icon-copy",
+    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
     "build.icon": "stencil build",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
     "build.css": "node scripts/build-css.js",
+    "build.zip": "node scripts/build-zip.js",
     "icon-copy": "node scripts/copy-svg-to-dist.js",
     "mode.comparison": "node scripts/mode-comparison.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
@@ -62,5 +63,8 @@
   "bugs": {
     "url": "https://github.com/ionic-team/ionicons/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^2.1.1"
+  }
 }
