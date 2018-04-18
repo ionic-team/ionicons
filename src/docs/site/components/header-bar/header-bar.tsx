@@ -55,7 +55,7 @@ export class HeaderBar {
           <span class="active">Icons</span>
           <a href='https://github.com/ionic-team/ionicons/blob/master/readme.md'>Usage</a>
           <a href='https://github.com/ionic-team/ionicons'>Github</a>
-          <a class="btn" href='#'>Download</a>
+          <a class="btn" href='/svg/ionicons.zip'>Download SVGs</a>
         </nav>
       </div>
     </header>

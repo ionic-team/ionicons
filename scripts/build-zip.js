@@ -8,7 +8,7 @@ var distzipDir = path.join(__dirname, '..', 'dist');
 var archive = archiver('zip', {
   zlib: { level: 9 }
 });
-var output = fs.createWriteStream(distzipDir + '/svg.zip');
+var output = fs.createWriteStream(distzipDir + '/ionicons.zip');
 output.on('close', function() {
   console.log('Svg zip archive created.');
 });
