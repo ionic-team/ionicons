@@ -13,7 +13,7 @@ exports.config = {
     { src: '../../../dist/css/ionicons.min.css', dest: './css/ionicons.min.css' },
     { src: '../../../dist/fonts/', dest: './fonts/' },
     { src: '../../../dist/svg/', dest: './svg/' },
-    { src: '../../../dist/ionicons.zip', dest: './svg/ionicons.zip' },
+    { src: '../../../dist/ionicons.designerpack.zip', dest: './svg/ionicons.designerpack.zip' },
     { src: '../../../dist/ionicons/', dest: './ionicons/' },
     { src: '../../../dist/ionicons.js', dest: './ionicons.js' },
     { src: '../../../dist/cheatsheet.html', dest: './cheatsheet.html' },
