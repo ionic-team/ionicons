@@ -61,7 +61,6 @@ export class LandingPage {
     return(
       <main>
         <div class="wrapper">
-
           <header-bar query={this.query} isSearchVisible={this.isHeaderSearchVisible}></header-bar>
 
           <div class="container">
@@ -74,7 +73,6 @@ export class LandingPage {
         </div>
 
         <footer-bar></footer-bar>
-
       </main>
     )
   }
