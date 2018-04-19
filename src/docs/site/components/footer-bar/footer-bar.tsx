@@ -1,13 +1,11 @@
 import { Component } from '@stencil/core';
 
-
 @Component({
   tag: 'footer-bar',
   styleUrl: 'footer-bar.css',
   scoped: true
 })
 export class FooterBar {
-
   render() {
     return(
     <footer>
@@ -34,5 +32,4 @@ export class FooterBar {
       </div>
     </footer>
   )}
-
 }

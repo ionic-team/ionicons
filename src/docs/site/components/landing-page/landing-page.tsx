@@ -1,17 +1,14 @@
 import { Element, Component, State, Listen } from '@stencil/core';
 
-
 @Component({
   tag: 'landing-page',
   styleUrl: 'landing-page.css',
   scoped: true
 })
 export class LandingPage {
-
   @Element() el: Element;
 
   @State() query: string = '';
-
   @State() isHeaderSearchVisible: boolean = false;
 
   @Listen('hasSearched')
@@ -76,5 +73,4 @@ export class LandingPage {
       </main>
     )
   }
-
 }

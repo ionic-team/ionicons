@@ -200,7 +200,11 @@ declare global {
 
   namespace StencilComponents {
     interface ToastBar {
-      'activeIcon': any;
+      'selectedIcon': {
+    name: string,
+    icons: Array<string>,
+    tags: Array<string>
+  };
     }
   }
 
@@ -223,7 +227,11 @@ declare global {
   }
   namespace JSXElements {
     export interface ToastBarAttributes extends HTMLAttributes {
-      'activeIcon'?: any;
+      'selectedIcon'?: {
+    name: string,
+    icons: Array<string>,
+    tags: Array<string>
+  };
     }
   }
 }

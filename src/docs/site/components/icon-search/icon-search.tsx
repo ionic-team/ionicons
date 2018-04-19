@@ -6,11 +6,8 @@ import { Component, Prop, Listen, Event, EventEmitter } from '@stencil/core';
   scoped: true
 })
 export class IconSearch {
-
   @Prop() query: string = '';
-
   @Prop() size: string = 'small';
-
   @Prop() autofocus: string = 'none';
 
   @Event() hasSearched: EventEmitter;
@@ -28,5 +25,4 @@ export class IconSearch {
       <input type="search" placeholder="Search icons..." value={this.query} autofocus={this.autofocus === 'autofocus' ? 'autofocus' : ''} />
     </div>
   )}
-
 }
