@@ -23,7 +23,7 @@ export class HeaderBar {
 
   checkScroll() {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollTop > 1) {
+    if (scrollTop > 30) {
       this.isOverlay = true;
     } else {
       this.isOverlay = false;
