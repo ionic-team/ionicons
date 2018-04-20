@@ -2,8 +2,7 @@ import { Component, Prop, Listen, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'icon-search',
-  styleUrl: 'icon-search.css',
-  scoped: true
+  styleUrl: 'icon-search.scss'
 })
 export class IconSearch {
   @Prop() query: string = '';

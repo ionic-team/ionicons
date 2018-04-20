@@ -23,6 +23,8 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import '@stencil/router';
+
 
 declare global {
 
@@ -166,6 +168,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface IoniconsSite {
+
+    }
+  }
+
+  interface HTMLIoniconsSiteElement extends StencilComponents.IoniconsSite, HTMLStencilElement {}
+
+  var HTMLIoniconsSiteElement: {
+    prototype: HTMLIoniconsSiteElement;
+    new (): HTMLIoniconsSiteElement;
+  };
+  interface HTMLElementTagNameMap {
+    'ionicons-site': HTMLIoniconsSiteElement;
+  }
+  interface ElementTagNameMap {
+    'ionicons-site': HTMLIoniconsSiteElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'ionicons-site': JSXElements.IoniconsSiteAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface IoniconsSiteAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface LandingPage {
 
     }
@@ -232,6 +267,39 @@ declare global {
     icons: Array<string>,
     tags: Array<string>
   };
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface UsagePage {
+
+    }
+  }
+
+  interface HTMLUsagePageElement extends StencilComponents.UsagePage, HTMLStencilElement {}
+
+  var HTMLUsagePageElement: {
+    prototype: HTMLUsagePageElement;
+    new (): HTMLUsagePageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'usage-page': HTMLUsagePageElement;
+  }
+  interface ElementTagNameMap {
+    'usage-page': HTMLUsagePageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'usage-page': JSXElements.UsagePageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface UsagePageAttributes extends HTMLAttributes {
+
     }
   }
 }

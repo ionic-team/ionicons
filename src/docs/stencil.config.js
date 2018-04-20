@@ -1,6 +1,11 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
   namespace: 'DocsSite',
   srcDir: 'site/',
+  plugins: [
+    sass()
+  ],
   outputTargets: [
     {
       type: 'www',

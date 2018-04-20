@@ -2,8 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'footer-bar',
-  styleUrl: 'footer-bar.css',
-  scoped: true
+  styleUrl: 'footer-bar.scss'
 })
 export class FooterBar {
   render() {

@@ -2,8 +2,7 @@ import { Element, Component, State, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'header-bar',
-  styleUrl: 'header-bar.css',
-  scoped: true
+  styleUrl: 'header-bar.scss'
 })
 export class HeaderBar {
   @Element() el: Element;
@@ -29,7 +28,6 @@ export class HeaderBar {
   }
 
   showNav() {
-    console.log('show nav')
     if (this.isMobileMenuShown) return;
     this.isMobileMenuShown = true;
 
@@ -58,6 +56,7 @@ export class HeaderBar {
   render() {
     return (
     <header class={`${this.isSearchVisible ? 'visible-search' : ''} ${this.isSticky? 'overlay' : ''}`}>
+
       <div class="container">
         <div class="logo">
           <a href='/'>
@@ -75,10 +74,12 @@ export class HeaderBar {
           </a>
           <span class="version">v4.0.1</span>
         </div>
+
         <icon-search query={this.query} size="small"></icon-search>
+
         <nav>
-          <span class="active">Icons</span>
-          <a href='https://github.com/ionic-team/ionicons/blob/master/readme.md'>Usage</a>
+          <stencil-route-link url='/' exact={true}>Icons</stencil-route-link>
+          <stencil-route-link url='/usage'>Usage</stencil-route-link>
           <a href='https://github.com/ionic-team/ionicons'>
             Github
             <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -88,19 +89,22 @@ export class HeaderBar {
               </g>
             </svg>
           </a>
-          <a class="btn" href='/svg/ionicons.designerpack.zip'>
-            <svg width="9px" height="11px" viewBox="0 0 9 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                  <rect id="bg" fill="#BAC3D1" x="0" y="9" width="9" height="2" rx="1"></rect>
-                  <path d="M5,6.26776695 L7.26776695,4 L7.97487373,4.70710678 L4.70710678,7.97487373 L4.48743687,7.75520382 L4.26776695,7.97487373 L1,4.70710678 L1.70710678,4 L4,6.29289322 L4,0 L5,0 L5,6.26776695 Z" id="arrow" fill="#94A0B8"></path>
-                </g>
-            </svg>
-            Designer pack
-          </a>
           <span class="close" onClick={this.hideNav.bind(this)}><i class="ion ion-md-close"></i></span>
         </nav>
+
+        <a class="btn sm-hide" href='/svg/ionicons.designerpack.zip'>
+          <svg width="9px" height="11px" viewBox="0 0 9 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect id="bg" fill="#BAC3D1" x="0" y="9" width="9" height="2" rx="1"></rect>
+                <path d="M5,6.26776695 L7.26776695,4 L7.97487373,4.70710678 L4.70710678,7.97487373 L4.48743687,7.75520382 L4.26776695,7.97487373 L1,4.70710678 L1.70710678,4 L4,6.29289322 L4,0 L5,0 L5,6.26776695 Z" id="arrow" fill="#94A0B8"></path>
+              </g>
+          </svg>
+          Designer pack
+        </a>
+
         <span class="more" onClick={this.showNav.bind(this)}><i class="ion ion-md-more"></i></span>
       </div>
+
     </header>
   )}
 }

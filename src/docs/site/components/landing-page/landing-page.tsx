@@ -2,8 +2,7 @@ import { Element, Component, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'landing-page',
-  styleUrl: 'landing-page.css',
-  scoped: true
+  styleUrl: 'landing-page.scss'
 })
 export class LandingPage {
   @Element() el: Element;
@@ -58,7 +57,7 @@ export class LandingPage {
     return(
       <main>
         <div class="wrapper">
-          <header-bar query={this.query} isSearchVisible={this.isHeaderSearchVisible}></header-bar>
+
 
           <div class="container">
             <div class="content">
