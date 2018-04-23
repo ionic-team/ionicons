@@ -8,6 +8,8 @@ export class LandingPage {
   @Element() el: Element;
 
   @Prop() query: string = '';
+  @Prop() data: any;
+
   @State() isHeaderSearchVisible: boolean = false;
 
   @Listen('window:scroll')
@@ -29,7 +31,7 @@ export class LandingPage {
     // show/hide header searchbar
     const headerSearchEl: HTMLElement = document.querySelector('header .search-input');
     const bodySearchEl: HTMLElement = document.querySelector('icon-list .search-input');
-    
+
     if (!bodySearchEl) return;
     const headerInput: HTMLElement = headerSearchEl.querySelector('input');
     const bodyInput: HTMLElement = bodySearchEl.querySelector('input');
@@ -55,7 +57,7 @@ export class LandingPage {
               <p class="lead">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.</p>
             </div>
           </div>
-          <icon-list query={this.query}></icon-list>
+          <icon-list query={this.query} data={this.data}></icon-list>
         </div>
 
         <footer-bar></footer-bar>

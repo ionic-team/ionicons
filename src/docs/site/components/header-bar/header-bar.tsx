@@ -13,6 +13,7 @@ export class HeaderBar {
   @State() isMobileMenuShown: boolean;
 
   @Prop() query: string = '';
+  @Prop() version: string;
   @Prop() isSearchVisible: boolean = false;
 
   @Listen('window:scroll')
@@ -87,7 +88,8 @@ export class HeaderBar {
             </svg>
             Ionicons
           </stencil-route-link>
-          <span class="version">v4.0.1</span>
+          <span class="version">{this.version}</span>
+
         </div>
 
         <icon-search query={this.query} size="small"></icon-search>

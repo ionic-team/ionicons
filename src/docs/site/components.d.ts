@@ -68,6 +68,7 @@ declare global {
     interface HeaderBar {
       'isSearchVisible': boolean;
       'query': string;
+      'version': string;
     }
   }
 
@@ -93,6 +94,7 @@ declare global {
       'isSearchVisible'?: boolean;
       'onToggleHeaderSearch'?: (event: CustomEvent) => void;
       'query'?: string;
+      'version'?: string;
     }
   }
 }
@@ -102,6 +104,7 @@ declare global {
 
   namespace StencilComponents {
     interface IconList {
+      'data': any;
       'query': string;
     }
   }
@@ -125,6 +128,7 @@ declare global {
   }
   namespace JSXElements {
     export interface IconListAttributes extends HTMLAttributes {
+      'data'?: any;
       'query'?: string;
     }
   }
@@ -206,6 +210,7 @@ declare global {
 
   namespace StencilComponents {
     interface LandingPage {
+      'data': any;
       'query': string;
     }
   }
@@ -229,6 +234,7 @@ declare global {
   }
   namespace JSXElements {
     export interface LandingPageAttributes extends HTMLAttributes {
+      'data'?: any;
       'query'?: string;
     }
   }
@@ -284,6 +290,7 @@ declare global {
 
   namespace StencilComponents {
     interface UsagePage {
+      'data': any;
       'match': MatchResults;
     }
   }
@@ -307,6 +314,7 @@ declare global {
   }
   namespace JSXElements {
     export interface UsagePageAttributes extends HTMLAttributes {
+      'data'?: any;
       'match'?: MatchResults;
     }
   }
