@@ -25,6 +25,9 @@ declare global {
 
 import '@stencil/router';
 
+import {
+  MatchResults,
+} from '@stencil/router';
 
 declare global {
 
@@ -88,6 +91,7 @@ declare global {
   namespace JSXElements {
     export interface HeaderBarAttributes extends HTMLAttributes {
       'isSearchVisible'?: boolean;
+      'onToggleHeaderSearch'?: (event: CustomEvent) => void;
       'query'?: string;
     }
   }
@@ -202,7 +206,7 @@ declare global {
 
   namespace StencilComponents {
     interface LandingPage {
-
+      'query': string;
     }
   }
 
@@ -225,7 +229,7 @@ declare global {
   }
   namespace JSXElements {
     export interface LandingPageAttributes extends HTMLAttributes {
-
+      'query'?: string;
     }
   }
 }
@@ -240,6 +244,7 @@ declare global {
     icons: Array<string>,
     tags: Array<string>
   };
+      'selectedIconType': string;
     }
   }
 
@@ -262,11 +267,14 @@ declare global {
   }
   namespace JSXElements {
     export interface ToastBarAttributes extends HTMLAttributes {
+      'onClearToast'?: (event: CustomEvent) => void;
+      'onToggleHeaderSearch'?: (event: CustomEvent) => void;
       'selectedIcon'?: {
     name: string,
     icons: Array<string>,
     tags: Array<string>
   };
+      'selectedIconType'?: string;
     }
   }
 }
@@ -276,7 +284,7 @@ declare global {
 
   namespace StencilComponents {
     interface UsagePage {
-
+      'match': MatchResults;
     }
   }
 
@@ -299,7 +307,7 @@ declare global {
   }
   namespace JSXElements {
     export interface UsagePageAttributes extends HTMLAttributes {
-
+      'match'?: MatchResults;
     }
   }
 }

@@ -24,8 +24,8 @@ export class FooterBar {
 
         <div class="footer-menu">
           <a href="cheatsheet.html">Cheatsheet</a>
-          <a href="#">v1.5.2</a>
-          <a href="#">v2.0.1</a>
+          <a href="http://ionicons.com/1.5.2">v1.5.2</a>
+          <a href="http://ionicons.com/2.0.1">v2.0.1</a>
           <a href="https://ionicframework.com/">Ionic Framework</a>
         </div>
       </div>

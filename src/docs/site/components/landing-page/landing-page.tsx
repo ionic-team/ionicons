@@ -1,4 +1,4 @@
-import { Element, Component, State, Listen } from '@stencil/core';
+import { Element, Component, Prop, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'landing-page',
@@ -7,18 +7,8 @@ import { Element, Component, State, Listen } from '@stencil/core';
 export class LandingPage {
   @Element() el: Element;
 
-  @State() query: string = '';
+  @Prop() query: string = '';
   @State() isHeaderSearchVisible: boolean = false;
-
-  @Listen('hasSearched')
-  searchHandler(event: CustomEvent) {
-    this.query = event.detail;
-  }
-
-  @Listen('toggleHeaderSearch')
-  toggleHandler(event: CustomEvent) {
-    this.isHeaderSearchVisible = (event.detail === 'show') ? true : false;
-  }
 
   @Listen('window:scroll')
   handleScroll() {
@@ -37,8 +27,10 @@ export class LandingPage {
     })
 
     // show/hide header searchbar
-    const headerSearchEl: HTMLElement = this.el.querySelector('header .search-input');
-    const bodySearchEl: HTMLElement = this.el.querySelector('icon-list .search-input');
+    const headerSearchEl: HTMLElement = document.querySelector('header .search-input');
+    const bodySearchEl: HTMLElement = document.querySelector('icon-list .search-input');
+    
+    if (!bodySearchEl) return;
     const headerInput: HTMLElement = headerSearchEl.querySelector('input');
     const bodyInput: HTMLElement = bodySearchEl.querySelector('input');
 
@@ -57,12 +49,10 @@ export class LandingPage {
     return(
       <main>
         <div class="wrapper">
-
-
           <div class="container">
             <div class="content">
               <h1>Beautifully crafted open source icons</h1>
-              <h3>Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.</h3>
+              <p class="lead">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.</p>
             </div>
           </div>
           <icon-list query={this.query}></icon-list>

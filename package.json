@@ -26,11 +26,12 @@
   "devDependencies": {
     "@ionic/jpml": "latest",
     "@stencil/core": "0.7.24",
+    "@stencil/dev-server": "latest",
     "@stencil/router": "0.0.29-10",
     "@stencil/sass": "0.0.3",
-    "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "fs-extra": "4.0.2",
+    "highlight.js": "^9.12.0",
     "node-sass": "4.7.2",
     "np": "2.17.0",
     "svg2png": "4.1.1",
