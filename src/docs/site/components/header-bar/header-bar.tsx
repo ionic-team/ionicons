@@ -1,4 +1,4 @@
-import { Element, Component, State, Prop, Listen } from '@stencil/core';
+import { Element, Component, State, Prop, Listen, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'header-bar',
@@ -6,6 +6,8 @@ import { Element, Component, State, Prop, Listen } from '@stencil/core';
 })
 export class HeaderBar {
   @Element() el: Element;
+
+  @Event() toggleHeaderSearch: EventEmitter;
 
   @State() isSticky: boolean = false;
   @State() isMobileMenuShown: boolean;
@@ -16,6 +18,19 @@ export class HeaderBar {
   @Listen('window:scroll')
   handleScroll() {
     requestAnimationFrame(this.checkScroll.bind(this));
+  }
+
+  @Listen('window:resize')
+  handleResize() {
+    requestAnimationFrame(() => {
+      if (window.innerWidth > 768) {
+        const menu = (this.el.querySelector('nav') as HTMLElement);
+        menu.style.display = "";
+        this.el.classList.remove('show-mobile-menu');
+        document.body.classList.remove('no-scroll');
+        this.isMobileMenuShown = false;
+      }
+    });
   }
 
   checkScroll() {
@@ -59,7 +74,7 @@ export class HeaderBar {
 
       <div class="container">
         <div class="logo">
-          <a href='/'>
+          <stencil-route-link url='/' exact={true}>
             <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="icon" fill-rule="nonzero">
@@ -71,16 +86,32 @@ export class HeaderBar {
               </g>
             </svg>
             Ionicons
-          </a>
+          </stencil-route-link>
           <span class="version">v4.0.1</span>
         </div>
 
         <icon-search query={this.query} size="small"></icon-search>
 
         <nav>
-          <stencil-route-link url='/' exact={true}>Icons</stencil-route-link>
-          <stencil-route-link url='/usage'>Usage</stencil-route-link>
-          <a href='https://github.com/ionic-team/ionicons'>
+          <stencil-route-link
+            class="nav__item"
+            url='/'
+            exact={true}
+            onClick={this.hideNav.bind(this)}>
+            Icons
+          </stencil-route-link>
+
+          <stencil-route-link
+            class="nav__item"
+            url='/usage'
+            onClick={() => {
+              this.toggleHeaderSearch.emit('hide');
+              this.hideNav();
+            }}>
+            Usage
+          </stencil-route-link>
+
+          <a class="nav__item" href='https://github.com/ionic-team/ionicons'>
             Github
             <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g transform="translate(0,1)">
