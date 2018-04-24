@@ -244,6 +244,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface NotfoundPage {
+
+    }
+  }
+
+  interface HTMLNotfoundPageElement extends StencilComponents.NotfoundPage, HTMLStencilElement {}
+
+  var HTMLNotfoundPageElement: {
+    prototype: HTMLNotfoundPageElement;
+    new (): HTMLNotfoundPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'notfound-page': HTMLNotfoundPageElement;
+  }
+  interface ElementTagNameMap {
+    'notfound-page': HTMLNotfoundPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'notfound-page': JSXElements.NotfoundPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NotfoundPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ToastBar {
       'selectedIcon': {
     name: string,
