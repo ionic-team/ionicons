@@ -54,7 +54,7 @@ export class LandingPage {
           <div class="container">
             <div class="content">
               <h1>Beautifully crafted open source icons</h1>
-              <p class="lead">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.</p>
+              <p id="lead" class="lead">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.</p>
             </div>
           </div>
           <icon-list query={this.query} data={this.data}></icon-list>

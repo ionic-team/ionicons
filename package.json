@@ -27,7 +27,7 @@
     "@ionic/jpml": "latest",
     "@stencil/core": "0.7.24",
     "@stencil/dev-server": "latest",
-    "@stencil/router": "0.0.29-10",
+    "@stencil/router": "0.0.29-12",
     "@stencil/sass": "0.0.3",
     "@stencil/utils": "latest",
     "fs-extra": "4.0.2",
