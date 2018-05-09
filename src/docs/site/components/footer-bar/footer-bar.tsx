@@ -18,7 +18,7 @@ export class FooterBar {
               alt="Ionic Open Source Logo" />
           </a>
           <p>
-            Released under <span id="mit">MIT License</span> | Copyright @ 2018
+            Released under <span id="mit">MIT License</span> | Copyright @ {(new Date()).getFullYear()}
           </p>
         </div>
 
