@@ -14,6 +14,4 @@ log.txt
 node_modules/
 tmp/
 dist/
-docs/
 .DS_Store
-!/src/docs

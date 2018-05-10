@@ -1,0 +1,46 @@
+{
+  "namespace": "DocsSite",
+  "fsNamespace": "docssite",
+  "loader": "../docssite.js",
+  "corePolyfilled": "es5-build-disabled.js",
+  "global": "docssite.global.js",
+  "core": "docssite.core.js",
+  "components": {
+    "footer-bar": {
+      "$": "footer-bar"
+    },
+    "header-bar": {
+      "$": "header-bar"
+    },
+    "icon-list": {
+      "$": "icon-list"
+    },
+    "icon-search": {
+      "$": "icon-search"
+    },
+    "ionicons-site": {
+      "$": "header-bar"
+    },
+    "landing-page": {
+      "$": "icon-list"
+    },
+    "notfound-page": {
+      "$": "notfound-page"
+    },
+    "stencil-route": {
+      "$": "header-bar"
+    },
+    "stencil-route-link": {
+      "$": "stencil-route-link"
+    },
+    "stencil-router": {
+      "$": "header-bar"
+    },
+    "toast-bar": {
+      "$": "icon-list"
+    },
+    "usage-page": {
+      "$": "usage-page"
+    }
+  }
+}
