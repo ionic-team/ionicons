@@ -288,7 +288,7 @@ class ToastBar {
                                         h("span", { class: "confirmation" },
                                             h("i", { class: "ion ion-md-checkmark" }),
                                             "Copied")),
-                                    h("stencil-route-link", { url: `/usage/${iconType}/${this.selectedIcon.name}`, onClick: () => this.toggleHeaderSearch.emit('hide') },
+                                    h("stencil-route-link", { url: `/usage#${iconType}-${this.selectedIcon.name}`, onClick: () => this.toggleHeaderSearch.emit('hide') },
                                         "Usage",
                                         h("i", { class: "ion ion-ios-arrow-forward" }))),
                                 h("code", null,

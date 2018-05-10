@@ -316,7 +316,7 @@ s=document.querySelector("script[data-namespace='docssite']");if(s){resourcesUrl
     // we could have either gotten the data from the attribute changed callback,
     // which wouldn't have Constructor data yet, and because this method is reused
     // within proxy where we don't have meta data, but only constructor data
-    if (isDef(propValue) && 'object' !== typeof propValue) {
+    if (isDef(propValue) && 'object' !== typeof propValue && 'function' !== typeof propValue) {
       if (propType === Boolean || 3 /* Boolean */ === propType) {
         // per the HTML spec, any string value means it is a boolean true value
         // but we'll cheat here and say that the string "false" is the boolean false

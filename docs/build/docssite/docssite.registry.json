@@ -2,9 +2,9 @@
   "namespace": "DocsSite",
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
-  "corePolyfilled": "es5-build-disabled.js",
   "global": "docssite.global.js",
   "core": "docssite.core.js",
+  "corePolyfilled": "docssite.core.pf.js",
   "components": {
     "footer-bar": {
       "$": "footer-bar"

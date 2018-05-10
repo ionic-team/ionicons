@@ -93,7 +93,7 @@ export class IoniconsSite {
               componentProps={{'query': this.query, 'data': this.data}}>
 
             </stencil-route>
-            <stencil-route url="/usage/:type?/:icon?"
+            <stencil-route url="/usage"
               component="usage-page"
               componentProps={{'data': this.data}}>
 

@@ -25,6 +25,7 @@ exports.config = {
     { src: '../../../dist/cheatsheet.html', dest: './cheatsheet.html' },
     { src: '../archived/v1/', dest: './v1/' },
     { src: '../archived/v2/', dest: './v2/' },
+    { src: './index.html', dest: './usage/index.html' },
     { src: '../../../dist/ionicons/data.json', dest: './data.json' }
   ]
 };

@@ -221,7 +221,7 @@ class IoniconsSite {
                 h("stencil-router-scroll-top", null,
                     h(RouterSwitch, { scrollTopOffset: 0 },
                         h("stencil-route", { url: "/", component: "landing-page", exact: true, componentProps: { 'query': this.query, 'data': this.data } }),
-                        h("stencil-route", { url: "/usage/:type?/:icon?", component: "usage-page", componentProps: { 'data': this.data } }),
+                        h("stencil-route", { url: "/usage", component: "usage-page", componentProps: { 'data': this.data } }),
                         h("stencil-route", { component: 'notfound-page' }))))
         ];
     }

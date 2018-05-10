@@ -18100,22 +18100,24 @@ class UsagePage {
         this.exampleIcon = 'heart';
     }
     componentWillLoad() {
-        if (!this.match.params.icon)
+        if (!window.location.hash)
             return;
         let iconNames = [];
         this.data.icons.map((o) => {
             iconNames = iconNames.concat(o.icons);
         });
-        if (iconNames.includes(`${this.match.params.type}-${this.match.params.icon}`)) {
-            this.exampleType = this.match.params.type;
-            this.exampleIcon = this.match.params.icon;
+        const hash = window.location.hash.replace('#', '');
+        if (iconNames.includes(hash)) {
+            const splt = hash.split('-');
+            this.exampleType = splt[0];
+            this.exampleIcon = splt[1];
         }
     }
     componentDidLoad() {
         // this.queue.read(function() {
         //   console.log('offset ', document.getElementById('basic-usage').offsetTop)
         // });
-        if (this.match.params.icon) {
+        if (window.location.hash) {
             setTimeout(() => {
                 const offset = document.getElementById('basic-usage').offsetTop - 100;
                 window.scrollTo({ left: 0, top: offset, behavior: 'smooth' });
