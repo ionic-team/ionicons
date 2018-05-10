@@ -34,6 +34,10 @@ export class IconSearch {
     this.hasSearched.emit('');
   }
 
+  componentWillLoad() {
+    this.watchQuery();
+  }
+
   render() {
     return (
     <div class={`search-input search-input--${this.size}`}>
