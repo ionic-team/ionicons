@@ -9,11 +9,12 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.docs && npm run icon-copy",
+    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
     "build.icon": "stencil build",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
     "build.css": "node scripts/build-css.js",
+    "build.zip": "node scripts/build-zip.js",
     "icon-copy": "node scripts/copy-svg-to-dist.js",
     "mode.comparison": "node scripts/mode-comparison.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
@@ -24,10 +25,13 @@
   },
   "devDependencies": {
     "@ionic/jpml": "latest",
-    "@stencil/core": "0.7.12",
+    "@stencil/core": "^0.8.1",
     "@stencil/dev-server": "latest",
+    "@stencil/router": "^0.1.6",
+    "@stencil/sass": "0.0.3",
     "@stencil/utils": "latest",
     "fs-extra": "4.0.2",
+    "highlight.js": "^9.12.0",
     "node-sass": "4.7.2",
     "np": "2.17.0",
     "svg2png": "4.1.1",
@@ -62,5 +66,8 @@
   "bugs": {
     "url": "https://github.com/ionic-team/ionicons/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^2.1.1"
+  }
 }

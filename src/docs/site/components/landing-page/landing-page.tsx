@@ -1,34 +1,30 @@
-import { Component } from '@stencil/core';
-
+import { Element, Component, Prop, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'landing-page',
-  styleUrl: 'landing-page.css',
-  scoped: true
+  styleUrl: 'landing-page.scss'
 })
 export class LandingPage {
+  @Element() el: Element;
+
+  @Prop() query: string = '';
+  @Prop() data: any;
 
   render() {
-    return <main>
+    return(
+      <main>
+        <div class="wrapper">
+          <div class="container">
+            <div class="content">
+              <h1>Beautifully crafted open source icons</h1>
+              <p class="lead">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.</p>
+            </div>
+          </div>
+          <icon-list query={this.query} data={this.data}></icon-list>
+        </div>
 
-      <header-bar></header-bar>
-
-      <div>
-        <h1>
-          Beautifully crafted open source icons.
-        </h1>
-
-        <h3>
-          Premium designed icons for use in web, iOS, and Android applications.
-          Load as a web component, SVG, PNG or font icon. 100% free and open source.
-        </h3>
-      </div>
-
-      <icon-search></icon-search>
-
-      <footer-bar></footer-bar>
-
-    </main>
+        <footer-bar></footer-bar>
+      </main>
+    )
   }
-
 }

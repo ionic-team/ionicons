@@ -12,10 +12,35 @@
       padding: 0;
     }
 
+    /* Eina Bold */
+    @font-face {
+      font-family: 'Eina';
+      src: url('../assets/fonts/34E6DB_F_0.eot');
+      src: url('../assets/fonts/34E6DB_F_0.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/34E6DB_F_0.woff2') format('woff2'),
+        url('../assets/fonts/34E6DB_F_0.woff') format('woff'),
+        url('../assets/fonts/34E6DB_F_0.ttf') format('truetype');
+      font-weight: 700;
+      unicode-range: U+000-5FF;
+    }
+
+    /* Eina Regular */
+    @font-face {
+      font-family: 'Eina';
+      src: url('../assets/fonts/34E6DB_D_0.eot');
+      src: url('../assets/fonts/34E6DB_D_0.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/34E6DB_D_0.woff2') format('woff2'),
+        url('../assets/fonts/34E6DB_D_0.woff') format('woff'),
+        url('../assets/fonts/34E6DB_D_0.ttf') format('truetype');
+      font-weight: 400;
+      unicode-range: U+000-5FF;
+    }
+
     body {
       background: #fff;
       color: #444;
-      font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: 16px/1.5 'Eina', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
     }
 
     a, a:visited {
@@ -30,10 +55,9 @@
     }
 
     h1 {
-      color: #888;
       float: left;
       font-size: 24px;
-      font-weight: 300;
+      font-weight: 700;
     }
 
     main {
@@ -59,13 +83,13 @@
       border: 0;
       border-bottom: 1px solid #ddd;
       white-space: nowrap;
-      text-align: center;
-    }
-
-    th:first-child,
-    td:first-child {
       text-align: left;
     }
+
+    th {
+      color: #888;
+    }
+
 
     ion-icon {
       display: block;

@@ -13,6 +13,7 @@ log.txt
 .vscode/
 node_modules/
 tmp/
-.DS_Store
 dist/
 docs/
+.DS_Store
+!/src/docs

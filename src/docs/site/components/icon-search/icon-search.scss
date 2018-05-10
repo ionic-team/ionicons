@@ -1,0 +1,109 @@
+icon-search {
+  .search-input {
+    position: relative;
+  }
+
+  .search-input input {
+    width: 100%;
+    font-weight: 400;
+    font-family: 'Eina';
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+    -webkit-appearance: none;
+    vertical-align: middle;
+  }
+
+  .search-input__clear {
+    transition: background 0.3s, opacity 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-pale-sky);
+    opacity: 0;
+    background-color: var(--color-catskill-white);
+    border-radius: 100px;
+
+    &--active {
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+        background-color: #e3e9f3;
+      }
+    }
+  }
+
+  .search-input--small .search-input__clear {
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    background-color: #e3e9f3;
+    right: 12px;
+
+    &--active:hover {
+      background-color: darken(#e3e9f3, 2%);
+    }
+  }
+
+  .search-input:before {
+    font-family: "Ionicons";
+    content: "\f4a5";
+    color: var(--color-heather);
+    position: absolute;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .search-input--small input {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #f6f7f9;
+    height: 39px;
+    text-indent: 0;
+  }
+
+  .search-input--small:before {
+    font-size: 18px;
+    left: 10px;
+  }
+
+  .search-input--large input {
+    transition: box-shadow 0.3s;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .search-input--large input:focus {
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .search-input--large:before {
+    font-size: 22px;
+    left: 20px;
+  }
+
+  .search-input input::placeholder {
+    color: var(--color-heather);
+  }
+}

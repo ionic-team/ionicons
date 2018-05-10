@@ -1,65 +1,60 @@
-import { Component, Listen, State } from '@stencil/core';
-
+import { Component, Prop, Listen, Event, EventEmitter, State, Watch } from '@stencil/core';
 
 @Component({
   tag: 'icon-search',
-  styleUrl: 'icon-search.css',
-  scoped: true
+  styleUrl: 'icon-search.scss'
 })
-export class LandingPage {
+export class IconSearch {
+  @Prop() query: string = '';
+  @Prop() size: string = 'small';
+  @Prop() autofocus: string = 'none';
 
-  @State() data: IconData[] = [];
+  @State() showClearCtrl: boolean = false;
 
-  @State() search: string = '';
+  @Event() hasSearched: EventEmitter;
+
+  @Watch('query')
+  watchQuery() {
+    this.showClearCtrl = (this.query.length > 0) ? true : false;
+  }
+
 
   @Listen('keyup')
-  keyup(ev: KeyboardEvent) {
-    this.search = (ev.target as HTMLInputElement).value;
+  searchListener(ev: any) {
+    if (ev.keyCode === 27) {
+      this.handleClear();
+      return;
+    }
+
+    const value = (ev.target as HTMLInputElement).value;
+    this.hasSearched.emit(value);
+  }
+
+  handleClear() {
+    this.hasSearched.emit('');
   }
 
   componentWillLoad() {
-    return fetch('/data.json').then(rsp => {
-      rsp.json().then(d => this.data = d.icons);
-    });
-  }
-
-  filterIcons() {
-    const search = this.search.trim().toLowerCase();
-    const icons: string[] = [];
-
-    this.data.forEach(iconData => {
-      if (search === '' || iconData.tags.some(t => t.indexOf(search) > -1)) {
-        iconData.icons.forEach(iconName => {
-          icons.push(iconName);
-        });
-      }
-    });
-
-    return icons;
+    this.watchQuery();
   }
 
   render() {
-    return <div class="icon-search">
+    return (
+    <div class={`search-input search-input--${this.size}`}>
 
-      <div class="search">
-        <input type="search" placeholder="Search Icons" autofocus/>
-      </div>
+      <input type="text"
+        placeholder="Search icons..."
+        value={this.query}
+        autofocus={this.autofocus === 'autofocus' ? 'autofocus' : ''}/>
 
-      <div class="results">
-
-        {this.filterIcons().map(icon => {
-          return <a href='#' class={'ion ion-' + icon}/>
-        })}
-
-      </div>
+      <i class={{
+          'search-input__clear': true,
+          'search-input__clear--active': this.showClearCtrl,
+          'ion': true,
+          'ion-md-close': true
+        }}
+        onClick={this.handleClear.bind(this)}></i>
 
     </div>
-  }
-
-}
-
-
-interface IconData {
-  icons: string[];
-  tags: string[];
+  )}
 }

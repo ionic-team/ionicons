@@ -23,11 +23,22 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import '@stencil/router';
+
+import {
+  MatchResults,
+} from '@stencil/router';
 
 declare global {
-  interface HTMLFooterBarElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface FooterBar {
+
+    }
   }
+
+  interface HTMLFooterBarElement extends StencilComponents.FooterBar, HTMLStencilElement {}
+
   var HTMLFooterBarElement: {
     prototype: HTMLFooterBarElement;
     new (): HTMLFooterBarElement;
@@ -52,9 +63,17 @@ declare global {
 
 
 declare global {
-  interface HTMLHeaderBarElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface HeaderBar {
+      'isSearchVisible': boolean;
+      'query': string;
+      'version': string;
+    }
   }
+
+  interface HTMLHeaderBarElement extends StencilComponents.HeaderBar, HTMLStencilElement {}
+
   var HTMLHeaderBarElement: {
     prototype: HTMLHeaderBarElement;
     new (): HTMLHeaderBarElement;
@@ -72,16 +91,62 @@ declare global {
   }
   namespace JSXElements {
     export interface HeaderBarAttributes extends HTMLAttributes {
-
+      'isSearchVisible'?: boolean;
+      'onToggleHeaderSearch'?: (event: CustomEvent) => void;
+      'query'?: string;
+      'version'?: string;
     }
   }
 }
 
 
 declare global {
-  interface HTMLIconSearchElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface IconList {
+      'data': any;
+      'query': string;
+    }
   }
+
+  interface HTMLIconListElement extends StencilComponents.IconList, HTMLStencilElement {}
+
+  var HTMLIconListElement: {
+    prototype: HTMLIconListElement;
+    new (): HTMLIconListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'icon-list': HTMLIconListElement;
+  }
+  interface ElementTagNameMap {
+    'icon-list': HTMLIconListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'icon-list': JSXElements.IconListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface IconListAttributes extends HTMLAttributes {
+      'data'?: any;
+      'query'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface IconSearch {
+      'autofocus': string;
+      'query': string;
+      'size': string;
+    }
+  }
+
+  interface HTMLIconSearchElement extends StencilComponents.IconSearch, HTMLStencilElement {}
+
   var HTMLIconSearchElement: {
     prototype: HTMLIconSearchElement;
     new (): HTMLIconSearchElement;
@@ -99,6 +164,42 @@ declare global {
   }
   namespace JSXElements {
     export interface IconSearchAttributes extends HTMLAttributes {
+      'autofocus'?: string;
+      'onHasSearched'?: (event: CustomEvent) => void;
+      'query'?: string;
+      'size'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface IoniconsSite {
+
+    }
+  }
+
+  interface HTMLIoniconsSiteElement extends StencilComponents.IoniconsSite, HTMLStencilElement {}
+
+  var HTMLIoniconsSiteElement: {
+    prototype: HTMLIoniconsSiteElement;
+    new (): HTMLIoniconsSiteElement;
+  };
+  interface HTMLElementTagNameMap {
+    'ionicons-site': HTMLIoniconsSiteElement;
+  }
+  interface ElementTagNameMap {
+    'ionicons-site': HTMLIoniconsSiteElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'ionicons-site': JSXElements.IoniconsSiteAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface IoniconsSiteAttributes extends HTMLAttributes {
 
     }
   }
@@ -106,9 +207,16 @@ declare global {
 
 
 declare global {
-  interface HTMLLandingPageElement extends HTMLStencilElement {
 
+  namespace StencilComponents {
+    interface LandingPage {
+      'data': any;
+      'query': string;
+    }
   }
+
+  interface HTMLLandingPageElement extends StencilComponents.LandingPage, HTMLStencilElement {}
+
   var HTMLLandingPageElement: {
     prototype: HTMLLandingPageElement;
     new (): HTMLLandingPageElement;
@@ -126,7 +234,121 @@ declare global {
   }
   namespace JSXElements {
     export interface LandingPageAttributes extends HTMLAttributes {
+      'data'?: any;
+      'query'?: string;
+    }
+  }
+}
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface NotfoundPage {
+
+    }
+  }
+
+  interface HTMLNotfoundPageElement extends StencilComponents.NotfoundPage, HTMLStencilElement {}
+
+  var HTMLNotfoundPageElement: {
+    prototype: HTMLNotfoundPageElement;
+    new (): HTMLNotfoundPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'notfound-page': HTMLNotfoundPageElement;
+  }
+  interface ElementTagNameMap {
+    'notfound-page': HTMLNotfoundPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'notfound-page': JSXElements.NotfoundPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NotfoundPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ToastBar {
+      'selectedIcon': {
+    name: string,
+    icons: Array<string>,
+    tags: Array<string>
+  };
+      'selectedIconType': string;
+    }
+  }
+
+  interface HTMLToastBarElement extends StencilComponents.ToastBar, HTMLStencilElement {}
+
+  var HTMLToastBarElement: {
+    prototype: HTMLToastBarElement;
+    new (): HTMLToastBarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'toast-bar': HTMLToastBarElement;
+  }
+  interface ElementTagNameMap {
+    'toast-bar': HTMLToastBarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'toast-bar': JSXElements.ToastBarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ToastBarAttributes extends HTMLAttributes {
+      'onClearToast'?: (event: CustomEvent) => void;
+      'onToggleHeaderSearch'?: (event: CustomEvent) => void;
+      'selectedIcon'?: {
+    name: string,
+    icons: Array<string>,
+    tags: Array<string>
+  };
+      'selectedIconType'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface UsagePage {
+      'data': any;
+      'match': MatchResults;
+    }
+  }
+
+  interface HTMLUsagePageElement extends StencilComponents.UsagePage, HTMLStencilElement {}
+
+  var HTMLUsagePageElement: {
+    prototype: HTMLUsagePageElement;
+    new (): HTMLUsagePageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'usage-page': HTMLUsagePageElement;
+  }
+  interface ElementTagNameMap {
+    'usage-page': HTMLUsagePageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'usage-page': JSXElements.UsagePageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface UsagePageAttributes extends HTMLAttributes {
+      'data'?: any;
+      'match'?: MatchResults;
     }
   }
 }
