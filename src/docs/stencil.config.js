@@ -10,7 +10,8 @@ exports.config = {
     {
       type: 'www',
       dir: '../../docs/',
-      serviceWorker: false
+      serviceWorker: false,
+      empty: false
     }
   ],
   globalStyle: 'site/global/style.css',
