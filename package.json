@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@ionic/jpml": "latest",
-    "@stencil/core": "^0.8.1",
+    "@stencil/core": "^0.8.2",
     "@stencil/dev-server": "latest",
     "@stencil/router": "^0.1.6",
     "@stencil/sass": "0.0.3",
