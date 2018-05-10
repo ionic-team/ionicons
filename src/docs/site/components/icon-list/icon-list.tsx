@@ -35,6 +35,24 @@ export class LandingPage {
     this.selectedIcon = '';
   }
 
+  @Listen('window:scroll')
+  handleScroll() {
+    requestAnimationFrame(this.checkScroll.bind(this));
+  }
+
+  checkScroll() {
+    const headerBars = this.el.querySelectorAll('.icon-list__header-bar');
+
+    for (let i = 0; i < headerBars.length; i++) {
+      const bar = headerBars[i];
+      if (bar.getBoundingClientRect().top < 67) {
+        bar.classList.add('sticky');
+      } else {
+        bar.classList.remove('sticky');
+      }
+    }
+  }
+
   filterIcons() {
     const search = this.query.trim().toLowerCase();
     const results = {

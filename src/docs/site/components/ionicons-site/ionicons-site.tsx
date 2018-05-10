@@ -61,7 +61,7 @@ export class IoniconsSite {
     const headerSearchEl: HTMLElement = document.querySelector('header .search-input');
     const bodySearchEl: HTMLElement = document.querySelector('icon-list .search-input');
 
-    if (!bodySearchEl) return; 
+    if (!bodySearchEl) return;
 
     const headerInput: HTMLElement = headerSearchEl.querySelector('input');
     const bodyInput: HTMLElement = bodySearchEl.querySelector('input');
