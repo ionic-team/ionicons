@@ -1,0 +1,335 @@
+/*******************************************************************************
+MeyerWeb Reset
+*******************************************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  padding-top: 136px;
+  border-top: 1px solid #4F8EF7;
+  background: url("img/ionicons-logo.png") no-repeat center 45px;
+  color:#373737;
+  text-align: center;
+  font-size: 16px;
+  font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+         only screen and (   min--moz-device-pixel-ratio: 1.3),
+         only screen and (        min-device-pixel-ratio: 1.3),
+         only screen and (             min-resolution: 124dpi)
+{
+  body {
+    background-image: url("img/ionicons-logo@2x.png");
+    background-size: 110px 67px;
+  }
+}
+
+h1 {
+  color: #999;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+h2 {
+  color: #999;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin: 25px 0;
+}
+
+a {
+  color: #4F8EF7;
+  text-decoration: none;
+  opacity: .7;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  transition-property: color;
+  transition-property: opacity;
+}
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.download {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.download, .search {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 200px;
+  width: 100%;
+}
+
+.download a {
+  display: block;
+  padding: 12px 0;
+  border: 2px solid #4F8EF7;
+  border-radius: 4px;
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+.download a:hover {
+  background: #4F8EF7;
+  color: white;
+}
+.version {
+  margin: 2px auto;
+  color: #ccc;
+  font-size: 12px;
+  font-family: "AvenirNextLTPro-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input {
+  font-weight: normal;
+  font-family: "AvenirNextLTPro-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+}
+input:focus {
+  outline: none;
+}
+::-webkit-input-placeholder {
+   padding-left: 26px;
+   color: #999;
+}
+:-moz-placeholder {
+   color: #999;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;
+}
+:-ms-input-placeholder {
+   color: #999;
+}
+
+.search {
+  position: relative;
+  background: #F5F5F5;
+}
+.search input {
+  padding: 4px 6px;
+  width: 175px;
+  border: 0;
+  border-radius: 4px;
+  background: #F5F5F5;
+  text-align: center;
+  font-size: 14px;
+}
+.search input.has-text + i {
+  display: none;
+}
+.search i {
+  position: absolute;
+  top: 3px;
+  left: 68px;
+  color: #999;
+}
+
+ul {
+  margin: 40px auto;
+  padding-left: 5px;
+  max-width: 700px;
+  width: 100%;
+  list-style: none;
+  text-align: left;
+  font-size: 1px;
+}
+li {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 22px;
+  width: 42px;
+  border-radius: 4px;
+  list-style: none;
+  text-align: center;
+  font-weight: normal;
+  font-size: 32px;
+  cursor: pointer;
+}
+li:hover {
+  color: #4F8EF7;
+}
+li.active {
+  color: #4F8EF7;
+}
+
+#icon-panel {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  padding: 10px 2px;
+  width: 260px;
+  height: 58px;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  text-align: center;
+  font-size: 14px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  opacity: .96;
+}
+
+#icon-name {
+  display: block;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  border: 0;
+}
+
+#icon-code {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+#icons {
+  transition: opacity .2s ease-in-out;
+}
+.search-init {
+  opacity: 0.15;
+}
+.search-results li {
+  display: none;
+}
+
+.footer {
+  margin: 30px auto;
+  padding: 20px 0;
+  max-width: 700px;
+  width: 100%;
+  border-top: 1px solid #4e8ef7;
+  color: #666;
+  font-size: 12px;
+}
+.links a {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+@media (max-width: 568px) {
+  h1 {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 12px;
+  }
+  .download {
+    display: none;
+  }
+  ul {
+    padding: 0;
+    width: 320px;
+  }
+  li {
+    margin: 0;
+    padding: 10px 0;
+    width:45px;
+  }
+  li:hover {
+    color: black;
+  }
+  #icon-panel {
+    display: none;
+  }
+}
+
+.cdn {
+  padding-top: 40px;
+}
+
+.cdn p {
+  margin: 6px 0;
+}
+
+.cdn input {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 480px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  background-image: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  color: #333;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.33;
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.cdn input:focus {
+  outline: 0;
+  border-color: #4F8EF7;
+}
+
+/* @license
+ * MyFonts Webfont Build ID 2656303, 2013-10-02T11:03:28-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Avenir Next Pro Regular by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-regular/
+ *
+ * Webfont: Avenir Next Pro Medium by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir-next-pro/pro-medium/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2656303
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright &#x00A9; 2004 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. Avenir is a trademark of Linotype GmbH
+ *
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work
+@import url("//hello.myfonts.net/count/28882f");*/
+
+
+@font-face {font-family: 'AvenirNextLTPro-Regular';src: url('site-fonts/28882F_0_0.eot');src: url('site-fonts/28882F_0_0.eot?#iefix') format('embedded-opentype'),url('site-fonts/28882F_0_0.woff') format('woff'),url('site-fonts/28882F_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirNextLTPro-Medium';src: url('site-fonts/28882F_1_0.eot');src: url('site-fonts/28882F_1_0.eot?#iefix') format('embedded-opentype'),url('site-fonts/28882F_1_0.woff') format('woff'),url('site-fonts/28882F_1_0.ttf') format('truetype');}

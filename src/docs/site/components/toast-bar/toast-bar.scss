@@ -1,0 +1,219 @@
+toast-bar {
+  .toast-bar {
+    position: fixed;
+    padding: 12px 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  .toast-bar.isVisible {
+    animation-name: slideIn;
+    animation-duration: 0.6s;
+    animation-timing-function: var(--easeOutExpo);
+    animation-fill-mode: forwards;
+    opacity: 1;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+
+  .toast-bar.isHidden {
+    animation-name: slideOut;
+    animation-duration: 0.4s;
+    animation-timing-function: var(--easeOutExpo);
+    animation-fill-mode: forwards;
+  }
+  @keyframes slideOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  .toast-bar.preload {
+    opacity: 0;
+  }
+
+  .toast-bar--inner {
+    background-color: var(--color-shark);
+    height: 80px;
+    border-radius: 15px;
+    padding: 0 20px 0 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1),0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+
+    h4 {
+      color: #fff;
+      margin: 0;
+      white-space: nowrap;
+      margin-right: 30px;
+    }
+  }
+
+  .toast-bar__details {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .toast-bar__section-header,
+  .toast-bar__section-header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toast-bar__section-header {
+    height: 10px;
+    margin-bottom: 7px;
+
+    h6 {
+      display: inline-block;
+    }
+
+    a {
+      transition: border 0.3s;
+      color: var(--color-melrose);
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      border-bottom-color: var(--color-melrose-dark);
+    }
+
+    i {
+      margin-left: 3px;
+    }
+  }
+
+  .toast-bar__section:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .toast-bar__section:first-child {
+    position: relative;
+    max-width: none;
+  }
+
+  .toast-bar__details code {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    height: 32px;
+    padding: 0 12px;
+    cursor: text;
+    overflow: hidden;
+  }
+
+  @supports (display: grid) { // target non-ie11 browsers
+    .toast-bar__section:not(:first-child) {
+      flex: 0;
+    }
+    .toast-bar__section:first-child {
+      flex: 1;
+    }
+    .toast-bar__details code {
+      overflow-x: auto;
+    }
+  }
+
+  .toast-bar__details code > span {
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .toast-bar__section .confirmation {
+    font-size: 11px;
+    font-family: 'Eina';
+    font-weight: 600;
+    color: #aec6ff;
+    display: flex;
+    opacity: 0;
+    transform: translateY(5px);
+    margin-left: 12px;
+  }
+
+  .toast-bar__section .confirmation .ion {
+    color: #aec6ff;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .toast-bar__section.copied .confirmation {
+    animation-name: slideInOut;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes slideInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    10% {
+      opacity: 0.9;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 0.9;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+  }
+
+  .toast-bar__details code:hover .hover-highlight {
+    background-color: #5882b2;
+  }
+
+  @media screen and (max-width: 768px) {
+    .toast-bar__section:not(:first-child) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    .toast-bar--inner {
+      padding: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+    .toast-bar--inner h4 {
+      margin: 0 0 16px;
+    }
+    .toast-bar__section {
+      max-width: 100% !important;
+    }
+    .toast-bar__details {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+}

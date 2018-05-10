@@ -16,3 +16,4 @@ tmp/
 .DS_Store
 dist/
 docs/
+!/src/docs
