@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
     "build.icon": "stencil build",
-    "build.docs": "stencil build --prerender --config src/docs/stencil.config.js",
+    "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
     "build.css": "node scripts/build-css.js",
     "build.zip": "node scripts/build-zip.js",
