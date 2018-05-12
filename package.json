@@ -28,14 +28,14 @@
     "@stencil/core": "^0.8.2",
     "@stencil/dev-server": "latest",
     "@stencil/router": "^0.1.6",
-    "@stencil/sass": "0.0.3",
+    "@stencil/sass": "0.0.5",
     "@stencil/utils": "latest",
     "fs-extra": "4.0.2",
     "highlight.js": "^9.12.0",
-    "node-sass": "4.7.2",
-    "np": "2.17.0",
+    "node-sass": "4.9.0",
+    "np": "2.20.1",
     "svg2png": "4.1.1",
-    "svgo": "1.0.3"
+    "svgo": "1.0.5"
   },
   "keywords": [
     "ionicons",
