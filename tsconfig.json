@@ -9,8 +9,8 @@
       "es2015"
     ],
     "moduleResolution": "node",
-    "module": "es2015",
-    "target": "es2015",
+    "module": "esnext",
+    "target": "es2017",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
