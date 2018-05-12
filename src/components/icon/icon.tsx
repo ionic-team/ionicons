@@ -5,7 +5,6 @@ import { Component, Prop, State, Watch } from '@stencil/core';
   host: {
     theme: 'icon'
   },
-  assetsDir: 'svg',
   styleUrl: 'icon.css'
 })
 export class Icon {
@@ -13,6 +12,7 @@ export class Icon {
   @State() private svgContent?: string;
 
   @Prop({ context: 'isServer'}) private isServer!: boolean;
+  @Prop({ context: 'publicPath'}) private publicPath!: string;
 
   @Prop() mode!: string;
 
@@ -55,7 +55,7 @@ export class Icon {
   @Watch('ios')
   async loadIcon() {
     if (!this.isServer) {
-      this.svgContent = await loadSvgContent(this.getIconName());
+      this.svgContent = await loadSvgContent(this.getIconName(), this.publicPath);
     }
   }
 
@@ -122,22 +122,29 @@ export class Icon {
 
 
   render() {
-    if (this.svgContent) {
-      // we've already loaded up this svg at one point
-      // and the svg content we've loaded and assigned checks out
-      // render this svg!!
-      return <div class="icon-inner" innerHTML={this.svgContent}></div>;
-    }
-
-    // SVG not available
-    return <div class="icon-inner">{/* loading svg */}</div>;
+    return <div class="icon-inner" innerHTML={this.svgContent}></div>;
   }
 }
 
-async function loadSvgContent(iconName: string | null) {
-  if (iconName) {
-    const url = `./svg/${iconName}.js`;
-    return (await import(url)).default;
+const requests = new Map<string, Promise<string | undefined>>();
+
+async function loadSvgContent(iconName: string | null, publicPath: string) {
+  if (!iconName) {
+    return undefined;
+  }
+  let req = requests.get(iconName);
+  if (!req) {
+    req = requestIcon(iconName, publicPath);
+    requests.set(iconName, req);
+  }
+  return req;
+}
+
+async function requestIcon(iconName: string, publicPath: string) {
+  const url = `${publicPath}../svg/${iconName}.svg`;
+  const res = await fetch(url, {keepalive: true, cache: 'force-cache'});
+  if (res.ok) {
+    return res.text();
   }
   return undefined;
 }

@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
+    "build": "npm run build.icon && npm run generate && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
     "build.icon": "stencil build --prod",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
@@ -19,7 +19,6 @@
     "mode.comparison": "node scripts/mode-comparison.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "generate": "python2 scripts/generate.py",
-    "svg-to-js": "node scripts/svg-to-js.js",
     "png": "node scripts/png.js",
     "release": "npm run build && np --any-branch"
   },
