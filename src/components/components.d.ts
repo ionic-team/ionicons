@@ -44,6 +44,7 @@ declare global {
        * Specifies which icon to use on `md` mode.
        */
       'md': string;
+      'mode': string;
       /**
        * Specifies which icon to use. The appropriate icon will be used based on the mode. For more information, see [Ionicons](/docs/ionicons/).
        */
@@ -51,7 +52,7 @@ declare global {
       /**
        * The size of the icon. Available options are: `"small"` and `"large"`.
        */
-      'size': string;
+      'size': 'small' | 'large';
     }
   }
 
@@ -90,6 +91,7 @@ declare global {
        * Specifies which icon to use on `md` mode.
        */
       'md'?: string;
+      'mode'?: string;
       /**
        * Specifies which icon to use. The appropriate icon will be used based on the mode. For more information, see [Ionicons](/docs/ionicons/).
        */
@@ -97,7 +99,7 @@ declare global {
       /**
        * The size of the icon. Available options are: `"small"` and `"large"`.
        */
-      'size'?: string;
+      'size'?: 'small' | 'large';
     }
   }
 }

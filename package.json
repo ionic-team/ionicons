@@ -9,8 +9,8 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
-    "build.icon": "stencil build",
+    "build": "npm run build.icon && npm run generate && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
+    "build.icon": "stencil build --prod",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
     "build.css": "node scripts/build-css.js",
@@ -18,8 +18,7 @@
     "icon-copy": "node scripts/copy-svg-to-dist.js",
     "mode.comparison": "node scripts/mode-comparison.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
-    "generate": "python scripts/generate.py",
-    "svg-to-js": "node scripts/svg-to-js.js",
+    "generate": "python2 scripts/generate.py",
     "png": "node scripts/png.js",
     "release": "npm run build && np --any-branch"
   },
@@ -28,14 +27,14 @@
     "@stencil/core": "^0.8.2",
     "@stencil/dev-server": "latest",
     "@stencil/router": "^0.1.6",
-    "@stencil/sass": "0.0.3",
+    "@stencil/sass": "0.0.5",
     "@stencil/utils": "latest",
     "fs-extra": "4.0.2",
     "highlight.js": "^9.12.0",
-    "node-sass": "4.7.2",
-    "np": "2.17.0",
+    "node-sass": "4.9.0",
+    "np": "2.20.1",
     "svg2png": "4.1.1",
-    "svgo": "1.0.3"
+    "svgo": "1.0.5"
   },
   "keywords": [
     "ionicons",
