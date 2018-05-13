@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch } from '@stencil/core';
+import { Component, Prop, State, Watch, Element } from '@stencil/core';
 
 @Component({
   tag: 'ion-icon',
@@ -8,6 +8,10 @@ import { Component, Prop, State, Watch } from '@stencil/core';
   styleUrl: 'icon.css'
 })
 export class Icon {
+
+  @Element() el!: HTMLElement;
+
+  private visible = false;
 
   @State() private svgContent?: string;
 
@@ -54,13 +58,16 @@ export class Icon {
   @Watch('md')
   @Watch('ios')
   async loadIcon() {
-    if (!this.isServer) {
+    if (!this.isServer && this.visible) {
       this.svgContent = await loadSvgContent(this.getIconName(), this.publicPath);
     }
   }
 
   componentWillLoad() {
-    this.loadIcon();
+    waitUntilVisible(this.el, '10px').then(() => {
+      this.visible = true;
+      this.loadIcon();
+    });
   }
 
   private getIconName() {
@@ -147,4 +154,21 @@ async function requestIcon(iconName: string, publicPath: string) {
     return res.text();
   }
   return undefined;
+}
+
+export function waitUntilVisible(el: HTMLElement, rootMargin?: string) {
+  return new Promise((resolve) => {
+    if (IntersectionObserver) {
+      const io = new IntersectionObserver(data => {
+        if (data[0].isIntersecting) {
+          resolve();
+          io.disconnect();
+        }
+      }, { rootMargin });
+      io.observe(el);
+    } else {
+      // fall back to setTimeout for Safari and IE
+      setTimeout(resolve, 300);
+    }
+  });
 }
