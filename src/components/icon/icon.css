@@ -11,6 +11,9 @@ ion-icon .icon-inner {
 ion-icon svg {
   fill: currentColor;
   stroke: currentColor;
+
+  width: auto;
+  height: 1em;
 }
 
 .icon-small .icon-inner {

@@ -59,7 +59,7 @@ export class Icon {
   @Watch('ios')
   async loadIcon() {
     if (!this.isServer && this.visible) {
-      this.svgContent = await loadSvgContent(this.getIconName(), this.publicPath);
+      this.svgContent = await loadSvgContent(this.getIconURL());
     }
   }
 
@@ -68,6 +68,22 @@ export class Icon {
       this.visible = true;
       this.loadIcon();
     });
+  }
+
+  private getIconURL() {
+    const name = this.name;
+    if(!name) {
+      return null;
+    }
+    if (
+      name.startsWith('.') ||
+      name.startsWith('/') ||
+      name.startsWith('http://') ||
+      name.startsWith('https://')
+    ) {
+      return name;
+    }
+    return `${this.publicPath}../svg/${this.getIconName()}.svg`;
   }
 
   private getIconName() {
@@ -135,20 +151,19 @@ export class Icon {
 
 const requests = new Map<string, Promise<string | undefined>>();
 
-async function loadSvgContent(iconName: string | null, publicPath: string) {
-  if (!iconName) {
+async function loadSvgContent(url: string | null) {
+  if (!url) {
     return undefined;
   }
-  let req = requests.get(iconName);
+  let req = requests.get(url);
   if (!req) {
-    req = requestIcon(iconName, publicPath);
-    requests.set(iconName, req);
+    req = requestIcon(url);
+    requests.set(url, req);
   }
   return req;
 }
 
-async function requestIcon(iconName: string, publicPath: string) {
-  const url = `${publicPath}../svg/${iconName}.svg`;
+async function requestIcon(url: string) {
   const res = await fetch(url, {keepalive: true, cache: 'force-cache'});
   if (res.ok) {
     return res.text();
