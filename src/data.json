@@ -6,6 +6,7 @@
         "md-add-circle-outline"
       ],
       "tags": [
+        "add",
         "circle"
       ]
     },
@@ -47,7 +48,9 @@
         "md-alarm"
       ],
       "tags": [
-        "alarm"
+        "alarm",
+        "clock",
+        "time"
       ]
     },
     {
@@ -621,7 +624,9 @@
         "md-cafe"
       ],
       "tags": [
-        "cafe"
+        "cafe",
+        "coffee",
+        "cup"
       ]
     },
     {
@@ -630,7 +635,7 @@
         "md-calculator"
       ],
       "tags": [
-        "arithmatic",
+        "arithmetic",
         "calculator",
         "math"
       ]
@@ -821,7 +826,7 @@
       ],
       "tags": [
         "close",
-        "cicle"
+        "circle"
       ]
     },
     {
@@ -1106,7 +1111,8 @@
         "md-create"
       ],
       "tags": [
-        "create"
+        "create",
+        "edit"
       ]
     },
     {
@@ -1227,7 +1233,8 @@
         "md-expand"
       ],
       "tags": [
-        "expand"
+        "expand",
+        "resize"
       ]
     },
     {
@@ -1518,7 +1525,9 @@
         "md-globe"
       ],
       "tags": [
-        "globe"
+        "globe",
+        "internet",
+        "world"
       ]
     },
     {
@@ -1563,6 +1572,7 @@
         "good",
         "happy",
         "like",
+        "smile",
         "yes"
       ]
     },
@@ -1677,7 +1687,8 @@
         "md-hourglass"
       ],
       "tags": [
-        "hourglass"
+        "hourglass",
+        "time"
       ]
     },
     {
@@ -2057,7 +2068,7 @@
         "microphone",
         "music",
         "noise",
-        "recorde",
+        "record",
         "sound",
         "speak"
       ]
@@ -2360,6 +2371,7 @@
       ],
       "tags": [
         "gps",
+        "location",
         "navigation",
         "pin"
       ]
@@ -2395,8 +2407,8 @@
         "home",
         "nature",
         "planet",
-        "planet",
-        "space"
+        "space",
+        "world"
       ]
     },
     {
@@ -2524,6 +2536,7 @@
       ],
       "tags": [
         "button",
+        "circle",
         "off",
         "radio"
       ]
@@ -2535,6 +2548,7 @@
       ],
       "tags": [
         "button",
+        "circle",
         "on",
         "radio"
       ]
@@ -2545,6 +2559,7 @@
         "md-radio"
       ],
       "tags": [
+        "music",
         "radio"
       ]
     },
@@ -2611,6 +2626,8 @@
         "md-remove-circle-outline"
       ],
       "tags": [
+        "circle",
+        "minus",
         "remove"
       ]
     },
@@ -2621,6 +2638,7 @@
       ],
       "tags": [
         "circle",
+        "minus",
         "remove"
       ]
     },
@@ -2668,6 +2686,7 @@
         "md-restaurant"
       ],
       "tags": [
+        "eat",
         "restaurant"
       ]
     },
@@ -2738,6 +2757,7 @@
         "md-rose"
       ],
       "tags": [
+        "flower",
         "rose"
       ]
     },
@@ -2777,7 +2797,8 @@
         "md-search"
       ],
       "tags": [
-        "magnifyingglass",
+        "glass",
+        "magnifying",
         "search"
       ]
     },
@@ -2870,6 +2891,7 @@
         "md-snow"
       ],
       "tags": [
+        "cold",
         "snow"
       ]
     },
@@ -2949,7 +2971,8 @@
         "md-stopwatch"
       ],
       "tags": [
-        "stopwatch"
+        "stopwatch",
+        "time"
       ]
     },
     {
@@ -3345,6 +3368,7 @@
         "md-wine"
       ],
       "tags": [
+        "glass",
         "wine"
       ]
     },
@@ -3616,7 +3640,9 @@
         "logo-model-s"
       ],
       "tags": [
-        "model-s"
+        "car",
+        "model-s",
+        "tesla"
       ]
     },
     {
@@ -3776,6 +3802,7 @@
         "logo-usd"
       ],
       "tags": [
+        "$",
         "usd"
       ]
     },
@@ -3808,6 +3835,7 @@
         "logo-windows"
       ],
       "tags": [
+        "microsoft",
         "windows"
       ]
     },
