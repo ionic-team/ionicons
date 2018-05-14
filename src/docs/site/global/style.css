@@ -288,7 +288,6 @@ p.lead {
 .hljs-selector-tag,
 .hljs-subst {
   color: #333;
-  font-weight: bold;
 }
 
 .hljs-number,
@@ -308,7 +307,6 @@ p.lead {
 .hljs-section,
 .hljs-selector-id {
   color: #900;
-  font-weight: bold;
 }
 
 .hljs-subst {
@@ -318,7 +316,6 @@ p.lead {
 .hljs-type,
 .hljs-class .hljs-title {
   color: #458;
-  font-weight: bold;
 }
 
 .hljs-tag,
@@ -345,7 +342,6 @@ p.lead {
 
 .hljs-meta {
   color: #999;
-  font-weight: bold;
 }
 
 .hljs-deletion {
@@ -402,6 +398,7 @@ p code {
   border-radius: 5px;
   display: block;
   overflow-x: auto;
+  margin: 18px 0px;
 }
 
 .styled-code + .styled-code {

@@ -22,13 +22,30 @@ export default function (version: string, type = "md", name = "heart") {
 `<ion-icon name="${name}"></ion-icon>`
 )}
 
-<h3>Platform Specific Icons</h3>
-<p>Many icons have both Material Design and iOS versions. Ionic will automatically use the correct version based on the platform.</p>
-<p>To specify the icon to use for each platform, use the <code>md</code> and <code>ios</code> attributes and provide the platform specific icon name.</p>
+<h3>Platform specific icons</h3>
+<p>Many icons have both Material Design and iOS versions.</p>
+
+<p>Ionic will automatically use the correct version based on the platform. To specify the icon to use for each platform, use the <code>md</code> and <code>ios</code> attributes and provide the platform specific icon name.</p>
 {(type == 'logo') ? highlight(
 `<ion-icon ios="ios-heart" md="md-heart"></ion-icon>`
 ):highlight(
 `<ion-icon ios="ios-${name}" md="md-${name}"></ion-icon>`
+)}
+
+<p>When using Ionicons without Ionic Framework, the icon will default to the Material Design icon style. To specify the non-default icon style, provide a platform specific icon name to the <code>name</code> attribute.</p>
+{highlight(`<ion-icon name="ios-heart"></ion-icon>`)}
+
+<h3>Icon sizes</h3>
+<p>To specify the icon size, you can use the <code>size</code> attribute for our pre-defined font sizes.</p>
+{highlight(
+`<ion-icon size="small">
+<ion-icon size="large">`
+)}
+<p>Or you can set a specific size by setting the <code>font-size</code> attribute on the <code>ion-icon</code> component.</p>
+{highlight(
+`ion-icon {
+  font-size: 64px;
+}`
 )}
 
 <h2>Using the Webfont</h2>
