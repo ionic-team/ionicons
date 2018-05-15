@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch } from '@stencil/core';
+import { Component, Element, Prop, State, Watch } from '@stencil/core';
 
 
 @Component({
@@ -10,19 +10,16 @@ import { Component, Prop, State, Watch } from '@stencil/core';
   styleUrl: 'icon.css'
 })
 export class Icon {
+  @Element() el: HTMLElement;
+
   @State() private svgContent: string = null;
+  @State() private isVisible: boolean;
 
   @Prop({ context: 'isServer'}) private isServer: boolean;
-
   @Prop({ context: 'resourcesUrl'}) private resourcesUrl: string;
-
   @Prop({ context: 'mode' }) mode: string;
-
   @Prop({ context: 'document' }) doc: Document;
-
-  @Prop({ context: 'window' }) win: Window;
-
-  @Prop({ context: 'appVersion' }) appVersion: string;
+  @Prop({ context: 'window' }) win: any;
 
   @Prop() color: string;
 
@@ -68,34 +65,48 @@ export class Icon {
   componentWillLoad() {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
-    this.update();
+    // only load the svg if it's visible
+    this.waitUntilVisible(this.el, '10px', () => {
+      this.isVisible = true;
+      this.loadIcon();
+    });
   }
+
+
+  waitUntilVisible(el: HTMLElement, rootMargin: string, cb: Function) {
+    if (this.win.IntersectionObserver) {
+      const io = new this.win.IntersectionObserver(data => {
+        if (data[0].isIntersecting) {
+          cb();
+          io.disconnect();
+        }
+      }, { rootMargin });
+      io.observe(el);
+
+    } else {
+      // browser doesn't support IntersectionObserver
+      // so just fallback to always show it
+      cb();
+    }
+  }
+
 
   @Watch('name')
   @Watch('src')
   @Watch('icon')
-  update() {
-    if (!this.isServer) {
+  loadIcon() {
+    if (!this.isServer && this.isVisible) {
       const url = this.getUrl();
 
       if (url) {
-        const cacheKey = `ionicons_${this.appVersion}_${url}`;
-        const cachedSvg = this.win.localStorage.getItem(cacheKey);
-
-        if (cachedSvg) {
-          this.svgContent = cachedSvg;
-
-        } else {
-          fetch(url).then(rsp => {
-            rsp.text().then(svgContent => {
-              this.svgContent = validateContent(this.doc, svgContent);
-              this.win.localStorage.setItem(cacheKey, this.svgContent);
-            })
-          });
-        }
+        getSvgContent(url).then(svgContent => {
+          this.svgContent = validateContent(this.doc, svgContent);
+        });
       }
     }
   }
+
+
 
   getUrl() {
     let url = getSrc(this.src);
@@ -173,6 +184,29 @@ export class Icon {
 }
 
 
+const requests = new Map<string, Promise<string>>();
+
+function getSvgContent(url: string) {
+  // see if we already have a request for this url
+  let req = requests.get(url);
+
+  if (!req) {
+    // we don't already have a request
+    req = fetch(url, { keepalive: true, cache: 'force-cache' }).then(rsp => {
+      if (rsp.ok) {
+        return rsp.text();
+      }
+      return Promise.resolve(null);
+    });
+
+    // cache for the same requests
+    requests.set(url, req);
+  }
+
+  return req;
+}
+
+
 function getName(name: string, mode: string, ios: string, md: string) {
   if (typeof name !== 'string') {
     return null;
@@ -222,26 +256,27 @@ function getSrc(src: string) {
 
 
 function validateContent(document: Document, svgContent: string) {
-  const frag = document.createDocumentFragment();
-  const div = document.createElement('div');
-  div.innerHTML = svgContent;
-  frag.appendChild(div);
+  if (svgContent) {
+    const frag = document.createDocumentFragment();
+    const div = document.createElement('div');
+    div.innerHTML = svgContent;
+    frag.appendChild(div);
 
-  // must only have 1 root element
-  if (div.children.length === 1) {
-    const rootElm = div.firstElementChild;
+    // must only have 1 root element
+    if (div.children.length === 1) {
+      const rootElm = div.firstElementChild;
 
-    // root element must be an svg
-    if (rootElm.nodeName === 'SVG') {
+      // root element must be an svg
+      if (rootElm.nodeName === 'SVG') {
 
-      // lets double check we've got valid elements
-      // do not allow scripts
-      if (isValid(rootElm as any)) {
-        return svgContent;
+        // lets double check we've got valid elements
+        // do not allow scripts
+        if (isValid(rootElm as any)) {
+          return svgContent;
+        }
       }
     }
   }
-
   return null;
 }
 
