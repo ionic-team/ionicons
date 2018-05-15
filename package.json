@@ -1,40 +1,38 @@
 {
   "name": "ionicons",
-  "version": "4.0.0",
+  "version": "4.1.0-0",
   "description": "Premium icons for Ionic.",
   "files": [
     "dist/"
   ],
-  "main": "dist/ionicons.js",
-  "types": "dist/types/index.d.ts",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "unpkg": "dist/ionicons.js",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run svg-to-js && npm run png && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
+    "build": "npm run build.icon && npm run generate && npm run build.data && npm run build.css && npm run build.docs && npm run copy.tasks",
     "build.icon": "stencil build",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
     "build.css": "node scripts/build-css.js",
-    "build.zip": "node scripts/build-zip.js",
-    "icon-copy": "node scripts/copy-svg-to-dist.js",
+    "copy.tasks": "node scripts/copy-tasks.js",
+    "dev": "npm run build && sd concurrent \"stencil build --dev --config --es5 src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "mode.comparison": "node scripts/mode-comparison.js",
-    "dev": "npm run build && sd concurrent \"stencil build --dev --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "generate": "python scripts/generate.py",
-    "svg-to-js": "node scripts/svg-to-js.js",
-    "png": "node scripts/png.js",
     "release": "npm run build && np --any-branch"
   },
   "devDependencies": {
-    "@ionic/jpml": "latest",
-    "@stencil/core": "^0.8.2",
+    "@stencil/core": "^0.9.0-0",
     "@stencil/dev-server": "latest",
     "@stencil/router": "^0.1.6",
-    "@stencil/sass": "0.0.3",
+    "@stencil/sass": "^0.0.5",
     "@stencil/utils": "latest",
+    "archiver": "^2.1.1",
     "fs-extra": "4.0.2",
     "highlight.js": "^9.12.0",
     "node-sass": "4.7.2",
     "np": "2.17.0",
-    "svg2png": "4.1.1",
     "svgo": "1.0.3"
   },
   "keywords": [
@@ -66,8 +64,5 @@
   "bugs": {
     "url": "https://github.com/ionic-team/ionicons/issues"
   },
-  "license": "MIT",
-  "dependencies": {
-    "archiver": "^2.1.1"
-  }
+  "license": "MIT"
 }

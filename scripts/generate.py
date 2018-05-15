@@ -16,7 +16,7 @@ SVGO_CONFIG_PATH = os.path.join(ROOT_PATH, '.svgo.yml')
 INPUT_SVG_DIR = os.path.join(SRC_PATH, 'svg')
 OUTPUT_SVG_DIR = os.path.join(DIST_PATH, 'svg')
 DATA_PATH = os.path.join(DIST_PATH, 'data')
-FONTS_FOLDER_PATH = os.path.join(DIST_PATH, 'fonts')
+FONTS_DOCS_PATH = os.path.join(ROOT_PATH, 'docs', 'fonts')
 CSS_FOLDER_PATH = os.path.join(DIST_PATH, 'css')
 INPUT_SCSS_FOLDER_PATH = os.path.join(SRC_PATH, 'scss')
 OUTPUT_SCSS_FOLDER_PATH = os.path.join(DIST_PATH, 'scss')
@@ -37,6 +37,7 @@ def main():
 
   if requires_update():
     generate_font_files()
+    generate_docs_designer_pack_zip()
 
   data = get_build_data()
 
@@ -64,7 +65,13 @@ def requires_update():
   last_hash = data.get('hash')
   f.close()
 
-  if last_hash != current_hash or not os.path.exists(FONTS_FOLDER_PATH):
+  fonts_folder_exists = os.path.exists(FONTS_DOCS_PATH)
+
+  print 'old hash: %s' % (last_hash)
+  print 'new hash: %s' % (current_hash)
+  print 'fonts folder exists: %s' % (fonts_folder_exists)
+
+  if last_hash != current_hash or (not fonts_folder_exists):
     print "Generating fonts..."
     data['hash'] = current_hash
 
@@ -80,6 +87,12 @@ def requires_update():
 def generate_font_files():
   print "Generate Fonts"
   cmd = "fontforge -script %s/font/generate_font.py" % (SCRIPTS_PATH)
+  call(cmd, shell=True)
+
+
+def generate_docs_designer_pack_zip():
+  print "Generate Docs Designer Pack Zip"
+  cmd = "node %s/build-zip.js" % (SCRIPTS_PATH)
   call(cmd, shell=True)
 
 
@@ -113,7 +126,7 @@ def generate_svg_files():
 
 def rename_svg_glyph_names(data):
   # hacky and slow (but safe) way to rename glyph-name attributes
-  svg_path = os.path.join(FONTS_FOLDER_PATH, 'ionicons.svg')
+  svg_path = os.path.join(FONTS_DOCS_PATH, 'ionicons.svg')
   svg_file = codecs.open(svg_path, 'r+', 'utf-8')
   svg_text = svg_file.read()
   svg_file.seek(0)
