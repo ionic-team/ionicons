@@ -12,7 +12,7 @@ import copy
 
 SCRIPTS_FONT_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_SVG_DIR = os.path.join(SCRIPTS_FONT_DIR, '..', '..', 'src', 'svg')
-OUTPUT_FONT_DIR = os.path.join(SCRIPTS_FONT_DIR, '..', '..', 'dist', 'fonts')
+OUTPUT_FONT_DIR = os.path.join(SCRIPTS_FONT_DIR, '..', '..', 'docs', 'fonts')
 OUTPUT_IONICONS_FONT_DIR = os.path.join(OUTPUT_FONT_DIR, 'ionicons')
 MANIFEST_PATH = os.path.join(SCRIPTS_FONT_DIR, '..', 'manifest.json')
 AUTO_WIDTH = True

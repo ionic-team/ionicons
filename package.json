@@ -11,15 +11,14 @@
   "unpkg": "dist/ionicons.js",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run build.icon && npm run generate && npm run build.data && npm run build.css && npm run build.zip && npm run build.docs && npm run icon-copy",
+    "build": "npm run build.icon && npm run generate && npm run build.data && npm run build.css && npm run build.docs && npm run copy.tasks",
     "build.icon": "stencil build",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
     "build.data": "node scripts/data.js",
     "build.css": "node scripts/build-css.js",
-    "build.zip": "node scripts/build-zip.js",
-    "icon-copy": "node scripts/copy-svg-to-dist.js",
-    "mode.comparison": "node scripts/mode-comparison.js",
+    "copy.tasks": "node scripts/copy-tasks.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --config --es5 src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
+    "mode.comparison": "node scripts/mode-comparison.js",
     "generate": "python scripts/generate.py",
     "release": "npm run build && np --any-branch"
   },
