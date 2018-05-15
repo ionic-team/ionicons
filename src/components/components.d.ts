@@ -32,9 +32,6 @@ declare global {
        * Specifies the label to use for accessibility. Defaults to the icon name.
        */
       'ariaLabel': string;
-      /**
-       * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
-       */
       'color': string;
       /**
        * Specifies which icon to use on `ios` mode.
@@ -78,9 +75,6 @@ declare global {
        * Specifies the label to use for accessibility. Defaults to the icon name.
        */
       'ariaLabel'?: string;
-      /**
-       * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
-       */
       'color'?: string;
       /**
        * Specifies which icon to use on `ios` mode.
@@ -103,3 +97,5 @@ declare global {
 }
 
 declare global { namespace JSX { interface StencilJSX {} } }
+
+export declare function defineCustomElements(window: any): void;
