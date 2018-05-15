@@ -2,45 +2,45 @@
   "namespace": "DocsSite",
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
-  "corePolyfilled": "es5-build-disabled.js",
   "global": "docssite.global.js",
-  "core": "docssite.core.js",
+  "core": "docssite.viz7bsay.js",
+  "corePolyfilled": "docssite.jwdgw0bm.js",
   "components": {
     "footer-bar": {
-      "$": "footer-bar"
+      "$": "vtu3zyh5"
     },
     "header-bar": {
-      "$": "header-bar"
+      "$": "w2wqrpjp"
     },
     "icon-list": {
-      "$": "icon-list"
+      "$": "n5viegel"
     },
     "icon-search": {
-      "$": "icon-search"
+      "$": "ms1l1l4a"
     },
     "ionicons-site": {
-      "$": "header-bar"
+      "$": "w2wqrpjp"
     },
     "landing-page": {
-      "$": "icon-list"
+      "$": "n5viegel"
     },
     "notfound-page": {
-      "$": "notfound-page"
+      "$": "d83fvjds"
     },
     "stencil-route": {
-      "$": "header-bar"
+      "$": "w2wqrpjp"
     },
     "stencil-route-link": {
-      "$": "stencil-route-link"
+      "$": "5szlxwny"
     },
     "stencil-router": {
-      "$": "header-bar"
+      "$": "w2wqrpjp"
     },
     "toast-bar": {
-      "$": "icon-list"
+      "$": "n5viegel"
     },
     "usage-page": {
-      "$": "usage-page"
+      "$": "oy9mzgm7"
     }
   }
 }
