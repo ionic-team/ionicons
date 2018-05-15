@@ -22,7 +22,7 @@ export class ToastBar {
   @Event() clearToast: EventEmitter;
   @Event() toggleHeaderSearch: EventEmitter;
 
-  handleCodeClick(ev: MouseEvent) {
+  handleCodeClick() {
     const codeElParent = this.el.querySelector('.toast-bar__section:first-child');
     const el = document.createElement('textarea');
 
@@ -103,7 +103,7 @@ export class ToastBar {
               <div class="btn btn--gray btn--small btn--icon">
                 <i class={'ion ion-' + name}></i>
               </div>
-              <a class="btn btn--gray btn--small" download={`/svg/${name}.svg`} href={`/svg/${name}.svg`}>
+              <a class="btn btn--gray btn--small" download={`/ionicons/svg/${name}.svg`} href={`/ionicons/svg/${name}.svg`}>
                 <i class='ion ion-md-download'></i>
                 SVG
               </a>
@@ -139,7 +139,7 @@ export class ToastBar {
                   </div>
 
                   <code>
-                    <span class="hover-highlight" onClick={ev => this.handleCodeClick(ev)}>
+                    <span class="hover-highlight" onClick={() => this.handleCodeClick()}>
                       {'<'}<span class="yellow">ion-icon</span>&nbsp;<span class="orange">name</span>{'='}<span class="green">{`"${this.selectedIcon.name}"`}</span>{'>'}{'</'}<span class="yellow">ion-icon</span>{'>'}
                     </span>
                   </code>

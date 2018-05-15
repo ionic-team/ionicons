@@ -1,10 +1,5 @@
-import { Element, Component, Listen, State, Prop, Event, EventEmitter  } from '@stencil/core';
+import { Element, Component, Listen, State, Prop } from '@stencil/core';
 
-interface IconData {
-  name: string,
-  icons: Array<string>,
-  tags: Array<string>
-}
 
 @Component({
   tag: 'icon-list',
