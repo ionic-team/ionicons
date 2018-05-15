@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Element, Prop, State, Watch } from '@stencil/core';
 
 
 @Component({
@@ -10,19 +10,17 @@ import { Component, Prop, State } from '@stencil/core';
   styleUrl: 'icon.css'
 })
 export class Icon {
+  @Element() el: HTMLElement;
+
   @State() private svgContent: string = null;
+  @State() private isVisible: boolean;
 
   @Prop({ context: 'isServer'}) private isServer: boolean;
-
-  @Prop({ context: 'publicPath'}) private publicPath: string;
-
+  @Prop({ context: 'resourcesUrl'}) private resourcesUrl: string;
   @Prop({ context: 'mode' }) mode: string;
+  @Prop({ context: 'document' }) doc: Document;
+  @Prop({ context: 'window' }) win: any;
 
-  /**
-   * The color to use from your Sass `$colors` map.
-   * Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`.
-   * For more information, see [Theming your App](/docs/theming/theming-your-app).
-   */
   @Prop() color: string;
 
   /**
@@ -41,10 +39,21 @@ export class Icon {
   @Prop() md = '';
 
   /**
-   * Specifies which icon to use. The appropriate icon will be used based on the mode.
-   * For more information, see [Ionicons](/docs/ionicons/).
+   * Specifies which icon to use from the built-in set of icons.
    */
   @Prop() name = '';
+
+  /**
+   * Specifies the exact `src` of an SVG file to use.
+   */
+  @Prop() src = '';
+
+  /**
+   * A combination of both `name` and `src`. If a `src` url is detected
+   * it will set the `src` property. Otherwise it assumes it's a built-in named
+   * SVG and set the `name` property.
+   */
+  @Prop() icon = '';
 
   /**
    * The size of the icon.
@@ -53,54 +62,96 @@ export class Icon {
   @Prop() size: string;
 
 
-  private get iconName() {
-    let iconName = this.name.toLowerCase();
-
-    // default to "md" if somehow the mode wasn't set
-    const mode = this.mode || 'md';
-
-    // if an icon was passed in using the ios or md attributes
-    // set the iconName to whatever was passed in
-    if (this.ios && mode === 'ios') {
-      iconName = this.ios.toLowerCase();
-    } else if (this.md && mode === 'md') {
-      iconName = this.md.toLowerCase();
-    // this does not have one of the defaults
-    // so lets auto add in the mode prefix for them
-    } else if (iconName && !(/^md-|^ios-|^logo-/.test(iconName))) {
-      iconName = mode + '-' + iconName;
-    }
-
-    // only allow alpha characters and dash
-    const invalidChars = iconName.replace(/[a-z]|-|\d/g, '');
-    if (invalidChars !== '') {
-      console.error(`invalid characters in ion-icon name: ${invalidChars}`);
-      return null;
-    }
-
-    return iconName;
+  componentWillLoad() {
+    // purposely do not return the promise here because loading
+    // the svg file should not hold up loading the app
+    // only load the svg if it's visible
+    this.waitUntilVisible(this.el, '50px', () => {
+      this.isVisible = true;
+      this.loadIcon();
+    });
   }
 
+
+  waitUntilVisible(el: HTMLElement, rootMargin: string, cb: Function) {
+    if (this.win.IntersectionObserver) {
+      const io = new this.win.IntersectionObserver(data => {
+        if (data[0].isIntersecting) {
+          io.disconnect();
+          cb();
+        }
+      }, { rootMargin });
+
+      io.observe(el);
+
+    } else {
+      // browser doesn't support IntersectionObserver
+      // so just fallback to always show it
+      cb();
+    }
+  }
+
+
+  @Watch('name')
+  @Watch('src')
+  @Watch('icon')
+  loadIcon() {
+    if (!this.isServer && this.isVisible) {
+      const url = this.getUrl();
+
+      if (url) {
+        getSvgContent(url).then(svgContent => {
+          this.svgContent = svgContent;
+        });
+      }
+    }
+  }
+
+
+
+  getUrl() {
+    let url = getSrc(this.src);
+    if (url) {
+      return url;
+    }
+
+    url = getName(this.name, this.mode, this.ios, this.md);
+    if (url) {
+      return this.getNamedUrl(url);
+    }
+
+    url = getSrc(this.icon);
+    if (url) {
+      return url;
+    }
+
+    url = getName(this.icon, this.mode, this.ios, this.md);
+    if (url) {
+      return this.getNamedUrl(url);
+    }
+
+    return null;
+  }
+
+  getNamedUrl(name: string) {
+    return `${this.resourcesUrl}svg/${name}.svg`;
+  }
 
   hostData() {
     const attrs: {[attrName: string]: string} = {
       'role': 'img'
     };
 
-    if (this.ariaLabel) {
-      // user provided label
-      attrs['aria-label'] = this.ariaLabel;
-
-    } else {
+    if (!this.ariaLabel) {
+      const name = getName(this.name, this.mode, this.ios, this.md);
+      // user did not provide a label
       // come up with the label based on the icon name
-      const iconName = this.iconName;
-      if (iconName) {
-        attrs['aria-label'] =
-          iconName
-            .replace('ios-', '')
-            .replace('md-', '')
-            .replace('-outline', '')
-            .replace(/\-/g, ' ');
+      if (name) {
+        attrs['aria-label'] = this.name
+          .replace('ios-', '')
+          .replace('md-', '')
+          .replace('-outline', '')
+          .replace(/\-/g, ' ');
       }
     }
 
@@ -121,103 +172,137 @@ export class Icon {
       return <div class="icon-inner">{/* ssr */}</div>;
     }
 
-    const iconName = this.iconName;
-    if (!iconName) {
-      // we don't have good data
-      return <div class="icon-inner">{/* invalid svg */}</div>;
-    }
-
-    const svgContent = svgContents[iconName];
-    if (svgContent === this.svgContent) {
+    if (this.svgContent) {
       // we've already loaded up this svg at one point
       // and the svg content we've loaded and assigned checks out
       // render this svg!!
-      return <div class="icon-inner" innerHTML={svgContent}></div>;
+      return <div class="icon-inner" innerHTML={validateContent(this.doc, this.svgContent)}></div>;
     }
-
-    // haven't loaded this svg yet
-    // start the request
-    loadSvgContent(iconName, this.publicPath, loadedSvgContent => {
-      // we're finished loading the svg content!
-      // set to this.svgContent so we do another render
-      this.svgContent = loadedSvgContent;
-    });
 
     // actively requesting the svg, so let's just render a div for now
     return <div class="icon-inner">{/* loading svg */}</div>;
   }
-
 }
 
 
-function loadSvgContent(iconName: string, publicPath: string, callback: {(loadedSvgContent: string): void}) {
-  // static since all IonIcons use this same function and pointing at global/shared data
-  // passed in callback will have instance info
+const requests = new Map<string, Promise<string>>();
 
-  // add to the list of callbacks to fiure when this url is finished loading
-  (loadCallbacks[iconName] = loadCallbacks[iconName] || []).push(callback);
+function getSvgContent(url: string) {
+  // see if we already have a request for this url
+  let req = requests.get(url);
 
-  if (activeRequests[iconName]) {
-    // already requesting this icon, don't bother kicking off another
-    return;
-  }
-
-  // add this icons to our list of active requests
-  activeRequests[iconName] = true;
-
-
-  // kick off the request for the external svg file
-  // create a script element to add to the document.head
-  var scriptElm = document.createElement('script');
-  scriptElm.charset = 'utf-8';
-  scriptElm.async = true;
-  scriptElm.src = `${publicPath}svg/${iconName}.js`;
-
-  // create a fallback timeout if something goes wrong
-  var tmrId = setTimeout(onScriptComplete, 120000);
-
-  function onScriptComplete() {
-    clearTimeout(tmrId);
-    scriptElm.onerror = scriptElm.onload = null;
-    scriptElm.parentNode.removeChild(scriptElm);
-
-    // remove from our list of active requests
-    delete activeRequests[iconName];
-  }
-
-  // add script completed listener to this script element
-  scriptElm.onerror = scriptElm.onload = onScriptComplete;
-
-  // inject a script tag in the head
-  // kick off the actual request
-  document.head.appendChild(scriptElm);
-}
-
-
-const activeRequests: {[iconName: string]: boolean} = {};
-const loadCallbacks: {[iconName: string]: {(loadedSvgContent: string): void}[]} = [] as any;
-const svgContents: {[iconName: string]: string} = {};
-
-// add a jsonp handler to the window
-// as svg jsonp files are requested
-// once they load they'll call this method
-(window as any).loadIonicon = function loadIonicon(svgContent: string, iconName: string) {
-  // awesome, we've finished loading the svg file
-
-  // remove this url from the active requests
-  delete activeRequests[iconName];
-
-  svgContents[iconName] = svgContent
-
-  // find any callbacks waiting on this icon
-  const svgLoadCallbacks = loadCallbacks[iconName];
-  if (svgLoadCallbacks) {
-    // loop through all the callbacks that are waiting on the svg content
-    svgLoadCallbacks.forEach(cb => {
-      // fire off this callback which was provided by an instance
-      cb(svgContent);
+  if (!req) {
+    // we don't already have a request
+    req = fetch(url, { keepalive: true, cache: 'force-cache' }).then(rsp => {
+      if (rsp.ok) {
+        return rsp.text();
+      }
+      return Promise.resolve(null);
     });
-    delete loadCallbacks[iconName];
+
+    // cache for the same requests
+    requests.set(url, req);
   }
 
-};
+  return req;
+}
+
+
+function getName(name: string, mode: string, ios: string, md: string) {
+  if (typeof name !== 'string') {
+    return null;
+  }
+
+  name = name.trim().toLowerCase();
+  if (name.length === 0) {
+    return null;
+  }
+
+  // default to "md" if somehow the mode wasn't set
+  mode = mode || 'md';
+
+  // if an icon was passed in using the ios or md attributes
+  // set the iconName to whatever was passed in
+  if (ios && mode === 'ios') {
+    name = ios.toLowerCase();
+
+  } else if (md && mode === 'md') {
+    name = md.toLowerCase();
+
+  } else if (name && !(/^md-|^ios-|^logo-/.test(name))) {
+    // this does not have one of the defaults
+    // so lets auto add in the mode prefix for them
+    name = mode + '-' + name;
+  }
+
+  // only allow alpha characters and dash
+  const invalidChars = name.replace(/[a-z]|-|\d/g, '');
+  if (invalidChars !== '') {
+    return null;
+  }
+
+  return name;
+}
+
+
+function getSrc(src: string) {
+  if (typeof src === 'string') {
+    src = src.trim();
+    if (src.length > 0 && /\//.test(src)) {
+      return src;
+    }
+  }
+  return null;
+}
+
+
+function validateContent(document: Document, svgContent: string) {
+  if (svgContent) {
+    const frag = document.createDocumentFragment();
+    const div = document.createElement('div');
+    div.innerHTML = svgContent;
+    frag.appendChild(div);
+
+    // setup this way to ensure it works on our buddy IE
+    for (let i = div.childNodes.length - 1; i >= 0; i--) {
+      if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
+        div.removeChild(div.childNodes[i]);
+      }
+    }
+
+    // must only have 1 root element
+    const svgElm = div.firstElementChild;
+    if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
+      // root element must be an svg
+      // lets double check we've got valid elements
+      // do not allow scripts
+      if (isValid(svgElm as any)) {
+        return div.innerHTML;
+      }
+    }
+  }
+  return '';
+}
+
+
+function isValid(elm: HTMLElement) {
+  if (elm.nodeType === 1) {
+    if (elm.nodeName === 'SCRIPT') {
+      return false;
+    }
+
+    for (var i = 0; i < elm.attributes.length; i++) {
+      let val = elm.attributes[i].value;
+      if (typeof val === 'string' && val.toLowerCase().indexOf('on') === 0) {
+        return false;
+      }
+    }
+
+    for (i = 0; i < elm.childNodes.length; i++) {
+      if (!isValid(elm.childNodes[i] as any)) {
+        return false;
+      }
+    }
+  }
+  return true;
+}

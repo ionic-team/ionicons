@@ -32,10 +32,11 @@ declare global {
        * Specifies the label to use for accessibility. Defaults to the icon name.
        */
       'ariaLabel': string;
-      /**
-       * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
-       */
       'color': string;
+      /**
+       * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+       */
+      'icon': string;
       /**
        * Specifies which icon to use on `ios` mode.
        */
@@ -45,13 +46,17 @@ declare global {
        */
       'md': string;
       /**
-       * Specifies which icon to use. The appropriate icon will be used based on the mode. For more information, see [Ionicons](/docs/ionicons/).
+       * Specifies which icon to use from the built-in set of icons.
        */
       'name': string;
       /**
        * The size of the icon. Available options are: `"small"` and `"large"`.
        */
       'size': string;
+      /**
+       * Specifies the exact `src` of an SVG file to use.
+       */
+      'src': string;
     }
   }
 
@@ -78,10 +83,11 @@ declare global {
        * Specifies the label to use for accessibility. Defaults to the icon name.
        */
       'ariaLabel'?: string;
-      /**
-       * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
-       */
       'color'?: string;
+      /**
+       * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+       */
+      'icon'?: string;
       /**
        * Specifies which icon to use on `ios` mode.
        */
@@ -91,15 +97,21 @@ declare global {
        */
       'md'?: string;
       /**
-       * Specifies which icon to use. The appropriate icon will be used based on the mode. For more information, see [Ionicons](/docs/ionicons/).
+       * Specifies which icon to use from the built-in set of icons.
        */
       'name'?: string;
       /**
        * The size of the icon. Available options are: `"small"` and `"large"`.
        */
       'size'?: string;
+      /**
+       * Specifies the exact `src` of an SVG file to use.
+       */
+      'src'?: string;
     }
   }
 }
 
 declare global { namespace JSX { interface StencilJSX {} } }
+
+export declare function defineCustomElements(window: any): void;
