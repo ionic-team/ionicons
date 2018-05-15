@@ -49,6 +49,13 @@ export class Icon {
   @Prop() name?: string;
 
   /**
+   * Custom icon can be used by specificing the path to a svg.
+   */
+  @Prop() src?: string;
+  @Prop() icon?: string;
+
+
+  /**
    * The size of the icon.
    * Available options are: `"small"` and `"large"`.
    */
@@ -71,24 +78,27 @@ export class Icon {
   }
 
   private getIconURL() {
-    const name = this.name;
-    if(!name) {
-      return null;
+    const { icon, src } = this;
+    if (src) {
+      return src;
     }
-    if (
-      name.startsWith('.') ||
-      name.startsWith('/') ||
-      name.startsWith('http://') ||
-      name.startsWith('https://')
-    ) {
-      return name;
+    if (icon) {
+      if (
+        icon.startsWith('.') ||
+        icon.startsWith('/') ||
+        icon.startsWith('http://') ||
+        icon.startsWith('https://')
+      ) {
+        return icon;
+      }
     }
     return `${this.publicPath}../svg/${this.getIconName()}.svg`;
   }
 
   private getIconName() {
     const mode = this.mode || 'md';
-    const {name, ios, md} = this;
+    const name = this.name || this.icon;
+    const {ios, md} = this;
     if (!name) {
       return null;
     }
@@ -142,7 +152,6 @@ export class Icon {
       }
     };
   }
-
 
   render() {
     return <div class="icon-inner" innerHTML={this.svgContent}></div>;

@@ -36,6 +36,7 @@ declare global {
        * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
        */
       'color': string;
+      'icon': string;
       /**
        * Specifies which icon to use on `ios` mode.
        */
@@ -53,6 +54,10 @@ declare global {
        * The size of the icon. Available options are: `"small"` and `"large"`.
        */
       'size': 'small' | 'large';
+      /**
+       * Custom icon can be used by specificing the path to a svg.
+       */
+      'src': string;
     }
   }
 
@@ -83,6 +88,7 @@ declare global {
        * The color to use from your Sass `$colors` map. Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"dark"`. For more information, see [Theming your App](/docs/theming/theming-your-app).
        */
       'color'?: string;
+      'icon'?: string;
       /**
        * Specifies which icon to use on `ios` mode.
        */
@@ -100,6 +106,10 @@ declare global {
        * The size of the icon. Available options are: `"small"` and `"large"`.
        */
       'size'?: 'small' | 'large';
+      /**
+       * Custom icon can be used by specificing the path to a svg.
+       */
+      'src'?: string;
     }
   }
 }
