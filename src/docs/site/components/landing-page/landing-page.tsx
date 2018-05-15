@@ -1,4 +1,4 @@
-import { Element, Component, Prop, State, Listen } from '@stencil/core';
+import { Element, Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'landing-page',

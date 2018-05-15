@@ -4,12 +4,6 @@ import { QueueApi } from '@stencil/core/dist/declarations';
 import content from './content';
 
 
-interface IconData {
-  name: string,
-  icons: Array<string>,
-  tags: Array<string>
-}
-
 @Component({
   tag: 'usage-page',
   styleUrl: 'usage-page.scss'
@@ -26,7 +20,7 @@ export class UsagePage {
   componentWillLoad() {
     if(!window.location.hash) return;
 
-    let iconNames = [];
+    let iconNames: string[] = [];
     this.data.icons.map((o) =>{
       iconNames = iconNames.concat(o.icons)
     })

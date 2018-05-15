@@ -125,7 +125,7 @@ export class HeaderBar {
           <span class="close" onClick={this.hideNav.bind(this)}><i class="ion ion-md-close"></i></span>
         </nav>
 
-        <a class="btn sm-hide" href='/svg/ionicons.designerpack.zip'>
+        <a class="btn sm-hide" href='/ionicons.designerpack.zip'>
           <svg width="9px" height="11px" viewBox="0 0 9 11" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g>
                 <rect id="bg" fill="#BAC3D1" x="0" y="9" width="9" height="2" rx="1"></rect>
