@@ -1415,7 +1415,8 @@
         "md-football"
       ],
       "tags": [
-        "football"
+        "football",
+        "soccer"
       ]
     },
     {
@@ -2382,17 +2383,6 @@
         "eat",
         "food",
         "pizza"
-      ]
-    },
-    {
-      "icons": [
-        "ios-plane",
-        "md-plane"
-      ],
-      "tags": [
-        "fly",
-        "jet",
-        "plane"
       ]
     },
     {
