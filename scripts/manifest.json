@@ -1,6 +1,6 @@
 {
   "prefix": "ion-",
-  "hash": "d48e98412ed510b350957c8aff305ed9e3e45d73a9153fe5aa6aebc517e184cb",
+  "hash": "de492fb209db00f4df47a4fde307fd550e06b5ad13d0b13ca682393f1c9b0086",
   "name": "Ionicons",
   "icons": [
     {
@@ -898,10 +898,6 @@
     {
       "code": "0xf1e7",
       "name": "ios-pizza"
-    },
-    {
-      "code": "0xf1e9",
-      "name": "ios-plane"
     },
     {
       "code": "0xf1eb",
@@ -2418,10 +2414,6 @@
     {
       "code": "0xf354",
       "name": "md-pizza"
-    },
-    {
-      "code": "0xf355",
-      "name": "md-plane"
     },
     {
       "code": "0xf356",
