@@ -66,7 +66,7 @@ export class Icon {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
     // only load the svg if it's visible
-    this.waitUntilVisible(this.el, '10px', () => {
+    this.waitUntilVisible(this.el, '50px', () => {
       this.isVisible = true;
       this.loadIcon();
     });
@@ -77,10 +77,11 @@ export class Icon {
     if (this.win.IntersectionObserver) {
       const io = new this.win.IntersectionObserver(data => {
         if (data[0].isIntersecting) {
-          cb();
           io.disconnect();
+          cb();
         }
       }, { rootMargin });
+
       io.observe(el);
 
     } else {
@@ -100,7 +101,7 @@ export class Icon {
 
       if (url) {
         getSvgContent(url).then(svgContent => {
-          this.svgContent = validateContent(this.doc, svgContent);
+          this.svgContent = svgContent;
         });
       }
     }
@@ -175,7 +176,7 @@ export class Icon {
       // we've already loaded up this svg at one point
       // and the svg content we've loaded and assigned checks out
       // render this svg!!
-      return <div class="icon-inner" innerHTML={this.svgContent}></div>;
+      return <div class="icon-inner" innerHTML={validateContent(this.doc, this.svgContent)}></div>;
     }
 
     // actively requesting the svg, so let's just render a div for now
@@ -263,21 +264,17 @@ function validateContent(document: Document, svgContent: string) {
     frag.appendChild(div);
 
     // must only have 1 root element
-    if (div.children.length === 1) {
-      const rootElm = div.firstElementChild;
-
+    const svgElm = div.querySelector('svg');
+    if (svgElm) {
       // root element must be an svg
-      if (rootElm.nodeName === 'SVG') {
-
-        // lets double check we've got valid elements
-        // do not allow scripts
-        if (isValid(rootElm as any)) {
-          return svgContent;
-        }
+      // lets double check we've got valid elements
+      // do not allow scripts
+      if (isValid(svgElm as any)) {
+        return svgElm.outerHTML;
       }
     }
   }
-  return null;
+  return '';
 }
 
 
