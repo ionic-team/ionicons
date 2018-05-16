@@ -15,8 +15,8 @@ export class Icon {
   @State() private svgContent: string = null;
   @State() private isVisible: boolean;
 
-  @Prop({ context: 'isServer'}) private isServer: boolean;
-  @Prop({ context: 'resourcesUrl'}) private resourcesUrl: string;
+  @Prop({ context: 'isServer'}) isServer: boolean;
+  @Prop({ context: 'resourcesUrl'}) resourcesUrl: string;
   @Prop({ context: 'mode' }) mode: string;
   @Prop({ context: 'document' }) doc: Document;
   @Prop({ context: 'window' }) win: any;
@@ -108,7 +108,6 @@ export class Icon {
   }
 
 
-
   getUrl() {
     let url = getSrc(this.src);
     if (url) {
@@ -150,7 +149,6 @@ export class Icon {
         attrs['aria-label'] = this.name
           .replace('ios-', '')
           .replace('md-', '')
-          .replace('-outline', '')
           .replace(/\-/g, ' ');
       }
     }
@@ -168,19 +166,17 @@ export class Icon {
 
 
   render() {
-    if (this.isServer) {
-      return <div class="icon-inner">{/* ssr */}</div>;
-    }
-
-    if (this.svgContent) {
+    if (!this.isServer && this.svgContent) {
       // we've already loaded up this svg at one point
       // and the svg content we've loaded and assigned checks out
       // render this svg!!
       return <div class="icon-inner" innerHTML={validateContent(this.doc, this.svgContent)}></div>;
     }
 
-    // actively requesting the svg, so let's just render a div for now
-    return <div class="icon-inner">{/* loading svg */}</div>;
+    // actively requesting the svg
+    // or it's an SSR render
+    // so let's just render an empty div for now
+    return <div class="icon-inner"></div>;
   }
 }
 
@@ -208,16 +204,7 @@ function getSvgContent(url: string) {
 }
 
 
-function getName(name: string, mode: string, ios: string, md: string) {
-  if (typeof name !== 'string') {
-    return null;
-  }
-
-  name = name.trim().toLowerCase();
-  if (name.length === 0) {
-    return null;
-  }
-
+export function getName(name: string, mode: string, ios: string, md: string) {
   // default to "md" if somehow the mode wasn't set
   mode = mode || 'md';
 
@@ -235,6 +222,10 @@ function getName(name: string, mode: string, ios: string, md: string) {
     name = mode + '-' + name;
   }
 
+  if (typeof name !== 'string' || name.trim() === '') {
+    return null;
+  }
+
   // only allow alpha characters and dash
   const invalidChars = name.replace(/[a-z]|-|\d/g, '');
   if (invalidChars !== '') {
@@ -245,10 +236,10 @@ function getName(name: string, mode: string, ios: string, md: string) {
 }
 
 
-function getSrc(src: string) {
+export function getSrc(src: string) {
   if (typeof src === 'string') {
     src = src.trim();
-    if (src.length > 0 && /\//.test(src)) {
+    if (src.length > 0 && /(\/|\.)/.test(src)) {
       return src;
     }
   }
@@ -285,9 +276,9 @@ function validateContent(document: Document, svgContent: string) {
 }
 
 
-function isValid(elm: HTMLElement) {
+export function isValid(elm: HTMLElement) {
   if (elm.nodeType === 1) {
-    if (elm.nodeName === 'SCRIPT') {
+    if (elm.nodeName.toLowerCase() === 'script') {
       return false;
     }
 
