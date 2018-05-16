@@ -25,10 +25,10 @@
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "^0.9.0-0",
+    "@stencil/core": "^0.9.1",
     "@stencil/dev-server": "latest",
     "@stencil/router": "^0.1.6",
-    "@stencil/sass": "^0.0.5",
+    "@stencil/sass": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^22.2.3",
     "archiver": "^2.1.1",
