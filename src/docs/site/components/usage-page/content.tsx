@@ -24,7 +24,7 @@ export default function (version: string, type = "md", name = "heart") {
 `<ion-icon name="${name}"></ion-icon>`
 )}
 
-<p>To use a custom SVG, use the <code>src</code> attribute to request an external SVG file. The <code>src</code> attribute works the same as an <code>&lt;img src="..."&gt;</code> in that the value must be an accessible from the page that's making a request from the image. Additionally, the external file can only be a valid <code>svg</code> and does not allow custom scripts within the <code>svg</code> element.</p>
+<p>To use a custom SVG, provide its url in the <code>src</code> attribute to request the external SVG file. The <code>src</code> attribute works the same as <code>&lt;img src="..."&gt;</code> in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid <code>svg</code> and does not allow scripts or events within the <code>svg</code> element.</p>
 {highlight(
   `<ion-icon src="/path/to/externa/file.svg"></ion-icon>`
 )}
