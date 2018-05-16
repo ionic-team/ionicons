@@ -62,7 +62,7 @@ export default function (version: string, type = "md", name = "heart") {
 `<ion-icon size="small"></ion-icon>
 <ion-icon size="large"></ion-icon>`
 )}
-<p>Or you can set a specific size by setting the <code>font-size</code> attribute on the <code>ion-icon</code> component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)</p>
+<p>Or you can set a specific size by applying the <code>font-size</code> CSS property on the <code>ion-icon</code> component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)</p>
 {highlight(
 `ion-icon {
   font-size: 64px;
