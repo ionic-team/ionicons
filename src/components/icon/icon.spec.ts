@@ -146,6 +146,10 @@ describe('getName', () => {
     expect(icon.getName('md-some-name', '', '', '')).toBe('md-some-name');
   });
 
+  it('always lowercase name and mode', () => {
+    expect(icon.getName('SOME-NAME', 'IOS', '', '')).toBe('ios-some-name');
+  });
+
   it('default md name w/out mode, ios or md', () => {
     expect(icon.getName('some-name', '', '', '')).toBe('md-some-name');
   });

@@ -206,7 +206,7 @@ function getSvgContent(url: string) {
 
 export function getName(name: string, mode: string, ios: string, md: string) {
   // default to "md" if somehow the mode wasn't set
-  mode = mode || 'md';
+  mode = (mode || 'md').toLowerCase();
 
   // if an icon was passed in using the ios or md attributes
   // set the iconName to whatever was passed in
@@ -219,7 +219,7 @@ export function getName(name: string, mode: string, ios: string, md: string) {
   } else if (name && !(/^md-|^ios-|^logo-/.test(name))) {
     // this does not have one of the defaults
     // so lets auto add in the mode prefix for them
-    name = mode + '-' + name;
+    name = mode + '-' + name.toLowerCase();
   }
 
   if (typeof name !== 'string' || name.trim() === '') {
@@ -227,7 +227,7 @@ export function getName(name: string, mode: string, ios: string, md: string) {
   }
 
   // only allow alpha characters and dash
-  const invalidChars = name.replace(/[a-z]|-|\d/g, '');
+  const invalidChars = name.replace(/[a-z]|-|\d/gi, '');
   if (invalidChars !== '') {
     return null;
   }
