@@ -32,7 +32,7 @@ export default function (version: string, type = "md", name = "heart") {
 <h2>Platform specific icons</h2>
 <p>Many icons have both Material Design and iOS versions to provide Platform Continuity for users.</p>
 
-<p>Platform Continuity means that users that are familiar with iOS (Apple products such as iPhone and iPad) will see <code>ios</code> styled icons. Alternatively, users that are familiar with Google's Material Design theme (commonly seen on Android devices) will see the <code>md</code> styled icons.</p>
+<p>Platform Continuity means that by default, ionicons running on iOS (Apple products such as iPhone and iPad) will display <code>ios</code> styled icons. Alternatively, ionicons running on devices with Material Design theme (commonly seen on Android devices) will see the <code>md</code> styled icons.</p>
 
 
 <h3>Platform Continuity Within Ionic Apps</h3>
@@ -59,10 +59,10 @@ export default function (version: string, type = "md", name = "heart") {
 <h3>Icon sizes</h3>
 <p>To specify the icon size, you can use the <code>size</code> attribute for our pre-defined font sizes.</p>
 {highlight(
-`<ion-icon size="small">
-<ion-icon size="large">`
+`<ion-icon size="small"></ion-icon>
+<ion-icon size="large"></ion-icon>`
 )}
-<p>Or you can set a specific size by setting the <code>font-size</code> attribute on the <code>ion-icon</code> component.</p>
+<p>Or you can set a specific size by setting the <code>font-size</code> attribute on the <code>ion-icon</code> component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)</p>
 {highlight(
 `ion-icon {
   font-size: 64px;
