@@ -29,26 +29,32 @@ export default function (version: string, type = "md", name = "heart") {
   `<ion-icon src="/path/to/externa/file.svg"></ion-icon>`
 )}
 
-<h3>Platform specific icons</h3>
+<h2>Platform specific icons</h2>
 <p>Many icons have both Material Design and iOS versions to provide Platform Continuity for users.</p>
 
-<p>Platform Continuity means that users that are familiar with "iOS" (Apple products such as iPhone and iPad) will see <code>ios</code> styled icons. Alternatively, users that are familiar with Android's "Material Design" theme will see the <code>md</code> styled icons.</p>
+<p>Platform Continuity means that users that are familiar with iOS (Apple products such as iPhone and iPad) will see <code>ios</code> styled icons. Alternatively, users that are familiar with Google's Material Design theme (commonly seen on Android devices) will see the <code>md</code> styled icons.</p>
 
-<h2>Within Ionic Apps</h2>
+
+<h3>Platform Continuity Within Ionic Apps</h3>
 
 <p>Ionic will automatically use the correct version based on the platform. Note that this feature will only automatically kick-in for Ionic apps. When being used outside of an Ionic app, please see the "Outside Ionic App" section below.</p>
 
-<p>To specify the icon to use for each platform, use the <code>md</code> and <code>ios</code> attributes and provide the platform specific icon name.</p>
+<p>To specify the icon for each platform, use the <code>md</code> and <code>ios</code> attributes and provide the platform specific icon name.</p>
 {(type == 'logo') ? highlight(
 `<ion-icon ios="ios-heart" md="md-heart"></ion-icon>`
 ):highlight(
 `<ion-icon ios="ios-${name}" md="md-${name}"></ion-icon>`
 )}
 
-<h2>Outside Ionic Apps</h2>
+<h3>Platform Continuity Outside Ionic Apps</h3>
 
 <p>When using Ionicons without the Ionic Framework, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the <code>name</code> attribute.</p>
-{highlight(`<ion-icon name="ios-heart"></ion-icon>`)}
+{highlight(
+`<ion-icon name="ios-${name}"></ion-icon>`
+)}
+{highlight(
+`<ion-icon name="md-${name}"></ion-icon>`
+)}
 
 <h3>Icon sizes</h3>
 <p>To specify the icon size, you can use the <code>size</code> attribute for our pre-defined font sizes.</p>
