@@ -1,6 +1,6 @@
 # Ionicons
 
-Ionicons is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for Ionic Framework, so icons have both Material Design and iOS versions. When used with Ionic, the `ion-icon` component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both `ios` and `md` platforms can be chosen by the application.
+[Ionicons](http://ionicons.com/) is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for [Ionic Framework](https://ionicframework.com/), so icons have both Material Design and iOS versions. When used with Ionic, the `ion-icon` component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both `ios` and `md` platforms can be chosen by the application.
 
 Note: All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Drifty, nor vice versa.
 
@@ -17,7 +17,7 @@ Also note that only visible icons are loaded, and icons which are "below the fol
 
 ### Installation
 
-If you're using Ionic Framework, Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing </body> tag, to enable them.
+If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing </body> tag, to enable them.
 
 ```
 <script src="https://unpkg.com/ionicons@4.1.1/dist/ionicons.js"></script>
@@ -112,6 +112,7 @@ Ionicons is licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ## Related
 
+* [Ionicons Homepage](http://ionicons.com/)
 * [Ionic Framework](https://ionicframework.com/)
 * [Ionic Worldwide Slack](http://ionicworldwide.herokuapp.com/)
 * [Ionic Forum](https://forum.ionicframework.com/)

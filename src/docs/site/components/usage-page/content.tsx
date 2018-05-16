@@ -4,7 +4,7 @@ export default function (version: string, type = "md", name = "heart") {
   return (<div>
 
 <h1>Usage</h1>
-<p class="lead">Ionicons is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for Ionic Framework, so icons have both Material Design and iOS versions. When used with Ionic, the <code>ion-icon</code> component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both <code>ios</code> and <code>md</code> platforms can be chosen by the application.</p>
+<p class="lead">Ionicons is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for <a href="https://ionicframework.com/">Ionic Framework</a>, so icons have both Material Design and iOS versions. When used with Ionic, the <code>ion-icon</code> component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both <code>ios</code> and <code>md</code> platforms can be chosen by the application.</p>
 
 <h2>Using the Web Component</h2>
 <p>The Iconicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.</p>
@@ -48,7 +48,7 @@ export default function (version: string, type = "md", name = "heart") {
 
 <h3>Platform Continuity Outside Ionic Apps</h3>
 
-<p>When using Ionicons without the Ionic Framework, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the <code>name</code> attribute.</p>
+<p>When using Ionicons without the <a href="https://ionicframework.com/">Ionic Framework</a>, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the <code>name</code> attribute.</p>
 {highlight(
 `<ion-icon name="ios-${name}"></ion-icon>`
 )}
