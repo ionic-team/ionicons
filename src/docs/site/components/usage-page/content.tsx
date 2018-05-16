@@ -69,13 +69,17 @@ export default function (version: string, type = "md", name = "heart") {
 }`
 )}
 
-<h2>Using the Webfont</h2>
-<p>The webfont is compatible with previous versions of Ionicons. If you're using Ionicons for the first time we strongly recommend using the Web Component - you'll see much better performance.</p>
+<h2>Using the Font Icon</h2>
+<p>The font icon is compatible with previous versions of Ionicons. If you're using Ionicons for the first time we strongly recommend using the <code>ion-icon</code> web component instead.</p>
+
+<p>An advantage to the font icon file is that all of the icons are in one file. A disadvantage to the font icon file is that all of the icons are in one file. Additionally, large font files have a negative impact on a webpage's time to first paint.</p>
+
+<p>In most cases it may be better to request a small number of svgs using the web component method. A bonus with the web component is that it uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> to only request icons which are viewable by the users (icons above the fold). However, if a webpage has show to <em>many</em> icons at once (such as this website's homepage which is showing 700+ icons on one page), the font icon may be a better choice.</p>
 
 <h3>Installation</h3>
-<p>To embed the Ionicons webfont into your webpage, copy this code into the <code>{`<head>`}</code> of the HTML document.</p>
+<p>To embed the Ionicons font icon, copy this code into the <code>{`<head>`}</code> of the HTML document.</p>
 {highlight(
-`<link href="https://unpkg.com/ionicons@${version}/dist/css/ionicons.min.css"rel="stylesheet"/>`
+`<link href="https://unpkg.com/ionicons@${version}/dist/css/ionicons.min.css" rel="stylesheet">`
 )}
 
 
