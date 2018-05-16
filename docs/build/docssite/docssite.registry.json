@@ -3,14 +3,14 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.jfsptprb.js",
+  "core": "docssite.a0cs8axq.js",
   "corePolyfilled": "docssite.lc7q1hhy.js",
   "components": {
     "footer-bar": {
       "$": "vtu3zyh5"
     },
     "header-bar": {
-      "$": "f5jhpa2x"
+      "$": "82updblm"
     },
     "icon-list": {
       "$": "vscrqboi"
@@ -19,7 +19,7 @@
       "$": "ms1l1l4a"
     },
     "ionicons-site": {
-      "$": "f5jhpa2x"
+      "$": "82updblm"
     },
     "landing-page": {
       "$": "vscrqboi"
@@ -28,13 +28,13 @@
       "$": "d83fvjds"
     },
     "stencil-route": {
-      "$": "f5jhpa2x"
+      "$": "82updblm"
     },
     "stencil-route-link": {
-      "$": "5szlxwny"
+      "$": "gkczrv46"
     },
     "stencil-router": {
-      "$": "f5jhpa2x"
+      "$": "82updblm"
     },
     "toast-bar": {
       "$": "vscrqboi"
