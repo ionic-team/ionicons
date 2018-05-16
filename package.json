@@ -20,7 +20,9 @@
     "dev": "npm run build && sd concurrent \"stencil build --dev --config --es5 src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "mode.comparison": "node scripts/mode-comparison.js",
     "generate": "python scripts/generate.py",
-    "release": "npm run build && np --any-branch"
+    "release": "npm run build && np --any-branch",
+    "test": "jest",
+    "test.watch": "jest --watch"
   },
   "devDependencies": {
     "@stencil/core": "^0.9.0-0",
@@ -28,9 +30,11 @@
     "@stencil/router": "^0.1.6",
     "@stencil/sass": "^0.0.5",
     "@stencil/utils": "latest",
+    "@types/jest": "^22.2.3",
     "archiver": "^2.1.1",
     "fs-extra": "4.0.2",
     "highlight.js": "^9.12.0",
+    "jest": "^22.4.3",
     "node-sass": "4.7.2",
     "np": "2.17.0",
     "svgo": "1.0.3"
@@ -64,5 +68,18 @@
   "bugs": {
     "url": "https://github.com/ionic-team/ionicons/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      "^.+\\.(js|ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "src/.*\\.spec\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "d.ts"
+    ]
+  }
 }
