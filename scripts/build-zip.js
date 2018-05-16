@@ -6,6 +6,11 @@ var svgsDir = path.join(__dirname, '..', 'dist', 'svg');
 var distzipDir = path.join(__dirname, '..', 'docs');
 var distzipFile = path.join(distzipDir, 'ionicons.designerpack.zip');
 
+console.log('designerpack source:', svgsDir);
+
+const svgCount = fs.readdirSync(svgsDir).length;
+
+console.log('Total svg files to zip:', svgCount);
 fs.ensureDirSync(distzipDir);
 
 var archive = archiver('zip', {
@@ -14,7 +19,7 @@ var archive = archiver('zip', {
 
 var output = fs.createWriteStream(distzipFile);
 output.on('close', () => {
-  console.log('Svg zip archive created.');
+  console.log('designerpack created:', distzipFile);
 });
 
 archive.pipe(output);

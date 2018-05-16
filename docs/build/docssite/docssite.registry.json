@@ -3,7 +3,7 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.aj0cs0se.js",
+  "core": "docssite.viz7bsay.js",
   "corePolyfilled": "docssite.jwdgw0bm.js",
   "components": {
     "footer-bar": {
@@ -40,7 +40,7 @@
       "$": "vscrqboi"
     },
     "usage-page": {
-      "$": "gdwr4rib"
+      "$": "exq6rvdh"
     }
   }
 }

@@ -37,7 +37,6 @@ def main():
 
   if requires_update():
     generate_font_files()
-    generate_docs_designer_pack_zip()
 
   data = get_build_data()
 
@@ -45,6 +44,9 @@ def main():
   generate_scss(data)
   generate_svg_files()
   generate_cheatsheet(data)
+
+  if requires_update():
+    generate_docs_designer_pack_zip()
 
 
 def requires_update():
