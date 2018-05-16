@@ -74,7 +74,7 @@ export default function (version: string, type = "md", name = "heart") {
 
 <p>An advantage to the font icon file is that all of the icons are in one file. A disadvantage to the font icon file is that all of the icons are in one file. Additionally, large font files have a negative impact on a webpage's time to first paint.</p>
 
-<p>In most cases it may be better to request a small number of svgs using the web component method. A bonus with the web component is that it uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> to only request icons which are viewable by the users (icons above the fold). However, if a webpage has show to <em>many</em> icons at once (such as this website's homepage which is showing 700+ icons on one page), the font icon may be a better choice.</p>
+<p>In most cases it may be better to request a small number of svgs using the web component method. A bonus with the web component is that it uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> to only request icons which are viewable by the users (icons above the fold). However, if a webpage has to show <em>many</em> icons at once (such as this website's homepage which is showing 700+ icons on one page), the font icon may be a better choice.</p>
 
 <h3>Installation</h3>
 <p>To embed the Ionicons font icon, copy this code into the <code>{`<head>`}</code> of the HTML document.</p>
