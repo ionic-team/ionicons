@@ -17,6 +17,6 @@ fs.emptyDirSync(distFontsDir);
 
 fs.copySync(optimizedSvgsDir, collectionSvgsDir);
 fs.copySync(optimizedSvgsDir, docsSvgsDir);
-fs.moveSync(optimizedSvgsDir, componentSvgsDir);
+fs.moveSync(optimizedSvgsDir, componentSvgsDir, {overwrite: true});
 
 fs.copySync(docsFontsDir, distFontsDir);

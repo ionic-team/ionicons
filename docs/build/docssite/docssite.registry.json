@@ -7,10 +7,10 @@
   "corePolyfilled": "docssite.lc7q1hhy.js",
   "components": {
     "footer-bar": {
-      "$": "vtu3zyh5"
+      "$": "xxdq8tou"
     },
     "header-bar": {
-      "$": "82updblm"
+      "$": "f5jhpa2x"
     },
     "icon-list": {
       "$": "vscrqboi"
@@ -19,7 +19,7 @@
       "$": "ms1l1l4a"
     },
     "ionicons-site": {
-      "$": "82updblm"
+      "$": "f5jhpa2x"
     },
     "landing-page": {
       "$": "vscrqboi"
@@ -28,13 +28,13 @@
       "$": "d83fvjds"
     },
     "stencil-route": {
-      "$": "82updblm"
+      "$": "f5jhpa2x"
     },
     "stencil-route-link": {
-      "$": "gkczrv46"
+      "$": "5szlxwny"
     },
     "stencil-router": {
-      "$": "82updblm"
+      "$": "f5jhpa2x"
     },
     "toast-bar": {
       "$": "vscrqboi"
