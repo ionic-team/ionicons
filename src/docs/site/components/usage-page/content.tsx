@@ -2,6 +2,7 @@ import hljs from 'highlight.js';
 
 export default function (version: string, type = "md", name = "heart") {
   const snippetIconName = (type === "logo" ? "logo-" : "") + name;
+  const snippedPlatformSpecificIconName = type === "logo" ? "heart" : name;
 
   return (<div>
 
@@ -42,24 +43,18 @@ export default function (version: string, type = "md", name = "heart") {
 <p>Ionic will automatically use the correct version based on the platform. Note that this feature will only automatically kick-in for Ionic apps. When being used outside of an Ionic app, please see the "Outside Ionic App" section below.</p>
 
 <p>To specify the icon for each platform, use the <code>md</code> and <code>ios</code> attributes and provide the platform specific icon name.</p>
-{(type == 'logo') ? highlight(
-`<ion-icon ios="ios-heart" md="md-heart"></ion-icon>`
-):highlight(
-`<ion-icon ios="ios-${name}" md="md-${name}"></ion-icon>`
+{highlight(
+`<ion-icon ios="ios-${snippedPlatformSpecificIconName}" md="md-${snippedPlatformSpecificIconName}"></ion-icon>`
 )}
 
 <h3>Platform Continuity Outside Ionic Apps</h3>
 
 <p>When using Ionicons without the <a href="https://ionicframework.com/">Ionic Framework</a>, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the <code>name</code> attribute.</p>
-{(type == 'logo') ? highlight(
-    `<ion-icon name="ios-heart"></ion-icon>`
-):highlight(
-    `<ion-icon name="ios-${name}"></ion-icon>`
+{highlight(
+`<ion-icon name="ios-${snippedPlatformSpecificIconName}"></ion-icon>`
 )}
-{(type == 'logo') ? highlight(
-    `<ion-icon name="md-heart"></ion-icon>`
-):highlight(
-    `<ion-icon name="md-${name}"></ion-icon>`
+{highlight(
+`<ion-icon name="md-${snippedPlatformSpecificIconName}"></ion-icon>`
 )}
 
 <h3>Icon sizes</h3>
