@@ -26,7 +26,7 @@ export class ToastBar {
     const codeElParent = this.el.querySelector('.toast-bar__section:first-child');
     const el = document.createElement('textarea');
 
-    el.value = `<ion-icon name="${ this.selectedIcon.name }"></ion-icon>`;
+    el.value = `<ion-icon name="${ this.snippetIconName() }"></ion-icon>`;
     el.setAttribute('readonly', '');
     el.style.position = 'absolute';
     el.style.left = '-9999px';
@@ -44,6 +44,14 @@ export class ToastBar {
       codeElParent.classList.remove('copied');
       this.showCopiedConfirm = 0;
     }, 1500);
+  }
+
+  isLogoType() {
+    return this.selectedIcon && this.selectedIcon.icons[0].startsWith('logo-');
+  }
+
+  snippetIconName() {
+    return (this.isLogoType() ? 'logo-' : '') + this.selectedIcon.name;
   }
 
   componentDidLoad () {
@@ -69,6 +77,7 @@ export class ToastBar {
   }
 
   render() {
+    let snippetIconName;
     let snippetLength;
     let iconType;
     let activeDownloadLinks = null;
@@ -76,9 +85,10 @@ export class ToastBar {
     if (this.selectedIcon) {
       if (!this.hadIconOnce) this.hadIconOnce = true;
 
-      iconType = this.selectedIcon.icons[0].startsWith('logo-') ? 'logo' : this.selectedIconType;
+      iconType = this.isLogoType() ? 'logo' : this.selectedIconType;
 
-      snippetLength = (`<ion-icon name="${ this.selectedIcon.name }"></ion-icon>`.length * 8) + 32;
+      snippetIconName = this.snippetIconName();
+      snippetLength = (`<ion-icon name="${ snippetIconName }"></ion-icon>`.length * 8) + 32;
 
       activeDownloadLinks = this.selectedIcon.icons.map((name) => {
         const type = name.substr(0, name.indexOf('-'));
@@ -140,7 +150,7 @@ export class ToastBar {
 
                   <code>
                     <span class="hover-highlight" onClick={() => this.handleCodeClick()}>
-                      {'<'}<span class="yellow">ion-icon</span>&nbsp;<span class="orange">name</span>{'='}<span class="green">{`"${this.selectedIcon.name}"`}</span>{'>'}{'</'}<span class="yellow">ion-icon</span>{'>'}
+                      {'<'}<span class="yellow">ion-icon</span>&nbsp;<span class="orange">name</span>{'='}<span class="green">{`"${snippetIconName}"`}</span>{'>'}{'</'}<span class="yellow">ion-icon</span>{'>'}
                     </span>
                   </code>
 
