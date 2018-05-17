@@ -43,6 +43,8 @@ Many icons have both Material Design and iOS versions to provide Platform Contin
 
 Platform Continuity means that by default, ionicons running on iOS (Apple products such as iPhone and iPad) will display `ios` styled icons. Alternatively, ionicons running on devices with Material Design theme (commonly seen on Android devices) will see the `md` styled icons.
 
+Note: this typically does not apply to logo type icons; they do not have platform specific versions.
+
 ### Platform Continuity Within Ionic Apps
 
 Ionic will automatically use the correct version based on the platform. Note that this feature will only automatically kick-in for Ionic apps. When being used outside of an Ionic app, please see the "Outside Ionic App" section below.
