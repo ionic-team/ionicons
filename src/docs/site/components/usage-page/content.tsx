@@ -37,6 +37,8 @@ export default function (version: string, type = "md", name = "heart") {
 
 <p>Platform Continuity means that by default, ionicons running on iOS (Apple products such as iPhone and iPad) will display <code>ios</code> styled icons. Alternatively, ionicons running on devices with Material Design theme (commonly seen on Android devices) will see the <code>md</code> styled icons.</p>
 
+<p>Note: this typically does not apply to logo type icons; they do not have platform specific versions.</p>
+
 
 <h3>Platform Continuity Within Ionic Apps</h3>
 
