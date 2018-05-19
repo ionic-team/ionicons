@@ -3,7 +3,8 @@ ion-icon {
   font-size: inherit;
 }
 
-ion-icon .icon-inner {
+ion-icon .icon-inner,
+ion-icon svg {
   height: 1em;
   width: 1em;
 }
