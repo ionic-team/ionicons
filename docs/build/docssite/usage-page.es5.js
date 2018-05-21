@@ -710,6 +710,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             return hljs;
         }));
     });
+    var highlight$1 = /*#__PURE__*/ Object.freeze({
+        default: highlight,
+        __moduleExports: highlight
+    });
     var _1c = function (hljs) {
         // общий паттерн для определения идентификаторов
         var UNDERSCORE_IDENT_RE = '[A-Za-zА-Яа-яёЁ_][A-Za-zА-Яа-яёЁ_0-9]+';
@@ -1137,6 +1141,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var _1c$1 = /*#__PURE__*/ Object.freeze({
+        default: _1c,
+        __moduleExports: _1c
+    });
     var abnf = function (hljs) {
         var regexes = {
             ruleDeclaration: "^[a-zA-Z][a-zA-Z0-9-]*",
@@ -1199,6 +1207,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var abnf$1 = /*#__PURE__*/ Object.freeze({
+        default: abnf,
+        __moduleExports: abnf
+    });
     var accesslog = function (hljs) {
         return {
             contains: [
@@ -1236,6 +1248,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var accesslog$1 = /*#__PURE__*/ Object.freeze({
+        default: accesslog,
+        __moduleExports: accesslog
+    });
     var actionscript = function (hljs) {
         var IDENT_RE = '[a-zA-Z_$][a-zA-Z0-9_$]*';
         var IDENT_FUNC_RETURN_TYPE_RE = '([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)';
@@ -1307,6 +1323,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /#/
         };
     };
+    var actionscript$1 = /*#__PURE__*/ Object.freeze({
+        default: actionscript,
+        __moduleExports: actionscript
+    });
     var ada = // We try to support full Ada2012
      
     //
@@ -1460,6 +1480,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var ada$1 = /*#__PURE__*/ Object.freeze({
+        default: ada,
+        __moduleExports: ada
+    });
     var apache = function (hljs) {
         var NUMBER = { className: 'number', begin: '[\\$%]\\d+' };
         return {
@@ -1504,6 +1528,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /\S/
         };
     };
+    var apache$1 = /*#__PURE__*/ Object.freeze({
+        default: apache,
+        __moduleExports: apache
+    });
     var applescript = function (hljs) {
         var STRING = hljs.inherit(hljs.QUOTE_STRING_MODE, { illegal: '' });
         var PARAMS = {
@@ -1578,6 +1606,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: '//|->|=>|\\[\\['
         };
     };
+    var applescript$1 = /*#__PURE__*/ Object.freeze({
+        default: applescript,
+        __moduleExports: applescript
+    });
     var cpp = function (hljs) {
         var CPP_PRIMITIVE_TYPES = {
             className: 'keyword',
@@ -1744,6 +1776,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             }
         };
     };
+    var cpp$1 = /*#__PURE__*/ Object.freeze({
+        default: cpp,
+        __moduleExports: cpp
+    });
     var arduino = function (hljs) {
         var CPP = hljs.getLanguage('cpp').exports;
         return {
@@ -1840,6 +1876,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var arduino$1 = /*#__PURE__*/ Object.freeze({
+        default: arduino,
+        __moduleExports: arduino
+    });
     var armasm = function (hljs) {
         //local labels: %?[FB]?[AT]?\d{1,2}\w+
         return {
@@ -1927,6 +1967,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var armasm$1 = /*#__PURE__*/ Object.freeze({
+        default: armasm,
+        __moduleExports: armasm
+    });
     var xml = function (hljs) {
         var XML_IDENT_RE = '[A-Za-z0-9\\._:-]+';
         var TAG_INTERNALS = {
@@ -2025,6 +2069,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var xml$1 = /*#__PURE__*/ Object.freeze({
+        default: xml,
+        __moduleExports: xml
+    });
     var asciidoc = function (hljs) {
         return {
             aliases: ['adoc'],
@@ -2205,6 +2253,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var asciidoc$1 = /*#__PURE__*/ Object.freeze({
+        default: asciidoc,
+        __moduleExports: asciidoc
+    });
     var aspectj = function (hljs) {
         var KEYWORDS = 'false synchronized int abstract float private char boolean static null if const ' +
             'for true while long throw strictfp finally protected import native final return void ' +
@@ -2344,6 +2396,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var aspectj$1 = /*#__PURE__*/ Object.freeze({
+        default: aspectj,
+        __moduleExports: aspectj
+    });
     var autohotkey = function (hljs) {
         var BACKTICK_ESCAPE = {
             begin: '`[\\s\\S]'
@@ -2401,6 +2457,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var autohotkey$1 = /*#__PURE__*/ Object.freeze({
+        default: autohotkey,
+        __moduleExports: autohotkey
+    });
     var autoit = function (hljs) {
         var KEYWORDS = 'ByRef Case Const ContinueCase ContinueLoop ' +
             'Default Dim Do Else ElseIf EndFunc EndIf EndSelect ' +
@@ -2516,6 +2576,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var autoit$1 = /*#__PURE__*/ Object.freeze({
+        default: autoit,
+        __moduleExports: autoit
+    });
     var avrasm = function (hljs) {
         return {
             case_insensitive: true,
@@ -2572,6 +2636,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var avrasm$1 = /*#__PURE__*/ Object.freeze({
+        default: avrasm,
+        __moduleExports: avrasm
+    });
     var awk = function (hljs) {
         var VARIABLE = {
             className: 'variable',
@@ -2624,6 +2692,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var awk$1 = /*#__PURE__*/ Object.freeze({
+        default: awk,
+        __moduleExports: awk
+    });
     var axapta = function (hljs) {
         return {
             keywords: 'false int abstract private char boolean static null if for true ' +
@@ -2654,6 +2726,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var axapta$1 = /*#__PURE__*/ Object.freeze({
+        default: axapta,
+        __moduleExports: axapta
+    });
     var bash = function (hljs) {
         var VAR = {
             className: 'variable',
@@ -2724,6 +2800,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var bash$1 = /*#__PURE__*/ Object.freeze({
+        default: bash,
+        __moduleExports: bash
+    });
     var basic = function (hljs) {
         return {
             case_insensitive: true,
@@ -2773,6 +2853,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var basic$1 = /*#__PURE__*/ Object.freeze({
+        default: basic,
+        __moduleExports: basic
+    });
     var bnf = function (hljs) {
         return {
             contains: [
@@ -2801,6 +2885,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var bnf$1 = /*#__PURE__*/ Object.freeze({
+        default: bnf,
+        __moduleExports: bnf
+    });
     var brainfuck = function (hljs) {
         var LITERAL = {
             className: 'literal',
@@ -2833,6 +2921,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var brainfuck$1 = /*#__PURE__*/ Object.freeze({
+        default: brainfuck,
+        __moduleExports: brainfuck
+    });
     var cal = function (hljs) {
         var KEYWORDS = 'div mod in and or not xor asserterror begin case do downto else end exit for if of repeat then to ' +
             'until while with var';
@@ -2900,6 +2992,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var cal$1 = /*#__PURE__*/ Object.freeze({
+        default: cal,
+        __moduleExports: cal
+    });
     var capnproto = function (hljs) {
         return {
             aliases: ['capnp'],
@@ -2945,6 +3041,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var capnproto$1 = /*#__PURE__*/ Object.freeze({
+        default: capnproto,
+        __moduleExports: capnproto
+    });
     var ceylon = function (hljs) {
         // 2.3. Identifiers and keywords
         var KEYWORDS = 'assembly module package import alias class interface object given value ' +
@@ -3007,6 +3107,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ].concat(EXPRESSIONS)
         };
     };
+    var ceylon$1 = /*#__PURE__*/ Object.freeze({
+        default: ceylon,
+        __moduleExports: ceylon
+    });
     var clean = function (hljs) {
         return {
             aliases: ['clean', 'icl', 'dcl'],
@@ -3027,6 +3131,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var clean$1 = /*#__PURE__*/ Object.freeze({
+        default: clean,
+        __moduleExports: clean
+    });
     var clojure = function (hljs) {
         var keywords = {
             'builtin-name': 
@@ -3114,6 +3222,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: [LIST, STRING, HINT, HINT_COL, COMMENT, KEY, COLLECTION, NUMBER, LITERAL]
         };
     };
+    var clojure$1 = /*#__PURE__*/ Object.freeze({
+        default: clojure,
+        __moduleExports: clojure
+    });
     var clojureRepl = function (hljs) {
         return {
             contains: [
@@ -3128,6 +3240,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var clojureRepl$1 = /*#__PURE__*/ Object.freeze({
+        default: clojureRepl,
+        __moduleExports: clojureRepl
+    });
     var cmake = function (hljs) {
         return {
             aliases: ['cmake.in'],
@@ -3164,6 +3280,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var cmake$1 = /*#__PURE__*/ Object.freeze({
+        default: cmake,
+        __moduleExports: cmake
+    });
     var coffeescript = function (hljs) {
         var KEYWORDS = {
             keyword: 
@@ -3306,6 +3426,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ])
         };
     };
+    var coffeescript$1 = /*#__PURE__*/ Object.freeze({
+        default: coffeescript,
+        __moduleExports: coffeescript
+    });
     var coq = function (hljs) {
         return {
             keywords: {
@@ -3370,6 +3494,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var coq$1 = /*#__PURE__*/ Object.freeze({
+        default: coq,
+        __moduleExports: coq
+    });
     var cos = function cos(hljs) {
         var STRINGS = {
             className: 'string',
@@ -3485,6 +3613,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var cos$1 = /*#__PURE__*/ Object.freeze({
+        default: cos,
+        __moduleExports: cos
+    });
     var crmsh = function (hljs) {
         var RESOURCES = 'primitive rsc_template';
         var COMMANDS = 'group clone ms master location colocation order fencing_topology ' +
@@ -3571,6 +3703,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var crmsh$1 = /*#__PURE__*/ Object.freeze({
+        default: crmsh,
+        __moduleExports: crmsh
+    });
     var crystal = function (hljs) {
         var NUM_SUFFIX = '(_[uif](8|16|32|64))?';
         var CRYSTAL_IDENT_RE = '[a-zA-Z_]\\w*[!?=]?';
@@ -3760,6 +3896,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: CRYSTAL_DEFAULT_CONTAINS
         };
     };
+    var crystal$1 = /*#__PURE__*/ Object.freeze({
+        default: crystal,
+        __moduleExports: crystal
+    });
     var cs = function (hljs) {
         var KEYWORDS = {
             keyword: 
@@ -3928,6 +4068,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var cs$1 = /*#__PURE__*/ Object.freeze({
+        default: cs,
+        __moduleExports: cs
+    });
     var csp = function (hljs) {
         return {
             case_insensitive: false,
@@ -3949,6 +4093,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var csp$1 = /*#__PURE__*/ Object.freeze({
+        default: csp,
+        __moduleExports: csp
+    });
     var css = function (hljs) {
         var IDENT_RE = '[a-zA-Z-][a-zA-Z0-9_-]*';
         var RULE = {
@@ -4052,6 +4200,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var css$1 = /*#__PURE__*/ Object.freeze({
+        default: css,
+        __moduleExports: css
+    });
     var d = /**
      * Known issues:
      *
@@ -4272,6 +4424,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var d$1 = /*#__PURE__*/ Object.freeze({
+        default: d,
+        __moduleExports: d
+    });
     var markdown = function (hljs) {
         return {
             aliases: ['md', 'mkdown', 'mkd'],
@@ -4379,6 +4535,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var markdown$1 = /*#__PURE__*/ Object.freeze({
+        default: markdown,
+        __moduleExports: markdown
+    });
     var dart = function (hljs) {
         var SUBST = {
             className: 'subst',
@@ -4468,6 +4628,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var dart$1 = /*#__PURE__*/ Object.freeze({
+        default: dart,
+        __moduleExports: dart
+    });
     var delphi = function (hljs) {
         var KEYWORDS = 'exports register file shl array record property for mod while set ally label uses raise not ' +
             'stored class safecall var interface or private static exit index inherited to else stdcall ' +
@@ -4535,6 +4699,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ].concat(COMMENT_MODES)
         };
     };
+    var delphi$1 = /*#__PURE__*/ Object.freeze({
+        default: delphi,
+        __moduleExports: delphi
+    });
     var diff = function (hljs) {
         return {
             aliases: ['patch'],
@@ -4574,6 +4742,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var diff$1 = /*#__PURE__*/ Object.freeze({
+        default: diff,
+        __moduleExports: diff
+    });
     var django = function (hljs) {
         var FILTER = {
             begin: /\|[A-Za-z]+:?/,
@@ -4634,6 +4806,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var django$1 = /*#__PURE__*/ Object.freeze({
+        default: django,
+        __moduleExports: django
+    });
     var dns = function (hljs) {
         return {
             aliases: ['bind', 'zone'],
@@ -4661,6 +4837,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var dns$1 = /*#__PURE__*/ Object.freeze({
+        default: dns,
+        __moduleExports: dns
+    });
     var dockerfile = function (hljs) {
         return {
             aliases: ['docker'],
@@ -4682,6 +4862,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: '</'
         };
     };
+    var dockerfile$1 = /*#__PURE__*/ Object.freeze({
+        default: dockerfile,
+        __moduleExports: dockerfile
+    });
     var dos = function (hljs) {
         var COMMENT = hljs.COMMENT(/^\s*@?rem\b/, /$/, {
             relevance: 10
@@ -4728,6 +4912,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var dos$1 = /*#__PURE__*/ Object.freeze({
+        default: dos,
+        __moduleExports: dos
+    });
     var dsconfig = function (hljs) {
         var QUOTED_PROPERTY = {
             className: 'string',
@@ -4773,6 +4961,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var dsconfig$1 = /*#__PURE__*/ Object.freeze({
+        default: dsconfig,
+        __moduleExports: dsconfig
+    });
     var dts = function (hljs) {
         var STRINGS = {
             className: 'string',
@@ -4887,6 +5079,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var dts$1 = /*#__PURE__*/ Object.freeze({
+        default: dts,
+        __moduleExports: dts
+    });
     var dust = function (hljs) {
         var EXPRESSION_KEYWORDS = 'if eq ne lt lte gt gte select default math sep';
         return {
@@ -4918,6 +5114,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var dust$1 = /*#__PURE__*/ Object.freeze({
+        default: dust,
+        __moduleExports: dust
+    });
     var ebnf = function (hljs) {
         var commentMode = hljs.COMMENT(/\(\*/, /\*\)/);
         var nonTerminalMode = {
@@ -4946,6 +5146,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var ebnf$1 = /*#__PURE__*/ Object.freeze({
+        default: ebnf,
+        __moduleExports: ebnf
+    });
     var elixir = function (hljs) {
         var ELIXIR_IDENT_RE = '[a-zA-Z_][a-zA-Z0-9_]*(\\!|\\?)?';
         var ELIXIR_METHOD_RE = '[a-zA-Z_]\\w*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?';
@@ -5040,6 +5244,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: ELIXIR_DEFAULT_CONTAINS
         };
     };
+    var elixir$1 = /*#__PURE__*/ Object.freeze({
+        default: elixir,
+        __moduleExports: elixir
+    });
     var elm = function (hljs) {
         var COMMENT = {
             variants: [
@@ -5109,6 +5317,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /;/
         };
     };
+    var elm$1 = /*#__PURE__*/ Object.freeze({
+        default: elm,
+        __moduleExports: elm
+    });
     var ruby = function (hljs) {
         var RUBY_METHOD_RE = '[a-zA-Z_]\\w*[!?=]?|[-+~]\\@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?';
         var RUBY_KEYWORDS = {
@@ -5270,6 +5482,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: COMMENT_MODES.concat(IRB_DEFAULT).concat(RUBY_DEFAULT_CONTAINS)
         };
     };
+    var ruby$1 = /*#__PURE__*/ Object.freeze({
+        default: ruby,
+        __moduleExports: ruby
+    });
     var erb = function (hljs) {
         return {
             subLanguage: 'xml',
@@ -5284,6 +5500,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var erb$1 = /*#__PURE__*/ Object.freeze({
+        default: erb,
+        __moduleExports: erb
+    });
     var erlangRepl = function (hljs) {
         return {
             keywords: {
@@ -5327,6 +5547,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var erlangRepl$1 = /*#__PURE__*/ Object.freeze({
+        default: erlangRepl,
+        __moduleExports: erlangRepl
+    });
     var erlang = function (hljs) {
         var BASIC_ATOM_RE = '[a-z\'][a-zA-Z0-9_\']*';
         var FUNCTION_NAME_RE = '(' + BASIC_ATOM_RE + ':' + BASIC_ATOM_RE + '|' + BASIC_ATOM_RE + ')';
@@ -5465,6 +5689,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var erlang$1 = /*#__PURE__*/ Object.freeze({
+        default: erlang,
+        __moduleExports: erlang
+    });
     var excel = function (hljs) {
         return {
             aliases: ['xlsx', 'xls'],
@@ -5511,6 +5739,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var excel$1 = /*#__PURE__*/ Object.freeze({
+        default: excel,
+        __moduleExports: excel
+    });
     var fix = function (hljs) {
         return {
             contains: [
@@ -5541,6 +5773,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             case_insensitive: true
         };
     };
+    var fix$1 = /*#__PURE__*/ Object.freeze({
+        default: fix,
+        __moduleExports: fix
+    });
     var flix = function (hljs) {
         var CHAR = {
             className: 'string',
@@ -5580,6 +5816,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var flix$1 = /*#__PURE__*/ Object.freeze({
+        default: flix,
+        __moduleExports: flix
+    });
     var fortran = function (hljs) {
         var PARAMS = {
             className: 'params',
@@ -5649,6 +5889,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var fortran$1 = /*#__PURE__*/ Object.freeze({
+        default: fortran,
+        __moduleExports: fortran
+    });
     var fsharp = function (hljs) {
         var TYPEPARAM = {
             begin: '<', end: '>',
@@ -5705,6 +5949,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var fsharp$1 = /*#__PURE__*/ Object.freeze({
+        default: fsharp,
+        __moduleExports: fsharp
+    });
     var gams = function (hljs) {
         var KEYWORDS = {
             'keyword': 'abort acronym acronyms alias all and assign binary card diag display ' +
@@ -5853,6 +6101,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var gams$1 = /*#__PURE__*/ Object.freeze({
+        default: gams,
+        __moduleExports: gams
+    });
     var gauss = function (hljs) {
         var KEYWORDS = {
             keyword: 'and bool break call callexe checkinterrupt clear clearg closeall cls comlog compile ' +
@@ -6072,6 +6324,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var gauss$1 = /*#__PURE__*/ Object.freeze({
+        default: gauss,
+        __moduleExports: gauss
+    });
     var gcode = function (hljs) {
         var GCODE_IDENT_RE = '[A-Z_][A-Z0-9_.]*';
         var GCODE_CLOSE_RE = '\\%';
@@ -6136,6 +6392,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ].concat(GCODE_CODE)
         };
     };
+    var gcode$1 = /*#__PURE__*/ Object.freeze({
+        default: gcode,
+        __moduleExports: gcode
+    });
     var gherkin = function (hljs) {
         return {
             aliases: ['feature'],
@@ -6172,6 +6432,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var gherkin$1 = /*#__PURE__*/ Object.freeze({
+        default: gherkin,
+        __moduleExports: gherkin
+    });
     var glsl = function (hljs) {
         return {
             keywords: {
@@ -6287,6 +6551,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var glsl$1 = /*#__PURE__*/ Object.freeze({
+        default: glsl,
+        __moduleExports: glsl
+    });
     var go = function (hljs) {
         var GO_KEYWORDS = {
             keyword: 'break default func interface select case map struct chan else goto package switch ' +
@@ -6337,6 +6605,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var go$1 = /*#__PURE__*/ Object.freeze({
+        default: go,
+        __moduleExports: go
+    });
     var golo = function (hljs) {
         return {
             keywords: {
@@ -6357,6 +6629,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var golo$1 = /*#__PURE__*/ Object.freeze({
+        default: golo,
+        __moduleExports: golo
+    });
     var gradle = function (hljs) {
         return {
             case_insensitive: true,
@@ -6389,6 +6665,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var gradle$1 = /*#__PURE__*/ Object.freeze({
+        default: gradle,
+        __moduleExports: gradle
+    });
     var groovy = function (hljs) {
         return {
             keywords: {
@@ -6476,6 +6756,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /#|<\//
         };
     };
+    var groovy$1 = /*#__PURE__*/ Object.freeze({
+        default: groovy,
+        __moduleExports: groovy
+    });
     var haml = // TODO support filter tags like :javascript, support inline HTML
      function (hljs) {
         return {
@@ -6578,6 +6862,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var haml$1 = /*#__PURE__*/ Object.freeze({
+        default: haml,
+        __moduleExports: haml
+    });
     var handlebars = function (hljs) {
         var BUILT_INS = { 'builtin-name': 'each in with if else unless bindattr action collection debugger log outlet template unbound view yield' };
         return {
@@ -6611,6 +6899,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var handlebars$1 = /*#__PURE__*/ Object.freeze({
+        default: handlebars,
+        __moduleExports: handlebars
+    });
     var haskell = function (hljs) {
         var COMMENT = {
             variants: [
@@ -6712,6 +7004,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var haskell$1 = /*#__PURE__*/ Object.freeze({
+        default: haskell,
+        __moduleExports: haskell
+    });
     var haxe = function (hljs) {
         var HAXE_BASIC_TYPES = 'Int Float String Bool Dynamic Void Array ';
         return {
@@ -6817,6 +7113,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /<\//
         };
     };
+    var haxe$1 = /*#__PURE__*/ Object.freeze({
+        default: haxe,
+        __moduleExports: haxe
+    });
     var hsp = function (hljs) {
         return {
             case_insensitive: true,
@@ -6857,6 +7157,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var hsp$1 = /*#__PURE__*/ Object.freeze({
+        default: hsp,
+        __moduleExports: hsp
+    });
     var htmlbars = function (hljs) {
         var BUILT_INS = 'action collection component concat debugger each each-in else get hash if input link-to loc log mut outlet partial query-params render textarea unbound unless with yield view';
         var ATTR_ASSIGNMENT = {
@@ -6923,6 +7227,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var htmlbars$1 = /*#__PURE__*/ Object.freeze({
+        default: htmlbars,
+        __moduleExports: htmlbars
+    });
     var http = function (hljs) {
         var VERSION = 'HTTP/[0-9\\.]+';
         return {
@@ -6963,6 +7271,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var http$1 = /*#__PURE__*/ Object.freeze({
+        default: http,
+        __moduleExports: http
+    });
     var hy = function (hljs) {
         var keywords = {
             'builtin-name': 
@@ -7055,6 +7367,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: [SHEBANG, LIST, STRING, HINT, HINT_COL, COMMENT, KEY, COLLECTION, NUMBER, LITERAL]
         };
     };
+    var hy$1 = /*#__PURE__*/ Object.freeze({
+        default: hy,
+        __moduleExports: hy
+    });
     var inform7 = function (hljs) {
         var START_BRACKET = '\\[';
         var END_BRACKET = '\\]';
@@ -7111,6 +7427,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var inform7$1 = /*#__PURE__*/ Object.freeze({
+        default: inform7,
+        __moduleExports: inform7
+    });
     var ini = function (hljs) {
         var STRING = {
             className: "string",
@@ -7176,6 +7496,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var ini$1 = /*#__PURE__*/ Object.freeze({
+        default: ini,
+        __moduleExports: ini
+    });
     var irpf90 = function (hljs) {
         var PARAMS = {
             className: 'params',
@@ -7250,6 +7574,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var irpf90$1 = /*#__PURE__*/ Object.freeze({
+        default: irpf90,
+        __moduleExports: irpf90
+    });
     var java = function (hljs) {
         var JAVA_IDENT_RE = '[\u00C0-\u02B8a-zA-Z_$][\u00C0-\u02B8a-zA-Z_$0-9]*';
         var GENERIC_IDENT_RE = JAVA_IDENT_RE + '(<' + JAVA_IDENT_RE + '(\\s*,\\s*' + JAVA_IDENT_RE + ')*>)?';
@@ -7350,6 +7678,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var java$1 = /*#__PURE__*/ Object.freeze({
+        default: java,
+        __moduleExports: java
+    });
     var javascript = function (hljs) {
         var IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
         var KEYWORDS = {
@@ -7514,6 +7846,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /#(?!!)/
         };
     };
+    var javascript$1 = /*#__PURE__*/ Object.freeze({
+        default: javascript,
+        __moduleExports: javascript
+    });
     var jbossCli = function (hljs) {
         var PARAM = {
             begin: /[\w-]+ *=/, returnBegin: true,
@@ -7560,6 +7896,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var jbossCli$1 = /*#__PURE__*/ Object.freeze({
+        default: jbossCli,
+        __moduleExports: jbossCli
+    });
     var json = function (hljs) {
         var LITERALS = { literal: 'true false null' };
         var TYPES = [
@@ -7596,6 +7936,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: '\\S'
         };
     };
+    var json$1 = /*#__PURE__*/ Object.freeze({
+        default: json,
+        __moduleExports: json
+    });
     var julia = function (hljs) {
         // Since there are numerous special names in Julia, it is too much trouble
         // to maintain them by hand. Hence these names (i.e. keywords, literals and
@@ -7738,6 +8082,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
         INTERPOLATION.contains = DEFAULT.contains;
         return DEFAULT;
     };
+    var julia$1 = /*#__PURE__*/ Object.freeze({
+        default: julia,
+        __moduleExports: julia
+    });
     var juliaRepl = function (hljs) {
         return {
             contains: [
@@ -7761,6 +8109,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var juliaRepl$1 = /*#__PURE__*/ Object.freeze({
+        default: juliaRepl,
+        __moduleExports: juliaRepl
+    });
     var kotlin = function (hljs) {
         var KEYWORDS = {
             keyword: 'abstract as val var vararg get set class object open private protected public noinline ' +
@@ -7924,6 +8276,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var kotlin$1 = /*#__PURE__*/ Object.freeze({
+        default: kotlin,
+        __moduleExports: kotlin
+    });
     var lasso = function (hljs) {
         var LASSO_IDENT_RE = '[a-zA-Z_][\\w.]*';
         var LASSO_ANGLE_RE = '<\\?(lasso(script)?|=)';
@@ -8079,6 +8435,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ].concat(LASSO_CODE)
         };
     };
+    var lasso$1 = /*#__PURE__*/ Object.freeze({
+        default: lasso,
+        __moduleExports: lasso
+    });
     var ldif = function (hljs) {
         return {
             contains: [
@@ -8101,6 +8461,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var ldif$1 = /*#__PURE__*/ Object.freeze({
+        default: ldif,
+        __moduleExports: ldif
+    });
     var leaf = function (hljs) {
         return {
             contains: [
@@ -8140,6 +8504,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var leaf$1 = /*#__PURE__*/ Object.freeze({
+        default: leaf,
+        __moduleExports: leaf
+    });
     var less = function (hljs) {
         var IDENT_RE = '[\\w-]+'; // yes, Less identifiers may begin with a digit
         var INTERP_IDENT_RE = '(' + IDENT_RE + '|@{' + IDENT_RE + '})';
@@ -8249,6 +8617,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: RULES
         };
     };
+    var less$1 = /*#__PURE__*/ Object.freeze({
+        default: less,
+        __moduleExports: less
+    });
     var lisp = function (hljs) {
         var LISP_IDENT_RE = '[a-zA-Z_\\-\\+\\*\\/\\<\\=\\>\\&\\#][a-zA-Z0-9_\\-\\+\\*\\/\\<\\=\\>\\&\\#!]*';
         var MEC_RE = '\\|[^]*?\\|';
@@ -8347,6 +8719,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var lisp$1 = /*#__PURE__*/ Object.freeze({
+        default: lisp,
+        __moduleExports: lisp
+    });
     var livecodeserver = function (hljs) {
         var VARIABLE = {
             begin: '\\b[gtps][A-Z]+[A-Za-z0-9_\\-]*\\b|\\$_[A-Z]+',
@@ -8500,6 +8876,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: ';$|^\\[|^=|&|{'
         };
     };
+    var livecodeserver$1 = /*#__PURE__*/ Object.freeze({
+        default: livecodeserver,
+        __moduleExports: livecodeserver
+    });
     var livescript = function (hljs) {
         var KEYWORDS = {
             keyword: 
@@ -8645,6 +9025,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ])
         };
     };
+    var livescript$1 = /*#__PURE__*/ Object.freeze({
+        default: livescript,
+        __moduleExports: livescript
+    });
     var llvm = function (hljs) {
         var identifier = '([-a-zA-Z$._][\\w\\-$.]*)';
         return {
@@ -8730,6 +9114,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var llvm$1 = /*#__PURE__*/ Object.freeze({
+        default: llvm,
+        __moduleExports: llvm
+    });
     var lsl = function (hljs) {
         var LSL_STRING_ESCAPE_CHARS = {
             className: 'subst',
@@ -8806,6 +9194,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var lsl$1 = /*#__PURE__*/ Object.freeze({
+        default: lsl,
+        __moduleExports: lsl
+    });
     var lua = function (hljs) {
         var OPENING_LONG_BRACKET = '\\[=*\\[';
         var CLOSING_LONG_BRACKET = '\\]=*\\]';
@@ -8867,6 +9259,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ])
         };
     };
+    var lua$1 = /*#__PURE__*/ Object.freeze({
+        default: lua,
+        __moduleExports: lua
+    });
     var makefile = function (hljs) {
         /* Variables: simple (eg $(var)) and special (eg $@) */
         var VARIABLE = {
@@ -8945,6 +9341,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var makefile$1 = /*#__PURE__*/ Object.freeze({
+        default: makefile,
+        __moduleExports: makefile
+    });
     var mathematica = function (hljs) {
         return {
             aliases: ['mma'],
@@ -9002,6 +9402,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var mathematica$1 = /*#__PURE__*/ Object.freeze({
+        default: mathematica,
+        __moduleExports: mathematica
+    });
     var matlab = function (hljs) {
         var COMMON_CONTAINS = [
             hljs.C_NUMBER_MODE,
@@ -9086,6 +9490,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ].concat(COMMON_CONTAINS)
         };
     };
+    var matlab$1 = /*#__PURE__*/ Object.freeze({
+        default: matlab,
+        __moduleExports: matlab
+    });
     var maxima = function (hljs) {
         var KEYWORDS = 'if then else elseif for thru do while unless step in and or not';
         var LITERALS = 'true false unknown inf minf ind und %e %i %pi %phi %gamma';
@@ -9489,6 +9897,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /@/
         };
     };
+    var maxima$1 = /*#__PURE__*/ Object.freeze({
+        default: maxima,
+        __moduleExports: maxima
+    });
     var mel = function (hljs) {
         return {
             keywords: 'int float string vector matrix if else switch case default while do for in break ' +
@@ -9712,6 +10124,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var mel$1 = /*#__PURE__*/ Object.freeze({
+        default: mel,
+        __moduleExports: mel
+    });
     var mercury = function (hljs) {
         var KEYWORDS = {
             keyword: 'module use_module import_module include_module end_module initialise ' +
@@ -9785,6 +10201,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var mercury$1 = /*#__PURE__*/ Object.freeze({
+        default: mercury,
+        __moduleExports: mercury
+    });
     var mipsasm = function (hljs) {
         //local labels: %?[FB]?[AT]?\d{1,2}\w+
         return {
@@ -9869,6 +10289,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: '\/'
         };
     };
+    var mipsasm$1 = /*#__PURE__*/ Object.freeze({
+        default: mipsasm,
+        __moduleExports: mipsasm
+    });
     var mizar = function (hljs) {
         return {
             keywords: 'environ vocabularies notations constructors definitions ' +
@@ -9886,6 +10310,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var mizar$1 = /*#__PURE__*/ Object.freeze({
+        default: mizar,
+        __moduleExports: mizar
+    });
     var perl = function (hljs) {
         var PERL_KEYWORDS = 'getpwent getservent quotemeta msgrcv scalar kill dbmclose undef lc ' +
             'ma syswrite tr send umask sysopen shmwrite vec qx utime local oct semctl localtime ' +
@@ -10037,6 +10465,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: PERL_DEFAULT_CONTAINS
         };
     };
+    var perl$1 = /*#__PURE__*/ Object.freeze({
+        default: perl,
+        __moduleExports: perl
+    });
     var mojolicious = function (hljs) {
         return {
             subLanguage: 'xml',
@@ -10061,6 +10493,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var mojolicious$1 = /*#__PURE__*/ Object.freeze({
+        default: mojolicious,
+        __moduleExports: mojolicious
+    });
     var monkey = function (hljs) {
         var NUMBER = {
             className: 'number', relevance: 0,
@@ -10128,6 +10564,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var monkey$1 = /*#__PURE__*/ Object.freeze({
+        default: monkey,
+        __moduleExports: monkey
+    });
     var moonscript = function (hljs) {
         var KEYWORDS = {
             keyword: 
@@ -10234,6 +10674,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ])
         };
     };
+    var moonscript$1 = /*#__PURE__*/ Object.freeze({
+        default: moonscript,
+        __moduleExports: moonscript
+    });
     var n1ql = function (hljs) {
         return {
             case_insensitive: true,
@@ -10298,6 +10742,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var n1ql$1 = /*#__PURE__*/ Object.freeze({
+        default: n1ql,
+        __moduleExports: n1ql
+    });
     var nginx = function (hljs) {
         var VAR = {
             className: 'variable',
@@ -10388,6 +10836,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: '[^\\s\\}]'
         };
     };
+    var nginx$1 = /*#__PURE__*/ Object.freeze({
+        default: nginx,
+        __moduleExports: nginx
+    });
     var nimrod = function (hljs) {
         return {
             aliases: ['nim'],
@@ -10439,6 +10891,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var nimrod$1 = /*#__PURE__*/ Object.freeze({
+        default: nimrod,
+        __moduleExports: nimrod
+    });
     var nix = function (hljs) {
         var NIX_KEYWORDS = {
             keyword: 'rec with let in inherit assert if else then',
@@ -10484,6 +10940,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: EXPRESSIONS
         };
     };
+    var nix$1 = /*#__PURE__*/ Object.freeze({
+        default: nix,
+        __moduleExports: nix
+    });
     var nsis = function (hljs) {
         var CONSTANTS = {
             className: 'variable',
@@ -10574,6 +11034,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var nsis$1 = /*#__PURE__*/ Object.freeze({
+        default: nsis,
+        __moduleExports: nsis
+    });
     var objectivec = function (hljs) {
         var API_CLASS = {
             className: 'built_in',
@@ -10661,6 +11125,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var objectivec$1 = /*#__PURE__*/ Object.freeze({
+        default: objectivec,
+        __moduleExports: objectivec
+    });
     var ocaml = function (hljs) {
         /* missing support for heredoc-like string (OCaml 4.0.2+) */
         return {
@@ -10724,6 +11192,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var ocaml$1 = /*#__PURE__*/ Object.freeze({
+        default: ocaml,
+        __moduleExports: ocaml
+    });
     var openscad = function (hljs) {
         var SPECIAL_VARS = {
             className: 'keyword',
@@ -10772,6 +11244,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var openscad$1 = /*#__PURE__*/ Object.freeze({
+        default: openscad,
+        __moduleExports: openscad
+    });
     var oxygene = function (hljs) {
         var OXYGENE_KEYWORDS = 'abstract add and array as asc aspect assembly async begin break block by case class concat const copy constructor continue ' +
             'create default delegate desc distinct div do downto dynamic each else empty end ensure enum equals event except exit extension external false ' +
@@ -10833,6 +11309,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var oxygene$1 = /*#__PURE__*/ Object.freeze({
+        default: oxygene,
+        __moduleExports: oxygene
+    });
     var parser3 = function (hljs) {
         var CURLY_SUBCOMMENT = hljs.COMMENT('{', '}', {
             contains: ['self']
@@ -10872,6 +11352,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var parser3$1 = /*#__PURE__*/ Object.freeze({
+        default: parser3,
+        __moduleExports: parser3
+    });
     var pf = function (hljs) {
         var MACRO = {
             className: 'variable',
@@ -10915,6 +11399,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var pf$1 = /*#__PURE__*/ Object.freeze({
+        default: pf,
+        __moduleExports: pf
+    });
     var php = function (hljs) {
         var VARIABLE = {
             begin: '\\$+[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*'
@@ -11032,6 +11520,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var php$1 = /*#__PURE__*/ Object.freeze({
+        default: php,
+        __moduleExports: php
+    });
     var pony = function (hljs) {
         var KEYWORDS = {
             keyword: 'actor addressof and as be break class compile_error compile_intrinsic' +
@@ -11111,6 +11603,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var pony$1 = /*#__PURE__*/ Object.freeze({
+        default: pony,
+        __moduleExports: pony
+    });
     var powershell = function (hljs) {
         var BACKTICK_ESCAPE = {
             begin: '`[\\s\\S]',
@@ -11186,6 +11682,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var powershell$1 = /*#__PURE__*/ Object.freeze({
+        default: powershell,
+        __moduleExports: powershell
+    });
     var processing = function (hljs) {
         return {
             keywords: {
@@ -11233,6 +11733,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var processing$1 = /*#__PURE__*/ Object.freeze({
+        default: processing,
+        __moduleExports: processing
+    });
     var profile = function (hljs) {
         return {
             contains: [
@@ -11262,6 +11766,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var profile$1 = /*#__PURE__*/ Object.freeze({
+        default: profile,
+        __moduleExports: profile
+    });
     var prolog = function (hljs) {
         var ATOM = {
             begin: /[a-z][A-Za-z0-9_]*/,
@@ -11328,6 +11836,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ])
         };
     };
+    var prolog$1 = /*#__PURE__*/ Object.freeze({
+        default: prolog,
+        __moduleExports: prolog
+    });
     var protobuf = function (hljs) {
         return {
             keywords: {
@@ -11363,6 +11875,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var protobuf$1 = /*#__PURE__*/ Object.freeze({
+        default: protobuf,
+        __moduleExports: protobuf
+    });
     var puppet = function (hljs) {
         var PUPPET_KEYWORDS = {
             keyword: 
@@ -11470,6 +11986,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var puppet$1 = /*#__PURE__*/ Object.freeze({
+        default: puppet,
+        __moduleExports: puppet
+    });
     var purebasic = // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
      function (hljs) {
         var STRINGS = {
@@ -11524,6 +12044,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var purebasic$1 = /*#__PURE__*/ Object.freeze({
+        default: purebasic,
+        __moduleExports: purebasic
+    });
     var python = function (hljs) {
         var KEYWORDS = {
             keyword: 'and elif is global as in if from raise for except finally print import pass return ' +
@@ -11637,6 +12161,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var python$1 = /*#__PURE__*/ Object.freeze({
+        default: python,
+        __moduleExports: python
+    });
     var q = function (hljs) {
         var Q_KEYWORDS = {
             keyword: 'do while select delete by update from',
@@ -11655,6 +12183,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var q$1 = /*#__PURE__*/ Object.freeze({
+        default: q,
+        __moduleExports: q
+    });
     var qml = function (hljs) {
         var KEYWORDS = {
             keyword: 'in of on if for while finally var new function do return void else break catch ' +
@@ -11813,6 +12345,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /#/
         };
     };
+    var qml$1 = /*#__PURE__*/ Object.freeze({
+        default: qml,
+        __moduleExports: qml
+    });
     var r = function (hljs) {
         var IDENT_RE = '([a-zA-Z]|\\.[a-zA-Z.])[a-zA-Z0-9._]*';
         return {
@@ -11877,6 +12413,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var r$1 = /*#__PURE__*/ Object.freeze({
+        default: r,
+        __moduleExports: r
+    });
     var rib = function (hljs) {
         return {
             keywords: 'ArchiveRecord AreaLightSource Atmosphere Attribute AttributeBegin AttributeEnd Basis ' +
@@ -11902,6 +12442,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var rib$1 = /*#__PURE__*/ Object.freeze({
+        default: rib,
+        __moduleExports: rib
+    });
     var roboconf = function (hljs) {
         var IDENTIFIER = '[a-zA-Z-_][^\\n{]+\\{';
         var PROPERTY = {
@@ -11963,6 +12507,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var roboconf$1 = /*#__PURE__*/ Object.freeze({
+        default: roboconf,
+        __moduleExports: roboconf
+    });
     var routeros = // Colors from RouterOS terminal:
      
     //   green        - #0E9A00
@@ -12099,6 +12647,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var routeros$1 = /*#__PURE__*/ Object.freeze({
+        default: routeros,
+        __moduleExports: routeros
+    });
     var rsl = function (hljs) {
         return {
             keywords: {
@@ -12132,6 +12684,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var rsl$1 = /*#__PURE__*/ Object.freeze({
+        default: rsl,
+        __moduleExports: rsl
+    });
     var ruleslanguage = function (hljs) {
         return {
             keywords: {
@@ -12192,6 +12748,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var ruleslanguage$1 = /*#__PURE__*/ Object.freeze({
+        default: ruleslanguage,
+        __moduleExports: ruleslanguage
+    });
     var rust = function (hljs) {
         var NUM_SUFFIX = '([ui](8|16|32|64|128|size)|f(32|64))\?';
         var KEYWORDS = 'alignof as be box break const continue crate do else enum extern ' +
@@ -12295,6 +12855,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var rust$1 = /*#__PURE__*/ Object.freeze({
+        default: rust,
+        __moduleExports: rust
+    });
     var scala = function (hljs) {
         var ANNOTATION = { className: 'meta', begin: '@[A-Za-z]+' };
         // used in strings for escaping/interpolation/substitution
@@ -12399,6 +12963,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var scala$1 = /*#__PURE__*/ Object.freeze({
+        default: scala,
+        __moduleExports: scala
+    });
     var scheme = function (hljs) {
         var SCHEME_IDENT_RE = '[^\\(\\)\\[\\]\\{\\}",\'`;#|\\\\\\s]+';
         var SCHEME_SIMPLE_NUMBER_RE = '(\\-|\\+)?\\d+([./]\\d+)?';
@@ -12517,6 +13085,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: [SHEBANG, NUMBER, STRING, QUOTED_IDENT, QUOTED_LIST, LIST].concat(COMMENT_MODES)
         };
     };
+    var scheme$1 = /*#__PURE__*/ Object.freeze({
+        default: scheme,
+        __moduleExports: scheme
+    });
     var scilab = function (hljs) {
         var COMMON_CONTAINS = [
             hljs.C_NUMBER_MODE,
@@ -12567,6 +13139,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ].concat(COMMON_CONTAINS)
         };
     };
+    var scilab$1 = /*#__PURE__*/ Object.freeze({
+        default: scilab,
+        __moduleExports: scilab
+    });
     var scss = function (hljs) {
         var IDENT_RE = '[a-zA-Z-][a-zA-Z0-9_-]*';
         var VARIABLE = {
@@ -12664,6 +13240,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var scss$1 = /*#__PURE__*/ Object.freeze({
+        default: scss,
+        __moduleExports: scss
+    });
     var shell = function (hljs) {
         return {
             aliases: ['console'],
@@ -12678,6 +13258,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var shell$1 = /*#__PURE__*/ Object.freeze({
+        default: shell,
+        __moduleExports: shell
+    });
     var smali = function (hljs) {
         var smali_instr_low_prio = ['add', 'and', 'cmp', 'cmpg', 'cmpl', 'const', 'div', 'double', 'float', 'goto', 'if', 'int', 'long', 'move', 'mul', 'neg', 'new', 'nop', 'not', 'or', 'rem', 'return', 'shl', 'shr', 'sput', 'sub', 'throw', 'ushr', 'xor'];
         var smali_instr_high_prio = ['aget', 'aput', 'array', 'check', 'execute', 'fill', 'filled', 'goto/16', 'goto/32', 'iget', 'instance', 'invoke', 'iput', 'monitor', 'packed', 'sget', 'sparse'];
@@ -12729,6 +13313,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var smali$1 = /*#__PURE__*/ Object.freeze({
+        default: smali,
+        __moduleExports: smali
+    });
     var smalltalk = function (hljs) {
         var VAR_IDENT_RE = '[a-z][a-zA-Z0-9_]*';
         var CHAR = {
@@ -12778,6 +13366,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var smalltalk$1 = /*#__PURE__*/ Object.freeze({
+        default: smalltalk,
+        __moduleExports: smalltalk
+    });
     var sml = function (hljs) {
         return {
             aliases: ['ml'],
@@ -12837,6 +13429,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var sml$1 = /*#__PURE__*/ Object.freeze({
+        default: sml,
+        __moduleExports: sml
+    });
     var sqf = function (hljs) {
         var CPP = hljs.getLanguage('cpp').exports;
         // In SQF, a variable start with _
@@ -13200,6 +13796,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             illegal: /#/
         };
     };
+    var sqf$1 = /*#__PURE__*/ Object.freeze({
+        default: sqf,
+        __moduleExports: sqf
+    });
     var sql = function (hljs) {
         var COMMENT_MODE = hljs.COMMENT('--', '$');
         return {
@@ -13355,6 +13955,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var sql$1 = /*#__PURE__*/ Object.freeze({
+        default: sql,
+        __moduleExports: sql
+    });
     var stan = function (hljs) {
         return {
             contains: [
@@ -13432,6 +14036,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var stan$1 = /*#__PURE__*/ Object.freeze({
+        default: stan,
+        __moduleExports: stan
+    });
     var stata = function (hljs) {
         return {
             aliases: ['do', 'ado'],
@@ -13467,6 +14075,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var stata$1 = /*#__PURE__*/ Object.freeze({
+        default: stata,
+        __moduleExports: stata
+    });
     var step21 = function (hljs) {
         var STEP21_IDENT_RE = '[A-Z_][A-Z0-9_.]*';
         var STEP21_KEYWORDS = {
@@ -13512,6 +14124,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var step21$1 = /*#__PURE__*/ Object.freeze({
+        default: step21,
+        __moduleExports: step21
+    });
     var stylus = function (hljs) {
         var VARIABLE = {
             className: 'variable',
@@ -13943,6 +14559,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var stylus$1 = /*#__PURE__*/ Object.freeze({
+        default: stylus,
+        __moduleExports: stylus
+    });
     var subunit = function (hljs) {
         var DETAILS = {
             className: 'string',
@@ -13976,6 +14596,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var subunit$1 = /*#__PURE__*/ Object.freeze({
+        default: subunit,
+        __moduleExports: subunit
+    });
     var swift = function (hljs) {
         var SWIFT_KEYWORDS = {
             keyword: '__COLUMN__ __FILE__ __FUNCTION__ __LINE__ as as! as? associativity ' +
@@ -14085,6 +14709,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var swift$1 = /*#__PURE__*/ Object.freeze({
+        default: swift,
+        __moduleExports: swift
+    });
     var taggerscript = function (hljs) {
         var COMMENT = {
             className: 'comment',
@@ -14123,6 +14751,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var taggerscript$1 = /*#__PURE__*/ Object.freeze({
+        default: taggerscript,
+        __moduleExports: taggerscript
+    });
     var yaml = function (hljs) {
         var LITERALS = 'true false yes no null';
         var keyPrefix = '^[ \\-]*';
@@ -14207,6 +14839,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var yaml$1 = /*#__PURE__*/ Object.freeze({
+        default: yaml,
+        __moduleExports: yaml
+    });
     var tap = function (hljs) {
         return {
             case_insensitive: true,
@@ -14242,6 +14878,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var tap$1 = /*#__PURE__*/ Object.freeze({
+        default: tap,
+        __moduleExports: tap
+    });
     var tcl = function (hljs) {
         return {
             aliases: ['tk'],
@@ -14302,6 +14942,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var tcl$1 = /*#__PURE__*/ Object.freeze({
+        default: tcl,
+        __moduleExports: tcl
+    });
     var tex = function (hljs) {
         var COMMAND = {
             className: 'tag',
@@ -14358,6 +15002,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var tex$1 = /*#__PURE__*/ Object.freeze({
+        default: tex,
+        __moduleExports: tex
+    });
     var thrift = function (hljs) {
         var BUILT_IN_TYPES = 'bool byte i16 i32 i64 double string binary';
         return {
@@ -14389,6 +15037,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var thrift$1 = /*#__PURE__*/ Object.freeze({
+        default: thrift,
+        __moduleExports: thrift
+    });
     var tp = function (hljs) {
         var TPID = {
             className: 'number',
@@ -14469,6 +15121,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var tp$1 = /*#__PURE__*/ Object.freeze({
+        default: tp,
+        __moduleExports: tp
+    });
     var twig = function (hljs) {
         var PARAMS = {
             className: 'params',
@@ -14527,6 +15183,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var twig$1 = /*#__PURE__*/ Object.freeze({
+        default: twig,
+        __moduleExports: twig
+    });
     var typescript = function (hljs) {
         var KEYWORDS = {
             keyword: 'in if for while finally var new function do return void else break catch ' +
@@ -14678,6 +15338,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var typescript$1 = /*#__PURE__*/ Object.freeze({
+        default: typescript,
+        __moduleExports: typescript
+    });
     var vala = function (hljs) {
         return {
             keywords: {
@@ -14725,6 +15389,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var vala$1 = /*#__PURE__*/ Object.freeze({
+        default: vala,
+        __moduleExports: vala
+    });
     var vbnet = function (hljs) {
         return {
             aliases: ['vb'],
@@ -14773,6 +15441,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var vbnet$1 = /*#__PURE__*/ Object.freeze({
+        default: vbnet,
+        __moduleExports: vbnet
+    });
     var vbscript = function (hljs) {
         return {
             aliases: ['vbs'],
@@ -14804,6 +15476,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var vbscript$1 = /*#__PURE__*/ Object.freeze({
+        default: vbscript,
+        __moduleExports: vbscript
+    });
     var vbscriptHtml = function (hljs) {
         return {
             subLanguage: 'xml',
@@ -14815,6 +15491,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var vbscriptHtml$1 = /*#__PURE__*/ Object.freeze({
+        default: vbscriptHtml,
+        __moduleExports: vbscriptHtml
+    });
     var verilog = function (hljs) {
         var SV_KEYWORDS = {
             keyword: 'accept_on alias always always_comb always_ff always_latch and assert assign ' +
@@ -14910,6 +15590,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         }; // return
     };
+    var verilog$1 = /*#__PURE__*/ Object.freeze({
+        default: verilog,
+        __moduleExports: verilog
+    });
     var vhdl = function (hljs) {
         // Regular expression for VHDL numeric literals.
         // Decimal literal:
@@ -14964,6 +15648,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var vhdl$1 = /*#__PURE__*/ Object.freeze({
+        default: vhdl,
+        __moduleExports: vhdl
+    });
     var vim = function (hljs) {
         return {
             lexemes: /[!#@\w]+/,
@@ -15067,6 +15755,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var vim$1 = /*#__PURE__*/ Object.freeze({
+        default: vim,
+        __moduleExports: vim
+    });
     var x86asm = function (hljs) {
         return {
             case_insensitive: true,
@@ -15190,6 +15882,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var x86asm$1 = /*#__PURE__*/ Object.freeze({
+        default: x86asm,
+        __moduleExports: x86asm
+    });
     var xl = function (hljs) {
         var BUILTIN_MODULES = 'ObjectLoader Animate MovieCredits Slides Filters Shading Materials LensFlare Mapping VLCAudioVideo ' +
             'StereoDecoder PointCloud NetworkAccess RemoteControl RegExp ChromaKey Snowfall NodeJS Speech Charts';
@@ -15256,6 +15952,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
+    var xl$1 = /*#__PURE__*/ Object.freeze({
+        default: xl,
+        __moduleExports: xl
+    });
     var xquery = function (hljs) {
         var KEYWORDS = 'for let if while then else return where group by xquery encoding version' +
             'module namespace boundary-space preserve strip default collation base-uri ordering' +
@@ -15318,6 +16018,10 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             contains: CONTAINS
         };
     };
+    var xquery$1 = /*#__PURE__*/ Object.freeze({
+        default: xquery,
+        __moduleExports: xquery
+    });
     var zephir = function (hljs) {
         var STRING = {
             className: 'string',
@@ -15415,189 +16119,370 @@ DocsSite.loadBundle('usage-page', ['exports'], function (exports) {
             ]
         };
     };
-    highlight.registerLanguage('1c', _1c);
-    highlight.registerLanguage('abnf', abnf);
-    highlight.registerLanguage('accesslog', accesslog);
-    highlight.registerLanguage('actionscript', actionscript);
-    highlight.registerLanguage('ada', ada);
-    highlight.registerLanguage('apache', apache);
-    highlight.registerLanguage('applescript', applescript);
-    highlight.registerLanguage('cpp', cpp);
-    highlight.registerLanguage('arduino', arduino);
-    highlight.registerLanguage('armasm', armasm);
-    highlight.registerLanguage('xml', xml);
-    highlight.registerLanguage('asciidoc', asciidoc);
-    highlight.registerLanguage('aspectj', aspectj);
-    highlight.registerLanguage('autohotkey', autohotkey);
-    highlight.registerLanguage('autoit', autoit);
-    highlight.registerLanguage('avrasm', avrasm);
-    highlight.registerLanguage('awk', awk);
-    highlight.registerLanguage('axapta', axapta);
-    highlight.registerLanguage('bash', bash);
-    highlight.registerLanguage('basic', basic);
-    highlight.registerLanguage('bnf', bnf);
-    highlight.registerLanguage('brainfuck', brainfuck);
-    highlight.registerLanguage('cal', cal);
-    highlight.registerLanguage('capnproto', capnproto);
-    highlight.registerLanguage('ceylon', ceylon);
-    highlight.registerLanguage('clean', clean);
-    highlight.registerLanguage('clojure', clojure);
-    highlight.registerLanguage('clojure-repl', clojureRepl);
-    highlight.registerLanguage('cmake', cmake);
-    highlight.registerLanguage('coffeescript', coffeescript);
-    highlight.registerLanguage('coq', coq);
-    highlight.registerLanguage('cos', cos);
-    highlight.registerLanguage('crmsh', crmsh);
-    highlight.registerLanguage('crystal', crystal);
-    highlight.registerLanguage('cs', cs);
-    highlight.registerLanguage('csp', csp);
-    highlight.registerLanguage('css', css);
-    highlight.registerLanguage('d', d);
-    highlight.registerLanguage('markdown', markdown);
-    highlight.registerLanguage('dart', dart);
-    highlight.registerLanguage('delphi', delphi);
-    highlight.registerLanguage('diff', diff);
-    highlight.registerLanguage('django', django);
-    highlight.registerLanguage('dns', dns);
-    highlight.registerLanguage('dockerfile', dockerfile);
-    highlight.registerLanguage('dos', dos);
-    highlight.registerLanguage('dsconfig', dsconfig);
-    highlight.registerLanguage('dts', dts);
-    highlight.registerLanguage('dust', dust);
-    highlight.registerLanguage('ebnf', ebnf);
-    highlight.registerLanguage('elixir', elixir);
-    highlight.registerLanguage('elm', elm);
-    highlight.registerLanguage('ruby', ruby);
-    highlight.registerLanguage('erb', erb);
-    highlight.registerLanguage('erlang-repl', erlangRepl);
-    highlight.registerLanguage('erlang', erlang);
-    highlight.registerLanguage('excel', excel);
-    highlight.registerLanguage('fix', fix);
-    highlight.registerLanguage('flix', flix);
-    highlight.registerLanguage('fortran', fortran);
-    highlight.registerLanguage('fsharp', fsharp);
-    highlight.registerLanguage('gams', gams);
-    highlight.registerLanguage('gauss', gauss);
-    highlight.registerLanguage('gcode', gcode);
-    highlight.registerLanguage('gherkin', gherkin);
-    highlight.registerLanguage('glsl', glsl);
-    highlight.registerLanguage('go', go);
-    highlight.registerLanguage('golo', golo);
-    highlight.registerLanguage('gradle', gradle);
-    highlight.registerLanguage('groovy', groovy);
-    highlight.registerLanguage('haml', haml);
-    highlight.registerLanguage('handlebars', handlebars);
-    highlight.registerLanguage('haskell', haskell);
-    highlight.registerLanguage('haxe', haxe);
-    highlight.registerLanguage('hsp', hsp);
-    highlight.registerLanguage('htmlbars', htmlbars);
-    highlight.registerLanguage('http', http);
-    highlight.registerLanguage('hy', hy);
-    highlight.registerLanguage('inform7', inform7);
-    highlight.registerLanguage('ini', ini);
-    highlight.registerLanguage('irpf90', irpf90);
-    highlight.registerLanguage('java', java);
-    highlight.registerLanguage('javascript', javascript);
-    highlight.registerLanguage('jboss-cli', jbossCli);
-    highlight.registerLanguage('json', json);
-    highlight.registerLanguage('julia', julia);
-    highlight.registerLanguage('julia-repl', juliaRepl);
-    highlight.registerLanguage('kotlin', kotlin);
-    highlight.registerLanguage('lasso', lasso);
-    highlight.registerLanguage('ldif', ldif);
-    highlight.registerLanguage('leaf', leaf);
-    highlight.registerLanguage('less', less);
-    highlight.registerLanguage('lisp', lisp);
-    highlight.registerLanguage('livecodeserver', livecodeserver);
-    highlight.registerLanguage('livescript', livescript);
-    highlight.registerLanguage('llvm', llvm);
-    highlight.registerLanguage('lsl', lsl);
-    highlight.registerLanguage('lua', lua);
-    highlight.registerLanguage('makefile', makefile);
-    highlight.registerLanguage('mathematica', mathematica);
-    highlight.registerLanguage('matlab', matlab);
-    highlight.registerLanguage('maxima', maxima);
-    highlight.registerLanguage('mel', mel);
-    highlight.registerLanguage('mercury', mercury);
-    highlight.registerLanguage('mipsasm', mipsasm);
-    highlight.registerLanguage('mizar', mizar);
-    highlight.registerLanguage('perl', perl);
-    highlight.registerLanguage('mojolicious', mojolicious);
-    highlight.registerLanguage('monkey', monkey);
-    highlight.registerLanguage('moonscript', moonscript);
-    highlight.registerLanguage('n1ql', n1ql);
-    highlight.registerLanguage('nginx', nginx);
-    highlight.registerLanguage('nimrod', nimrod);
-    highlight.registerLanguage('nix', nix);
-    highlight.registerLanguage('nsis', nsis);
-    highlight.registerLanguage('objectivec', objectivec);
-    highlight.registerLanguage('ocaml', ocaml);
-    highlight.registerLanguage('openscad', openscad);
-    highlight.registerLanguage('oxygene', oxygene);
-    highlight.registerLanguage('parser3', parser3);
-    highlight.registerLanguage('pf', pf);
-    highlight.registerLanguage('php', php);
-    highlight.registerLanguage('pony', pony);
-    highlight.registerLanguage('powershell', powershell);
-    highlight.registerLanguage('processing', processing);
-    highlight.registerLanguage('profile', profile);
-    highlight.registerLanguage('prolog', prolog);
-    highlight.registerLanguage('protobuf', protobuf);
-    highlight.registerLanguage('puppet', puppet);
-    highlight.registerLanguage('purebasic', purebasic);
-    highlight.registerLanguage('python', python);
-    highlight.registerLanguage('q', q);
-    highlight.registerLanguage('qml', qml);
-    highlight.registerLanguage('r', r);
-    highlight.registerLanguage('rib', rib);
-    highlight.registerLanguage('roboconf', roboconf);
-    highlight.registerLanguage('routeros', routeros);
-    highlight.registerLanguage('rsl', rsl);
-    highlight.registerLanguage('ruleslanguage', ruleslanguage);
-    highlight.registerLanguage('rust', rust);
-    highlight.registerLanguage('scala', scala);
-    highlight.registerLanguage('scheme', scheme);
-    highlight.registerLanguage('scilab', scilab);
-    highlight.registerLanguage('scss', scss);
-    highlight.registerLanguage('shell', shell);
-    highlight.registerLanguage('smali', smali);
-    highlight.registerLanguage('smalltalk', smalltalk);
-    highlight.registerLanguage('sml', sml);
-    highlight.registerLanguage('sqf', sqf);
-    highlight.registerLanguage('sql', sql);
-    highlight.registerLanguage('stan', stan);
-    highlight.registerLanguage('stata', stata);
-    highlight.registerLanguage('step21', step21);
-    highlight.registerLanguage('stylus', stylus);
-    highlight.registerLanguage('subunit', subunit);
-    highlight.registerLanguage('swift', swift);
-    highlight.registerLanguage('taggerscript', taggerscript);
-    highlight.registerLanguage('yaml', yaml);
-    highlight.registerLanguage('tap', tap);
-    highlight.registerLanguage('tcl', tcl);
-    highlight.registerLanguage('tex', tex);
-    highlight.registerLanguage('thrift', thrift);
-    highlight.registerLanguage('tp', tp);
-    highlight.registerLanguage('twig', twig);
-    highlight.registerLanguage('typescript', typescript);
-    highlight.registerLanguage('vala', vala);
-    highlight.registerLanguage('vbnet', vbnet);
-    highlight.registerLanguage('vbscript', vbscript);
-    highlight.registerLanguage('vbscript-html', vbscriptHtml);
-    highlight.registerLanguage('verilog', verilog);
-    highlight.registerLanguage('vhdl', vhdl);
-    highlight.registerLanguage('vim', vim);
-    highlight.registerLanguage('x86asm', x86asm);
-    highlight.registerLanguage('xl', xl);
-    highlight.registerLanguage('xquery', xquery);
-    highlight.registerLanguage('zephir', zephir);
-    var lib = highlight;
+    var zephir$1 = /*#__PURE__*/ Object.freeze({
+        default: zephir,
+        __moduleExports: zephir
+    });
+    var hljs = (highlight$1 && highlight) || highlight$1;
+    var require$$0 = (_1c$1 && _1c) || _1c$1;
+    var require$$1 = (abnf$1 && abnf) || abnf$1;
+    var require$$2 = (accesslog$1 && accesslog) || accesslog$1;
+    var require$$3 = (actionscript$1 && actionscript) || actionscript$1;
+    var require$$4 = (ada$1 && ada) || ada$1;
+    var require$$5 = (apache$1 && apache) || apache$1;
+    var require$$6 = (applescript$1 && applescript) || applescript$1;
+    var require$$7 = (cpp$1 && cpp) || cpp$1;
+    var require$$8 = (arduino$1 && arduino) || arduino$1;
+    var require$$9 = (armasm$1 && armasm) || armasm$1;
+    var require$$10 = (xml$1 && xml) || xml$1;
+    var require$$11 = (asciidoc$1 && asciidoc) || asciidoc$1;
+    var require$$12 = (aspectj$1 && aspectj) || aspectj$1;
+    var require$$13 = (autohotkey$1 && autohotkey) || autohotkey$1;
+    var require$$14 = (autoit$1 && autoit) || autoit$1;
+    var require$$15 = (avrasm$1 && avrasm) || avrasm$1;
+    var require$$16 = (awk$1 && awk) || awk$1;
+    var require$$17 = (axapta$1 && axapta) || axapta$1;
+    var require$$18 = (bash$1 && bash) || bash$1;
+    var require$$19 = (basic$1 && basic) || basic$1;
+    var require$$20 = (bnf$1 && bnf) || bnf$1;
+    var require$$21 = (brainfuck$1 && brainfuck) || brainfuck$1;
+    var require$$22 = (cal$1 && cal) || cal$1;
+    var require$$23 = (capnproto$1 && capnproto) || capnproto$1;
+    var require$$24 = (ceylon$1 && ceylon) || ceylon$1;
+    var require$$25 = (clean$1 && clean) || clean$1;
+    var require$$26 = (clojure$1 && clojure) || clojure$1;
+    var require$$27 = (clojureRepl$1 && clojureRepl) || clojureRepl$1;
+    var require$$28 = (cmake$1 && cmake) || cmake$1;
+    var require$$29 = (coffeescript$1 && coffeescript) || coffeescript$1;
+    var require$$30 = (coq$1 && coq) || coq$1;
+    var require$$31 = (cos$1 && cos) || cos$1;
+    var require$$32 = (crmsh$1 && crmsh) || crmsh$1;
+    var require$$33 = (crystal$1 && crystal) || crystal$1;
+    var require$$34 = (cs$1 && cs) || cs$1;
+    var require$$35 = (csp$1 && csp) || csp$1;
+    var require$$36 = (css$1 && css) || css$1;
+    var require$$37 = (d$1 && d) || d$1;
+    var require$$38 = (markdown$1 && markdown) || markdown$1;
+    var require$$39 = (dart$1 && dart) || dart$1;
+    var require$$40 = (delphi$1 && delphi) || delphi$1;
+    var require$$41 = (diff$1 && diff) || diff$1;
+    var require$$42 = (django$1 && django) || django$1;
+    var require$$43 = (dns$1 && dns) || dns$1;
+    var require$$44 = (dockerfile$1 && dockerfile) || dockerfile$1;
+    var require$$45 = (dos$1 && dos) || dos$1;
+    var require$$46 = (dsconfig$1 && dsconfig) || dsconfig$1;
+    var require$$47 = (dts$1 && dts) || dts$1;
+    var require$$48 = (dust$1 && dust) || dust$1;
+    var require$$49 = (ebnf$1 && ebnf) || ebnf$1;
+    var require$$50 = (elixir$1 && elixir) || elixir$1;
+    var require$$51 = (elm$1 && elm) || elm$1;
+    var require$$52 = (ruby$1 && ruby) || ruby$1;
+    var require$$53 = (erb$1 && erb) || erb$1;
+    var require$$54 = (erlangRepl$1 && erlangRepl) || erlangRepl$1;
+    var require$$55 = (erlang$1 && erlang) || erlang$1;
+    var require$$56 = (excel$1 && excel) || excel$1;
+    var require$$57 = (fix$1 && fix) || fix$1;
+    var require$$58 = (flix$1 && flix) || flix$1;
+    var require$$59 = (fortran$1 && fortran) || fortran$1;
+    var require$$60 = (fsharp$1 && fsharp) || fsharp$1;
+    var require$$61 = (gams$1 && gams) || gams$1;
+    var require$$62 = (gauss$1 && gauss) || gauss$1;
+    var require$$63 = (gcode$1 && gcode) || gcode$1;
+    var require$$64 = (gherkin$1 && gherkin) || gherkin$1;
+    var require$$65 = (glsl$1 && glsl) || glsl$1;
+    var require$$66 = (go$1 && go) || go$1;
+    var require$$67 = (golo$1 && golo) || golo$1;
+    var require$$68 = (gradle$1 && gradle) || gradle$1;
+    var require$$69 = (groovy$1 && groovy) || groovy$1;
+    var require$$70 = (haml$1 && haml) || haml$1;
+    var require$$71 = (handlebars$1 && handlebars) || handlebars$1;
+    var require$$72 = (haskell$1 && haskell) || haskell$1;
+    var require$$73 = (haxe$1 && haxe) || haxe$1;
+    var require$$74 = (hsp$1 && hsp) || hsp$1;
+    var require$$75 = (htmlbars$1 && htmlbars) || htmlbars$1;
+    var require$$76 = (http$1 && http) || http$1;
+    var require$$77 = (hy$1 && hy) || hy$1;
+    var require$$78 = (inform7$1 && inform7) || inform7$1;
+    var require$$79 = (ini$1 && ini) || ini$1;
+    var require$$80 = (irpf90$1 && irpf90) || irpf90$1;
+    var require$$81 = (java$1 && java) || java$1;
+    var require$$82 = (javascript$1 && javascript) || javascript$1;
+    var require$$83 = (jbossCli$1 && jbossCli) || jbossCli$1;
+    var require$$84 = (json$1 && json) || json$1;
+    var require$$85 = (julia$1 && julia) || julia$1;
+    var require$$86 = (juliaRepl$1 && juliaRepl) || juliaRepl$1;
+    var require$$87 = (kotlin$1 && kotlin) || kotlin$1;
+    var require$$88 = (lasso$1 && lasso) || lasso$1;
+    var require$$89 = (ldif$1 && ldif) || ldif$1;
+    var require$$90 = (leaf$1 && leaf) || leaf$1;
+    var require$$91 = (less$1 && less) || less$1;
+    var require$$92 = (lisp$1 && lisp) || lisp$1;
+    var require$$93 = (livecodeserver$1 && livecodeserver) || livecodeserver$1;
+    var require$$94 = (livescript$1 && livescript) || livescript$1;
+    var require$$95 = (llvm$1 && llvm) || llvm$1;
+    var require$$96 = (lsl$1 && lsl) || lsl$1;
+    var require$$97 = (lua$1 && lua) || lua$1;
+    var require$$98 = (makefile$1 && makefile) || makefile$1;
+    var require$$99 = (mathematica$1 && mathematica) || mathematica$1;
+    var require$$100 = (matlab$1 && matlab) || matlab$1;
+    var require$$101 = (maxima$1 && maxima) || maxima$1;
+    var require$$102 = (mel$1 && mel) || mel$1;
+    var require$$103 = (mercury$1 && mercury) || mercury$1;
+    var require$$104 = (mipsasm$1 && mipsasm) || mipsasm$1;
+    var require$$105 = (mizar$1 && mizar) || mizar$1;
+    var require$$106 = (perl$1 && perl) || perl$1;
+    var require$$107 = (mojolicious$1 && mojolicious) || mojolicious$1;
+    var require$$108 = (monkey$1 && monkey) || monkey$1;
+    var require$$109 = (moonscript$1 && moonscript) || moonscript$1;
+    var require$$110 = (n1ql$1 && n1ql) || n1ql$1;
+    var require$$111 = (nginx$1 && nginx) || nginx$1;
+    var require$$112 = (nimrod$1 && nimrod) || nimrod$1;
+    var require$$113 = (nix$1 && nix) || nix$1;
+    var require$$114 = (nsis$1 && nsis) || nsis$1;
+    var require$$115 = (objectivec$1 && objectivec) || objectivec$1;
+    var require$$116 = (ocaml$1 && ocaml) || ocaml$1;
+    var require$$117 = (openscad$1 && openscad) || openscad$1;
+    var require$$118 = (oxygene$1 && oxygene) || oxygene$1;
+    var require$$119 = (parser3$1 && parser3) || parser3$1;
+    var require$$120 = (pf$1 && pf) || pf$1;
+    var require$$121 = (php$1 && php) || php$1;
+    var require$$122 = (pony$1 && pony) || pony$1;
+    var require$$123 = (powershell$1 && powershell) || powershell$1;
+    var require$$124 = (processing$1 && processing) || processing$1;
+    var require$$125 = (profile$1 && profile) || profile$1;
+    var require$$126 = (prolog$1 && prolog) || prolog$1;
+    var require$$127 = (protobuf$1 && protobuf) || protobuf$1;
+    var require$$128 = (puppet$1 && puppet) || puppet$1;
+    var require$$129 = (purebasic$1 && purebasic) || purebasic$1;
+    var require$$130 = (python$1 && python) || python$1;
+    var require$$131 = (q$1 && q) || q$1;
+    var require$$132 = (qml$1 && qml) || qml$1;
+    var require$$133 = (r$1 && r) || r$1;
+    var require$$134 = (rib$1 && rib) || rib$1;
+    var require$$135 = (roboconf$1 && roboconf) || roboconf$1;
+    var require$$136 = (routeros$1 && routeros) || routeros$1;
+    var require$$137 = (rsl$1 && rsl) || rsl$1;
+    var require$$138 = (ruleslanguage$1 && ruleslanguage) || ruleslanguage$1;
+    var require$$139 = (rust$1 && rust) || rust$1;
+    var require$$140 = (scala$1 && scala) || scala$1;
+    var require$$141 = (scheme$1 && scheme) || scheme$1;
+    var require$$142 = (scilab$1 && scilab) || scilab$1;
+    var require$$143 = (scss$1 && scss) || scss$1;
+    var require$$144 = (shell$1 && shell) || shell$1;
+    var require$$145 = (smali$1 && smali) || smali$1;
+    var require$$146 = (smalltalk$1 && smalltalk) || smalltalk$1;
+    var require$$147 = (sml$1 && sml) || sml$1;
+    var require$$148 = (sqf$1 && sqf) || sqf$1;
+    var require$$149 = (sql$1 && sql) || sql$1;
+    var require$$150 = (stan$1 && stan) || stan$1;
+    var require$$151 = (stata$1 && stata) || stata$1;
+    var require$$152 = (step21$1 && step21) || step21$1;
+    var require$$153 = (stylus$1 && stylus) || stylus$1;
+    var require$$154 = (subunit$1 && subunit) || subunit$1;
+    var require$$155 = (swift$1 && swift) || swift$1;
+    var require$$156 = (taggerscript$1 && taggerscript) || taggerscript$1;
+    var require$$157 = (yaml$1 && yaml) || yaml$1;
+    var require$$158 = (tap$1 && tap) || tap$1;
+    var require$$159 = (tcl$1 && tcl) || tcl$1;
+    var require$$160 = (tex$1 && tex) || tex$1;
+    var require$$161 = (thrift$1 && thrift) || thrift$1;
+    var require$$162 = (tp$1 && tp) || tp$1;
+    var require$$163 = (twig$1 && twig) || twig$1;
+    var require$$164 = (typescript$1 && typescript) || typescript$1;
+    var require$$165 = (vala$1 && vala) || vala$1;
+    var require$$166 = (vbnet$1 && vbnet) || vbnet$1;
+    var require$$167 = (vbscript$1 && vbscript) || vbscript$1;
+    var require$$168 = (vbscriptHtml$1 && vbscriptHtml) || vbscriptHtml$1;
+    var require$$169 = (verilog$1 && verilog) || verilog$1;
+    var require$$170 = (vhdl$1 && vhdl) || vhdl$1;
+    var require$$171 = (vim$1 && vim) || vim$1;
+    var require$$172 = (x86asm$1 && x86asm) || x86asm$1;
+    var require$$173 = (xl$1 && xl) || xl$1;
+    var require$$174 = (xquery$1 && xquery) || xquery$1;
+    var require$$175 = (zephir$1 && zephir) || zephir$1;
+    hljs.registerLanguage('1c', require$$0);
+    hljs.registerLanguage('abnf', require$$1);
+    hljs.registerLanguage('accesslog', require$$2);
+    hljs.registerLanguage('actionscript', require$$3);
+    hljs.registerLanguage('ada', require$$4);
+    hljs.registerLanguage('apache', require$$5);
+    hljs.registerLanguage('applescript', require$$6);
+    hljs.registerLanguage('cpp', require$$7);
+    hljs.registerLanguage('arduino', require$$8);
+    hljs.registerLanguage('armasm', require$$9);
+    hljs.registerLanguage('xml', require$$10);
+    hljs.registerLanguage('asciidoc', require$$11);
+    hljs.registerLanguage('aspectj', require$$12);
+    hljs.registerLanguage('autohotkey', require$$13);
+    hljs.registerLanguage('autoit', require$$14);
+    hljs.registerLanguage('avrasm', require$$15);
+    hljs.registerLanguage('awk', require$$16);
+    hljs.registerLanguage('axapta', require$$17);
+    hljs.registerLanguage('bash', require$$18);
+    hljs.registerLanguage('basic', require$$19);
+    hljs.registerLanguage('bnf', require$$20);
+    hljs.registerLanguage('brainfuck', require$$21);
+    hljs.registerLanguage('cal', require$$22);
+    hljs.registerLanguage('capnproto', require$$23);
+    hljs.registerLanguage('ceylon', require$$24);
+    hljs.registerLanguage('clean', require$$25);
+    hljs.registerLanguage('clojure', require$$26);
+    hljs.registerLanguage('clojure-repl', require$$27);
+    hljs.registerLanguage('cmake', require$$28);
+    hljs.registerLanguage('coffeescript', require$$29);
+    hljs.registerLanguage('coq', require$$30);
+    hljs.registerLanguage('cos', require$$31);
+    hljs.registerLanguage('crmsh', require$$32);
+    hljs.registerLanguage('crystal', require$$33);
+    hljs.registerLanguage('cs', require$$34);
+    hljs.registerLanguage('csp', require$$35);
+    hljs.registerLanguage('css', require$$36);
+    hljs.registerLanguage('d', require$$37);
+    hljs.registerLanguage('markdown', require$$38);
+    hljs.registerLanguage('dart', require$$39);
+    hljs.registerLanguage('delphi', require$$40);
+    hljs.registerLanguage('diff', require$$41);
+    hljs.registerLanguage('django', require$$42);
+    hljs.registerLanguage('dns', require$$43);
+    hljs.registerLanguage('dockerfile', require$$44);
+    hljs.registerLanguage('dos', require$$45);
+    hljs.registerLanguage('dsconfig', require$$46);
+    hljs.registerLanguage('dts', require$$47);
+    hljs.registerLanguage('dust', require$$48);
+    hljs.registerLanguage('ebnf', require$$49);
+    hljs.registerLanguage('elixir', require$$50);
+    hljs.registerLanguage('elm', require$$51);
+    hljs.registerLanguage('ruby', require$$52);
+    hljs.registerLanguage('erb', require$$53);
+    hljs.registerLanguage('erlang-repl', require$$54);
+    hljs.registerLanguage('erlang', require$$55);
+    hljs.registerLanguage('excel', require$$56);
+    hljs.registerLanguage('fix', require$$57);
+    hljs.registerLanguage('flix', require$$58);
+    hljs.registerLanguage('fortran', require$$59);
+    hljs.registerLanguage('fsharp', require$$60);
+    hljs.registerLanguage('gams', require$$61);
+    hljs.registerLanguage('gauss', require$$62);
+    hljs.registerLanguage('gcode', require$$63);
+    hljs.registerLanguage('gherkin', require$$64);
+    hljs.registerLanguage('glsl', require$$65);
+    hljs.registerLanguage('go', require$$66);
+    hljs.registerLanguage('golo', require$$67);
+    hljs.registerLanguage('gradle', require$$68);
+    hljs.registerLanguage('groovy', require$$69);
+    hljs.registerLanguage('haml', require$$70);
+    hljs.registerLanguage('handlebars', require$$71);
+    hljs.registerLanguage('haskell', require$$72);
+    hljs.registerLanguage('haxe', require$$73);
+    hljs.registerLanguage('hsp', require$$74);
+    hljs.registerLanguage('htmlbars', require$$75);
+    hljs.registerLanguage('http', require$$76);
+    hljs.registerLanguage('hy', require$$77);
+    hljs.registerLanguage('inform7', require$$78);
+    hljs.registerLanguage('ini', require$$79);
+    hljs.registerLanguage('irpf90', require$$80);
+    hljs.registerLanguage('java', require$$81);
+    hljs.registerLanguage('javascript', require$$82);
+    hljs.registerLanguage('jboss-cli', require$$83);
+    hljs.registerLanguage('json', require$$84);
+    hljs.registerLanguage('julia', require$$85);
+    hljs.registerLanguage('julia-repl', require$$86);
+    hljs.registerLanguage('kotlin', require$$87);
+    hljs.registerLanguage('lasso', require$$88);
+    hljs.registerLanguage('ldif', require$$89);
+    hljs.registerLanguage('leaf', require$$90);
+    hljs.registerLanguage('less', require$$91);
+    hljs.registerLanguage('lisp', require$$92);
+    hljs.registerLanguage('livecodeserver', require$$93);
+    hljs.registerLanguage('livescript', require$$94);
+    hljs.registerLanguage('llvm', require$$95);
+    hljs.registerLanguage('lsl', require$$96);
+    hljs.registerLanguage('lua', require$$97);
+    hljs.registerLanguage('makefile', require$$98);
+    hljs.registerLanguage('mathematica', require$$99);
+    hljs.registerLanguage('matlab', require$$100);
+    hljs.registerLanguage('maxima', require$$101);
+    hljs.registerLanguage('mel', require$$102);
+    hljs.registerLanguage('mercury', require$$103);
+    hljs.registerLanguage('mipsasm', require$$104);
+    hljs.registerLanguage('mizar', require$$105);
+    hljs.registerLanguage('perl', require$$106);
+    hljs.registerLanguage('mojolicious', require$$107);
+    hljs.registerLanguage('monkey', require$$108);
+    hljs.registerLanguage('moonscript', require$$109);
+    hljs.registerLanguage('n1ql', require$$110);
+    hljs.registerLanguage('nginx', require$$111);
+    hljs.registerLanguage('nimrod', require$$112);
+    hljs.registerLanguage('nix', require$$113);
+    hljs.registerLanguage('nsis', require$$114);
+    hljs.registerLanguage('objectivec', require$$115);
+    hljs.registerLanguage('ocaml', require$$116);
+    hljs.registerLanguage('openscad', require$$117);
+    hljs.registerLanguage('oxygene', require$$118);
+    hljs.registerLanguage('parser3', require$$119);
+    hljs.registerLanguage('pf', require$$120);
+    hljs.registerLanguage('php', require$$121);
+    hljs.registerLanguage('pony', require$$122);
+    hljs.registerLanguage('powershell', require$$123);
+    hljs.registerLanguage('processing', require$$124);
+    hljs.registerLanguage('profile', require$$125);
+    hljs.registerLanguage('prolog', require$$126);
+    hljs.registerLanguage('protobuf', require$$127);
+    hljs.registerLanguage('puppet', require$$128);
+    hljs.registerLanguage('purebasic', require$$129);
+    hljs.registerLanguage('python', require$$130);
+    hljs.registerLanguage('q', require$$131);
+    hljs.registerLanguage('qml', require$$132);
+    hljs.registerLanguage('r', require$$133);
+    hljs.registerLanguage('rib', require$$134);
+    hljs.registerLanguage('roboconf', require$$135);
+    hljs.registerLanguage('routeros', require$$136);
+    hljs.registerLanguage('rsl', require$$137);
+    hljs.registerLanguage('ruleslanguage', require$$138);
+    hljs.registerLanguage('rust', require$$139);
+    hljs.registerLanguage('scala', require$$140);
+    hljs.registerLanguage('scheme', require$$141);
+    hljs.registerLanguage('scilab', require$$142);
+    hljs.registerLanguage('scss', require$$143);
+    hljs.registerLanguage('shell', require$$144);
+    hljs.registerLanguage('smali', require$$145);
+    hljs.registerLanguage('smalltalk', require$$146);
+    hljs.registerLanguage('sml', require$$147);
+    hljs.registerLanguage('sqf', require$$148);
+    hljs.registerLanguage('sql', require$$149);
+    hljs.registerLanguage('stan', require$$150);
+    hljs.registerLanguage('stata', require$$151);
+    hljs.registerLanguage('step21', require$$152);
+    hljs.registerLanguage('stylus', require$$153);
+    hljs.registerLanguage('subunit', require$$154);
+    hljs.registerLanguage('swift', require$$155);
+    hljs.registerLanguage('taggerscript', require$$156);
+    hljs.registerLanguage('yaml', require$$157);
+    hljs.registerLanguage('tap', require$$158);
+    hljs.registerLanguage('tcl', require$$159);
+    hljs.registerLanguage('tex', require$$160);
+    hljs.registerLanguage('thrift', require$$161);
+    hljs.registerLanguage('tp', require$$162);
+    hljs.registerLanguage('twig', require$$163);
+    hljs.registerLanguage('typescript', require$$164);
+    hljs.registerLanguage('vala', require$$165);
+    hljs.registerLanguage('vbnet', require$$166);
+    hljs.registerLanguage('vbscript', require$$167);
+    hljs.registerLanguage('vbscript-html', require$$168);
+    hljs.registerLanguage('verilog', require$$169);
+    hljs.registerLanguage('vhdl', require$$170);
+    hljs.registerLanguage('vim', require$$171);
+    hljs.registerLanguage('x86asm', require$$172);
+    hljs.registerLanguage('xl', require$$173);
+    hljs.registerLanguage('xquery', require$$174);
+    hljs.registerLanguage('zephir', require$$175);
+    var lib = hljs;
     function content(version, type, name) {
         if (type === void 0) { type = "md"; }
         if (name === void 0) { name = "heart"; }
-        return (h("div", null, h("h1", null, "Usage"), h("p", { class: "lead" }, "Ionicons is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for ", h("a", { href: "https://ionicframework.com/" }, "Ionic Framework"), ", so icons have both Material Design and iOS versions. When used with Ionic, the ", h("code", null, "ion-icon"), " component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both ", h("code", null, "ios"), " and ", h("code", null, "md"), " platforms can be chosen by the application."), h("h2", null, "Using the Web Component"), h("p", null, "The Iconicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need."), h("p", null, "Also note that only visible icons are loaded, and icons which are \"below the fold\" and hidden from the user's view do not make fetch requests for the svg resource."), h("h3", null, "Installation"), h("p", null, "If you're using Ionic Framework, Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following ", h("code", null, "<script>"), " near the end of your page, right before the closing ", h("code", null, "</body>"), " tag, to enable them."), highlight$1("<script src=\"https://unpkg.com/ionicons@" + version + "/dist/ionicons.js\"></script>"), h("h3", { id: "basic-usage" }, "Basic usage"), h("p", null, "To use a built-in icon from the Ionicons package, populate the ", h("code", null, "name"), " attribute on the ", h("code", null, "ion-icon"), " component:"), (type == 'logo') ? highlight$1("<ion-icon name=\"logo-" + name + "\"></ion-icon>") : highlight$1("<ion-icon name=\"" + name + "\"></ion-icon>"), h("p", null, "To use a custom SVG, provide its url in the ", h("code", null, "src"), " attribute to request the external SVG file. The ", h("code", null, "src"), " attribute works the same as ", h("code", null, "<img src=\"...\">"), " in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid ", h("code", null, "svg"), " and does not allow scripts or events within the ", h("code", null, "svg"), " element."), highlight$1("<ion-icon src=\"/path/to/external/file.svg\"></ion-icon>"), h("h2", null, "Platform specific icons"), h("p", null, "Many icons have both Material Design and iOS versions to provide Platform Continuity for users."), h("p", null, "Platform Continuity means that by default, ionicons running on iOS (Apple products such as iPhone and iPad) will display ", h("code", null, "ios"), " styled icons. Alternatively, ionicons running on devices with Material Design theme (commonly seen on Android devices) will see the ", h("code", null, "md"), " styled icons."), h("h3", null, "Platform Continuity Within Ionic Apps"), h("p", null, "Ionic will automatically use the correct version based on the platform. Note that this feature will only automatically kick-in for Ionic apps. When being used outside of an Ionic app, please see the \"Outside Ionic App\" section below."), h("p", null, "To specify the icon for each platform, use the ", h("code", null, "md"), " and ", h("code", null, "ios"), " attributes and provide the platform specific icon name."), (type == 'logo') ? highlight$1("<ion-icon ios=\"ios-heart\" md=\"md-heart\"></ion-icon>") : highlight$1("<ion-icon ios=\"ios-" + name + "\" md=\"md-" + name + "\"></ion-icon>"), h("h3", null, "Platform Continuity Outside Ionic Apps"), h("p", null, "When using Ionicons without the ", h("a", { href: "https://ionicframework.com/" }, "Ionic Framework"), ", the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the ", h("code", null, "name"), " attribute."), (type == 'logo') ? highlight$1("<ion-icon name=\"ios-heart\"></ion-icon>") : highlight$1("<ion-icon name=\"ios-" + name + "\"></ion-icon>"), (type == 'logo') ? highlight$1("<ion-icon name=\"md-heart\"></ion-icon>") : highlight$1("<ion-icon name=\"md-" + name + "\"></ion-icon>"), h("h3", null, "Icon sizes"), h("p", null, "To specify the icon size, you can use the ", h("code", null, "size"), " attribute for our pre-defined font sizes."), highlight$1("<ion-icon size=\"small\"></ion-icon>\n<ion-icon size=\"large\"></ion-icon>"), h("p", null, "Or you can set a specific size by applying the ", h("code", null, "font-size"), " CSS property on the ", h("code", null, "ion-icon"), " component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)"), highlight$1("ion-icon {\n  font-size: 64px;\n}"), h("h2", null, "Using the Font Icon"), h("p", null, "The font icon is compatible with previous versions of Ionicons. If you're using Ionicons for the first time we strongly recommend using the ", h("code", null, "ion-icon"), " web component instead."), h("p", null, "An advantage to the font icon file is that all of the icons are in one file. A disadvantage to the font icon file is that all of the icons are in one file. Additionally, large font files have a negative impact on a webpage's time to first paint."), h("p", null, "In most cases it may be better to request a small number of svgs using the web component method. A bonus with the web component is that it uses ", h("a", { href: "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" }, "Intersection Observer"), " to only request icons which are viewable by the users (icons above the fold). However, if a webpage has to show ", h("em", null, "many"), " icons at once (such as this website's homepage which is showing 700+ icons on one page), the font icon may be a better choice."), h("h3", null, "Installation"), h("p", null, "To embed the Ionicons font icon, copy this code into the ", h("code", null, "<head>"), " of the HTML document."), highlight$1("<link href=\"https://unpkg.com/ionicons@" + version + "/dist/css/ionicons.min.css\" rel=\"stylesheet\">"), h("h3", null, "Basic usage"), h("p", null, "Use the ", h("stencil-route-link", { url: '/' }, "icon index"), " to look up the name of the icon you want to use. The icon's CSS class name will be prefixed with ", h("code", null, "ion-"), ", followed by the platform attribute ", h("code", null, "md-"), ", ", h("code", null, "ios-"), " or ", h("code", null, "logo-"), " and completed wth the icon name."), highlight$1("<i class=\"icon ion-" + type + "-" + name + "\"></i>")));
+        return (h("div", null, h("h1", null, "Usage"), h("p", { class: "lead" }, "Ionicons is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for ", h("a", { href: "https://ionicframework.com/" }, "Ionic Framework"), ", so icons have both Material Design and iOS versions. When used with Ionic, the ", h("code", null, "ion-icon"), " component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both ", h("code", null, "ios"), " and ", h("code", null, "md"), " platforms can be chosen by the application."), h("h2", null, "Using the Web Component"), h("p", null, "The Iconicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need."), h("p", null, "Also note that only visible icons are loaded, and icons which are \"below the fold\" and hidden from the user's view do not make fetch requests for the svg resource."), h("h3", null, "Installation"), h("p", null, "If you're using Ionic Framework, Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following ", h("code", null, "<script>"), " near the end of your page, right before the closing ", h("code", null, "</body>"), " tag, to enable them."), highlight$2("<script src=\"https://unpkg.com/ionicons@" + version + "/dist/ionicons.js\"></script>"), h("h3", { id: "basic-usage" }, "Basic usage"), h("p", null, "To use a built-in icon from the Ionicons package, populate the ", h("code", null, "name"), " attribute on the ", h("code", null, "ion-icon"), " component:"), (type == 'logo') ? highlight$2("<ion-icon name=\"logo-" + name + "\"></ion-icon>") : highlight$2("<ion-icon name=\"" + name + "\"></ion-icon>"), h("p", null, "To use a custom SVG, provide its url in the ", h("code", null, "src"), " attribute to request the external SVG file. The ", h("code", null, "src"), " attribute works the same as ", h("code", null, "<img src=\"...\">"), " in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid ", h("code", null, "svg"), " and does not allow scripts or events within the ", h("code", null, "svg"), " element."), highlight$2("<ion-icon src=\"/path/to/external/file.svg\"></ion-icon>"), h("h2", null, "Platform specific icons"), h("p", null, "Many icons have both Material Design and iOS versions to provide Platform Continuity for users."), h("p", null, "Platform Continuity means that by default, ionicons running on iOS (Apple products such as iPhone and iPad) will display ", h("code", null, "ios"), " styled icons. Alternatively, ionicons running on devices with Material Design theme (commonly seen on Android devices) will see the ", h("code", null, "md"), " styled icons."), h("h3", null, "Platform Continuity Within Ionic Apps"), h("p", null, "Ionic will automatically use the correct version based on the platform. Note that this feature will only automatically kick-in for Ionic apps. When being used outside of an Ionic app, please see the \"Outside Ionic App\" section below."), h("p", null, "To specify the icon for each platform, use the ", h("code", null, "md"), " and ", h("code", null, "ios"), " attributes and provide the platform specific icon name."), (type == 'logo') ? highlight$2("<ion-icon ios=\"ios-heart\" md=\"md-heart\"></ion-icon>") : highlight$2("<ion-icon ios=\"ios-" + name + "\" md=\"md-" + name + "\"></ion-icon>"), h("h3", null, "Platform Continuity Outside Ionic Apps"), h("p", null, "When using Ionicons without the ", h("a", { href: "https://ionicframework.com/" }, "Ionic Framework"), ", the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the ", h("code", null, "name"), " attribute."), (type == 'logo') ? highlight$2("<ion-icon name=\"ios-heart\"></ion-icon>") : highlight$2("<ion-icon name=\"ios-" + name + "\"></ion-icon>"), (type == 'logo') ? highlight$2("<ion-icon name=\"md-heart\"></ion-icon>") : highlight$2("<ion-icon name=\"md-" + name + "\"></ion-icon>"), h("h3", null, "Icon sizes"), h("p", null, "To specify the icon size, you can use the ", h("code", null, "size"), " attribute for our pre-defined font sizes."), highlight$2("<ion-icon size=\"small\"></ion-icon>\n<ion-icon size=\"large\"></ion-icon>"), h("p", null, "Or you can set a specific size by applying the ", h("code", null, "font-size"), " CSS property on the ", h("code", null, "ion-icon"), " component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)"), highlight$2("ion-icon {\n  font-size: 64px;\n}"), h("h2", null, "Using the Font Icon"), h("p", null, "The font icon is compatible with previous versions of Ionicons. If you're using Ionicons for the first time we strongly recommend using the ", h("code", null, "ion-icon"), " web component instead."), h("p", null, "An advantage to the font icon file is that all of the icons are in one file. A disadvantage to the font icon file is that all of the icons are in one file. Additionally, large font files have a negative impact on a webpage's time to first paint."), h("p", null, "In most cases it may be better to request a small number of svgs using the web component method. A bonus with the web component is that it uses ", h("a", { href: "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" }, "Intersection Observer"), " to only request icons which are viewable by the users (icons above the fold). However, if a webpage has to show ", h("em", null, "many"), " icons at once (such as this website's homepage which is showing 700+ icons on one page), the font icon may be a better choice."), h("h3", null, "Installation"), h("p", null, "To embed the Ionicons font icon, copy this code into the ", h("code", null, "<head>"), " of the HTML document."), highlight$2("<link href=\"https://unpkg.com/ionicons@" + version + "/dist/css/ionicons.min.css\" rel=\"stylesheet\">"), h("h3", null, "Basic usage"), h("p", null, "Use the ", h("stencil-route-link", { url: '/' }, "icon index"), " to look up the name of the icon you want to use. The icon's CSS class name will be prefixed with ", h("code", null, "ion-"), ", followed by the platform attribute ", h("code", null, "md-"), ", ", h("code", null, "ios-"), " or ", h("code", null, "logo-"), " and completed wth the icon name."), highlight$2("<i class=\"icon ion-" + type + "-" + name + "\"></i>")));
     }
-    function highlight$1(text) {
+    function highlight$2(text) {
         return (h("div", { class: "styled-code" }, h("pre", { innerHTML: lib.highlightAuto(text).value })));
     }
     var UsagePage = /** @class */ (function () {
