@@ -1,5 +1,7 @@
 # Ionicons
 
+### [Announcing Ionicons v4!](https://blog.ionicframework.com/announcing-ionicons-v4/)
+
 [Ionicons](http://ionicons.com/) is a completely open-source icon set with 700+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for [Ionic Framework](https://ionicframework.com/), so icons have both Material Design and iOS versions. When used with Ionic, the `ion-icon` component will automatically use the correct version based on your platform. Additionally, when used outside of Ionic, both `ios` and `md` platforms can be chosen by the application.
 
 Note: All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Drifty, nor vice versa.
