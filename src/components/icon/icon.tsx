@@ -189,7 +189,7 @@ function getSvgContent(url: string) {
 
   if (!req) {
     // we don't already have a request
-    req = fetch(url, { keepalive: true, cache: 'force-cache' }).then(rsp => {
+    req = fetch(url, { cache: 'force-cache' }).then(rsp => {
       if (rsp.ok) {
         return rsp.text();
       }
