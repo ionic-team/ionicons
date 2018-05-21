@@ -3,8 +3,8 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.a0cs8axq.js",
-  "corePolyfilled": "docssite.lc7q1hhy.js",
+  "core": "docssite.0xdbi8jl.js",
+  "corePolyfilled": "docssite.czb0qw2j.js",
   "components": {
     "footer-bar": {
       "$": "xxdq8tou"
