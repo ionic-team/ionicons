@@ -20,13 +20,15 @@ export default function (version: string, type = "md", name = "heart") {
 
 <h3 id="basic-usage">Basic usage</h3>
 <p>To use a built-in icon from the Ionicons package, populate the <code>name</code> attribute on the <code>ion-icon</code> component:</p>
-{highlight(
+{(type == 'logo') ? highlight(
+`<ion-icon name="logo-${name}"></ion-icon>`
+):highlight(
 `<ion-icon name="${name}"></ion-icon>`
 )}
 
 <p>To use a custom SVG, provide its url in the <code>src</code> attribute to request the external SVG file. The <code>src</code> attribute works the same as <code>&lt;img src="..."&gt;</code> in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid <code>svg</code> and does not allow scripts or events within the <code>svg</code> element.</p>
 {highlight(
-  `<ion-icon src="/path/to/externa/file.svg"></ion-icon>`
+  `<ion-icon src="/path/to/external/file.svg"></ion-icon>`
 )}
 
 <h2>Platform specific icons</h2>
@@ -49,10 +51,14 @@ export default function (version: string, type = "md", name = "heart") {
 <h3>Platform Continuity Outside Ionic Apps</h3>
 
 <p>When using Ionicons without the <a href="https://ionicframework.com/">Ionic Framework</a>, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the <code>name</code> attribute.</p>
-{highlight(
+{(type == 'logo') ? highlight(
+`<ion-icon name="ios-heart"></ion-icon>`
+):highlight(
 `<ion-icon name="ios-${name}"></ion-icon>`
 )}
-{highlight(
+{(type == 'logo') ? highlight(
+`<ion-icon name="md-heart"></ion-icon>`
+):highlight(
 `<ion-icon name="md-${name}"></ion-icon>`
 )}
 
