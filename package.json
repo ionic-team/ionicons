@@ -20,7 +20,7 @@
     "copy.tasks": "node scripts/copy-tasks.js",
     "dev": "npm run build && sd concurrent \"stencil build --dev --es5 --config src/docs/stencil.config.js --watch\" \"stencil-dev-server\" ",
     "mode.comparison": "node scripts/mode-comparison.js",
-    "generate": "python2 scripts/generate.py",
+    "generate": "python scripts/generate.py",
     "release": "npm run build && np --any-branch",
     "test": "jest",
     "test.watch": "jest --watch"

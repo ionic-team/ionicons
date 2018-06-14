@@ -22,7 +22,7 @@ Also note that only visible icons are loaded, and icons which are "below the fol
 If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing </body> tag, to enable them.
 
 ```
-<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+<script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
 ```
 
 ### Basic usage
@@ -95,7 +95,7 @@ In most cases it may be better to request a small number of svgs using the web c
 To embed the Ionicons font icon, copy this code into the `<head>` of the HTML document.
 
 ```
-<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+<link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
 ```
 
 ### Basic usage

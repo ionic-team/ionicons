@@ -3,44 +3,44 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.ugv2vpbm.js",
-  "corePolyfilled": "docssite.czb0qw2j.js",
+  "core": "docssite.r1l6q7ti.js",
+  "corePolyfilled": "docssite.pxrw3jay.js",
   "components": {
     "footer-bar": {
-      "$": "xxdq8tou"
+      "$": "js9iloau"
     },
     "header-bar": {
-      "$": "f5jhpa2x"
+      "$": "tl7zuo9g"
     },
     "icon-list": {
-      "$": "ryirfesr"
+      "$": "bjphfriz"
     },
     "icon-search": {
-      "$": "ms1l1l4a"
+      "$": "j5rbuqbp"
     },
     "ionicons-site": {
-      "$": "f5jhpa2x"
+      "$": "tl7zuo9g"
     },
     "landing-page": {
-      "$": "ryirfesr"
+      "$": "bjphfriz"
     },
     "notfound-page": {
       "$": "d83fvjds"
     },
     "stencil-route": {
-      "$": "f5jhpa2x"
+      "$": "tl7zuo9g"
     },
     "stencil-route-link": {
-      "$": "5szlxwny"
+      "$": "gkczrv46"
     },
     "stencil-router": {
-      "$": "f5jhpa2x"
+      "$": "tl7zuo9g"
     },
     "toast-bar": {
-      "$": "ryirfesr"
+      "$": "bjphfriz"
     },
     "usage-page": {
-      "$": "9cpzx0i1"
+      "$": "dnu5bejp"
     }
   }
 }
