@@ -3,11 +3,9 @@ import { Component, Element, Prop, State, Watch } from '@stencil/core';
 
 @Component({
   tag: 'ion-icon',
-  host: {
-    theme: 'icon'
-  },
   assetsDir: 'svg',
-  styleUrl: 'icon.css'
+  styleUrl: 'icon.css',
+  shadow: true
 })
 export class Icon {
   @Element() el: HTMLElement;
@@ -15,8 +13,8 @@ export class Icon {
   @State() private svgContent: string = null;
   @State() private isVisible: boolean;
 
-  @Prop({ context: 'isServer'}) isServer: boolean;
-  @Prop({ context: 'resourcesUrl'}) resourcesUrl: string;
+  @Prop({ context: 'isServer' }) isServer: boolean;
+  @Prop({ context: 'resourcesUrl' }) resourcesUrl: string;
   @Prop({ context: 'mode' }) mode: string;
   @Prop({ context: 'document' }) doc: Document;
   @Prop({ context: 'window' }) win: any;
@@ -26,7 +24,7 @@ export class Icon {
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
    */
-  @Prop() ariaLabel = '';
+  @Prop({mutable: true, reflectToAttr: true}) ariaLabel = '';
 
   /**
    * Specifies which icon to use on `ios` mode.
@@ -101,8 +99,20 @@ export class Icon {
 
       if (url) {
         getSvgContent(url).then(svgContent => {
-          this.svgContent = svgContent;
+          this.svgContent = validateContent(this.doc, svgContent);
         });
+      }
+    }
+
+    if (!this.ariaLabel) {
+      const name = getName(this.name, this.mode, this.ios, this.md);
+      // user did not provide a label
+      // come up with the label based on the icon name
+      if (name) {
+        this.ariaLabel = this.name
+          .replace('ios-', '')
+          .replace('md-', '')
+          .replace(/\-/g, ' ');
       }
     }
   }
@@ -137,30 +147,12 @@ export class Icon {
   }
 
   hostData() {
-    const attrs: {[attrName: string]: string} = {
-      'role': 'img'
-    };
-
-    if (!this.ariaLabel) {
-      const name = getName(this.name, this.mode, this.ios, this.md);
-      // user did not provide a label
-      // come up with the label based on the icon name
-      if (name) {
-        attrs['aria-label'] = this.name
-          .replace('ios-', '')
-          .replace('md-', '')
-          .replace(/\-/g, ' ');
-      }
-    }
-
-    const iconClasses = {};
-    if (this.size) {
-      iconClasses[`icon-${this.size}`] = true;
-    }
-
     return {
-      ...attrs,
-      class: iconClasses
+      'role': 'img',
+      class: {
+        ...createColorClasses(this.color),
+        [`icon-${this.size}`]: !!this.size,
+      }
     };
   }
 
@@ -170,7 +162,7 @@ export class Icon {
       // we've already loaded up this svg at one point
       // and the svg content we've loaded and assigned checks out
       // render this svg!!
-      return <div class="icon-inner" innerHTML={validateContent(this.doc, this.svgContent)}></div>;
+      return <div class="icon-inner" innerHTML={this.svgContent}></div>;
     }
 
     // actively requesting the svg
@@ -296,4 +288,11 @@ export function isValid(elm: HTMLElement) {
     }
   }
   return true;
+}
+
+function createColorClasses(color: string | undefined) {
+  return (color) ? {
+    'ion-color': true,
+    [`ion-color-${color}`]: true
+  } : null;
 }

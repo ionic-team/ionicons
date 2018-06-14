@@ -1,120 +1,73 @@
-ion-icon {
+:host {
   display: inline-block;
   font-size: inherit;
-}
 
-ion-icon .icon-inner,
-ion-icon svg {
-  height: 1em;
   width: 1em;
+  height: 1em;
+
+  contain: strict;
+
+  --ion-color-base: currentColor;
 }
 
-ion-icon svg {
-  fill: currentColor;
-  stroke: currentColor;
-}
-
-.icon-small .icon-inner {
+:host(.icon-small) {
   font-size: 18px;
 }
 
-.icon-large .icon-inner {
+:host(.icon-large){
   font-size: 32px;
+}
+
+.icon-inner {
+  font-size: inherit;
+}
+
+.icon-inner,
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+svg {
+  fill: var(--ion-color-base);
+  stroke: var(--ion-color-base);
 }
 
 /* Set iOS Icon Colors */
 /* ------------------- */
 
-.icon-ios-primary svg {
-  fill: var(--ion-color-ios-primary, var(--ion-color-primary, #3880ff));
-  stroke: var(--ion-color-ios-primary, var(--ion-color-primary, #3880ff));
+:host(.ion-color-primary) {
+  --ion-color-base: var(--ion-color-primary, #3880ff);
 }
 
-.icon-ios-secondary svg {
-  fill: var(--ion-color-ios-secondary, var(--ion-color-secondary, #0cd1e8));
-  stroke: var(--ion-color-ios-secondary, var(--ion-color-secondary, #0cd1e8));
+:host(.ion-color-secondary) {
+  --ion-color-base: var(--ion-color-secondary, #0cd1e8);
 }
 
-.icon-ios-tertiary svg {
-  fill: var(--ion-color-ios-tertiary, var(--ion-color-tertiary, #f4a942));
-  stroke: var(--ion-color-ios-tertiary, var(--ion-color-tertiary, #f4a942));
+:host(.ion-color-tertiary) {
+  --ion-color-base: var(--ion-color-tertiary, #f4a942);
 }
 
-.icon-ios-success svg {
-  fill: var(--ion-color-ios-success, var(--ion-color-success, #10dc60));
-  stroke: var(--ion-color-ios-success, var(--ion-color-success, #10dc60));
+:host(.ion-color-success) {
+  --ion-color-base: var(--ion-color-success, #10dc60);
 }
 
-.icon-ios-warning svg {
-  fill: var(--ion-color-ios-warning, var(--ion-color-warning, #ffce00));
-  stroke: var(--ion-color-ios-warning, var(--ion-color-warning, #ffce00));
+:host(.ion-color-warning) {
+  --ion-color-base: var(--ion-color-warning, #ffce00);
 }
 
-.icon-ios-danger svg {
-  fill: var(--ion-color-ios-danger, var(--ion-color-danger, #f14141));
-  stroke: var(--ion-color-ios-danger, var(--ion-color-danger, #f14141));
+:host(.ion-color-danger) {
+  --ion-color-base: var(--ion-color-danger, #f14141);
 }
 
-.icon-ios-light svg {
-  fill: var(--ion-color-ios-light, var(--ion-color-light, #f4f5f8));
-  stroke: var(--ion-color-ios-light, var(--ion-color-light, #f4f5f8));
+:host(.ion-color-light) {
+  --ion-color-base: var(--ion-color-light, #f4f5f8);
 }
 
-.icon-ios-medium svg {
-  fill: var(--ion-color-ios-medium, var(--ion-color-medium, #989aa2));
-  stroke: var(--ion-color-ios-medium, var(--ion-color-medium, #989aa2));
+:host(.ion-color-medium) {
+  --ion-color-base: var(--ion-color-medium, #989aa2);
 }
 
-.icon-ios-dark svg {
-  fill: var(--ion-color-ios-dark, var(--ion-color-dark, #222428));
-  stroke: var(--ion-color-ios-dark, var(--ion-color-dark, #222428));
-}
-
-
-/* Set Material Design Icon Colors */
-/* ------------------------------- */
-
-.icon-md-primary svg {
-  fill: var(--ion-color-md-primary, var(--ion-color-primary, #3880ff));
-  stroke: var(--ion-color-md-primary, var(--ion-color-primary, #3880ff));
-}
-
-.icon-md-secondary svg {
-  fill: var(--ion-color-md-secondary, var(--ion-color-secondary, #0cd1e8));
-  stroke: var(--ion-color-md-secondary, var(--ion-color-secondary, #0cd1e8));
-}
-
-.icon-md-tertiary svg {
-  fill: var(--ion-color-md-tertiary, var(--ion-color-tertiary, #f4a942));
-  stroke: var(--ion-color-md-tertiary, var(--ion-color-tertiary, #f4a942));
-}
-
-.icon-md-success svg {
-  fill: var(--ion-color-md-success, var(--ion-color-success, #10dc60));
-  stroke: var(--ion-color-md-success, var(--ion-color-success, #10dc60));
-}
-
-.icon-md-warning svg {
-  fill: var(--ion-color-md-warning, var(--ion-color-warning, #ffce00));
-  stroke: var(--ion-color-md-warning, var(--ion-color-warning, #ffce00));
-}
-
-.icon-md-danger svg {
-  fill: var(--ion-color-md-danger, var(--ion-color-danger, #f14141));
-  stroke: var(--ion-color-md-danger, var(--ion-color-danger, #f14141));
-}
-
-.icon-md-light svg {
-  fill: var(--ion-color-md-light, var(--ion-color-light, #f4f5f8));
-  stroke: var(--ion-color-md-light, var(--ion-color-light, #f4f5f8));
-}
-
-.icon-md-medium svg {
-  fill: var(--ion-color-md-medium, var(--ion-color-medium, #989aa2));
-  stroke: var(--ion-color-md-medium, var(--ion-color-medium, #989aa2));
-}
-
-.icon-md-dark svg {
-  fill: var(--ion-color-md-dark, var(--ion-color-dark, #222428));
-  stroke: var(--ion-color-md-dark, var(--ion-color-dark, #222428));
+:host(.ion-color-dark) {
+  --ion-color-base: var(--ion-color-dark, #222428);
 }
