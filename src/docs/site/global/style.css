@@ -22,11 +22,11 @@
 /* Eina Bold */
 @font-face {
   font-family: 'Eina';
-  src: url('../assets/fonts/34E6DB_F_0.eot');
-  src: url('../assets/fonts/34E6DB_F_0.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/34E6DB_F_0.woff2') format('woff2'),
-    url('../assets/fonts/34E6DB_F_0.woff') format('woff'),
-    url('../assets/fonts/34E6DB_F_0.ttf') format('truetype');
+  src: url('/assets/fonts/34E6DB_F_0.eot');
+  src: url('/assets/fonts/34E6DB_F_0.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/34E6DB_F_0.woff2') format('woff2'),
+    url('/assets/fonts/34E6DB_F_0.woff') format('woff'),
+    url('/assets/fonts/34E6DB_F_0.ttf') format('truetype');
   font-weight: 700;
   unicode-range: U+000-5FF;
 }
@@ -34,11 +34,11 @@
 /* Eina Semibold */
 @font-face {
   font-family: 'Eina';
-  src: url('../assets/fonts/34E6DB_C_0.eot');
-  src: url('../assets/fonts/34E6DB_C_0.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/34E6DB_C_0.woff2') format('woff2'),
-    url('../assets/fonts/34E6DB_C_0.woff') format('woff'),
-    url('../assets/fonts/34E6DB_C_0.ttf') format('truetype');
+  src: url('/assets/fonts/34E6DB_C_0.eot');
+  src: url('/assets/fonts/34E6DB_C_0.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/34E6DB_C_0.woff2') format('woff2'),
+    url('/assets/fonts/34E6DB_C_0.woff') format('woff'),
+    url('/assets/fonts/34E6DB_C_0.ttf') format('truetype');
   font-weight: 600;
   unicode-range: U+000-5FF;
 }
@@ -46,11 +46,11 @@
 /* Eina Regular */
 @font-face {
   font-family: 'Eina';
-  src: url('../assets/fonts/34E6DB_D_0.eot');
-  src: url('../assets/fonts/34E6DB_D_0.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/34E6DB_D_0.woff2') format('woff2'),
-    url('../assets/fonts/34E6DB_D_0.woff') format('woff'),
-    url('../assets/fonts/34E6DB_D_0.ttf') format('truetype');
+  src: url('/assets/fonts/34E6DB_D_0.eot');
+  src: url('/assets/fonts/34E6DB_D_0.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/34E6DB_D_0.woff2') format('woff2'),
+    url('/assets/fonts/34E6DB_D_0.woff') format('woff'),
+    url('/assets/fonts/34E6DB_D_0.ttf') format('truetype');
   font-weight: 400;
   unicode-range: U+000-5FF;
 }
