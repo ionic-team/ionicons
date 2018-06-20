@@ -99,7 +99,7 @@ export class Icon {
 
       if (url) {
         getSvgContent(url).then(svgContent => {
-          this.svgContent = validateContent(this.doc, svgContent);
+          this.svgContent = validateContent(this.doc, svgContent, this.el['s-sc']);
         });
       }
     }
@@ -239,7 +239,7 @@ export function getSrc(src: string) {
 }
 
 
-function validateContent(document: Document, svgContent: string) {
+function validateContent(document: Document, svgContent: string, scopeId: string | undefined) {
   if (svgContent) {
     const frag = document.createDocumentFragment();
     const div = document.createElement('div');
@@ -255,6 +255,9 @@ function validateContent(document: Document, svgContent: string) {
 
     // must only have 1 root element
     const svgElm = div.firstElementChild;
+    if (scopeId) {
+      svgElm.setAttribute(scopeId, '');
+    }
     if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
       // root element must be an svg
       // lets double check we've got valid elements
