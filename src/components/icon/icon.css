@@ -1,6 +1,5 @@
 :host {
   display: inline-block;
-  font-size: inherit;
 
   width: 1em;
   height: 1em;
@@ -18,12 +17,10 @@
   font-size: 32px;
 }
 
-.icon-inner {
-  font-size: inherit;
-}
-
 .icon-inner,
 svg {
+  display: block;
+
   height: 100%;
   width: 100%;
 }
