@@ -81,7 +81,7 @@ export class Icon {
 
 
   waitUntilVisible(el: HTMLElement, rootMargin: string, cb: Function) {
-    if (this.win) {
+    if (this.win && this.win.IntersectionObserver) {
       const io = this.io = new this.win.IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
           io.disconnect();
