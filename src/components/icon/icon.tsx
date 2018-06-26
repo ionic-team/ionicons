@@ -8,56 +8,58 @@ import { Component, Element, Prop, State, Watch } from '@stencil/core';
   shadow: true
 })
 export class Icon {
-  @Element() el: HTMLElement;
+  private io?: IntersectionObserver;
 
-  @State() private svgContent: string = null;
-  @State() private isVisible: boolean;
+  @Element() el!: HTMLElement;
 
-  @Prop({ context: 'isServer' }) isServer: boolean;
-  @Prop({ context: 'resourcesUrl' }) resourcesUrl: string;
-  @Prop({ context: 'mode' }) mode: string;
-  @Prop({ context: 'document' }) doc: Document;
+  @State() private svgContent?: string;
+  @State() private isVisible = false;
+
+  @Prop({ context: 'isServer' }) isServer!: boolean;
+  @Prop({ context: 'resourcesUrl' }) resourcesUrl!: string;
+  @Prop({ context: 'mode' }) mode?: string;
+  @Prop({ context: 'document' }) doc!: Document;
   @Prop({ context: 'window' }) win: any;
 
-  @Prop() color: string;
+  @Prop() color?: string;
 
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
    */
-  @Prop({mutable: true, reflectToAttr: true}) ariaLabel = '';
+  @Prop({mutable: true, reflectToAttr: true}) ariaLabel?: string;
 
   /**
    * Specifies which icon to use on `ios` mode.
    */
-  @Prop() ios = '';
+  @Prop() ios?: string;
 
   /**
    * Specifies which icon to use on `md` mode.
    */
-  @Prop() md = '';
+  @Prop() md?: string;
 
   /**
    * Specifies which icon to use from the built-in set of icons.
    */
-  @Prop() name = '';
+  @Prop() name?: string;
 
   /**
    * Specifies the exact `src` of an SVG file to use.
    */
-  @Prop() src = '';
+  @Prop() src?: string;
 
   /**
    * A combination of both `name` and `src`. If a `src` url is detected
    * it will set the `src` property. Otherwise it assumes it's a built-in named
    * SVG and set the `name` property.
    */
-  @Prop() icon = '';
+  @Prop() icon?: string;
 
   /**
    * The size of the icon.
    * Available options are: `"small"` and `"large"`.
    */
-  @Prop() size: string;
+  @Prop() size?: string;
 
 
   componentWillLoad() {
@@ -70,12 +72,20 @@ export class Icon {
     });
   }
 
+  componentDidUnload() {
+    if (this.io) {
+      this.io.disconnect();
+      this.io = undefined;
+    }
+  }
+
 
   waitUntilVisible(el: HTMLElement, rootMargin: string, cb: Function) {
-    if (this.win.IntersectionObserver) {
-      const io = new this.win.IntersectionObserver(data => {
+    if (this.win) {
+      const io = this.io = new this.win.IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
           io.disconnect();
+          this.io = undefined;
           cb();
         }
       }, { rootMargin });
@@ -99,7 +109,7 @@ export class Icon {
 
       if (url) {
         getSvgContent(url).then(svgContent => {
-          this.svgContent = validateContent(this.doc, svgContent, this.el['s-sc']);
+          this.svgContent = validateContent(this.doc, svgContent, (this.el as any)['s-sc']);
         });
       }
     }
@@ -109,7 +119,7 @@ export class Icon {
       // user did not provide a label
       // come up with the label based on the icon name
       if (name) {
-        this.ariaLabel = this.name
+        this.ariaLabel = name
           .replace('ios-', '')
           .replace('md-', '')
           .replace(/\-/g, ' ');
@@ -173,7 +183,7 @@ export class Icon {
 }
 
 
-const requests = new Map<string, Promise<string>>();
+const requests = new Map<string, Promise<string | null>>();
 
 function getSvgContent(url: string) {
   // see if we already have a request for this url
@@ -196,7 +206,12 @@ function getSvgContent(url: string) {
 }
 
 
-export function getName(name: string, mode: string, ios: string, md: string) {
+export function getName(
+  name: string | undefined,
+  mode: string | undefined,
+  ios: string | undefined,
+  md: string | undefined
+) {
   // default to "md" if somehow the mode wasn't set
   mode = (mode || 'md').toLowerCase();
 
@@ -228,7 +243,7 @@ export function getName(name: string, mode: string, ios: string, md: string) {
 }
 
 
-export function getSrc(src: string) {
+export function getSrc(src: string | undefined) {
   if (typeof src === 'string') {
     src = src.trim();
     if (src.length > 0 && /(\/|\.)/.test(src)) {
@@ -239,7 +254,11 @@ export function getSrc(src: string) {
 }
 
 
-function validateContent(document: Document, svgContent: string, scopeId: string | undefined) {
+function validateContent(
+  document: Document,
+  svgContent: string | null,
+  scopeId: string | undefined
+) {
   if (svgContent) {
     const frag = document.createDocumentFragment();
     const div = document.createElement('div');
@@ -255,10 +274,10 @@ function validateContent(document: Document, svgContent: string, scopeId: string
 
     // must only have 1 root element
     const svgElm = div.firstElementChild;
-    if (scopeId) {
-      svgElm.setAttribute(scopeId, '');
-    }
     if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
+      if (scopeId) {
+        svgElm.setAttribute(scopeId, '');
+      }
       // root element must be an svg
       // lets double check we've got valid elements
       // do not allow scripts

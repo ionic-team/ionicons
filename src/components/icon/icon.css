@@ -6,15 +6,17 @@
 
   contain: strict;
 
+  box-sizing: content-box !important;
+
   --ion-color-base: currentColor;
 }
 
 :host(.icon-small) {
-  font-size: 18px;
+  font-size: var(--ion-icon-size-small, 18px) !important;
 }
 
 :host(.icon-large){
-  font-size: 32px;
+  font-size: var(--ion-icon-size-large, 32px) !important;
 }
 
 .icon-inner,
