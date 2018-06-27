@@ -17,16 +17,16 @@ export class Icon {
 
   @Prop({ context: 'isServer' }) isServer!: boolean;
   @Prop({ context: 'resourcesUrl' }) resourcesUrl!: string;
-  @Prop({ context: 'mode' }) mode?: string;
   @Prop({ context: 'document' }) doc!: Document;
   @Prop({ context: 'window' }) win: any;
 
+  @Prop() mode?: 'ios' | 'md';
   @Prop() color?: string;
 
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
    */
-  @Prop({mutable: true, reflectToAttr: true}) ariaLabel?: string;
+  @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
   /**
    * Specifies which icon to use on `ios` mode.

@@ -47,6 +47,7 @@ declare global {
        * Specifies which icon to use on `md` mode.
        */
       'md': string;
+      'mode': 'ios' | 'md';
       /**
        * Specifies which icon to use from the built-in set of icons.
        */
@@ -98,6 +99,7 @@ declare global {
        * Specifies which icon to use on `md` mode.
        */
       'md'?: string;
+      'mode'?: 'ios' | 'md';
       /**
        * Specifies which icon to use from the built-in set of icons.
        */
