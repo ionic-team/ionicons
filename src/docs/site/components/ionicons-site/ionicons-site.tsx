@@ -1,6 +1,5 @@
 import '@stencil/router';
-import { Component, Listen, State } from '@stencil/core';
-import { RouterSwitch } from '@stencil/router';
+import { Component, Listen, State, Prop } from '@stencil/core';
 
 interface IconData {
   name: string,
@@ -9,7 +8,7 @@ interface IconData {
 }
 
 interface AppData {
-  version: string,
+  version: string | undefined,
   icons: IconData[]
 }
 
@@ -42,29 +41,32 @@ export class IoniconsSite {
   }
 
   componentWillLoad() {
-    return fetch('/data.json').then(rsp => {
+    this.loadData();
+  }
 
-      rsp.json().then(d => {
-        this.data = d;
-        this.data.icons = this.data.icons.map((o) =>{
-          o.icons = o.icons.reverse();
-          o.name = o.icons[0].split('-').slice(1).join('-');
-          return o;
-        })
-      });
+  async loadData() {
+    const res = await fetch('/data.json');
+    const json = await res.json();
 
-    });
+    this.data = json;
+    this.data.icons = json.icons.map((o: any) => {
+      o.icons = o.icons.reverse();
+      o.name = o.icons[0].split('-').slice(1).join('-');
+      return o;
+    })
   }
 
   checkScroll() {
     // show/hide header searchbar
-    const headerSearchEl: HTMLElement = document.querySelector('header .search-input');
-    const bodySearchEl: HTMLElement = document.querySelector('icon-list .search-input');
+    const headerSearchEl = document.querySelector('header .search-input');
+    const bodySearchEl = document.querySelector('icon-list .search-input');
 
-    if (!bodySearchEl) return;
+    if (!bodySearchEl || !headerSearchEl) {
+      return;
+    }
 
-    const headerInput: HTMLElement = headerSearchEl.querySelector('input');
-    const bodyInput: HTMLElement = bodySearchEl.querySelector('input');
+    const headerInput = headerSearchEl.querySelector('input')!;
+    const bodyInput = bodySearchEl.querySelector('input')!;
 
     if (bodySearchEl.getBoundingClientRect().top < (bodySearchEl.scrollHeight/2)) {
       if (this.isHeaderSearchVisible) return;
@@ -86,7 +88,7 @@ export class IoniconsSite {
 
       <stencil-router>
         <stencil-router-scroll-top>
-          <RouterSwitch scrollTopOffset={0}>
+          <stencil-route-switch scrollTopOffset={0}>
             <stencil-route url="/"
               component="landing-page"
               exact={true}
@@ -99,7 +101,7 @@ export class IoniconsSite {
 
             </stencil-route>
             <stencil-route component='notfound-page'></stencil-route>
-          </RouterSwitch>
+          </stencil-route-switch>
         </stencil-router-scroll-top>
       </stencil-router>
     ]

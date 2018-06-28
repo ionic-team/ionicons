@@ -3,14 +3,14 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.febxuvpw.js",
-  "corePolyfilled": "docssite.ytkmt3kl.js",
+  "core": "docssite.rhxn6s8r.js",
+  "corePolyfilled": "docssite.xipa2scg.js",
   "components": {
     "footer-bar": {
       "$": "js9iloau"
     },
     "header-bar": {
-      "$": "tl7zuo9g"
+      "$": "cezdrpl9"
     },
     "icon-list": {
       "$": "bjphfriz"
@@ -19,7 +19,7 @@
       "$": "j5rbuqbp"
     },
     "ionicons-site": {
-      "$": "tl7zuo9g"
+      "$": "cezdrpl9"
     },
     "landing-page": {
       "$": "bjphfriz"
@@ -28,13 +28,16 @@
       "$": "d83fvjds"
     },
     "stencil-route": {
-      "$": "tl7zuo9g"
+      "$": "cezdrpl9"
     },
     "stencil-route-link": {
-      "$": "gkczrv46"
+      "$": "ikjvkszj"
+    },
+    "stencil-route-switch": {
+      "$": "cezdrpl9"
     },
     "stencil-router": {
-      "$": "tl7zuo9g"
+      "$": "cezdrpl9"
     },
     "toast-bar": {
       "$": "bjphfriz"
