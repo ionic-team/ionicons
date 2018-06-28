@@ -76,7 +76,7 @@ export class HeaderBar {
       <div class="container">
         <div class="logo">
           <stencil-route-link url='/' exact={true}>
-            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <svg width="32px" height="32px" viewBox="0 0 32 32">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="icon" fill-rule="nonzero">
                   <circle id="circle" fill="#EAEEF5" cx="16" cy="16" r="16"></circle>

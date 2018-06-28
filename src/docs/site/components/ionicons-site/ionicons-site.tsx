@@ -1,5 +1,5 @@
 import '@stencil/router';
-import { Component, Listen, State, Prop } from '@stencil/core';
+import { Component, Listen, State } from '@stencil/core';
 
 interface IconData {
   name: string,
