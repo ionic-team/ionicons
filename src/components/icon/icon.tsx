@@ -223,10 +223,13 @@ export function getName(
   } else if (md && mode === 'md') {
     name = md.toLowerCase();
 
-  } else if (name && !(/^md-|^ios-|^logo-/.test(name))) {
-    // this does not have one of the defaults
-    // so lets auto add in the mode prefix for them
-    name = mode + '-' + name.toLowerCase();
+  } else if (name) {
+    name = name.toLowerCase();
+    if (!/^md-|^ios-|^logo-/.test(name)) {
+      // this does not have one of the defaults
+      // so lets auto add in the mode prefix for them
+      name = `${mode}-${name}`;
+    }
   }
 
   if (typeof name !== 'string' || name.trim() === '') {
