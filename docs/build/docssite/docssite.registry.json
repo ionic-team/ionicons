@@ -3,47 +3,47 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.qyghugue.js",
-  "corePolyfilled": "docssite.xipa2scg.js",
+  "core": "docssite.iai3eham.js",
+  "corePolyfilled": "docssite.qx1n8cjw.js",
   "components": {
     "footer-bar": {
-      "$": "js9iloau"
+      "$": "3vkw131p"
     },
     "header-bar": {
-      "$": "njnrhcsu"
+      "$": "am2zp7gd"
     },
     "icon-list": {
-      "$": "bjphfriz"
+      "$": "ytwigzvv"
     },
     "icon-search": {
-      "$": "j5rbuqbp"
+      "$": "ym0h5hh3"
     },
     "ionicons-site": {
-      "$": "njnrhcsu"
+      "$": "am2zp7gd"
     },
     "landing-page": {
-      "$": "bjphfriz"
+      "$": "ytwigzvv"
     },
     "notfound-page": {
-      "$": "d83fvjds"
+      "$": "fonk1mfi"
     },
     "stencil-route": {
-      "$": "njnrhcsu"
+      "$": "am2zp7gd"
     },
     "stencil-route-link": {
-      "$": "ikjvkszj"
+      "$": "nrwcnnxs"
     },
     "stencil-route-switch": {
-      "$": "njnrhcsu"
+      "$": "am2zp7gd"
     },
     "stencil-router": {
-      "$": "njnrhcsu"
+      "$": "am2zp7gd"
     },
     "toast-bar": {
-      "$": "bjphfriz"
+      "$": "ytwigzvv"
     },
     "usage-page": {
-      "$": "dnu5bejp"
+      "$": "corms4uo"
     }
   }
 }
