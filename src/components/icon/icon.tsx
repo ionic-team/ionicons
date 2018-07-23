@@ -20,8 +20,16 @@ export class Icon {
   @Prop({ context: 'document' }) doc!: Document;
   @Prop({ context: 'window' }) win: any;
 
-  @Prop() mode?: 'ios' | 'md';
+  /**
+   * The color to use for the background of the item.
+   */
   @Prop() color?: string;
+
+  /**
+   * The mode determines which platform styles to use.
+   * Possible values are: `"ios"` or `"md"`.
+   */
+  @Prop() mode?: 'ios' | 'md';
 
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -62,6 +70,12 @@ export class Icon {
   @Prop() size?: string;
 
 
+  /**
+   * If enabled, ion-icon will be loaded lazily when it's visible in the viewport.
+   * Default, `true`.
+   */
+  @Prop() lazy = true;
+
   componentWillLoad() {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
@@ -81,7 +95,7 @@ export class Icon {
 
 
   waitUntilVisible(el: HTMLElement, rootMargin: string, cb: Function) {
-    if (this.win && this.win.IntersectionObserver) {
+    if (this.lazy && this.win && this.win.IntersectionObserver) {
       const io = this.io = new this.win.IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
           io.disconnect();

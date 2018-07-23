@@ -9,12 +9,12 @@ import content from './content';
   styleUrl: 'usage-page.scss'
 })
 export class UsagePage {
-  @Prop({ context: 'queue'}) queue: QueueApi;
+  @Prop({ context: 'queue'}) queue!: QueueApi;
 
   @State() exampleType: string = 'md';
   @State() exampleIcon: string = 'heart';
 
-  @Prop() match: MatchResults;
+  @Prop() match?: MatchResults;
   @Prop() data: any;
 
   componentWillLoad() {
