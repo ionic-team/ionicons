@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2017-6-29: Created with FontForge (http://fontforge.org)
+2018-7-27: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20170103 at Thu Jun 29 10:26:22 2017
- By Andre Harris
-Copyright (c) 2017, Andre Harris
+Created by FontForge 20180321 at Fri Jul 27 11:46:58 2018
+ By Patricio Ferreira
+Copyright (c) 2018, Patricio Ferreira
 </metadata>
 <defs>
 <font id="Ionicons" horiz-adv-x="448" >
@@ -90,6 +90,8 @@ d="M0 122c3 1 5 3 8 3h67h2c-4 -8 -7 -16 -11 -24c-1 -1 -3 -2 -5 -2h-54c-2 0 -5 2 
 c-6 20 -23 32 -43 32c-19 0 -36 -12 -42 -32c-1 -4 -3 -6 -7 -6h-76c-4 0 -5 2 -7 6c-3 7 -6 13 -10 21h79v9v138c0 15 3 17 18 17h41c17 0 30 -6 40 -21c10 -16 22 -32 32 -48c4 -7 6 -16 6 -24c1 -21 0 -43 0 -64c0 -5 1 -7 7 -7c11 0 12 0 12 -11v-8zM314 212
 c8 0 10 5 6 11c-7 11 -15 22 -23 32c-2 3 -6 5 -9 5c-12 1 -24 0 -36 0c-6 0 -7 -3 -7 -8v-32c0 -6 2 -8 8 -8h30h31zM110 125c18 0 32 -15 32 -33s-15 -33 -33 -33s-33 15 -33 33s16 33 34 33zM109 76c9 0 16 7 16 16s-7 17 -16 17s-17 -7 -17 -16s8 -17 17 -17zM283 125
 c19 0 33 -15 33 -33c0 -19 -14 -33 -33 -33c-18 0 -33 14 -33 33c0 18 15 33 33 33zM283 76c9 0 17 7 17 16s-8 17 -17 17s-16 -7 -16 -16s7 -17 16 -17z" />
+    <glyph glyph-name="ion-build-download" unicode="&#xf16d;" horiz-adv-x="0" 
+ />
     <glyph glyph-name="ion-build-logo-door" unicode="&#xf164;" horiz-adv-x="127" 
 d="M0 6v372l127 70v-512z" />
     <glyph glyph-name="ion-build-logo-simplified" unicode="&#xf158;" horiz-adv-x="460" 
@@ -248,6 +250,9 @@ d="M100 384c35 0 67 -10 84 -31v-353h-2c-8 36 -42 64 -82 64c-34 0 -65 -16 -78 -42
     <glyph glyph-name="ion-ios-camera" unicode="&#xf3f6;" horiz-adv-x="384" 
 d="M354 288c18 0 30 -13 30 -31v-176c0 -18 -12 -33 -30 -33h-320c-18 0 -34 15 -34 33v176c0 18 16 31 34 31h13v16h34v-16h13c32 36 43 48 55 48h88c12 0 23 -12 55 -48h62zM192 88c47 0 86 38 86 85s-39 85 -86 85s-86 -38 -86 -85s39 -85 86 -85zM305 239v17h-17v-17h17
 zM192 242c38 0 70 -31 70 -69s-32 -69 -70 -69s-70 31 -70 69s32 69 70 69zM192 141c18 0 32 14 32 32s-14 32 -32 32s-32 -14 -32 -32s14 -32 32 -32z" />
+    <glyph glyph-name="ion-ios-cart" unicode="&#xf3f8;" horiz-adv-x="384" 
+d="M96 48c13 0 24 -11 24 -24s-11 -24 -24 -24s-24 11 -24 24s11 24 24 24zM320 48c13 0 24 -11 24 -24s-11 -24 -24 -24s-24 11 -24 24s11 24 24 24zM384 320l-16 -128l-271 -48l5 -30c7 -34 21 -34 26 -34h240v-16h-240c-11 0 -21 5 -28 14c-6 8 -11 19 -13 33l-43 234v0
+c-2 8 -3 12 -7 16c-6 5 -18 7 -37 7v16c23 0 38 -4 47 -11c7 -6 10 -14 12 -21z" />
     <glyph glyph-name="ion-ios-email-outline" unicode="&#xf422;" horiz-adv-x="384" 
 d="M0 320h384v-256h-384v256zM192 180l163 124h-326zM16 80h352v214l-115 -88l68 -77l-2 -2l-79 70l-48 -37l-48 37l-79 -70l-2 2l68 77l-115 88v-214z" />
     <glyph glyph-name="ion-ios-game-controller-a" unicode="&#xf439;" 
@@ -257,6 +262,9 @@ s-20 -8 -20 -19s9 -19 20 -19z" />
     <glyph glyph-name="ion-ios-list-outline" unicode="&#xf453;" horiz-adv-x="384" 
 d="M368 368h-352v-352h352v352zM384 384v0v-384h-384v384h384zM128 280v16h192v-16h-192zM128 184v16h192v-16h-192zM128 88v16h192v-16h-192zM64 288c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16s-16 7 -16 16zM64 192c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16
 s-16 7 -16 16zM64 96c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16s-16 7 -16 16z" />
+    <glyph glyph-name="ion-ios-list" unicode="&#xf454;" horiz-adv-x="384" 
+d="M0 384h384v-384h-384v384zM80 80c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM80 176c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM80 272c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM320 88v16h-192v-16h192zM320 184v16
+h-192v-16h192zM320 280v16h-192v-16h192z" />
     <glyph glyph-name="ion-ios-plus-empty" unicode="&#xf489;" horiz-adv-x="256" 
 d="M256 183h-120v-119h-17v119h-119v17h119v120h17v-120h120v-17z" />
     <glyph glyph-name="ion-ios-pricetag" unicode="&#xf48d;" horiz-adv-x="416" 
