@@ -1,5 +1,5 @@
 {
-  "build_hash": "df7fae52b25a715586142fadde6c5020",
+  "build_hash": "f4c1a2cda480cf86332e584b37f1bca0",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -727,6 +727,10 @@
     {
       "code": "0xf15f",
       "name": "build-delivery-truck"
+    },
+    {
+      "code": "0xf16d",
+      "name": "build-download"
     },
     {
       "code": "0xf159",
