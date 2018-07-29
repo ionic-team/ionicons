@@ -283,8 +283,8 @@ declare global {
     interface ToastBar {
       'selectedIcon': {
     name: string,
-    icons: Array<string>,
-    tags: Array<string>
+    icons: string[],
+    tags: string[]
   };
       'selectedIconType': string;
     }
@@ -313,8 +313,8 @@ declare global {
       'onToggleHeaderSearch'?: (event: CustomEvent) => void;
       'selectedIcon'?: {
     name: string,
-    icons: Array<string>,
-    tags: Array<string>
+    icons: string[],
+    tags: string[]
   };
       'selectedIconType'?: string;
     }

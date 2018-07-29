@@ -1,15 +1,15 @@
-import { Component, Prop, Listen, Event, EventEmitter, State, Watch } from '@stencil/core';
+import { Component, Event, EventEmitter, Listen, Prop, State, Watch } from '@stencil/core';
 
 @Component({
   tag: 'icon-search',
   styleUrl: 'icon-search.scss'
 })
 export class IconSearch {
-  @Prop() query: string = '';
-  @Prop() size: string = 'small';
-  @Prop() autofocus: string = 'none';
+  @Prop() query = '';
+  @Prop() size = 'small';
+  @Prop() autofocus = 'none';
 
-  @State() showClearCtrl: boolean = false;
+  @State() showClearCtrl = false;
 
   @Event() hasSearched: EventEmitter;
 
@@ -40,21 +40,22 @@ export class IconSearch {
 
   render() {
     return (
-    <div class={`search-input search-input--${this.size}`}>
+      <div class={`search-input search-input--${this.size}`}>
 
-      <input type="text"
-        placeholder="Search icons..."
-        value={this.query}
-        autofocus={this.autofocus === 'autofocus' ? 'autofocus' : ''}/>
+        <input type="text"
+          placeholder="Search icons..."
+          value={this.query}
+          autofocus={this.autofocus === 'autofocus' ? 'autofocus' : ''}/>
 
-      <i class={{
-          'search-input__clear': true,
-          'search-input__clear--active': this.showClearCtrl,
-          'ion': true,
-          'ion-md-close': true
-        }}
-        onClick={this.handleClear.bind(this)}></i>
+        <i class={{
+            'search-input__clear': true,
+            'search-input__clear--active': this.showClearCtrl,
+            'ion': true,
+            'ion-md-close': true
+          }}
+          onClick={this.handleClear.bind(this)}></i>
 
-    </div>
-  )}
+      </div>
+    );
+  }
 }

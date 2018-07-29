@@ -93,8 +93,7 @@ export class Icon {
     }
   }
 
-
-  waitUntilVisible(el: HTMLElement, rootMargin: string, cb: Function) {
+  private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
     if (this.lazy && this.win && this.win.IntersectionObserver) {
       const io = this.io = new this.win.IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
@@ -141,7 +140,6 @@ export class Icon {
     }
   }
 
-
   getUrl() {
     let url = getSrc(this.src);
     if (url) {
@@ -166,7 +164,7 @@ export class Icon {
     return null;
   }
 
-  getNamedUrl(name: string) {
+  private getNamedUrl(name: string) {
     return `${this.resourcesUrl}svg/${name}.svg`;
   }
 
@@ -313,14 +311,14 @@ export function isValid(elm: HTMLElement) {
       return false;
     }
 
-    for (var i = 0; i < elm.attributes.length; i++) {
-      let val = elm.attributes[i].value;
+    for (let i = 0; i < elm.attributes.length; i++) {
+      const val = elm.attributes[i].value;
       if (typeof val === 'string' && val.toLowerCase().indexOf('on') === 0) {
         return false;
       }
     }
 
-    for (i = 0; i < elm.childNodes.length; i++) {
+    for (let i = 0; i < elm.childNodes.length; i++) {
       if (!isValid(elm.childNodes[i] as any)) {
         return false;
       }

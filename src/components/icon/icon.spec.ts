@@ -4,16 +4,22 @@ import * as icon from './icon';
 describe('isValid', () => {
 
   it('invalid onload attr', () => {
-    const el = { nodeType: 1, nodeName: 'svg', attributes: [{
-      value: 'onload'
-    }], childNodes: [] } as any;
+    const el = {
+      nodeType: 1,
+      nodeName: 'svg',
+      attributes: [{ value: 'onload' }],
+      childNodes: []
+    } as any;
     expect(icon.isValid(el)).toBe(false);
   });
 
   it('invalid onclick attr', () => {
-    const el = { nodeType: 1, nodeName: 'svg', attributes: [{
-      value: 'OnClIcK'
-    }], childNodes: [] } as any;
+    const el = {
+      nodeType: 1,
+      nodeName: 'svg',
+      attributes: [{ value: 'OnClIcK' }],
+      childNodes: []
+    } as any;
     expect(icon.isValid(el)).toBe(false);
   });
 

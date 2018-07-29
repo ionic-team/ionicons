@@ -11,7 +11,7 @@
   "unpkg": "dist/ionicons.js",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
-    "build": "npm run clean && npm run build.icon && npm run generate && npm run build.data && npm run build.css && npm run build.docs && npm run copy.tasks && npm run test",
+    "build": "npm run clean && npm run lint.ts && npm run build.icon && npm run generate && npm run build.data && npm run build.css && npm run build.docs && npm run copy.tasks && npm run test",
     "build.css": "node scripts/build-css.js",
     "build.data": "node scripts/data.js",
     "build.docs": "stencil build --config src/docs/stencil.config.js",
@@ -21,6 +21,8 @@
     "dev": "npm run build && stencil build --dev --watch --serve --config src/docs/stencil.config.js",
     "mode.comparison": "node scripts/mode-comparison.js",
     "generate": "python scripts/generate.py",
+    "lint.ts": "tslint --project .",
+    "lint.ts.fix": "tslint --project . --fix",
     "release": "np --any-branch --yolo",
     "test": "jest",
     "test.watch": "jest --watch"
@@ -37,7 +39,9 @@
     "jest": "^23.2.0",
     "node-sass": "4.9.0",
     "np": "3.0.4",
-    "svgo": "1.0.5"
+    "svgo": "1.0.5",
+    "tslint": "^5.11.0",
+    "tslint-ionic-rules": "0.0.17"
   },
   "keywords": [
     "ionicons",

@@ -1,6 +1,6 @@
 import { Component, Prop, State } from '@stencil/core';
-import { MatchResults } from '@stencil/router';
 import { QueueApi } from '@stencil/core/dist/declarations';
+import { MatchResults } from '@stencil/router';
 import content from './content';
 
 
@@ -9,23 +9,23 @@ import content from './content';
   styleUrl: 'usage-page.scss'
 })
 export class UsagePage {
-  @Prop({ context: 'queue'}) queue!: QueueApi;
+  @Prop({ context: 'queue' }) queue!: QueueApi;
 
-  @State() exampleType: string = 'md';
-  @State() exampleIcon: string = 'heart';
+  @State() exampleType = 'md';
+  @State() exampleIcon = 'heart';
 
   @Prop() match?: MatchResults;
   @Prop() data: any;
 
   componentWillLoad() {
-    if(!window.location.hash) return;
+    if (!window.location.hash) return;
 
     let iconNames: string[] = [];
-    this.data.icons.map((o) =>{
-      iconNames = iconNames.concat(o.icons)
-    })
+    this.data.icons.map((o) => {
+      iconNames = iconNames.concat(o.icons);
+    });
 
-    const hash = window.location.hash.replace('#', '')
+    const hash = window.location.hash.replace('#', '');
 
     if (iconNames.includes(hash)) {
       const splt = hash.split('-');
@@ -40,9 +40,9 @@ export class UsagePage {
     // });
 
     if (window.location.hash) {
-      setTimeout( () => {
+      setTimeout(() => {
         const offset = document.getElementById('basic-usage').offsetTop - 100;
-        window.scrollTo({left: 0, top: offset, behavior: 'smooth'});
+        window.scrollTo({ left: 0, top: offset, behavior: 'smooth' });
       }, 50);
     }
   }
@@ -60,6 +60,6 @@ export class UsagePage {
 
        <footer-bar></footer-bar>
      </main>
-   )
+   );
   }
 }

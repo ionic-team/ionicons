@@ -1,6 +1,6 @@
 import hljs from 'highlight.js';
 
-export default function (version: string, type = "md", name = "heart") {
+export default function(version: string, type = 'md', name = 'heart') {
   return (<div>
 
 <h1>Usage</h1>
@@ -20,9 +20,9 @@ export default function (version: string, type = "md", name = "heart") {
 
 <h3 id="basic-usage">Basic usage</h3>
 <p>To use a built-in icon from the Ionicons package, populate the <code>name</code> attribute on the <code>ion-icon</code> component:</p>
-{(type == 'logo') ? highlight(
+{(type === 'logo') ? highlight(
 `<ion-icon name="logo-${name}"></ion-icon>`
-):highlight(
+) : highlight(
 `<ion-icon name="${name}"></ion-icon>`
 )}
 
@@ -42,23 +42,23 @@ export default function (version: string, type = "md", name = "heart") {
 <p>Ionic will automatically use the correct version based on the platform. Note that this feature will only automatically kick-in for Ionic apps. When being used outside of an Ionic app, please see the "Outside Ionic App" section below.</p>
 
 <p>To specify the icon for each platform, use the <code>md</code> and <code>ios</code> attributes and provide the platform specific icon name.</p>
-{(type == 'logo') ? highlight(
+{(type === 'logo') ? highlight(
 `<ion-icon ios="ios-heart" md="md-heart"></ion-icon>`
-):highlight(
+) : highlight(
 `<ion-icon ios="ios-${name}" md="md-${name}"></ion-icon>`
 )}
 
 <h3>Platform Continuity Outside Ionic Apps</h3>
 
 <p>When using Ionicons without the <a href="https://ionicframework.com/">Ionic Framework</a>, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the <code>name</code> attribute.</p>
-{(type == 'logo') ? highlight(
+{(type === 'logo') ? highlight(
 `<ion-icon name="ios-heart"></ion-icon>`
-):highlight(
+) : highlight(
 `<ion-icon name="ios-${name}"></ion-icon>`
 )}
-{(type == 'logo') ? highlight(
+{(type === 'logo') ? highlight(
 `<ion-icon name="md-heart"></ion-icon>`
-):highlight(
+) : highlight(
 `<ion-icon name="md-${name}"></ion-icon>`
 )}
 
@@ -90,17 +90,17 @@ export default function (version: string, type = "md", name = "heart") {
 
 
 <h3>Basic usage</h3>
-<p>Use the <stencil-route-link url='/'>icon index</stencil-route-link> to look up the name of the icon you want to use. The icon's CSS class name will be prefixed with <code>ion-</code>, followed by the platform attribute <code>md-</code>, <code>ios-</code> or <code>logo-</code> and completed wth the icon name.</p>
+<p>Use the <stencil-route-link url="/">icon index</stencil-route-link> to look up the name of the icon you want to use. The icon's CSS class name will be prefixed with <code>ion-</code>, followed by the platform attribute <code>md-</code>, <code>ios-</code> or <code>logo-</code> and completed wth the icon name.</p>
 {highlight(
 `<i class="icon ion-${type}-${name}"></i>`
 )}
 
-</div>)}
+</div>); }
 
 function highlight(text: string) {
   return (
     <div class="styled-code">
       <pre innerHTML={hljs.highlightAuto(text).value}></pre>
     </div>
-  )
+  );
 }

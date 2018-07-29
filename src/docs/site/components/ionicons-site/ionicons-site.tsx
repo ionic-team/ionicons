@@ -1,15 +1,15 @@
-import '@stencil/router';
 import { Component, Listen, State } from '@stencil/core';
+import '@stencil/router';
 
 interface IconData {
-  name: string,
-  icons: Array<string>,
-  tags: Array<string>
+  name: string;
+  icons: string[];
+  tags: string[];
 }
 
 interface AppData {
-  version: string | undefined,
-  icons: IconData[]
+  version: string | undefined;
+  icons: IconData[];
 }
 
 @Component({
@@ -22,8 +22,8 @@ export class IoniconsSite {
     version: undefined,
     icons: []
   };
-  @State() query: string = '';
-  @State() isHeaderSearchVisible: boolean = false;
+  @State() query = '';
+  @State() isHeaderSearchVisible = false;
 
   @Listen('window:scroll')
   handleScroll() {
@@ -53,7 +53,7 @@ export class IoniconsSite {
       o.icons = o.icons.reverse();
       o.name = o.icons[0].split('-').slice(1).join('-');
       return o;
-    })
+    });
   }
 
   checkScroll() {
@@ -68,7 +68,7 @@ export class IoniconsSite {
     const headerInput = headerSearchEl.querySelector('input')!;
     const bodyInput = bodySearchEl.querySelector('input')!;
 
-    if (bodySearchEl.getBoundingClientRect().top < (bodySearchEl.scrollHeight/2)) {
+    if (bodySearchEl.getBoundingClientRect().top < (bodySearchEl.scrollHeight / 2)) {
       if (this.isHeaderSearchVisible) return;
       this.isHeaderSearchVisible = true;
       if (bodyInput === document.activeElement) headerInput.focus();
@@ -92,18 +92,18 @@ export class IoniconsSite {
             <stencil-route url="/"
               component="landing-page"
               exact={true}
-              componentProps={{'query': this.query, 'data': this.data}}>
+              componentProps={{ 'query': this.query, 'data': this.data }}>
 
             </stencil-route>
             <stencil-route url="/usage"
               component="usage-page"
-              componentProps={{'data': this.data}}>
+              componentProps={{ 'data': this.data }}>
 
             </stencil-route>
-            <stencil-route component='notfound-page'></stencil-route>
+            <stencil-route component="notfound-page"></stencil-route>
           </stencil-route-switch>
         </stencil-router-scroll-top>
       </stencil-router>
-    ]
+    ];
   }
 }

@@ -1,4 +1,4 @@
-import { Element, Component, Prop, State, Event, EventEmitter } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'toast-bar',
@@ -9,13 +9,13 @@ export class ToastBar {
 
   @Prop() selectedIcon: {
     name: string,
-    icons: Array<string>,
-    tags: Array<string>
+    icons: string[],
+    tags: string[]
   };
   @Prop() selectedIconType: string;
 
   @State() showCopiedConfirm: number;
-  @State() hadIconOnce: boolean = false;
+  @State() hadIconOnce = false;
   @State() touchStartY: number;
   @State() touchEndY: number;
 
@@ -40,29 +40,29 @@ export class ToastBar {
       this.showCopiedConfirm = 0;
     }
     codeElParent.classList.add('copied');
-    this.showCopiedConfirm = window.setTimeout(()=>{
+    this.showCopiedConfirm = window.setTimeout(() => {
       codeElParent.classList.remove('copied');
       this.showCopiedConfirm = 0;
     }, 1500);
   }
 
-  componentDidLoad () {
-    this.el.addEventListener("touchstart", this.handleTouchStart.bind(this), false);
-    this.el.addEventListener("touchend", this.handleTouchEnd.bind(this), false);
+  componentDidLoad() {
+    this.el.addEventListener('touchstart', this.handleTouchStart.bind(this), false);
+    this.el.addEventListener('touchend', this.handleTouchEnd.bind(this), false);
   }
 
   handleTouchStart(ev: any) {
-    if (ev.target.classList.contains('toast-bar--inner')){
+    if (ev.target.classList.contains('toast-bar--inner')) {
       ev.preventDefault();
       this.touchStartY = ev.changedTouches[0].screenY;
     }
   }
 
   handleTouchEnd(ev: any) {
-    if (ev.target.classList.contains('toast-bar--inner')){
+    if (ev.target.classList.contains('toast-bar--inner')) {
       ev.preventDefault();
       this.touchEndY = ev.changedTouches[0].screenY;
-      if (this.touchEndY > this.touchStartY) { //swiped down
+      if (this.touchEndY > this.touchStartY) { // swiped down
         this.clearToast.emit();
       }
     }
@@ -108,13 +108,13 @@ export class ToastBar {
                 <i class={'ion ion-' + name}></i>
               </div>
               <a class="btn btn--gray btn--small" download={`/ionicons/svg/${name}.svg`} href={`/ionicons/svg/${name}.svg`}>
-                <i class='ion ion-md-download'></i>
+                <i class="ion ion-md-download"></i>
                 SVG
               </a>
             </div>
           </div>
-        )
-      })
+        );
+      });
     }
 
     return (
@@ -128,7 +128,7 @@ export class ToastBar {
             {this.selectedIcon &&
               <div class="toast-bar__details">
 
-                <div class="toast-bar__section" style={{maxWidth: snippetLength + 'px'}}>
+                <div class="toast-bar__section" style={{ maxWidth: snippetLength + 'px' }}>
                   <div class="toast-bar__section-header">
                     <div>
                       <h6>Web component code</h6>
@@ -158,6 +158,6 @@ export class ToastBar {
         </div>
 
       </div>
-    )
+    );
   }
 }

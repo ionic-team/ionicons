@@ -11,9 +11,9 @@ export class NotFoundPage {
       <main>
         <div class="container">
           <h1>Woops! We can't find the page your looking for.</h1>
-          <p>Head on back to the <stencil-route-link url='/' class='block'>Icons page</stencil-route-link>.</p>
+          <p>Head on back to the <stencil-route-link url="/" class="block">Icons page</stencil-route-link>.</p>
         </div>
-        
+
         <footer-bar></footer-bar>
       </main>
     );

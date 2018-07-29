@@ -1,4 +1,4 @@
-import { Element, Component, Listen, State, Prop } from '@stencil/core';
+import { Component, Element, Listen, Prop, State } from '@stencil/core';
 
 
 @Component({
@@ -8,11 +8,11 @@ import { Element, Component, Listen, State, Prop } from '@stencil/core';
 export class LandingPage {
   @Element() el: Element;
 
-  @State() selectedIcon: string = '';
-  @State() selectedIconType: string = 'md';
-  @State() isHeaderSearchVisible: boolean = false;
+  @State() selectedIcon = '';
+  @State() selectedIconType = 'md';
+  @State() isHeaderSearchVisible = false;
 
-  @Prop() query: string = '';
+  @Prop() query = '';
   @Prop() data: any;
 
   @Listen('body:keyup')
@@ -63,10 +63,10 @@ export class LandingPage {
 
           switch (iconType) {
             case 'ios':
-              results['icon'].push({name: iconData.name});
+              results['icon'].push({ name: iconData.name });
               break;
             case 'logo':
-              results['logo'].push({name: iconData.name, icon: iconName});
+              results['logo'].push({ name: iconData.name, icon: iconName });
               break;
             default:
               return;
@@ -96,11 +96,8 @@ export class LandingPage {
 
   handleToggleClick(ev: MouseEvent) {
     ev.stopPropagation();
-    if(this.selectedIconType === 'md') {
-      this.selectedIconType = 'ios';
-    } else {
-      this.selectedIconType = 'md'
-    }
+    this.selectedIconType = (this.selectedIconType === 'md')
+     ? 'ios' : 'md';
   }
 
   render() {
@@ -123,7 +120,7 @@ export class LandingPage {
                   <h4>App icons</h4>
                   <ul class="toggle">
                     <li
-                      class={`toggle__item ${(this.selectedIconType  === 'md') ? 'active' : ''}`}
+                      class={`toggle__item ${(this.selectedIconType === 'md') ? 'active' : ''}`}
                       onClick={ev => this.handleToggleClick(ev)}>
                         Material style
                     </li>
@@ -137,15 +134,15 @@ export class LandingPage {
               </div>
               <div class="container--small">
                 <div class="icon-results">
-                  {results.icon.map(icon => {
-                    return <span
+                  {results.icon.map(icon => (
+                    <span
                       class={`icon-results__cell ${(this.selectedIcon === icon.name) ? 'active' : ''}`}
                       onClick={(ev) => this.handleIconClick(ev, icon.name)}
                       onMouseEnter={(ev) => this.handleIconMouseEnter(ev)}
                       onMouseLeave={(ev) => this.handleIconMouseLeave(ev)}>
                         <i class={`ion ion-${this.selectedIconType}-${icon.name}`}></i>
-                      </span>
-                  })}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -162,8 +159,8 @@ export class LandingPage {
 
             <div class="container--small">
               <div class="icon-results">
-                {results.logo.map(icon => {
-                  return <span
+                {results.logo.map(icon => (
+                  <span
                     class={`icon-results__cell ${(this.selectedIcon === icon.name) ? 'active' : ''}`}
                     onClick={(ev) => this.handleIconClick(ev, icon.name)}
                     onMouseEnter={(ev) => this.handleIconMouseEnter(ev)}
@@ -171,7 +168,7 @@ export class LandingPage {
 
                     <i class={'ion ion-' + icon.icon}></i>
                   </span>
-                })}
+                ))}
               </div>
             </div>
           </div>
@@ -190,6 +187,6 @@ export class LandingPage {
         </toast-bar>
 
       </div>
-    )
+    );
   }
 }

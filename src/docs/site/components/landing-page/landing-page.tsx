@@ -1,4 +1,4 @@
-import { Element, Component, Prop } from '@stencil/core';
+import { Component, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'landing-page',
@@ -7,7 +7,7 @@ import { Element, Component, Prop } from '@stencil/core';
 export class LandingPage {
   @Element() el: Element;
 
-  @Prop() query: string = '';
+  @Prop() query = '';
   @Prop() data: any;
 
   render() {
@@ -25,6 +25,6 @@ export class LandingPage {
 
         <footer-bar></footer-bar>
       </main>
-    )
+    );
   }
 }
