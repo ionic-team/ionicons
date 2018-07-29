@@ -7,8 +7,10 @@
   contain: strict;
 
   box-sizing: content-box !important;
+}
 
-  --ion-color-base: currentColor;
+:host(.ion-color) {
+  color: var(--ion-color-base) !important;
 }
 
 :host(.icon-small) {
@@ -28,8 +30,8 @@ svg {
 }
 
 svg {
-  fill: var(--ion-color-base);
-  stroke: var(--ion-color-base);
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 /* Set iOS Icon Colors */

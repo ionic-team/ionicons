@@ -20,13 +20,13 @@
     "copy.tasks": "node scripts/copy-tasks.js",
     "dev": "npm run build && stencil build --dev --watch --serve --config src/docs/stencil.config.js",
     "mode.comparison": "node scripts/mode-comparison.js",
-    "generate": "python2 scripts/generate.py",
+    "generate": "python scripts/generate.py",
     "release": "np --any-branch --yolo",
     "test": "jest",
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "0.10.8",
+    "@stencil/core": "0.10.10",
     "@stencil/router": "~0.2.2",
     "@stencil/sass": "0.0.5",
     "@types/highlight.js": "^9.12.3",
