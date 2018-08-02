@@ -178,7 +178,6 @@ export class Icon {
     };
   }
 
-
   render() {
     if (!this.isServer && this.svgContent) {
       // we've already loaded up this svg at one point
@@ -291,7 +290,7 @@ function validateContent(
     const svgElm = div.firstElementChild;
     if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
       if (scopeId) {
-        svgElm.setAttribute(scopeId, '');
+        svgElm.setAttribute('class', scopeId);
       }
       // root element must be an svg
       // lets double check we've got valid elements

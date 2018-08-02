@@ -1,4 +1,6 @@
-exports.config = {
+import { Config } from '@stencil/core';
+
+export const config: Config = {
   namespace: 'ionicons',
   srcDir: 'src/components/',
   outputTargets: [
@@ -7,9 +9,4 @@ exports.config = {
       dir: 'dist'
     }
   ]
-};
-
-exports.devServer = {
-  root: 'docs',
-  watchGlob: '**/**'
 };
