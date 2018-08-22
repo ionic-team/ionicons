@@ -3,8 +3,8 @@
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
   "global": "docssite.global.js",
-  "core": "docssite.slyterde.js",
-  "corePolyfilled": "docssite.cexmiywj.js",
+  "core": "docssite.1g5w8nag.js",
+  "corePolyfilled": "docssite.p9maaol9.js",
   "components": {
     "footer-bar": {
       "bundleIds": {
