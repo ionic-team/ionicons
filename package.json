@@ -7,7 +7,7 @@
   ],
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
-  "types": "dist/types/components.d.ts",
+  "types": "dist/types/generated.d.ts",
   "unpkg": "dist/ionicons.js",
   "collection": "dist/collection/collection-manifest.json",
   "scripts": {
@@ -28,7 +28,7 @@
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "0.11.0",
+    "@stencil/core": "0.12.0-4",
     "@stencil/router": "~0.2.2",
     "@stencil/sass": "0.0.5",
     "@types/highlight.js": "^9.12.3",
