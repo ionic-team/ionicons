@@ -8,6 +8,7 @@ const PKG_JSON = path.join(ROOT_DIR, 'package.json');
 const SRC_JSON = path.join(SRC_DIR, 'data.json');
 const DST_DIR = path.join(ROOT_DIR, 'dist');
 const DST_JSON = path.join(DST_DIR, 'ionicons/data.json');
+const DST_JS = path.join(DST_DIR, 'svg/index.js');
 
 
 console.log('checking icon data: ' + SRC_JSON);
@@ -16,8 +17,10 @@ let srcData = fs.readJsonSync(SRC_JSON);
 let svgFiles = fs.readdirSync(SRC_SVG_DIR);
 let pkgData = fs.readJsonSync(PKG_JSON);
 srcData['version'] = pkgData.version;
+let iconFilenames = [];
 
-svgFiles.filter(f => f.indexOf('.svg') > -1).forEach(svgFile => {
+svgFiles = svgFiles.filter(f => f.indexOf('.svg') > -1);
+svgFiles.forEach(svgFile => {
   let iconName = svgFile.split('.')[0];
 
   let icon = srcData.icons.find(i => i.icons.indexOf(iconName) > -1);
@@ -41,5 +44,7 @@ srcData.icons.forEach(i => {
   });
 });
 
-let content = JSON.stringify(srcData);
-fs.writeFileSync(DST_JSON, content);
+const jsonContent = JSON.stringify(srcData);
+const jsContent = svgFiles.map(name => `export * from './${name}';`).join('\n');
+fs.writeFileSync(DST_JS, jsContent)
+fs.writeFileSync(DST_JSON, jsonContent);
