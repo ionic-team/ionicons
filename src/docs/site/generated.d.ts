@@ -13,151 +13,161 @@ import {
 } from '@stencil/router';
 
 
-export namespace StencilComponents {
 
-  interface FooterBar {}
-  interface FooterBarAttributes extends JSXElements.HTMLAttributes {}
+interface FooterBar {}
+interface FooterBarAttributes extends JSXElements.HTMLAttributes {}
 
-  interface HeaderBar {
-    'isSearchVisible': boolean;
-    'query': string;
-    'version': string;
-  }
-  interface HeaderBarAttributes extends JSXElements.HTMLAttributes {
-    'isSearchVisible'?: boolean;
-    'onToggleHeaderSearch'?: (event: CustomEvent) => void;
-    'query'?: string;
-    'version'?: string;
-  }
+interface HeaderBar {
+  'isSearchVisible': boolean;
+  'query': string;
+  'version': string;
+}
+interface HeaderBarAttributes extends JSXElements.HTMLAttributes {
+  'isSearchVisible'?: boolean;
+  'onToggleHeaderSearch'?: (event: CustomEvent) => void;
+  'query'?: string;
+  'version'?: string;
+}
 
-  interface IconList {
-    'data': any;
-    'query': string;
-  }
-  interface IconListAttributes extends JSXElements.HTMLAttributes {
-    'data'?: any;
-    'query'?: string;
-  }
+interface IconList {
+  'data': any;
+  'query': string;
+}
+interface IconListAttributes extends JSXElements.HTMLAttributes {
+  'data'?: any;
+  'query'?: string;
+}
 
-  interface IconSearch {
-    'autofocus': string;
-    'query': string;
-    'size': string;
-  }
-  interface IconSearchAttributes extends JSXElements.HTMLAttributes {
-    'autofocus'?: string;
-    'onHasSearched'?: (event: CustomEvent) => void;
-    'query'?: string;
-    'size'?: string;
-  }
+interface IconSearch {
+  'autofocus': string;
+  'query': string;
+  'size': string;
+}
+interface IconSearchAttributes extends JSXElements.HTMLAttributes {
+  'autofocus'?: string;
+  'onHasSearched'?: (event: CustomEvent) => void;
+  'query'?: string;
+  'size'?: string;
+}
 
-  interface IoniconsSite {}
-  interface IoniconsSiteAttributes extends JSXElements.HTMLAttributes {}
+interface IoniconsSite {}
+interface IoniconsSiteAttributes extends JSXElements.HTMLAttributes {}
 
-  interface LandingPage {
-    'data': any;
-    'query': string;
-  }
-  interface LandingPageAttributes extends JSXElements.HTMLAttributes {
-    'data'?: any;
-    'query'?: string;
-  }
+interface LandingPage {
+  'data': any;
+  'query': string;
+}
+interface LandingPageAttributes extends JSXElements.HTMLAttributes {
+  'data'?: any;
+  'query'?: string;
+}
 
-  interface NotfoundPage {}
-  interface NotfoundPageAttributes extends JSXElements.HTMLAttributes {}
+interface NotfoundPage {}
+interface NotfoundPageAttributes extends JSXElements.HTMLAttributes {}
 
-  interface ToastBar {
-    'selectedIcon': {
-      name: string,
-      icons: string[],
-      tags: string[]
-    };
-    'selectedIconType': string;
-  }
-  interface ToastBarAttributes extends JSXElements.HTMLAttributes {
-    'onClearToast'?: (event: CustomEvent) => void;
-    'onToggleHeaderSearch'?: (event: CustomEvent) => void;
-    'selectedIcon'?: {
-      name: string,
-      icons: string[],
-      tags: string[]
-    };
-    'selectedIconType'?: string;
-  }
+interface ToastBar {
+  'selectedIcon': {
+    name: string,
+    icons: string[],
+    tags: string[]
+  };
+  'selectedIconType': string;
+}
+interface ToastBarAttributes extends JSXElements.HTMLAttributes {
+  'onClearToast'?: (event: CustomEvent) => void;
+  'onToggleHeaderSearch'?: (event: CustomEvent) => void;
+  'selectedIcon'?: {
+    name: string,
+    icons: string[],
+    tags: string[]
+  };
+  'selectedIconType'?: string;
+}
 
-  interface UsagePage {
-    'data': any;
-    'match': MatchResults;
-  }
-  interface UsagePageAttributes extends JSXElements.HTMLAttributes {
-    'data'?: any;
-    'match'?: MatchResults;
-  }
+interface UsagePage {
+  'data': any;
+  'match': MatchResults;
+}
+interface UsagePageAttributes extends JSXElements.HTMLAttributes {
+  'data'?: any;
+  'match'?: MatchResults;
+}
+
+export interface LocalElementInterfaces  {
+  'FooterBar': FooterBar;
+  'HeaderBar': HeaderBar;
+  'IconList': IconList;
+  'IconSearch': IconSearch;
+  'IoniconsSite': IoniconsSite;
+  'LandingPage': LandingPage;
+  'NotfoundPage': NotfoundPage;
+  'ToastBar': ToastBar;
+  'UsagePage': UsagePage;
 }
 
 export interface LocalIntrinsicElements {
-  'footer-bar': StencilComponents.FooterBarAttributes;
-  'header-bar': StencilComponents.HeaderBarAttributes;
-  'icon-list': StencilComponents.IconListAttributes;
-  'icon-search': StencilComponents.IconSearchAttributes;
-  'ionicons-site': StencilComponents.IoniconsSiteAttributes;
-  'landing-page': StencilComponents.LandingPageAttributes;
-  'notfound-page': StencilComponents.NotfoundPageAttributes;
-  'toast-bar': StencilComponents.ToastBarAttributes;
-  'usage-page': StencilComponents.UsagePageAttributes;
+  'footer-bar': FooterBarAttributes;
+  'header-bar': HeaderBarAttributes;
+  'icon-list': IconListAttributes;
+  'icon-search': IconSearchAttributes;
+  'ionicons-site': IoniconsSiteAttributes;
+  'landing-page': LandingPageAttributes;
+  'notfound-page': NotfoundPageAttributes;
+  'toast-bar': ToastBarAttributes;
+  'usage-page': UsagePageAttributes;
 }
 
 declare global {
 
-  interface HTMLFooterBarElement extends StencilComponents.FooterBar, HTMLStencilElement {}
+  interface HTMLFooterBarElement extends FooterBar, HTMLStencilElement {}
   var HTMLFooterBarElement: {
     prototype: HTMLFooterBarElement;
     new (): HTMLFooterBarElement;
   };
 
-  interface HTMLHeaderBarElement extends StencilComponents.HeaderBar, HTMLStencilElement {}
+  interface HTMLHeaderBarElement extends HeaderBar, HTMLStencilElement {}
   var HTMLHeaderBarElement: {
     prototype: HTMLHeaderBarElement;
     new (): HTMLHeaderBarElement;
   };
 
-  interface HTMLIconListElement extends StencilComponents.IconList, HTMLStencilElement {}
+  interface HTMLIconListElement extends IconList, HTMLStencilElement {}
   var HTMLIconListElement: {
     prototype: HTMLIconListElement;
     new (): HTMLIconListElement;
   };
 
-  interface HTMLIconSearchElement extends StencilComponents.IconSearch, HTMLStencilElement {}
+  interface HTMLIconSearchElement extends IconSearch, HTMLStencilElement {}
   var HTMLIconSearchElement: {
     prototype: HTMLIconSearchElement;
     new (): HTMLIconSearchElement;
   };
 
-  interface HTMLIoniconsSiteElement extends StencilComponents.IoniconsSite, HTMLStencilElement {}
+  interface HTMLIoniconsSiteElement extends IoniconsSite, HTMLStencilElement {}
   var HTMLIoniconsSiteElement: {
     prototype: HTMLIoniconsSiteElement;
     new (): HTMLIoniconsSiteElement;
   };
 
-  interface HTMLLandingPageElement extends StencilComponents.LandingPage, HTMLStencilElement {}
+  interface HTMLLandingPageElement extends LandingPage, HTMLStencilElement {}
   var HTMLLandingPageElement: {
     prototype: HTMLLandingPageElement;
     new (): HTMLLandingPageElement;
   };
 
-  interface HTMLNotfoundPageElement extends StencilComponents.NotfoundPage, HTMLStencilElement {}
+  interface HTMLNotfoundPageElement extends NotfoundPage, HTMLStencilElement {}
   var HTMLNotfoundPageElement: {
     prototype: HTMLNotfoundPageElement;
     new (): HTMLNotfoundPageElement;
   };
 
-  interface HTMLToastBarElement extends StencilComponents.ToastBar, HTMLStencilElement {}
+  interface HTMLToastBarElement extends ToastBar, HTMLStencilElement {}
   var HTMLToastBarElement: {
     prototype: HTMLToastBarElement;
     new (): HTMLToastBarElement;
   };
 
-  interface HTMLUsagePageElement extends StencilComponents.UsagePage, HTMLStencilElement {}
+  interface HTMLUsagePageElement extends UsagePage, HTMLStencilElement {}
   var HTMLUsagePageElement: {
     prototype: HTMLUsagePageElement;
     new (): HTMLUsagePageElement;
