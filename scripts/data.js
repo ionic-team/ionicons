@@ -45,6 +45,12 @@ srcData.icons.forEach(i => {
 });
 
 const jsonContent = JSON.stringify(srcData);
-const jsContent = svgFiles.map(name => `export * from './${name}';`).join('\n');
-fs.writeFileSync(DST_JS, jsContent)
 fs.writeFileSync(DST_JSON, jsonContent);
+
+
+const jsContent = `
+if (require && require.context) {
+  require.context('!!file-loader?name=[name].[ext]&outputPath=svg!./', false, /\.svg$/);
+}
+`;
+fs.writeFileSync(DST_JS, jsContent)
