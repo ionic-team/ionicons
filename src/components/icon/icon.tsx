@@ -72,9 +72,9 @@ export class Icon {
 
   /**
    * If enabled, ion-icon will be loaded lazily when it's visible in the viewport.
-   * Default, `true`.
+   * Default, `false`.
    */
-  @Prop() lazy = true;
+  @Prop() lazy = false;
 
   componentWillLoad() {
     // purposely do not return the promise here because loading
