@@ -4,7 +4,7 @@
   "loader": "../docssite.js",
   "global": "docssite.global.js",
   "core": "docssite.1g5w8nag.js",
-  "corePolyfilled": "docssite.p9maaol9.js",
+  "corePolyfilled": "docssite.b4as6gaq.js",
   "components": {
     "footer-bar": {
       "bundleIds": {
