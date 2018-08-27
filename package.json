@@ -28,7 +28,7 @@
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "0.12.0",
+    "@stencil/core": "0.12.1",
     "@stencil/router": "~0.2.2",
     "@stencil/sass": "0.0.5",
     "@types/highlight.js": "^9.12.3",
