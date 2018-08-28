@@ -1,5 +1,5 @@
 {
-  "build_hash": "f4c1a2cda480cf86332e584b37f1bca0",
+  "build_hash": "7258a9873c74d8679344a64ae5d68f89",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -79,6 +79,10 @@
     {
       "code": "0xf169",
       "name": "build-asterisk-projects"
+    },
+    {
+      "code": "0xf16e",
+      "name": "build-blueprint"
     },
     {
       "code": "0xf165",
