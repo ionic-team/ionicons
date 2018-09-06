@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2018-8-28: Created with FontForge (http://fontforge.org)
+2018-9-6: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Tue Aug 28 11:22:55 2018
+Created by FontForge 20180321 at Thu Sep  6 16:50:31 2018
  By Patricio Ferreira
 Copyright (c) 2018, Patricio Ferreira
 </metadata>
@@ -138,6 +138,10 @@ d="M119 130v120v1l102 59l103 -60h1v-120l-103 -59v0v0v0v0zM313 137v94l-80 -47v-94
 l-222 -128v20v7l199 114v0zM223 -64v0v0v0zM23 77v0l-23 -13l1 255v0l23 -13v0v0v0zM0 64v0v0v0v0zM24 306v0l-23 13v0l222 128v-27zM223 -37v-7v-20v0v0v0l-223 128v0l23 13v0z" />
     <glyph glyph-name="ion-build-rewards" unicode="&#xf146;" horiz-adv-x="437" 
 d="M437 321v-252l-218 -126l-218 127l-1 252l218 126zM219 -32l196 113v228l-197 113l-196 -113l1 -227zM230 83v107l91 53l1 -107zM310 261l-91 -52l-92 53l91 52zM116 243l92 -53v-107l-92 53v107z" />
+    <glyph glyph-name="ion-build-shipping" unicode="&#xf16f;" horiz-adv-x="512" 
+d="M60 122c0 23 18 42 41 42s42 -19 42 -42s-19 -41 -42 -41s-41 18 -41 41zM322 129c-3 -4 -8 -7 -14 -7h-155c0 29 -23 52 -52 52s-52 -23 -52 -52h-31c-10 0 -18 8 -18 18v290c0 10 8 18 18 18h290c10 0 18 -8 18 -18v-287c-2 -5 -3 -9 -4 -14zM173 144h122c5 0 9 4 9 9
+v264c0 5 -4 9 -9 9h-264c-5 0 -9 -4 -9 -9v-264c0 -5 4 -8 8 -9c9 31 38 52 72 52s62 -21 71 -52zM336 122c0 23 18 42 41 42s42 -19 42 -42s-19 -41 -42 -41s-41 18 -41 41zM429 122c0 29 -23 52 -52 52c-18 0 -33 -8 -42 -22v224c0 10 8 18 18 18h81c30 0 78 -115 78 -149
+v-105c0 -10 -8 -18 -18 -18h-65v0zM372 373c-8 0 -14 -6 -14 -14v-43c0 -8 6 -14 14 -14h98c4 4 -27 66 -39 71h-59z" />
     <glyph glyph-name="ion-build-social-facebooklike" unicode="&#xf155;" horiz-adv-x="473" 
 d="M460 172c12 -23 -1 -45 -9 -53c10 -18 3 -40 -9 -53c6 -8 13 -69 -56 -69h-185c-13 0 -23 6 -31 11c-2 1 -6 1 -6 1v-6c0 -11 -9 -20 -20 -20h-124c-10 0 -19 8 -20 18v191c0 12 9 21 21 21h138c4 0 8 -1 11 -3c13 6 56 78 68 105c0 12 -1 58 -1 58c0 5 3 21 29 27
 c20 4 40 -6 44 -13c1 -2 23 -44 25 -78c0 -4 -6 -42 -10 -65h110c42 0 49 -48 25 -72zM427 174c17 3 27 18 26 31c0 7 -4 14 -11 17c-3 1 -6 2 -10 2h-64h-67c5 20 14 84 14 84c-2 31 -22 70 -22 70c-1 0 -5 2 -12 3h-2h-1h-2h-1v0c-12 0 -18 -7 -18 -7s1 -50 1 -61
