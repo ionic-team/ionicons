@@ -1,5 +1,5 @@
 {
-  "build_hash": "7258a9873c74d8679344a64ae5d68f89",
+  "build_hash": "68fd7100a77741462e50d5291a4fbbad",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -143,6 +143,10 @@
     {
       "code": "0xf145",
       "name": "build-rewards-color"
+    },
+    {
+      "code": "0xf16f",
+      "name": "build-shipping"
     },
     {
       "code": "0xf155",
