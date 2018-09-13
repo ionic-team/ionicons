@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2018-9-6: Created with FontForge (http://fontforge.org)
+2018-9-13: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Thu Sep  6 16:50:31 2018
+Created by FontForge 20180321 at Thu Sep 13 10:27:00 2018
  By Patricio Ferreira
 Copyright (c) 2018, Patricio Ferreira
 </metadata>
@@ -282,6 +282,8 @@ s-16 7 -16 16zM64 96c0 9 7 16 16 16s16 -7 16 -16s-7 -16 -16 -16s-16 7 -16 16z" /
     <glyph glyph-name="ion-ios-list" unicode="&#xf454;" horiz-adv-x="384" 
 d="M0 384h384v-384h-384v384zM80 80c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM80 176c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM80 272c9 0 16 7 16 16s-7 16 -16 16s-16 -7 -16 -16s7 -16 16 -16zM320 88v16h-192v-16h192zM320 184v16
 h-192v-16h192zM320 280v16h-192v-16h192z" />
+    <glyph glyph-name="ion-ios-paper-outline" unicode="&#xf471;" horiz-adv-x="384" 
+d="M48 384h336v-353c0 -17 -14 -31 -31 -31h-322c-17 0 -31 14 -31 31v305h32v-16h-16v-289c0 -8 7 -15 15 -15h322c8 0 15 7 15 15v337h-304v-320h-16v320v16zM96 320v16h128v-16h-128zM96 240v16h240v-16h-240zM96 160v16h192v-16h-192zM96 80v16h240v-16h-240z" />
     <glyph glyph-name="ion-ios-plus-empty" unicode="&#xf489;" horiz-adv-x="256" 
 d="M256 183h-120v-119h-17v119h-119v17h119v120h17v-120h120v-17z" />
     <glyph glyph-name="ion-ios-pricetag" unicode="&#xf48d;" horiz-adv-x="416" 
