@@ -54,15 +54,19 @@ This repo already comes with all the files built and ready to go, but can also b
 
     $ brew install fontforge ttfautohint
 
-2) Install [Sass](http://sass-lang.com/)
+2) Install Ruby (>= 2.5.1p57) on Mac OSX
+
+    $ brew install ruby
+
+3) Install [Sass](http://sass-lang.com/)
 
     $ gem install sass
 
-3) Add or subtract files from the `src/` folder you'd like to be apart of the font files.
+4) Add or subtract files from the `src/` folder you'd like to be apart of the font files.
 
-4) Modify any settings in the `builder/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
+5) Modify any settings in the `builder/manifest.json` file. You can change the name of the font-family and CSS classname prefix.
 
-5) Run the build command:
+6) Run the build command:
 
     python ./builder/generate.py
 

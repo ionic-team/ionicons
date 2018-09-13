@@ -1,5 +1,5 @@
 {
-  "build_hash": "68fd7100a77741462e50d5291a4fbbad",
+  "build_hash": "af04bc1da3b00cbb29dc5706d3f52be5",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -343,6 +343,10 @@
     {
       "code": "0xf453",
       "name": "ios-list-outline"
+    },
+    {
+      "code": "0xf471",
+      "name": "ios-paper-outline"
     },
     {
       "code": "0xf489",
