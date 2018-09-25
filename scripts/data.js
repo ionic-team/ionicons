@@ -49,8 +49,6 @@ fs.writeFileSync(DST_JSON, jsonContent);
 
 
 const jsContent = `
-if (require && require.context) {
-  require.context('!!file-loader?name=[name].[ext]&outputPath=svg!./', false, /\.svg$/);
-}
+require.context('!!file-loader?name=[name].[ext]&outputPath=svg!./', false, /\.svg$/);
 `;
 fs.writeFileSync(DST_JS, jsContent)
