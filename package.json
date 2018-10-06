@@ -18,7 +18,7 @@
     "build.icon": "stencil build",
     "clean": "node scripts/clean.js",
     "copy.tasks": "node scripts/copy-tasks.js",
-    "dev": "npm run build && stencil build --dev --watch --serve --config src/docs/stencil.config.js",
+    "dev": "npm run build && stencil build --dev --watch --serve --es5 --config src/docs/stencil.config.js",
     "mode.comparison": "node scripts/mode-comparison.js",
     "generate": "python scripts/generate.py",
     "lint.ts": "tslint --project .",
@@ -27,8 +27,8 @@
     "test": "stencil test --spec"
   },
   "devDependencies": {
-    "@stencil/core": "0.13.0-14",
-    "@stencil/router": "~0.2.2",
+    "@stencil/core": "0.13.0",
+    "@stencil/router": "0.3.0",
     "@stencil/sass": "0.0.5",
     "@types/highlight.js": "^9.12.3",
     "@types/jest": "^23.1.3",
