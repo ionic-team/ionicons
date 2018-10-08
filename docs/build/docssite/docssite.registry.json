@@ -12,7 +12,7 @@
     },
     "header-bar": {
       "bundleIds": {
-        "$": "9jntnwf0"
+        "$": "9o3y2n73"
       }
     },
     "icon-list": {
@@ -27,7 +27,7 @@
     },
     "ionicons-site": {
       "bundleIds": {
-        "$": "9jntnwf0"
+        "$": "9o3y2n73"
       }
     },
     "landing-page": {
@@ -42,22 +42,22 @@
     },
     "stencil-route": {
       "bundleIds": {
-        "$": "9jntnwf0"
+        "$": "9o3y2n73"
       }
     },
     "stencil-route-link": {
       "bundleIds": {
-        "$": "9g7fwmr8"
+        "$": "dztx8xgf"
       }
     },
     "stencil-route-switch": {
       "bundleIds": {
-        "$": "9jntnwf0"
+        "$": "9o3y2n73"
       }
     },
     "stencil-router": {
       "bundleIds": {
-        "$": "9jntnwf0"
+        "$": "9o3y2n73"
       }
     },
     "toast-bar": {
