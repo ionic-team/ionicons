@@ -37,7 +37,7 @@
     "fs-extra": "4.0.2",
     "highlight.js": "^9.12.0",
     "jest": "23.5.0",
-    "node-sass": "4.9.0",
+    "node-sass": "4.9.3",
     "np": "3.0.4",
     "pixelmatch": "4.0.2",
     "puppeteer": "1.7.0",
