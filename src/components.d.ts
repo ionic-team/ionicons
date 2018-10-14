@@ -16,13 +16,98 @@ import {
 
 export namespace Components {
 
+  interface IonIcon {
+    /**
+    * Specifies the label to use for accessibility. Defaults to the icon name.
+    */
+    'ariaLabel'?: string;
+    /**
+    * The color to use for the background of the item.
+    */
+    'color'?: string;
+    /**
+    * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+    */
+    'icon'?: string;
+    /**
+    * Specifies which icon to use on `ios` mode.
+    */
+    'ios'?: string;
+    /**
+    * If enabled, ion-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+    */
+    'lazy': boolean;
+    /**
+    * Specifies which icon to use on `md` mode.
+    */
+    'md'?: string;
+    /**
+    * The mode determines which platform styles to use. Possible values are: `"ios"` or `"md"`.
+    */
+    'mode'?: 'ios' | 'md';
+    /**
+    * Specifies which icon to use from the built-in set of icons.
+    */
+    'name'?: string;
+    /**
+    * The size of the icon. Available options are: `"small"` and `"large"`.
+    */
+    'size'?: string;
+    /**
+    * Specifies the exact `src` of an SVG file to use.
+    */
+    'src'?: string;
+  }
+  interface IonIconAttributes extends StencilHTMLAttributes {
+    /**
+    * Specifies the label to use for accessibility. Defaults to the icon name.
+    */
+    'ariaLabel'?: string;
+    /**
+    * The color to use for the background of the item.
+    */
+    'color'?: string;
+    /**
+    * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+    */
+    'icon'?: string;
+    /**
+    * Specifies which icon to use on `ios` mode.
+    */
+    'ios'?: string;
+    /**
+    * If enabled, ion-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+    */
+    'lazy'?: boolean;
+    /**
+    * Specifies which icon to use on `md` mode.
+    */
+    'md'?: string;
+    /**
+    * The mode determines which platform styles to use. Possible values are: `"ios"` or `"md"`.
+    */
+    'mode'?: 'ios' | 'md';
+    /**
+    * Specifies which icon to use from the built-in set of icons.
+    */
+    'name'?: string;
+    /**
+    * The size of the icon. Available options are: `"small"` and `"large"`.
+    */
+    'size'?: string;
+    /**
+    * Specifies the exact `src` of an SVG file to use.
+    */
+    'src'?: string;
+  }
+
   interface FooterBar {}
   interface FooterBarAttributes extends StencilHTMLAttributes {}
 
   interface HeaderBar {
     'isSearchVisible': boolean;
     'query': string;
-    'version'?: string;
+    'version': string;
   }
   interface HeaderBarAttributes extends StencilHTMLAttributes {
     'isSearchVisible'?: boolean;
@@ -68,12 +153,12 @@ export namespace Components {
   interface NotfoundPageAttributes extends StencilHTMLAttributes {}
 
   interface ToastBar {
-    'selectedIcon'?: {
+    'selectedIcon': {
       name: string,
       icons: string[],
       tags: string[]
     };
-    'selectedIconType'?: string;
+    'selectedIconType': string;
   }
   interface ToastBarAttributes extends StencilHTMLAttributes {
     'onClearToast'?: (event: CustomEvent) => void;
@@ -98,6 +183,7 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'IonIcon': Components.IonIcon;
     'FooterBar': Components.FooterBar;
     'HeaderBar': Components.HeaderBar;
     'IconList': Components.IconList;
@@ -110,6 +196,7 @@ declare global {
   }
 
   interface StencilIntrinsicElements {
+    'ion-icon': Components.IonIconAttributes;
     'footer-bar': Components.FooterBarAttributes;
     'header-bar': Components.HeaderBarAttributes;
     'icon-list': Components.IconListAttributes;
@@ -121,6 +208,12 @@ declare global {
     'usage-page': Components.UsagePageAttributes;
   }
 
+
+  interface HTMLIonIconElement extends Components.IonIcon, HTMLStencilElement {}
+  var HTMLIonIconElement: {
+    prototype: HTMLIonIconElement;
+    new (): HTMLIonIconElement;
+  };
 
   interface HTMLFooterBarElement extends Components.FooterBar, HTMLStencilElement {}
   var HTMLFooterBarElement: {
@@ -177,6 +270,7 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'ion-icon': HTMLIonIconElement
     'footer-bar': HTMLFooterBarElement
     'header-bar': HTMLHeaderBarElement
     'icon-list': HTMLIconListElement
@@ -189,6 +283,7 @@ declare global {
   }
 
   interface ElementTagNameMap {
+    'ion-icon': HTMLIonIconElement;
     'footer-bar': HTMLFooterBarElement;
     'header-bar': HTMLHeaderBarElement;
     'icon-list': HTMLIconListElement;

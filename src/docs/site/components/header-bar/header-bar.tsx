@@ -5,15 +5,15 @@ import { Component, Element, Event, EventEmitter, Listen, Prop, State } from '@s
   styleUrl: 'header-bar.scss'
 })
 export class HeaderBar {
-  @Element() el: Element;
+  @Element() el!: Element;
 
-  @Event() toggleHeaderSearch: EventEmitter;
+  @Event() toggleHeaderSearch!: EventEmitter;
 
   @State() isSticky = false;
-  @State() isMobileMenuShown: boolean;
+  @State() isMobileMenuShown?: boolean;
 
   @Prop() query = '';
-  @Prop() version: string;
+  @Prop() version?: string;
   @Prop() isSearchVisible = false;
 
   @Listen('window:scroll')
@@ -35,7 +35,7 @@ export class HeaderBar {
   }
 
   checkScroll() {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollTop = document.documentElement!.scrollTop || document.body.scrollTop;
     this.isSticky = (scrollTop > 30);
   }
 

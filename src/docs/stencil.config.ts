@@ -1,8 +1,10 @@
-const sass = require('@stencil/sass');
+import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
-exports.config = {
+export const config: Config = {
   namespace: 'DocsSite',
   srcDir: 'site/',
+  tsconfig: 'tsconfig.json',
   plugins: [
     sass()
   ],
@@ -10,7 +12,7 @@ exports.config = {
     {
       type: 'www',
       dir: '../../docs/',
-      serviceWorker: false,
+      serviceWorker: null,
       empty: false
     }
   ],

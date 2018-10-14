@@ -122,9 +122,8 @@ export class Icon {
       const url = this.getUrl();
 
       if (url) {
-        getSvgContent(url).then(svgContent => {
-          this.svgContent = validateContent(this.doc, svgContent, (this.el as any)['s-sc']);
-        });
+        getSvgContent(this.doc, url, 's-ion-icon')
+          .then(svgContent => this.svgContent = svgContent);
       }
     }
 
@@ -195,11 +194,12 @@ export class Icon {
 }
 
 
-const requests = new Map<string, Promise<string | null>>();
+const requests = new Map<string, Promise<string>>();
 
-function getSvgContent(url: string) {
+function getSvgContent(doc: Document, url: string, scopedId: string | undefined) {
   // see if we already have a request for this url
   let req = requests.get(url);
+  console.log('scoped', scopedId);
 
   if (!req) {
     // we don't already have a request
@@ -208,7 +208,7 @@ function getSvgContent(url: string) {
         return rsp.text();
       }
       return Promise.resolve(null);
-    });
+    }).then(svgContent => validateContent(doc, svgContent, scopedId));
 
     // cache for the same requests
     requests.set(url, req);

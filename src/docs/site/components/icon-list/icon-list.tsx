@@ -6,7 +6,7 @@ import { Component, Element, Listen, Prop, State } from '@stencil/core';
   styleUrl: 'icon-list.scss'
 })
 export class LandingPage {
-  @Element() el: Element;
+  @Element() el!: Element;
 
   @State() selectedIcon = '';
   @State() selectedIconType = 'md';
@@ -55,10 +55,10 @@ export class LandingPage {
       logo: []
     };
 
-    this.data.icons.forEach(iconData => {
-      if (search === '' || iconData.tags.some(t => t.indexOf(search) > -1)) {
+    this.data.icons.forEach((iconData: any) => {
+      if (search === '' || iconData.tags.some((t: any) => t.indexOf(search) > -1)) {
 
-        iconData.icons.forEach(iconName => {
+        iconData.icons.forEach((iconName: any) => {
           const iconType = iconName.substr(0, iconName.indexOf('-'));
 
           switch (iconType) {
@@ -104,7 +104,7 @@ export class LandingPage {
     const results = this.filterIcons();
     const selectedIcon = this.data.icons.find(o => o.name === this.selectedIcon);
 
-    if (!results.icon.length && !results.logo.length && this.isHeaderSearchVisible) document.documentElement.scrollTop = 0;
+    if (!results.icon.length && !results.logo.length && this.isHeaderSearchVisible) document.documentElement!.scrollTop = 0;
 
     return (
       <div class="icon-list">

@@ -11,7 +11,7 @@ export class IconSearch {
 
   @State() showClearCtrl = false;
 
-  @Event() hasSearched: EventEmitter;
+  @Event() hasSearched!: EventEmitter;
 
   @Watch('query')
   watchQuery() {

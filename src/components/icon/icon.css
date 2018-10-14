@@ -25,13 +25,11 @@
 svg {
   display: block;
 
-  height: 100%;
-  width: 100%;
-}
-
-svg {
   fill: currentColor;
   stroke: currentColor;
+
+  height: 100%;
+  width: 100%;
 }
 
 /* Set iOS Icon Colors */

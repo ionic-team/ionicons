@@ -5,7 +5,7 @@ import { Component, Element, Prop } from '@stencil/core';
   styleUrl: 'landing-page.scss'
 })
 export class LandingPage {
-  @Element() el: Element;
+  @Element() el!: Element;
 
   @Prop() query = '';
   @Prop() data: any;
