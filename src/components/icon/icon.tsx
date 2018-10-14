@@ -199,7 +199,6 @@ const requests = new Map<string, Promise<string>>();
 function getSvgContent(doc: Document, url: string, scopedId: string | undefined) {
   // see if we already have a request for this url
   let req = requests.get(url);
-  console.log('scoped', scopedId);
 
   if (!req) {
     // we don't already have a request
