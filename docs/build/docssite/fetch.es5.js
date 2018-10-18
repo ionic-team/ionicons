@@ -1,2 +1,189 @@
 /*! Built with http://stenciljs.com */
-DocsSite.loadBundle("fetch.js",["exports"],function(t){window,t.applyPolyfill=function(t,e){!function(t){function e(t){if("string"!=typeof t&&(t=String(t)),/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(t))throw new TypeError("Invalid character in header field name");return t.toLowerCase()}function r(t){return"string"!=typeof t&&(t=String(t)),t}function o(t){var e={next:function(){var e=t.shift();return{done:void 0===e,value:e}}};return b.iterable&&(e[Symbol.iterator]=function(){return e}),e}function n(t){this.map={},t instanceof n?t.forEach(function(t,e){this.append(e,t)},this):Array.isArray(t)?t.forEach(function(t){this.append(t[0],t[1])},this):t&&Object.getOwnPropertyNames(t).forEach(function(e){this.append(e,t[e])},this)}function i(t){if(t.bodyUsed)return Promise.reject(new TypeError("Already read"));t.bodyUsed=!0}function s(t){return new Promise(function(e,r){t.onload=function(){e(t.result)},t.onerror=function(){r(t.error)}})}function a(t){var e=new FileReader,r=s(e);return e.readAsArrayBuffer(t),r}function h(t){if(t.slice)return t.slice(0);var e=new Uint8Array(t.byteLength);return e.set(new Uint8Array(t)),e.buffer}function u(){return this.bodyUsed=!1,this._initBody=function(t){if(this._bodyInit=t)if("string"==typeof t)this._bodyText=t;else if(b.blob&&Blob.prototype.isPrototypeOf(t))this._bodyBlob=t;else if(b.formData&&FormData.prototype.isPrototypeOf(t))this._bodyFormData=t;else if(b.searchParams&&URLSearchParams.prototype.isPrototypeOf(t))this._bodyText=t.toString();else if(b.arrayBuffer&&b.blob&&w(t))this._bodyArrayBuffer=h(t.buffer),this._bodyInit=new Blob([this._bodyArrayBuffer]);else{if(!b.arrayBuffer||!ArrayBuffer.prototype.isPrototypeOf(t)&&!v(t))throw Error("unsupported BodyInit type");this._bodyArrayBuffer=h(t)}else this._bodyText="";this.headers.get("content-type")||("string"==typeof t?this.headers.set("content-type","text/plain;charset=UTF-8"):this._bodyBlob&&this._bodyBlob.type?this.headers.set("content-type",this._bodyBlob.type):b.searchParams&&URLSearchParams.prototype.isPrototypeOf(t)&&this.headers.set("content-type","application/x-www-form-urlencoded;charset=UTF-8"))},b.blob&&(this.blob=function(){var t=i(this);if(t)return t;if(this._bodyBlob)return Promise.resolve(this._bodyBlob);if(this._bodyArrayBuffer)return Promise.resolve(new Blob([this._bodyArrayBuffer]));if(this._bodyFormData)throw Error("could not read FormData body as blob");return Promise.resolve(new Blob([this._bodyText]))},this.arrayBuffer=function(){return this._bodyArrayBuffer?i(this)||Promise.resolve(this._bodyArrayBuffer):this.blob().then(a)}),this.text=function(){var t=i(this);if(t)return t;if(this._bodyBlob){t=this._bodyBlob;var e=new FileReader,r=s(e);return e.readAsText(t),r}if(this._bodyArrayBuffer)return Promise.resolve(function(t){t=new Uint8Array(t);for(var e=Array(t.length),r=0;r<t.length;r++)e[r]=String.fromCharCode(t[r]);return e.join("")}(this._bodyArrayBuffer));if(this._bodyFormData)throw Error("could not read FormData body as text");return Promise.resolve(this._bodyText)},b.formData&&(this.formData=function(){return this.text().then(d)}),this.json=function(){return this.text().then(JSON.parse)},this}function f(t,e){var r=(e=e||{}).body;if(t instanceof f){if(t.bodyUsed)throw new TypeError("Already read");this.url=t.url,this.credentials=t.credentials,e.headers||(this.headers=new n(t.headers)),this.method=t.method,this.mode=t.mode,r||null==t._bodyInit||(r=t._bodyInit,t.bodyUsed=!0)}else this.url=String(t);this.credentials=e.credentials||this.credentials||"omit",!e.headers&&this.headers||(this.headers=new n(e.headers));var o=e.method||this.method||"GET",i=o.toUpperCase();if(this.method=-1<_.indexOf(i)?i:o,this.mode=e.mode||this.mode||null,this.referrer=null,("GET"===this.method||"HEAD"===this.method)&&r)throw new TypeError("Body not allowed for GET or HEAD requests");this._initBody(r)}function d(t){var e=new FormData;return t.trim().split("&").forEach(function(t){if(t){var r=t.split("=");t=r.shift().replace(/\+/g," "),r=r.join("=").replace(/\+/g," "),e.append(decodeURIComponent(t),decodeURIComponent(r))}}),e}function y(t){var e=new n;return t.replace(/\r?\n[\t ]+/g," ").split(/\r?\n/).forEach(function(t){var r=t.split(":");(t=r.shift().trim())&&(r=r.join(":").trim(),e.append(t,r))}),e}function l(t,e){e||(e={}),this.type="default",this.status=void 0===e.status?200:e.status,this.ok=200<=this.status&&300>this.status,this.statusText="statusText"in e?e.statusText:"OK",this.headers=new n(e.headers),this.url=e.url||"",this._initBody(t)}if(!t.fetch){var p,c="Symbol"in t&&"iterator"in Symbol;if(p="FileReader"in t&&"Blob"in t)try{new Blob,p=!0}catch(t){p=!1}var b={searchParams:"URLSearchParams"in t,iterable:c,blob:p,formData:"FormData"in t,arrayBuffer:"ArrayBuffer"in t};if(b.arrayBuffer)var m="[object Int8Array];[object Uint8Array];[object Uint8ClampedArray];[object Int16Array];[object Uint16Array];[object Int32Array];[object Uint32Array];[object Float32Array];[object Float64Array]".split(";"),w=function(t){return t&&DataView.prototype.isPrototypeOf(t)},v=ArrayBuffer.isView||function(t){return t&&-1<m.indexOf(Object.prototype.toString.call(t))};n.prototype.append=function(t,o){t=e(t),o=r(o);var n=this.map[t];this.map[t]=n?n+","+o:o},n.prototype.delete=function(t){delete this.map[e(t)]},n.prototype.get=function(t){return t=e(t),this.has(t)?this.map[t]:null},n.prototype.has=function(t){return this.map.hasOwnProperty(e(t))},n.prototype.set=function(t,o){this.map[e(t)]=r(o)},n.prototype.forEach=function(t,e){for(var r in this.map)this.map.hasOwnProperty(r)&&t.call(e,this.map[r],r,this)},n.prototype.keys=function(){var t=[];return this.forEach(function(e,r){t.push(r)}),o(t)},n.prototype.values=function(){var t=[];return this.forEach(function(e){t.push(e)}),o(t)},n.prototype.entries=function(){var t=[];return this.forEach(function(e,r){t.push([r,e])}),o(t)},b.iterable&&(n.prototype[Symbol.iterator]=n.prototype.entries);var _="DELETE GET HEAD OPTIONS POST PUT".split(" ");f.prototype.clone=function(){return new f(this,{body:this._bodyInit})},u.call(f.prototype),u.call(l.prototype),l.prototype.clone=function(){return new l(this._bodyInit,{status:this.status,statusText:this.statusText,headers:new n(this.headers),url:this.url})},l.error=function(){var t=new l(null,{status:0,statusText:""});return t.type="error",t};var B=[301,302,303,307,308];l.redirect=function(t,e){if(-1===B.indexOf(e))throw new RangeError("Invalid status code");return new l(null,{status:e,headers:{location:t}})},t.Headers=n,t.Request=f,t.Response=l,t.fetch=function(t,e){return new Promise(function(r,o){var n=new f(t,e),i=new XMLHttpRequest;i.onload=function(){var t={status:i.status,statusText:i.statusText,headers:y(i.getAllResponseHeaders()||"")};t.url="responseURL"in i?i.responseURL:t.headers.get("X-Request-URL"),r(new l("response"in i?i.response:i.responseText,t))},i.onerror=function(){o(new TypeError("Network request failed"))},i.ontimeout=function(){o(new TypeError("Network request failed"))},i.open(n.method,n.url,!0),"include"===n.credentials?i.withCredentials=!0:"omit"===n.credentials&&(i.withCredentials=!1),"responseType"in i&&b.blob&&(i.responseType="blob"),n.headers.forEach(function(t,e){i.setRequestHeader(e,t)}),i.send(void 0===n._bodyInit?null:n._bodyInit)})},t.fetch.polyfill=!0}}("undefined"!=typeof self?self:t)},Object.defineProperty(t,"__esModule",{value:!0})});
+DocsSite.loadBundle('fetch.js', ['exports'], function (exports) {
+    var h = window.DocsSite.h;
+    function applyPolyfill(window, document) {
+        (function (e) {
+            function l(a) { "string" !== typeof a && (a = String(a)); if (/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(a))
+                throw new TypeError("Invalid character in header field name"); return a.toLowerCase(); }
+            function q(a) { "string" !== typeof a && (a = String(a)); return a; }
+            function n(a) { var b = { next: function () { var b = a.shift(); return { done: void 0 === b, value: b }; } }; g.iterable && (b[Symbol.iterator] = function () { return b; }); return b; }
+            function d(a) {
+                this.map = {};
+                a instanceof d ? a.forEach(function (a, c) { this.append(c, a); }, this) : Array.isArray(a) ?
+                    a.forEach(function (a) { this.append(a[0], a[1]); }, this) : a && Object.getOwnPropertyNames(a).forEach(function (b) { this.append(b, a[b]); }, this);
+            }
+            function p(a) { if (a.bodyUsed)
+                return Promise.reject(new TypeError("Already read")); a.bodyUsed = !0; }
+            function r(a) { return new Promise(function (b, c) { a.onload = function () { b(a.result); }; a.onerror = function () { c(a.error); }; }); }
+            function w(a) { var b = new FileReader, c = r(b); b.readAsArrayBuffer(a); return c; }
+            function x(a) {
+                a = new Uint8Array(a);
+                for (var b = Array(a.length), c = 0; c < a.length; c++)
+                    b[c] = String.fromCharCode(a[c]);
+                return b.join("");
+            }
+            function t(a) { if (a.slice)
+                return a.slice(0); var b = new Uint8Array(a.byteLength); b.set(new Uint8Array(a)); return b.buffer; }
+            function u() {
+                this.bodyUsed = !1;
+                this._initBody = function (a) {
+                    if (this._bodyInit = a)
+                        if ("string" === typeof a)
+                            this._bodyText = a;
+                        else if (g.blob && Blob.prototype.isPrototypeOf(a))
+                            this._bodyBlob = a;
+                        else if (g.formData && FormData.prototype.isPrototypeOf(a))
+                            this._bodyFormData = a;
+                        else if (g.searchParams && URLSearchParams.prototype.isPrototypeOf(a))
+                            this._bodyText = a.toString();
+                        else if (g.arrayBuffer &&
+                            g.blob && y(a))
+                            this._bodyArrayBuffer = t(a.buffer), this._bodyInit = new Blob([this._bodyArrayBuffer]);
+                        else if (g.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(a) || z(a)))
+                            this._bodyArrayBuffer = t(a);
+                        else
+                            throw Error("unsupported BodyInit type");
+                    else
+                        this._bodyText = "";
+                    this.headers.get("content-type") || ("string" === typeof a ? this.headers.set("content-type", "text/plain;charset=UTF-8") : this._bodyBlob && this._bodyBlob.type ? this.headers.set("content-type", this._bodyBlob.type) : g.searchParams && URLSearchParams.prototype.isPrototypeOf(a) &&
+                        this.headers.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8"));
+                };
+                g.blob && (this.blob = function () { var a = p(this); if (a)
+                    return a; if (this._bodyBlob)
+                    return Promise.resolve(this._bodyBlob); if (this._bodyArrayBuffer)
+                    return Promise.resolve(new Blob([this._bodyArrayBuffer])); if (this._bodyFormData)
+                    throw Error("could not read FormData body as blob"); return Promise.resolve(new Blob([this._bodyText])); }, this.arrayBuffer = function () {
+                    return this._bodyArrayBuffer ? p(this) || Promise.resolve(this._bodyArrayBuffer) :
+                        this.blob().then(w);
+                });
+                this.text = function () { var a = p(this); if (a)
+                    return a; if (this._bodyBlob) {
+                    a = this._bodyBlob;
+                    var b = new FileReader, c = r(b);
+                    b.readAsText(a);
+                    return c;
+                } if (this._bodyArrayBuffer)
+                    return Promise.resolve(x(this._bodyArrayBuffer)); if (this._bodyFormData)
+                    throw Error("could not read FormData body as text"); return Promise.resolve(this._bodyText); };
+                g.formData && (this.formData = function () { return this.text().then(A); });
+                this.json = function () { return this.text().then(JSON.parse); };
+                return this;
+            }
+            function k(a, b) {
+                b =
+                    b || {};
+                var c = b.body;
+                if (a instanceof k) {
+                    if (a.bodyUsed)
+                        throw new TypeError("Already read");
+                    this.url = a.url;
+                    this.credentials = a.credentials;
+                    b.headers || (this.headers = new d(a.headers));
+                    this.method = a.method;
+                    this.mode = a.mode;
+                    c || null == a._bodyInit || (c = a._bodyInit, a.bodyUsed = !0);
+                }
+                else
+                    this.url = String(a);
+                this.credentials = b.credentials || this.credentials || "omit";
+                if (b.headers || !this.headers)
+                    this.headers = new d(b.headers);
+                var v = b.method || this.method || "GET", g = v.toUpperCase();
+                this.method = -1 < B.indexOf(g) ? g : v;
+                this.mode =
+                    b.mode || this.mode || null;
+                this.referrer = null;
+                if (("GET" === this.method || "HEAD" === this.method) && c)
+                    throw new TypeError("Body not allowed for GET or HEAD requests");
+                this._initBody(c);
+            }
+            function A(a) { var b = new FormData; a.trim().split("&").forEach(function (a) { if (a) {
+                var c = a.split("=");
+                a = c.shift().replace(/\+/g, " ");
+                c = c.join("=").replace(/\+/g, " ");
+                b.append(decodeURIComponent(a), decodeURIComponent(c));
+            } }); return b; }
+            function C(a) {
+                var b = new d;
+                a.replace(/\r?\n[\t ]+/g, " ").split(/\r?\n/).forEach(function (a) {
+                    var c = a.split(":");
+                    if (a = c.shift().trim())
+                        c = c.join(":").trim(), b.append(a, c);
+                });
+                return b;
+            }
+            function h(a, b) { b || (b = {}); this.type = "default"; this.status = void 0 === b.status ? 200 : b.status; this.ok = 200 <= this.status && 300 > this.status; this.statusText = "statusText" in b ? b.statusText : "OK"; this.headers = new d(b.headers); this.url = b.url || ""; this._initBody(a); }
+            if (!e.fetch) {
+                var D = "Symbol" in e && "iterator" in Symbol, m;
+                if (m = "FileReader" in e && "Blob" in e)
+                    try {
+                        new Blob, m = !0;
+                    }
+                    catch (a) {
+                        m = !1;
+                    }
+                var g = { searchParams: "URLSearchParams" in e, iterable: D,
+                    blob: m, formData: "FormData" in e, arrayBuffer: "ArrayBuffer" in e };
+                if (g.arrayBuffer) {
+                    var E = "[object Int8Array];[object Uint8Array];[object Uint8ClampedArray];[object Int16Array];[object Uint16Array];[object Int32Array];[object Uint32Array];[object Float32Array];[object Float64Array]".split(";");
+                    var y = function (a) { return a && DataView.prototype.isPrototypeOf(a); };
+                    var z = ArrayBuffer.isView || function (a) { return a && -1 < E.indexOf(Object.prototype.toString.call(a)); };
+                }
+                d.prototype.append = function (a, b) {
+                    a = l(a);
+                    b = q(b);
+                    var c = this.map[a];
+                    this.map[a] = c ? c + "," + b : b;
+                };
+                d.prototype["delete"] = function (a) { delete this.map[l(a)]; };
+                d.prototype.get = function (a) { a = l(a); return this.has(a) ? this.map[a] : null; };
+                d.prototype.has = function (a) { return this.map.hasOwnProperty(l(a)); };
+                d.prototype.set = function (a, b) { this.map[l(a)] = q(b); };
+                d.prototype.forEach = function (a, b) { for (var c in this.map)
+                    this.map.hasOwnProperty(c) && a.call(b, this.map[c], c, this); };
+                d.prototype.keys = function () { var a = []; this.forEach(function (b, c) { a.push(c); }); return n(a); };
+                d.prototype.values =
+                    function () { var a = []; this.forEach(function (b) { a.push(b); }); return n(a); };
+                d.prototype.entries = function () { var a = []; this.forEach(function (b, c) { a.push([c, b]); }); return n(a); };
+                g.iterable && (d.prototype[Symbol.iterator] = d.prototype.entries);
+                var B = "DELETE GET HEAD OPTIONS POST PUT".split(" ");
+                k.prototype.clone = function () { return new k(this, { body: this._bodyInit }); };
+                u.call(k.prototype);
+                u.call(h.prototype);
+                h.prototype.clone = function () {
+                    return new h(this._bodyInit, { status: this.status, statusText: this.statusText, headers: new d(this.headers),
+                        url: this.url });
+                };
+                h.error = function () { var a = new h(null, { status: 0, statusText: "" }); a.type = "error"; return a; };
+                var F = [301, 302, 303, 307, 308];
+                h.redirect = function (a, b) { if (-1 === F.indexOf(b))
+                    throw new RangeError("Invalid status code"); return new h(null, { status: b, headers: { location: a } }); };
+                e.Headers = d;
+                e.Request = k;
+                e.Response = h;
+                e.fetch = function (a, b) {
+                    return new Promise(function (c, d) {
+                        var e = new k(a, b), f = new XMLHttpRequest;
+                        f.onload = function () {
+                            var a = { status: f.status, statusText: f.statusText, headers: C(f.getAllResponseHeaders() ||
+                                    "") };
+                            a.url = "responseURL" in f ? f.responseURL : a.headers.get("X-Request-URL");
+                            c(new h("response" in f ? f.response : f.responseText, a));
+                        };
+                        f.onerror = function () { d(new TypeError("Network request failed")); };
+                        f.ontimeout = function () { d(new TypeError("Network request failed")); };
+                        f.open(e.method, e.url, !0);
+                        "include" === e.credentials ? f.withCredentials = !0 : "omit" === e.credentials && (f.withCredentials = !1);
+                        "responseType" in f && g.blob && (f.responseType = "blob");
+                        e.headers.forEach(function (a, b) { f.setRequestHeader(b, a); });
+                        f.send("undefined" ===
+                            typeof e._bodyInit ? null : e._bodyInit);
+                    });
+                };
+                e.fetch.polyfill = !0;
+            }
+        })("undefined" !== typeof self ? self : window);
+    }
+    exports.applyPolyfill = applyPolyfill;
+    Object.defineProperty(exports, '__esModule', { value: true });
+});

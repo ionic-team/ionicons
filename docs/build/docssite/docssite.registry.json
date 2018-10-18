@@ -2,72 +2,72 @@
   "namespace": "DocsSite",
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
-  "core": "docssite.bkr1uskx.js",
-  "corePolyfilled": "docssite.dh6vyuov.js",
+  "core": "docssite.core.js",
+  "corePolyfilled": "docssite.core.pf.js",
   "components": {
     "footer-bar": {
       "bundleIds": {
-        "$": "3vkw131p"
+        "$": "footer-bar"
       }
     },
     "header-bar": {
       "bundleIds": {
-        "$": "t1fpujbs"
+        "$": "header-bar"
       }
     },
     "icon-list": {
       "bundleIds": {
-        "$": "2osh7cvf"
+        "$": "icon-list"
       }
     },
     "icon-search": {
       "bundleIds": {
-        "$": "fbtnoaor"
+        "$": "icon-search"
       }
     },
     "ionicons-site": {
       "bundleIds": {
-        "$": "t1fpujbs"
+        "$": "header-bar"
       }
     },
     "landing-page": {
       "bundleIds": {
-        "$": "2osh7cvf"
+        "$": "icon-list"
       }
     },
     "notfound-page": {
       "bundleIds": {
-        "$": "fonk1mfi"
+        "$": "notfound-page"
       }
     },
     "stencil-route": {
       "bundleIds": {
-        "$": "t1fpujbs"
+        "$": "header-bar"
       }
     },
     "stencil-route-link": {
       "bundleIds": {
-        "$": "zkf4jnqe"
+        "$": "stencil-route-link"
       }
     },
     "stencil-route-switch": {
       "bundleIds": {
-        "$": "t1fpujbs"
+        "$": "header-bar"
       }
     },
     "stencil-router": {
       "bundleIds": {
-        "$": "t1fpujbs"
+        "$": "header-bar"
       }
     },
     "toast-bar": {
       "bundleIds": {
-        "$": "2osh7cvf"
+        "$": "icon-list"
       }
     },
     "usage-page": {
       "bundleIds": {
-        "$": "7jqm0oy7"
+        "$": "usage-page"
       }
     }
   }

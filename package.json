@@ -18,7 +18,7 @@
     "build.icon": "stencil build",
     "clean": "node scripts/clean.js",
     "copy.tasks": "node scripts/copy-tasks.js",
-    "dev": "npm run build && stencil build --dev --watch --serve --es5 --config src/docs/stencil.config.js",
+    "dev": "npm run build && stencil build --dev --watch --serve --es5 --config src/docs/stencil.config.ts",
     "mode.comparison": "node scripts/mode-comparison.js",
     "generate": "python scripts/generate.py",
     "lint.ts": "tslint --project .",
