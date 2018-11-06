@@ -14,11 +14,11 @@
 }
 
 :host(.icon-small) {
-  font-size: var(--ion-icon-size-small, 18px) !important;
+  font-size: 18px !important;
 }
 
 :host(.icon-large){
-  font-size: var(--ion-icon-size-large, 32px) !important;
+  font-size: 32px !important;
 }
 
 .icon-inner,
