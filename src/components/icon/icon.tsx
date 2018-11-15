@@ -203,7 +203,7 @@ function getSvgContent(doc: Document, url: string, scopedId: string | undefined)
   if (!req) {
     // we don't already have a request
     req = fetch(url, { cache: 'force-cache' }).then(rsp => {
-      if (rsp.ok) {
+      if (isStatusValid(rsp.status)) {
         return rsp.text();
       }
       return Promise.resolve(null);
@@ -216,6 +216,10 @@ function getSvgContent(doc: Document, url: string, scopedId: string | undefined)
   return req;
 }
 
+
+function isStatusValid(status: number) {
+  return status <= 299;
+}
 
 function validateContent(
   document: Document,
