@@ -1,18 +1,2 @@
 /*! Built with http://stenciljs.com */
-DocsSite.loadBundle('string.js', ['exports'], function (exports) {
-    var h = window.DocsSite.h;
-    function applyPolyfill(window, document) {
-        String.prototype.endsWith || Object.defineProperty(String.prototype, "endsWith", { writable: !0, configurable: !0, value: function (b, a) { if (void 0 === a || a > this.length)
-                a = this.length; return this.substring(a - b.length, a) === b; } });
-        /*!
-        String.prototype.includes
-        */
-        String.prototype.includes || (String.prototype.includes = function (b, a) { "number" !== typeof a && (a = 0); return a + b.length > this.length ? !1 : -1 !== this.indexOf(b, a); });
-        /*!
-        String.prototype.startsWith
-        */
-        String.prototype.startsWith || Object.defineProperty(String.prototype, "startsWith", { writable: !0, configurable: !0, value: function (b, a) { return this.substr(!a || 0 > a ? 0 : +a, b.length) === b; } });
-    }
-    exports.applyPolyfill = applyPolyfill;
-    Object.defineProperty(exports, '__esModule', { value: true });
-});
+DocsSite.loadBundle("string.js",["exports"],function(t){window,t.applyPolyfill=function(t,e){String.prototype.endsWith||Object.defineProperty(String.prototype,"endsWith",{writable:!0,configurable:!0,value:function(t,e){return(void 0===e||e>this.length)&&(e=this.length),this.substring(e-t.length,e)===t}}),String.prototype.includes||(String.prototype.includes=function(t,e){return"number"!=typeof e&&(e=0),!(e+t.length>this.length)&&-1!==this.indexOf(t,e)}),String.prototype.startsWith||Object.defineProperty(String.prototype,"startsWith",{writable:!0,configurable:!0,value:function(t,e){return this.substr(!e||0>e?0:+e,t.length)===t}})},Object.defineProperty(t,"__esModule",{value:!0})});

@@ -1,20 +1,2 @@
 /*! Built with http://stenciljs.com */
-DocsSite.loadBundle('object.js', ['exports'], function (exports) {
-    var h = window.DocsSite.h;
-    function applyPolyfill(window, document) {
-        "function" != typeof Object.assign && Object.defineProperty(Object, "assign", { value: function (d, f) { if (null == d)
-                throw new TypeError("Cannot convert undefined or null to object"); for (var e = Object(d), b = 1; b < arguments.length; b++) {
-                var a = arguments[b];
-                if (null != a)
-                    for (var c in a)
-                        Object.prototype.hasOwnProperty.call(a, c) && (e[c] = a[c]);
-            } return e; }, writable: !0, configurable: !0 });
-        /*!
-        Object.entries
-        */
-        Object.entries || (Object.entries = function (c) { for (var b = Object.keys(c), a = b.length, d = Array(a); a--;)
-            d[a] = [b[a], c[b[a]]]; return d; });
-    }
-    exports.applyPolyfill = applyPolyfill;
-    Object.defineProperty(exports, '__esModule', { value: true });
-});
+DocsSite.loadBundle("object.js",["exports"],function(e){window,e.applyPolyfill=function(e,n){"function"!=typeof Object.assign&&Object.defineProperty(Object,"assign",{value:function(e,n){if(null==e)throw new TypeError("Cannot convert undefined or null to object");for(var t=Object(e),r=1;r<arguments.length;r++){var o=arguments[r];if(null!=o)for(var l in o)Object.prototype.hasOwnProperty.call(o,l)&&(t[l]=o[l])}return t},writable:!0,configurable:!0}),Object.entries||(Object.entries=function(e){for(var n=Object.keys(e),t=n.length,r=Array(t);t--;)r[t]=[n[t],e[n[t]]];return r})},Object.defineProperty(e,"__esModule",{value:!0})});
