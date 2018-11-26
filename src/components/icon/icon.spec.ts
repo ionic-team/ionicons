@@ -86,6 +86,18 @@ describe('getUrl', () => {
     expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
   });
 
+  it('use name prop, set undefined mode', () => {
+    i.name = 'some-name';
+    i.mode = undefined;
+    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+  });
+
+  it('use name prop, set unknown mode', () => {
+    i.name = 'some-name';
+    i.mode = 'somemode' as any;
+    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+  });
+
   it('use name prop, default md mode', () => {
     i.name = 'some-name';
     i.icon = 'some-icon';

@@ -7,6 +7,7 @@ export function getName(
 ) {
   // default to "md" if somehow the mode wasn't set
   mode = (mode || 'md').toLowerCase();
+  mode = mode === 'ios' ? 'ios' : 'md';
 
   // if an icon was passed in using the ios or md attributes
   // set the iconName to whatever was passed in
