@@ -110,7 +110,7 @@ export class HeaderBar {
             </stencil-route-link>
 
             <a class="nav__item" href="https://github.com/ionic-team/ionicons">
-              Github
+              GitHub
               <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(0,1)">
                   <rect id="bg" fill="#e3e8f1" x="0" y="2" width="9" height="9" rx="1.5"></rect>
