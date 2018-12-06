@@ -26,7 +26,7 @@ svg {
   display: block;
 
   fill: currentColor;
-  stroke: currentColor;
+  stroke: var(--stroke, currentColor);
 
   height: 100%;
   width: 100%;
