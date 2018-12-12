@@ -1,5 +1,5 @@
 import { Component, Element, Prop, State, Watch } from '@stencil/core';
-import { getName, getSrc, isValid } from './utils';
+import { getIconMap, getName, getSrc, isValid } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -19,9 +19,6 @@ export class Icon {
   @Prop({ context: 'resourcesUrl' }) resourcesUrl!: string;
   @Prop({ context: 'document' }) doc!: Document;
   @Prop({ context: 'window' }) win: any;
-
-  /** @internal */
-  @Prop() iconMap?: {[name: string]: string};
 
   /**
    * The color to use for the background of the item.
@@ -167,8 +164,9 @@ export class Icon {
   }
 
   private getNamedUrl(name: string) {
-    if (this.iconMap) {
-      return this.iconMap[name];
+    const url = getIconMap().get(name);
+    if (url) {
+      return url;
     }
     return `${this.resourcesUrl}svg/${name}.svg`;
   }

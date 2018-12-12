@@ -25,7 +25,6 @@ export namespace Components {
     * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
     */
     'icon'?: string;
-    'iconMap'?: {[name: string]: string};
     /**
     * Specifies which icon to use on `ios` mode.
     */
@@ -68,7 +67,6 @@ export namespace Components {
     * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
     */
     'icon'?: string;
-    'iconMap'?: {[name: string]: string};
     /**
     * Specifies which icon to use on `ios` mode.
     */
