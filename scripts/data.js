@@ -83,9 +83,9 @@ fs.writeFileSync(DST_ESM, finalFile);
 
 
 const finalDts = `
-export interface IconMap {
+export type IconMap = {
 ${iconData.map(({name}) => `  '${name}': string;`).join('\n')}
-}
+};
 
 export type IconNames = keyof IconMap;
 
