@@ -1,7 +1,6 @@
 import { Component, Element, Prop, State, Watch } from '@stencil/core';
 import { getName, getSrc, isValid } from './utils';
 
-
 @Component({
   tag: 'ion-icon',
   assetsDir: 'svg',
@@ -20,6 +19,9 @@ export class Icon {
   @Prop({ context: 'resourcesUrl' }) resourcesUrl!: string;
   @Prop({ context: 'document' }) doc!: Document;
   @Prop({ context: 'window' }) win: any;
+
+  /** @internal */
+  @Prop() iconMap?: {[name: string]: string};
 
   /**
    * The color to use for the background of the item.
@@ -70,7 +72,6 @@ export class Icon {
    */
   @Prop() size?: string;
 
-
   /**
    * If enabled, ion-icon will be loaded lazily when it's visible in the viewport.
    * Default, `false`.
@@ -120,10 +121,11 @@ export class Icon {
   loadIcon() {
     if (!this.isServer && this.isVisible) {
       const url = this.getUrl();
-
       if (url) {
         getSvgContent(this.doc, url, 's-ion-icon')
           .then(svgContent => this.svgContent = svgContent);
+      } else {
+        console.error('icon was not resolved');
       }
     }
 
@@ -165,6 +167,9 @@ export class Icon {
   }
 
   private getNamedUrl(name: string) {
+    if (this.iconMap) {
+      return this.iconMap[name];
+    }
     return `${this.resourcesUrl}svg/${name}.svg`;
   }
 

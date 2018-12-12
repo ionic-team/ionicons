@@ -3,7 +3,8 @@
   "version": "4.4.8",
   "description": "Premium icons for Ionic.",
   "files": [
-    "dist/"
+    "dist/",
+    "icons/"
   ],
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -27,7 +28,7 @@
     "test": "stencil test --spec"
   },
   "devDependencies": {
-    "@stencil/core": "0.16.0-6",
+    "@stencil/core": "0.16.1-5",
     "@stencil/router": "0.3.1",
     "@stencil/sass": "0.1.1",
     "@types/highlight.js": "^9.12.3",
