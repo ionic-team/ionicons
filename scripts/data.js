@@ -73,11 +73,9 @@ const iconData = svgFiles.map(filename => {
 const finalFile = `
 ${iconData.map(({filename, importName}) => `import ${importName} from '${BASE_PATH}/${filename}';`).join('\n')}
 
-export function getIconPaths() {
-  return {
-${iconData.map(({name, importName}) => `    '${name}': ${importName}`).join(',\n')}
-  };
-}
+export const ICON_PATHS = {
+${iconData.map(({name, importName}) => `  '${name}': ${importName}`).join(',\n')}
+};
 
 export { ${iconData.map(({importName}) => importName).join(', ')} };
 `;
@@ -91,7 +89,7 @@ ${iconData.map(({name}) => `  '${name}': string;`).join('\n')}
 
 export type IconNames = keyof IconMap;
 
-export declare function getIconPaths(): IconMap;
+export declare const ICON_PATHS: IconMap;
 
 ${iconData.map(({importName}) => `export declare const ${importName}: string;`).join('\n')}
 `;
