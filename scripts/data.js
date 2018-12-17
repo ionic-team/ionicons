@@ -73,7 +73,7 @@ const iconData = svgFiles.map(filename => {
 const finalFile = `
 ${iconData.map(({filename, importName}) => `import ${importName} from '${BASE_PATH}/${filename}';`).join('\n')}
 
-export const ICON_PATHS = {
+export var ICON_PATHS = {
 ${iconData.map(({name, importName}) => `  '${name}': ${importName}`).join(',\n')}
 };
 
