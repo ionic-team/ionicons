@@ -1,0 +1,1 @@
+ionicons.loadBundle("index.js",["exports","./chunk-327a77a2.js"],function(d,n){window,d.addIcons=n.addIcons,Object.defineProperty(d,"__esModule",{value:!0})});

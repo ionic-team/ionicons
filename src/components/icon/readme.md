@@ -23,6 +23,13 @@ Default options are: `"primary"`, `"secondary"`, `"danger"`, `"light"`, and `"da
 For more information, see [Theming your App](/docs/theming/theming-your-app).
 
 
+#### icon
+
+string
+
+A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+
+
 #### ios
 
 string

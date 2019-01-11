@@ -5,24 +5,24 @@ import { Component, Element, Event, EventEmitter, Prop, State } from '@stencil/c
   styleUrl: 'toast-bar.scss'
 })
 export class ToastBar {
-  @Element() el: Element;
+  @Element() el!: Element;
 
-  @Prop() selectedIcon: {
+  @Prop() selectedIcon?: {
     name: string,
     icons: string[],
     tags: string[]
   };
-  @Prop() selectedIconType: string;
+  @Prop() selectedIconType?: string;
 
-  @State() showCopiedConfirm: number;
+  @State() showCopiedConfirm?: number;
   @State() hadIconOnce = false;
-  @State() touchStartY: number;
-  @State() touchEndY: number;
+  @State() touchStartY?: number;
+  @State() touchEndY?: number;
 
   @Event() clearToast: EventEmitter;
   @Event() toggleHeaderSearch: EventEmitter;
 
-  handleCodeClick(attrName) {
+  handleCodeClick(attrName: any) {
     const codeElParent = this.el.querySelector('.toast-bar__section:first-child');
     const el = document.createElement('textarea');
 

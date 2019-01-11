@@ -1,5 +1,5 @@
 import { Component, Element, Prop, State, Watch } from '@stencil/core';
-
+import { getIconMap, getName, getSrc, isValid } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -69,12 +69,11 @@ export class Icon {
    */
   @Prop() size?: string;
 
-
   /**
    * If enabled, ion-icon will be loaded lazily when it's visible in the viewport.
-   * Default, `true`.
+   * Default, `false`.
    */
-  @Prop() lazy = true;
+  @Prop() lazy = false;
 
   componentWillLoad() {
     // purposely do not return the promise here because loading
@@ -119,11 +118,11 @@ export class Icon {
   loadIcon() {
     if (!this.isServer && this.isVisible) {
       const url = this.getUrl();
-
       if (url) {
-        getSvgContent(url).then(svgContent => {
-          this.svgContent = validateContent(this.doc, svgContent, (this.el as any)['s-sc']);
-        });
+        getSvgContent(this.doc, url, 's-ion-icon')
+          .then(svgContent => this.svgContent = svgContent);
+      } else {
+        console.error('icon was not resolved');
       }
     }
 
@@ -165,6 +164,10 @@ export class Icon {
   }
 
   private getNamedUrl(name: string) {
+    const url = getIconMap().get(name);
+    if (url) {
+      return url;
+    }
     return `${this.resourcesUrl}svg/${name}.svg`;
   }
 
@@ -194,20 +197,20 @@ export class Icon {
 }
 
 
-const requests = new Map<string, Promise<string | null>>();
+const requests = new Map<string, Promise<string>>();
 
-function getSvgContent(url: string) {
+function getSvgContent(doc: Document, url: string, scopedId: string | undefined) {
   // see if we already have a request for this url
   let req = requests.get(url);
 
   if (!req) {
     // we don't already have a request
     req = fetch(url, { cache: 'force-cache' }).then(rsp => {
-      if (rsp.ok) {
+      if (isStatusValid(rsp.status)) {
         return rsp.text();
       }
       return Promise.resolve(null);
-    });
+    }).then(svgContent => validateContent(doc, svgContent, scopedId));
 
     // cache for the same requests
     requests.set(url, req);
@@ -217,56 +220,9 @@ function getSvgContent(url: string) {
 }
 
 
-export function getName(
-  name: string | undefined,
-  mode: string | undefined,
-  ios: string | undefined,
-  md: string | undefined
-) {
-  // default to "md" if somehow the mode wasn't set
-  mode = (mode || 'md').toLowerCase();
-
-  // if an icon was passed in using the ios or md attributes
-  // set the iconName to whatever was passed in
-  if (ios && mode === 'ios') {
-    name = ios.toLowerCase();
-
-  } else if (md && mode === 'md') {
-    name = md.toLowerCase();
-
-  } else if (name) {
-    name = name.toLowerCase();
-    if (!/^md-|^ios-|^logo-/.test(name)) {
-      // this does not have one of the defaults
-      // so lets auto add in the mode prefix for them
-      name = `${mode}-${name}`;
-    }
-  }
-
-  if (typeof name !== 'string' || name.trim() === '') {
-    return null;
-  }
-
-  // only allow alpha characters and dash
-  const invalidChars = name.replace(/[a-z]|-|\d/gi, '');
-  if (invalidChars !== '') {
-    return null;
-  }
-
-  return name;
+function isStatusValid(status: number) {
+  return status <= 299;
 }
-
-
-export function getSrc(src: string | undefined) {
-  if (typeof src === 'string') {
-    src = src.trim();
-    if (src.length > 0 && /(\/|\.)/.test(src)) {
-      return src;
-    }
-  }
-  return null;
-}
-
 
 function validateContent(
   document: Document,
@@ -301,29 +257,6 @@ function validateContent(
     }
   }
   return '';
-}
-
-
-export function isValid(elm: HTMLElement) {
-  if (elm.nodeType === 1) {
-    if (elm.nodeName.toLowerCase() === 'script') {
-      return false;
-    }
-
-    for (let i = 0; i < elm.attributes.length; i++) {
-      const val = elm.attributes[i].value;
-      if (typeof val === 'string' && val.toLowerCase().indexOf('on') === 0) {
-        return false;
-      }
-    }
-
-    for (let i = 0; i < elm.childNodes.length; i++) {
-      if (!isValid(elm.childNodes[i] as any)) {
-        return false;
-      }
-    }
-  }
-  return true;
 }
 
 function createColorClasses(color: string | undefined) {

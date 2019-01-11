@@ -5,15 +5,15 @@ import { Component, Element, Event, EventEmitter, Listen, Prop, State } from '@s
   styleUrl: 'header-bar.scss'
 })
 export class HeaderBar {
-  @Element() el: Element;
+  @Element() el!: Element;
 
-  @Event() toggleHeaderSearch: EventEmitter;
+  @Event() toggleHeaderSearch!: EventEmitter;
 
   @State() isSticky = false;
-  @State() isMobileMenuShown: boolean;
+  @State() isMobileMenuShown?: boolean;
 
   @Prop() query = '';
-  @Prop() version: string;
+  @Prop() version?: string;
   @Prop() isSearchVisible = false;
 
   @Listen('window:scroll')
@@ -35,7 +35,7 @@ export class HeaderBar {
   }
 
   checkScroll() {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollTop = document.documentElement!.scrollTop || document.body.scrollTop;
     this.isSticky = (scrollTop > 30);
   }
 
@@ -110,7 +110,7 @@ export class HeaderBar {
             </stencil-route-link>
 
             <a class="nav__item" href="https://github.com/ionic-team/ionicons">
-              Github
+              GitHub
               <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(0,1)">
                   <rect id="bg" fill="#e3e8f1" x="0" y="2" width="9" height="9" rx="1.5"></rect>
