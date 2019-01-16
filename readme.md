@@ -13,7 +13,7 @@ We intend for this icon pack to be used with [Ionic](http://ionicframework.com/)
 
 ## Using the Web Component
 
-The Iconicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.
+The Ionicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.
 
 Also note that only visible icons are loaded, and icons which are "below the fold" and hidden from the user's view do not make fetch requests for the svg resource.
 
@@ -24,6 +24,15 @@ If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is pack
 ```
 <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 ```
+
+
+### Contributing
+
+Thanks for your interest in contributing! Read up on our guidelines for
+[contributing](https://github.com/ionic-team/ionicons/blob/master/.github/CONTRIBUTING.md)
+and then look through our issues with a [help wanted](https://github.com/ionic-team/ionicons/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+label.
+
 
 ### Basic usage
 
@@ -36,7 +45,7 @@ To use a built-in icon from the Ionicons package, populate the `name` attribute 
 To use a custom SVG, provide its url in the `src` attribute to request the external SVG file. The `src` attribute works the same as `<img src="...">` in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid svg and does not allow scripts or events within the svg element.
 
 ```
-<ion-icon src="/path/to/externa/file.svg"></ion-icon>
+<ion-icon src="/path/to/external/file.svg"></ion-icon>
 ```
 
 ### Platform specific icons
