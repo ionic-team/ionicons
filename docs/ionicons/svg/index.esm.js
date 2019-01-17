@@ -696,7 +696,7 @@ import mdWifi from './md-wifi.svg';
 import mdWine from './md-wine.svg';
 import mdWoman from './md-woman.svg';
 
-export const ICON_PATHS = {
+export var ICON_PATHS = {
   'ios-add-circle-outline': iosAddCircleOutline,
   'ios-add-circle': iosAddCircle,
   'ios-add': iosAdd,
