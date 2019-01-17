@@ -4,7 +4,10 @@ export const config: Config = {
   namespace: 'ionicons',
   srcDir: 'src/components/',
   outputTargets: [
-    { type: 'dist' },
+    {
+      type: 'dist',
+      dir: 'dist'
+    },
     { type: 'docs' },
     { type: 'www' }
   ],
