@@ -111,7 +111,18 @@ To embed the Ionicons font icon, copy this code into the `<head>` of the HTML do
 Use the icon index to look up the name of the icon you want to use. The icon's CSS class name will be prefixed with ion-, followed by the platform attribute md-, ios- or logo- and completed wth the icon name.
 
 ```html
-<i class="icon ion-md-heart"></i>
+<i class="ion-md-heart"></i>
+<i class="ion-ios-heart"></i>
+
+<i class="ion-md-heart-dislike"></i>
+<i class="ion-ios-heart-dislike"></i>
+
+
+<i class="ion-md-cellular"></i>
+<i class="ion-ios-cellular"></i>
+
+<i class="ion-logo-facebook"></i>
+<i class="ion-logo-windows"></i>
 ```
 
 
