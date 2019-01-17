@@ -4,9 +4,14 @@ export const config: Config = {
   namespace: 'ionicons',
   srcDir: 'src/components/',
   outputTargets: [
+    { type: 'dist' },
+    { type: 'docs' },
+    { type: 'www' }
+  ],
+  copy: [
     {
-      type: 'dist',
-      dir: 'dist'
+      src: '../svg/',
+      dest: './build/ionicons/svg/'
     }
   ]
 };
