@@ -25,13 +25,8 @@ svg {
  * -----------------------------------------------------------
  */
 
-:host-context([dir=rtl]):host([aria-label^="arrow"]),
-:host-context([dir=rtl]):host([flip-rtl]) {
+:host(.flip-rtl) {
   transform: scaleX(-1);
-}
-
-:host-context([dir=rtl]):host([unflip-rtl]) {
-  transform: scaleX(1);
 }
 
 
@@ -39,7 +34,7 @@ svg {
  * -----------------------------------------------------------
  */
 
- :host(.icon-small) {
+:host(.icon-small) {
   font-size: 18px !important;
 }
 

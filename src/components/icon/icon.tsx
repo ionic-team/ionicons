@@ -47,6 +47,11 @@ export class Icon {
   @Prop() md?: string;
 
   /**
+   * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
+   */
+  @Prop() flipRtl?: boolean;
+
+  /**
    * Specifies which icon to use from the built-in set of icons.
    */
   @Prop() name?: string;
@@ -171,12 +176,16 @@ export class Icon {
     return `${this.resourcesUrl}svg/${name}.svg`;
   }
 
+
   hostData() {
+    const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
+
     return {
       'role': 'img',
       class: {
         ...createColorClasses(this.color),
         [`icon-${this.size}`]: !!this.size,
+        'flip-rtl': flipRtl && hostContext('[dir=rtl]', this.el)
       }
     };
   }
@@ -264,4 +273,8 @@ function createColorClasses(color: string | undefined) {
     'ion-color': true,
     [`ion-color-${color}`]: true
   } : null;
+}
+
+function hostContext(selector: string, el: HTMLElement): boolean {
+  return el.closest(selector) !== null;
 }
