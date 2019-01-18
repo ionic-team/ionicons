@@ -25,7 +25,7 @@ svg {
  * -----------------------------------------------------------
  */
 
-:host(.flip-rtl) {
+:host(.flip-rtl) .icon-inner {
   transform: scaleX(-1);
 }
 
