@@ -15,3 +15,5 @@ node_modules/
 tmp/
 dist/
 .DS_Store
+
+www/

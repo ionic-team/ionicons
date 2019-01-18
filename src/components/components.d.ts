@@ -22,6 +22,10 @@ export namespace Components {
     */
     'color'?: string;
     /**
+    * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
+    */
+    'flipRtl'?: boolean;
+    /**
     * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
     */
     'icon'?: string;
@@ -63,6 +67,10 @@ export namespace Components {
     * The color to use for the background of the item.
     */
     'color'?: string;
+    /**
+    * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
+    */
+    'flipRtl'?: boolean;
     /**
     * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
     */

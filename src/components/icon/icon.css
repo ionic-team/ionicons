@@ -9,18 +9,6 @@
   box-sizing: content-box !important;
 }
 
-:host(.ion-color) {
-  color: var(--ion-color-base) !important;
-}
-
-:host(.icon-small) {
-  font-size: 18px !important;
-}
-
-:host(.icon-large){
-  font-size: 32px !important;
-}
-
 .icon-inner,
 svg {
   display: block;
@@ -32,8 +20,36 @@ svg {
   width: 100%;
 }
 
-/* Set iOS Icon Colors */
-/* ------------------- */
+
+/* Icon RTL
+ * -----------------------------------------------------------
+ */
+
+:host(.flip-rtl) .icon-inner {
+  transform: scaleX(-1);
+}
+
+
+/* Icon Sizes
+ * -----------------------------------------------------------
+ */
+
+:host(.icon-small) {
+  font-size: 18px !important;
+}
+
+:host(.icon-large){
+  font-size: 32px !important;
+}
+
+
+/* Icon Colors
+ * -----------------------------------------------------------
+ */
+
+:host(.ion-color) {
+  color: var(--ion-color-base) !important;
+}
 
 :host(.ion-color-primary) {
   --ion-color-base: var(--ion-color-primary, #3880ff);
