@@ -1,5 +1,5 @@
 import { Component, Element, Prop, State, Watch } from '@stencil/core';
-import { getIconMap, getName, getSrc, isValid } from './utils';
+import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -132,7 +132,7 @@ export class Icon {
     }
 
     if (!this.ariaLabel) {
-      const name = getName(this.name, this.mode, this.ios, this.md);
+      const name = getName(this.getName(), this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
       if (name) {
@@ -144,13 +144,23 @@ export class Icon {
     }
   }
 
+  getName() {
+    if (this.name !== undefined) {
+      return this.name;
+    }
+    if (this.icon && !isSrc(this.icon)) {
+      return this.icon;
+    }
+    return undefined;
+  }
+
   getUrl() {
     let url = getSrc(this.src);
     if (url) {
       return url;
     }
 
-    url = getName(this.name, this.mode, this.ios, this.md);
+    url = getName(this.getName(), this.mode, this.ios, this.md);
     if (url) {
       return this.getNamedUrl(url);
     }
@@ -158,11 +168,6 @@ export class Icon {
     url = getSrc(this.icon);
     if (url) {
       return url;
-    }
-
-    url = getName(this.icon, this.mode, this.ios, this.md);
-    if (url) {
-      return this.getNamedUrl(url);
     }
 
     return null;

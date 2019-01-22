@@ -60,13 +60,16 @@ export function getName(
 export function getSrc(src: string | undefined) {
   if (typeof src === 'string') {
     src = src.trim();
-    if (src.length > 0 && /(\/|\.)/.test(src)) {
+    if (isSrc(src)) {
       return src;
     }
   }
   return null;
 }
 
+export function isSrc(str: string) {
+  return str.length > 0 && /(\/|\.)/.test(str);
+}
 
 export function isValid(elm: HTMLElement) {
   if (elm.nodeType === 1) {
