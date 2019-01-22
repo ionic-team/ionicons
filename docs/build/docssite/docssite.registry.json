@@ -2,8 +2,8 @@
   "namespace": "DocsSite",
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
-  "core": "docssite.a2nervxd.js",
-  "corePolyfilled": "docssite.siq9dhhp.js",
+  "core": "docssite.gqqx2co3.js",
+  "corePolyfilled": "docssite.0iquhynw.js",
   "components": {
     "footer-bar": {
       "bundleIds": {
@@ -12,7 +12,7 @@
     },
     "header-bar": {
       "bundleIds": {
-        "$": "7i5cz5id"
+        "$": "ngcitrgw"
       }
     },
     "icon-list": {
@@ -27,7 +27,7 @@
     },
     "ionicons-site": {
       "bundleIds": {
-        "$": "7i5cz5id"
+        "$": "ngcitrgw"
       }
     },
     "landing-page": {
@@ -42,22 +42,22 @@
     },
     "stencil-route": {
       "bundleIds": {
-        "$": "7i5cz5id"
+        "$": "ngcitrgw"
       }
     },
     "stencil-route-link": {
       "bundleIds": {
-        "$": "iyqr8fqc"
+        "$": "m3zdr5uv"
       }
     },
     "stencil-route-switch": {
       "bundleIds": {
-        "$": "7i5cz5id"
+        "$": "ngcitrgw"
       }
     },
     "stencil-router": {
       "bundleIds": {
-        "$": "7i5cz5id"
+        "$": "ngcitrgw"
       }
     },
     "toast-bar": {
