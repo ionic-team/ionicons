@@ -190,7 +190,7 @@ export class Icon {
       class: {
         ...createColorClasses(this.color),
         [`icon-${this.size}`]: !!this.size,
-        'flip-rtl': flipRtl && hostContext('[dir=rtl]', this.el)
+        'flip-rtl': flipRtl && this.doc.dir === 'rtl'
       }
     };
   }
@@ -280,6 +280,4 @@ function createColorClasses(color: string | undefined) {
   } : null;
 }
 
-function hostContext(selector: string, el: HTMLElement): boolean {
-  return el.closest(selector) !== null;
-}
+
