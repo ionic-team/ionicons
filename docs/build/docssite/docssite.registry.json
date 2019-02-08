@@ -2,8 +2,8 @@
   "namespace": "DocsSite",
   "fsNamespace": "docssite",
   "loader": "../docssite.js",
-  "core": "docssite.gqqx2co3.js",
-  "corePolyfilled": "docssite.0iquhynw.js",
+  "core": "docssite.4drkce6o.js",
+  "corePolyfilled": "docssite.rwokjrgh.js",
   "components": {
     "footer-bar": {
       "bundleIds": {
@@ -67,7 +67,7 @@
     },
     "usage-page": {
       "bundleIds": {
-        "$": "k89j5zyg"
+        "$": "jkivsoqg"
       }
     }
   }

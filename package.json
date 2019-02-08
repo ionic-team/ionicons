@@ -48,7 +48,8 @@
     "puppeteer": "1.7.0",
     "svgo": "1.1.1",
     "tslint": "^5.11.0",
-    "tslint-ionic-rules": "0.0.20"
+    "tslint-ionic-rules": "0.0.20",
+    "workbox-build": "3.4.1"
   },
   "keywords": [
     "ionicons",
