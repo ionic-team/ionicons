@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@stencil/core": "0.17.0",
-    "@stencil/router": "0.3.1",
+    "@stencil/router": "0.3.3",
     "@stencil/sass": "0.1.1",
     "@types/highlight.js": "^9.12.3",
     "@types/jest": "^23.1.3",
