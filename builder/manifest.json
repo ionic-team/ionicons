@@ -1,5 +1,5 @@
 {
-  "build_hash": "675bec60282d004ac79faf3e1574a734",
+  "build_hash": "ce1060abc75d0ff2483aa0555380ce01",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -765,6 +765,10 @@
       "name": "build-quickship"
     },
     {
+      "code": "0xf172",
+      "name": "build-returns"
+    },
+    {
       "code": "0xf146",
       "name": "build-rewards"
     },
@@ -791,6 +795,10 @@
     {
       "code": "0xf160",
       "name": "build-social-youtube-outline"
+    },
+    {
+      "code": "0xf175",
+      "name": "build-tracking"
     },
     {
       "code": "0xf14c",
