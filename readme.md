@@ -11,9 +11,17 @@ Visit [ionicons.com](http://ionicons.com) and  check out the search feature, whi
 We intend for this icon pack to be used with [Ionic](http://ionicframework.com/), but it’s by no means limited to it. Use them wherever you see fit, personal or commercial. They are free to use and licensed under [MIT](http://opensource.org/licenses/MIT).
 
 
+## Contributing
+
+Thanks for your interest in contributing! Read up on our guidelines for
+[contributing](https://github.com/ionic-team/ionicons/blob/master/.github/CONTRIBUTING.md)
+and then look through our issues with a [help wanted](https://github.com/ionic-team/ionicons/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+label.
+
+
 ## Using the Web Component
 
-The Iconicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.
+The Ionicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.
 
 Also note that only visible icons are loaded, and icons which are "below the fold" and hidden from the user's view do not make fetch requests for the svg resource.
 
@@ -21,7 +29,7 @@ Also note that only visible icons are loaded, and icons which are "below the fol
 
 If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing </body> tag, to enable them.
 
-```
+```html
 <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 ```
 
@@ -29,14 +37,14 @@ If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is pack
 
 To use a built-in icon from the Ionicons package, populate the `name` attribute on the ion-icon component:
 
-```
+```html
 <ion-icon name="heart"></ion-icon>
 ```
 
 To use a custom SVG, provide its url in the `src` attribute to request the external SVG file. The `src` attribute works the same as `<img src="...">` in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid svg and does not allow scripts or events within the svg element.
 
-```
-<ion-icon src="/path/to/externa/file.svg"></ion-icon>
+```html
+<ion-icon src="/path/to/external/file.svg"></ion-icon>
 ```
 
 ### Platform specific icons
@@ -51,7 +59,7 @@ Ionic will automatically use the correct version based on the platform. Note tha
 
 To specify the icon for each platform, use the `md` and `ios` attributes and provide the platform specific icon name.
 
-```
+```html
 <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
 ```
 
@@ -59,7 +67,7 @@ To specify the icon for each platform, use the `md` and `ios` attributes and pro
 
 When using Ionicons without the Ionic Framework, the icon will default to the Material Design icon style. To specify the non-default icon style, add a platform prefix to the `name` attribute.
 
-```
+```html
 <ion-icon name="ios-heart"></ion-icon>
 <ion-icon name="md-heart"></ion-icon>
 ```
@@ -68,14 +76,14 @@ When using Ionicons without the Ionic Framework, the icon will default to the Ma
 
 To specify the icon size, you can use the size attribute for our pre-defined font sizes.
 
-```
+```html
 <ion-icon size="small"></ion-icon>
 <ion-icon size="large"></ion-icon>
 ```
 
 Or you can set a specific size by applying the `font-size` CSS property on the `ion-icon` component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)
 
-```
+```css
 ion-icon {
   font-size: 64px;
 }
@@ -94,7 +102,7 @@ In most cases it may be better to request a small number of svgs using the web c
 
 To embed the Ionicons font icon, copy this code into the `<head>` of the HTML document.
 
-```
+```html
 <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
 ```
 
@@ -102,8 +110,19 @@ To embed the Ionicons font icon, copy this code into the `<head>` of the HTML do
 
 Use the icon index to look up the name of the icon you want to use. The icon's CSS class name will be prefixed with ion-, followed by the platform attribute md-, ios- or logo- and completed wth the icon name.
 
-```
-<i class="icon ion-md-heart"></i>
+```html
+<i class="ion-md-heart"></i>
+<i class="ion-ios-heart"></i>
+
+<i class="ion-md-heart-dislike"></i>
+<i class="ion-ios-heart-dislike"></i>
+
+
+<i class="ion-md-cellular"></i>
+<i class="ion-ios-cellular"></i>
+
+<i class="ion-logo-facebook"></i>
+<i class="ion-logo-windows"></i>
 ```
 
 

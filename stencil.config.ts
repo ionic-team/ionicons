@@ -7,6 +7,14 @@ export const config: Config = {
     {
       type: 'dist',
       dir: 'dist'
+    },
+    { type: 'docs' },
+    { type: 'www' }
+  ],
+  copy: [
+    {
+      src: '../svg/',
+      dest: './build/ionicons/svg/'
     }
   ]
 };

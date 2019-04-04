@@ -1,6 +1,5 @@
 import { Component, Element, Prop, State, Watch } from '@stencil/core';
-import { getName, getSrc, isValid } from './utils';
-
+import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -48,6 +47,11 @@ export class Icon {
   @Prop() md?: string;
 
   /**
+   * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
+   */
+  @Prop() flipRtl?: boolean;
+
+  /**
    * Specifies which icon to use from the built-in set of icons.
    */
   @Prop() name?: string;
@@ -69,7 +73,6 @@ export class Icon {
    * Available options are: `"small"` and `"large"`.
    */
   @Prop() size?: string;
-
 
   /**
    * If enabled, ion-icon will be loaded lazily when it's visible in the viewport.
@@ -120,15 +123,16 @@ export class Icon {
   loadIcon() {
     if (!this.isServer && this.isVisible) {
       const url = this.getUrl();
-
       if (url) {
         getSvgContent(this.doc, url, 's-ion-icon')
           .then(svgContent => this.svgContent = svgContent);
+      } else {
+        console.error('icon was not resolved');
       }
     }
 
     if (!this.ariaLabel) {
-      const name = getName(this.name, this.mode, this.ios, this.md);
+      const name = getName(this.getName(), this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
       if (name) {
@@ -140,13 +144,23 @@ export class Icon {
     }
   }
 
+  getName() {
+    if (this.name !== undefined) {
+      return this.name;
+    }
+    if (this.icon && !isSrc(this.icon)) {
+      return this.icon;
+    }
+    return undefined;
+  }
+
   getUrl() {
     let url = getSrc(this.src);
     if (url) {
       return url;
     }
 
-    url = getName(this.name, this.mode, this.ios, this.md);
+    url = getName(this.getName(), this.mode, this.ios, this.md);
     if (url) {
       return this.getNamedUrl(url);
     }
@@ -156,24 +170,27 @@ export class Icon {
       return url;
     }
 
-    url = getName(this.icon, this.mode, this.ios, this.md);
-    if (url) {
-      return this.getNamedUrl(url);
-    }
-
     return null;
   }
 
   private getNamedUrl(name: string) {
+    const url = getIconMap().get(name);
+    if (url) {
+      return url;
+    }
     return `${this.resourcesUrl}svg/${name}.svg`;
   }
 
+
   hostData() {
+    const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
+
     return {
       'role': 'img',
       class: {
         ...createColorClasses(this.color),
         [`icon-${this.size}`]: !!this.size,
+        'flip-rtl': flipRtl && this.doc.dir === 'rtl'
       }
     };
   }
@@ -262,3 +279,5 @@ function createColorClasses(color: string | undefined) {
     [`ion-color-${color}`]: true
   } : null;
 }
+
+
