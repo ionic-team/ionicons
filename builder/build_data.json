@@ -1,5 +1,5 @@
 {
-  "build_hash": "b5d131e98af8f2c2d1ccdd0040a78b24",
+  "build_hash": "ce1060abc75d0ff2483aa0555380ce01",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -71,6 +71,10 @@
     {
       "code": "0xf26c",
       "name": "briefcase"
+    },
+    {
+      "code": "0xf171",
+      "name": "build-add-to-cart"
     },
     {
       "code": "0xf16c",
