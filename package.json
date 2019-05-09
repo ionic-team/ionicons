@@ -28,6 +28,7 @@
     "start.docs": "stencil build --dev --watch --serve --config src/docs/stencil.config.ts",
     "start.icon": "stencil build --dev --watch --serve",
     "release": "np --any-branch --yolo",
+    "release.dev": "np --any-branch --yolo --tag=dev",
     "test": "stencil test --spec"
   },
   "devDependencies": {
