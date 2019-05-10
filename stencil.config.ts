@@ -15,6 +15,10 @@ export const config: Config = {
     {
       src: '../svg/',
       dest: './build/ionicons/svg/'
+    },
+    {
+      src: './test/*.svg',
+      dest: './assets/'
     }
   ]
 };

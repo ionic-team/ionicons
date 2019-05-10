@@ -6,15 +6,14 @@
 
   contain: strict;
 
+  fill: currentColor;
+
   box-sizing: content-box !important;
 }
 
 .icon-inner,
 svg {
   display: block;
-
-  fill: currentColor;
-  stroke: currentColor;
 
   height: 100%;
   width: 100%;
