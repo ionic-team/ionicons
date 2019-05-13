@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2019-4-15: Created with FontForge (http://fontforge.org)
+2019-5-13: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20180321 at Mon Apr 15 11:44:00 2019
+Created by FontForge 20180321 at Mon May 13 14:38:30 2019
  By Patricio Ferreira
 Copyright (c) 2019, Patricio Ferreira
 </metadata>
@@ -178,6 +178,8 @@ c36 38 -34 239 123 251c18 0 31 -5 38 -11c116 4 53 -209 86 -239v0l1 -1c0 -12 -32 
 d="M0 -24v432h448v-432h-448z" />
     <glyph glyph-name="ion-build-view-grid" unicode="&#xf161;" 
 d="M0 178v179h187v-179h-187zM0 -75v179h187v-179h-187zM261 178v179h187v-179h-187zM261 -75v179h187v-179h-187z" />
+    <glyph glyph-name="ion-build-view-grid3x3" unicode="&#xf173;" horiz-adv-x="436" 
+d="M0 281v128h128v-128h-128zM0 128v128h128v-128h-128zM0 -26v128h128v-128h-128zM154 281v128h128v-128h-128zM154 128v128h128v-128h-128zM154 -26v128h128v-128h-128zM307 281v128h128v-128h-128zM308 128v128h128v-128h-128zM308 -26v128h128v-128h-128z" />
     <glyph glyph-name="ion-build-view-list" unicode="&#xf162;" 
 d="M0 262v95h105v-95h-105zM0 94v95h105v-95h-105zM0 -75v96h105v-96h-105zM162 262v95h286v-95h-286zM162 94v95h286v-95h-286zM162 -75v96h286v-96h-286z" />
     <glyph glyph-name="ion-build-zoom-in" unicode="&#xf153;" horiz-adv-x="399" 
