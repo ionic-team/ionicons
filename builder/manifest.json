@@ -1,5 +1,5 @@
 {
-  "build_hash": "c61246da98ea29116b6facae28ef1cef",
+  "build_hash": "5acfb05bfff38d69a475778303279432",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -815,6 +815,10 @@
     {
       "code": "0xf161",
       "name": "build-view-grid"
+    },
+    {
+      "code": "0xf173",
+      "name": "build-view-grid3x3"
     },
     {
       "code": "0xf162",
