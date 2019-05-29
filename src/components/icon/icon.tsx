@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Watch } from '@stencil/core';
+import { Build, Component, Element, Host, Prop, State, Watch, getAssetPath, h } from '@stencil/core';
 import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
 
 @Component({
@@ -14,11 +14,6 @@ export class Icon {
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
-
-  @Prop({ context: 'isServer' }) isServer!: boolean;
-  @Prop({ context: 'resourcesUrl' }) resourcesUrl!: string;
-  @Prop({ context: 'document' }) doc!: Document;
-  @Prop({ context: 'window' }) win: any;
 
   /**
    * The color to use for the background of the item.
@@ -98,8 +93,8 @@ export class Icon {
   }
 
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
-    if (this.lazy && this.win && this.win.IntersectionObserver) {
-      const io = this.io = new this.win.IntersectionObserver((data: IntersectionObserverEntry[]) => {
+    if (this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
+      const io = this.io = new (window as any).IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
           io.disconnect();
           this.io = undefined;
@@ -121,10 +116,10 @@ export class Icon {
   @Watch('src')
   @Watch('icon')
   loadIcon() {
-    if (!this.isServer && this.isVisible) {
+    if (Build.isBrowser && this.isVisible) {
       const url = this.getUrl();
       if (url) {
-        getSvgContent(this.doc, url, 's-ion-icon')
+        getSvgContent(this.el.ownerDocument as any, url, 's-ion-icon')
           .then(svgContent => this.svgContent = svgContent);
       } else {
         console.error('icon was not resolved');
@@ -162,7 +157,7 @@ export class Icon {
 
     url = getName(this.getName(), this.mode, this.ios, this.md);
     if (url) {
-      return this.getNamedUrl(url);
+      return getNamedUrl(url);
     }
 
     url = getSrc(this.icon);
@@ -173,49 +168,39 @@ export class Icon {
     return null;
   }
 
-  private getNamedUrl(name: string) {
-    const url = getIconMap().get(name);
-    if (url) {
-      return url;
-    }
-    return `${this.resourcesUrl}svg/${name}.svg`;
-  }
 
-
-  hostData() {
+  render() {
     const mode = this.mode || 'md';
     const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
 
-    return {
-      'role': 'img',
-      class: {
+    return (
+      <Host role="img" class={{
         [`${mode}`]: true,
         ...createColorClasses(this.color),
         [`icon-${this.size}`]: !!this.size,
-        'flip-rtl': flipRtl && this.doc.dir === 'rtl'
-      }
-    };
-  }
-
-  render() {
-    if (!this.isServer && this.svgContent) {
-      // we've already loaded up this svg at one point
-      // and the svg content we've loaded and assigned checks out
-      // render this svg!!
-      return <div class="icon-inner" innerHTML={this.svgContent}></div>;
-    }
-
-    // actively requesting the svg
-    // or it's an SSR render
-    // so let's just render an empty div for now
-    return <div class="icon-inner"></div>;
+        'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl'
+        }}>{(
+          (Build.isBrowser && this.svgContent) ?
+          <div class="icon-inner" innerHTML={this.svgContent}></div> :
+          <div class="icon-inner"></div>
+        )}
+      </Host>
+    );
   }
 }
+
+const getNamedUrl = (name: string) => {
+  const url = getIconMap().get(name);
+  if (url) {
+    return url;
+  }
+  return getAssetPath(`svg/${name}.svg`);
+};
 
 
 const requests = new Map<string, Promise<string>>();
 
-function getSvgContent(doc: Document, url: string, scopedId: string | undefined) {
+const getSvgContent = (doc: Document, url: string, scopedId: string | undefined) => {
   // see if we already have a request for this url
   let req = requests.get(url);
 
@@ -233,18 +218,18 @@ function getSvgContent(doc: Document, url: string, scopedId: string | undefined)
   }
 
   return req;
-}
+};
 
 
-function isStatusValid(status: number) {
+const isStatusValid = (status: number) => {
   return status <= 299;
-}
+};
 
-function validateContent(
+const validateContent = (
   document: Document,
   svgContent: string | null,
   scopeId: string | undefined
-) {
+) => {
   if (svgContent) {
     const frag = document.createDocumentFragment();
     const div = document.createElement('div');
@@ -273,13 +258,11 @@ function validateContent(
     }
   }
   return '';
-}
+};
 
-function createColorClasses(color: string | undefined) {
+const createColorClasses = (color: string | undefined) => {
   return (color) ? {
     'ion-color': true,
     [`ion-color-${color}`]: true
   } : null;
-}
-
-
+};

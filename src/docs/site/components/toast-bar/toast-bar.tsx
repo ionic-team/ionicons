@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, Prop, State } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'toast-bar',

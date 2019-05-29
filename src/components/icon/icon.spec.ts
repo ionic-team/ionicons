@@ -61,12 +61,11 @@ describe('getUrl', () => {
 
   beforeEach(() => {
     i = new Icon();
-    i.resourcesUrl = '/build/ionicons/';
   });
 
   it('use icon prop, as name', () => {
     i.icon = 'some-name';
-    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+    expect(i.getUrl()).toBe('/svg/md-some-name.svg');
   });
 
   it('use icon prop, as url', () => {
@@ -77,31 +76,31 @@ describe('getUrl', () => {
   it('use name prop, set ios mode', () => {
     i.name = 'some-name';
     i.mode = 'ios';
-    expect(i.getUrl()).toBe('/build/ionicons/svg/ios-some-name.svg');
+    expect(i.getUrl()).toBe('/svg/ios-some-name.svg');
   });
 
   it('use name prop, set md mode', () => {
     i.name = 'some-name';
     i.mode = 'md';
-    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+    expect(i.getUrl()).toBe('/svg/md-some-name.svg');
   });
 
   it('use name prop, set undefined mode', () => {
     i.name = 'some-name';
     i.mode = undefined;
-    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+    expect(i.getUrl()).toBe('/svg/md-some-name.svg');
   });
 
   it('use name prop, set unknown mode', () => {
     i.name = 'some-name';
     i.mode = 'somemode' as any;
-    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+    expect(i.getUrl()).toBe('/svg/md-some-name.svg');
   });
 
   it('use name prop, default md mode', () => {
     i.name = 'some-name';
     i.icon = 'some-icon';
-    expect(i.getUrl()).toBe('/build/ionicons/svg/md-some-name.svg');
+    expect(i.getUrl()).toBe('/svg/md-some-name.svg');
   });
 
   it('use src prop', () => {

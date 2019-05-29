@@ -1,0 +1,1 @@
+import{a as i,b as a}from"./p-f18435a3.js";i().then(i=>a([["p-g5zwhxut",[[1,"ion-icon",{color:[1],mode:[1],ariaLabel:[1537,"aria-label"],ios:[1],md:[1],flipRtl:[4,"flip-rtl"],name:[1],src:[1],icon:[1],size:[1],lazy:[4],svgContent:[32],isVisible:[32]}]]]],{resourcesUrl:i}));

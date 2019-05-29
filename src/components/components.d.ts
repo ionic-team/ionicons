@@ -5,13 +5,10 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
   interface IonIcon {
     /**
     * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -58,7 +55,10 @@ export namespace Components {
     */
     'src'?: string;
   }
-  interface IonIconAttributes extends StencilHTMLAttributes {
+}
+
+declare namespace LocalJSX {
+  interface IonIcon extends JSXBase.HTMLAttributes {
     /**
     * Specifies the label to use for accessibility. Defaults to the icon name.
     */
@@ -104,16 +104,24 @@ export namespace Components {
     */
     'src'?: string;
   }
+
+  interface IntrinsicElements {
+    'ion-icon': IonIcon;
+  }
 }
 
-declare global {
-  interface StencilElementInterfaces {
-    'IonIcon': Components.IonIcon;
-  }
+export { LocalJSX as JSX };
 
-  interface StencilIntrinsicElements {
-    'ion-icon': Components.IonIconAttributes;
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
   }
+}
+
+
+declare global {
+
 
 
   interface HTMLIonIconElement extends Components.IonIcon, HTMLStencilElement {}
@@ -123,20 +131,9 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'ion-icon': HTMLIonIconElement
-  }
-
-  interface ElementTagNameMap {
     'ion-icon': HTMLIonIconElement;
   }
 
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
+  interface ElementTagNameMap extends HTMLElementTagNameMap {}
 }
+

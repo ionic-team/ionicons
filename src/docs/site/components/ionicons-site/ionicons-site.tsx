@@ -1,4 +1,4 @@
-import { Component, Listen, State } from '@stencil/core';
+import { Component, Listen, State, h } from '@stencil/core';
 import '@stencil/router';
 
 interface IconData {
@@ -25,7 +25,7 @@ export class IoniconsSite {
   @State() query = '';
   @State() isHeaderSearchVisible = false;
 
-  @Listen('window:scroll')
+  @Listen('scroll', { target: 'window' })
   handleScroll() {
     requestAnimationFrame(this.checkScroll.bind(this));
   }

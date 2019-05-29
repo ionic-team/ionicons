@@ -1,3 +1,4 @@
+import { h } from '@stencil/core';
 import hljs from 'highlight.js';
 
 export default function(version: string, type = 'md', name = 'heart') {

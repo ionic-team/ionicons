@@ -6,19 +6,22 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      dir: 'dist'
-    },
-    { type: 'docs' },
-    { type: 'www' }
-  ],
-  copy: [
-    {
-      src: '../svg/',
-      dest: './build/ionicons/svg/'
     },
     {
-      src: './test/*.svg',
-      dest: './assets/'
+      type: 'docs-readme'
+    },
+    {
+      type: 'www',
+      copy: [
+        {
+          src: '../svg/',
+          dest: './build/svg/'
+        },
+        {
+          src: './test/*.svg',
+          dest: './assets/'
+        }
+      ]
     }
   ]
 };

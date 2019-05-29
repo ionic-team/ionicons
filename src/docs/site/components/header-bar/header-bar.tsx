@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, Listen, Prop, State } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Listen, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'header-bar',
@@ -16,12 +16,12 @@ export class HeaderBar {
   @Prop() version?: string;
   @Prop() isSearchVisible = false;
 
-  @Listen('window:scroll')
+  @Listen('scroll', { target: 'window' })
   handleScroll() {
     requestAnimationFrame(this.checkScroll.bind(this));
   }
 
-  @Listen('window:resize')
+  @Listen('resize', { target: 'window' })
   handleResize() {
     requestAnimationFrame(() => {
       if (window.innerWidth > 768) {

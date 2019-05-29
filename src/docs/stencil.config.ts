@@ -13,19 +13,19 @@ export const config: Config = {
       type: 'www',
       dir: '../../docs/',
       serviceWorker: null,
-      empty: false
+      empty: false,
+      copy: [
+        { src: '../../../dist/css/ionicons.min.css', dest: './css/ionicons.min.css' },
+        { src: '../../../dist/ionicons/', dest: './ionicons/' },
+        { src: '../../../dist/ionicons.js', dest: './ionicons.js' },
+        { src: '../../../dist/cheatsheet.html', dest: './cheatsheet.html' },
+        { src: '../archived/v1/', dest: './v1/' },
+        { src: '../archived/v2/', dest: './v2/' },
+        { src: './index.html', dest: './usage/index.html' },
+        { src: './test', dest: './test' },
+        { src: '../../../dist/ionicons/data.json', dest: './data.json' }
+      ]
     }
   ],
-  globalStyle: 'site/global/style.css',
-  copy: [
-    { src: '../../../dist/css/ionicons.min.css', dest: './css/ionicons.min.css' },
-    { src: '../../../dist/ionicons/', dest: './ionicons/' },
-    { src: '../../../dist/ionicons.js', dest: './ionicons.js' },
-    { src: '../../../dist/cheatsheet.html', dest: './cheatsheet.html' },
-    { src: '../archived/v1/', dest: './v1/' },
-    { src: '../archived/v2/', dest: './v2/' },
-    { src: './index.html', dest: './usage/index.html' },
-    { src: './test', dest: './test' },
-    { src: '../../../dist/ionicons/data.json', dest: './data.json' }
-  ]
+  globalStyle: 'site/global/style.css'
 };

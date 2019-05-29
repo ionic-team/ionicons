@@ -5,68 +5,34 @@
  */
 
 
-import '@stencil/core';
-
-import '@stencil/router';
-import '@stencil/state-tunnel';
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   MatchResults,
 } from '@stencil/router';
 
 
 export namespace Components {
-
   interface FooterBar {}
-  interface FooterBarAttributes extends StencilHTMLAttributes {}
-
   interface HeaderBar {
     'isSearchVisible': boolean;
     'query': string;
     'version'?: string;
   }
-  interface HeaderBarAttributes extends StencilHTMLAttributes {
-    'isSearchVisible'?: boolean;
-    'onToggleHeaderSearch'?: (event: CustomEvent) => void;
-    'query'?: string;
-    'version'?: string;
-  }
-
   interface IconList {
     'data': any;
     'query': string;
   }
-  interface IconListAttributes extends StencilHTMLAttributes {
-    'data'?: any;
-    'query'?: string;
-  }
-
   interface IconSearch {
     'autofocus': string;
     'query': string;
     'size': string;
   }
-  interface IconSearchAttributes extends StencilHTMLAttributes {
-    'autofocus'?: string;
-    'onHasSearched'?: (event: CustomEvent) => void;
-    'query'?: string;
-    'size'?: string;
-  }
-
   interface IoniconsSite {}
-  interface IoniconsSiteAttributes extends StencilHTMLAttributes {}
-
   interface LandingPage {
     'data': any;
     'query': string;
   }
-  interface LandingPageAttributes extends StencilHTMLAttributes {
-    'data'?: any;
-    'query'?: string;
-  }
-
   interface NotfoundPage {}
-  interface NotfoundPageAttributes extends StencilHTMLAttributes {}
-
   interface ToastBar {
     'selectedIcon'?: {
       name: string,
@@ -75,9 +41,39 @@ export namespace Components {
     };
     'selectedIconType'?: string;
   }
-  interface ToastBarAttributes extends StencilHTMLAttributes {
-    'onClearToast'?: (event: CustomEvent) => void;
-    'onToggleHeaderSearch'?: (event: CustomEvent) => void;
+  interface UsagePage {
+    'data': any;
+    'match'?: MatchResults;
+  }
+}
+
+declare namespace LocalJSX {
+  interface FooterBar extends JSXBase.HTMLAttributes {}
+  interface HeaderBar extends JSXBase.HTMLAttributes {
+    'isSearchVisible'?: boolean;
+    'onToggleHeaderSearch'?: (event: CustomEvent<any>) => void;
+    'query'?: string;
+    'version'?: string;
+  }
+  interface IconList extends JSXBase.HTMLAttributes {
+    'data'?: any;
+    'query'?: string;
+  }
+  interface IconSearch extends JSXBase.HTMLAttributes {
+    'autofocus'?: string;
+    'onHasSearched'?: (event: CustomEvent<any>) => void;
+    'query'?: string;
+    'size'?: string;
+  }
+  interface IoniconsSite extends JSXBase.HTMLAttributes {}
+  interface LandingPage extends JSXBase.HTMLAttributes {
+    'data'?: any;
+    'query'?: string;
+  }
+  interface NotfoundPage extends JSXBase.HTMLAttributes {}
+  interface ToastBar extends JSXBase.HTMLAttributes {
+    'onClearToast'?: (event: CustomEvent<any>) => void;
+    'onToggleHeaderSearch'?: (event: CustomEvent<any>) => void;
     'selectedIcon'?: {
       name: string,
       icons: string[],
@@ -85,41 +81,36 @@ export namespace Components {
     };
     'selectedIconType'?: string;
   }
-
-  interface UsagePage {
-    'data': any;
-    'match'?: MatchResults;
-  }
-  interface UsagePageAttributes extends StencilHTMLAttributes {
+  interface UsagePage extends JSXBase.HTMLAttributes {
     'data'?: any;
     'match'?: MatchResults;
   }
+
+  interface IntrinsicElements {
+    'footer-bar': FooterBar;
+    'header-bar': HeaderBar;
+    'icon-list': IconList;
+    'icon-search': IconSearch;
+    'ionicons-site': IoniconsSite;
+    'landing-page': LandingPage;
+    'notfound-page': NotfoundPage;
+    'toast-bar': ToastBar;
+    'usage-page': UsagePage;
+  }
 }
 
-declare global {
-  interface StencilElementInterfaces {
-    'FooterBar': Components.FooterBar;
-    'HeaderBar': Components.HeaderBar;
-    'IconList': Components.IconList;
-    'IconSearch': Components.IconSearch;
-    'IoniconsSite': Components.IoniconsSite;
-    'LandingPage': Components.LandingPage;
-    'NotfoundPage': Components.NotfoundPage;
-    'ToastBar': Components.ToastBar;
-    'UsagePage': Components.UsagePage;
-  }
+export { LocalJSX as JSX };
 
-  interface StencilIntrinsicElements {
-    'footer-bar': Components.FooterBarAttributes;
-    'header-bar': Components.HeaderBarAttributes;
-    'icon-list': Components.IconListAttributes;
-    'icon-search': Components.IconSearchAttributes;
-    'ionicons-site': Components.IoniconsSiteAttributes;
-    'landing-page': Components.LandingPageAttributes;
-    'notfound-page': Components.NotfoundPageAttributes;
-    'toast-bar': Components.ToastBarAttributes;
-    'usage-page': Components.UsagePageAttributes;
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
   }
+}
+
+
+declare global {
+
 
 
   interface HTMLFooterBarElement extends Components.FooterBar, HTMLStencilElement {}
@@ -177,18 +168,6 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'footer-bar': HTMLFooterBarElement
-    'header-bar': HTMLHeaderBarElement
-    'icon-list': HTMLIconListElement
-    'icon-search': HTMLIconSearchElement
-    'ionicons-site': HTMLIoniconsSiteElement
-    'landing-page': HTMLLandingPageElement
-    'notfound-page': HTMLNotfoundPageElement
-    'toast-bar': HTMLToastBarElement
-    'usage-page': HTMLUsagePageElement
-  }
-
-  interface ElementTagNameMap {
     'footer-bar': HTMLFooterBarElement;
     'header-bar': HTMLHeaderBarElement;
     'icon-list': HTMLIconListElement;
@@ -200,13 +179,6 @@ declare global {
     'usage-page': HTMLUsagePageElement;
   }
 
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
+  interface ElementTagNameMap extends HTMLElementTagNameMap {}
 }
+

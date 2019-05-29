@@ -1,4 +1,4 @@
-import { Component, Element, Listen, Prop, State } from '@stencil/core';
+import { Component, Element, Listen, Prop, State, h } from '@stencil/core';
 
 
 @Component({
@@ -15,12 +15,12 @@ export class LandingPage {
   @Prop() query = '';
   @Prop() data: any;
 
-  @Listen('body:keyup')
+  @Listen('keyup', { target: 'body' })
   escListener(ev: KeyboardEvent) {
     if (ev.code === 'Escape' && this.selectedIcon.length) this.selectedIcon = '';
   }
 
-  @Listen('body:click')
+  @Listen('click', { target: 'body' })
   handleBodyClicked() {
     if (this.selectedIcon.length) this.selectedIcon = '';
   }
@@ -30,7 +30,7 @@ export class LandingPage {
     this.selectedIcon = '';
   }
 
-  @Listen('window:scroll')
+  @Listen('scroll', { target: 'window' })
   handleScroll() {
     requestAnimationFrame(this.checkScroll.bind(this));
   }
