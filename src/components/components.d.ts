@@ -39,9 +39,9 @@ export namespace Components {
     */
     'md'?: string;
     /**
-    * The mode determines which platform styles to use. Possible values are: `"ios"` or `"md"`.
+    * The mode determines which platform styles to use.
     */
-    'mode'?: 'ios' | 'md';
+    'mode'?: "ios" | "md";
     /**
     * Specifies which icon to use from the built-in set of icons.
     */
@@ -57,8 +57,21 @@ export namespace Components {
   }
 }
 
+declare global {
+
+
+  interface HTMLIonIconElement extends Components.IonIcon, HTMLStencilElement {}
+  var HTMLIonIconElement: {
+    prototype: HTMLIonIconElement;
+    new (): HTMLIonIconElement;
+  };
+  interface HTMLElementTagNameMap {
+    'ion-icon': HTMLIonIconElement;
+  }
+}
+
 declare namespace LocalJSX {
-  interface IonIcon extends JSXBase.HTMLAttributes {
+  interface IonIcon extends JSXBase.HTMLAttributes<HTMLIonIconElement> {
     /**
     * Specifies the label to use for accessibility. Defaults to the icon name.
     */
@@ -88,9 +101,9 @@ declare namespace LocalJSX {
     */
     'md'?: string;
     /**
-    * The mode determines which platform styles to use. Possible values are: `"ios"` or `"md"`.
+    * The mode determines which platform styles to use.
     */
-    'mode'?: 'ios' | 'md';
+    'mode'?: "ios" | "md";
     /**
     * Specifies which icon to use from the built-in set of icons.
     */
@@ -119,21 +132,4 @@ declare module "@stencil/core" {
   }
 }
 
-
-declare global {
-
-
-
-  interface HTMLIonIconElement extends Components.IonIcon, HTMLStencilElement {}
-  var HTMLIonIconElement: {
-    prototype: HTMLIonIconElement;
-    new (): HTMLIonIconElement;
-  };
-
-  interface HTMLElementTagNameMap {
-    'ion-icon': HTMLIonIconElement;
-  }
-
-  interface ElementTagNameMap extends HTMLElementTagNameMap {}
-}
 

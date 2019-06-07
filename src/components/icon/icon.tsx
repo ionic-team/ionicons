@@ -1,6 +1,9 @@
-import { Build, Component, Element, Host, Prop, State, Watch, getAssetPath, h } from '@stencil/core';
+import { Build, Component, Element, Host, Prop, State, Watch, getAssetPath, getMode, h } from '@stencil/core';
 import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
 
+/**
+ * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
+ */
 @Component({
   tag: 'ion-icon',
   assetsDir: 'svg',
@@ -9,6 +12,7 @@ import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
 })
 export class Icon {
   private io?: IntersectionObserver;
+  private mode = getIonMode(this);
 
   @Element() el!: HTMLElement;
 
@@ -19,12 +23,6 @@ export class Icon {
    * The color to use for the background of the item.
    */
   @Prop() color?: string;
-
-  /**
-   * The mode determines which platform styles to use.
-   * Possible values are: `"ios"` or `"md"`.
-   */
-  @Prop() mode?: 'ios' | 'md';
 
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -75,7 +73,7 @@ export class Icon {
    */
   @Prop() lazy = false;
 
-  componentWillLoad() {
+  connectedCallback() {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
     // only load the svg if it's visible
@@ -85,7 +83,7 @@ export class Icon {
     });
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
@@ -93,7 +91,7 @@ export class Icon {
   }
 
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
-    if (this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
+    if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
       const io = this.io = new (window as any).IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
           io.disconnect();
@@ -139,7 +137,7 @@ export class Icon {
     }
   }
 
-  getName() {
+  private getName() {
     if (this.name !== undefined) {
       return this.name;
     }
@@ -149,7 +147,7 @@ export class Icon {
     return undefined;
   }
 
-  getUrl() {
+  private getUrl() {
     let url = getSrc(this.src);
     if (url) {
       return url;
@@ -168,7 +166,6 @@ export class Icon {
     return null;
   }
 
-
   render() {
     const mode = this.mode || 'md';
     const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
@@ -180,14 +177,18 @@ export class Icon {
         [`icon-${this.size}`]: !!this.size,
         'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl'
         }}>{(
-          (Build.isBrowser && this.svgContent) ?
-          <div class="icon-inner" innerHTML={this.svgContent}></div> :
-          <div class="icon-inner"></div>
+          (Build.isBrowser && this.svgContent)
+            ? <div class="icon-inner" innerHTML={this.svgContent}></div>
+            : <div class="icon-inner"></div>
         )}
       </Host>
     );
   }
 }
+
+const getIonMode = (ref: any) => {
+  return getMode(ref) || document.documentElement.getAttribute('mode') || 'md';
+};
 
 const getNamedUrl = (name: string) => {
   const url = getIconMap().get(name);

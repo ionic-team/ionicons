@@ -1,4 +1,4 @@
-var sass = require('node-sass');
+var sass = require('sass');
 var fs = require('fs-extra');
 var path = require('path');
 
@@ -9,7 +9,6 @@ fs.emptyDirSync(distCssDir);
 
 generateCss('ionicons');
 generateCss('ionicons-core');
-
 
 function generateCss(fileName) {
   var input = path.join(distScssDir, fileName + '.scss');
