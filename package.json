@@ -34,9 +34,9 @@
     "test": "stencil test --spec"
   },
   "devDependencies": {
-    "@stencil/core": "1.0.0",
-    "@stencil/router": "one",
-    "@stencil/sass": "latest",
+    "@stencil/core": "^1.0.0",
+    "@stencil/router": "^1.0.0",
+    "@stencil/sass": "^1.0.0",
     "@types/highlight.js": "^9.12.3",
     "@types/jest": "24.0.13",
     "@types/puppeteer": "1.12.4",
