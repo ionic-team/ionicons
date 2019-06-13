@@ -1,1 +1,1 @@
-export * from '../dist/ionicons/svg/index.esm';
+export * from '../dist/ionicons/svg/index';

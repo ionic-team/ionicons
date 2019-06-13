@@ -1,5 +1,7 @@
 {
-  "name": "icon-loader",
+  "name": "ionicons/icons",
+  "module": "./index.mjs",
+  "main": "./index.js",
   "typings": "./index.d.ts",
-  "module": "./index.js"
+  "private": true
 }

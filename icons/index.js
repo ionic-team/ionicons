@@ -1,1 +1,1 @@
-export * from '../dist/ionicons/svg/index.esm.js';
+module.export = require('../dist/ionicons/svg/index.js');

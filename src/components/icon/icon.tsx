@@ -1,5 +1,7 @@
-import { Build, Component, Element, Host, Prop, State, Watch, getAssetPath, getMode, h } from '@stencil/core';
-import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
+import { Build, Component, Element, Host, Prop, State, Watch, getMode, h } from '@stencil/core';
+import { getSvgContent } from './request';
+import { getName, getUrl } from './utils';
+
 
 /**
  * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
@@ -12,7 +14,7 @@ import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
 })
 export class Icon {
   private io?: IntersectionObserver;
-  private mode = getIonMode(this);
+  mode = getIonMode(this);
 
   @Element() el!: HTMLElement;
 
@@ -59,7 +61,7 @@ export class Icon {
    * it will set the `src` property. Otherwise it assumes it's a built-in named
    * SVG and set the `name` property.
    */
-  @Prop() icon?: string;
+  @Prop() icon?: any;
 
   /**
    * The size of the icon.
@@ -115,9 +117,9 @@ export class Icon {
   @Watch('icon')
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
-      const url = this.getUrl();
+      const url = getUrl(this);
       if (url) {
-        getSvgContent(this.el.ownerDocument as any, url, 's-ion-icon')
+        getSvgContent(this.el.ownerDocument as any, url)
           .then(svgContent => this.svgContent = svgContent);
       } else {
         console.error('icon was not resolved');
@@ -125,45 +127,16 @@ export class Icon {
     }
 
     if (!this.ariaLabel) {
-      const name = getName(this.getName(), this.mode, this.ios, this.md);
+      const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
-      if (name) {
-        this.ariaLabel = name
+      if (label) {
+        this.ariaLabel = label
           .replace('ios-', '')
           .replace('md-', '')
           .replace(/\-/g, ' ');
       }
     }
-  }
-
-  private getName() {
-    if (this.name !== undefined) {
-      return this.name;
-    }
-    if (this.icon && !isSrc(this.icon)) {
-      return this.icon;
-    }
-    return undefined;
-  }
-
-  private getUrl() {
-    let url = getSrc(this.src);
-    if (url) {
-      return url;
-    }
-
-    url = getName(this.getName(), this.mode, this.ios, this.md);
-    if (url) {
-      return getNamedUrl(url);
-    }
-
-    url = getSrc(this.icon);
-    if (url) {
-      return url;
-    }
-
-    return null;
   }
 
   render() {
@@ -172,7 +145,7 @@ export class Icon {
 
     return (
       <Host role="img" class={{
-        [`${mode}`]: true,
+        [mode]: true,
         ...createColorClasses(this.color),
         [`icon-${this.size}`]: !!this.size,
         'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl'
@@ -186,80 +159,11 @@ export class Icon {
   }
 }
 
+
 const getIonMode = (ref: any) => {
   return getMode(ref) || document.documentElement.getAttribute('mode') || 'md';
 };
 
-const getNamedUrl = (name: string) => {
-  const url = getIconMap().get(name);
-  if (url) {
-    return url;
-  }
-  return getAssetPath(`svg/${name}.svg`);
-};
-
-
-const requests = new Map<string, Promise<string>>();
-
-const getSvgContent = (doc: Document, url: string, scopedId: string | undefined) => {
-  // see if we already have a request for this url
-  let req = requests.get(url);
-
-  if (!req) {
-    // we don't already have a request
-    req = fetch(url, { cache: 'force-cache' }).then(rsp => {
-      if (isStatusValid(rsp.status)) {
-        return rsp.text();
-      }
-      return Promise.resolve(null);
-    }).then(svgContent => validateContent(doc, svgContent, scopedId));
-
-    // cache for the same requests
-    requests.set(url, req);
-  }
-
-  return req;
-};
-
-
-const isStatusValid = (status: number) => {
-  return status <= 299;
-};
-
-const validateContent = (
-  document: Document,
-  svgContent: string | null,
-  scopeId: string | undefined
-) => {
-  if (svgContent) {
-    const frag = document.createDocumentFragment();
-    const div = document.createElement('div');
-    div.innerHTML = svgContent;
-    frag.appendChild(div);
-
-    // setup this way to ensure it works on our buddy IE
-    for (let i = div.childNodes.length - 1; i >= 0; i--) {
-      if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
-        div.removeChild(div.childNodes[i]);
-      }
-    }
-
-    // must only have 1 root element
-    const svgElm = div.firstElementChild;
-    if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
-      if (scopeId) {
-        svgElm.setAttribute('class', scopeId);
-      }
-      // root element must be an svg
-      // lets double check we've got valid elements
-      // do not allow scripts
-      if (isValid(svgElm as any)) {
-        return div.innerHTML;
-      }
-    }
-  }
-  return '';
-};
 
 const createColorClasses = (color: string | undefined) => {
   return (color) ? {

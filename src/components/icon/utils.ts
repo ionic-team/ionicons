@@ -1,3 +1,6 @@
+import { getAssetPath } from '@stencil/core';
+import { Icon } from './icon';
+
 
 let CACHED_MAP: Map<string, string>;
 
@@ -17,15 +20,52 @@ export const addIcons = (icons: {[name: string]: string }) => {
   });
 };
 
+
+export const getUrl = (i: Icon) => {
+  let url = getSrc(i.src);
+  if (url) {
+    return url;
+  }
+
+  url = getName(i.name, i.icon, i.mode, i.ios, i.md);
+  if (url) {
+    return getNamedUrl(url);
+  }
+
+  if (i.icon) {
+    url = getSrc(i.icon);
+    if (url) {
+      return url;
+    }
+
+    url = getSrc(i.icon[i.mode]);
+    if (url) {
+      return url;
+    }
+  }
+
+  return null;
+};
+
+
+const getNamedUrl = (name: string) => {
+  const url = getIconMap().get(name);
+  if (url) {
+    return url;
+  }
+  return getAssetPath(`svg/${name}.svg`);
+};
+
+
 export const getName = (
   name: string | undefined,
+  icon: string | undefined,
   mode: string | undefined,
   ios: string | undefined,
   md: string | undefined
 ) => {
   // default to "md" if somehow the mode wasn't set
-  mode = (mode || 'md').toLowerCase();
-  mode = mode === 'ios' ? 'ios' : 'md';
+  mode = (mode && mode.toLowerCase()) === 'ios' ? 'ios' : 'md';
 
   // if an icon was passed in using the ios or md attributes
   // set the iconName to whatever was passed in
@@ -35,16 +75,21 @@ export const getName = (
   } else if (md && mode === 'md') {
     name = md.toLowerCase();
 
-  } else if (name) {
-    name = name.toLowerCase();
-    if (!/^md-|^ios-|^logo-/.test(name)) {
-      // this does not have one of the defaults
-      // so lets auto add in the mode prefix for them
-      name = `${mode}-${name}`;
+  } else {
+    if (!name && icon && !isSrc(icon)) {
+      name = icon;
+    }
+    if (isStr(name)) {
+      name = name.toLowerCase();
+      if (!/^md-|^ios-|^logo-/.test(name)) {
+        // this does not have one of the defaults
+        // so lets auto add in the mode prefix for them
+        name = mode + '-' + name;
+      }
     }
   }
 
-  if (typeof name !== 'string' || name.trim() === '') {
+  if (!isStr(name) || name.trim() === '') {
     return null;
   }
 
@@ -58,7 +103,7 @@ export const getName = (
 };
 
 export const getSrc = (src: string | undefined) => {
-  if (typeof src === 'string') {
+  if (isStr(src)) {
     src = src.trim();
     if (isSrc(src)) {
       return src;
@@ -71,24 +116,5 @@ export const isSrc = (str: string) => {
   return str.length > 0 && /(\/|\.)/.test(str);
 };
 
-export const isValid = (elm: HTMLElement) => {
-  if (elm.nodeType === 1) {
-    if (elm.nodeName.toLowerCase() === 'script') {
-      return false;
-    }
 
-    for (let i = 0; i < elm.attributes.length; i++) {
-      const val = elm.attributes[i].value;
-      if (typeof val === 'string' && val.toLowerCase().indexOf('on') === 0) {
-        return false;
-      }
-    }
-
-    for (let i = 0; i < elm.childNodes.length; i++) {
-      if (!isValid(elm.childNodes[i] as any)) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
+export const isStr = (val: any): val is string => typeof val === 'string';
