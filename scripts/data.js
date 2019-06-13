@@ -143,7 +143,7 @@ sortedKeys.forEach(key => {
   const modes = Object.keys(d.modes).sort();
 
   if (modes.length === 1) {
-    const esm = `export const ${d.exportCommonName} = ${d.modes[modes[0]].modeImportName};`;
+    const esm = `export var ${d.exportCommonName} = ${d.modes[modes[0]].modeImportName};`;
     esmOutput.push(esm);
 
     const cjs = `exports.${d.exportCommonName} = ${d.modes[modes[0]].modeImportName};`;
@@ -153,7 +153,7 @@ sortedKeys.forEach(key => {
     dtsOutput.push(dts);
 
   } else {
-    const esm = `export const ${d.exportCommonName} = {`
+    const esm = `export var ${d.exportCommonName} = {`
     esmOutput.push(esm);
 
     const cjs = `exports.${d.exportCommonName} = {`;
