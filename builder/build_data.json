@@ -1,5 +1,5 @@
 {
-  "build_hash": "c61246da98ea29116b6facae28ef1cef",
+  "build_hash": "5acfb05bfff38d69a475778303279432",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -55,6 +55,10 @@
     {
       "code": "0xf102",
       "name": "archive"
+    },
+    {
+      "code": "0xf17a",
+      "name": "archive-cabinet"
     },
     {
       "code": "0xf262",
@@ -225,6 +229,10 @@
       "name": "card"
     },
     {
+      "code": "0xf176",
+      "name": "cart"
+    },
+    {
       "code": "0xf316",
       "name": "cash"
     },
@@ -285,8 +293,8 @@
       "name": "close"
     },
     {
-      "code": "0xf128",
-      "name": "close-circled"
+      "code": "0xf178",
+      "name": "collapse"
     },
     {
       "code": "0xf12c",
@@ -295,6 +303,10 @@
     {
       "code": "0xf274",
       "name": "connection-bars"
+    },
+    {
+      "code": "0xf179",
+      "name": "copy"
     },
     {
       "code": "0xf14d",
@@ -319,6 +331,10 @@
     {
       "code": "0xf3c5",
       "name": "erlenmeyer-flask"
+    },
+    {
+      "code": "0xf177",
+      "name": "expand"
     },
     {
       "code": "0xf133",
@@ -435,6 +451,10 @@
     {
       "code": "0xf20b",
       "name": "more"
+    },
+    {
+      "code": "0xf174",
+      "name": "move"
     },
     {
       "code": "0xf20e",
