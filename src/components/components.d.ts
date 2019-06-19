@@ -25,7 +25,7 @@ export namespace Components {
     /**
     * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
     */
-    'icon'?: string;
+    'icon'?: any;
     /**
     * Specifies which icon to use on `ios` mode.
     */
@@ -87,7 +87,7 @@ declare namespace LocalJSX {
     /**
     * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
     */
-    'icon'?: string;
+    'icon'?: any;
     /**
     * Specifies which icon to use on `ios` mode.
     */

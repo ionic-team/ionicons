@@ -159,7 +159,7 @@ sortedKeys.forEach(key => {
     const cjs = `exports.${d.exportCommonName} = {`;
     cjsOutput.push(cjs);
 
-    const dts = `export declare const ${d.exportCommonName} = {`;
+    const dts = `export declare const ${d.exportCommonName}: {`;
     dtsOutput.push(dts);
 
     for (let i = 0; i < modes.length; i++) {
@@ -168,7 +168,7 @@ sortedKeys.forEach(key => {
 
       esmOutput.push(`  ${mode}: ${d.modes[mode].modeImportName}${suffix}`);
       cjsOutput.push(`  ${mode}: ${d.modes[mode].modeImportName}${suffix}`);
-      dtsOutput.push(`  ${mode}: string${suffix}`);
+      dtsOutput.push(`  ${mode}: string;`);
     }
 
     esmOutput.push(`};`);
