@@ -774,7 +774,7 @@ for (var x = allScripts.length - 1; x >= 0; x--) {
 }
 var resourcesUrl = scriptElm ? scriptElm.getAttribute('data-resources-url') || scriptElm.src : '';
 var start = function() {
-  var url = new URL('./p-ee956534.system.js', resourcesUrl);
+  var url = new URL('./p-3e379edb.system.js', resourcesUrl);
   System.import(url.href);
 };
 
