@@ -119,10 +119,8 @@ export class Icon {
     if (Build.isBrowser && this.isVisible) {
       const url = getUrl(this);
       if (url) {
-        getSvgContent(this.el.ownerDocument as any, url)
+        getSvgContent(url)
           .then(svgContent => this.svgContent = svgContent);
-      } else {
-        console.error('icon was not resolved');
       }
     }
 

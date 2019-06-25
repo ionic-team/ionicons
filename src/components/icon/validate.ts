@@ -2,11 +2,10 @@ import { isStr } from './utils';
 
 
 export const validateContent = (
-  doc: Document,
   svgContent: string | null
 ) => {
   if (svgContent) {
-    const div = doc.createElement('div');
+    const div = document.createElement('div');
     div.innerHTML = svgContent;
 
     // setup this way to ensure it works on our buddy IE

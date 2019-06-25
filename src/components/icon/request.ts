@@ -4,7 +4,7 @@ import { validateContent } from './validate';
 const requests = new Map<string, Promise<string>>();
 
 
-export const getSvgContent = (doc: Document, url: string) => {
+export const getSvgContent = (url: string) => {
   // see if we already have a request for this url
   let req = requests.get(url);
 
@@ -16,7 +16,7 @@ export const getSvgContent = (doc: Document, url: string) => {
       }
       return Promise.resolve(null);
 
-    }).then(svgContent => validateContent(doc, svgContent));
+    }).then(svgContent => validateContent(svgContent));
 
     // cache for the same requests
     requests.set(url, req);
