@@ -27,6 +27,7 @@
     "start.icon": "stencil build --dev --watch --serve",
     "release.prepare": "npm run build",
     "release": "np --any-branch --yolo",
+    "version": "npm run build",
     "release.dev": "np --any-branch --yolo --tag=dev",
     "test": "stencil test --spec"
   },
