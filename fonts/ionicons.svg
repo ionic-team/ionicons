@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2019-6-19: Created with FontForge (http://fontforge.org)
+2019-6-27: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20190318 at Wed Jun 19 15:34:21 2019
+Created by FontForge 20190318 at Thu Jun 27 16:09:45 2019
  By Andre Harris
 Copyright (c) 2019, Andre Harris
 </metadata>
@@ -178,6 +178,9 @@ c8 0 10 5 6 11c-7 11 -15 22 -23 32c-2 3 -6 5 -9 5c-12 1 -24 0 -36 0c-6 0 -7 -3 -
 c19 0 33 -15 33 -33c0 -19 -14 -33 -33 -33c-18 0 -33 14 -33 33c0 18 15 33 33 33zM283 76c9 0 17 7 17 16s-8 17 -17 17s-16 -7 -16 -16s7 -17 16 -17z" />
     <glyph glyph-name="ion-android-checkbox-outline" unicode="&#xf373;" horiz-adv-x="384" 
 d="M105 233l66 -66l183 183l30 -30l-213 -213l-96 96zM341 43v170h43v-170c0 -23 -20 -43 -43 -43h-298c-23 0 -43 20 -43 43v298c0 23 20 43 43 43h213v-43h-213v-298h298z" />
+    <glyph glyph-name="ion-close-circled" unicode="&#xf128;" 
+d="M224 415c124 0 224 -100 224 -224s-100 -224 -224 -224s-224 100 -224 224s100 224 224 224zM332 116l-75 75l76 75c3 3 3 9 0 12l-22 21c-2 2 -4 3 -6 3s-3 -1 -5 -3l-76 -74l-76 74c-2 2 -3 3 -5 3s-4 -1 -6 -3l-21 -21c-3 -3 -3 -9 0 -12l76 -75l-76 -76
+c-2 -1 -2 -3 -2 -5s0 -4 2 -6l21 -22c2 -2 4 -2 6 -2s4 0 6 2l75 76l76 -75c2 -2 3 -3 5 -3s4 1 6 3l21 21c2 1 3 4 3 6s-1 4 -3 6z" />
     <glyph glyph-name="ion-build-zoom-in" unicode="&#xf153;" horiz-adv-x="399" 
 d="M399 33l-24 -24l-118 118c-27 -22 -61 -35 -99 -35c-87 0 -158 71 -158 158s71 158 158 158s158 -71 158 -158c0 -37 -13 -72 -35 -99zM58 150c27 -27 62 -42 100 -42s73 15 100 42s41 62 41 100s-14 73 -41 100s-62 42 -100 42s-73 -15 -100 -42s-41 -62 -41 -100
 s14 -73 41 -100zM149 174v65h-62v22h62v65h21v-65h62v-22h-62v-65h-21z" />
@@ -185,9 +188,8 @@ s14 -73 41 -100zM149 174v65h-62v22h62v65h21v-65h62v-22h-62v-65h-21z" />
 d="M341 341h-298v-298h298v298zM341 384v0c23 0 43 -20 43 -43v-298c0 -23 -20 -43 -43 -43h-298c-23 0 -43 20 -43 43v298c0 23 20 43 43 43h298z" />
     <glyph glyph-name="ion-build-view-grid3x3" unicode="&#xf173;" horiz-adv-x="436" 
 d="M0 281v128h128v-128h-128zM0 128v128h128v-128h-128zM0 -26v128h128v-128h-128zM154 281v128h128v-128h-128zM154 128v128h128v-128h-128zM154 -26v128h128v-128h-128zM307 281v128h128v-128h-128zM308 128v128h128v-128h-128zM308 -26v128h128v-128h-128z" />
-    <glyph glyph-name="ion-collapse" unicode="&#xf178;" 
-d="M224 415c124 0 224 -100 224 -224s-100 -224 -224 -224s-224 100 -224 224s100 224 224 224zM332 116l-75 75l76 75c3 3 3 9 0 12l-22 21c-2 2 -4 3 -6 3s-3 -1 -5 -3l-76 -74l-76 74c-2 2 -3 3 -5 3s-4 -1 -6 -3l-21 -21c-3 -3 -3 -9 0 -12l76 -75l-76 -76
-c-2 -1 -2 -3 -2 -5s0 -4 2 -6l21 -22c2 -2 4 -2 6 -2s4 0 6 2l75 76l76 -75c2 -2 3 -3 5 -3s4 1 6 3l21 21c2 1 3 4 3 6s-1 4 -3 6z" />
+    <glyph glyph-name="ion-collapse" unicode="&#xf178;" horiz-adv-x="416" 
+d="M208 358c-44 0 -86 -18 -117 -49s-49 -73 -49 -117s18 -86 49 -117s73 -49 117 -49s86 18 117 49s49 73 49 117s-18 86 -49 117s-73 49 -117 49zM208 400c115 0 208 -93 208 -208s-93 -208 -208 -208s-208 93 -208 208s93 208 208 208zM315 171h-214v42h214v-42z" />
     <glyph glyph-name="ion-connection-bars" unicode="&#xf274;" horiz-adv-x="352" 
 d="M0 32v64h64v-64h-64zM96 32v128h64v-128h-64zM192 32v224h64v-224h-64zM288 32v320h64v-320h-64z" />
     <glyph glyph-name="ion-social-googleplus" unicode="&#xf235;" 
