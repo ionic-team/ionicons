@@ -60,7 +60,7 @@ This repo already comes with all the files built and ready to go, but can also b
 
 3) Install [Sass](http://sass-lang.com/)
 
-    $ npm install -g sass
+    $ gem install sass
 
 4) Add or subtract files from the `src/` folder you'd like to be apart of the font files.
 
