@@ -1,5 +1,5 @@
 {
-  "build_hash": "5acfb05bfff38d69a475778303279432",
+  "build_hash": "a790b2d5092662d4f7738463770188bb",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -291,6 +291,10 @@
     {
       "code": "0xf12a",
       "name": "close"
+    },
+    {
+      "code": "0xf128",
+      "name": "close-circled"
     },
     {
       "code": "0xf178",
