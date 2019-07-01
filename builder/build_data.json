@@ -1,5 +1,5 @@
 {
-  "build_hash": "a790b2d5092662d4f7738463770188bb",
+  "build_hash": "66abbacf3b67e466970f176fe7d7a17b",
   "prefix": "ion-",
   "version": "2.0.0",
   "name": "Ionicons",
@@ -179,6 +179,10 @@
     {
       "code": "0xf160",
       "name": "build-social-youtube-outline"
+    },
+    {
+      "code": "0xf17b",
+      "name": "build-subarrow"
     },
     {
       "code": "0xf175",
