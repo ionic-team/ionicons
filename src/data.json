@@ -2201,7 +2201,10 @@
         "md-open"
       ],
       "tags": [
-        "open"
+        "open",
+        "external",
+        "anchor",
+        "link"
       ]
     },
     {
