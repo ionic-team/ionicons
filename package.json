@@ -13,7 +13,7 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "scripts": {
-    "build": "npm run lint.ts && npm run build.icon && npm run generate && npm run build.css && npm run copy.tasks && npm run test && npm run build.data",
+    "build": "npm run lint.ts && npm run build.data && npm run build.icon && npm run generate && npm run build.css && npm run copy.tasks && npm run test",
     "build.css": "node scripts/build-css.js",
     "build.data": "node scripts/data.js",
     "build.icon": "stencil build",
