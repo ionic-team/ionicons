@@ -13,7 +13,7 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "scripts": {
-    "build": "npm run lint.ts && npm run build.icon && npm run generate && npm run build.css && npm run copy.tasks && npm run test && npm run build.data",
+    "build": "npm run lint.ts && npm run build.data && npm run build.icon && npm run generate && npm run build.css && npm run copy.tasks && npm run test",
     "build.css": "node scripts/build-css.js",
     "build.data": "node scripts/data.js",
     "build.icon": "stencil build",
@@ -32,7 +32,7 @@
     "test": "stencil test --spec"
   },
   "devDependencies": {
-    "@stencil/core": "1.1.6",
+    "@stencil/core": "1.3.0",
     "@stencil/sass": "^1.0.1",
     "@types/highlight.js": "^9.12.3",
     "@types/jest": "24.0.13",
