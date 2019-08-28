@@ -24,6 +24,7 @@
   url("#{$ionicons-font-path}/ionicons.svg?v=#{$ionicons-version}#Ionicons") format("svg");
  font-weight: normal;
  font-style: normal;
+ font-display: $ionicons-font-display;
 }
 
 .ion {
