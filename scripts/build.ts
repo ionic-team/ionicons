@@ -43,16 +43,31 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
     full: true,
     plugins: [
       {
-        removeAttrs: {
-          attrs: [
-            'fill',
-            'stroke',
-          ]
+        addFillNoneCss: {
+          type: 'perItem',
+          fn: (item, params) => {
+            if (!Array.isArray(params.attrs)) {
+              params.attrs = [params.attrs];
+            }
+            if (item.isElem()) {
+              item.eachAttr(attr => {
+                if (attr.name === 'fill') {
+                  if (attr.value === 'none') {
+                    item.class.add('ionicon-fill-none');
+                  }
+                  item.removeAttr('fill');
+
+                } else if (attr.name === 'stroke') {
+                  item.removeAttr('stroke');
+                }
+              });
+            }
+          }
         }
-      },
+      } as any,
       {
         addClassesToSVGElement: {
-          className: 'ionicon'
+          className: ['ionicon']
         }
       },
       {
@@ -73,6 +88,20 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
 }
 
 
+async function optimizeSvg(svgo: Svgo, svgData: SvgData) {
+  const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
+  const optimizedSvg = await svgo.optimize(srcSvgContent, { path: svgData.srcFilePath });
+
+  svgData.optimizedSvgContent = optimizedSvg.data
+    .replace(
+      `fill="none"`,
+      `class=""`
+    );
+
+  await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
+}
+
+
 async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgData[]) {
   const testDir = join(rootDir, 'www');
   const testBuildDir = join(testDir, 'build');
@@ -90,16 +119,6 @@ async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgDa
 }
 
 
-async function optimizeSvg(svgo: Svgo, svgData: SvgData) {
-  const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
-  const optimizedSvg = await svgo.optimize(srcSvgContent, { path: svgData.srcFilePath });
-
-  svgData.optimizedSvgContent = optimizedSvg.data;
-
-  await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
-}
-
-
 async function createSvgSymbols(version: string, distDir: string, srcSvgData: SvgData[]) {
   srcSvgData = srcSvgData.sort((a, b) => {
     if (a.iconName < b.iconName) return -1;
@@ -113,8 +132,11 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
     `<svg data-ionicons="${version}" style="display:none">`,
     `<style>`,
     `.ionicon {`,
-    `  fill: #000;`,
-    `  stroke: #000;`,
+    `  fill: currentColor;`,
+    `  stroke: currentColor;`,
+    `}`,
+    `.ionicon-fill-none {`,
+    `  fill: none;`,
     `}`,
     `</style>`,
   ];

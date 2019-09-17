@@ -11,6 +11,14 @@
   box-sizing: content-box !important;
 }
 
+:host .ionicon {
+  stroke: currentColor;
+}
+
+.ionicon-fill-none {
+  fill: none;
+}
+
 .icon-inner,
 .ionicon {
   display: block;
