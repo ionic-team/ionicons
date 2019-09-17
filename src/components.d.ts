@@ -41,7 +41,7 @@ export namespace Components {
     /**
     * The mode determines which platform styles to use.
     */
-    'mode'?: "ios" | "md";
+    'mode': string;
     /**
     * Specifies which icon to use from the built-in set of icons.
     */
@@ -103,7 +103,7 @@ declare namespace LocalJSX {
     /**
     * The mode determines which platform styles to use.
     */
-    'mode'?: "ios" | "md";
+    'mode'?: string;
     /**
     * Specifies which icon to use from the built-in set of icons.
     */

@@ -1,11 +1,8 @@
-import { Build, Component, Element, Host, Prop, State, Watch, getMode, h } from '@stencil/core';
-import { getSvgContent } from './request';
+import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
+import { getSvgContent, ioniconContent } from './request';
 import { getName, getUrl } from './utils';
 
 
-/**
- * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
- */
 @Component({
   tag: 'ion-icon',
   assetsDir: 'svg',
@@ -14,12 +11,16 @@ import { getName, getUrl } from './utils';
 })
 export class Icon {
   private io?: IntersectionObserver;
-  mode = getIonMode(this);
 
   @Element() el!: HTMLElement;
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
+
+  /**
+   * The mode determines which platform styles to use.
+   */
+  @Prop({ mutable: true }) mode = getIonMode();
 
   /**
    * The color to use for the background of the item.
@@ -119,8 +120,13 @@ export class Icon {
     if (Build.isBrowser && this.isVisible) {
       const url = getUrl(this);
       if (url) {
-        getSvgContent(url)
-          .then(svgContent => this.svgContent = svgContent);
+        if (ioniconContent.has(url)) {
+          // sync if it's already loaded
+          this.svgContent = ioniconContent.get(url);
+        } else {
+          // async if it hasn't been loaded
+          getSvgContent(url).then(() => this.svgContent = ioniconContent.get(url));
+        }
       }
     }
 
@@ -129,10 +135,7 @@ export class Icon {
       // user did not provide a label
       // come up with the label based on the icon name
       if (label) {
-        this.ariaLabel = label
-          .replace('ios-', '')
-          .replace('md-', '')
-          .replace(/\-/g, ' ');
+        this.ariaLabel = label.replace(/\-/g, ' ');
       }
     }
   }
@@ -158,9 +161,7 @@ export class Icon {
 }
 
 
-const getIonMode = (ref: any) => {
-  return getMode(ref) || document.documentElement.getAttribute('mode') || 'md';
-};
+const getIonMode = () => (Build.isBrowser && document.documentElement.getAttribute('mode')) || 'md';
 
 
 const createColorClasses = (color: string | undefined) => {

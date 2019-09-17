@@ -1,9 +1,7 @@
 import { isStr } from './utils';
 
 
-export const validateContent = (
-  svgContent: string | null
-) => {
+export const validateContent = (svgContent: string | null) => {
   if (svgContent) {
     const div = document.createElement('div');
     div.innerHTML = svgContent;
