@@ -11,9 +11,6 @@
     h1 {
       margin: 0;
     }
-    h3 {
-      margin: 0;
-    }
     .options {
       padding: 15px 0 20px 0;
     }
@@ -26,28 +23,12 @@
       width: 32px;
       height: 32px;
     }
-    .css-styles {
-      fill: yellow;
-      stroke: yellow;
-      background: red;
-      color: white;
-    }
   </style>
 </head>
 <body>
 <h1>Ionicons {{version}} Cheatsheet</h1>
 <h3>{{count}} icons</h3>
 
-<div class="options">
-  <button id="css-styles">Toggle Styles</button>
-</div>
-
 {{content}}
-
-<script>
-  document.getElementById('css-styles').addEventListener('click', function() {
-    document.body.classList.toggle('css-styles');
-  });
-</script>
 </body>
 </html>
