@@ -3,14 +3,21 @@
     {
       "name": "add",
       "tags": [
-        "add"
+        "add",
+        "circle",
+        "include",
+        "invite",
+        "plus"
       ]
     },
     {
       "name": "add-circle",
       "tags": [
         "add",
-        "circle"
+        "circle",
+        "include",
+        "invite",
+        "plus"
       ]
     },
     {
@@ -18,7 +25,10 @@
       "tags": [
         "add",
         "circle",
-        "outline"
+        "include",
+        "invite",
+        "outline",
+        "plus"
       ]
     },
     {
@@ -26,6 +36,9 @@
       "tags": [
         "add",
         "circle",
+        "include",
+        "invite",
+        "plus",
         "sharp"
       ]
     },
@@ -33,103 +46,150 @@
       "name": "add-sharp",
       "tags": [
         "add",
+        "circle",
+        "include",
+        "invite",
+        "plus",
         "sharp"
       ]
     },
     {
       "name": "airplane",
       "tags": [
-        "airplane"
+        "airplane",
+        "plane"
       ]
     },
     {
       "name": "airplane-outline",
       "tags": [
         "airplane",
-        "outline"
+        "outline",
+        "plane"
       ]
     },
     {
       "name": "airplane-sharp",
       "tags": [
         "airplane",
+        "plane",
         "sharp"
       ]
     },
     {
       "name": "alarm",
       "tags": [
-        "alarm"
+        "alarm",
+        "clock",
+        "time"
       ]
     },
     {
       "name": "alarm-outline",
       "tags": [
         "alarm",
-        "outline"
+        "clock",
+        "outline",
+        "time"
       ]
     },
     {
       "name": "alarm-sharp",
       "tags": [
         "alarm",
-        "sharp"
+        "clock",
+        "sharp",
+        "time"
       ]
     },
     {
       "name": "albums",
       "tags": [
-        "albums"
+        "albums",
+        "boxes",
+        "slides",
+        "square"
       ]
     },
     {
       "name": "albums-outline",
       "tags": [
         "albums",
-        "outline"
+        "boxes",
+        "outline",
+        "slides",
+        "square"
       ]
     },
     {
       "name": "albums-sharp",
       "tags": [
         "albums",
-        "sharp"
+        "boxes",
+        "sharp",
+        "slides",
+        "square"
       ]
     },
     {
       "name": "alert",
       "tags": [
-        "alert"
+        "!",
+        "alert",
+        "attention",
+        "exclamation",
+        "notice",
+        "warning"
       ]
     },
     {
       "name": "alert-circle",
       "tags": [
+        "!",
         "alert",
-        "circle"
+        "attention",
+        "circle",
+        "exclamation",
+        "notice",
+        "warning"
       ]
     },
     {
       "name": "alert-circle-outline",
       "tags": [
+        "!",
         "alert",
+        "attention",
         "circle",
-        "outline"
+        "exclamation",
+        "notice",
+        "outline",
+        "warning"
       ]
     },
     {
       "name": "alert-circle-sharp",
       "tags": [
+        "!",
         "alert",
+        "attention",
         "circle",
-        "sharp"
+        "exclamation",
+        "notice",
+        "sharp",
+        "warning"
       ]
     },
     {
       "name": "alert-sharp",
       "tags": [
+        "!",
         "alert",
-        "sharp"
+        "attention",
+        "exclamation",
+        "notice",
+        "sharp",
+        "warning"
       ]
     },
     {
@@ -158,52 +218,78 @@
     {
       "name": "analytics",
       "tags": [
-        "analytics"
+        "analytics",
+        "data",
+        "metrics",
+        "track"
       ]
     },
     {
       "name": "analytics-outline",
       "tags": [
         "analytics",
-        "outline"
+        "data",
+        "metrics",
+        "outline",
+        "track"
       ]
     },
     {
       "name": "analytics-sharp",
       "tags": [
         "analytics",
-        "sharp"
+        "data",
+        "metrics",
+        "sharp",
+        "track"
       ]
     },
     {
       "name": "aperture",
       "tags": [
-        "aperture"
+        "aperture",
+        "dark",
+        "images",
+        "levels",
+        "light",
+        "settings"
       ]
     },
     {
       "name": "aperture-outline",
       "tags": [
         "aperture",
-        "outline"
+        "dark",
+        "images",
+        "levels",
+        "light",
+        "outline",
+        "settings"
       ]
     },
     {
       "name": "aperture-sharp",
       "tags": [
         "aperture",
+        "dark",
+        "images",
+        "levels",
+        "light",
+        "settings",
         "sharp"
       ]
     },
     {
       "name": "apps",
       "tags": [
+        "applications",
         "apps"
       ]
     },
     {
       "name": "apps-outline",
       "tags": [
+        "applications",
         "apps",
         "outline"
       ]
@@ -211,6 +297,7 @@
     {
       "name": "apps-sharp",
       "tags": [
+        "applications",
         "apps",
         "sharp"
       ]
@@ -218,13 +305,15 @@
     {
       "name": "archive",
       "tags": [
-        "archive"
+        "archive",
+        "email"
       ]
     },
     {
       "name": "archive-outline",
       "tags": [
         "archive",
+        "email",
         "outline"
       ]
     },
@@ -232,6 +321,7 @@
       "name": "archive-sharp",
       "tags": [
         "archive",
+        "email",
         "sharp"
       ]
     },
@@ -239,7 +329,9 @@
       "name": "arrow-back",
       "tags": [
         "arrow",
-        "back"
+        "back",
+        "chevron",
+        "navigation"
       ]
     },
     {
@@ -247,7 +339,9 @@
       "tags": [
         "arrow",
         "back",
-        "circle"
+        "chevron",
+        "circle",
+        "navigation"
       ]
     },
     {
@@ -255,7 +349,9 @@
       "tags": [
         "arrow",
         "back",
+        "chevron",
         "circle",
+        "navigation",
         "outline"
       ]
     },
@@ -264,7 +360,9 @@
       "tags": [
         "arrow",
         "back",
+        "chevron",
         "circle",
+        "navigation",
         "sharp"
       ]
     },
@@ -273,6 +371,8 @@
       "tags": [
         "arrow",
         "back",
+        "chevron",
+        "navigation",
         "sharp"
       ]
     },
@@ -280,6 +380,7 @@
       "name": "arrow-down",
       "tags": [
         "arrow",
+        "chevron",
         "down"
       ]
     },
@@ -287,6 +388,7 @@
       "name": "arrow-down-circle",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "down"
       ]
@@ -295,6 +397,7 @@
       "name": "arrow-down-circle-outline",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "down",
         "outline"
@@ -304,6 +407,7 @@
       "name": "arrow-down-circle-sharp",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "down",
         "sharp"
@@ -313,6 +417,7 @@
       "name": "arrow-down-sharp",
       "tags": [
         "arrow",
+        "chevron",
         "down",
         "sharp"
       ]
@@ -321,23 +426,29 @@
       "name": "arrow-forward",
       "tags": [
         "arrow",
-        "forward"
+        "chevron",
+        "forward",
+        "navigation"
       ]
     },
     {
       "name": "arrow-forward-circle",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
-        "forward"
+        "forward",
+        "navigation"
       ]
     },
     {
       "name": "arrow-forward-circle-outline",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "forward",
+        "navigation",
         "outline"
       ]
     },
@@ -345,8 +456,10 @@
       "name": "arrow-forward-circle-sharp",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "forward",
+        "navigation",
         "sharp"
       ]
     },
@@ -354,7 +467,9 @@
       "name": "arrow-forward-sharp",
       "tags": [
         "arrow",
+        "chevron",
         "forward",
+        "navigation",
         "sharp"
       ]
     },
@@ -460,6 +575,7 @@
       "name": "arrow-up",
       "tags": [
         "arrow",
+        "chevron",
         "up"
       ]
     },
@@ -467,6 +583,7 @@
       "name": "arrow-up-circle",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "up"
       ]
@@ -475,6 +592,7 @@
       "name": "arrow-up-circle-outline",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "outline",
         "up"
@@ -484,6 +602,7 @@
       "name": "arrow-up-circle-sharp",
       "tags": [
         "arrow",
+        "chevron",
         "circle",
         "sharp",
         "up"
@@ -493,6 +612,7 @@
       "name": "arrow-up-sharp",
       "tags": [
         "arrow",
+        "chevron",
         "sharp",
         "up"
       ]
@@ -500,12 +620,14 @@
     {
       "name": "at",
       "tags": [
+        "@",
         "at"
       ]
     },
     {
       "name": "at-circle",
       "tags": [
+        "@",
         "at",
         "circle"
       ]
@@ -513,6 +635,7 @@
     {
       "name": "at-circle-outline",
       "tags": [
+        "@",
         "at",
         "circle",
         "outline"
@@ -521,6 +644,7 @@
     {
       "name": "at-circle-sharp",
       "tags": [
+        "@",
         "at",
         "circle",
         "sharp"
@@ -529,6 +653,7 @@
     {
       "name": "at-sharp",
       "tags": [
+        "@",
         "at",
         "sharp"
       ]
@@ -632,20 +757,26 @@
     {
       "name": "barcode",
       "tags": [
-        "barcode"
+        "barcode",
+        "camera",
+        "reader"
       ]
     },
     {
       "name": "barcode-outline",
       "tags": [
         "barcode",
-        "outline"
+        "camera",
+        "outline",
+        "reader"
       ]
     },
     {
       "name": "barcode-sharp",
       "tags": [
         "barcode",
+        "camera",
+        "reader",
         "sharp"
       ]
     },
@@ -765,53 +896,74 @@
     {
       "name": "beaker",
       "tags": [
-        "beaker"
+        "beaker",
+        "flask",
+        "mixture",
+        "potion"
       ]
     },
     {
       "name": "beaker-outline",
       "tags": [
         "beaker",
-        "outline"
+        "flask",
+        "mixture",
+        "outline",
+        "potion"
       ]
     },
     {
       "name": "beaker-sharp",
       "tags": [
         "beaker",
+        "flask",
+        "mixture",
+        "potion",
         "sharp"
       ]
     },
     {
       "name": "bed",
       "tags": [
-        "bed"
+        "bed",
+        "hotel",
+        "sleep"
       ]
     },
     {
       "name": "bed-outline",
       "tags": [
         "bed",
-        "outline"
+        "hotel",
+        "outline",
+        "sleep"
       ]
     },
     {
       "name": "bed-sharp",
       "tags": [
         "bed",
-        "sharp"
+        "hotel",
+        "sharp",
+        "sleep"
       ]
     },
     {
       "name": "beer",
       "tags": [
-        "beer"
+        "beer",
+        "drink",
+        "eat",
+        "food"
       ]
     },
     {
       "name": "beer-outline",
       "tags": [
         "beer",
+        "drink",
+        "eat",
+        "food",
         "outline"
       ]
     },
@@ -819,6 +971,9 @@
       "name": "beer-sharp",
       "tags": [
         "beer",
+        "drink",
+        "eat",
+        "food",
         "sharp"
       ]
     },
@@ -845,13 +1000,17 @@
     {
       "name": "bluetooth",
       "tags": [
-        "bluetooth"
+        "bluetooth",
+        "cloud",
+        "connection"
       ]
     },
     {
       "name": "bluetooth-outline",
       "tags": [
         "bluetooth",
+        "cloud",
+        "connection",
         "outline"
       ]
     },
@@ -859,6 +1018,8 @@
       "name": "bluetooth-sharp",
       "tags": [
         "bluetooth",
+        "cloud",
+        "connection",
         "sharp"
       ]
     },
@@ -905,13 +1066,17 @@
     {
       "name": "bonfire",
       "tags": [
-        "bonfire"
+        "bonfire",
+        "heat",
+        "hot"
       ]
     },
     {
       "name": "bonfire-outline",
       "tags": [
         "bonfire",
+        "heat",
+        "hot",
         "outline"
       ]
     },
@@ -919,59 +1084,75 @@
       "name": "bonfire-sharp",
       "tags": [
         "bonfire",
+        "heat",
+        "hot",
         "sharp"
       ]
     },
     {
       "name": "book",
       "tags": [
-        "book"
+        "book",
+        "read"
       ]
     },
     {
       "name": "book-outline",
       "tags": [
         "book",
-        "outline"
+        "outline",
+        "read"
       ]
     },
     {
       "name": "book-sharp",
       "tags": [
         "book",
+        "read",
         "sharp"
       ]
     },
     {
       "name": "bookmark",
       "tags": [
-        "bookmark"
+        "bookmark",
+        "favorite",
+        "save",
+        "tag"
       ]
     },
     {
       "name": "bookmark-outline",
       "tags": [
         "bookmark",
-        "outline"
+        "favorite",
+        "outline",
+        "save",
+        "tag"
       ]
     },
     {
       "name": "bookmark-sharp",
       "tags": [
         "bookmark",
-        "sharp"
+        "favorite",
+        "save",
+        "sharp",
+        "tag"
       ]
     },
     {
       "name": "bookmarks",
       "tags": [
-        "bookmarks"
+        "bookmarks",
+        "favorite"
       ]
     },
     {
       "name": "bookmarks-outline",
       "tags": [
         "bookmarks",
+        "favorite",
         "outline"
       ]
     },
@@ -979,19 +1160,24 @@
       "name": "bookmarks-sharp",
       "tags": [
         "bookmarks",
+        "favorite",
         "sharp"
       ]
     },
     {
       "name": "briefcase",
       "tags": [
-        "briefcase"
+        "briefcase",
+        "folder",
+        "organize"
       ]
     },
     {
       "name": "briefcase-outline",
       "tags": [
         "briefcase",
+        "folder",
+        "organize",
         "outline"
       ]
     },
@@ -999,27 +1185,32 @@
       "name": "briefcase-sharp",
       "tags": [
         "briefcase",
+        "folder",
+        "organize",
         "sharp"
       ]
     },
     {
       "name": "browsers",
       "tags": [
-        "browsers"
+        "browsers",
+        "square"
       ]
     },
     {
       "name": "browsers-outline",
       "tags": [
         "browsers",
-        "outline"
+        "outline",
+        "square"
       ]
     },
     {
       "name": "browsers-sharp",
       "tags": [
         "browsers",
-        "sharp"
+        "sharp",
+        "square"
       ]
     },
     {
@@ -1045,20 +1236,32 @@
     {
       "name": "bug",
       "tags": [
-        "bug"
+        "bug",
+        "develop",
+        "error",
+        "hacker",
+        "program"
       ]
     },
     {
       "name": "bug-outline",
       "tags": [
         "bug",
-        "outline"
+        "develop",
+        "error",
+        "hacker",
+        "outline",
+        "program"
       ]
     },
     {
       "name": "bug-sharp",
       "tags": [
         "bug",
+        "develop",
+        "error",
+        "hacker",
+        "program",
         "sharp"
       ]
     },
@@ -1145,13 +1348,17 @@
     {
       "name": "cafe",
       "tags": [
-        "cafe"
+        "cafe",
+        "coffee",
+        "cup"
       ]
     },
     {
       "name": "cafe-outline",
       "tags": [
         "cafe",
+        "coffee",
+        "cup",
         "outline"
       ]
     },
@@ -1159,80 +1366,104 @@
       "name": "cafe-sharp",
       "tags": [
         "cafe",
+        "coffee",
+        "cup",
         "sharp"
       ]
     },
     {
       "name": "calculator",
       "tags": [
-        "calculator"
+        "arithmetic",
+        "calculator",
+        "math"
       ]
     },
     {
       "name": "calculator-outline",
       "tags": [
+        "arithmetic",
         "calculator",
+        "math",
         "outline"
       ]
     },
     {
       "name": "calculator-sharp",
       "tags": [
+        "arithmetic",
         "calculator",
+        "math",
         "sharp"
       ]
     },
     {
       "name": "calendar",
       "tags": [
-        "calendar"
+        "calendar",
+        "date",
+        "month",
+        "week"
       ]
     },
     {
       "name": "calendar-outline",
       "tags": [
         "calendar",
-        "outline"
+        "date",
+        "month",
+        "outline",
+        "week"
       ]
     },
     {
       "name": "calendar-sharp",
       "tags": [
         "calendar",
-        "sharp"
+        "date",
+        "month",
+        "sharp",
+        "week"
       ]
     },
     {
       "name": "call",
       "tags": [
-        "call"
+        "call",
+        "telephone"
       ]
     },
     {
       "name": "call-outline",
       "tags": [
         "call",
-        "outline"
+        "outline",
+        "telephone"
       ]
     },
     {
       "name": "call-sharp",
       "tags": [
         "call",
-        "sharp"
+        "sharp",
+        "telephone"
       ]
     },
     {
       "name": "camera",
       "tags": [
-        "camera"
+        "camera",
+        "image",
+        "photo"
       ]
     },
     {
       "name": "camera-outline",
       "tags": [
         "camera",
-        "outline"
+        "image",
+        "outline",
+        "photo"
       ]
     },
     {
@@ -1262,6 +1493,8 @@
       "name": "camera-sharp",
       "tags": [
         "camera",
+        "image",
+        "photo",
         "sharp"
       ]
     },
@@ -1311,21 +1544,45 @@
     {
       "name": "card",
       "tags": [
-        "card"
+        "$",
+        "card",
+        "cash",
+        "credit",
+        "debit",
+        "dollars",
+        "money",
+        "price",
+        "shopping"
       ]
     },
     {
       "name": "card-outline",
       "tags": [
+        "$",
         "card",
-        "outline"
+        "cash",
+        "credit",
+        "debit",
+        "dollars",
+        "money",
+        "outline",
+        "price",
+        "shopping"
       ]
     },
     {
       "name": "card-sharp",
       "tags": [
+        "$",
         "card",
-        "sharp"
+        "cash",
+        "credit",
+        "debit",
+        "dollars",
+        "money",
+        "price",
+        "sharp",
+        "shopping"
       ]
     },
     {
@@ -1515,21 +1772,42 @@
     {
       "name": "cash",
       "tags": [
-        "cash"
+        "$",
+        "cash",
+        "credit",
+        "debit",
+        "dollars",
+        "money",
+        "price",
+        "shopping"
       ]
     },
     {
       "name": "cash-outline",
       "tags": [
+        "$",
         "cash",
-        "outline"
+        "credit",
+        "debit",
+        "dollars",
+        "money",
+        "outline",
+        "price",
+        "shopping"
       ]
     },
     {
       "name": "cash-sharp",
       "tags": [
+        "$",
         "cash",
-        "sharp"
+        "credit",
+        "debit",
+        "dollars",
+        "money",
+        "price",
+        "sharp",
+        "shopping"
       ]
     },
     {
@@ -1641,21 +1919,24 @@
     {
       "name": "chatbubbles",
       "tags": [
-        "chatbubbles"
+        "chatbubbles",
+        "talk"
       ]
     },
     {
       "name": "chatbubbles-outline",
       "tags": [
         "chatbubbles",
-        "outline"
+        "outline",
+        "talk"
       ]
     },
     {
       "name": "chatbubbles-sharp",
       "tags": [
         "chatbubbles",
-        "sharp"
+        "sharp",
+        "talk"
       ]
     },
     {
@@ -1681,7 +1962,8 @@
     {
       "name": "checkmark",
       "tags": [
-        "checkmark"
+        "checkmark",
+        "circle"
       ]
     },
     {
@@ -1752,6 +2034,7 @@
       "name": "checkmark-sharp",
       "tags": [
         "checkmark",
+        "circle",
         "sharp"
       ]
     },
@@ -1922,34 +2205,42 @@
     {
       "name": "clipboard",
       "tags": [
-        "clipboard"
+        "clipboard",
+        "write"
       ]
     },
     {
       "name": "clipboard-outline",
       "tags": [
         "clipboard",
-        "outline"
+        "outline",
+        "write"
       ]
     },
     {
       "name": "clipboard-sharp",
       "tags": [
         "clipboard",
-        "sharp"
+        "sharp",
+        "write"
       ]
     },
     {
       "name": "close",
       "tags": [
-        "close"
+        "circle",
+        "close",
+        "delete",
+        "remove"
       ]
     },
     {
       "name": "close-circle",
       "tags": [
         "circle",
-        "close"
+        "close",
+        "delete",
+        "remove"
       ]
     },
     {
@@ -1957,7 +2248,9 @@
       "tags": [
         "circle",
         "close",
-        "outline"
+        "delete",
+        "outline",
+        "remove"
       ]
     },
     {
@@ -1965,34 +2258,49 @@
       "tags": [
         "circle",
         "close",
+        "delete",
+        "remove",
         "sharp"
       ]
     },
     {
       "name": "close-outline",
       "tags": [
+        "circle",
         "close",
-        "outline"
+        "delete",
+        "outline",
+        "remove"
       ]
     },
     {
       "name": "close-sharp",
       "tags": [
+        "circle",
         "close",
+        "delete",
+        "remove",
         "sharp"
       ]
     },
     {
       "name": "cloud",
       "tags": [
-        "cloud"
+        "circle",
+        "cloud",
+        "storage",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "cloud-circle",
       "tags": [
         "circle",
-        "cloud"
+        "cloud",
+        "storage",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -2000,7 +2308,10 @@
       "tags": [
         "circle",
         "cloud",
-        "outline"
+        "outline",
+        "storage",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -2008,7 +2319,10 @@
       "tags": [
         "circle",
         "cloud",
-        "sharp"
+        "sharp",
+        "storage",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -2038,7 +2352,8 @@
       "name": "cloud-download",
       "tags": [
         "cloud",
-        "download"
+        "download",
+        "storage"
       ]
     },
     {
@@ -2046,7 +2361,8 @@
       "tags": [
         "cloud",
         "download",
-        "outline"
+        "outline",
+        "storage"
       ]
     },
     {
@@ -2054,7 +2370,8 @@
       "tags": [
         "cloud",
         "download",
-        "sharp"
+        "sharp",
+        "storage"
       ]
     },
     {
@@ -2083,21 +2400,30 @@
     {
       "name": "cloud-outline",
       "tags": [
+        "circle",
         "cloud",
-        "outline"
+        "outline",
+        "storage",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "cloud-sharp",
       "tags": [
+        "circle",
         "cloud",
-        "sharp"
+        "sharp",
+        "storage",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "cloud-upload",
       "tags": [
         "cloud",
+        "storage",
         "upload"
       ]
     },
@@ -2106,6 +2432,7 @@
       "tags": [
         "cloud",
         "outline",
+        "storage",
         "upload"
       ]
     },
@@ -2114,20 +2441,27 @@
       "tags": [
         "cloud",
         "sharp",
+        "storage",
         "upload"
       ]
     },
     {
       "name": "cloudy",
       "tags": [
-        "cloudy"
+        "cloudy",
+        "overcast",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "cloudy-night",
       "tags": [
         "cloudy",
-        "night"
+        "night",
+        "overcast",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -2135,7 +2469,10 @@
       "tags": [
         "cloudy",
         "night",
-        "outline"
+        "outline",
+        "overcast",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -2143,49 +2480,70 @@
       "tags": [
         "cloudy",
         "night",
-        "sharp"
+        "overcast",
+        "sharp",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "cloudy-outline",
       "tags": [
         "cloudy",
-        "outline"
+        "outline",
+        "overcast",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "cloudy-sharp",
       "tags": [
         "cloudy",
-        "sharp"
+        "overcast",
+        "sharp",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "code",
       "tags": [
-        "code"
+        "code",
+        "develop",
+        "hacker",
+        "program"
       ]
     },
     {
       "name": "code-download",
       "tags": [
         "code",
-        "download"
+        "develop",
+        "download",
+        "hacker",
+        "program"
       ]
     },
     {
       "name": "code-download-outline",
       "tags": [
         "code",
+        "develop",
         "download",
-        "outline"
+        "hacker",
+        "outline",
+        "program"
       ]
     },
     {
       "name": "code-download-sharp",
       "tags": [
         "code",
+        "develop",
         "download",
+        "hacker",
+        "program",
         "sharp"
       ]
     },
@@ -2193,13 +2551,19 @@
       "name": "code-outline",
       "tags": [
         "code",
-        "outline"
+        "develop",
+        "hacker",
+        "outline",
+        "program"
       ]
     },
     {
       "name": "code-sharp",
       "tags": [
         "code",
+        "develop",
+        "hacker",
+        "program",
         "sharp"
       ]
     },
@@ -2230,6 +2594,9 @@
       "name": "code-working",
       "tags": [
         "code",
+        "develop",
+        "hacker",
+        "program",
         "working"
       ]
     },
@@ -2237,7 +2604,10 @@
       "name": "code-working-outline",
       "tags": [
         "code",
+        "develop",
+        "hacker",
         "outline",
+        "program",
         "working"
       ]
     },
@@ -2245,6 +2615,9 @@
       "name": "code-working-sharp",
       "tags": [
         "code",
+        "develop",
+        "hacker",
+        "program",
         "sharp",
         "working"
       ]
@@ -2252,20 +2625,29 @@
     {
       "name": "cog",
       "tags": [
-        "cog"
+        "cog",
+        "gear",
+        "options",
+        "settings"
       ]
     },
     {
       "name": "cog-outline",
       "tags": [
         "cog",
-        "outline"
+        "gear",
+        "options",
+        "outline",
+        "settings"
       ]
     },
     {
       "name": "cog-sharp",
       "tags": [
         "cog",
+        "gear",
+        "options",
+        "settings",
         "sharp"
       ]
     },
@@ -2364,13 +2746,19 @@
     {
       "name": "compass",
       "tags": [
-        "compass"
+        "compass",
+        "directions",
+        "location",
+        "navigation"
       ]
     },
     {
       "name": "compass-outline",
       "tags": [
         "compass",
+        "directions",
+        "location",
+        "navigation",
         "outline"
       ]
     },
@@ -2378,6 +2766,9 @@
       "name": "compass-sharp",
       "tags": [
         "compass",
+        "directions",
+        "location",
+        "navigation",
         "sharp"
       ]
     },
@@ -2417,53 +2808,76 @@
     {
       "name": "contrast",
       "tags": [
-        "contrast"
+        "contrast",
+        "dark",
+        "images",
+        "levels",
+        "light",
+        "settings"
       ]
     },
     {
       "name": "contrast-outline",
       "tags": [
         "contrast",
-        "outline"
+        "dark",
+        "images",
+        "levels",
+        "light",
+        "outline",
+        "settings"
       ]
     },
     {
       "name": "contrast-sharp",
       "tags": [
         "contrast",
+        "dark",
+        "images",
+        "levels",
+        "light",
+        "settings",
         "sharp"
       ]
     },
     {
       "name": "copy",
       "tags": [
-        "copy"
+        "copy",
+        "duplicate",
+        "paper"
       ]
     },
     {
       "name": "copy-outline",
       "tags": [
         "copy",
-        "outline"
+        "duplicate",
+        "outline",
+        "paper"
       ]
     },
     {
       "name": "copy-sharp",
       "tags": [
         "copy",
+        "duplicate",
+        "paper",
         "sharp"
       ]
     },
     {
       "name": "create",
       "tags": [
-        "create"
+        "create",
+        "edit"
       ]
     },
     {
       "name": "create-outline",
       "tags": [
         "create",
+        "edit",
         "outline"
       ]
     },
@@ -2471,6 +2885,7 @@
       "name": "create-sharp",
       "tags": [
         "create",
+        "edit",
         "sharp"
       ]
     },
@@ -2497,21 +2912,30 @@
     {
       "name": "cube",
       "tags": [
-        "cube"
+        "box",
+        "container",
+        "cube",
+        "square"
       ]
     },
     {
       "name": "cube-outline",
       "tags": [
+        "box",
+        "container",
         "cube",
-        "outline"
+        "outline",
+        "square"
       ]
     },
     {
       "name": "cube-sharp",
       "tags": [
+        "box",
+        "container",
         "cube",
-        "sharp"
+        "sharp",
+        "square"
       ]
     },
     {
@@ -2557,27 +2981,35 @@
     {
       "name": "disc",
       "tags": [
-        "disc"
+        "cd",
+        "disc",
+        "vinyl"
       ]
     },
     {
       "name": "disc-outline",
       "tags": [
+        "cd",
         "disc",
-        "outline"
+        "outline",
+        "vinyl"
       ]
     },
     {
       "name": "disc-sharp",
       "tags": [
+        "cd",
         "disc",
-        "sharp"
+        "sharp",
+        "vinyl"
       ]
     },
     {
       "name": "document",
       "tags": [
-        "document"
+        "document",
+        "file",
+        "paper"
       ]
     },
     {
@@ -2607,13 +3039,17 @@
       "name": "document-outline",
       "tags": [
         "document",
-        "outline"
+        "file",
+        "outline",
+        "paper"
       ]
     },
     {
       "name": "document-sharp",
       "tags": [
         "document",
+        "file",
+        "paper",
         "sharp"
       ]
     },
@@ -2663,13 +3099,15 @@
     {
       "name": "download",
       "tags": [
-        "download"
+        "download",
+        "export"
       ]
     },
     {
       "name": "download-outline",
       "tags": [
         "download",
+        "export",
         "outline"
       ]
     },
@@ -2677,6 +3115,7 @@
       "name": "download-sharp",
       "tags": [
         "download",
+        "export",
         "sharp"
       ]
     },
@@ -2763,21 +3202,33 @@
     {
       "name": "egg",
       "tags": [
-        "egg"
+        "baby",
+        "bird",
+        "birth",
+        "egg",
+        "twitter"
       ]
     },
     {
       "name": "egg-outline",
       "tags": [
+        "baby",
+        "bird",
+        "birth",
         "egg",
-        "outline"
+        "outline",
+        "twitter"
       ]
     },
     {
       "name": "egg-sharp",
       "tags": [
+        "baby",
+        "bird",
+        "birth",
         "egg",
-        "sharp"
+        "sharp",
+        "twitter"
       ]
     },
     {
@@ -2900,20 +3351,26 @@
     {
       "name": "expand",
       "tags": [
-        "expand"
+        "expand",
+        "resize"
       ]
     },
     {
       "name": "expand-sharp",
       "tags": [
         "expand",
+        "resize",
         "sharp"
       ]
     },
     {
       "name": "eye",
       "tags": [
-        "eye"
+        "exposed",
+        "eye",
+        "look",
+        "see",
+        "view"
       ]
     },
     {
@@ -2942,15 +3399,23 @@
     {
       "name": "eye-outline",
       "tags": [
+        "exposed",
         "eye",
-        "outline"
+        "look",
+        "outline",
+        "see",
+        "view"
       ]
     },
     {
       "name": "eye-sharp",
       "tags": [
+        "exposed",
         "eye",
-        "sharp"
+        "look",
+        "see",
+        "sharp",
+        "view"
       ]
     },
     {
@@ -2999,21 +3464,30 @@
     {
       "name": "female",
       "tags": [
-        "female"
+        "female",
+        "girl",
+        "lady",
+        "woman"
       ]
     },
     {
       "name": "female-outline",
       "tags": [
         "female",
-        "outline"
+        "girl",
+        "lady",
+        "outline",
+        "woman"
       ]
     },
     {
       "name": "female-sharp",
       "tags": [
         "female",
-        "sharp"
+        "girl",
+        "lady",
+        "sharp",
+        "woman"
       ]
     },
     {
@@ -3177,47 +3651,65 @@
     {
       "name": "flag",
       "tags": [
-        "flag"
+        "favorite",
+        "flag",
+        "marker"
       ]
     },
     {
       "name": "flag-outline",
       "tags": [
+        "favorite",
         "flag",
+        "marker",
         "outline"
       ]
     },
     {
       "name": "flag-sharp",
       "tags": [
+        "favorite",
         "flag",
+        "marker",
         "sharp"
       ]
     },
     {
       "name": "flame",
       "tags": [
-        "flame"
+        "fire",
+        "flame",
+        "heat",
+        "hot"
       ]
     },
     {
       "name": "flame-outline",
       "tags": [
+        "fire",
         "flame",
+        "heat",
+        "hot",
         "outline"
       ]
     },
     {
       "name": "flame-sharp",
       "tags": [
+        "fire",
         "flame",
+        "heat",
+        "hot",
         "sharp"
       ]
     },
     {
       "name": "flash",
       "tags": [
-        "flash"
+        "flash",
+        "lightning",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -3247,14 +3739,20 @@
       "name": "flash-outline",
       "tags": [
         "flash",
-        "outline"
+        "lightning",
+        "outline",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "flash-sharp",
       "tags": [
         "flash",
-        "sharp"
+        "lightning",
+        "sharp",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -3280,20 +3778,29 @@
     {
       "name": "flask",
       "tags": [
-        "flask"
+        "bubbles",
+        "flask",
+        "mixture",
+        "potion"
       ]
     },
     {
       "name": "flask-outline",
       "tags": [
+        "bubbles",
         "flask",
-        "outline"
+        "mixture",
+        "outline",
+        "potion"
       ]
     },
     {
       "name": "flask-sharp",
       "tags": [
+        "bubbles",
         "flask",
+        "mixture",
+        "potion",
         "sharp"
       ]
     },
@@ -3320,6 +3827,7 @@
     {
       "name": "folder",
       "tags": [
+        "file",
         "folder"
       ]
     },
@@ -3349,6 +3857,7 @@
     {
       "name": "folder-outline",
       "tags": [
+        "file",
         "folder",
         "outline"
       ]
@@ -3356,6 +3865,7 @@
     {
       "name": "folder-sharp",
       "tags": [
+        "file",
         "folder",
         "sharp"
       ]
@@ -3363,41 +3873,47 @@
     {
       "name": "football",
       "tags": [
-        "football"
+        "football",
+        "soccer"
       ]
     },
     {
       "name": "football-outline",
       "tags": [
         "football",
-        "outline"
+        "outline",
+        "soccer"
       ]
     },
     {
       "name": "football-sharp",
       "tags": [
         "football",
-        "sharp"
+        "sharp",
+        "soccer"
       ]
     },
     {
       "name": "funnel",
       "tags": [
-        "funnel"
+        "funnel",
+        "sort"
       ]
     },
     {
       "name": "funnel-outline",
       "tags": [
         "funnel",
-        "outline"
+        "outline",
+        "sort"
       ]
     },
     {
       "name": "funnel-sharp",
       "tags": [
         "funnel",
-        "sharp"
+        "sharp",
+        "sort"
       ]
     },
     {
@@ -3587,41 +4103,59 @@
     {
       "name": "glasses",
       "tags": [
-        "glasses"
+        "glasses",
+        "look",
+        "reading",
+        "see",
+        "steve"
       ]
     },
     {
       "name": "glasses-outline",
       "tags": [
         "glasses",
-        "outline"
+        "look",
+        "outline",
+        "reading",
+        "see",
+        "steve"
       ]
     },
     {
       "name": "glasses-sharp",
       "tags": [
         "glasses",
-        "sharp"
+        "look",
+        "reading",
+        "see",
+        "sharp",
+        "steve"
       ]
     },
     {
       "name": "globe",
       "tags": [
-        "globe"
+        "globe",
+        "internet",
+        "world"
       ]
     },
     {
       "name": "globe-outline",
       "tags": [
         "globe",
-        "outline"
+        "internet",
+        "outline",
+        "world"
       ]
     },
     {
       "name": "globe-sharp",
       "tags": [
         "globe",
-        "sharp"
+        "internet",
+        "sharp",
+        "world"
       ]
     },
     {
@@ -3647,13 +4181,15 @@
     {
       "name": "grid",
       "tags": [
-        "grid"
+        "grid",
+        "menu"
       ]
     },
     {
       "name": "grid-outline",
       "tags": [
         "grid",
+        "menu",
         "outline"
       ]
     },
@@ -3661,27 +4197,37 @@
       "name": "grid-sharp",
       "tags": [
         "grid",
+        "menu",
         "sharp"
       ]
     },
     {
       "name": "hammer",
       "tags": [
-        "hammer"
+        "hammer",
+        "options",
+        "settings",
+        "tools"
       ]
     },
     {
       "name": "hammer-outline",
       "tags": [
         "hammer",
-        "outline"
+        "options",
+        "outline",
+        "settings",
+        "tools"
       ]
     },
     {
       "name": "hammer-sharp",
       "tags": [
         "hammer",
-        "sharp"
+        "options",
+        "settings",
+        "sharp",
+        "tools"
       ]
     },
     {
@@ -3733,21 +4279,36 @@
     {
       "name": "happy",
       "tags": [
-        "happy"
+        "fun",
+        "good",
+        "happy",
+        "like",
+        "smile",
+        "yes"
       ]
     },
     {
       "name": "happy-outline",
       "tags": [
+        "fun",
+        "good",
         "happy",
-        "outline"
+        "like",
+        "outline",
+        "smile",
+        "yes"
       ]
     },
     {
       "name": "happy-sharp",
       "tags": [
+        "fun",
+        "good",
         "happy",
-        "sharp"
+        "like",
+        "sharp",
+        "smile",
+        "yes"
       ]
     },
     {
@@ -3796,14 +4357,16 @@
     {
       "name": "heart",
       "tags": [
-        "heart"
+        "heart",
+        "love"
       ]
     },
     {
       "name": "heart-circle",
       "tags": [
         "circle",
-        "heart"
+        "heart",
+        "love"
       ]
     },
     {
@@ -3811,6 +4374,7 @@
       "tags": [
         "circle",
         "heart",
+        "love",
         "outline"
       ]
     },
@@ -3819,6 +4383,7 @@
       "tags": [
         "circle",
         "heart",
+        "love",
         "sharp"
       ]
     },
@@ -3826,7 +4391,8 @@
       "name": "heart-dislike",
       "tags": [
         "dislike",
-        "heart"
+        "heart",
+        "love"
       ]
     },
     {
@@ -3834,7 +4400,8 @@
       "tags": [
         "circle",
         "dislike",
-        "heart"
+        "heart",
+        "love"
       ]
     },
     {
@@ -3843,6 +4410,7 @@
         "circle",
         "dislike",
         "heart",
+        "love",
         "outline"
       ]
     },
@@ -3852,6 +4420,7 @@
         "circle",
         "dislike",
         "heart",
+        "love",
         "sharp"
       ]
     },
@@ -3860,6 +4429,7 @@
       "tags": [
         "dislike",
         "heart",
+        "love",
         "outline"
       ]
     },
@@ -3868,6 +4438,7 @@
       "tags": [
         "dislike",
         "heart",
+        "love",
         "sharp"
       ]
     },
@@ -3875,7 +4446,8 @@
       "name": "heart-half",
       "tags": [
         "half",
-        "heart"
+        "heart",
+        "love"
       ]
     },
     {
@@ -3883,6 +4455,7 @@
       "tags": [
         "half",
         "heart",
+        "love",
         "sharp"
       ]
     },
@@ -3890,6 +4463,7 @@
       "name": "heart-outline",
       "tags": [
         "heart",
+        "love",
         "outline"
       ]
     },
@@ -3897,78 +4471,104 @@
       "name": "heart-sharp",
       "tags": [
         "heart",
+        "love",
         "sharp"
       ]
     },
     {
       "name": "help",
       "tags": [
-        "help"
+        "?",
+        "circle",
+        "help",
+        "information",
+        "question"
       ]
     },
     {
       "name": "help-buoy",
       "tags": [
+        "?",
         "buoy",
-        "help"
+        "help",
+        "question"
       ]
     },
     {
       "name": "help-buoy-outline",
       "tags": [
+        "?",
         "buoy",
         "help",
-        "outline"
+        "outline",
+        "question"
       ]
     },
     {
       "name": "help-buoy-sharp",
       "tags": [
+        "?",
         "buoy",
         "help",
+        "question",
         "sharp"
       ]
     },
     {
       "name": "help-circle",
       "tags": [
+        "?",
         "circle",
-        "help"
+        "help",
+        "information",
+        "question"
       ]
     },
     {
       "name": "help-circle-outline",
       "tags": [
+        "?",
         "circle",
         "help",
-        "outline"
+        "information",
+        "outline",
+        "question"
       ]
     },
     {
       "name": "help-circle-sharp",
       "tags": [
+        "?",
         "circle",
         "help",
+        "information",
+        "question",
         "sharp"
       ]
     },
     {
       "name": "help-sharp",
       "tags": [
+        "?",
+        "circle",
         "help",
+        "information",
+        "question",
         "sharp"
       ]
     },
     {
       "name": "home",
       "tags": [
-        "home"
+        "home",
+        "house"
       ]
     },
     {
       "name": "home-outline",
       "tags": [
         "home",
+        "house",
         "outline"
       ]
     },
@@ -3976,27 +4576,31 @@
       "name": "home-sharp",
       "tags": [
         "home",
+        "house",
         "sharp"
       ]
     },
     {
       "name": "hourglass",
       "tags": [
-        "hourglass"
+        "hourglass",
+        "time"
       ]
     },
     {
       "name": "hourglass-outline",
       "tags": [
         "hourglass",
-        "outline"
+        "outline",
+        "time"
       ]
     },
     {
       "name": "hourglass-sharp",
       "tags": [
         "hourglass",
-        "sharp"
+        "sharp",
+        "time"
       ]
     },
     {
@@ -4025,81 +4629,103 @@
     {
       "name": "image",
       "tags": [
-        "image"
+        "camera",
+        "image",
+        "photo"
       ]
     },
     {
       "name": "image-outline",
       "tags": [
+        "camera",
         "image",
-        "outline"
+        "outline",
+        "photo"
       ]
     },
     {
       "name": "image-sharp",
       "tags": [
+        "camera",
         "image",
+        "photo",
         "sharp"
       ]
     },
     {
       "name": "images",
       "tags": [
-        "images"
+        "images",
+        "photo"
       ]
     },
     {
       "name": "images-outline",
       "tags": [
         "images",
-        "outline"
+        "outline",
+        "photo"
       ]
     },
     {
       "name": "images-sharp",
       "tags": [
         "images",
+        "photo",
         "sharp"
       ]
     },
     {
       "name": "infinite",
       "tags": [
-        "infinite"
+        "forever",
+        "infinite",
+        "loop"
       ]
     },
     {
       "name": "infinite-outline",
       "tags": [
+        "forever",
         "infinite",
+        "loop",
         "outline"
       ]
     },
     {
       "name": "infinite-sharp",
       "tags": [
+        "forever",
         "infinite",
+        "loop",
         "sharp"
       ]
     },
     {
       "name": "information",
       "tags": [
-        "information"
+        "circle",
+        "help",
+        "information",
+        "knowledge"
       ]
     },
     {
       "name": "information-circle",
       "tags": [
         "circle",
-        "information"
+        "help",
+        "information",
+        "knowledge"
       ]
     },
     {
       "name": "information-circle-outline",
       "tags": [
         "circle",
+        "help",
         "information",
+        "knowledge",
         "outline"
       ]
     },
@@ -4107,14 +4733,19 @@
       "name": "information-circle-sharp",
       "tags": [
         "circle",
+        "help",
         "information",
+        "knowledge",
         "sharp"
       ]
     },
     {
       "name": "information-sharp",
       "tags": [
+        "circle",
+        "help",
         "information",
+        "knowledge",
         "sharp"
       ]
     },
@@ -4141,12 +4772,14 @@
     {
       "name": "key",
       "tags": [
+        "access",
         "key"
       ]
     },
     {
       "name": "key-outline",
       "tags": [
+        "access",
         "key",
         "outline"
       ]
@@ -4154,6 +4787,7 @@
     {
       "name": "key-sharp",
       "tags": [
+        "access",
         "key",
         "sharp"
       ]
@@ -4161,21 +4795,24 @@
     {
       "name": "keypad",
       "tags": [
-        "keypad"
+        "keypad",
+        "type"
       ]
     },
     {
       "name": "keypad-outline",
       "tags": [
         "keypad",
-        "outline"
+        "outline",
+        "type"
       ]
     },
     {
       "name": "keypad-sharp",
       "tags": [
         "keypad",
-        "sharp"
+        "sharp",
+        "type"
       ]
     },
     {
@@ -4201,20 +4838,29 @@
     {
       "name": "laptop",
       "tags": [
-        "laptop"
+        "apple",
+        "laptop",
+        "macbook",
+        "osx"
       ]
     },
     {
       "name": "laptop-outline",
       "tags": [
+        "apple",
         "laptop",
+        "macbook",
+        "osx",
         "outline"
       ]
     },
     {
       "name": "laptop-sharp",
       "tags": [
+        "apple",
         "laptop",
+        "macbook",
+        "osx",
         "sharp"
       ]
     },
@@ -4241,20 +4887,32 @@
     {
       "name": "leaf",
       "tags": [
-        "leaf"
+        "green",
+        "leaf",
+        "nature",
+        "plant",
+        "recycle"
       ]
     },
     {
       "name": "leaf-outline",
       "tags": [
+        "green",
         "leaf",
-        "outline"
+        "nature",
+        "outline",
+        "plant",
+        "recycle"
       ]
     },
     {
       "name": "leaf-sharp",
       "tags": [
+        "green",
         "leaf",
+        "nature",
+        "plant",
+        "recycle",
         "sharp"
       ]
     },
@@ -4281,12 +4939,20 @@
     {
       "name": "link",
       "tags": [
+        "anchor",
+        "attach",
+        "chain",
+        "href",
         "link"
       ]
     },
     {
       "name": "link-outline",
       "tags": [
+        "anchor",
+        "attach",
+        "chain",
+        "href",
         "link",
         "outline"
       ]
@@ -4294,6 +4960,10 @@
     {
       "name": "link-sharp",
       "tags": [
+        "anchor",
+        "attach",
+        "chain",
+        "href",
         "link",
         "sharp"
       ]
@@ -4344,20 +5014,29 @@
     {
       "name": "locate",
       "tags": [
-        "locate"
+        "gps",
+        "locate",
+        "maps",
+        "navigate"
       ]
     },
     {
       "name": "locate-outline",
       "tags": [
+        "gps",
         "locate",
+        "maps",
+        "navigate",
         "outline"
       ]
     },
     {
       "name": "locate-sharp",
       "tags": [
+        "gps",
         "locate",
+        "maps",
+        "navigate",
         "sharp"
       ]
     },
@@ -4431,7 +5110,8 @@
       "name": "log-in",
       "tags": [
         "in",
-        "log"
+        "log",
+        "signin"
       ]
     },
     {
@@ -4439,7 +5119,8 @@
       "tags": [
         "in",
         "log",
-        "outline"
+        "outline",
+        "signin"
       ]
     },
     {
@@ -4447,14 +5128,16 @@
       "tags": [
         "in",
         "log",
-        "sharp"
+        "sharp",
+        "signin"
       ]
     },
     {
       "name": "log-out",
       "tags": [
         "log",
-        "out"
+        "out",
+        "signout"
       ]
     },
     {
@@ -4462,7 +5145,8 @@
       "tags": [
         "log",
         "out",
-        "outline"
+        "outline",
+        "signout"
       ]
     },
     {
@@ -4470,7 +5154,8 @@
       "tags": [
         "log",
         "out",
-        "sharp"
+        "sharp",
+        "signout"
       ]
     },
     {
@@ -4569,6 +5254,7 @@
       "tags": [
         "captioning",
         "closed",
+        "closed-captioning",
         "logo",
         "outline"
       ]
@@ -4779,6 +5465,7 @@
       "tags": [
         "logo",
         "no",
+        "no-smoking",
         "outline",
         "smoking"
       ]
@@ -4954,6 +5641,7 @@
     {
       "name": "logo-usd-outline",
       "tags": [
+        "$",
         "logo",
         "outline",
         "usd"
@@ -5004,6 +5692,7 @@
       "name": "logo-windows-outline",
       "tags": [
         "logo",
+        "microsoft",
         "outline",
         "windows"
       ]
@@ -5059,26 +5748,33 @@
     {
       "name": "magnet",
       "tags": [
-        "magnet"
+        "attraction",
+        "magnet",
+        "sticky"
       ]
     },
     {
       "name": "magnet-outline",
       "tags": [
+        "attraction",
         "magnet",
-        "outline"
+        "outline",
+        "sticky"
       ]
     },
     {
       "name": "magnet-sharp",
       "tags": [
+        "attraction",
         "magnet",
-        "sharp"
+        "sharp",
+        "sticky"
       ]
     },
     {
       "name": "mail",
       "tags": [
+        "email",
         "mail"
       ]
     },
@@ -5131,6 +5827,7 @@
     {
       "name": "mail-outline",
       "tags": [
+        "email",
         "mail",
         "outline"
       ]
@@ -5138,6 +5835,7 @@
     {
       "name": "mail-sharp",
       "tags": [
+        "email",
         "mail",
         "sharp"
       ]
@@ -5145,6 +5843,9 @@
     {
       "name": "male",
       "tags": [
+        "boy",
+        "dude",
+        "guy",
         "male"
       ]
     },
@@ -5174,6 +5875,9 @@
     {
       "name": "male-sharp",
       "tags": [
+        "boy",
+        "dude",
+        "guy",
         "male",
         "sharp"
       ]
@@ -5181,12 +5885,20 @@
     {
       "name": "man",
       "tags": [
+        "boy",
+        "dude",
+        "guy",
+        "male",
         "man"
       ]
     },
     {
       "name": "man-outline",
       "tags": [
+        "boy",
+        "dude",
+        "guy",
+        "male",
         "man",
         "outline"
       ]
@@ -5194,6 +5906,10 @@
     {
       "name": "man-sharp",
       "tags": [
+        "boy",
+        "dude",
+        "guy",
+        "male",
         "man",
         "sharp"
       ]
@@ -5201,20 +5917,29 @@
     {
       "name": "map",
       "tags": [
-        "map"
+        "gps",
+        "map",
+        "navigation",
+        "pin"
       ]
     },
     {
       "name": "map-outline",
       "tags": [
+        "gps",
         "map",
-        "outline"
+        "navigation",
+        "outline",
+        "pin"
       ]
     },
     {
       "name": "map-sharp",
       "tags": [
+        "gps",
         "map",
+        "navigation",
+        "pin",
         "sharp"
       ]
     },
@@ -5261,21 +5986,36 @@
     {
       "name": "medkit",
       "tags": [
-        "medkit"
+        "case",
+        "disease",
+        "firstaid",
+        "health",
+        "medkit",
+        "sick"
       ]
     },
     {
       "name": "medkit-outline",
       "tags": [
+        "case",
+        "disease",
+        "firstaid",
+        "health",
         "medkit",
-        "outline"
+        "outline",
+        "sick"
       ]
     },
     {
       "name": "medkit-sharp",
       "tags": [
+        "case",
+        "disease",
+        "firstaid",
+        "health",
         "medkit",
-        "sharp"
+        "sharp",
+        "sick"
       ]
     },
     {
@@ -5321,14 +6061,22 @@
     {
       "name": "mic",
       "tags": [
-        "mic"
+        "mic",
+        "noise",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "mic-circle",
       "tags": [
         "circle",
-        "mic"
+        "mic",
+        "noise",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
@@ -5336,7 +6084,11 @@
       "tags": [
         "circle",
         "mic",
-        "outline"
+        "noise",
+        "outline",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
@@ -5344,14 +6096,22 @@
       "tags": [
         "circle",
         "mic",
-        "sharp"
+        "noise",
+        "sharp",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "mic-off",
       "tags": [
         "mic",
-        "off"
+        "noise",
+        "off",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
@@ -5359,7 +6119,11 @@
       "tags": [
         "circle",
         "mic",
-        "off"
+        "noise",
+        "off",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
@@ -5367,8 +6131,12 @@
       "tags": [
         "circle",
         "mic",
+        "noise",
         "off",
-        "outline"
+        "outline",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
@@ -5376,58 +6144,87 @@
       "tags": [
         "circle",
         "mic",
+        "noise",
         "off",
-        "sharp"
+        "sharp",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "mic-off-outline",
       "tags": [
         "mic",
+        "noise",
         "off",
-        "outline"
+        "outline",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "mic-off-sharp",
       "tags": [
         "mic",
+        "noise",
         "off",
-        "sharp"
+        "sharp",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "mic-outline",
       "tags": [
         "mic",
-        "outline"
+        "noise",
+        "outline",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "mic-sharp",
       "tags": [
         "mic",
-        "sharp"
+        "noise",
+        "sharp",
+        "sound",
+        "speaker",
+        "talk"
       ]
     },
     {
       "name": "moon",
       "tags": [
-        "moon"
+        "dark",
+        "moon",
+        "night",
+        "sky"
       ]
     },
     {
       "name": "moon-outline",
       "tags": [
+        "dark",
         "moon",
-        "outline"
+        "night",
+        "outline",
+        "sky"
       ]
     },
     {
       "name": "moon-sharp",
       "tags": [
+        "dark",
         "moon",
-        "sharp"
+        "night",
+        "sharp",
+        "sky"
       ]
     },
     {
@@ -5446,89 +6243,137 @@
     {
       "name": "musical-note",
       "tags": [
+        "listening",
         "musical",
-        "note"
+        "noise",
+        "note",
+        "play",
+        "sound"
       ]
     },
     {
       "name": "musical-note-outline",
       "tags": [
+        "listening",
         "musical",
+        "noise",
         "note",
-        "outline"
+        "outline",
+        "play",
+        "sound"
       ]
     },
     {
       "name": "musical-note-sharp",
       "tags": [
+        "listening",
         "musical",
+        "noise",
         "note",
-        "sharp"
+        "play",
+        "sharp",
+        "sound"
       ]
     },
     {
       "name": "musical-notes",
       "tags": [
+        "listening",
         "musical",
-        "notes"
+        "noise",
+        "notes",
+        "play",
+        "sound"
       ]
     },
     {
       "name": "musical-notes-outline",
       "tags": [
+        "listening",
         "musical",
+        "noise",
         "notes",
-        "outline"
+        "outline",
+        "play",
+        "sound"
       ]
     },
     {
       "name": "musical-notes-sharp",
       "tags": [
+        "listening",
         "musical",
+        "noise",
         "notes",
-        "sharp"
+        "play",
+        "sharp",
+        "sound"
       ]
     },
     {
       "name": "navigate",
       "tags": [
-        "navigate"
+        "gps",
+        "location",
+        "map",
+        "navigate",
+        "pin"
       ]
     },
     {
       "name": "navigate-circle",
       "tags": [
         "circle",
-        "navigate"
+        "gps",
+        "location",
+        "map",
+        "navigate",
+        "pin"
       ]
     },
     {
       "name": "navigate-circle-outline",
       "tags": [
         "circle",
+        "gps",
+        "location",
+        "map",
         "navigate",
-        "outline"
+        "outline",
+        "pin"
       ]
     },
     {
       "name": "navigate-circle-sharp",
       "tags": [
         "circle",
+        "gps",
+        "location",
+        "map",
         "navigate",
+        "pin",
         "sharp"
       ]
     },
     {
       "name": "navigate-outline",
       "tags": [
+        "gps",
+        "location",
+        "map",
         "navigate",
-        "outline"
+        "outline",
+        "pin"
       ]
     },
     {
       "name": "navigate-sharp",
       "tags": [
+        "gps",
+        "location",
+        "map",
         "navigate",
+        "pin",
         "sharp"
       ]
     },
@@ -5647,21 +6492,30 @@
     {
       "name": "nuclear",
       "tags": [
-        "nuclear"
+        "danger",
+        "hazard",
+        "nuclear",
+        "warning"
       ]
     },
     {
       "name": "nuclear-outline",
       "tags": [
+        "danger",
+        "hazard",
         "nuclear",
-        "outline"
+        "outline",
+        "warning"
       ]
     },
     {
       "name": "nuclear-sharp",
       "tags": [
+        "danger",
+        "hazard",
         "nuclear",
-        "sharp"
+        "sharp",
+        "warning"
       ]
     },
     {
@@ -5773,20 +6627,32 @@
     {
       "name": "pause",
       "tags": [
+        "break",
+        "freeze",
+        "hold",
+        "music",
         "pause"
       ]
     },
     {
       "name": "pause-circle",
       "tags": [
+        "break",
         "circle",
+        "freeze",
+        "hold",
+        "music",
         "pause"
       ]
     },
     {
       "name": "pause-circle-outline",
       "tags": [
+        "break",
         "circle",
+        "freeze",
+        "hold",
+        "music",
         "outline",
         "pause"
       ]
@@ -5794,7 +6660,11 @@
     {
       "name": "pause-circle-sharp",
       "tags": [
+        "break",
         "circle",
+        "freeze",
+        "hold",
+        "music",
         "pause",
         "sharp"
       ]
@@ -5802,6 +6672,10 @@
     {
       "name": "pause-outline",
       "tags": [
+        "break",
+        "freeze",
+        "hold",
+        "music",
         "outline",
         "pause"
       ]
@@ -5809,6 +6683,10 @@
     {
       "name": "pause-sharp",
       "tags": [
+        "break",
+        "freeze",
+        "hold",
+        "music",
         "pause",
         "sharp"
       ]
@@ -5856,103 +6734,171 @@
     {
       "name": "people",
       "tags": [
-        "people"
+        "head",
+        "human",
+        "people",
+        "person",
+        "stalker",
+        "users"
       ]
     },
     {
       "name": "people-circle",
       "tags": [
         "circle",
-        "people"
+        "head",
+        "human",
+        "people",
+        "person",
+        "stalker",
+        "users"
       ]
     },
     {
       "name": "people-circle-outline",
       "tags": [
         "circle",
+        "head",
+        "human",
         "outline",
-        "people"
+        "people",
+        "person",
+        "stalker",
+        "users"
       ]
     },
     {
       "name": "people-circle-sharp",
       "tags": [
         "circle",
+        "head",
+        "human",
         "people",
-        "sharp"
+        "person",
+        "sharp",
+        "stalker",
+        "users"
       ]
     },
     {
       "name": "people-outline",
       "tags": [
+        "head",
+        "human",
         "outline",
-        "people"
+        "people",
+        "person",
+        "stalker",
+        "users"
       ]
     },
     {
       "name": "people-sharp",
       "tags": [
+        "head",
+        "human",
         "people",
-        "sharp"
+        "person",
+        "sharp",
+        "stalker",
+        "users"
       ]
     },
     {
       "name": "person",
       "tags": [
-        "person"
+        "head",
+        "human",
+        "person",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-add",
       "tags": [
         "add",
-        "person"
+        "head",
+        "human",
+        "member",
+        "new",
+        "person",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-add-outline",
       "tags": [
         "add",
+        "head",
+        "human",
+        "member",
+        "new",
         "outline",
-        "person"
+        "person",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-add-sharp",
       "tags": [
         "add",
+        "head",
+        "human",
+        "member",
+        "new",
         "person",
-        "sharp"
+        "sharp",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-circle",
       "tags": [
         "circle",
-        "person"
+        "head",
+        "human",
+        "person",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-circle-outline",
       "tags": [
         "circle",
+        "head",
+        "human",
         "outline",
-        "person"
+        "person",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-circle-sharp",
       "tags": [
         "circle",
+        "head",
+        "human",
         "person",
-        "sharp"
+        "sharp",
+        "staff",
+        "users"
       ]
     },
     {
       "name": "person-outline",
       "tags": [
+        "head",
+        "human",
         "outline",
-        "person"
+        "person",
+        "staff",
+        "users"
       ]
     },
     {
@@ -5981,8 +6927,12 @@
     {
       "name": "person-sharp",
       "tags": [
+        "head",
+        "human",
         "person",
-        "sharp"
+        "sharp",
+        "staff",
+        "users"
       ]
     },
     {
@@ -6057,12 +7007,18 @@
     {
       "name": "pin",
       "tags": [
+        "gps",
+        "location",
+        "navigation",
         "pin"
       ]
     },
     {
       "name": "pin-outline",
       "tags": [
+        "gps",
+        "location",
+        "navigation",
         "outline",
         "pin"
       ]
@@ -6070,6 +7026,9 @@
     {
       "name": "pin-sharp",
       "tags": [
+        "gps",
+        "location",
+        "navigation",
         "pin",
         "sharp"
       ]
@@ -6097,12 +7056,18 @@
     {
       "name": "pizza",
       "tags": [
+        "drink",
+        "eat",
+        "food",
         "pizza"
       ]
     },
     {
       "name": "pizza-outline",
       "tags": [
+        "drink",
+        "eat",
+        "food",
         "outline",
         "pizza"
       ]
@@ -6110,6 +7075,9 @@
     {
       "name": "pizza-sharp",
       "tags": [
+        "drink",
+        "eat",
+        "food",
         "pizza",
         "sharp"
       ]
@@ -6117,27 +7085,46 @@
     {
       "name": "planet",
       "tags": [
-        "planet"
+        "globe",
+        "home",
+        "nature",
+        "planet",
+        "space",
+        "world"
       ]
     },
     {
       "name": "planet-outline",
       "tags": [
+        "globe",
+        "home",
+        "nature",
         "outline",
-        "planet"
+        "planet",
+        "space",
+        "world"
       ]
     },
     {
       "name": "planet-sharp",
       "tags": [
+        "globe",
+        "home",
+        "nature",
         "planet",
-        "sharp"
+        "sharp",
+        "space",
+        "world"
       ]
     },
     {
       "name": "play",
       "tags": [
-        "play"
+        "arrow",
+        "music",
+        "play",
+        "right",
+        "watch"
       ]
     },
     {
@@ -6192,24 +7179,36 @@
     {
       "name": "play-circle",
       "tags": [
+        "arrow",
         "circle",
-        "play"
+        "music",
+        "play",
+        "right",
+        "watch"
       ]
     },
     {
       "name": "play-circle-outline",
       "tags": [
+        "arrow",
         "circle",
+        "music",
         "outline",
-        "play"
+        "play",
+        "right",
+        "watch"
       ]
     },
     {
       "name": "play-circle-sharp",
       "tags": [
+        "arrow",
         "circle",
+        "music",
         "play",
-        "sharp"
+        "right",
+        "sharp",
+        "watch"
       ]
     },
     {
@@ -6264,15 +7263,23 @@
     {
       "name": "play-outline",
       "tags": [
+        "arrow",
+        "music",
         "outline",
-        "play"
+        "play",
+        "right",
+        "watch"
       ]
     },
     {
       "name": "play-sharp",
       "tags": [
+        "arrow",
+        "music",
         "play",
-        "sharp"
+        "right",
+        "sharp",
+        "watch"
       ]
     },
     {
@@ -6388,32 +7395,51 @@
     {
       "name": "podium",
       "tags": [
-        "podium"
+        "award",
+        "compete",
+        "competition",
+        "lose",
+        "podium",
+        "win"
       ]
     },
     {
       "name": "podium-outline",
       "tags": [
+        "award",
+        "compete",
+        "competition",
+        "lose",
         "outline",
-        "podium"
+        "podium",
+        "win"
       ]
     },
     {
       "name": "podium-sharp",
       "tags": [
+        "award",
+        "compete",
+        "competition",
+        "lose",
         "podium",
-        "sharp"
+        "sharp",
+        "win"
       ]
     },
     {
       "name": "power",
       "tags": [
+        "off",
+        "on",
         "power"
       ]
     },
     {
       "name": "power-outline",
       "tags": [
+        "off",
+        "on",
         "outline",
         "power"
       ]
@@ -6421,6 +7447,8 @@
     {
       "name": "power-sharp",
       "tags": [
+        "off",
+        "on",
         "power",
         "sharp"
       ]
@@ -6428,41 +7456,71 @@
     {
       "name": "pricetag",
       "tags": [
-        "pricetag"
+        "$",
+        "commerce",
+        "items",
+        "money",
+        "pricetag",
+        "shopping"
       ]
     },
     {
       "name": "pricetag-outline",
       "tags": [
+        "$",
+        "commerce",
+        "items",
+        "money",
         "outline",
-        "pricetag"
+        "pricetag",
+        "shopping"
       ]
     },
     {
       "name": "pricetag-sharp",
       "tags": [
+        "$",
+        "commerce",
+        "items",
+        "money",
         "pricetag",
-        "sharp"
+        "sharp",
+        "shopping"
       ]
     },
     {
       "name": "pricetags",
       "tags": [
-        "pricetags"
+        "$",
+        "commerce",
+        "items",
+        "money",
+        "pricetags",
+        "shopping"
       ]
     },
     {
       "name": "pricetags-outline",
       "tags": [
+        "$",
+        "commerce",
+        "items",
+        "money",
         "outline",
-        "pricetags"
+        "pricetags",
+        "shopping"
       ]
     },
     {
       "name": "pricetags-sharp",
       "tags": [
+        "$",
+        "commerce",
+        "items",
+        "money",
         "pricetags",
-        "sharp"
+        "sharp",
+        "shopping"
       ]
     },
     {
@@ -6488,20 +7546,29 @@
     {
       "name": "pulse",
       "tags": [
-        "pulse"
+        "hot",
+        "live",
+        "pulse",
+        "rate"
       ]
     },
     {
       "name": "pulse-outline",
       "tags": [
+        "hot",
+        "live",
         "outline",
-        "pulse"
+        "pulse",
+        "rate"
       ]
     },
     {
       "name": "pulse-sharp",
       "tags": [
+        "hot",
+        "live",
         "pulse",
+        "rate",
         "sharp"
       ]
     },
@@ -6551,6 +7618,7 @@
     {
       "name": "radio",
       "tags": [
+        "music",
         "radio"
       ]
     },
@@ -6571,6 +7639,7 @@
     {
       "name": "radio-outline",
       "tags": [
+        "music",
         "outline",
         "radio"
       ]
@@ -6578,6 +7647,7 @@
     {
       "name": "radio-sharp",
       "tags": [
+        "music",
         "radio",
         "sharp"
       ]
@@ -6585,21 +7655,33 @@
     {
       "name": "rainy",
       "tags": [
-        "rainy"
+        "cloud",
+        "rainy",
+        "water",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "rainy-outline",
       "tags": [
+        "cloud",
         "outline",
-        "rainy"
+        "rainy",
+        "water",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "rainy-sharp",
       "tags": [
+        "cloud",
         "rainy",
-        "sharp"
+        "sharp",
+        "water",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -6645,34 +7727,50 @@
     {
       "name": "recording",
       "tags": [
-        "recording"
+        "film",
+        "recording",
+        "tape",
+        "voicemail"
       ]
     },
     {
       "name": "recording-outline",
       "tags": [
+        "film",
         "outline",
-        "recording"
+        "recording",
+        "tape",
+        "voicemail"
       ]
     },
     {
       "name": "recording-sharp",
       "tags": [
+        "film",
         "recording",
-        "sharp"
+        "sharp",
+        "tape",
+        "voicemail"
       ]
     },
     {
       "name": "refresh",
       "tags": [
-        "refresh"
+        "circle",
+        "refresh",
+        "reload",
+        "renew",
+        "reset"
       ]
     },
     {
       "name": "refresh-circle",
       "tags": [
         "circle",
-        "refresh"
+        "refresh",
+        "reload",
+        "renew",
+        "reset"
       ]
     },
     {
@@ -6680,7 +7778,10 @@
       "tags": [
         "circle",
         "outline",
-        "refresh"
+        "refresh",
+        "reload",
+        "renew",
+        "reset"
       ]
     },
     {
@@ -6688,13 +7789,20 @@
       "tags": [
         "circle",
         "refresh",
+        "reload",
+        "renew",
+        "reset",
         "sharp"
       ]
     },
     {
       "name": "refresh-sharp",
       "tags": [
+        "circle",
         "refresh",
+        "reload",
+        "renew",
+        "reset",
         "sharp"
       ]
     },
@@ -6737,37 +7845,49 @@
     {
       "name": "remove",
       "tags": [
-        "remove"
+        "circle",
+        "minus",
+        "remove",
+        "subtract"
       ]
     },
     {
       "name": "remove-circle",
       "tags": [
         "circle",
-        "remove"
+        "minus",
+        "remove",
+        "subtract"
       ]
     },
     {
       "name": "remove-circle-outline",
       "tags": [
         "circle",
+        "minus",
         "outline",
-        "remove"
+        "remove",
+        "subtract"
       ]
     },
     {
       "name": "remove-circle-sharp",
       "tags": [
         "circle",
+        "minus",
         "remove",
-        "sharp"
+        "sharp",
+        "subtract"
       ]
     },
     {
       "name": "remove-sharp",
       "tags": [
+        "circle",
+        "minus",
         "remove",
-        "sharp"
+        "sharp",
+        "subtract"
       ]
     },
     {
@@ -6868,12 +7988,14 @@
     {
       "name": "restaurant",
       "tags": [
+        "eat",
         "restaurant"
       ]
     },
     {
       "name": "restaurant-outline",
       "tags": [
+        "eat",
         "outline",
         "restaurant"
       ]
@@ -6881,6 +8003,7 @@
     {
       "name": "restaurant-sharp",
       "tags": [
+        "eat",
         "restaurant",
         "sharp"
       ]
@@ -6996,12 +8119,14 @@
     {
       "name": "rose",
       "tags": [
+        "flower",
         "rose"
       ]
     },
     {
       "name": "rose-outline",
       "tags": [
+        "flower",
         "outline",
         "rose"
       ]
@@ -7009,6 +8134,7 @@
     {
       "name": "rose-sharp",
       "tags": [
+        "flower",
         "rose",
         "sharp"
       ]
@@ -7016,12 +8142,18 @@
     {
       "name": "sad",
       "tags": [
+        "bad",
+        "cry",
+        "no",
         "sad"
       ]
     },
     {
       "name": "sad-outline",
       "tags": [
+        "bad",
+        "cry",
+        "no",
         "outline",
         "sad"
       ]
@@ -7029,6 +8161,9 @@
     {
       "name": "sad-sharp",
       "tags": [
+        "bad",
+        "cry",
+        "no",
         "sad",
         "sharp"
       ]
@@ -7119,6 +8254,8 @@
     {
       "name": "search",
       "tags": [
+        "glass",
+        "magnifying",
         "search"
       ]
     },
@@ -7126,6 +8263,8 @@
       "name": "search-circle",
       "tags": [
         "circle",
+        "glass",
+        "magnifying",
         "search"
       ]
     },
@@ -7133,6 +8272,8 @@
       "name": "search-circle-outline",
       "tags": [
         "circle",
+        "glass",
+        "magnifying",
         "outline",
         "search"
       ]
@@ -7141,6 +8282,8 @@
       "name": "search-circle-sharp",
       "tags": [
         "circle",
+        "glass",
+        "magnifying",
         "search",
         "sharp"
       ]
@@ -7148,6 +8291,8 @@
     {
       "name": "search-outline",
       "tags": [
+        "glass",
+        "magnifying",
         "outline",
         "search"
       ]
@@ -7155,6 +8300,8 @@
     {
       "name": "search-sharp",
       "tags": [
+        "glass",
+        "magnifying",
         "search",
         "sharp"
       ]
@@ -7162,19 +8309,25 @@
     {
       "name": "send",
       "tags": [
+        "email",
+        "paper",
         "send"
       ]
     },
     {
       "name": "send-outline",
       "tags": [
+        "email",
         "outline",
+        "paper",
         "send"
       ]
     },
     {
       "name": "send-sharp",
       "tags": [
+        "email",
+        "paper",
         "send",
         "sharp"
       ]
@@ -7202,12 +8355,14 @@
     {
       "name": "settings",
       "tags": [
+        "options",
         "settings"
       ]
     },
     {
       "name": "settings-outline",
       "tags": [
+        "options",
         "outline",
         "settings"
       ]
@@ -7215,6 +8370,7 @@
     {
       "name": "settings-sharp",
       "tags": [
+        "options",
         "settings",
         "sharp"
       ]
@@ -7348,12 +8504,14 @@
     {
       "name": "shuffle",
       "tags": [
+        "random",
         "shuffle"
       ]
     },
     {
       "name": "shuffle-sharp",
       "tags": [
+        "random",
         "sharp",
         "shuffle"
       ]
@@ -7381,12 +8539,14 @@
     {
       "name": "snow",
       "tags": [
+        "cold",
         "snow"
       ]
     },
     {
       "name": "snow-outline",
       "tags": [
+        "cold",
         "outline",
         "snow"
       ]
@@ -7394,6 +8554,7 @@
     {
       "name": "snow-sharp",
       "tags": [
+        "cold",
         "sharp",
         "snow"
       ]
@@ -7401,20 +8562,29 @@
     {
       "name": "speedometer",
       "tags": [
+        "drive",
+        "level",
+        "speed",
         "speedometer"
       ]
     },
     {
       "name": "speedometer-outline",
       "tags": [
+        "drive",
+        "level",
         "outline",
+        "speed",
         "speedometer"
       ]
     },
     {
       "name": "speedometer-sharp",
       "tags": [
+        "drive",
+        "level",
         "sharp",
+        "speed",
         "speedometer"
       ]
     },
@@ -7441,20 +8611,25 @@
     {
       "name": "star",
       "tags": [
+        "favorite",
         "star"
       ]
     },
     {
       "name": "star-half",
       "tags": [
+        "favorite",
         "half",
+        "rate",
         "star"
       ]
     },
     {
       "name": "star-half-sharp",
       "tags": [
+        "favorite",
         "half",
+        "rate",
         "sharp",
         "star"
       ]
@@ -7462,6 +8637,7 @@
     {
       "name": "star-outline",
       "tags": [
+        "favorite",
         "outline",
         "star"
       ]
@@ -7469,6 +8645,7 @@
     {
       "name": "star-sharp",
       "tags": [
+        "favorite",
         "sharp",
         "star"
       ]
@@ -7542,21 +8719,24 @@
     {
       "name": "stopwatch",
       "tags": [
-        "stopwatch"
+        "stopwatch",
+        "time"
       ]
     },
     {
       "name": "stopwatch-outline",
       "tags": [
         "outline",
-        "stopwatch"
+        "stopwatch",
+        "time"
       ]
     },
     {
       "name": "stopwatch-sharp",
       "tags": [
         "sharp",
-        "stopwatch"
+        "stopwatch",
+        "time"
       ]
     },
     {
@@ -7582,21 +8762,33 @@
     {
       "name": "sunny",
       "tags": [
-        "sunny"
+        "light",
+        "sky",
+        "sunny",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "sunny-outline",
       "tags": [
+        "light",
         "outline",
-        "sunny"
+        "sky",
+        "sunny",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "sunny-sharp",
       "tags": [
+        "light",
         "sharp",
-        "sunny"
+        "sky",
+        "sunny",
+        "weather",
+        "whether"
       ]
     },
     {
@@ -7774,20 +8966,35 @@
     {
       "name": "thermometer",
       "tags": [
+        "cold",
+        "heat",
+        "hot",
+        "mercury",
+        "temperature",
         "thermometer"
       ]
     },
     {
       "name": "thermometer-outline",
       "tags": [
+        "cold",
+        "heat",
+        "hot",
+        "mercury",
         "outline",
+        "temperature",
         "thermometer"
       ]
     },
     {
       "name": "thermometer-sharp",
       "tags": [
+        "cold",
+        "heat",
+        "hot",
+        "mercury",
         "sharp",
+        "temperature",
         "thermometer"
       ]
     },
@@ -7840,52 +9047,93 @@
     {
       "name": "thunderstorm",
       "tags": [
-        "thunderstorm"
+        "cloudy",
+        "lightning",
+        "overcast",
+        "rain",
+        "sky",
+        "storm",
+        "thunderstorm",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "thunderstorm-outline",
       "tags": [
+        "cloudy",
+        "lightning",
         "outline",
-        "thunderstorm"
+        "overcast",
+        "rain",
+        "sky",
+        "storm",
+        "thunderstorm",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "thunderstorm-sharp",
       "tags": [
+        "cloudy",
+        "lightning",
+        "overcast",
+        "rain",
         "sharp",
-        "thunderstorm"
+        "sky",
+        "storm",
+        "thunderstorm",
+        "weather",
+        "whether"
       ]
     },
     {
       "name": "time",
       "tags": [
-        "time"
+        "clock",
+        "hour",
+        "minute",
+        "second",
+        "time",
+        "watch"
       ]
     },
     {
       "name": "time-outline",
       "tags": [
+        "clock",
+        "hour",
+        "minute",
         "outline",
-        "time"
+        "second",
+        "time",
+        "watch"
       ]
     },
     {
       "name": "time-sharp",
       "tags": [
+        "clock",
+        "hour",
+        "minute",
+        "second",
         "sharp",
-        "time"
+        "time",
+        "watch"
       ]
     },
     {
       "name": "timer",
       "tags": [
+        "clock",
         "timer"
       ]
     },
     {
       "name": "timer-outline",
       "tags": [
+        "clock",
         "outline",
         "timer"
       ]
@@ -7893,6 +9141,7 @@
     {
       "name": "timer-sharp",
       "tags": [
+        "clock",
         "sharp",
         "timer"
       ]
@@ -8003,6 +9252,9 @@
     {
       "name": "trash",
       "tags": [
+        "close",
+        "delete",
+        "remove",
         "trash"
       ]
     },
@@ -8032,13 +9284,19 @@
     {
       "name": "trash-outline",
       "tags": [
+        "close",
+        "delete",
         "outline",
+        "remove",
         "trash"
       ]
     },
     {
       "name": "trash-sharp",
       "tags": [
+        "close",
+        "delete",
+        "remove",
         "sharp",
         "trash"
       ]
@@ -8096,26 +9354,42 @@
     {
       "name": "trophy",
       "tags": [
-        "trophy"
+        "award",
+        "compete",
+        "competition",
+        "lose",
+        "trophy",
+        "win"
       ]
     },
     {
       "name": "trophy-outline",
       "tags": [
+        "award",
+        "compete",
+        "competition",
+        "lose",
         "outline",
-        "trophy"
+        "trophy",
+        "win"
       ]
     },
     {
       "name": "trophy-sharp",
       "tags": [
+        "award",
+        "compete",
+        "competition",
+        "lose",
         "sharp",
-        "trophy"
+        "trophy",
+        "win"
       ]
     },
     {
       "name": "tv",
       "tags": [
+        "television",
         "tv"
       ]
     },
@@ -8123,6 +9397,7 @@
       "name": "tv-outline",
       "tags": [
         "outline",
+        "television",
         "tv"
       ]
     },
@@ -8130,38 +9405,57 @@
       "name": "tv-sharp",
       "tags": [
         "sharp",
+        "television",
         "tv"
       ]
     },
     {
       "name": "umbrella",
       "tags": [
-        "umbrella"
+        "dry",
+        "rain",
+        "shelter",
+        "umbrella",
+        "wet"
       ]
     },
     {
       "name": "umbrella-outline",
       "tags": [
+        "dry",
         "outline",
-        "umbrella"
+        "rain",
+        "shelter",
+        "umbrella",
+        "wet"
       ]
     },
     {
       "name": "umbrella-sharp",
       "tags": [
+        "dry",
+        "rain",
         "sharp",
-        "umbrella"
+        "shelter",
+        "umbrella",
+        "wet"
       ]
     },
     {
       "name": "videocam",
       "tags": [
+        "camera",
+        "film",
+        "movie",
         "videocam"
       ]
     },
     {
       "name": "videocam-outline",
       "tags": [
+        "camera",
+        "film",
+        "movie",
         "outline",
         "videocam"
       ]
@@ -8169,6 +9463,9 @@
     {
       "name": "videocam-sharp",
       "tags": [
+        "camera",
+        "film",
+        "movie",
         "sharp",
         "videocam"
       ]
@@ -8246,6 +9543,7 @@
       "name": "volume-mute",
       "tags": [
         "mute",
+        "sound",
         "volume"
       ]
     },
@@ -8254,6 +9552,7 @@
       "tags": [
         "mute",
         "outline",
+        "sound",
         "volume"
       ]
     },
@@ -8262,6 +9561,7 @@
       "tags": [
         "mute",
         "sharp",
+        "sound",
         "volume"
       ]
     },
@@ -8311,12 +9611,16 @@
     {
       "name": "wallet",
       "tags": [
+        "cash",
+        "money",
         "wallet"
       ]
     },
     {
       "name": "wallet-outline",
       "tags": [
+        "cash",
+        "money",
         "outline",
         "wallet"
       ]
@@ -8324,6 +9628,8 @@
     {
       "name": "wallet-sharp",
       "tags": [
+        "cash",
+        "money",
         "sharp",
         "wallet"
       ]
@@ -8391,12 +9697,18 @@
     {
       "name": "wifi",
       "tags": [
+        "bars",
+        "connection",
+        "internet",
         "wifi"
       ]
     },
     {
       "name": "wifi-outline",
       "tags": [
+        "bars",
+        "connection",
+        "internet",
         "outline",
         "wifi"
       ]
@@ -8404,6 +9716,9 @@
     {
       "name": "wifi-sharp",
       "tags": [
+        "bars",
+        "connection",
+        "internet",
         "sharp",
         "wifi"
       ]
@@ -8411,12 +9726,14 @@
     {
       "name": "wine",
       "tags": [
+        "glass",
         "wine"
       ]
     },
     {
       "name": "wine-outline",
       "tags": [
+        "glass",
         "outline",
         "wine"
       ]
@@ -8424,6 +9741,7 @@
     {
       "name": "wine-sharp",
       "tags": [
+        "glass",
         "sharp",
         "wine"
       ]
@@ -8431,12 +9749,20 @@
     {
       "name": "woman",
       "tags": [
+        "dudette",
+        "female",
+        "girl",
+        "lady",
         "woman"
       ]
     },
     {
       "name": "woman-outline",
       "tags": [
+        "dudette",
+        "female",
+        "girl",
+        "lady",
         "outline",
         "woman"
       ]
@@ -8444,6 +9770,10 @@
     {
       "name": "woman-sharp",
       "tags": [
+        "dudette",
+        "female",
+        "girl",
+        "lady",
         "sharp",
         "woman"
       ]
