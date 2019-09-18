@@ -362,7 +362,7 @@ async function createDtsIcons(version: string, iconDir: string, srcSvgData: SvgD
 
 async function createDataJson(version: string, srcDir: string, distDir: string, srcSvgData: SvgData[]) {
   const srcDataJsonPath = join(srcDir, 'data.json');
-  const distDataJsonPath = join(distDir, 'data.json');
+  const distDataJsonPath = join(distDir, 'ionicons.json');
 
   let data: JsonData;
 
