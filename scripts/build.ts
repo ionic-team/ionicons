@@ -59,6 +59,10 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
 
                 } else if (attr.name === 'stroke') {
                   item.removeAttr('stroke');
+
+                } else if (attr.name === 'stroke-width' && attr.value === '32') {
+                  item.removeAttr('stroke-width');
+                  item.class.add('ionicon-stroke-width');
                 }
               });
             }
@@ -92,11 +96,7 @@ async function optimizeSvg(svgo: Svgo, svgData: SvgData) {
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
   const optimizedSvg = await svgo.optimize(srcSvgContent, { path: svgData.srcFilePath });
 
-  svgData.optimizedSvgContent = optimizedSvg.data
-    .replace(
-      `fill="none"`,
-      `class=""`
-    );
+  svgData.optimizedSvgContent = optimizedSvg.data;
 
   await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
 }
@@ -137,6 +137,9 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
     `}`,
     `.ionicon-fill-none {`,
     `  fill: none;`,
+    `}`,
+    `.ionicon-stroke-width {`,
+    `  stroke-width: 32px;`,
     `}`,
     `</style>`,
   ];
