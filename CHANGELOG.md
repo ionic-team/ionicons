@@ -1,4 +1,9 @@
-# [5.0.0-0](https://github.com/ionic-team/ionicons/compare/v4.6.3...v5.0.0-0) (2019-09-18)
+# [5.0.0-1](https://github.com/ionic-team/ionicons/compare/v4.6.3...v5.0.0-1) (2019-09-23)
+
+
+### Bug Fixes
+
+* **color:** fix fill and stroke currentColor ([f0d22cc](https://github.com/ionic-team/ionicons/commit/f0d22cc))
 
 
 ### Refactor
