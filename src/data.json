@@ -5159,589 +5159,513 @@
       ]
     },
     {
-      "name": "logo-amazon-outline",
+      "name": "logo-amazon",
       "tags": [
         "amazon",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-amplify-outline",
+      "name": "logo-amplify",
       "tags": [
         "amplify",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-android-outline",
+      "name": "logo-android",
       "tags": [
         "android",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-angular-outline",
+      "name": "logo-angular",
       "tags": [
         "angular",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-apple-appstore-outline",
+      "name": "logo-apple",
+      "tags": [
+        "apple",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-apple-appstore",
       "tags": [
         "apple",
         "appstore",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-apple-outline",
-      "tags": [
-        "apple",
-        "logo",
-        "outline"
-      ]
-    },
-    {
-      "name": "logo-bitbucket-outline",
+      "name": "logo-bitbucket",
       "tags": [
         "bitbucket",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-buffer-62-outline",
+      "name": "logo-buffer-62",
       "tags": [
         "62",
         "buffer",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-buffer-63-outline",
+      "name": "logo-buffer-63",
       "tags": [
         "63",
         "buffer",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-capacitor-outline",
+      "name": "logo-capacitor",
       "tags": [
         "capacitor",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-chrome-outline",
+      "name": "logo-chrome",
       "tags": [
         "chrome",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-closed-captioning-outline",
+      "name": "logo-closed-captioning",
       "tags": [
         "captioning",
         "closed",
-        "closed-captioning",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-codepen-outline",
+      "name": "logo-codepen",
       "tags": [
         "codepen",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-css3-outline",
+      "name": "logo-css3",
       "tags": [
         "css3",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-designernews-outline",
+      "name": "logo-designernews",
       "tags": [
         "designernews",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-dribbble-outline",
+      "name": "logo-dribbble",
       "tags": [
         "dribbble",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-dropbox-outline",
+      "name": "logo-dropbox",
       "tags": [
         "dropbox",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-edge-outline",
+      "name": "logo-edge",
       "tags": [
         "edge",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-electron-outline",
+      "name": "logo-electron",
       "tags": [
         "electron",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-euro-outline",
+      "name": "logo-euro",
       "tags": [
         "euro",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-facebook-outline",
+      "name": "logo-facebook",
       "tags": [
         "facebook",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-firebase-outline",
+      "name": "logo-firebase",
       "tags": [
         "firebase",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-firefox-outline",
+      "name": "logo-firefox",
       "tags": [
         "firefox",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-flickr-outline",
+      "name": "logo-flickr",
       "tags": [
         "flickr",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-foursquare-outline",
+      "name": "logo-foursquare",
       "tags": [
         "foursquare",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-github-outline",
+      "name": "logo-github",
       "tags": [
         "github",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-google-outline",
+      "name": "logo-google",
       "tags": [
         "google",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-google-playstore-outline",
+      "name": "logo-google-playstore",
       "tags": [
         "google",
         "logo",
-        "outline",
         "playstore"
       ]
     },
     {
-      "name": "logo-hackernews-outline",
+      "name": "logo-hackernews",
       "tags": [
         "hackernews",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-html5-outline",
+      "name": "logo-html5",
       "tags": [
         "html5",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-instagram-outline",
+      "name": "logo-instagram",
       "tags": [
         "instagram",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-ionic-outline",
+      "name": "logo-ionic",
       "tags": [
         "ionic",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-ionitron-outline",
+      "name": "logo-ionitron",
       "tags": [
         "ionitron",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-javascript-outline",
+      "name": "logo-javascript",
       "tags": [
         "javascript",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-laravel-outline",
+      "name": "logo-laravel",
       "tags": [
         "laravel",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-linkedin-outline",
+      "name": "logo-linkedin",
       "tags": [
         "linkedin",
-        "logo",
-        "outline"
+        "logo"
       ]
     },
     {
-      "name": "logo-markdown-outline",
+      "name": "logo-markdown",
       "tags": [
         "logo",
-        "markdown",
-        "outline"
+        "markdown"
       ]
     },
     {
-      "name": "logo-no-smoking-outline",
+      "name": "logo-no-smoking",
       "tags": [
         "logo",
         "no",
-        "no-smoking",
-        "outline",
         "smoking"
       ]
     },
     {
-      "name": "logo-nodejs-outline",
+      "name": "logo-nodejs",
       "tags": [
         "logo",
-        "nodejs",
-        "outline"
+        "nodejs"
       ]
     },
     {
-      "name": "logo-npm-outline",
+      "name": "logo-npm",
       "tags": [
         "logo",
-        "npm",
-        "outline"
+        "npm"
       ]
     },
     {
-      "name": "logo-octocat-outline",
+      "name": "logo-octocat",
       "tags": [
         "logo",
-        "octocat",
-        "outline"
+        "octocat"
       ]
     },
     {
-      "name": "logo-pinterest-outline",
+      "name": "logo-pinterest",
       "tags": [
         "logo",
-        "outline",
         "pinterest"
       ]
     },
     {
-      "name": "logo-playstation-outline",
+      "name": "logo-playstation",
       "tags": [
         "logo",
-        "outline",
         "playstation"
       ]
     },
     {
-      "name": "logo-pwa-outline",
+      "name": "logo-pwa",
       "tags": [
         "logo",
-        "outline",
         "pwa"
       ]
     },
     {
-      "name": "logo-python-outline",
+      "name": "logo-python",
       "tags": [
         "logo",
-        "outline",
         "python"
       ]
     },
     {
-      "name": "logo-react-outline",
+      "name": "logo-react",
       "tags": [
         "logo",
-        "outline",
         "react"
       ]
     },
     {
-      "name": "logo-reddit-outline",
+      "name": "logo-reddit",
       "tags": [
         "logo",
-        "outline",
         "reddit"
       ]
     },
     {
-      "name": "logo-rss-outline",
+      "name": "logo-rss",
       "tags": [
         "logo",
-        "outline",
         "rss"
       ]
     },
     {
-      "name": "logo-sass-outline",
+      "name": "logo-sass",
       "tags": [
         "logo",
-        "outline",
         "sass"
       ]
     },
     {
-      "name": "logo-skype-outline",
+      "name": "logo-skype",
       "tags": [
         "logo",
-        "outline",
         "skype"
       ]
     },
     {
-      "name": "logo-slack-outline",
+      "name": "logo-slack",
       "tags": [
         "logo",
-        "outline",
         "slack"
       ]
     },
     {
-      "name": "logo-snapchat-outline",
+      "name": "logo-snapchat",
       "tags": [
         "logo",
-        "outline",
         "snapchat"
       ]
     },
     {
-      "name": "logo-stackoverflow-outline",
+      "name": "logo-stackoverflow",
       "tags": [
         "logo",
-        "outline",
         "stackoverflow"
       ]
     },
     {
-      "name": "logo-steam-outline",
+      "name": "logo-steam",
       "tags": [
         "logo",
-        "outline",
         "steam"
       ]
     },
     {
-      "name": "logo-stencil-outline",
+      "name": "logo-stencil",
       "tags": [
         "logo",
-        "outline",
         "stencil"
       ]
     },
     {
-      "name": "logo-tumblr-outline",
+      "name": "logo-tumblr",
       "tags": [
         "logo",
-        "outline",
         "tumblr"
       ]
     },
     {
-      "name": "logo-tux-outline",
+      "name": "logo-tux",
       "tags": [
         "logo",
-        "outline",
         "tux"
       ]
     },
     {
-      "name": "logo-twitch-outline",
+      "name": "logo-twitch",
       "tags": [
         "logo",
-        "outline",
         "twitch"
       ]
     },
     {
-      "name": "logo-twitter-outline",
+      "name": "logo-twitter",
       "tags": [
         "logo",
-        "outline",
         "twitter"
       ]
     },
     {
-      "name": "logo-usd-outline",
+      "name": "logo-usd",
       "tags": [
-        "$",
         "logo",
-        "outline",
         "usd"
       ]
     },
     {
-      "name": "logo-vimeo-outline",
+      "name": "logo-vimeo",
       "tags": [
         "logo",
-        "outline",
         "vimeo"
       ]
     },
     {
-      "name": "logo-vk-outline",
+      "name": "logo-vk",
       "tags": [
         "logo",
-        "outline",
         "vk"
       ]
     },
     {
-      "name": "logo-vue-outline",
+      "name": "logo-vue",
       "tags": [
         "logo",
-        "outline",
         "vue"
       ]
     },
     {
-      "name": "logo-web-component-outline",
+      "name": "logo-web-component",
       "tags": [
         "component",
         "logo",
-        "outline",
         "web"
       ]
     },
     {
-      "name": "logo-whatsapp-outline",
+      "name": "logo-whatsapp",
       "tags": [
         "logo",
-        "outline",
         "whatsapp"
       ]
     },
     {
-      "name": "logo-windows-outline",
+      "name": "logo-windows",
       "tags": [
         "logo",
-        "microsoft",
-        "outline",
         "windows"
       ]
     },
     {
-      "name": "logo-wordpress-outline",
+      "name": "logo-wordpress",
       "tags": [
         "logo",
-        "outline",
         "wordpress"
       ]
     },
     {
-      "name": "logo-xbox-outline",
+      "name": "logo-xbox",
       "tags": [
         "logo",
-        "outline",
         "xbox"
       ]
     },
     {
-      "name": "logo-xing-outline",
+      "name": "logo-xing",
       "tags": [
         "logo",
-        "outline",
         "xing"
       ]
     },
     {
-      "name": "logo-yahoo-outline",
+      "name": "logo-yahoo",
       "tags": [
         "logo",
-        "outline",
         "yahoo"
       ]
     },
     {
-      "name": "logo-yen-outline",
+      "name": "logo-yen",
       "tags": [
         "logo",
-        "outline",
         "yen"
       ]
     },
     {
-      "name": "logo-youtube-outline",
+      "name": "logo-youtube",
       "tags": [
         "logo",
-        "outline",
         "youtube"
       ]
     },
@@ -6398,9 +6322,9 @@
       ]
     },
     {
-      "name": "notifcations",
+      "name": "notifications",
       "tags": [
-        "notifcations"
+        "notifications"
       ]
     },
     {
