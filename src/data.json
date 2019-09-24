@@ -2018,19 +2018,19 @@
       ]
     },
     {
-      "name": "chatbubble-ellipses-filled",
-      "tags": [
-        "chatbubble",
-        "ellipses",
-        "filled"
-      ]
-    },
-    {
       "name": "chatbubble-ellipses-outline",
       "tags": [
         "chatbubble",
         "ellipses",
         "outline"
+      ]
+    },
+    {
+      "name": "chatbubble-ellipses-sharp",
+      "tags": [
+        "chatbubble",
+        "ellipses",
+        "sharp"
       ]
     },
     {
