@@ -1,6 +1,4 @@
 :host {
-  --stroke-width: 32px;
-
   display: inline-block;
 
   width: 1em;
@@ -22,7 +20,8 @@
 }
 
 .ionicon-stroke-width {
-  stroke-width: var(--stroke-width);
+  stroke-width: 32px;
+  stroke-width: var(--ionicon-stroke-width, 32px);
 }
 
 .icon-inner,
