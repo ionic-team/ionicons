@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import { join } from 'path';
+import { join, basename } from 'path';
 import Svgo from 'svgo';
 
 
@@ -69,7 +69,24 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
                   item.class.add('ionicon-stroke-width');
                 }
               });
+
             }
+          }
+        }
+      } as any,
+      {
+        replaceTitleText: {
+          type: 'perItem',
+          fn: (item, params, extra) => {
+            if (item.isElem('title')) {
+              const fileName = basename(extra.path)
+                .replace('.svg', '')
+                .replace('-outline', '')
+                .replace('-sharp', '')
+                .replace(/-/g, ' ');
+              item.content[0].text = fileName;
+            }
+            return item;
           }
         }
       } as any,
