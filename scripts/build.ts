@@ -10,10 +10,12 @@ async function build(rootDir: string) {
   const iconDir = join(rootDir, 'icons');
   const distDir = join(rootDir, 'dist');
   const distIoniconsDir = join(distDir, 'ionicons');
+  const destSrcSvgDir = join(distDir, 'svg');
 
   await Promise.all([
     fs.emptyDir(iconDir),
     fs.emptyDir(distDir),
+    fs.emptyDir(destSrcSvgDir),
   ]);
   await fs.emptyDir(distIoniconsDir);
 
@@ -34,6 +36,8 @@ async function build(rootDir: string) {
   await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
 
   await copyToTesting(rootDir, distDir, srcSvgData);
+
+  await fs.copy(srcSvgDir, destSrcSvgDir);
 }
 
 
