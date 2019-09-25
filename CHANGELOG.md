@@ -1,3 +1,7 @@
+# [5.0.0-4](https://github.com/ionic-team/ionicons/compare/v5.0.0-3...v5.0.0-4) (2019-09-25)
+
+
+
 # [5.0.0-3](https://github.com/ionic-team/ionicons/compare/v5.0.0-2...v5.0.0-3) (2019-09-24)
 
 
