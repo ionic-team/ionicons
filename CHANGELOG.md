@@ -1,16 +1,9 @@
-# [5.0.0-4](https://github.com/ionic-team/ionicons/compare/v5.0.0-3...v5.0.0-4) (2019-09-25)
+# [5.0.0-5](https://github.com/ionic-team/ionicons/compare/v5.0.0-4...v5.0.0-5) (2019-09-25)
 
 
+### Features
 
-# [5.0.0-3](https://github.com/ionic-team/ionicons/compare/v5.0.0-2...v5.0.0-3) (2019-09-24)
-
-
-
-# [5.0.0-2](https://github.com/ionic-team/ionicons/compare/v5.0.0-1...v5.0.0-2) (2019-09-24)
-
-
-
-# [5.0.0-1](https://github.com/ionic-team/ionicons/compare/v4.6.3...v5.0.0-1) (2019-09-23)
+* **svg:** add source svgs to distribution ([279de85](https://github.com/ionic-team/ionicons/commit/279de85))
 
 
 ### Bug Fixes
