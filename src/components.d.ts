@@ -71,7 +71,7 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface IonIcon extends JSXBase.HTMLAttributes<HTMLIonIconElement> {
+  interface IonIcon {
     /**
     * Specifies the label to use for accessibility. Defaults to the icon name.
     */
@@ -128,7 +128,9 @@ export { LocalJSX as JSX };
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+    interface IntrinsicElements {
+      'ion-icon': LocalJSX.IonIcon & JSXBase.HTMLAttributes<HTMLIonIconElement>;
+    }
   }
 }
 

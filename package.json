@@ -13,8 +13,9 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "scripts": {
-    "build": "tsc -p scripts/tsconfig.json && npm run build.files && stencil build",
+    "build": "tsc -p scripts/tsconfig.json && npm run build.files && stencil build && npm run collection.copy",
     "build.files": "node scripts/build.js",
+    "collection.copy": "node scripts/collection-copy.js",
     "start": "stencil build --dev --watch --serve",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "release.prepare": "node scripts/release.js --any-branch",
@@ -22,7 +23,7 @@
     "test": "stencil test --spec"
   },
   "devDependencies": {
-    "@stencil/core": "~1.4.0",
+    "@stencil/core": "^1.7.1",
     "@types/execa": "^2.0.0",
     "@types/fs-extra": "^8.0.0",
     "@types/inquirer": "^6.5.0",
