@@ -71,7 +71,6 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
                   item.class.add('ionicon-stroke-width');
                 }
               });
-
             }
           }
         }
@@ -109,14 +108,43 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
     ]
   });
 
+  const validatePass = new Svgo({
+    full: true,
+    plugins: [
+      {
+        addFillNoneCss: {
+          type: 'perItem',
+          fn: (item, params) => {
+            if (!Array.isArray(params.attrs)) {
+              params.attrs = [params.attrs];
+            }
+            if (item.isElem()) {
+              item.eachAttr(attr => {
+                if (attr.name === 'style') {
+                  throw new Error('Inline style detected');
+                }
+              });
+            }
+          }
+        }
+      } as any
+    ]
+  });
+
   await Promise.all(srcSvgData.map(async svgData => {
-    return optimizeSvg(optimizePass, processPass, svgData);
+    return optimizeSvg(optimizePass, processPass, validatePass, svgData);
   }));
 }
 
 
-async function optimizeSvg(pass1: Svgo, pass2: Svgo, svgData: SvgData) {
+async function optimizeSvg(pass1: Svgo, pass2: Svgo, validatePass: Svgo, svgData: SvgData) {
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
+  try {
+    await validatePass.optimize(srcSvgContent, { path: svgData.srcFilePath });
+  } catch (e) {
+    console.error(`${e.message}: ${svgData.srcFilePath}`);
+  }
+
   const optimizedSvg = await pass1.optimize(srcSvgContent, { path: svgData.srcFilePath });
   const processedSvg = await pass2.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
 
