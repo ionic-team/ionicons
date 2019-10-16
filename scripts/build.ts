@@ -41,7 +41,6 @@ async function build(rootDir: string) {
 }
 
 
-
 async function optimizeSvgs(srcSvgData: SvgData[]) {
   // https://github.com/svg/svgo
   const optimizePass = new Svgo({});
@@ -139,16 +138,17 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
 
 async function optimizeSvg(pass1: Svgo, pass2: Svgo, validatePass: Svgo, svgData: SvgData) {
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
-  try {
-    await validatePass.optimize(srcSvgContent, { path: svgData.srcFilePath });
-  } catch (e) {
-    console.error(`${e.message}: ${svgData.srcFilePath}`);
-  }
 
   const optimizedSvg = await pass1.optimize(srcSvgContent, { path: svgData.srcFilePath });
   const processedSvg = await pass2.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
 
   svgData.optimizedSvgContent = processedSvg.data;
+
+  try {
+    await validatePass.optimize(svgData.optimizedSvgContent, { path: svgData.srcFilePath });
+  } catch (e) {
+    console.error(`${e.message}: ${svgData.srcFilePath}`);
+  }
 
   await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
 }
