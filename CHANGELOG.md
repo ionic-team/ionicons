@@ -1,4 +1,4 @@
-# [5.0.0-9](https://github.com/ionic-team/ionicons/compare/v5.0.0-0...v5.0.0-9) (2019-10-17)
+# [5.0.0-10](https://github.com/ionic-team/ionicons/compare/v5.0.0-0...v5.0.0-10) (2019-10-17)
 
 ### Refactor
 
@@ -7,3 +7,4 @@
 * **svg:** add source svgs to distribution ([279de85](https://github.com/ionic-team/ionicons/commit/279de85))
 * **svg:** add source svgs to distribution ([279de85](https://github.com/ionic-team/ionicons/commit/279de8512ce91b1c20cc68c016dce31d779959b0))
 * **toggle:** rename switch to toggle ([dfb62b6](https://github.com/ionic-team/ionicons/commit/dfb62b67e05ce396b4fb7b0e149c6ce19010b13a))
+* **types:** update package.json types ([993a314](https://github.com/ionic-team/ionicons/commit/993a314eb6383cba906b997f7631c9c14523c670))
