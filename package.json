@@ -8,7 +8,7 @@
   ],
   "module": "dist/index.mjs",
   "main": "dist/index.js",
-  "types": "dist/types/components.d.ts",
+  "types": "dist/types/index.d.ts",
   "unpkg": "dist/ionicons.js",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
