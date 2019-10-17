@@ -4,40 +4,46 @@ import Svgo from 'svgo';
 
 
 async function build(rootDir: string) {
-  const pkgJsonPath = join(rootDir, 'package.json');
-  const srcDir = join(rootDir, 'src');
-  const srcSvgDir = join(srcDir, 'svg');
-  const iconDir = join(rootDir, 'icons');
-  const distDir = join(rootDir, 'dist');
-  const distIoniconsDir = join(distDir, 'ionicons');
-  const destSrcSvgDir = join(distDir, 'svg');
+  try {
+    const pkgJsonPath = join(rootDir, 'package.json');
+    const srcDir = join(rootDir, 'src');
+    const srcSvgDir = join(srcDir, 'svg');
+    const iconDir = join(rootDir, 'icons');
+    const distDir = join(rootDir, 'dist');
+    const distIoniconsDir = join(distDir, 'ionicons');
+    const destSrcSvgDir = join(distDir, 'svg');
 
-  await Promise.all([
-    fs.emptyDir(iconDir),
-    fs.emptyDir(distDir),
-    fs.emptyDir(destSrcSvgDir),
-  ]);
-  await fs.emptyDir(distIoniconsDir);
+    await Promise.all([
+      fs.emptyDir(iconDir),
+      fs.emptyDir(distDir),
+      fs.emptyDir(destSrcSvgDir),
+    ]);
+    await fs.emptyDir(distIoniconsDir);
 
-  const pkgData = await fs.readJson(pkgJsonPath);
-  const version = pkgData.version as string;
+    const pkgData = await fs.readJson(pkgJsonPath);
+    const version = pkgData.version as string;
 
-  const srcSvgData = await getSvgs(srcSvgDir, rootDir, distIoniconsDir)
+    const srcSvgData = await getSvgs(srcSvgDir, rootDir, distIoniconsDir)
 
-  await optimizeSvgs(srcSvgData);
+    await optimizeSvgs(srcSvgData);
 
-  await Promise.all([
-    createDataJson(version, srcDir, distDir, srcSvgData),
-    createIconPackage(version, iconDir, srcSvgData),
-  ]);
+    await Promise.all([
+      createDataJson(version, srcDir, distDir, srcSvgData),
+      createIconPackage(version, iconDir, srcSvgData),
+    ]);
 
-  const svgSymbolsContent = await createSvgSymbols(version, distDir, srcSvgData)
+    const svgSymbolsContent = await createSvgSymbols(version, distDir, srcSvgData)
 
-  await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
+    await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
 
-  await copyToTesting(rootDir, distDir, srcSvgData);
+    await copyToTesting(rootDir, distDir, srcSvgData);
 
-  await fs.copy(srcSvgDir, destSrcSvgDir);
+    await fs.copy(srcSvgDir, destSrcSvgDir);
+
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
 }
 
 
@@ -269,6 +275,10 @@ async function getSvgs(srcSvgDir: string, rootDir: string, distIoniconsDir: stri
 
     // iconName: airplane-outline
     const iconName = dotSplit[0];
+
+    if (reservedKeywords.has(iconName)) {
+      throw new Error(`svg icon name "${iconName}" is a reserved JavaScript keyword`);
+    }
 
     // fileNameMjs: airplane-outline.mjs
     const fileNameMjs = iconName + '.mjs';
@@ -519,6 +529,58 @@ interface JsonData {
   icons: { name: string; tags?: string[]; } [];
   version?: string;
 }
+
+// https://mathiasbynens.be/notes/reserved-keywords
+const reservedKeywords = new Set([
+  'do',
+  'if',
+  'in',
+  'for',
+  'let',
+  'new',
+  'try',
+  'var',
+  'case',
+  'else',
+  'enum',
+  'eval',
+  'null',
+  'this',
+  'true',
+  'void',
+  'with',
+  'await',
+  'break',
+  'catch',
+  'class',
+  'const',
+  'false',
+  'super',
+  'throw',
+  'while',
+  'yield',
+  'delete',
+  'export',
+  'import',
+  'public',
+  'return',
+  'static',
+  'switch',
+  'typeof',
+  'default',
+  'extends',
+  'finally',
+  'package',
+  'private',
+  'continue',
+  'debugger',
+  'function',
+  'arguments',
+  'interface',
+  'protected',
+  'implements',
+  'instanceof',
+]);
 
 
 // let's do this

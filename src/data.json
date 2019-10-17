@@ -9140,26 +9140,6 @@
       ]
     },
     {
-      "name": "switch",
-      "tags": [
-        "switch"
-      ]
-    },
-    {
-      "name": "switch-outline",
-      "tags": [
-        "outline",
-        "switch"
-      ]
-    },
-    {
-      "name": "switch-sharp",
-      "tags": [
-        "sharp",
-        "switch"
-      ]
-    },
-    {
       "name": "sync",
       "tags": [
         "sync"
@@ -9509,6 +9489,29 @@
       "tags": [
         "sharp",
         "today"
+      ]
+    },
+    {
+      "name": "toggle",
+      "tags": [
+        "switch",
+        "toggle"
+      ]
+    },
+    {
+      "name": "toggle-outline",
+      "tags": [
+        "outline",
+        "switch",
+        "toggle"
+      ]
+    },
+    {
+      "name": "toggle-sharp",
+      "tags": [
+        "sharp",
+        "switch",
+        "toggle"
       ]
     },
     {
