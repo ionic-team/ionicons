@@ -1,4 +1,4 @@
-# [5.0.0-10](https://github.com/ionic-team/ionicons/compare/v5.0.0-0...v5.0.0-10) (2019-10-17)
+# [5.0.0-11](https://github.com/ionic-team/ionicons/compare/v5.0.0-0...v5.0.0-11) (2019-10-18)
 
 ### Refactor
 
