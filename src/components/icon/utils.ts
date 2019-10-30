@@ -5,7 +5,7 @@ import { Icon } from './icon';
 let CACHED_MAP: Map<string, string>;
 
 export const getIconMap = (): Map<string, string> => {
-  if (!CACHED_MAP) {
+  if (!CACHED_MAP && typeof window !== 'undefined') {
     const win = window as any;
     win.Ionicons = win.Ionicons || {};
     CACHED_MAP = win.Ionicons.map = win.Ionicons.map || new Map();
