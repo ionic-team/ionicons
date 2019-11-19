@@ -142,7 +142,7 @@ export class Icon {
 
   render() {
     const mode = this.mode || 'md';
-    const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
+    const flipRtl = this.flipRtl || (this.ariaLabel && (this.ariaLabel.indexOf('arrow') > -1 || this.ariaLabel.indexOf('chevron') > -1) && this.flipRtl !== false);
 
     return (
       <Host role="img" class={{
