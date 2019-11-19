@@ -49,7 +49,7 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 #### Preview Component Changes
 
 1. Run `npm start` from the root directory to start a local version of the icon test.
-2. Modify this test as needed in the `index.html` file.
+2. Modify the icon test as needed in the `index.html` file.
 
 
 <!-- #### Building Changes
