@@ -25,7 +25,8 @@
 }
 
 .icon-inner,
-.ionicon {
+.ionicon,
+svg {
   display: block;
 
   height: 100%;
