@@ -49,19 +49,7 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 #### Preview Component Changes
 
 1. Run `npm start` from the root directory to start a local version of the icon test.
-2. In the browser, navigate to `/src/components` to view the example test.
-3. Modify this test as needed in the `src/components.index.html` file.
-
-#### Preview Site
-
-1. Run `npm run dev` from the root directory to start a local version of the ionicons site.
-2. A browser will open with a local version of the ionicons docs.
-
-
-#### Lint Changes
-
-1. Run `npm run lint.ts` to lint the TypeScript.
-2. If there are lint errors, run `npm run lint.ts.fix` to automatically fix any errors. Repeat step 1 to ensure the errors have been fixed, and manually fix them if not.
+2. Modify this test as needed in the `index.html` file.
 
 
 <!-- #### Building Changes
