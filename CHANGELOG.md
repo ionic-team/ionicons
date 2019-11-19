@@ -1,3 +1,12 @@
+# [5.0.0-12](https://github.com/ionic-team/ionicons/compare/v5.0.0-11...v5.0.0-12) (2019-11-19)
+
+
+### Bug Fixes
+
+* **icon:** apply proper styles to custom icon src ([#739](https://github.com/ionic-team/ionicons/issues/739)) ([cecdb9c](https://github.com/ionic-team/ionicons/commit/cecdb9c0cd7b0cc9d190ffe4fbd5bbee18ee147b))
+* **icon:** include chevron icons in flip-rtl ([#740](https://github.com/ionic-team/ionicons/issues/740)) ([352c80b](https://github.com/ionic-team/ionicons/commit/352c80b8b61cbc510038974120d8bb7c68b3d7a9))
+
+
 # [5.0.0-11](https://github.com/ionic-team/ionicons/compare/v5.0.0-0...v5.0.0-11) (2019-10-18)
 
 ### Refactor
