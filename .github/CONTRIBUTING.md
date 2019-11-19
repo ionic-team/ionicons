@@ -35,8 +35,9 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 3. Clone your fork.
 4. Create a new branch from master for your change.
 5. Run `npm install` from the root directory to install dependencies for this package.
-6. [Modify the Icon Component](#modifying-components) if desired.
-7. Or, modify and [preview the site](#preview-site).
+6. Run `npm run build` to perform a first time build.
+7. [Modify the Icon Component](#modifying-components) if desired.
+8. Or, modify and [preview the site](#preview-site).
 
 
 #### Modifying Components
