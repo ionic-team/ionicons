@@ -35,8 +35,9 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 3. Clone your fork.
 4. Create a new branch from master for your change.
 5. Run `npm install` from the root directory to install dependencies for this package.
-6. [Modify the Icon Component](#modifying-components) if desired.
-7. Or, modify and [preview the site](#preview-site).
+6. Run `npm run build` to perform a first time build.
+7. [Modify the Icon Component](#modifying-components) if desired.
+8. Or, modify and [preview the site](#preview-site).
 
 
 #### Modifying Components
@@ -48,19 +49,7 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 #### Preview Component Changes
 
 1. Run `npm start` from the root directory to start a local version of the icon test.
-2. In the browser, navigate to `/src/components` to view the example test.
-3. Modify this test as needed in the `src/components.index.html` file.
-
-#### Preview Site
-
-1. Run `npm run dev` from the root directory to start a local version of the ionicons site.
-2. A browser will open with a local version of the ionicons docs.
-
-
-#### Lint Changes
-
-1. Run `npm run lint.ts` to lint the TypeScript.
-2. If there are lint errors, run `npm run lint.ts.fix` to automatically fix any errors. Repeat step 1 to ensure the errors have been fixed, and manually fix them if not.
+2. Modify the icon test as needed in the `index.html` file.
 
 
 <!-- #### Building Changes

@@ -28,7 +28,7 @@
     "@types/execa": "^2.0.0",
     "@types/fs-extra": "^8.0.0",
     "@types/inquirer": "^6.5.0",
-    "@types/jest": "24.0.13",
+    "@types/jest": "^24.0.20",
     "@types/listr": "^0.14.2",
     "@types/puppeteer": "1.12.4",
     "@types/svgo": "^1.2.1",
