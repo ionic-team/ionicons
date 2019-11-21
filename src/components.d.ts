@@ -62,7 +62,7 @@ declare global {
 
 
   interface HTMLIonIconElement extends Components.IonIcon, HTMLStencilElement {}
-  const HTMLIonIconElement: {
+  var HTMLIonIconElement: {
     prototype: HTMLIonIconElement;
     new (): HTMLIonIconElement;
   };

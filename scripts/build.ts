@@ -311,14 +311,11 @@ async function getSvgs(srcSvgDir: string, rootDir: string, distIoniconsDir: stri
 
 
 async function createIconPackage(version: string, iconDir: string, srcSvgData: SvgData[]) {
-  const iconImportsDir = join(iconDir, 'imports');
   const iconPkgJsonFilePath = join(iconDir, 'package.json');
 
-  await fs.emptyDir(iconImportsDir);
-
   await Promise.all([
-    createEsmIcons(version, iconDir, iconImportsDir, srcSvgData),
-    createCjsIcons(version, iconDir, iconImportsDir, srcSvgData),
+    createEsmIcons(version, iconDir, srcSvgData),
+    createCjsIcons(version, iconDir, srcSvgData),
     createDtsIcons(version, iconDir, srcSvgData),
   ]);
 
@@ -328,9 +325,6 @@ async function createIconPackage(version: string, iconDir: string, srcSvgData: S
     module: "index.mjs",
     main: "index.js",
     typings: "index.d.ts",
-    sideEffects: [
-      "imports/"
-    ],
     private: true
   };
 
@@ -339,86 +333,61 @@ async function createIconPackage(version: string, iconDir: string, srcSvgData: S
 }
 
 
-async function createEsmIcons(version: string, iconDir: string, iconImportsDir: string, srcSvgData: SvgData[]) {
+async function createEsmIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconEsmFilePath = join(iconDir, 'index.mjs');
 
-  const esmIndex = [
+  const o = [
     `/* Ionicons v${version}, ES Modules */`, ``
   ];
 
   srcSvgData.forEach(svgData => {
-    // import airplaneOutline from './imports/airplane-outline.mjs';
-    esmIndex.push(`import ${svgData.exportName} from './imports/${svgData.fileNameMjs}';`);
+    o.push(`export const ${svgData.exportName} = ${getDataUrl(svgData)}`);
   });
 
-  srcSvgData.forEach(svgData => {
-    // export { airplaneOutline }
-    esmIndex.push(`export { ${svgData.exportName} }`);
-  });
-
-  // write ./imports/airplane-outline.mjs
-  await Promise.all(srcSvgData.map(async svgData => {
-    // import airplaneOutlineSvg from '../../dist/ionicons/svg/airplane-outline.svg';
-    // export default /*#__PURE__*/ airplaneOutlineSvg;
-
-    const varName = `${svgData.exportName}Svg`;
-
-    const content = [
-      `import ${varName} from '../../dist/ionicons/svg/${svgData.fileName}';`,
-      `export default /*#__PURE__*/ ${varName};`,
-      ``
-    ].join('\n');
-
-    const esmIconImportFilePath = join(iconImportsDir, svgData.fileNameMjs);
-    await fs.writeFile(esmIconImportFilePath, content);
-  }));
-
-  await fs.writeFile(iconEsmFilePath, esmIndex.join('\n') + '\n');
+  await fs.writeFile(iconEsmFilePath, o.join('\n') + '\n');
 }
 
 
-async function createCjsIcons(version: string, iconDir: string, iconImportsDir: string, srcSvgData: SvgData[]) {
+async function createCjsIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconCjsFilePath = join(iconDir, 'index.js');
 
-  const cjsIndex = [
+  const o = [
     `/* Ionicons v${version}, CommonJS */`, ``
   ];
 
   srcSvgData.forEach(svgData => {
-    // exports.airplaneOutline = /*#__PURE__*/ require('./imports/airplane-outline.js');
-    cjsIndex.push(`exports.${svgData.exportName} = /*#__PURE__*/ require('./imports/${svgData.fileNameCjs}');`);
+    o.push(`exports.${svgData.exportName} = ${getDataUrl(svgData)}`);
   });
 
-  // write ./imports/airplane-outline.js
-  await Promise.all(srcSvgData.map(async svgData => {
-    // module.exports = /*#__PURE__*/ require('../../dist/ionicons/svg/airplane-outline.svg');
-
-    const content = [
-      `module.exports = /*#__PURE__*/ require('../../dist/ionicons/svg/${svgData.fileName}');`,
-      ``
-    ].join('\n');
-
-    const cjsIconImportFilePath = join(iconImportsDir, svgData.fileNameCjs);
-    await fs.writeFile(cjsIconImportFilePath, content);
-  }));
-
-  await fs.writeFile(iconCjsFilePath, cjsIndex.join('\n') + '\n');
+  await fs.writeFile(iconCjsFilePath, o.join('\n') + '\n');
 }
 
 
 async function createDtsIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconDtsFilePath = join(iconDir, 'index.d.ts');
 
-  const dtsIndex = [
+  const o = [
     `/* Ionicons v${version}, Types */`, ``
   ];
 
   srcSvgData.forEach(svgData => {
-    // export declare var airplaneOutline: string;
-    dtsIndex.push(`export declare var ${svgData.exportName}: string;`);
+    o.push(`export declare var ${svgData.exportName}: string;`);
   });
 
-  await fs.writeFile(iconDtsFilePath, dtsIndex.join('\n') + '\n');
+  await fs.writeFile(iconDtsFilePath, o.join('\n') + '\n');
+}
+
+
+function getDataUrl(svgData: SvgData) {
+  let svg = svgData.optimizedSvgContent;
+  if (svg.includes(`'`)) {
+    throw new Error(`oh no! no single quotes allowed! ${svgData.fileName}`);
+  }
+  if (svg.includes(`\n`) || svg.includes(`\r`)) {
+    throw new Error(`oh no! no new lines allowed! ${svgData.fileName}`);
+  }
+  svg = svg.replace(/"/g, "'");
+  return `"data:image/svg+xml;utf8,${svg}"`;
 }
 
 
