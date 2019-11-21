@@ -197,8 +197,7 @@ fs.writeFileSync(DST_ICONS_DTS, dtsIndex.join('\n') + '\n');
 
 fs.writeFileSync(DST_ICONS_PKGJSON, JSON.stringify({
   "name": "ionicons/icons",
-  "module": "index.mjs",
-  "main": "index.js",
+  "main": "index.mjs",
   "typings": "index.d.ts",
   "sideEffects": [
     "imports/"
