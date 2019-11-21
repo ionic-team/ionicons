@@ -15,11 +15,8 @@ const DST_ICONS_ESM = path.join(DST_ICONS_DIR, 'index.mjs');
 const DST_ICONS_CJS = path.join(DST_ICONS_DIR, 'index.js');
 const DST_ICONS_DTS = path.join(DST_ICONS_DIR, 'index.d.ts');
 
-const DST_ICONS_IMPORTS_DIR = path.join(DST_ICONS_DIR, 'imports');
-
 
 fs.emptyDirSync(DST_ICONS_DIR);
-fs.emptyDirSync(DST_ICONS_IMPORTS_DIR);
 
 console.log('checking icon data: ' + SRC_JSON);
 
@@ -68,13 +65,13 @@ function camelize(text) {
 
 
 const moduleData = {};
-const esmIndex = [
+const esm = [
   `/* Ionicons, ES Modules */`, ``
 ];
-const cjsIndex = [
+const cjs = [
   `/* Ionicons, CommonJS */`, ``
 ];
-const dtsIndex = [
+const dts = [
   `/* Ionicons, Types */`, ``
 ];
 
@@ -119,8 +116,6 @@ svgFiles.forEach(fileName => {
       modes: {}
     };
     moduleData[exportCommonName] = commonIconData;
-
-    esmIndex.push(`import ${exportCommonName} from './imports/${commonName}.mjs';`);
   }
 
   commonIconData.modes[mode] = {
@@ -131,76 +126,66 @@ svgFiles.forEach(fileName => {
   };
 });
 
-esmIndex.push(``);
-
 
 const sortedKeys = Object.keys(moduleData).sort();
 
 sortedKeys.forEach(key => {
   const d = moduleData[key];
-  const esmFilePath = path.join(DST_ICONS_IMPORTS_DIR, d.commonName + '.mjs');
-  const cjsFilePath = path.join(DST_ICONS_IMPORTS_DIR, d.commonName + '.js');
-  const esm = [];
-  const cjs = [];
-
   const modes = Object.keys(d.modes).sort();
 
   if (modes.length > 1) {
-    for (let i = 0; i < modes.length; i++) {
-      const mode = modes[i];
-      esm.push(`import ${mode} from '../../dist/ionicons/svg/${d.modes[mode].fileName}';`);
-    }
-
-    esm.push(``);
-    esm.push(`export default /*#__PURE__*/ {`);
-
-    cjs.push(`module.exports = /*#__PURE__*/ {`);
-
-    dtsIndex.push(`export declare var ${d.exportCommonName}: {`);
+    esm.push(`export const ${d.exportCommonName} = {`);
+    cjs.push(`exports.${d.exportCommonName} = {`);
+    dts.push(`export declare var ${d.exportCommonName}: {`);
 
     for (let i = 0; i < modes.length; i++) {
       const mode = modes[i];
       const suffix = i < modes.length - 1 ? ',' : '';
 
-      esm.push(`  ${mode}: ${mode}${suffix}`);
+      const svgContent = getDataUrl(d.modes[mode].fileName);
 
-      cjs.push(`  ${mode}: require('../../dist/ionicons/svg/${d.modes[mode].fileName}')${suffix}`);
+      esm.push(`  ${mode}: ${svgContent}${suffix}`);
+      cjs.push(`  ${mode}: ${svgContent}${suffix}`);
 
-      dtsIndex.push(`  ${mode}: string;`);
+      dts.push(`  ${mode}: string;`);
     }
 
     esm.push(`};`);
     cjs.push(`};`);
-    dtsIndex.push(`};`);
+    dts.push(`};`);
 
   } else {
-    esm.push(`import icon from '../../dist/ionicons/svg/${d.fileName}'`);
-    esm.push(``);
-    esm.push(`export default /*#__PURE__*/ icon;`);
+    const svgContent = getDataUrl(d.fileName);
 
-    cjs.push(`module.exports = /*#__PURE__*/ require('../../dist/ionicons/svg/${d.fileName}');`);
+    esm.push(`export const ${d.exportCommonName} = ${svgContent};`);
 
-    dtsIndex.push(`export declare var ${d.exportCommonName}: string;`);
+    cjs.push(`exports.${d.exportCommonName} = ${svgContent};`);
+
+    dts.push(`export declare var ${d.exportCommonName}: string;`);
   }
-
-  esmIndex.push(`export { ${d.exportCommonName} }`);
-
-  cjsIndex.push(`exports.${d.exportCommonName} = /*#__PURE__*/ require('./imports/${d.commonName}.js');`);
-
-  fs.writeFileSync(esmFilePath, esm.join('\n'));
-  fs.writeFileSync(cjsFilePath, cjs.join('\n'));
 });
 
-fs.writeFileSync(DST_ICONS_ESM, esmIndex.join('\n') + '\n');
-fs.writeFileSync(DST_ICONS_CJS, cjsIndex.join('\n') + '\n');
-fs.writeFileSync(DST_ICONS_DTS, dtsIndex.join('\n') + '\n');
+fs.writeFileSync(DST_ICONS_ESM, esm.join('\n') + '\n');
+fs.writeFileSync(DST_ICONS_CJS, cjs.join('\n') + '\n');
+fs.writeFileSync(DST_ICONS_DTS, dts.join('\n') + '\n');
 
 fs.writeFileSync(DST_ICONS_PKGJSON, JSON.stringify({
   "name": "ionicons/icons",
-  "main": "index.mjs",
+  "module": "index.mjs",
+  "main": "index.js",
   "typings": "index.d.ts",
-  "sideEffects": [
-    "imports/"
-  ],
   "private": true
 }, null, 2));
+
+function getDataUrl(filePath) {
+  filePath = path.join(__dirname, '..', 'dist', 'ionicons', 'svg', filePath);
+  let svg = fs.readFileSync(filePath, 'utf8');
+  if (svg.includes(`'`)) {
+    throw new Error(`oh no! no single quotes allowed! ${filePath}`);
+  }
+  if (svg.includes(`\n`) || svg.includes(`\r`)) {
+    throw new Error(`oh no! no new lines allowed! ${filePath}`);
+  }
+  svg = svg.replace(/"/g, "'");
+  return `"data:image/svg+xml;utf8,${svg}"`;
+}
