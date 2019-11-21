@@ -1,3 +1,11 @@
+# [5.0.0-13](https://github.com/ionic-team/ionicons/compare/v5.0.0-12...v5.0.0-13) (2019-11-21)
+
+
+### Refactor
+
+* **icon:** refactor(icons): export ionicons/icons package as data urls
+
+
 # [5.0.0-12](https://github.com/ionic-team/ionicons/compare/v5.0.0-11...v5.0.0-12) (2019-11-19)
 
 

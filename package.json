@@ -1,6 +1,6 @@
 {
   "name": "ionicons",
-  "version": "5.0.0-12",
+  "version": "5.0.0-13",
   "description": "Premium icons for Ionic.",
   "files": [
     "dist/",
@@ -37,8 +37,8 @@
     "execa": "^2.0.4",
     "fs-extra": "8.1.0",
     "inquirer": "^7.0.0",
-    "jest": "24.8.0",
-    "jest-cli": "24.8.0",
+    "jest": "24.9.0",
+    "jest-cli": "24.9.0",
     "listr": "^0.14.3",
     "pixelmatch": "4.0.2",
     "puppeteer": "1.7.0",
