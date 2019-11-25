@@ -2,11 +2,10 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'ionicons',
-  srcDir: 'src/components/',
-  globalScript: 'src/components/global.ts',
   outputTargets: [
     {
       type: 'dist',
+      empty: false
     },
     {
       type: 'docs-readme'
@@ -15,14 +14,11 @@ export const config: Config = {
       type: 'www',
       copy: [
         {
-          src: '../svg/',
-          dest: './build/svg/'
-        },
-        {
-          src: './test/*.svg',
+          src: './components/test/*.svg',
           dest: './assets/'
         }
-      ]
+      ],
+      empty: false
     }
   ]
 };

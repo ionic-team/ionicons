@@ -15,9 +15,7 @@ export const getIconMap = (): Map<string, string> => {
 
 export const addIcons = (icons: {[name: string]: string }) => {
   const map = getIconMap();
-  Object.keys(icons).forEach(name => {
-    map.set(name, icons[name]);
-  });
+  Object.keys(icons).forEach(name => map.set(name, icons[name]));
 };
 
 
@@ -48,58 +46,53 @@ export const getUrl = (i: Icon) => {
 };
 
 
-const getNamedUrl = (name: string) => {
-  const url = getIconMap().get(name);
+const getNamedUrl = (iconName: string) => {
+  const url = getIconMap().get(iconName);
   if (url) {
     return url;
   }
-  return getAssetPath(`svg/${name}.svg`);
+  return getAssetPath(`svg/${iconName}.svg`);
 };
 
 
 export const getName = (
-  name: string | undefined,
+  iconName: string | undefined,
   icon: string | undefined,
   mode: string | undefined,
   ios: string | undefined,
   md: string | undefined
 ) => {
   // default to "md" if somehow the mode wasn't set
-  mode = (mode && mode.toLowerCase()) === 'ios' ? 'ios' : 'md';
+  mode = (mode && toLower(mode)) === 'ios' ? 'ios' : 'md';
 
   // if an icon was passed in using the ios or md attributes
   // set the iconName to whatever was passed in
   if (ios && mode === 'ios') {
-    name = ios.toLowerCase();
+    iconName = toLower(ios);
 
   } else if (md && mode === 'md') {
-    name = md.toLowerCase();
+    iconName = toLower(md);
 
   } else {
-    if (!name && icon && !isSrc(icon)) {
-      name = icon;
+    if (!iconName && icon && !isSrc(icon)) {
+      iconName = icon;
     }
-    if (isStr(name)) {
-      name = name.toLowerCase();
-      if (!/^md-|^ios-|^logo-/.test(name)) {
-        // this does not have one of the defaults
-        // so lets auto add in the mode prefix for them
-        name = mode + '-' + name;
-      }
+    if (isStr(iconName)) {
+      iconName = toLower(iconName);
     }
   }
 
-  if (!isStr(name) || name.trim() === '') {
+  if (!isStr(iconName) || iconName.trim() === '') {
     return null;
   }
 
   // only allow alpha characters and dash
-  const invalidChars = name.replace(/[a-z]|-|\d/gi, '');
+  const invalidChars = iconName.replace(/[a-z]|-|\d/gi, '');
   if (invalidChars !== '') {
     return null;
   }
 
-  return name;
+  return iconName;
 };
 
 export const getSrc = (src: string | undefined) => {
@@ -112,9 +105,8 @@ export const getSrc = (src: string | undefined) => {
   return null;
 };
 
-export const isSrc = (str: string) => {
-  return str.length > 0 && /(\/|\.)/.test(str);
-};
-
+export const isSrc = (str: string) => str.length > 0 && /(\/|\.)/.test(str);
 
 export const isStr = (val: any): val is string => typeof val === 'string';
+
+export const toLower = (val: string) => val.toLowerCase();

@@ -1,7 +1,8 @@
 import { validateContent } from './validate';
 
 
-const requests = new Map<string, Promise<string>>();
+export const ioniconContent = new Map<string, string>();
+const requests = new Map<string, Promise<any>>();
 
 
 export const getSvgContent = (url: string) => {
@@ -11,12 +12,13 @@ export const getSvgContent = (url: string) => {
   if (!req) {
     // we don't already have a request
     req = fetch(url).then(rsp => {
-      if (rsp.status <= 299) {
-        return rsp.text();
+      if (rsp.ok) {
+        return rsp.text().then(svgContent => {
+          ioniconContent.set(url, validateContent(svgContent));
+        });
       }
-      return Promise.resolve(null);
-
-    }).then(svgContent => validateContent(svgContent));
+      ioniconContent.set(url, '');
+    });
 
     // cache for the same requests
     requests.set(url, req);

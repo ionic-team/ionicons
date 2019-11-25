@@ -1,9 +1,7 @@
 import { isStr } from './utils';
 
 
-export const validateContent = (
-  svgContent: string | null
-) => {
+export const validateContent = (svgContent: string | null) => {
   if (svgContent) {
     const div = document.createElement('div');
     div.innerHTML = svgContent;
@@ -18,7 +16,8 @@ export const validateContent = (
     // must only have 1 root element
     const svgElm = div.firstElementChild;
     if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
-      svgElm.setAttribute('class', 's-ion-icon');
+      const svgClass = svgElm.getAttribute('class') || '';
+      svgElm.setAttribute('class', (svgClass + ' s-ion-icon').trim());
 
       // root element must be an svg
       // lets double check we've got valid elements
