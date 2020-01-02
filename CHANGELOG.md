@@ -1,3 +1,15 @@
+# [5.0.0-14](https://github.com/ionic-team/ionicons/compare/v5.0.0-7...v5.0.0-14) (2020-01-02)
+
+
+### Bug Fixes
+
+* **icon:** apply correct class to svg ([#739](https://github.com/ionic-team/ionicons/issues/739)) ([cecdb9c](https://github.com/ionic-team/ionicons/commit/cecdb9c))
+* **icon:** include chevron icons in flipRtl ([#740](https://github.com/ionic-team/ionicons/issues/740)) ([352c80b](https://github.com/ionic-team/ionicons/commit/352c80b))
+* **toggle:** rename switch to toggle ([dfb62b6](https://github.com/ionic-team/ionicons/commit/dfb62b6))
+* **types:** update package.json types ([993a314](https://github.com/ionic-team/ionicons/commit/993a314))
+
+
+
 # [5.0.0-13](https://github.com/ionic-team/ionicons/compare/v5.0.0-12...v5.0.0-13) (2019-11-21)
 
 
