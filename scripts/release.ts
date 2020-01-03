@@ -8,6 +8,7 @@ import semver from 'semver';
 
 const rootDir = join(__dirname, '..');
 const packageJsonPath = join(rootDir, 'package.json');
+const packageLockJsonPath = join(rootDir, 'package-lock.json');
 
 const cmdArgs = process.argv.slice(2);
 const isPublishRelease = cmdArgs.includes('--publish');
@@ -66,6 +67,10 @@ function runTasks(newVersion: string, releaseTag: string, isPublishRelease: bool
           const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
           packageJson.version = newVersion;
           fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + '\n');
+
+          const packageLockJson = JSON.parse(fs.readFileSync(packageLockJsonPath, 'utf8'));
+          packageLockJson.version = newVersion;
+          fs.writeFileSync(packageLockJsonPath, JSON.stringify(packageLockJson, null, 2) + '\n');
         }
       },
       {
