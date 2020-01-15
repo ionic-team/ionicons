@@ -37,13 +37,31 @@ To use a built-in icon from the Ionicons package, populate the `name` attribute 
 <ion-icon name="heart"></ion-icon>
 ```
 
+### Custom icons
+
 To use a custom SVG, provide its url in the `src` attribute to request the external SVG file. The `src` attribute works the same as `<img src="...">` in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid svg and does not allow scripts or events within the svg element.
 
 ```html
 <ion-icon src="/path/to/external/file.svg"></ion-icon>
 ```
 
-### Icon sizes
+## Variants
+Each app icon in Ionicons has a `filled`, `outline` and `sharp` variant. These different variants are provided to make your app feel native to a variety of platforms. The filled variant uses the default name without a suffix. Note: Logo icons do not have outline or sharp variants.
+
+```html
+<ion-icon name="heart"></ion-icon> <!--filled-->
+<ion-icon name="heart-outline"></ion-icon> <!--outline-->
+<ion-icon name="heart-sharp"></ion-icon> <!--sharp-->
+```
+
+### Platform specificity
+When using icons in Ionic Framework you can specify different icons per platform. Use the `md` and `ios` attributes and provide the platform specific icon/variant name.
+
+```html
+<ion-icon ios="heart-outline" md="heart-sharp"></ion-icon>
+```
+
+## Size
 
 To specify the icon size, you can use the size attribute for our pre-defined font sizes.
 
@@ -59,6 +77,33 @@ ion-icon {
   font-size: 64px;
 }
 ```
+
+## Color
+
+Specify the icon color by applying the `color` CSS property on the `ion-icon` component.
+
+```css
+ion-icon {
+  color: blue;
+}
+```
+
+## Stroke weight
+When using an `outline` icon variant it is possible to adjust the stroke weight, for improved visual balance relative to the icon's size or relative to the weight of adjacent text. You can set a specific size by applying the `--ionicon-stroke-weight` CSS custom property to the `ion-icon` component. The default value is 32px.
+
+```html
+<ion-icon name="heart-outline"></ion-icon>
+```
+
+```css
+ion-icon {
+  --ionicon-stroke-width: 16px;
+}
+```
+
+## Migrating from v4
+
+See the [changelog](https://github.com/ionic-team/ionicons/blob/master/CHANGELOG.md#500-2020-01-15) for a list of icon deletions/renames.
 
 ## License
 

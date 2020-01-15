@@ -2121,6 +2121,13 @@
       ]
     },
     {
+      "name": "checkmark-done",
+      "tags": [
+        "checkmark",
+        "done"
+      ]
+    },
+    {
       "name": "checkmark-done-circle",
       "tags": [
         "checkmark",
@@ -5949,29 +5956,6 @@
       ]
     },
     {
-      "name": "mail-notification",
-      "tags": [
-        "mail",
-        "notification"
-      ]
-    },
-    {
-      "name": "mail-notification-outline",
-      "tags": [
-        "mail",
-        "notification",
-        "outline"
-      ]
-    },
-    {
-      "name": "mail-notification-sharp",
-      "tags": [
-        "mail",
-        "notification",
-        "sharp"
-      ]
-    },
-    {
       "name": "mail-open",
       "tags": [
         "mail",
@@ -6008,6 +5992,29 @@
         "email",
         "mail",
         "sharp"
+      ]
+    },
+    {
+      "name": "mail-unread",
+      "tags": [
+        "mail",
+        "unread"
+      ]
+    },
+    {
+      "name": "mail-unread-outline",
+      "tags": [
+        "mail",
+        "outline",
+        "unread"
+      ]
+    },
+    {
+      "name": "mail-unread-sharp",
+      "tags": [
+        "mail",
+        "sharp",
+        "unread"
       ]
     },
     {
@@ -7807,46 +7814,52 @@
       ]
     },
     {
-      "name": "radio-off",
+      "name": "radio-button-off",
       "tags": [
+        "button",
         "off",
         "radio"
       ]
     },
     {
-      "name": "radio-off-outline",
+      "name": "radio-button-off-outline",
       "tags": [
+        "button",
         "off",
         "outline",
         "radio"
       ]
     },
     {
-      "name": "radio-off-sharp",
+      "name": "radio-button-off-sharp",
       "tags": [
+        "button",
         "off",
         "radio",
         "sharp"
       ]
     },
     {
-      "name": "radio-on",
+      "name": "radio-button-on",
       "tags": [
+        "button",
         "on",
         "radio"
       ]
     },
     {
-      "name": "radio-on-outline",
+      "name": "radio-button-on-outline",
       "tags": [
+        "button",
         "on",
         "outline",
         "radio"
       ]
     },
     {
-      "name": "radio-on-sharp",
+      "name": "radio-button-on-sharp",
       "tags": [
+        "button",
         "on",
         "radio",
         "sharp"
