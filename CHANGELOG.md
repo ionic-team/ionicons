@@ -6,6 +6,16 @@ It's here! Please enjoy 🎈
 * Top to bottom re-draw of every icon to better match the latest iOS and Material platform styles.
 * Plenty of additions to help you get icons you need for your project.
 * Instead of platform specific variants for each icon we are providing appearance variants (filled, outline, and sharp) for each icon.
+  * Using appearance variants:
+  ```html
+  <ion-icon name="heart"></ion-icon> <!--filled variant-->
+  <ion-icon name="heart-outline"></ion-icon> <!--outline variant-->
+  <ion-icon name="heart-sharp"></ion-icon> <!--sharp variant-->
+  ```
+  * There will no longer be auto-switching for platform specificity when using Ionicons in an Ionic Framework app. If you'd like to switch icon styles based on the platform in Ionic use the `md` and `ios` attributes and provide the platform specific icon/variant name.
+  ```html
+  <ion-icon ios="heart-outline" md="heart-sharp"></ion-icon>
+  ```
 * Adjust the stroke weight via CSS for icons that use the outline variant.
 
 ### BREAKING CHANGES
