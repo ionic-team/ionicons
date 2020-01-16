@@ -549,6 +549,7 @@ const reservedKeywords = new Set([
   'protected',
   'implements',
   'instanceof',
+  'constructor',
 ]);
 
 
