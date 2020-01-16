@@ -46,10 +46,10 @@ The table below outlines icons that were removed or renamed.
 | done-all                     | :pencil2:   | renamed     | renamed to "checkmark-done"                                           |
 | fastforward	                 | :pencil2:   | renamed     | renamed to "play-forward"                                             |
 | filing                       | :pencil2:   | renamed     | renamed to "file-tray"                                                |
-| freebsd-devil                | :x:         | deleted     |                                                                       |
-| game-controller-a            | :x:         | deleted     |                                                                       |
-| game-controller-b            | :x:         | deleted     | added as "game-controller"                                            |
-| googleplus                   | :x:         | deleted     |                                                                       |
+| logo-freebsd-devil                | :x:         | deleted     |                                                                       |
+| logo-game-controller-a            | :x:         | deleted     |                                                                       |
+| logo-game-controller-b            | :x:         | deleted     | added as "game-controller"                                            |
+| logo-googleplus                   | :x:         | deleted     |                                                                       |
 | hand                         | :x:         | deleted     | split into "hand-left" and "hand-right"                               |
 | heart-empty                  | :pencil2:   | renamed     | renamed to "heart-outline"                                            |
 | jet                          | :x:         | deleted     | use "airplane"                                                        |
@@ -61,14 +61,14 @@ The table below outlines icons that were removed or renamed.
 | notifications-outline        | :x:         | deleted     | exists as circled version                                             |
 | outlet                       | :x:         | deleted     |                                                                       |
 | paper                        | :pencil2:   | renamed     | renamed to "newspaper"                                                |
-| polymer                      | :x:         | deleted     |                                                                       |
+| logo-polymer                      | :x:         | deleted     |                                                                       |
 | pie                          | :pencil2:   | renamed     | renamed to "pie-chart"                                                |
 | photos                       | :x:         | deleted     | use "image" or "images"                                               |
 | qr-code                      | :pencil2:   | renamed     | renamed to "qr-scanner"                                               |
 | quote                        | :x:         | deleted     |                                                                       |
 | redo                         | :pencil2:   | renamed     | renamed to "arrow-redo"                                               |
 | reorder                      | :x:         | deleted     | added as "reorder-two", "reorder-three", "reorder-four"               |
-| return-left                  | :pencil2:   | renamed     | renamed to "return-right-up/down-arrow"                               |
+| return-left                  | :pencil2:   | renamed     | renamed to "return-left-up/down-arrow"                               |
 | return-right                 | :pencil2:   | renamed     | renamed to "return-right-up/down-arrow"                               |
 | rewind                       | :pencil2:   | renamed     | renamed to "play-back"                                                |
 | reverse-camera               | :pencil2:   | renamed     | renamed to "camera-reverse"                                           |
