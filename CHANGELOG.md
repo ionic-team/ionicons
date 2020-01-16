@@ -1,5 +1,4 @@
-
-# 5.0.0 (2020-01-15)
+# [5.0.0-16](https://github.com/ionic-team/ionicons/compare/v5.0.0-15...v5.0.0-16) (2020-01-16)
 It's here! Please enjoy 🎈
 
 ### What's new
