@@ -68,7 +68,7 @@ The table below outlines icons that were removed or renamed.
 | quote                        | :x:         | deleted     |                                                                       |
 | redo                         | :pencil2:   | renamed     | renamed to "arrow-redo"                                               |
 | reorder                      | :x:         | deleted     | added as "reorder-two", "reorder-three", "reorder-four"               |
-| return-left                  | :pencil2:   | renamed     | renamed to "return-right-up/down-arrow"                               |
+| return-left                  | :pencil2:   | renamed     | renamed to "return-left-up/down-arrow"                               |
 | return-right                 | :pencil2:   | renamed     | renamed to "return-right-up/down-arrow"                               |
 | rewind                       | :pencil2:   | renamed     | renamed to "play-back"                                                |
 | reverse-camera               | :pencil2:   | renamed     | renamed to "camera-reverse"                                           |
