@@ -1,5 +1,5 @@
 
-# 5.0.0 (2020-01-15)
+# 5.0.0-16 (2020-01-16)
 It's here! Please enjoy 🎈
 
 ### What's new
@@ -64,7 +64,7 @@ The table below outlines icons that were removed or renamed.
 | logo-polymer                      | :x:         | deleted     |                                                                       |
 | pie                          | :pencil2:   | renamed     | renamed to "pie-chart"                                                |
 | photos                       | :x:         | deleted     | use "image" or "images"                                               |
-| qr-code                      | :pencil2:   | renamed     | renamed to "qr-scanner"                                               |
+| qr-scanner                      | :pencil2:   | renamed     | renamed to "qr-code"                                               |
 | quote                        | :x:         | deleted     |                                                                       |
 | redo                         | :pencil2:   | renamed     | renamed to "arrow-redo"                                               |
 | reorder                      | :x:         | deleted     | added as "reorder-two", "reorder-three", "reorder-four"               |
