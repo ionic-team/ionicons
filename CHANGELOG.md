@@ -77,6 +77,6 @@ The table below outlines icons that were removed or renamed.
 | stats	                       | :pencil2:   | renamed     | renamed to "stats-chart"                                              |
 | swap                         | :x:         | deleted     | use "swap-horizontal" or "swap-vertical"                              |
 | switch                       | :pencil2:   | renamed     | renamed to "toggle"                                                   |
-| text                         | :pencil2:   | renamed     | renamed to "chatbox-ellipsis"                                         |
+| text                         | :pencil2:   | renamed     | renamed to "chatbox-ellipses"                                         |
 | undo                         | :pencil2:   | renamed     | renamed to "arrow-undo"	                                             |
 | unlock                       | :pencil2:   | renamed     | renamed to "lock-open"		                                             |
