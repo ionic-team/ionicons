@@ -1,6 +1,6 @@
 {
   "name": "ionicons",
-  "version": "5.0.0-17",
+  "version": "5.0.0",
   "description": "Premium icons for Ionic.",
   "files": [
     "dist/",
