@@ -46,15 +46,16 @@
     "workbox-build": "4.3.1"
   },
   "keywords": [
-    "ionicons",
+    "icon pack",
     "ionic",
     "icon",
     "svg",
-    "font",
     "mobile",
     "web component",
     "component",
-    "custom element"
+    "custom element",
+    "material design",
+    "ios"
   ],
   "homepage": "http://ionicons.com/",
   "author": {
