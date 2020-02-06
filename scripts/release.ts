@@ -195,12 +195,10 @@ async function publishUI() {
     {
       type: 'list',
       name: 'tag',
-      message: 'How should this pre-release version be tagged in npm?',
-      when: () => isPrereleaseVersion(pkg.version),
+      message: 'How should this release version be tagged in npm?',
       choices: () => execa('npm', ['view', '--json', pkg.name, 'dist-tags'])
         .then(({stdout}) => {
           return Object.keys(JSON.parse(stdout))
-            .filter(tag => tag !== 'latest')
             .map(tag => {
               return {
                 name: tag,
