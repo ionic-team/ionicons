@@ -24,6 +24,7 @@ The table below outlines icons that were removed or renamed.
 | Icon Name                    |             | Status      | Notes                                                                 |
 | -----------------------------| ------------| ------------| ----------------------------------------------------------------------|
 | add-circle            	     | :x:         | deleted     | re-added as "circled" icon                                            |
+| alert                  	     | :pencil2:   | renamed     | renamed to "alert-circle"                                            |
 | appstore                     | :x:         | deleted     | added as google play & apple app store logos                          |
 | arrow-dropdown-circle        | :pencil2:   | renamed     | `md` version added as "caret-down-circle", `ios` version added as "chevron-down-circle"         |
 | arrow-dropdown               | :pencil2:   | renamed     | `md` version added as "caret-down", `ios` version added as "chevron-down-circle-outline"        |
