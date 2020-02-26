@@ -5,15 +5,19 @@ import { Icon } from './icon';
 let CACHED_MAP: Map<string, string>;
 
 export const getIconMap = (): Map<string, string> => {
-  if (!CACHED_MAP) {
-    const win = window as any;
-    win.Ionicons = win.Ionicons || {};
-    CACHED_MAP = win.Ionicons.map = win.Ionicons.map || new Map();
+  if (typeof window === 'undefined') {
+    return new Map();
+  } else {
+    if (!CACHED_MAP) {
+      const win = window as any;
+      win.Ionicons = win.Ionicons || {};
+      CACHED_MAP = win.Ionicons.map = win.Ionicons.map || new Map();
+    }
+    return CACHED_MAP;
   }
-  return CACHED_MAP;
 };
 
-export const addIcons = (icons: {[name: string]: string }) => {
+export const addIcons = (icons: { [name: string]: string; }) => {
   const map = getIconMap();
   Object.keys(icons).forEach(name => map.set(name, icons[name]));
 };
