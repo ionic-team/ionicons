@@ -161,7 +161,7 @@ export class Icon {
 }
 
 
-const getIonMode = () => (Build.isBrowser && document.documentElement.getAttribute('mode')) || 'md';
+const getIonMode = () => (Build.isBrowser && typeof document !== 'undefined' && document.documentElement.getAttribute('mode')) || 'md';
 
 
 const createColorClasses = (color: string | undefined) => {
