@@ -24,7 +24,7 @@
     "test": "stencil test --spec"
   },
   "devDependencies": {
-    "@stencil/core": "^1.8.3",
+    "@stencil/core": "^1.8.10",
     "@types/execa": "^2.0.0",
     "@types/fs-extra": "^8.0.0",
     "@types/inquirer": "^6.5.0",
