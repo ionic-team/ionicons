@@ -1,3 +1,12 @@
+## [5.0.1](https://github.com/ionic-team/ionicons/compare/v5.0.0...v5.0.1) (2020-03-05)
+
+
+### Bug Fixes
+
+* fixes for ssr support ([51a431e](https://github.com/ionic-team/ionicons/commit/51a431e6adc8f1f60902350ee07e76303dc72d3f))
+
+
+
 # [5.0.0](https://github.com/ionic-team/ionicons/releases) (2020-02-06)
 
 It's here! Please enjoy 🎈
