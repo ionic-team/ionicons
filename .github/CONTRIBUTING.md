@@ -39,6 +39,18 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 7. [Modify the Icon Component](#modifying-components) if desired.
 8. Or, modify and [preview the site](#preview-site).
 
+### Online Setup with a single Click
+
+You can use Gitpod (a free online VS Code-like IDE) for contributing. With a single click, it'll launch a workspace and automatically:
+
+- clone the ionicons repo.
+- install the dependencies.
+- run `npm run start`.
+
+So that you can start straight away.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ionic-team/ionicons)
+
 
 #### Modifying Components
 
