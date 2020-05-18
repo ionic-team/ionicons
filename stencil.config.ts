@@ -5,20 +5,21 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      empty: false
+      empty: false,
     },
     {
-      type: 'docs-readme'
+      type: 'docs-readme',
     },
     {
       type: 'www',
       copy: [
         {
           src: './components/test/*.svg',
-          dest: './assets/'
-        }
+          dest: './assets/',
+        },
       ],
-      empty: false
-    }
-  ]
+      empty: false,
+      serviceWorker: false,
+    },
+  ],
 };
