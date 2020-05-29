@@ -1,3 +1,11 @@
+# [5.1.0-0](https://github.com/ionic-team/ionicons/compare/5.0.0...5.1.0-0) (2020-05-29)
+
+### Features
+
+* **custom-elements:** add ionicons/components ([03ba8b2](https://github.com/ionic-team/ionicons/commit/03ba8b268e19b50a96cb0aca5bb6ba42a59a863d))
+
+
+
 ## [5.0.1](https://github.com/ionic-team/ionicons/compare/v5.0.0...v5.0.1) (2020-03-05)
 
 
