@@ -1,0 +1,11 @@
+{
+  "name": "ionicons/components",
+  "description": "Ionicons custom elements output target.",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "private": true
+}

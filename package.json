@@ -23,8 +23,10 @@
     "release": "node scripts/release.js --publish --any-branch",
     "test": "stencil test --spec"
   },
+  "dependencies": {
+    "@stencil/core": "^1.14.0-3"
+  },
   "devDependencies": {
-    "@stencil/core": "^1.13.0",
     "@types/execa": "^2.0.0",
     "@types/fs-extra": "^9.0.0",
     "@types/inquirer": "^6.5.0",
