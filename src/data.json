@@ -3419,13 +3419,15 @@
     {
       "name": "ellipse",
       "tags": [
-        "ellipse"
+        "ellipse",
+        "circle"
       ]
     },
     {
       "name": "ellipse-outline",
       "tags": [
         "ellipse",
+        "circle",
         "outline"
       ]
     },
@@ -3433,6 +3435,7 @@
       "name": "ellipse-sharp",
       "tags": [
         "ellipse",
+        "circle",
         "sharp"
       ]
     },
