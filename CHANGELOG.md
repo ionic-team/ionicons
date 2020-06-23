@@ -1,3 +1,22 @@
+# [5.1.0](https://github.com/ionic-team/ionicons/compare/5.0.0...5.1.0) (2020-06-23)
+
+
+### Features
+
+* add behance ([14fd26b](https://github.com/ionic-team/ionicons/commit/14fd26b38f7d4c4628f75fa65bc3247abb152ab8))
+* add docker ([91fa34e](https://github.com/ionic-team/ionicons/commit/91fa34ebc7b21eb013b19499ce5b73a1b67b4542))
+* add gitlab ([fa8d76e](https://github.com/ionic-team/ionicons/commit/fa8d76e20c3bbc138a5976edb0465aa8da34a5f3))
+* add medium ([8983749](https://github.com/ionic-team/ionicons/commit/89837496004a1102156a4554cfff66623c5c98f2))
+* add paypal ([1b07d10](https://github.com/ionic-team/ionicons/commit/1b07d10212b602b532e887409623370b4df9b96d))
+* add soundcloud ([7ce073d](https://github.com/ionic-team/ionicons/commit/7ce073d3fe4e3ec10cd28cac15de63215433100e))
+* add tiktok ([73526e4](https://github.com/ionic-team/ionicons/commit/73526e40b8095d692679405ecb39500f9bf5d343))
+* add venmo ([922f433](https://github.com/ionic-team/ionicons/commit/922f43387be72c69780f29eb95081c77c91b2c5b))
+* update edge ([f61e47c](https://github.com/ionic-team/ionicons/commit/f61e47c698f10e31ee804984b64c4166284a441f))
+* update facebook ([2e7fe14](https://github.com/ionic-team/ionicons/commit/2e7fe1431528c053621515e8f8d57eb8194b0c5b))
+* update firebase ([63c9ee0](https://github.com/ionic-team/ionicons/commit/63c9ee02a51bb6a2e2528c05a427cfb85e7c27be))
+
+
+
 ## [5.0.1](https://github.com/ionic-team/ionicons/compare/v5.0.0...v5.0.1) (2020-03-05)
 
 
