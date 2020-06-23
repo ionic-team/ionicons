@@ -345,7 +345,8 @@
         "arrow",
         "back",
         "chevron",
-        "navigation"
+        "navigation",
+        "left"
       ]
     },
     {
@@ -355,7 +356,8 @@
         "back",
         "chevron",
         "circle",
-        "navigation"
+        "navigation",
+        "left"
       ]
     },
     {
@@ -366,7 +368,8 @@
         "chevron",
         "circle",
         "navigation",
-        "outline"
+        "outline",
+        "left"
       ]
     },
     {
@@ -385,7 +388,8 @@
       "tags": [
         "arrow",
         "back",
-        "outline"
+        "outline",
+        "left"
       ]
     },
     {
@@ -395,7 +399,8 @@
         "back",
         "chevron",
         "navigation",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -458,7 +463,8 @@
         "arrow",
         "chevron",
         "forward",
-        "navigation"
+        "navigation",
+        "right"
       ]
     },
     {
@@ -468,7 +474,8 @@
         "chevron",
         "circle",
         "forward",
-        "navigation"
+        "navigation",
+        "right"
       ]
     },
     {
@@ -479,7 +486,8 @@
         "circle",
         "forward",
         "navigation",
-        "outline"
+        "outline",
+        "right"
       ]
     },
     {
@@ -490,7 +498,8 @@
         "circle",
         "forward",
         "navigation",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -498,7 +507,8 @@
       "tags": [
         "arrow",
         "forward",
-        "outline"
+        "outline",
+        "right"
       ]
     },
     {
@@ -508,7 +518,8 @@
         "chevron",
         "forward",
         "navigation",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -1714,7 +1725,8 @@
         "back",
         "caret",
         "circle",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -1722,7 +1734,8 @@
       "tags": [
         "back",
         "caret",
-        "outline"
+        "outline",
+        "left"
       ]
     },
     {
@@ -1730,7 +1743,8 @@
       "tags": [
         "back",
         "caret",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -1786,7 +1800,8 @@
       "name": "caret-forward",
       "tags": [
         "caret",
-        "forward"
+        "forward",
+        "right"
       ]
     },
     {
@@ -1794,7 +1809,8 @@
       "tags": [
         "caret",
         "circle",
-        "forward"
+        "forward",
+        "right"
       ]
     },
     {
@@ -1803,7 +1819,8 @@
         "caret",
         "circle",
         "forward",
-        "outline"
+        "outline",
+        "right"
       ]
     },
     {
@@ -1812,7 +1829,8 @@
         "caret",
         "circle",
         "forward",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -1820,7 +1838,8 @@
       "tags": [
         "caret",
         "forward",
-        "outline"
+        "outline",
+        "right"
       ]
     },
     {
@@ -1828,7 +1847,8 @@
       "tags": [
         "caret",
         "forward",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -2188,7 +2208,8 @@
       "name": "chevron-back",
       "tags": [
         "back",
-        "chevron"
+        "chevron",
+        "left"
       ]
     },
     {
@@ -2196,7 +2217,8 @@
       "tags": [
         "back",
         "chevron",
-        "circle"
+        "circle",
+        "left"
       ]
     },
     {
@@ -2205,7 +2227,8 @@
         "back",
         "chevron",
         "circle",
-        "outline"
+        "outline",
+        "left"
       ]
     },
     {
@@ -2214,7 +2237,8 @@
         "back",
         "chevron",
         "circle",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -2222,7 +2246,8 @@
       "tags": [
         "back",
         "chevron",
-        "outline"
+        "outline",
+        "left"
       ]
     },
     {
@@ -2230,7 +2255,8 @@
       "tags": [
         "back",
         "chevron",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -2286,7 +2312,8 @@
       "name": "chevron-forward",
       "tags": [
         "chevron",
-        "forward"
+        "forward",
+        "right"
       ]
     },
     {
@@ -2294,7 +2321,8 @@
       "tags": [
         "chevron",
         "circle",
-        "forward"
+        "forward",
+        "right"
       ]
     },
     {
@@ -2303,7 +2331,8 @@
         "chevron",
         "circle",
         "forward",
-        "outline"
+        "outline",
+        "right"
       ]
     },
     {
@@ -2312,7 +2341,8 @@
         "chevron",
         "circle",
         "forward",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -2320,7 +2350,8 @@
       "tags": [
         "chevron",
         "forward",
-        "outline"
+        "outline",
+        "right"
       ]
     },
     {
@@ -2328,7 +2359,8 @@
       "tags": [
         "chevron",
         "forward",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -7381,7 +7413,8 @@
       "name": "play-back",
       "tags": [
         "back",
-        "play"
+        "play",
+        "left"
       ]
     },
     {
@@ -7389,7 +7422,8 @@
       "tags": [
         "back",
         "circle",
-        "play"
+        "play",
+        "left"
       ]
     },
     {
@@ -7398,7 +7432,8 @@
         "back",
         "circle",
         "outline",
-        "play"
+        "play",
+        "left"
       ]
     },
     {
@@ -7407,7 +7442,8 @@
         "back",
         "circle",
         "play",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -7415,7 +7451,8 @@
       "tags": [
         "back",
         "outline",
-        "play"
+        "play",
+        "left"
       ]
     },
     {
@@ -7423,7 +7460,8 @@
       "tags": [
         "back",
         "play",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -7465,7 +7503,8 @@
       "name": "play-forward",
       "tags": [
         "forward",
-        "play"
+        "play",
+        "right"
       ]
     },
     {
@@ -7473,7 +7512,8 @@
       "tags": [
         "circle",
         "forward",
-        "play"
+        "play",
+        "right"
       ]
     },
     {
@@ -7482,7 +7522,8 @@
         "circle",
         "forward",
         "outline",
-        "play"
+        "play",
+        "right"
       ]
     },
     {
@@ -7491,7 +7532,8 @@
         "circle",
         "forward",
         "play",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -7499,7 +7541,8 @@
       "tags": [
         "forward",
         "outline",
-        "play"
+        "play",
+        "right"
       ]
     },
     {
@@ -7507,7 +7550,8 @@
       "tags": [
         "forward",
         "play",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -7537,7 +7581,8 @@
       "tags": [
         "back",
         "play",
-        "skip"
+        "skip",
+        "left"
       ]
     },
     {
@@ -7546,7 +7591,8 @@
         "back",
         "circle",
         "play",
-        "skip"
+        "skip",
+        "left"
       ]
     },
     {
@@ -7556,7 +7602,8 @@
         "circle",
         "outline",
         "play",
-        "skip"
+        "skip",
+        "left"
       ]
     },
     {
@@ -7566,7 +7613,8 @@
         "circle",
         "play",
         "sharp",
-        "skip"
+        "skip",
+        "left"
       ]
     },
     {
@@ -7575,7 +7623,8 @@
         "back",
         "outline",
         "play",
-        "skip"
+        "skip",
+        "left"
       ]
     },
     {
@@ -7584,7 +7633,8 @@
         "back",
         "play",
         "sharp",
-        "skip"
+        "skip",
+        "left"
       ]
     },
     {
@@ -7601,7 +7651,8 @@
         "circle",
         "forward",
         "play",
-        "skip"
+        "skip",
+        "right"
       ]
     },
     {
@@ -7611,7 +7662,8 @@
         "forward",
         "outline",
         "play",
-        "skip"
+        "skip",
+        "right"
       ]
     },
     {
@@ -7621,7 +7673,8 @@
         "forward",
         "play",
         "sharp",
-        "skip"
+        "skip",
+        "right"
       ]
     },
     {
@@ -7630,7 +7683,8 @@
         "forward",
         "outline",
         "play",
-        "skip"
+        "skip",
+        "right"
       ]
     },
     {
@@ -7639,7 +7693,8 @@
         "forward",
         "play",
         "sharp",
-        "skip"
+        "skip",
+        "right"
       ]
     },
     {
@@ -8336,7 +8391,8 @@
       "tags": [
         "back",
         "down",
-        "return"
+        "return",
+        "left"
       ]
     },
     {
@@ -8345,7 +8401,8 @@
         "back",
         "down",
         "outline",
-        "return"
+        "return",
+        "left"
       ]
     },
     {
@@ -8354,7 +8411,8 @@
         "back",
         "down",
         "return",
-        "sharp"
+        "sharp",
+        "left"
       ]
     },
     {
@@ -8362,7 +8420,8 @@
       "tags": [
         "down",
         "forward",
-        "return"
+        "return",
+        "right"
       ]
     },
     {
@@ -8371,7 +8430,8 @@
         "down",
         "forward",
         "outline",
-        "return"
+        "return",
+        "right"
       ]
     },
     {
@@ -8380,7 +8440,8 @@
         "down",
         "forward",
         "return",
-        "sharp"
+        "sharp",
+        "right"
       ]
     },
     {
@@ -8388,7 +8449,8 @@
       "tags": [
         "back",
         "return",
-        "up"
+        "up",
+        "left"
       ]
     },
     {
@@ -8397,7 +8459,8 @@
         "back",
         "outline",
         "return",
-        "up"
+        "up",
+        "left"
       ]
     },
     {
@@ -8406,7 +8469,8 @@
         "back",
         "return",
         "sharp",
-        "up"
+        "up",
+        "left"
       ]
     },
     {
@@ -8414,7 +8478,8 @@
       "tags": [
         "forward",
         "return",
-        "up"
+        "up",
+        "right"
       ]
     },
     {
@@ -8423,7 +8488,8 @@
         "forward",
         "outline",
         "return",
-        "up"
+        "up",
+        "right"
       ]
     },
     {
@@ -8432,7 +8498,8 @@
         "forward",
         "return",
         "sharp",
-        "up"
+        "up",
+        "right"
       ]
     },
     {
