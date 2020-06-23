@@ -3419,23 +3419,23 @@
     {
       "name": "ellipse",
       "tags": [
-        "ellipse",
-        "circle"
+        "circle",
+        "ellipse"
       ]
     },
     {
       "name": "ellipse-outline",
       "tags": [
-        "ellipse",
         "circle",
+        "ellipse",
         "outline"
       ]
     },
     {
       "name": "ellipse-sharp",
       "tags": [
-        "ellipse",
         "circle",
+        "ellipse",
         "sharp"
       ]
     },
@@ -5460,6 +5460,13 @@
       ]
     },
     {
+      "name": "logo-behance",
+      "tags": [
+        "behance",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-bitbucket",
       "tags": [
         "bitbucket",
@@ -5520,6 +5527,13 @@
       "name": "logo-designernews",
       "tags": [
         "designernews",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-docker",
+      "tags": [
+        "docker",
         "logo"
       ]
     },
@@ -5597,6 +5611,13 @@
       "name": "logo-github",
       "tags": [
         "github",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-gitlab",
+      "tags": [
+        "gitlab",
         "logo"
       ]
     },
@@ -5679,6 +5700,13 @@
       ]
     },
     {
+      "name": "logo-medium",
+      "tags": [
+        "logo",
+        "medium"
+      ]
+    },
+    {
       "name": "logo-no-smoking",
       "tags": [
         "logo",
@@ -5705,6 +5733,13 @@
       "tags": [
         "logo",
         "octocat"
+      ]
+    },
+    {
+      "name": "logo-paypal",
+      "tags": [
+        "logo",
+        "paypal"
       ]
     },
     {
@@ -5785,6 +5820,13 @@
       ]
     },
     {
+      "name": "logo-soundcloud",
+      "tags": [
+        "logo",
+        "soundcloud"
+      ]
+    },
+    {
       "name": "logo-stackoverflow",
       "tags": [
         "logo",
@@ -5803,6 +5845,13 @@
       "tags": [
         "logo",
         "stencil"
+      ]
+    },
+    {
+      "name": "logo-tiktok",
+      "tags": [
+        "logo",
+        "tiktok"
       ]
     },
     {
@@ -5838,6 +5887,13 @@
       "tags": [
         "logo",
         "usd"
+      ]
+    },
+    {
+      "name": "logo-venmo",
+      "tags": [
+        "logo",
+        "venmo"
       ]
     },
     {
