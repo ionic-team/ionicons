@@ -808,13 +808,19 @@
     {
       "name": "barbell",
       "tags": [
-        "barbell"
+        "barbell",
+        "exercise",
+        "lifting",
+        "weight"
       ]
     },
     {
       "name": "barbell-outline",
       "tags": [
         "barbell",
+        "exercise",
+        "lifting",
+        "weight",
         "outline"
       ]
     },
@@ -822,6 +828,9 @@
       "name": "barbell-sharp",
       "tags": [
         "barbell",
+        "exercise",
+        "lifting",
+        "weight",
         "sharp"
       ]
     },
@@ -1090,13 +1099,17 @@
     {
       "name": "bicycle",
       "tags": [
-        "bicycle"
+        "bicycle",
+        "bike",
+        "exercise"
       ]
     },
     {
       "name": "bicycle-outline",
       "tags": [
         "bicycle",
+        "bike",
+        "exercise",
         "outline"
       ]
     },
@@ -1104,6 +1117,8 @@
       "name": "bicycle-sharp",
       "tags": [
         "bicycle",
+        "bike",
+        "exercise",
         "sharp"
       ]
     },
@@ -3732,6 +3747,7 @@
     {
       "name": "female",
       "tags": [
+        "dudette",
         "female",
         "girl",
         "lady",
@@ -3741,6 +3757,7 @@
     {
       "name": "female-outline",
       "tags": [
+        "dudette",
         "female",
         "girl",
         "lady",
@@ -3751,6 +3768,7 @@
     {
       "name": "female-sharp",
       "tags": [
+        "dudette",
         "female",
         "girl",
         "lady",
