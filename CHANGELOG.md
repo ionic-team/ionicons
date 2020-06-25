@@ -1,3 +1,12 @@
+## [5.1.2](https://github.com/ionic-team/ionicons/compare/v5.1.1...v5.1.2) (2020-06-25)
+
+
+### Bug Fixes
+
+* **types:** temporary fix for projects using older typescript versions ([3aed6ee](https://github.com/ionic-team/ionicons/commit/3aed6eee317a5de367416e7529028a650e2617d3))
+
+
+
 ## [5.1.1](https://github.com/ionic-team/ionicons/compare/v5.1.0...v5.1.1) (2020-06-25)
 
 
