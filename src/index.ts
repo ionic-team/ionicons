@@ -1,2 +1,2 @@
 export { addIcons } from './components/icon/utils';
-export * from './components';
+export type { Components, JSX } from './components';
