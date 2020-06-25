@@ -1,3 +1,12 @@
+## [5.1.1](https://github.com/ionic-team/ionicons/compare/v5.1.0...v5.1.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* **types:** add "type" to type exports so it's not added to the transpiled js file ([3a2ab6e](https://github.com/ionic-team/ionicons/commit/3a2ab6ec277234e49adfe7ed35ce1fb9d5fe7133))
+
+
+
 # [5.1.0](https://github.com/ionic-team/ionicons/compare/5.0.0...5.1.0) (2020-06-23)
 
 
