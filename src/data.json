@@ -5417,16 +5417,14 @@
     {
       "name": "log-in",
       "tags": [
-        "in",
-        "log",
+        "login",
         "signin"
       ]
     },
     {
       "name": "log-in-outline",
       "tags": [
-        "in",
-        "log",
+        "login",
         "outline",
         "signin"
       ]
@@ -5434,8 +5432,7 @@
     {
       "name": "log-in-sharp",
       "tags": [
-        "in",
-        "log",
+        "login",
         "sharp",
         "signin"
       ]
@@ -5443,16 +5440,14 @@
     {
       "name": "log-out",
       "tags": [
-        "log",
-        "out",
+        "logout",
         "signout"
       ]
     },
     {
       "name": "log-out-outline",
       "tags": [
-        "log",
-        "out",
+        "logout",
         "outline",
         "signout"
       ]
@@ -5460,8 +5455,7 @@
     {
       "name": "log-out-sharp",
       "tags": [
-        "log",
-        "out",
+        "logout",
         "sharp",
         "signout"
       ]
