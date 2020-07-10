@@ -1,5 +1,7 @@
-import { Component, Element, Prop, State, Watch } from '@stencil/core';
-import { getIconMap, getName, getSrc, isSrc, isValid } from './utils';
+import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
+import { getSvgContent, ioniconContent } from './request';
+import { getName, getUrl } from './utils';
+
 
 @Component({
   tag: 'ion-icon',
@@ -15,21 +17,15 @@ export class Icon {
   @State() private svgContent?: string;
   @State() private isVisible = false;
 
-  @Prop({ context: 'isServer' }) isServer!: boolean;
-  @Prop({ context: 'resourcesUrl' }) resourcesUrl!: string;
-  @Prop({ context: 'document' }) doc!: Document;
-  @Prop({ context: 'window' }) win: any;
+  /**
+   * The mode determines which platform styles to use.
+   */
+  @Prop({ mutable: true }) mode = getIonMode();
 
   /**
    * The color to use for the background of the item.
    */
   @Prop() color?: string;
-
-  /**
-   * The mode determines which platform styles to use.
-   * Possible values are: `"ios"` or `"md"`.
-   */
-  @Prop() mode?: 'ios' | 'md';
 
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
@@ -66,7 +62,7 @@ export class Icon {
    * it will set the `src` property. Otherwise it assumes it's a built-in named
    * SVG and set the `name` property.
    */
-  @Prop() icon?: string;
+  @Prop() icon?: any;
 
   /**
    * The size of the icon.
@@ -80,7 +76,7 @@ export class Icon {
    */
   @Prop() lazy = false;
 
-  componentWillLoad() {
+  connectedCallback() {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
     // only load the svg if it's visible
@@ -90,7 +86,7 @@ export class Icon {
     });
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
@@ -98,8 +94,8 @@ export class Icon {
   }
 
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
-    if (this.lazy && this.win && this.win.IntersectionObserver) {
-      const io = this.io = new this.win.IntersectionObserver((data: IntersectionObserverEntry[]) => {
+    if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
+      const io = this.io = new (window as any).IntersectionObserver((data: IntersectionObserverEntry[]) => {
         if (data[0].isIntersecting) {
           io.disconnect();
           this.io = undefined;
@@ -121,163 +117,56 @@ export class Icon {
   @Watch('src')
   @Watch('icon')
   loadIcon() {
-    if (!this.isServer && this.isVisible) {
-      const url = this.getUrl();
+    if (Build.isBrowser && this.isVisible) {
+      const url = getUrl(this);
       if (url) {
-        getSvgContent(this.doc, url, 's-ion-icon')
-          .then(svgContent => this.svgContent = svgContent);
-      } else {
-        console.error('icon was not resolved');
+        if (ioniconContent.has(url)) {
+          // sync if it's already loaded
+          this.svgContent = ioniconContent.get(url);
+        } else {
+          // async if it hasn't been loaded
+          getSvgContent(url).then(() => this.svgContent = ioniconContent.get(url));
+        }
       }
     }
 
     if (!this.ariaLabel) {
-      const name = getName(this.getName(), this.mode, this.ios, this.md);
+      const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
-      if (name) {
-        this.ariaLabel = name
-          .replace('ios-', '')
-          .replace('md-', '')
-          .replace(/\-/g, ' ');
+      if (label) {
+        this.ariaLabel = label.replace(/\-/g, ' ');
       }
     }
-  }
-
-  getName() {
-    if (this.name !== undefined) {
-      return this.name;
-    }
-    if (this.icon && !isSrc(this.icon)) {
-      return this.icon;
-    }
-    return undefined;
-  }
-
-  getUrl() {
-    let url = getSrc(this.src);
-    if (url) {
-      return url;
-    }
-
-    url = getName(this.getName(), this.mode, this.ios, this.md);
-    if (url) {
-      return this.getNamedUrl(url);
-    }
-
-    url = getSrc(this.icon);
-    if (url) {
-      return url;
-    }
-
-    return null;
-  }
-
-  private getNamedUrl(name: string) {
-    const url = getIconMap().get(name);
-    if (url) {
-      return url;
-    }
-    return `${this.resourcesUrl}svg/${name}.svg`;
-  }
-
-
-  hostData() {
-    const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
-
-    return {
-      'role': 'img',
-      class: {
-        ...createColorClasses(this.color),
-        [`icon-${this.size}`]: !!this.size,
-        'flip-rtl': flipRtl && this.doc.dir === 'rtl'
-      }
-    };
   }
 
   render() {
-    if (!this.isServer && this.svgContent) {
-      // we've already loaded up this svg at one point
-      // and the svg content we've loaded and assigned checks out
-      // render this svg!!
-      return <div class="icon-inner" innerHTML={this.svgContent}></div>;
-    }
+    const mode = this.mode || 'md';
+    const flipRtl = this.flipRtl || (this.ariaLabel && (this.ariaLabel.indexOf('arrow') > -1 || this.ariaLabel.indexOf('chevron') > -1) && this.flipRtl !== false);
 
-    // actively requesting the svg
-    // or it's an SSR render
-    // so let's just render an empty div for now
-    return <div class="icon-inner"></div>;
+    return (
+      <Host role="img" class={{
+        [mode]: true,
+        ...createColorClasses(this.color),
+        [`icon-${this.size}`]: !!this.size,
+        'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl'
+        }}>{(
+          (Build.isBrowser && this.svgContent)
+            ? <div class="icon-inner" innerHTML={this.svgContent}></div>
+            : <div class="icon-inner"></div>
+        )}
+      </Host>
+    );
   }
 }
 
 
-const requests = new Map<string, Promise<string>>();
-
-function getSvgContent(doc: Document, url: string, scopedId: string | undefined) {
-  // see if we already have a request for this url
-  let req = requests.get(url);
-
-  if (!req) {
-    // we don't already have a request
-    req = fetch(url, { cache: 'force-cache' }).then(rsp => {
-      if (isStatusValid(rsp.status)) {
-        return rsp.text();
-      }
-      return Promise.resolve(null);
-    }).then(svgContent => validateContent(doc, svgContent, scopedId));
-
-    // cache for the same requests
-    requests.set(url, req);
-  }
-
-  return req;
-}
+const getIonMode = () => (Build.isBrowser && typeof document !== 'undefined' && document.documentElement.getAttribute('mode')) || 'md';
 
 
-function isStatusValid(status: number) {
-  return status <= 299;
-}
-
-function validateContent(
-  document: Document,
-  svgContent: string | null,
-  scopeId: string | undefined
-) {
-  if (svgContent) {
-    const frag = document.createDocumentFragment();
-    const div = document.createElement('div');
-    div.innerHTML = svgContent;
-    frag.appendChild(div);
-
-    // setup this way to ensure it works on our buddy IE
-    for (let i = div.childNodes.length - 1; i >= 0; i--) {
-      if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
-        div.removeChild(div.childNodes[i]);
-      }
-    }
-
-    // must only have 1 root element
-    const svgElm = div.firstElementChild;
-    if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
-      if (scopeId) {
-        svgElm.setAttribute('class', scopeId);
-      }
-      // root element must be an svg
-      // lets double check we've got valid elements
-      // do not allow scripts
-      if (isValid(svgElm as any)) {
-        return div.innerHTML;
-      }
-    }
-  }
-  return '';
-}
-
-function createColorClasses(color: string | undefined) {
+const createColorClasses = (color: string | undefined) => {
   return (color) ? {
     'ion-color': true,
     [`ion-color-${color}`]: true
   } : null;
-}
-
-
+};

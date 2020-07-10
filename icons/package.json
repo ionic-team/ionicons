@@ -1,5 +1,0 @@
-{
-  "name": "icon-loader",
-  "typings": "./index.d.ts",
-  "module": "./index.js"
-}

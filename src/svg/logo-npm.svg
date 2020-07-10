@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<g>
-	<rect x="227.6" y="213.1" width="28.4" height="57.1"/>
-	<path d="M0,156v171.4h142.2V356H256v-28.6h256V156H0z M142.2,298.9h-28.4v-85.7H85.3v85.7H28.4V184.6h113.8V298.9z
-		 M284.4,298.9h-56.9v28.6h-56.9V184.6h113.8V298.9z M483.6,298.9h-28.4v-85.7h-28.4v85.7h-28.4v-85.7h-28.4v85.7h-56.9V184.6h170.7
-		V298.9z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5_logos</title><rect x="227.6" y="213.1" width="28.4" height="57.1" style="fill:#010101"/><path d="M0,156V327.4H142.2V356H256V327.4H512V156ZM142.2,298.9H113.8V213.2H85.3v85.7H28.4V184.6H142.2Zm142.2,0H227.5v28.6H170.6V184.6H284.4V298.9Zm199.2,0H455.2V213.2H426.8v85.7H398.4V213.2H370v85.7H313.1V184.6H483.8V298.9Z" style="fill:#010101"/></svg>

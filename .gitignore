@@ -8,12 +8,13 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 .idea/
-.sass-cache/
 .versions/
 .vscode/
 node_modules/
 tmp/
 dist/
+icons/
 .DS_Store
+scripts/*.js
 
 www/

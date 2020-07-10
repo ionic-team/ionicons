@@ -6,15 +6,28 @@
 
   contain: strict;
 
+  fill: currentColor;
+
   box-sizing: content-box !important;
 }
 
+:host .ionicon {
+  stroke: currentColor;
+}
+
+.ionicon-fill-none {
+  fill: none;
+}
+
+.ionicon-stroke-width {
+  stroke-width: 32px;
+  stroke-width: var(--ionicon-stroke-width, 32px);
+}
+
 .icon-inner,
+.ionicon,
 svg {
   display: block;
-
-  fill: currentColor;
-  stroke: currentColor;
 
   height: 100%;
   width: 100%;
