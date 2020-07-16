@@ -2455,6 +2455,8 @@
       "name": "clipboard",
       "tags": [
         "clipboard",
+        "copy",
+        "paste",
         "write"
       ]
     },
@@ -2462,7 +2464,9 @@
       "name": "clipboard-outline",
       "tags": [
         "clipboard",
+        "copy",
         "outline",
+        "paste",
         "write"
       ]
     },
@@ -2470,6 +2474,8 @@
       "name": "clipboard-sharp",
       "tags": [
         "clipboard",
+        "copy",
+        "paste",
         "sharp",
         "write"
       ]
