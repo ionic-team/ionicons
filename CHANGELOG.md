@@ -89,7 +89,7 @@ The table below outlines icons that were removed or renamed.
 | chatboxes                    | :pencil2:   | renamed     | renamed to "chatbox"                                                  |
 | clock                        | :x:         | deleted     |                                                                       |
 | contact                      | :pencil2:   | renamed     | renamed to "person-circle"                                            |
-| contacts                     | :pencil2:   | renamed     | renamed to "person-circle"                                            |
+| contacts                     | :pencil2:   | renamed     | renamed to "people-circle"                                            |
 | done-all                     | :pencil2:   | renamed     | renamed to "checkmark-done"                                           |
 | fastforward	                 | :pencil2:   | renamed     | renamed to "play-forward"                                             |
 | filing                       | :pencil2:   | renamed     | renamed to "file-tray"                                                |
