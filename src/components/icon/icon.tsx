@@ -32,6 +32,8 @@ export class Icon {
    */
   @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
+  @Prop({reflect: true}) ariaHidden?: string;
+
   /**
    * Specifies which icon to use on `ios` mode.
    */
@@ -130,7 +132,7 @@ export class Icon {
       }
     }
 
-    if (!this.ariaLabel) {
+    if (!this.ariaLabel && this.ariaHidden !== 'true') {
       const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
