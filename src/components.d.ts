@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface IonIcon {
+        "ariaHidden"?: string;
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
          */
@@ -66,6 +67,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IonIcon {
+        "ariaHidden"?: string;
         /**
           * Specifies the label to use for accessibility. Defaults to the icon name.
          */
