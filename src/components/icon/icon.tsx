@@ -32,6 +32,9 @@ export class Icon {
    */
   @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
+  /**
+   * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+   */
   @Prop({reflect: true}) ariaHidden?: string;
 
   /**
