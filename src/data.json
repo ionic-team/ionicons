@@ -9937,6 +9937,26 @@
       ]
     },
     {
+      "name": "unlink",
+      "tags": [
+        "unlink"
+      ]
+    },
+    {
+      "name": "unlink-outline",
+      "tags": [
+        "outline",
+        "unlink"
+      ]
+    },
+    {
+      "name": "unlink-sharp",
+      "tags": [
+        "sharp",
+        "unlink"
+      ]
+    },
+    {
       "name": "videocam",
       "tags": [
         "camera",
