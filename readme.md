@@ -88,8 +88,8 @@ ion-icon {
 }
 ```
 
-## Stroke weight
-When using an `outline` icon variant it is possible to adjust the stroke weight, for improved visual balance relative to the icon's size or relative to the weight of adjacent text. You can set a specific size by applying the `--ionicon-stroke-weight` CSS custom property to the `ion-icon` component. The default value is 32px.
+## Stroke width
+When using an `outline` icon variant it is possible to adjust the stroke width, for improved visual balance relative to the icon's size or relative to the width of adjacent text. You can set a specific size by applying the `--ionicon-stroke-width` CSS custom property to the `ion-icon` component. The default value is 32px.
 
 ```html
 <ion-icon name="heart-outline"></ion-icon>
