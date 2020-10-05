@@ -1713,6 +1713,7 @@
     {
       "name": "caret-back",
       "tags": [
+        "arrow",
         "back",
         "caret"
       ]
@@ -1720,6 +1721,7 @@
     {
       "name": "caret-back-circle",
       "tags": [
+        "arrow",
         "back",
         "caret",
         "circle"
@@ -1728,6 +1730,7 @@
     {
       "name": "caret-back-circle-outline",
       "tags": [
+        "arrow",
         "back",
         "caret",
         "circle",
@@ -1737,6 +1740,7 @@
     {
       "name": "caret-back-circle-sharp",
       "tags": [
+        "arrow",
         "back",
         "caret",
         "circle",
@@ -1747,6 +1751,7 @@
     {
       "name": "caret-back-outline",
       "tags": [
+        "arrow",
         "back",
         "caret",
         "left",
@@ -1756,6 +1761,7 @@
     {
       "name": "caret-back-sharp",
       "tags": [
+        "arrow",
         "back",
         "caret",
         "left",
@@ -1765,6 +1771,7 @@
     {
       "name": "caret-down",
       "tags": [
+        "arrow",
         "caret",
         "down"
       ]
@@ -1772,6 +1779,7 @@
     {
       "name": "caret-down-circle",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "down"
@@ -1780,6 +1788,7 @@
     {
       "name": "caret-down-circle-outline",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "down",
@@ -1789,6 +1798,7 @@
     {
       "name": "caret-down-circle-sharp",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "down",
@@ -1798,6 +1808,7 @@
     {
       "name": "caret-down-outline",
       "tags": [
+        "arrow",
         "caret",
         "down",
         "outline"
@@ -1806,6 +1817,7 @@
     {
       "name": "caret-down-sharp",
       "tags": [
+        "arrow",
         "caret",
         "down",
         "sharp"
@@ -1814,6 +1826,7 @@
     {
       "name": "caret-forward",
       "tags": [
+        "arrow",
         "caret",
         "forward",
         "right"
@@ -1822,6 +1835,7 @@
     {
       "name": "caret-forward-circle",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "forward",
@@ -1831,6 +1845,7 @@
     {
       "name": "caret-forward-circle-outline",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "forward",
@@ -1841,6 +1856,7 @@
     {
       "name": "caret-forward-circle-sharp",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "forward",
@@ -1851,6 +1867,7 @@
     {
       "name": "caret-forward-outline",
       "tags": [
+        "arrow",
         "caret",
         "forward",
         "outline",
@@ -1860,6 +1877,7 @@
     {
       "name": "caret-forward-sharp",
       "tags": [
+        "arrow",
         "caret",
         "forward",
         "right",
@@ -1869,6 +1887,7 @@
     {
       "name": "caret-up",
       "tags": [
+        "arrow",
         "caret",
         "up"
       ]
@@ -1876,6 +1895,7 @@
     {
       "name": "caret-up-circle",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "up"
@@ -1884,6 +1904,7 @@
     {
       "name": "caret-up-circle-outline",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "outline",
@@ -1893,6 +1914,7 @@
     {
       "name": "caret-up-circle-sharp",
       "tags": [
+        "arrow",
         "caret",
         "circle",
         "sharp",
@@ -1902,6 +1924,7 @@
     {
       "name": "caret-up-outline",
       "tags": [
+        "arrow",
         "caret",
         "outline",
         "up"
@@ -1910,6 +1933,7 @@
     {
       "name": "caret-up-sharp",
       "tags": [
+        "arrow",
         "caret",
         "sharp",
         "up"
@@ -2222,6 +2246,7 @@
     {
       "name": "chevron-back",
       "tags": [
+        "arrow",
         "back",
         "chevron",
         "left"
@@ -2230,6 +2255,7 @@
     {
       "name": "chevron-back-circle",
       "tags": [
+        "arrow",
         "back",
         "chevron",
         "circle",
@@ -2239,6 +2265,7 @@
     {
       "name": "chevron-back-circle-outline",
       "tags": [
+        "arrow",
         "back",
         "chevron",
         "circle",
@@ -2249,6 +2276,7 @@
     {
       "name": "chevron-back-circle-sharp",
       "tags": [
+        "arrow",
         "back",
         "chevron",
         "circle",
@@ -2259,6 +2287,7 @@
     {
       "name": "chevron-back-outline",
       "tags": [
+        "arrow",
         "back",
         "chevron",
         "left",
@@ -2268,6 +2297,7 @@
     {
       "name": "chevron-back-sharp",
       "tags": [
+        "arrow",
         "back",
         "chevron",
         "left",
@@ -2277,6 +2307,7 @@
     {
       "name": "chevron-down",
       "tags": [
+        "arrow",
         "chevron",
         "down"
       ]
@@ -2284,6 +2315,7 @@
     {
       "name": "chevron-down-circle",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "down"
@@ -2292,6 +2324,7 @@
     {
       "name": "chevron-down-circle-outline",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "down",
@@ -2301,6 +2334,7 @@
     {
       "name": "chevron-down-circle-sharp",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "down",
@@ -2310,6 +2344,7 @@
     {
       "name": "chevron-down-outline",
       "tags": [
+        "arrow",
         "chevron",
         "down",
         "outline"
@@ -2318,6 +2353,7 @@
     {
       "name": "chevron-down-sharp",
       "tags": [
+        "arrow",
         "chevron",
         "down",
         "sharp"
@@ -2326,6 +2362,7 @@
     {
       "name": "chevron-forward",
       "tags": [
+        "arrow",
         "chevron",
         "forward",
         "right"
@@ -2334,6 +2371,7 @@
     {
       "name": "chevron-forward-circle",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "forward",
@@ -2343,6 +2381,7 @@
     {
       "name": "chevron-forward-circle-outline",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "forward",
@@ -2353,6 +2392,7 @@
     {
       "name": "chevron-forward-circle-sharp",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "forward",
@@ -2363,6 +2403,7 @@
     {
       "name": "chevron-forward-outline",
       "tags": [
+        "arrow",
         "chevron",
         "forward",
         "outline",
@@ -2372,6 +2413,7 @@
     {
       "name": "chevron-forward-sharp",
       "tags": [
+        "arrow",
         "chevron",
         "forward",
         "right",
@@ -2381,6 +2423,7 @@
     {
       "name": "chevron-up",
       "tags": [
+        "arrow",
         "chevron",
         "up"
       ]
@@ -2388,6 +2431,7 @@
     {
       "name": "chevron-up-circle",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "up"
@@ -2396,6 +2440,7 @@
     {
       "name": "chevron-up-circle-outline",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "outline",
@@ -2405,6 +2450,7 @@
     {
       "name": "chevron-up-circle-sharp",
       "tags": [
+        "arrow",
         "chevron",
         "circle",
         "sharp",
@@ -2414,6 +2460,7 @@
     {
       "name": "chevron-up-outline",
       "tags": [
+        "arrow",
         "chevron",
         "outline",
         "up"
@@ -2422,6 +2469,7 @@
     {
       "name": "chevron-up-sharp",
       "tags": [
+        "arrow",
         "chevron",
         "sharp",
         "up"
@@ -2431,6 +2479,8 @@
       "name": "clipboard",
       "tags": [
         "clipboard",
+        "copy",
+        "paste",
         "write"
       ]
     },
@@ -2438,7 +2488,9 @@
       "name": "clipboard-outline",
       "tags": [
         "clipboard",
+        "copy",
         "outline",
+        "paste",
         "write"
       ]
     },
@@ -2446,6 +2498,8 @@
       "name": "clipboard-sharp",
       "tags": [
         "clipboard",
+        "copy",
+        "paste",
         "sharp",
         "write"
       ]
