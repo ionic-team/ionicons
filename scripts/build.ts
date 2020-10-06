@@ -90,6 +90,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
                 .replace('-outline', '')
                 .replace('-sharp', '')
                 .replace(/-/g, ' ');
+                console.log(fileName)
               item.content[0].text = fileName;
             }
             return item;
@@ -126,9 +127,12 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (item.isElem()) {
               item.eachAttr(attr => {
                 if (attr.name === 'style') {
-                  throw new Error('Inline style detected');
+                  throw new Error('Inline style attributed detected');
                 }
               });
+            }
+            if (item.isElem('style')) {
+              throw new Error('Inline style element detected');
             }
           }
         }

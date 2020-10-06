@@ -1,6 +1,26 @@
 {
   "icons": [
     {
+      "name": "accessibility",
+      "tags": [
+        "accessibility"
+      ]
+    },
+    {
+      "name": "accessibility-outline",
+      "tags": [
+        "accessibility",
+        "outline"
+      ]
+    },
+    {
+      "name": "accessibility-sharp",
+      "tags": [
+        "accessibility",
+        "sharp"
+      ]
+    },
+    {
       "name": "add",
       "tags": [
         "add",
@@ -759,6 +779,138 @@
       "name": "backspace-sharp",
       "tags": [
         "backspace",
+        "sharp"
+      ]
+    },
+    {
+      "name": "bag",
+      "tags": [
+        "bag"
+      ]
+    },
+    {
+      "name": "bag-add",
+      "tags": [
+        "add",
+        "bag"
+      ]
+    },
+    {
+      "name": "bag-add-outline",
+      "tags": [
+        "add",
+        "bag",
+        "outline"
+      ]
+    },
+    {
+      "name": "bag-add-sharp",
+      "tags": [
+        "add",
+        "bag",
+        "sharp"
+      ]
+    },
+    {
+      "name": "bag-check",
+      "tags": [
+        "bag",
+        "check"
+      ]
+    },
+    {
+      "name": "bag-check-outline",
+      "tags": [
+        "bag",
+        "check",
+        "outline"
+      ]
+    },
+    {
+      "name": "bag-check-sharp",
+      "tags": [
+        "bag",
+        "check",
+        "sharp"
+      ]
+    },
+    {
+      "name": "bag-handle",
+      "tags": [
+        "bag",
+        "handle"
+      ]
+    },
+    {
+      "name": "bag-handle-outline",
+      "tags": [
+        "bag",
+        "handle",
+        "outline"
+      ]
+    },
+    {
+      "name": "bag-handle-sharp",
+      "tags": [
+        "bag",
+        "handle",
+        "sharp"
+      ]
+    },
+    {
+      "name": "bag-outline",
+      "tags": [
+        "bag",
+        "outline"
+      ]
+    },
+    {
+      "name": "bag-remove",
+      "tags": [
+        "bag",
+        "remove"
+      ]
+    },
+    {
+      "name": "bag-remove-outline",
+      "tags": [
+        "bag",
+        "outline",
+        "remove"
+      ]
+    },
+    {
+      "name": "bag-remove-sharp",
+      "tags": [
+        "bag",
+        "remove",
+        "sharp"
+      ]
+    },
+    {
+      "name": "bag-sharp",
+      "tags": [
+        "bag",
+        "sharp"
+      ]
+    },
+    {
+      "name": "ban",
+      "tags": [
+        "ban"
+      ]
+    },
+    {
+      "name": "ban-outline",
+      "tags": [
+        "ban",
+        "outline"
+      ]
+    },
+    {
+      "name": "ban-sharp",
+      "tags": [
+        "ban",
         "sharp"
       ]
     },
@@ -1529,6 +1681,29 @@
         "date",
         "month",
         "week"
+      ]
+    },
+    {
+      "name": "calendar-clear",
+      "tags": [
+        "calendar",
+        "clear"
+      ]
+    },
+    {
+      "name": "calendar-clear-outline",
+      "tags": [
+        "calendar",
+        "clear",
+        "outline"
+      ]
+    },
+    {
+      "name": "calendar-clear-sharp",
+      "tags": [
+        "calendar",
+        "clear",
+        "sharp"
       ]
     },
     {
@@ -3265,6 +3440,26 @@
       ]
     },
     {
+      "name": "dice",
+      "tags": [
+        "dice"
+      ]
+    },
+    {
+      "name": "dice-outline",
+      "tags": [
+        "dice",
+        "outline"
+      ]
+    },
+    {
+      "name": "dice-sharp",
+      "tags": [
+        "dice",
+        "sharp"
+      ]
+    },
+    {
       "name": "disc",
       "tags": [
         "cd",
@@ -3318,6 +3513,29 @@
       "tags": [
         "attach",
         "document",
+        "sharp"
+      ]
+    },
+    {
+      "name": "document-lock",
+      "tags": [
+        "document",
+        "lock"
+      ]
+    },
+    {
+      "name": "document-lock-outline",
+      "tags": [
+        "document",
+        "lock",
+        "outline"
+      ]
+    },
+    {
+      "name": "document-lock-sharp",
+      "tags": [
+        "document",
+        "lock",
         "sharp"
       ]
     },
@@ -3701,6 +3919,29 @@
       ]
     },
     {
+      "name": "extension-puzzle",
+      "tags": [
+        "extension",
+        "puzzle"
+      ]
+    },
+    {
+      "name": "extension-puzzle-outline",
+      "tags": [
+        "extension",
+        "outline",
+        "puzzle"
+      ]
+    },
+    {
+      "name": "extension-puzzle-sharp",
+      "tags": [
+        "extension",
+        "puzzle",
+        "sharp"
+      ]
+    },
+    {
       "name": "eye",
       "tags": [
         "exposed",
@@ -3932,6 +4173,29 @@
       ]
     },
     {
+      "name": "filter-circle",
+      "tags": [
+        "circle",
+        "filter"
+      ]
+    },
+    {
+      "name": "filter-circle-outline",
+      "tags": [
+        "circle",
+        "filter",
+        "outline"
+      ]
+    },
+    {
+      "name": "filter-circle-sharp",
+      "tags": [
+        "circle",
+        "filter",
+        "sharp"
+      ]
+    },
+    {
       "name": "filter-outline",
       "tags": [
         "filter",
@@ -3965,6 +4229,26 @@
       "tags": [
         "finger",
         "print",
+        "sharp"
+      ]
+    },
+    {
+      "name": "fish",
+      "tags": [
+        "fish"
+      ]
+    },
+    {
+      "name": "fish-outline",
+      "tags": [
+        "fish",
+        "outline"
+      ]
+    },
+    {
+      "name": "fish-sharp",
+      "tags": [
+        "fish",
         "sharp"
       ]
     },
@@ -5112,6 +5396,29 @@
       ]
     },
     {
+      "name": "invert-mode",
+      "tags": [
+        "invert",
+        "mode"
+      ]
+    },
+    {
+      "name": "invert-mode-outline",
+      "tags": [
+        "invert",
+        "mode",
+        "outline"
+      ]
+    },
+    {
+      "name": "invert-mode-sharp",
+      "tags": [
+        "invert",
+        "mode",
+        "sharp"
+      ]
+    },
+    {
       "name": "journal",
       "tags": [
         "journal"
@@ -5515,6 +5822,13 @@
       ]
     },
     {
+      "name": "logo-alipay",
+      "tags": [
+        "alipay",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-amazon",
       "tags": [
         "amazon",
@@ -5629,6 +5943,20 @@
       ]
     },
     {
+      "name": "logo-deviantart",
+      "tags": [
+        "deviantart",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-discord",
+      "tags": [
+        "discord",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-docker",
       "tags": [
         "docker",
@@ -5674,6 +6002,13 @@
       "name": "logo-facebook",
       "tags": [
         "facebook",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-figma",
+      "tags": [
+        "figma",
         "logo"
       ]
     },
@@ -5795,6 +6130,13 @@
       "tags": [
         "logo",
         "markdown"
+      ]
+    },
+    {
+      "name": "logo-mastodon",
+      "tags": [
+        "logo",
+        "mastodon"
       ]
     },
     {
@@ -5946,6 +6288,13 @@
       ]
     },
     {
+      "name": "logo-tableau",
+      "tags": [
+        "logo",
+        "tableau"
+      ]
+    },
+    {
       "name": "logo-tiktok",
       "tags": [
         "logo",
@@ -5995,6 +6344,13 @@
       ]
     },
     {
+      "name": "logo-vercel",
+      "tags": [
+        "logo",
+        "vercel"
+      ]
+    },
+    {
       "name": "logo-vimeo",
       "tags": [
         "logo",
@@ -6021,6 +6377,13 @@
         "component",
         "logo",
         "web"
+      ]
+    },
+    {
+      "name": "logo-wechat",
+      "tags": [
+        "logo",
+        "wechat"
       ]
     },
     {
@@ -9247,6 +9610,26 @@
       ]
     },
     {
+      "name": "storefront",
+      "tags": [
+        "storefront"
+      ]
+    },
+    {
+      "name": "storefront-outline",
+      "tags": [
+        "outline",
+        "storefront"
+      ]
+    },
+    {
+      "name": "storefront-sharp",
+      "tags": [
+        "sharp",
+        "storefront"
+      ]
+    },
+    {
       "name": "subway",
       "tags": [
         "subway"
@@ -9434,6 +9817,26 @@
       ]
     },
     {
+      "name": "telescope",
+      "tags": [
+        "telescope"
+      ]
+    },
+    {
+      "name": "telescope-outline",
+      "tags": [
+        "outline",
+        "telescope"
+      ]
+    },
+    {
+      "name": "telescope-sharp",
+      "tags": [
+        "sharp",
+        "telescope"
+      ]
+    },
+    {
       "name": "tennisball",
       "tags": [
         "tennisball"
@@ -9616,6 +10019,26 @@
         "thunderstorm",
         "weather",
         "whether"
+      ]
+    },
+    {
+      "name": "ticket",
+      "tags": [
+        "ticket"
+      ]
+    },
+    {
+      "name": "ticket-outline",
+      "tags": [
+        "outline",
+        "ticket"
+      ]
+    },
+    {
+      "name": "ticket-sharp",
+      "tags": [
+        "sharp",
+        "ticket"
       ]
     },
     {
@@ -10016,6 +10439,29 @@
         "camera",
         "film",
         "movie",
+        "videocam"
+      ]
+    },
+    {
+      "name": "videocam-off",
+      "tags": [
+        "off",
+        "videocam"
+      ]
+    },
+    {
+      "name": "videocam-off-outline",
+      "tags": [
+        "off",
+        "outline",
+        "videocam"
+      ]
+    },
+    {
+      "name": "videocam-off-sharp",
+      "tags": [
+        "off",
+        "sharp",
         "videocam"
       ]
     },
