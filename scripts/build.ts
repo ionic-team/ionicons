@@ -2,7 +2,6 @@ import fs from 'fs-extra';
 import { join, basename } from 'path';
 import Svgo from 'svgo';
 
-
 async function build(rootDir: string) {
   try {
     const pkgJsonPath = join(rootDir, 'package.json');
@@ -11,19 +10,15 @@ async function build(rootDir: string) {
     const iconDir = join(rootDir, 'icons');
     const distDir = join(rootDir, 'dist');
     const distIoniconsDir = join(distDir, 'ionicons');
-    const destSrcSvgDir = join(distDir, 'svg');
+    const distSvgDir = join(distDir, 'svg');
 
-    await Promise.all([
-      fs.emptyDir(iconDir),
-      fs.emptyDir(distDir),
-      fs.emptyDir(destSrcSvgDir),
-    ]);
-    await fs.emptyDir(distIoniconsDir);
+    await Promise.all([fs.emptyDir(iconDir), fs.emptyDir(distDir)]);
+    await fs.emptyDir(distSvgDir), await fs.emptyDir(distIoniconsDir);
 
     const pkgData = await fs.readJson(pkgJsonPath);
     const version = pkgData.version as string;
 
-    const srcSvgData = await getSvgs(srcSvgDir, rootDir, distIoniconsDir)
+    const srcSvgData = await getSvgs(srcSvgDir, distSvgDir, distIoniconsDir);
 
     await optimizeSvgs(srcSvgData);
 
@@ -32,25 +27,21 @@ async function build(rootDir: string) {
       createIconPackage(version, iconDir, srcSvgData),
     ]);
 
-    const svgSymbolsContent = await createSvgSymbols(version, distDir, srcSvgData)
+    const svgSymbolsContent = await createSvgSymbols(version, distDir, srcSvgData);
 
     await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
 
     await copyToTesting(rootDir, distDir, srcSvgData);
-
-    await fs.copy(srcSvgDir, destSrcSvgDir);
-
   } catch (e) {
     console.error(e);
     process.exit(1);
   }
 }
 
-
 async function optimizeSvgs(srcSvgData: SvgData[]) {
   // https://github.com/svg/svgo
   const optimizePass = new Svgo({});
-  const processPass = new Svgo({
+  const webComponentPass = new Svgo({
     full: true,
     plugins: [
       {
@@ -61,57 +52,79 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
               params.attrs = [params.attrs];
             }
             if (item.isElem()) {
-              item.eachAttr(attr => {
+              item.eachAttr((attr) => {
                 if (attr.name === 'fill') {
                   if (attr.value === 'none') {
                     item.class.add('ionicon-fill-none');
                   }
                   item.removeAttr('fill');
-
                 } else if (attr.name === 'stroke') {
                   item.removeAttr('stroke');
-
                 } else if (attr.name === 'stroke-width' && attr.value === '32') {
                   item.removeAttr('stroke-width');
                   item.class.add('ionicon-stroke-width');
                 }
               });
             }
-          }
-        }
-      } as any,
-      {
-        replaceTitleText: {
-          type: 'perItem',
-          fn: (item, params, extra) => {
-            if (item.isElem('title')) {
-              const fileName = basename(extra.path)
-                .replace('.svg', '')
-                .replace('-outline', '')
-                .replace('-sharp', '')
-                .replace(/-/g, ' ');
-                console.log(fileName)
-              item.content[0].text = fileName;
-            }
-            return item;
-          }
-        }
+          },
+        },
       } as any,
       {
         addClassesToSVGElement: {
-          className: ['ionicon']
-        }
+          className: ['ionicon'],
+        },
       },
       {
-        removeStyleElement: true
+        removeStyleElement: true,
       },
       {
-        removeScriptElement: true
+        removeScriptElement: true,
       },
       {
-        removeDimensions: true
-      }
-    ]
+        removeDimensions: true,
+      },
+    ],
+  });
+
+  const sourcePass = new Svgo({
+    full: true,
+    plugins: [
+      {
+        addFillNoneCss: {
+          type: 'perItem',
+          fn: (item, params) => {
+            if (!Array.isArray(params.attrs)) {
+              params.attrs = [params.attrs];
+            }
+            if (item.isElem()) {
+              item.eachAttr((attr) => {
+                if (attr.name === 'stroke' || attr.name === 'fill') {
+                  if (attr.value === '#000') {
+                    item.addAttr({
+                      name: attr.name,
+                      value: 'currentColor',
+                      prefix: '',
+                      local: attr.name,
+                    });
+                  } else if (attr.value !== 'none') {
+                    throw new Error(`invalid "${attr.name}" value: ${attr.value}`);
+                  }
+                }
+              });
+            }
+          },
+        },
+      } as any,
+      {
+        removeStyleElement: true,
+      },
+      {
+        removeScriptElement: true,
+      },
+      {
+        removeDimensions: true,
+      },
+    ],
   });
 
   const validatePass = new Svgo({
@@ -125,7 +138,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
               params.attrs = [params.attrs];
             }
             if (item.isElem()) {
-              item.eachAttr(attr => {
+              item.eachAttr((attr) => {
                 if (attr.name === 'style') {
                   throw new Error('Inline style attributed detected');
                 }
@@ -134,25 +147,39 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (item.isElem('style')) {
               throw new Error('Inline style element detected');
             }
-          }
-        }
-      } as any
-    ]
+          },
+        },
+      } as any,
+    ],
   });
 
-  await Promise.all(srcSvgData.map(async svgData => {
-    return optimizeSvg(optimizePass, processPass, validatePass, svgData);
-  }));
+  await Promise.all(
+    srcSvgData.map(async (svgData) => {
+      return optimizeSvg(optimizePass, webComponentPass, sourcePass, validatePass, svgData);
+    }),
+  );
 }
 
-
-async function optimizeSvg(pass1: Svgo, pass2: Svgo, validatePass: Svgo, svgData: SvgData) {
+async function optimizeSvg(
+  optimizePass: Svgo,
+  webComponentPass: Svgo,
+  sourcePass: Svgo,
+  validatePass: Svgo,
+  svgData: SvgData,
+) {
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
 
-  const optimizedSvg = await pass1.optimize(srcSvgContent, { path: svgData.srcFilePath });
-  const processedSvg = await pass2.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
+  const optimizedSvg = await optimizePass.optimize(srcSvgContent, { path: svgData.srcFilePath });
 
-  svgData.optimizedSvgContent = processedSvg.data;
+  const optimizedCode = optimizedSvg.data.replace(
+    /<svg (.*?)>/,
+    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>${svgData.title}</title>`,
+  );
+
+  const webComponentSvg = await webComponentPass.optimize(optimizedCode, { path: svgData.srcFilePath });
+  const sourceSvg = await sourcePass.optimize(optimizedCode, { path: svgData.srcFilePath });
+
+  svgData.optimizedSvgContent = webComponentSvg.data;
 
   try {
     await validatePass.optimize(svgData.optimizedSvgContent, { path: svgData.srcFilePath });
@@ -161,8 +188,8 @@ async function optimizeSvg(pass1: Svgo, pass2: Svgo, validatePass: Svgo, svgData
   }
 
   await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
+  await fs.writeFile(svgData.distSvgFilePath, sourceSvg.data);
 }
-
 
 async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgData[]) {
   const testDir = join(rootDir, 'www');
@@ -170,16 +197,17 @@ async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgDa
   const testSvgDir = join(testBuildDir, 'svg');
   await fs.ensureDir(testSvgDir);
 
-  await Promise.all(srcSvgData.map(async svgData => {
-    const testSvgFilePath = join(testSvgDir, svgData.fileName);
-    await fs.writeFile(testSvgFilePath, svgData.optimizedSvgContent);
-  }));
+  await Promise.all(
+    srcSvgData.map(async (svgData) => {
+      const testSvgFilePath = join(testSvgDir, svgData.fileName);
+      await fs.writeFile(testSvgFilePath, svgData.optimizedSvgContent);
+    }),
+  );
 
   const distCheatsheetFilePath = join(distDir, 'cheatsheet.html');
   const testCheatsheetFilePath = join(testDir, 'cheatsheet.html');
   await fs.copyFile(distCheatsheetFilePath, testCheatsheetFilePath);
 }
-
 
 async function createSvgSymbols(version: string, distDir: string, srcSvgData: SvgData[]) {
   srcSvgData = srcSvgData.sort((a, b) => {
@@ -206,23 +234,14 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
     `</style>`,
   ];
 
-  srcSvgData.forEach(svgData => {
+  srcSvgData.forEach((svgData) => {
     const svg = svgData.optimizedSvgContent
-      .replace(
-        `<svg xmlns="http://www.w3.org/2000/svg"`,
-        `<symbol id="${svgData.iconName}"`
-      )
-      .replace(
-        `</svg>`,
-        `</symbol>`
-      )
-      lines.push(svg);
+      .replace(`<svg xmlns="http://www.w3.org/2000/svg"`, `<symbol id="${svgData.iconName}"`)
+      .replace(`</svg>`, `</symbol>`);
+    lines.push(svg);
   });
 
-  lines.push(
-    `</svg>`,
-    ``
-  );
+  lines.push(`</svg>`, ``);
 
   const content = lines.join('\n');
 
@@ -231,14 +250,19 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
   return content;
 }
 
-
-async function createCheatsheet(version: string, rootDir: string, distDir: string, svgSymbolsContent: string, srcSvgData: SvgData[]) {
+async function createCheatsheet(
+  version: string,
+  rootDir: string,
+  distDir: string,
+  svgSymbolsContent: string,
+  srcSvgData: SvgData[],
+) {
   const CheatsheetTmpFilePath = join(rootDir, 'scripts', 'cheatsheet-template.html');
   const distCheatsheetFilePath = join(distDir, 'cheatsheet.html');
 
-  const c = srcSvgData.map(svgData => (
-    `<svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg>`
-  ));
+  const c = srcSvgData.map(
+    (svgData) => `<svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg>`,
+  );
 
   c.push(svgSymbolsContent);
 
@@ -250,61 +274,71 @@ async function createCheatsheet(version: string, rootDir: string, distDir: strin
   await fs.writeFile(distCheatsheetFilePath, html);
 }
 
-
-async function getSvgs(srcSvgDir: string, rootDir: string, distIoniconsDir: string): Promise<SvgData[]> {
+async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: string): Promise<SvgData[]> {
   const optimizedSvgDir = join(distIoniconsDir, 'svg');
   await fs.emptyDir(optimizedSvgDir);
 
-  const svgFiles = (await fs.readdir(srcSvgDir)).filter(fileName => {
+  const svgFiles = (await fs.readdir(srcSvgDir)).filter((fileName) => {
     return !fileName.startsWith('.') && fileName.endsWith('.svg');
   });
 
-  const svgData = await Promise.all(svgFiles.map(async fileName => {
-    // fileName: airplane-outline.svg
+  const svgData = await Promise.all(
+    svgFiles.map(async (fileName) => {
+      // fileName: airplane-outline.svg
 
-    if (fileName.toLowerCase() !== fileName) {
-      throw new Error(`svg filename "${fileName}" must be all lowercase`);
-    }
+      if (fileName.toLowerCase() !== fileName) {
+        throw new Error(`svg filename "${fileName}" must be all lowercase`);
+      }
 
-    // srcFilePath: /src/svg/airplane-outline.svg
-    const srcFilePath = join(srcSvgDir, fileName);
+      // srcFilePath: /src/svg/airplane-outline.svg
+      const srcFilePath = join(srcSvgDir, fileName);
 
-    // optimizedFilePath: /dist/ionicons/svg/airplane-outline.svg
-    const optimizedFilePath = join(optimizedSvgDir, fileName);
+      // srcFilePath: /src/svg/airplane-outline.svg
+      const distSvgFilePath = join(distSvgDir, fileName);
 
-    const dotSplit = fileName.split('.');
-    if (dotSplit.length > 2) {
-      throw new Error(`svg filename "${fileName}" cannot contain more than one period`);
-    }
+      // optimizedFilePath: /dist/ionicons/svg/airplane-outline.svg
+      const optimizedFilePath = join(optimizedSvgDir, fileName);
 
-    // iconName: airplane-outline
-    const iconName = dotSplit[0];
+      const dotSplit = fileName.split('.');
+      if (dotSplit.length > 2) {
+        throw new Error(`svg filename "${fileName}" cannot contain more than one period`);
+      }
 
-    if (reservedKeywords.has(iconName)) {
-      throw new Error(`svg icon name "${iconName}" is a reserved JavaScript keyword`);
-    }
+      // iconName: airplane-outline
+      const iconName = dotSplit[0];
 
-    // fileNameMjs: airplane-outline.mjs
-    const fileNameMjs = iconName + '.mjs';
+      if (reservedKeywords.has(iconName)) {
+        throw new Error(`svg icon name "${iconName}" is a reserved JavaScript keyword`);
+      }
 
-    // fileNameCjs: airplane-outline.mjs
-    const fileNameCjs = iconName + '.js';
+      // fileNameMjs: airplane-outline.mjs
+      const fileNameMjs = iconName + '.mjs';
 
-    // exportName: airplaneOutline
-    const exportName = camelize(iconName);
+      // fileNameCjs: airplane-outline.mjs
+      const fileNameCjs = iconName + '.js';
 
-    return {
-      fileName,
-      srcFilePath,
-      srcSvgContent: (await fs.readFile(srcFilePath, 'utf8')),
-      optimizedFilePath,
-      optimizedSvgContent: null,
-      iconName,
-      fileNameMjs,
-      fileNameCjs,
-      exportName,
-    }
-  }));
+      // exportName: airplaneOutline
+      const exportName = camelize(iconName);
+
+      const title = toTitleCase(
+        fileName.replace('.svg', '').replace('-outline', '').replace('-sharp', '').replace(/-/g, ' '),
+      );
+
+      return {
+        fileName,
+        title,
+        srcFilePath,
+        distSvgFilePath,
+        srcSvgContent: await fs.readFile(srcFilePath, 'utf8'),
+        optimizedFilePath,
+        optimizedSvgContent: null,
+        iconName,
+        fileNameMjs,
+        fileNameCjs,
+        exportName,
+      };
+    }),
+  );
 
   return svgData.sort((a, b) => {
     if (a.exportName < b.exportName) return -1;
@@ -312,7 +346,6 @@ async function getSvgs(srcSvgDir: string, rootDir: string, distIoniconsDir: stri
     return 0;
   });
 }
-
 
 async function createIconPackage(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconPkgJsonFilePath = join(iconDir, 'package.json');
@@ -324,63 +357,53 @@ async function createIconPackage(version: string, iconDir: string, srcSvgData: S
   ]);
 
   const iconPkgJson = {
-    name: "ionicons/icons",
+    name: 'ionicons/icons',
     version,
-    module: "index.mjs",
-    main: "index.js",
-    typings: "index.d.ts",
-    private: true
+    module: 'index.mjs',
+    main: 'index.js',
+    typings: 'index.d.ts',
+    private: true,
   };
 
   const jsonStr = JSON.stringify(iconPkgJson, null, 2) + '\n';
   await fs.writeFile(iconPkgJsonFilePath, jsonStr);
 }
 
-
 async function createEsmIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconEsmFilePath = join(iconDir, 'index.mjs');
 
-  const o = [
-    `/* Ionicons v${version}, ES Modules */`, ``
-  ];
+  const o = [`/* Ionicons v${version}, ES Modules */`, ``];
 
-  srcSvgData.forEach(svgData => {
+  srcSvgData.forEach((svgData) => {
     o.push(`export const ${svgData.exportName} = ${getDataUrl(svgData)}`);
   });
 
   await fs.writeFile(iconEsmFilePath, o.join('\n') + '\n');
 }
 
-
 async function createCjsIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconCjsFilePath = join(iconDir, 'index.js');
 
-  const o = [
-    `/* Ionicons v${version}, CommonJS */`, ``
-  ];
+  const o = [`/* Ionicons v${version}, CommonJS */`, ``];
 
-  srcSvgData.forEach(svgData => {
+  srcSvgData.forEach((svgData) => {
     o.push(`exports.${svgData.exportName} = ${getDataUrl(svgData)}`);
   });
 
   await fs.writeFile(iconCjsFilePath, o.join('\n') + '\n');
 }
 
-
 async function createDtsIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
   const iconDtsFilePath = join(iconDir, 'index.d.ts');
 
-  const o = [
-    `/* Ionicons v${version}, Types */`, ``
-  ];
+  const o = [`/* Ionicons v${version}, Types */`, ``];
 
-  srcSvgData.forEach(svgData => {
+  srcSvgData.forEach((svgData) => {
     o.push(`export declare var ${svgData.exportName}: string;`);
   });
 
   await fs.writeFile(iconDtsFilePath, o.join('\n') + '\n');
 }
-
 
 function getDataUrl(svgData: SvgData) {
   let svg = svgData.optimizedSvgContent;
@@ -393,7 +416,6 @@ function getDataUrl(svgData: SvgData) {
   svg = svg.replace(/"/g, "'");
   return `"data:image/svg+xml;utf8,${svg}"`;
 }
-
 
 async function createDataJson(version: string, srcDir: string, distDir: string, srcSvgData: SvgData[]) {
   const srcDataJsonPath = join(srcDir, 'data.json');
@@ -410,26 +432,26 @@ async function createDataJson(version: string, srcDir: string, distDir: string, 
   data.icons = data.icons || [];
 
   // add new icons
-  srcSvgData.forEach(svgData => {
-    if (!data.icons.some(i => i.name === svgData.iconName)) {
+  srcSvgData.forEach((svgData) => {
+    if (!data.icons.some((i) => i.name === svgData.iconName)) {
       data.icons.push({
-        name: svgData.iconName
+        name: svgData.iconName,
       });
     }
   });
 
   // remove dead icons
-  data.icons = data.icons.filter(dataIcon => {
-    return srcSvgData.some(svgData => dataIcon.name === svgData.iconName);
+  data.icons = data.icons.filter((dataIcon) => {
+    return srcSvgData.some((svgData) => dataIcon.name === svgData.iconName);
   });
 
   // sort
   data.icons = data.icons.sort((a, b) => {
     if (a.name < b.name) return -1;
     if (a.name > b.name) return 1;
-    return 0
+    return 0;
   });
-  data.icons.forEach(icon => {
+  data.icons.forEach((icon) => {
     icon.tags = icon.tags || icon.name.split('-');
     icon.tags = icon.tags.sort();
   });
@@ -440,29 +462,31 @@ async function createDataJson(version: string, srcDir: string, distDir: string, 
   const distJsonData = {
     name: 'ionicons',
     version,
-    icons: data.icons
+    icons: data.icons,
   };
   const distJsonStr = JSON.stringify(distJsonData, null, 2) + '\n';
   await fs.writeFile(distDataJsonPath, distJsonStr);
 }
-
 
 function camelize(text: string) {
   let words = text.split(/[-_]/g); // ok one simple regexp.
   return words[0].toLowerCase() + words.slice(1).map(upFirst).join('');
 }
 
-
 function upFirst(word: string) {
   return word[0].toUpperCase() + word.toLowerCase().slice(1);
 }
-
 
 interface SvgData {
   /**
    * airplane-outline.svg
    */
   fileName: string;
+
+  /**
+   * airplane
+   */
+  title: string;
 
   /**
    * /src/svg/airplane-outline.svg
@@ -474,7 +498,11 @@ interface SvgData {
    */
   optimizedFilePath: string;
 
-  srcSvgContent: string;
+  /**
+   * /dist/svg/airplane-outline.svg
+   */
+  distSvgFilePath: string;
+
   optimizedSvgContent: string;
 
   /**
@@ -499,8 +527,16 @@ interface SvgData {
 }
 
 interface JsonData {
-  icons: { name: string; tags?: string[]; } [];
+  icons: { name: string; tags?: string[] }[];
   version?: string;
+}
+
+function toTitleCase(str: string) {
+  const s = str.trim().toLowerCase().split(' ');
+  for (var i = 0; i < s.length; i++) {
+    s[i] = s[i].charAt(0).toUpperCase() + s[i].slice(1);
+  }
+  return s.join(' ');
 }
 
 // https://mathiasbynens.be/notes/reserved-keywords
@@ -555,7 +591,6 @@ const reservedKeywords = new Set([
   'instanceof',
   'constructor',
 ]);
-
 
 // let's do this
 build(join(__dirname, '..'));
