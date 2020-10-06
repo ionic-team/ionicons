@@ -70,11 +70,6 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
         },
       } as any,
       {
-        addClassesToSVGElement: {
-          className: ['ionicon'],
-        },
-      },
-      {
         removeStyleElement: true,
       },
       {
