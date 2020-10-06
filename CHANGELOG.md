@@ -1,3 +1,12 @@
+## [5.2.1](https://github.com/ionic-team/ionicons/compare/v5.2.0...v5.2.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* remove double `ionicon` css class on svg ([81edbf2](https://github.com/ionic-team/ionicons/commit/81edbf2387f1ab199bd088b7d9882143201c3bd1))
+
+
+
 # [5.2.0](https://github.com/ionic-team/ionicons/compare/v5.1.2...v5.2.0) (2020-10-06)
 
 
@@ -7,6 +16,7 @@
 * **currentColor:** update dist/svg output to use currentColor ([98fa89e](https://github.com/ionic-team/ionicons/commit/98fa89ea5731f546f2bc88f53818a3f304d4195a)), closes [#784](https://github.com/ionic-team/ionicons/issues/784) [#805](https://github.com/ionic-team/ionicons/issues/805)
 * **cheatsheet:** link dist/svg to cheatsheet icons ([eef7397](https://github.com/ionic-team/ionicons/commit/eef739789fd963ec355c4b50c1e006d1a25f664a))
 * supports aria-hidden ([#869](https://github.com/ionic-team/ionicons/issues/869)) ([01b0de6](https://github.com/ionic-team/ionicons/commit/01b0de6e80e92df0ec6ab9217fc18d45962b03b6))
+* add `<title>` to each svg, generated from the file name
 
 
 ### Bug Fixes
