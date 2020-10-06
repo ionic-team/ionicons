@@ -1,3 +1,22 @@
+# [5.2.0](https://github.com/ionic-team/ionicons/compare/v5.1.2...v5.2.0) (2020-10-06)
+
+
+### Features
+
+* **icons:** added new icons ([9de2a07](https://github.com/ionic-team/ionicons/commit/9de2a0760e347f6de8ca84c7329df8975ee26199))
+* **currentColor:** update dist/svg output to use currentColor ([98fa89e](https://github.com/ionic-team/ionicons/commit/98fa89ea5731f546f2bc88f53818a3f304d4195a)), closes [#784](https://github.com/ionic-team/ionicons/issues/784) [#805](https://github.com/ionic-team/ionicons/issues/805)
+* **cheatsheet:** link dist/svg to cheatsheet icons ([eef7397](https://github.com/ionic-team/ionicons/commit/eef739789fd963ec355c4b50c1e006d1a25f664a))
+* supports aria-hidden ([#869](https://github.com/ionic-team/ionicons/issues/869)) ([01b0de6](https://github.com/ionic-team/ionicons/commit/01b0de6e80e92df0ec6ab9217fc18d45962b03b6))
+
+
+### Bug Fixes
+
+* **src:** fixed source svg inlined styles ([0f77aaf](https://github.com/ionic-team/ionicons/commit/0f77aaf2db57d4f989da6e85fcfbe552a0fbd0b2))
+* ariaHidden documentation source ([#871](https://github.com/ionic-team/ionicons/issues/871)) ([502d1f7](https://github.com/ionic-team/ionicons/commit/502d1f7077bb377f9939e254754c4753284bea01))
+* **search:** add login and logout search terms ([#853](https://github.com/ionic-team/ionicons/issues/853)) ([1069d8b](https://github.com/ionic-team/ionicons/commit/1069d8b4ab2b134fa6952373a78862fcb8f8d28e))
+
+
+
 ## [5.1.2](https://github.com/ionic-team/ionicons/compare/v5.1.1...v5.1.2) (2020-06-25)
 
 
