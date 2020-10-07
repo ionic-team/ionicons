@@ -1,6 +1,6 @@
 # Ionicons
 
-[Ionicons](http://ionicons.com/) is a completely open-source icon set with 1,100+ icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for [Ionic Framework](https://ionicframework.com/), so icons have both Material Design and iOS versions.
+[Ionicons](http://ionicons.com/) is a completely open-source icon set with 1,300 icons crafted for web, iOS, Android, and desktop apps. Ionicons was built for [Ionic Framework](https://ionicframework.com/), so icons have both Material Design and iOS versions.
 
 Note: All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Ionic, nor vice versa.
 
@@ -103,7 +103,7 @@ ion-icon {
 
 ## Migrating from v4
 
-See the [changelog](https://github.com/ionic-team/ionicons/blob/master/CHANGELOG.md#500-2020-01-15) for a list of icon deletions/renames.
+See the [5.0 release notes](https://github.com/ionic-team/ionicons/releases/tag/5.0.0) for a list of icon deletions/renames.
 
 ## License
 
@@ -118,3 +118,4 @@ Ionicons is licensed under the [MIT license](http://opensource.org/licenses/MIT)
 * [Ionic Forum](https://forum.ionicframework.com/)
 * [Stencil](https://stenciljs.com/)
 * [Stencil Worldwide Slack](https://stencil-worldwide.slack.com)
+* [Capacitor](https://capacitorjs.com/)
