@@ -1,35 +1,31 @@
 import { isStr } from './utils';
 
+export const validateContent = (svgContent: string) => {
+  const div = document.createElement('div');
+  div.innerHTML = svgContent;
 
-export const validateContent = (svgContent: string | null) => {
-  if (svgContent && typeof document !== 'undefined') {
-    const div = document.createElement('div');
-    div.innerHTML = svgContent;
-
-    // setup this way to ensure it works on our buddy IE
-    for (let i = div.childNodes.length - 1; i >= 0; i--) {
-      if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
-        div.removeChild(div.childNodes[i]);
-      }
+  // setup this way to ensure it works on our buddy IE
+  for (let i = div.childNodes.length - 1; i >= 0; i--) {
+    if (div.childNodes[i].nodeName.toLowerCase() !== 'svg') {
+      div.removeChild(div.childNodes[i]);
     }
+  }
 
-    // must only have 1 root element
-    const svgElm = div.firstElementChild;
-    if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
-      const svgClass = svgElm.getAttribute('class') || '';
-      svgElm.setAttribute('class', (svgClass + ' s-ion-icon').trim());
+  // must only have 1 root element
+  const svgElm = div.firstElementChild;
+  if (svgElm && svgElm.nodeName.toLowerCase() === 'svg') {
+    const svgClass = svgElm.getAttribute('class') || '';
+    svgElm.setAttribute('class', (svgClass + ' s-ion-icon').trim());
 
-      // root element must be an svg
-      // lets double check we've got valid elements
-      // do not allow scripts
-      if (isValid(svgElm as any)) {
-        return div.innerHTML;
-      }
+    // root element must be an svg
+    // lets double check we've got valid elements
+    // do not allow scripts
+    if (isValid(svgElm as any)) {
+      return div.innerHTML;
     }
   }
   return '';
 };
-
 
 export const isValid = (elm: HTMLElement) => {
   if (elm.nodeType === 1) {

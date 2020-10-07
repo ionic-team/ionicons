@@ -48,6 +48,11 @@ export namespace Components {
          */
         "name"?: string;
         /**
+          * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
+          * @default true
+         */
+        "sanitize": boolean;
+        /**
           * The size of the icon. Available options are: `"small"` and `"large"`.
          */
         "size"?: string;
@@ -110,6 +115,11 @@ declare namespace LocalJSX {
           * Specifies which icon to use from the built-in set of icons.
          */
         "name"?: string;
+        /**
+          * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
+          * @default true
+         */
+        "sanitize"?: boolean;
         /**
           * The size of the icon. Available options are: `"small"` and `"large"`.
          */
