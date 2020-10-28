@@ -5943,6 +5943,13 @@
       ]
     },
     {
+      "name": "logo-dev",
+      "tags": [
+        "dev",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-deviantart",
       "tags": [
         "deviantart",
