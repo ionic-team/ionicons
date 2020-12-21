@@ -3666,13 +3666,15 @@
     {
       "name": "earth",
       "tags": [
-        "earth"
+        "earth",
+        "globe"
       ]
     },
     {
       "name": "earth-outline",
       "tags": [
         "earth",
+        "globe",
         "outline"
       ]
     },
@@ -3680,6 +3682,7 @@
       "name": "earth-sharp",
       "tags": [
         "earth",
+        "globe",
         "sharp"
       ]
     },
