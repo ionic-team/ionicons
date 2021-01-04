@@ -1,0 +1,11 @@
+{
+  "name": "ionicons-loader",
+  "typings": "./index.d.ts",
+  "module": "./index.mjs",
+  "main": "./index.cjs.js",
+  "node:main": "./node-main.js",
+  "jsnext:main": "./index.es2017.mjs",
+  "es2015": "./index.es2017.mjs",
+  "es2017": "./index.es2017.mjs",
+  "unpkg": "./cdn.js"
+}

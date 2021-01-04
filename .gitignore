@@ -13,7 +13,6 @@ log.txt
 .vscode/
 node_modules/
 tmp/
-dist/
 icons/
 .DS_Store
 

@@ -1,0 +1,13 @@
+{
+  "entries": [
+    "icon/icon.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.3.0",
+    "typescriptVersion": "3.5.3"
+  },
+  "collections": [],
+  "bundles": [],
+  "global": "global.js"
+}
