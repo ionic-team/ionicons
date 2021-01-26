@@ -895,6 +895,26 @@
       ]
     },
     {
+      "name": "balloon",
+      "tags": [
+        "balloon"
+      ]
+    },
+    {
+      "name": "balloon-outline",
+      "tags": [
+        "balloon",
+        "outline"
+      ]
+    },
+    {
+      "name": "balloon-sharp",
+      "tags": [
+        "balloon",
+        "sharp"
+      ]
+    },
+    {
       "name": "ban",
       "tags": [
         "ban"
@@ -1442,6 +1462,29 @@
       ]
     },
     {
+      "name": "bowling-ball",
+      "tags": [
+        "ball",
+        "bowling"
+      ]
+    },
+    {
+      "name": "bowling-ball-outline",
+      "tags": [
+        "ball",
+        "bowling",
+        "outline"
+      ]
+    },
+    {
+      "name": "bowling-ball-sharp",
+      "tags": [
+        "ball",
+        "bowling",
+        "sharp"
+      ]
+    },
+    {
       "name": "briefcase",
       "tags": [
         "briefcase",
@@ -1703,6 +1746,29 @@
       "tags": [
         "calendar",
         "clear",
+        "sharp"
+      ]
+    },
+    {
+      "name": "calendar-number",
+      "tags": [
+        "calendar",
+        "number"
+      ]
+    },
+    {
+      "name": "calendar-number-outline",
+      "tags": [
+        "calendar",
+        "number",
+        "outline"
+      ]
+    },
+    {
+      "name": "calendar-number-sharp",
+      "tags": [
+        "calendar",
+        "number",
         "sharp"
       ]
     },
@@ -3440,6 +3506,26 @@
       ]
     },
     {
+      "name": "diamond",
+      "tags": [
+        "diamond"
+      ]
+    },
+    {
+      "name": "diamond-outline",
+      "tags": [
+        "diamond",
+        "outline"
+      ]
+    },
+    {
+      "name": "diamond-sharp",
+      "tags": [
+        "diamond",
+        "sharp"
+      ]
+    },
+    {
       "name": "dice",
       "tags": [
         "dice"
@@ -4518,6 +4604,26 @@
       ]
     },
     {
+      "name": "footsteps",
+      "tags": [
+        "footsteps"
+      ]
+    },
+    {
+      "name": "footsteps-outline",
+      "tags": [
+        "footsteps",
+        "outline"
+      ]
+    },
+    {
+      "name": "footsteps-sharp",
+      "tags": [
+        "footsteps",
+        "sharp"
+      ]
+    },
+    {
       "name": "funnel",
       "tags": [
         "funnel",
@@ -5266,6 +5372,29 @@
       ]
     },
     {
+      "name": "id-card",
+      "tags": [
+        "card",
+        "id"
+      ]
+    },
+    {
+      "name": "id-card-outline",
+      "tags": [
+        "card",
+        "id",
+        "outline"
+      ]
+    },
+    {
+      "name": "id-card-sharp",
+      "tags": [
+        "card",
+        "id",
+        "sharp"
+      ]
+    },
+    {
       "name": "image",
       "tags": [
         "camera",
@@ -5868,6 +5997,14 @@
       "tags": [
         "apple",
         "appstore",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-apple-ar",
+      "tags": [
+        "apple",
+        "ar",
         "logo"
       ]
     },
@@ -8285,6 +8422,26 @@
       ]
     },
     {
+      "name": "prism",
+      "tags": [
+        "prism"
+      ]
+    },
+    {
+      "name": "prism-outline",
+      "tags": [
+        "outline",
+        "prism"
+      ]
+    },
+    {
+      "name": "prism-sharp",
+      "tags": [
+        "prism",
+        "sharp"
+      ]
+    },
+    {
       "name": "pulse",
       "tags": [
         "hot",
@@ -9051,6 +9208,26 @@
       ]
     },
     {
+      "name": "scale",
+      "tags": [
+        "scale"
+      ]
+    },
+    {
+      "name": "scale-outline",
+      "tags": [
+        "outline",
+        "scale"
+      ]
+    },
+    {
+      "name": "scale-sharp",
+      "tags": [
+        "scale",
+        "sharp"
+      ]
+    },
+    {
       "name": "scan",
       "tags": [
         "scan"
@@ -9330,6 +9507,29 @@
       ]
     },
     {
+      "name": "shield-half",
+      "tags": [
+        "half",
+        "shield"
+      ]
+    },
+    {
+      "name": "shield-half-outline",
+      "tags": [
+        "half",
+        "outline",
+        "shield"
+      ]
+    },
+    {
+      "name": "shield-half-sharp",
+      "tags": [
+        "half",
+        "sharp",
+        "shield"
+      ]
+    },
+    {
       "name": "shield-outline",
       "tags": [
         "outline",
@@ -9426,6 +9626,26 @@
         "cold",
         "sharp",
         "snow"
+      ]
+    },
+    {
+      "name": "sparkles",
+      "tags": [
+        "sparkles"
+      ]
+    },
+    {
+      "name": "sparkles-outline",
+      "tags": [
+        "outline",
+        "sparkles"
+      ]
+    },
+    {
+      "name": "sparkles-sharp",
+      "tags": [
+        "sharp",
+        "sparkles"
       ]
     },
     {
