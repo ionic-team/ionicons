@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import { join, basename } from 'path';
+import { join } from 'path';
 import Svgo from 'svgo';
 
 async function build(rootDir: string) {

@@ -4,7 +4,7 @@ import { getName, getUrl } from './utils';
 
 @Component({
   tag: 'ion-icon',
-  assetsDir: 'svg',
+  assetsDirs: ['svg'],
   styleUrl: 'icon.css',
   shadow: true,
 })
@@ -29,7 +29,7 @@ export class Icon {
   /**
    * Specifies the label to use for accessibility. Defaults to the icon name.
    */
-  @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
+  @Prop({ mutable: true, reflect: true }) ariaLabel?: string;
 
   /**
    * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
