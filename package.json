@@ -3,6 +3,7 @@
   "version": "5.5.0-0",
   "description": "Premium icons for Ionic.",
   "files": [
+    "components/",
     "dist/",
     "icons/"
   ],
