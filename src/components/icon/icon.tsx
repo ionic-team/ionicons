@@ -10,6 +10,7 @@ import { getName, getUrl } from './utils';
 })
 export class Icon {
   private io?: IntersectionObserver;
+  private iconName: string | null = null;
 
   @Element() el!: HTMLElement;
 
@@ -143,8 +144,9 @@ export class Icon {
       }
     }
 
+    const label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
+
     if (!this.ariaLabel && this.ariaHidden !== 'true') {
-      const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
       if (label) {
@@ -154,11 +156,12 @@ export class Icon {
   }
 
   render() {
+    const { iconName } = this;
     const mode = this.mode || 'md';
     const flipRtl =
       this.flipRtl ||
-      (this.ariaLabel &&
-        (this.ariaLabel.indexOf('arrow') > -1 || this.ariaLabel.indexOf('chevron') > -1) &&
+      (iconName &&
+        (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) &&
         this.flipRtl !== false);
 
     return (
