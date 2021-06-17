@@ -26,6 +26,18 @@ async function collectionCopy(rootDir: string) {
     private: true,
   };
   await fs.writeFile(cePackageJsonPath, JSON.stringify(cePackageJson, null, 2));
+  
+  /**
+   * TODO: Remove this in Ionicons v6.0
+   * Stencil 2 removed the legacy loader,
+   * but that is what Ionicons users were using
+   * to load Ionicons from a CDN. The lines
+   * below will add in a legacy loader for users
+   * to use so there is no breaking change in usage.
+   */
+  const installLoaderSrc = join(rootDir, 'scripts', 'install-loader.js');
+  const installLoaderDest = join(rootDir, 'dist', 'ionicons.js');
+  await fs.copyFile(installLoaderSrc, installLoaderDest)
 
   // this is temporary!!!!
   // removing the `type` from the d.ts export
