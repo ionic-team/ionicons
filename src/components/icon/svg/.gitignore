@@ -2,3 +2,20 @@
 # for this directory. The directory itself will
 # contain files generated during a build step.
 *
+#Persistent
+SendMode Input  
+SetWorkingDir %A_ScriptDir%  
+
+F11::Suspend, Toggle 
+
+Toggle = 1
+$Space::
+if (Toggle = 1) {
+Toggle = 0
+if (Toggle = 1) {
+Toggle = 0
+else {
+Toggle = 1
+send, {Space up}
+}
+return
