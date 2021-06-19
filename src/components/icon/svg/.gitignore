@@ -2,4 +2,3 @@
 # for this directory. The directory itself will
 # contain files generated during a build step.
 *
-!.gitignore
