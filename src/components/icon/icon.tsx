@@ -55,7 +55,7 @@ export class Icon {
   /**
    * Specifies which icon to use from the built-in set of icons.
    */
-  @Prop() name?: string;
+  @Prop({ reflect: true }) name?: string;
 
   /**
    * Specifies the exact `src` of an SVG file to use.
