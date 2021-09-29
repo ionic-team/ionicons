@@ -47,8 +47,8 @@
         "circle",
         "include",
         "invite",
-        "outline",
-        "plus"
+        "plus",
+        "outline"
       ]
     },
     {
@@ -84,6 +84,7 @@
       "name": "airplane",
       "tags": [
         "airplane",
+        "aeroplane",
         "plane"
       ]
     },
@@ -91,6 +92,7 @@
       "name": "airplane-outline",
       "tags": [
         "airplane",
+        "aeroplane",
         "outline",
         "plane"
       ]
@@ -99,6 +101,7 @@
       "name": "airplane-sharp",
       "tags": [
         "airplane",
+        "aeroplane",
         "plane",
         "sharp"
       ]
@@ -3753,7 +3756,9 @@
       "name": "earth",
       "tags": [
         "earth",
-        "globe"
+        "globe",
+        "planet",
+        "world"
       ]
     },
     {
@@ -3761,6 +3766,8 @@
       "tags": [
         "earth",
         "globe",
+        "planet",
+        "world"
         "outline"
       ]
     },
@@ -3769,6 +3776,8 @@
       "tags": [
         "earth",
         "globe",
+        "planet",
+        "world"
         "sharp"
       ]
     },
