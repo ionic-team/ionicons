@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getName, getUrl } from './utils';
+import { getName, getUrl, inheritAttributes } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -11,11 +11,13 @@ import { getName, getUrl } from './utils';
 export class Icon {
   private io?: IntersectionObserver;
   private iconName: string | null = null;
+  private inheritedAttributes: { [k: string]: any } = {};
 
   @Element() el!: HTMLElement;
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
+  @State() private ariaLabel?: string;
 
   /**
    * The mode determines which platform styles to use.
@@ -26,16 +28,6 @@ export class Icon {
    * The color to use for the background of the item.
    */
   @Prop() color?: string;
-
-  /**
-   * Specifies the label to use for accessibility. Defaults to the icon name.
-   */
-  @Prop({ mutable: true, reflect: true }) ariaLabel?: string;
-
-  /**
-   * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
-   */
-  @Prop({ reflect: true }) ariaHidden?: string;
 
   /**
    * Specifies which icon to use on `ios` mode.
@@ -88,6 +80,10 @@ export class Icon {
    * @default true
    */
   @Prop() sanitize = true;
+  
+  componentWillLoad() {
+    this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
+  }
 
   connectedCallback() {
     // purposely do not return the promise here because loading
@@ -126,6 +122,12 @@ export class Icon {
       cb();
     }
   }
+  
+  private hasAriaHidden = () => {
+    const { el } = this;
+    
+    return el.hasAttribute('aria-hidden') && el.getAttribute('aria-hidden') === 'true';
+  }
 
   @Watch('name')
   @Watch('src')
@@ -146,17 +148,17 @@ export class Icon {
 
     const label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
 
-    if (!this.ariaLabel && this.ariaHidden !== 'true') {
-      // user did not provide a label
-      // come up with the label based on the icon name
-      if (label) {
-        this.ariaLabel = label.replace(/\-/g, ' ');
-      }
+    /**
+     * Come up with a default label
+     * in case user does not provide their own.
+     */
+    if (label) {
+      this.ariaLabel = label.replace(/\-/g, ' ');
     }
   }
 
   render() {
-    const { iconName } = this;
+    const { iconName, ariaLabel, inheritedAttributes } = this;
     const mode = this.mode || 'md';
     const flipRtl =
       this.flipRtl ||
@@ -164,8 +166,16 @@ export class Icon {
         (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) &&
         this.flipRtl !== false);
 
+    /**
+     * Only set the aria-label if a) we have generated
+     * one for the icon and if aria-hidden is not set to "true".
+     * If developer wants to set their own aria-label, then
+     * inheritedAttributes down below will override whatever
+     * default label we have set.
+     */
     return (
       <Host
+        aria-label={ariaLabel !== undefined && !this.hasAriaHidden() ? ariaLabel : null}
         role="img"
         class={{
           [mode]: true,
@@ -173,6 +183,7 @@ export class Icon {
           [`icon-${this.size}`]: !!this.size,
           'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl',
         }}
+        {...inheritedAttributes}
       >
         {Build.isBrowser && this.svgContent ? (
           <div class="icon-inner" innerHTML={this.svgContent}></div>
