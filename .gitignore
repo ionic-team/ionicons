@@ -17,5 +17,6 @@ dist/
 icons/
 .DS_Store
 scripts/*.js
+!scripts/install-loader.js
 
 www/
