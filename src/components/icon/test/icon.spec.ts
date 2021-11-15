@@ -92,7 +92,7 @@ describe('icon', () => {
       </ion-icon>
     `);
     
-    icon.name = 'trash';
+    icon!.name = 'trash';
     await page.waitForChanges();
 
     expect(icon).toEqualHtml(`
@@ -120,7 +120,7 @@ describe('icon', () => {
       </ion-icon>
     `);
     
-    icon.name = 'trash';
+    icon!.name = 'trash';
     await page.waitForChanges();
 
     expect(icon).toEqualHtml(`

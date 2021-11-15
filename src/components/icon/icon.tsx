@@ -1,4 +1,4 @@
-import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
+import { Build, Component, Element, Host, Prop, State, Watch, h, setAssetPath } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
 import { getName, getUrl, inheritAttributes } from './utils';
 
@@ -82,6 +82,39 @@ export class Icon {
   @Prop() sanitize = true;
   
   componentWillLoad() {
+    if (!hasAssetPath) {
+      /**
+       * When providing an icon via the `name` prop,
+       * Ionicons needs to figure out the full url
+       * of where that SVG asset is. To do this, it
+       * relies on the `setAssetPath` path function from
+       * Stencil. That function relies on the asset path
+       * being set, which is something that happens
+       * automatically when using lazy loading. When
+       * using the custom elements build this needs to be
+       * set manually otherwise Ionicons will not
+       * be able to find the correct URL.
+       *
+       * When testing, Stencil testing sets its own
+       * asset path as baseURI will be the empty string.
+       */
+
+      try {
+        if (Build.isBrowser) {
+          setAssetPath(new URL('./', import.meta.url).href);
+        }
+      } catch {
+        /**
+         * import is only defined inside of a module
+         * so if we get here then we are not
+         * using a module. If not using a module,
+         * then we are using the lazy loaded version
+         * of ionicons, in which case this asset path
+         * is set for us.
+         */
+      }
+      hasAssetPath = true;
+    }
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
 
@@ -206,3 +239,5 @@ const createColorClasses = (color: string | undefined) => {
       }
     : null;
 };
+
+let hasAssetPath = false;
