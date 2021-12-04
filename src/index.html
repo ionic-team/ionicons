@@ -130,6 +130,10 @@
     <h2>Not Sanitized (should show)</h2>
     <ion-icon sanitize="false" src="./assets/no-sanitize.svg"></ion-icon>
 
+    <h2>Accessing ::part()'s</h2>
+    <ion-icon id="part-svg" src="./assets/bug_report.svg"></ion-icon>
+    <ion-icon id="part-icon-inner" src="./assets/chat.svg"></ion-icon>
+
     <p>
       <a href="./cheatsheet.html">Cheatsheet</a>
     </p>
@@ -155,6 +159,14 @@
       .custom {
         stroke: red;
         fill: blue;
+      }
+
+      #part-svg::part(svg) {
+        fill: rebeccapurple;
+      }
+
+      #part-icon-inner::part(icon-inner) {
+        fill: aliceblue;
       }
     </style>
   </body>

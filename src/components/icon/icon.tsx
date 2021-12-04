@@ -12,6 +12,7 @@ export class Icon {
   private io?: IntersectionObserver;
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
+  private svgContentInjected: boolean = false;
 
   @Element() el!: HTMLElement;
 
@@ -80,7 +81,7 @@ export class Icon {
    * @default true
    */
   @Prop() sanitize = true;
-  
+
   componentWillLoad() {
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
@@ -122,11 +123,41 @@ export class Icon {
       cb();
     }
   }
-  
+
   private hasAriaHidden = () => {
     const { el } = this;
-    
+
     return el.hasAttribute('aria-hidden') && el.getAttribute('aria-hidden') === 'true';
+  }
+
+  private createSvgElement(): SVGElement | null {
+    if (this.svgContent) {
+      const template = document.createElement("template");
+      template.innerHTML = this.svgContent;
+
+      // Extract the first element from the template.
+      // It should be our <svg>.
+      const node = template.content.firstChild;
+      if (node) {
+        if (node.nodeType === Node.ELEMENT_NODE && (node as Element).tagName === 'svg') {
+          const svg = node as SVGElement;
+
+          // Add the shadow part
+          svg.setAttribute('part', 'svg');
+
+          return svg;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  private injectSvgElement(svgElement: SVGElement) {
+    const el = (this.el.shadowRoot as ShadowRoot).querySelector('.icon-inner')
+    if (el) {
+      el.appendChild(svgElement);
+    }
   }
 
   @Watch('name')
@@ -186,12 +217,28 @@ export class Icon {
         {...inheritedAttributes}
       >
         {Build.isBrowser && this.svgContent ? (
-          <div class="icon-inner" innerHTML={this.svgContent}></div>
+          <div class="icon-inner" part="icon-inner" >
+          </div>
         ) : (
           <div class="icon-inner"></div>
         )}
       </Host>
     );
+  }
+
+  componentDidRender() {
+    /**
+     * If it has not been done already, create & inject the <SVG> element
+     * into `div.icon-inner`.
+     */
+    if (!this.svgContentInjected) {
+      const svgElement = this.createSvgElement();
+      if (svgElement) {
+        this.injectSvgElement(svgElement);
+
+        this.svgContentInjected = true;
+      }
+    }
   }
 }
 
@@ -201,8 +248,8 @@ const getIonMode = () =>
 const createColorClasses = (color: string | undefined) => {
   return color
     ? {
-        'ion-color': true,
-        [`ion-color-${color}`]: true,
-      }
+      'ion-color': true,
+      [`ion-color-${color}`]: true,
+    }
     : null;
 };
