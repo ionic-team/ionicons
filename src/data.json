@@ -6326,6 +6326,13 @@
       ]
     },
     {
+      "name": "logo-matrix",
+      "tags": [
+        "logo",
+        "matrix"
+      ]
+    },
+    {
       "name": "logo-medium",
       "tags": [
         "logo",
@@ -6373,6 +6380,13 @@
       "tags": [
         "logo",
         "paypal"
+      ]
+    },
+    {
+      "name": "logo-peertube",
+      "tags": [
+        "logo",
+        "peertube"
       ]
     },
     {
