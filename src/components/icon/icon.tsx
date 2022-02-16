@@ -9,6 +9,7 @@ import { getName, getUrl, inheritAttributes } from './utils';
   shadow: true,
 })
 export class Icon {
+  private documentDirectionObserver?: MutationObserver;
   private io?: IntersectionObserver;
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
@@ -18,6 +19,7 @@ export class Icon {
   @State() private svgContent?: string;
   @State() private isVisible = false;
   @State() private ariaLabel?: string;
+  @State() private direction?: string;
 
   /**
    * The mode determines which platform styles to use.
@@ -93,12 +95,35 @@ export class Icon {
       this.isVisible = true;
       this.loadIcon();
     });
+    this.observeDocumentDirection(() => {
+      this.direction = (this.el.ownerDocument as Document).dir;
+    });
   }
 
   disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
+    }
+    if (this.documentDirectionObserver) {
+      this.documentDirectionObserver.disconnect();
+      this.documentDirectionObserver = undefined;
+    }
+  }
+
+  private observeDocumentDirection(cb: () => void) {
+    if (Build.isBrowser && typeof window !== 'undefined' && (window as any).MutationObserver) {
+      this.documentDirectionObserver = new MutationObserver(() => {
+        this.direction = (this.el.ownerDocument as Document).dir;
+      });
+      this.documentDirectionObserver.observe((this.el.ownerDocument as Document).documentElement, {
+        attributes: true,
+        attributeFilter: ['dir'],
+      });
+    } else {
+      // browser doesn't support MutationObserver
+      // so just fallback to always show it
+      cb();
     }
   }
 
@@ -181,7 +206,7 @@ export class Icon {
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl',
+          'flip-rtl': !!flipRtl && this.direction === 'rtl',
         }}
         {...inheritedAttributes}
       >
