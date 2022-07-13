@@ -27,7 +27,7 @@ If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is pack
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@6/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6/dist/ionicons/ionicons.js"></>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@6/dist/ionicons/ionicons.js"></script>
 ```
 
 ### Basic usage
