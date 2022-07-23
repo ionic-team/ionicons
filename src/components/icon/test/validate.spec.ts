@@ -7,7 +7,7 @@ describe('isValid', () => {
     const el = {
       nodeType: 1,
       nodeName: 'svg',
-      attributes: [{ value: 'onload' }],
+      attributes: [{ name: 'onload' }],
       childNodes: []
     } as any;
     expect(isValid(el)).toBe(false);
@@ -17,7 +17,7 @@ describe('isValid', () => {
     const el = {
       nodeType: 1,
       nodeName: 'svg',
-      attributes: [{ value: 'OnClIcK' }],
+      attributes: [{ name: 'OnClIcK' }],
       childNodes: []
     } as any;
     expect(isValid(el)).toBe(false);
