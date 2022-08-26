@@ -34,8 +34,8 @@ export const isValid = (elm: HTMLElement) => {
     }
 
     for (let i = 0; i < elm.attributes.length; i++) {
-      const val = elm.attributes[i].value;
-      if (isStr(val) && val.toLowerCase().indexOf('on') === 0) {
+      const name = elm.attributes[i].name;
+      if (isStr(name) && name.toLowerCase().indexOf('on') === 0) {
         return false;
       }
     }
