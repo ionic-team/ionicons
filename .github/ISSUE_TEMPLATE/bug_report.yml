@@ -1,0 +1,32 @@
+name: 🐛 Bug Report
+description: Report a bug in the ion-icon component. Incorrect icons should use the "Incorrect Icon" template instead.
+labels: ["triage"]
+title: "bug: "
+body:
+  - type: textarea
+    attributes:
+      label: Current Behavior
+      description: A clear description of what the bug is and how it manifests.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Please explain the steps required to duplicate this issue.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Code Reproduction URL
+      description: Please provide an application with the minimum code required to reproduce the issue. This is the best way to ensure this issue is triaged quickly. Issues without a code reproduction may be closed if the Ionic Team cannot reproduce the issue you are reporting.
+      placeholder: https://github.com/...
+  - type: textarea
+    attributes:
+      label: Additional Information
+      description: List any other information that is relevant to your issue. Stack traces, related issues, suggestions on how to fix, Stack Overflow links, forum links, etc.

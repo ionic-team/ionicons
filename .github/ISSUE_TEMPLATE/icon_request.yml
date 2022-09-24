@@ -1,0 +1,19 @@
+name: 🚀 Icon Request
+description: Request a new icon
+labels: ["triage"]
+title: "icon request: "
+body:
+  - type: textarea
+    attributes:
+      label: Describe the Icon
+      description: A clear and concise description of the icon you would like added.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Links to Examples
+      description: Add links to any examples of the icon in other libraries that you like.
+  - type: textarea
+    attributes:
+      label: Additional Information
+      description: Add any other context about the icon request here.
