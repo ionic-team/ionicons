@@ -5594,6 +5594,19 @@
       ]
     },
     {
+      "name": "keyboard",
+      "tags": [
+        "keyboard"
+      ]
+    },
+    {
+      "name": "keyboard-sharp",
+      "tags": [
+        "keyboard",
+        "sharp"
+      ]
+    },
+    {
       "name": "keypad",
       "tags": [
         "keypad",
