@@ -10716,6 +10716,16 @@
       ]
     },
     {
+      "name": "virtual-private-network",
+      "tags": [
+        "vpn",
+        "network",
+        "private",
+        "privacy",
+        "security"
+      ]
+    },
+    {
       "name": "volume-high",
       "tags": [
         "high",
