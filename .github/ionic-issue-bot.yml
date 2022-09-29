@@ -42,7 +42,6 @@ comment:
 
 
         Thank you!
-  labels:
     - label: 'ionitron: needs reproduction'
       message: >
         Thanks for the issue! This issue has been labeled as `needs reproduction`. This label is added to issues that
