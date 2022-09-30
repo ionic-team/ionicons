@@ -3,12 +3,10 @@ description: 'Test Spec'
 runs:
   using: 'composite'
   steps:
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
+    - uses: actions/setup-node@v3
 
     - name: Cache Node Modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       env:
         cache-name: node-modules
       with:
