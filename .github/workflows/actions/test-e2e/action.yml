@@ -32,12 +32,10 @@ runs:
     - name: Install Playwright Dependencies
       run: npx playwright install && npx playwright install-deps
       shell: bash
-      working-directory: ./core
     - name: Test
       if: inputs.update != 'true'
       run: npx playwright test --shard=${{ inputs.shard }}/${{ inputs.totalShards }}
       shell: bash
-      working-directory: ./core
     - name: Test and Update
       id: test-and-update
       if: inputs.update == 'true'
