@@ -17,7 +17,7 @@ runs:
         cache-name: node-modules
       with:
         path: ./node_modules
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}-v2
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}-v3
     - name: Install Dependencies
       run: npm install
       shell: bash
