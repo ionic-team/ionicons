@@ -42,21 +42,27 @@ const projects = [
   }
 ];
 
+const modes = ['ios', 'md'];
+
 const generateProjects = () => {
   const projectsWithMetadata = [];
 
-  projects.forEach(project => {
-    projectsWithMetadata.push({
-      ...project,
-      metadata: {
-        rtl: false,
-      }
-    });
-    projectsWithMetadata.push({
-      ...project,
-      metadata: {
-        rtl: true,
-      }
+  modes.forEach(mode => {
+    projects.forEach(project => {
+      projectsWithMetadata.push({
+        ...project,
+        metadata: {
+          mode,
+          rtl: false
+        }
+      });
+      projectsWithMetadata.push({
+        ...project,
+        metadata: {
+          mode,
+          rtl: true
+        }
+      });
     });
   });
 
