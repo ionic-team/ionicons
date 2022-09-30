@@ -10,7 +10,7 @@ log.txt
 .idea/
 .versions/
 .vscode/
-components/
+/components/
 node_modules/
 tmp/
 dist/
