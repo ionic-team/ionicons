@@ -51,15 +51,12 @@ runs:
       # We have extra logic added so that job runners
       # that do not have any new screenshots do not create
       # an unnecessary .zip.
-      # Note that we need to unzip directory to be "core"
-      # which is why we not using the upload-archive
-      # composite step here.
       run: |
         npx playwright test --shard=${{ inputs.shard }}/${{ inputs.totalShards }} --update-snapshots
         git add src/\*.png --force
         mkdir updated-screenshots
         rsync -R --progress $(git diff --name-only --cached) updated-screenshots
-        if [ -d updated-screenshots/core ]; then
+        if [ -d updated-screenshots ]; then
           echo "::set-output name=hasUpdatedScreenshots::$(echo 'true')"
           cd updated-screenshots
           zip -q -r ../UpdatedScreenshots-${{ inputs.shard }}-${{ inputs.totalShards }}.zip
