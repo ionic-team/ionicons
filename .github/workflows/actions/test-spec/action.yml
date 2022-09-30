@@ -15,6 +15,7 @@ runs:
     - uses: ./.github/workflows/actions/download-archive
       with:
         name: ionicons-build
+        path: .
         filename: IoniconsBuild.zip
     - name: Test
       run: npm run test.spec -- --ci
