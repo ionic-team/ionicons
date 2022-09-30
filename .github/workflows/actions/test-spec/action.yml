@@ -3,21 +3,18 @@ description: 'Test Spec'
 runs:
   using: 'composite'
   steps:
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
+    - uses: actions/setup-node@v3
 
-    - name: Cache Core Node Modules
-      uses: actions/cache@v2
+    - name: Cache Node Modules
+      uses: actions/cache@v3
       env:
-        cache-name: core-node-modules
+        cache-name: node-modules
       with:
         path: ./node_modules
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}-v2
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}-v1
     - uses: ./.github/workflows/actions/download-archive
       with:
         name: ionicons-build
-        path: ./
         filename: IoniconsBuild.zip
     - name: Test
       run: npm run test.spec -- --ci
