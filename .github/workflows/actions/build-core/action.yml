@@ -27,3 +27,8 @@ runs:
         name: ionicons-build
         output: IoniconsBuild.zip
         paths: dist components icons
+    - uses: ./.github/workflows/actions/upload-archive
+      with:
+        name: ionicons-src
+        output: IoniconsSrc.zip
+        paths: src
