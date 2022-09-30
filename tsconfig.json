@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
@@ -15,7 +16,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "paths": {
+      "@utils/*": ["src/utils/*"]
+    }
   },
   "include": [
     "src"
