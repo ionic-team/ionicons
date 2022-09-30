@@ -24,7 +24,7 @@
     "version": "npm run build"
   },
   "dependencies": {
-    "@stencil/core": "~2.16.0"
+    "@stencil/core": "^2.18.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.26.1",
