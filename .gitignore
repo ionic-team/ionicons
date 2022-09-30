@@ -20,3 +20,6 @@ scripts/*.js
 !scripts/install-loader.js
 
 www/
+/test-results/
+/playwright-report/
+/playwright/.cache/
