@@ -58,11 +58,11 @@ runs:
         npx playwright test --shard=${{ inputs.shard }}/${{ inputs.totalShards }} --update-snapshots
         git add src/\*.png --force
         mkdir updated-screenshots
-        cd ../ && rsync -R --progress $(git diff --name-only --cached) core/updated-screenshots
-        if [ -d core/updated-screenshots/core ]; then
+        rsync -R --progress $(git diff --name-only --cached) updated-screenshots
+        if [ -d updated-screenshots/core ]; then
           echo "::set-output name=hasUpdatedScreenshots::$(echo 'true')"
-          cd core/updated-screenshots
-          zip -q -r ../../UpdatedScreenshots-${{ inputs.shard }}-${{ inputs.totalShards }}.zip core
+          cd updated-screenshots
+          zip -q -r ../UpdatedScreenshots-${{ inputs.shard }}-${{ inputs.totalShards }}.zip
         fi
       shell: bash
     - name: Archive Updated Screenshots
