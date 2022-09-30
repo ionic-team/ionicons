@@ -1,0 +1,29 @@
+name: 'Ionicons Build'
+
+on:
+  pull_request:
+    branches: [ '**' ]
+
+# When pushing a new commit we should
+# cancel the previous test run to not
+# consume more runners than we need to.
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Checkout the latest commit in this branch
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: ./.github/workflows/actions/build-core
+
+  test-spec:
+    needs: [build-core]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/workflows/actions/test-spec
