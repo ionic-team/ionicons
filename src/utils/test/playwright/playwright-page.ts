@@ -32,6 +32,17 @@ type CustomFixtures = {
 export async function extendPageFixture(page: E2EPage, testInfo: TestInfo) {
   const originalGoto = page.goto.bind(page);
 
+  /**
+   * Adds a global flag on the window that the test suite
+   * can use to determine when it is safe to execute tests
+   * on hydrated Stencil components.
+   */
+  await page.addInitScript(`
+  (function() {
+    window.addEventListener('appload', () => {
+      window.testAppLoaded = true;
+    });
+  })();`);
   // Overridden Playwright methods
   page.goto = (url: string, options) => goToPage(page, url, options, testInfo, originalGoto);
 
