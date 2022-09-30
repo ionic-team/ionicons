@@ -62,7 +62,7 @@ runs:
           echo "::set-output name=hasUpdatedScreenshots::$(echo 'true')"
           cd updated-screenshots
           ls
-          zip -q -r ../UpdatedScreenshots-${{ inputs.shard }}-${{ inputs.totalShards }}.zip
+          zip -q -r ../UpdatedScreenshots-${{ inputs.shard }}-${{ inputs.totalShards }}.zip ./
         fi
       shell: bash
     - name: Archive Updated Screenshots
