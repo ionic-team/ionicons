@@ -1,0 +1,34 @@
+name: 'Build Ionicons'
+description: 'Build Ionicons'
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/checkout@v3
+      with:
+        # Checkout the latest commit in this branch
+        ref: ${{ github.event.pull_request.head.sha }}
+    - uses: actions/setup-node@v3
+
+    - name: Cache Node Modules
+      uses: actions/cache@v3
+      env:
+        cache-name: node-modules
+      with:
+        path: ./node_modules
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./package-lock.json') }}-v1
+    - name: Install Dependencies
+      run: npm install
+      shell: bash
+    - name: Build
+      run: npm run build
+      shell: bash
+    - uses: ./.github/workflows/actions/upload-archive
+      with:
+        name: ionicons-build
+        output: IoniconsBuild.zip
+        paths: dist components icons www
+    - uses: ./.github/workflows/actions/upload-archive
+      with:
+        name: ionicons-src
+        output: IoniconsSrc.zip
+        paths: src
