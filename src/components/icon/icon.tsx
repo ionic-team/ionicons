@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getName, getUrl, inheritAttributes } from './utils';
+import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -158,7 +158,7 @@ export class Icon {
   }
 
   render() {
-    const { iconName, ariaLabel, inheritedAttributes } = this;
+    const { iconName, ariaLabel, el, inheritedAttributes } = this;
     const mode = this.mode || 'md';
     const flipRtl =
       this.flipRtl ||
@@ -181,7 +181,7 @@ export class Icon {
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl',
+          'flip-rtl': !!flipRtl && isRTL(el),
         }}
         {...inheritedAttributes}
       >
