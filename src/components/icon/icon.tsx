@@ -2,6 +2,8 @@ import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil
 import { getSvgContent, ioniconContent } from './request';
 import { getName, getUrl, inheritAttributes } from './utils';
 
+let parser: DOMParser;
+
 @Component({
   tag: 'ion-icon',
   assetsDirs: ['svg'],
@@ -134,11 +136,27 @@ export class Icon {
   @Watch('icon')
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
+      if (!parser) {
+        /**
+         * Create an instance of the DOM parser. This creates a single
+         * parser instance for the entire app, which is more efficient.
+         */
+        parser = new DOMParser();
+      }
       const url = getUrl(this);
+
       if (url) {
         if (ioniconContent.has(url)) {
           // sync if it's already loaded
           this.svgContent = ioniconContent.get(url);
+        } else if (url.startsWith('data:')) {
+          const doc = parser.parseFromString(url, 'text/html');
+          const svgEl = doc.body.querySelector('svg');
+          if (svgEl !== null) {
+            this.svgContent = svgEl.outerHTML;
+          } else {
+            this.svgContent = '';
+          }
         } else {
           // async if it hasn't been loaded
           getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
