@@ -26,7 +26,7 @@ Also note that only visible icons are loaded, and icons which are "below the fol
 If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing </body> tag, to enable them.
 
 ```html
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
 ```
 
 ### Basic usage

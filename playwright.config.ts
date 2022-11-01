@@ -88,7 +88,7 @@ const config: PlaywrightTestConfig = {
   /* Configure projects for major browsers */
   projects: projects,
   webServer: {
-    command: 'serve -p 3333',
+    command: 'serve www -p 3333',
     port: 3333,
     reuseExistingServer: !process.env.CI
   }
