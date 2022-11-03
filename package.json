@@ -19,7 +19,7 @@
     "build.component": "stencil build",
     "collection.copy": "node scripts/collection-copy.js",
     "start": "stencil build --dev --watch --serve",
-    "test.spec": "stencil test --spec",
+    "test": "stencil test --spec",
     "release": "np --no-2fa",
     "version": "npm run build"
   },
