@@ -20,8 +20,7 @@
     "collection.copy": "node scripts/collection-copy.js",
     "start": "stencil build --dev --watch --serve",
     "test": "npm run test.spec",
-    "test.spec": "stencil test --spec",
-    "release": "np --no-2fa"
+    "test.spec": "stencil test --spec"
   },
   "dependencies": {
     "@stencil/core": "^2.18.0"
@@ -35,7 +34,7 @@
     "fs-extra": "^9.1.0",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",
-    "np": "^7.2.0",
+    "lerna": "^6.0.3",
     "puppeteer": "^10.4.0",
     "semver": "^7.3.8",
     "serve": "^14.0.1",
