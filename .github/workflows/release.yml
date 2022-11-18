@@ -17,6 +17,7 @@ on:
         description: Which npm tag should this be published to?
         options:
           - latest
+          - testing
 
 
 jobs:
