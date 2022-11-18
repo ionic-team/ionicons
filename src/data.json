@@ -7419,13 +7419,17 @@
     {
       "name": "options",
       "tags": [
-        "options"
+        "options",
+        "sliders",
+        "filters"
       ]
     },
     {
       "name": "options-outline",
       "tags": [
         "options",
+        "sliders",
+        "filters",
         "outline"
       ]
     },
@@ -7433,6 +7437,8 @@
       "name": "options-sharp",
       "tags": [
         "options",
+        "sliders",
+        "filters",
         "sharp"
       ]
     },
