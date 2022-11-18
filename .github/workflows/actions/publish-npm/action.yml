@@ -37,6 +37,6 @@ runs:
       env:
         NPM_TOKEN: ${{ inputs.token }}
     - name: Publish to NPM
-      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }}
+      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --dry-run
       shell: bash
       working-directory: ${{ inputs.working-directory }}
