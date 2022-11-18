@@ -21,8 +21,7 @@
     "start": "stencil build --dev --watch --serve",
     "test": "npm run test.spec",
     "test.spec": "stencil test --spec",
-    "release": "np --no-2fa",
-    "version": "npm run build"
+    "release": "np --no-2fa"
   },
   "dependencies": {
     "@stencil/core": "^2.18.0"
