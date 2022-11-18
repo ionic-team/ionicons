@@ -23,7 +23,7 @@ runs:
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     - name: Update Version
-      run: npm version ${{ inputs.version }}
+      run: npm version ${{ inputs.version }} --git-tag-version false
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     - name: Run Build
@@ -37,6 +37,6 @@ runs:
       env:
         NPM_TOKEN: ${{ inputs.token }}
     - name: Publish to NPM
-      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }}  --git-tag-version false
+      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }}
       shell: bash
       working-directory: ${{ inputs.working-directory }}
