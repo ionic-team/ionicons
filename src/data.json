@@ -6316,6 +6316,13 @@
       ]
     },
     {
+      "name": "logo-nuxt",
+      "tags": [
+        "logo",
+        "nuxt"
+      ]
+    },
+    {
       "name": "logo-octocat",
       "tags": [
         "logo",
