@@ -1,0 +1,10 @@
+name: 'Ionicons Production Release'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-dev-hash:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo stub
