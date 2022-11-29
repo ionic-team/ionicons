@@ -22,6 +22,14 @@ export const config: Config = {
           src: './components/test/*.svg',
           dest: './assets/',
         },
+        {
+          src: './svg/*.svg',
+          dest: './build/svg/',
+        },
+        {
+          src: './components/test/',
+          dest: './test/',
+        }
       ],
       empty: false,
       serviceWorker: false,

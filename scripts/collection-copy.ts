@@ -9,6 +9,8 @@ async function collectionCopy(rootDir: string) {
 
   // we don't to copy the src svgs to collection
   await fs.remove(join(rootDir, 'dist', 'collection', 'svg'));
+  // We don't want to copy the test svg assets to collection
+  await fs.remove(join(rootDir, 'dist', 'collection', 'components', 'test'));
 
   const cePackageDir = join(rootDir, 'components');
   const cePackageJsonPath = join(cePackageDir, 'package.json');
@@ -26,7 +28,7 @@ async function collectionCopy(rootDir: string) {
     private: true,
   };
   await fs.writeFile(cePackageJsonPath, JSON.stringify(cePackageJson, null, 2));
-  
+
   /**
    * TODO: Remove this in Ionicons v6.0
    * Stencil 2 removed the legacy loader,

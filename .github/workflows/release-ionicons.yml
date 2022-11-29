@@ -1,0 +1,28 @@
+name: 'Release Ionicons'
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        description: 'The type of version to release.'
+        type: string
+        required: true
+      tag:
+        description: 'The tag to publish to on NPM.'
+        type: string
+        required: true
+    secrets:
+      NPM_TOKEN:
+        required: true
+
+jobs:
+  release-core:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ./.github/workflows/actions/publish-npm
+      with:
+        tag: ${{ inputs.tag }}
+        version: ${{ inputs.version }}
+        working-directory: './'
+        token: ${{ secrets.NPM_TOKEN }}
