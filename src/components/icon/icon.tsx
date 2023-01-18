@@ -19,7 +19,6 @@ export class Icon {
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
-  @State() private ariaLabel?: string;
 
   /**
    * The mode determines which platform styles to use.
@@ -124,12 +123,6 @@ export class Icon {
       cb();
     }
   }
-  
-  private hasAriaHidden = () => {
-    const { el } = this;
-    
-    return el.hasAttribute('aria-hidden') && el.getAttribute('aria-hidden') === 'true';
-  }
 
   @Watch('name')
   @Watch('src')
@@ -166,7 +159,7 @@ export class Icon {
   }
 
   render() {
-    const { iconName, ariaLabel, el, inheritedAttributes } = this;
+    const { iconName, el, inheritedAttributes } = this;
     const mode = this.mode || 'md';
     const flipRtl =
       this.flipRtl ||
@@ -174,16 +167,8 @@ export class Icon {
         (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) &&
         this.flipRtl !== false);
 
-    /**
-     * Only set the aria-label if a) we have generated
-     * one for the icon and if aria-hidden is not set to "true".
-     * If developer wants to set their own aria-label, then
-     * inheritedAttributes down below will override whatever
-     * default label we have set.
-     */
     return (
       <Host
-        aria-label={ariaLabel !== undefined && !this.hasAriaHidden() ? ariaLabel : null}
         role="img"
         class={{
           [mode]: true,
