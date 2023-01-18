@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getName, getUrl, inheritAttributes, isRTL } from './utils';
+import { getUrl, inheritAttributes, isRTL } from './utils';
 
 let parser: DOMParser;
 
@@ -162,16 +162,6 @@ export class Icon {
           getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
         }
       }
-    }
-
-    const label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
-
-    /**
-     * Come up with a default label
-     * in case user does not provide their own.
-     */
-    if (label) {
-      this.ariaLabel = label.replace(/\-/g, ' ');
     }
   }
 
