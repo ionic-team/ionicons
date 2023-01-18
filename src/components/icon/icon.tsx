@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getUrl, inheritAttributes, isRTL } from './utils';
+import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
 let parser: DOMParser;
 
@@ -156,6 +156,8 @@ export class Icon {
         }
       }
     }
+
+    this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
   }
 
   render() {
