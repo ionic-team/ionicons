@@ -22,6 +22,14 @@
 | `src`      | `src`      | Specifies the exact `src` of an SVG file to use.                                                                                                                                              | `string \| undefined`  | `undefined`    |
 
 
+## Shadow Parts
+
+| Part           | Description |
+| -------------- | ----------- |
+| `"icon-inner"` | The container that wraps the SVG element |
+| `"svg"` | The svg element |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
