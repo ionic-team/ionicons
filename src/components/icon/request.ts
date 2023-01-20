@@ -55,7 +55,3 @@ export const getSvgContent = (url: string, sanitize: boolean) => {
 
   return req;
 };
-
-const parseIcon = () => {
-
-}
