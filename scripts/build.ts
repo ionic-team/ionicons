@@ -168,7 +168,7 @@ async function optimizeSvg(
 
   const optimizedCode = optimizedSvg.data.replace(
     /<svg (.*?)>/,
-    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>${svgData.title}</title>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">`,
   );
 
   const webComponentSvg = await webComponentPass.optimize(optimizedCode, { path: svgData.srcFilePath });
