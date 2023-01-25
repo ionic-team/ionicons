@@ -1,4 +1,4 @@
-import { isEncodedUrl, isSvgDataUrl, isValid } from '../validate';
+import { isEncodedDataUrl, isSvgDataUrl, isValid } from '../validate';
 
 
 describe('isValid', () => {
@@ -65,9 +65,9 @@ it('isSvgDataUrl', () => {
   expect(isSvgDataUrl('http://example.com/icon.svg')).toBe(false);
 });
 
-it('isEncodedUrl', () => {
-  expect(isEncodedUrl('data:image/svg+xml;base64,xxx')).toBe(false);
-  expect(isEncodedUrl('data:image/svg+xml;utf8,<svg></svg>')).toBe(true);
-  expect(isEncodedUrl('https://example.com/icon.svg')).toBe(false);
-  expect(isEncodedUrl('http://example.com/icon.svg')).toBe(false);
+it('isEncodedDataUrl', () => {
+  expect(isEncodedDataUrl('data:image/svg+xml;base64,xxx')).toBe(false);
+  expect(isEncodedDataUrl('data:image/svg+xml;utf8,<svg></svg>')).toBe(true);
+  expect(isEncodedDataUrl('https://example.com/icon.svg')).toBe(false);
+  expect(isEncodedDataUrl('http://example.com/icon.svg')).toBe(false);
 });
