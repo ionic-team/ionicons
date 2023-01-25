@@ -48,3 +48,6 @@ export const isValid = (elm: HTMLElement) => {
   }
   return true;
 };
+
+export const isSvgDataUrl = (url: string) => url.startsWith('data:image/svg+xml');
+export const isEncodedUrl = (url: string) => url.indexOf(';utf8,') !== -1;

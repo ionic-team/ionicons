@@ -1,4 +1,4 @@
-import { isValid } from '../validate';
+import { isEncodedUrl, isSvgDataUrl, isValid } from '../validate';
 
 
 describe('isValid', () => {
@@ -24,9 +24,11 @@ describe('isValid', () => {
   });
 
   it('invalid child SCRIPT elm', () => {
-    const el = { nodeType: 1, nodeName: 'svg', attributes: [], childNodes: [
-      { nodeType: 1, nodeName: 'SCRIPT', attributes: [], childNodes: [] }
-    ] } as any;
+    const el = {
+      nodeType: 1, nodeName: 'svg', attributes: [], childNodes: [
+        { nodeType: 1, nodeName: 'SCRIPT', attributes: [], childNodes: [] }
+      ]
+    } as any;
     expect(isValid(el)).toBe(false);
   });
 
@@ -41,9 +43,11 @@ describe('isValid', () => {
   });
 
   it('is valid SVG elm', () => {
-    const el = { nodeType: 1, nodeName: 'SVG', attributes: [], childNodes: [
-      { nodeType: 1, nodeName: 'line', attributes: [], childNodes: [] }
-    ] } as any;
+    const el = {
+      nodeType: 1, nodeName: 'SVG', attributes: [], childNodes: [
+        { nodeType: 1, nodeName: 'line', attributes: [], childNodes: [] }
+      ]
+    } as any;
     expect(isValid(el)).toBe(true);
   });
 
@@ -52,4 +56,18 @@ describe('isValid', () => {
     expect(isValid(el)).toBe(true);
   });
 
+});
+
+it('isSvgDataUrl', () => {
+  expect(isSvgDataUrl('data:image/svg+xml;base64,xxx')).toBe(true);
+  expect(isSvgDataUrl('data:image/svg+xml;utf8,<svg></svg>')).toBe(true);
+  expect(isSvgDataUrl('https://example.com/icon.svg')).toBe(false);
+  expect(isSvgDataUrl('http://example.com/icon.svg')).toBe(false);
+});
+
+it('isEncodedUrl', () => {
+  expect(isEncodedUrl('data:image/svg+xml;base64,xxx')).toBe(false);
+  expect(isEncodedUrl('data:image/svg+xml;utf8,<svg></svg>')).toBe(true);
+  expect(isEncodedUrl('https://example.com/icon.svg')).toBe(false);
+  expect(isEncodedUrl('http://example.com/icon.svg')).toBe(false);
 });

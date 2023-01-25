@@ -1,4 +1,4 @@
-import { validateContent } from './validate';
+import { isEncodedUrl, isSvgDataUrl, validateContent } from './validate';
 
 export const ioniconContent = new Map<string, string>();
 const requests = new Map<string, Promise<any>>();
@@ -15,7 +15,7 @@ export const getSvgContent = (url: string, sanitize: boolean) => {
        * If the url is a data url of an svg, then try to parse it
        * with the DOMParser. This works with content security policies enabled.
        */
-      if (url.startsWith('data:') && url.indexOf('utf8') !== -1) {
+      if (isSvgDataUrl(url) && isEncodedUrl(url)) {
         if (!parser) {
           /**
            * Create an instance of the DOM parser. This creates a single
