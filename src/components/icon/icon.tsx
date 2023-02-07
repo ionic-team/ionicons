@@ -2,8 +2,6 @@ import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil
 import { getSvgContent, ioniconContent } from './request';
 import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
-let parser: DOMParser;
-
 @Component({
   tag: 'ion-icon',
   assetsDirs: ['svg'],
@@ -82,7 +80,7 @@ export class Icon {
    * @default true
    */
   @Prop() sanitize = true;
-  
+
   componentWillLoad() {
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
@@ -124,12 +122,12 @@ export class Icon {
       cb();
     }
   }
-  
+
   private hasAriaHidden = () => {
     const { el } = this;
-    
+
     return el.hasAttribute('aria-hidden') && el.getAttribute('aria-hidden') === 'true';
-  }
+  };
 
   @Watch('name')
   @Watch('src')
@@ -138,27 +136,12 @@ export class Icon {
   @Watch('md')
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
-      if (!parser) {
-        /**
-         * Create an instance of the DOM parser. This creates a single
-         * parser instance for the entire app, which is more efficient.
-         */
-        parser = new DOMParser();
-      }
       const url = getUrl(this);
 
       if (url) {
         if (ioniconContent.has(url)) {
           // sync if it's already loaded
           this.svgContent = ioniconContent.get(url);
-        } else if (url.startsWith('data:')) {
-          const doc = parser.parseFromString(url, 'text/html');
-          const svgEl = doc.body.querySelector('svg');
-          if (svgEl !== null) {
-            this.svgContent = svgEl.outerHTML;
-          } else {
-            this.svgContent = '';
-          }
         } else {
           // async if it hasn't been loaded
           getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
@@ -166,7 +149,7 @@ export class Icon {
       }
     }
 
-    const label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
+    const label = (this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md));
 
     /**
      * Come up with a default label
@@ -182,9 +165,7 @@ export class Icon {
     const mode = this.mode || 'md';
     const flipRtl =
       this.flipRtl ||
-      (iconName &&
-        (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) &&
-        this.flipRtl !== false);
+      (iconName && (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) && this.flipRtl !== false);
 
     /**
      * Only set the aria-label if a) we have generated
