@@ -132,6 +132,8 @@ export class Icon {
   @Watch('name')
   @Watch('src')
   @Watch('icon')
+  @Watch('ios')
+  @Watch('md')
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
       const url = getUrl(this);
