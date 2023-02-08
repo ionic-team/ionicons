@@ -15,18 +15,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [6.1.2](https://github.com/ionic-team/ionicons/compare/v6.1.1...v6.1.2) (2023-02-08)
-
-
-### Bug Fixes
-
-* **icon:** load base64 data urls ([#1172](https://github.com/ionic-team/ionicons/issues/1172)) ([72f0936](https://github.com/ionic-team/ionicons/commit/72f09369de76b00697437f54d919782307843a87))
-* **icon:** md and ios properties are reactive ([#1174](https://github.com/ionic-team/ionicons/issues/1174)) ([65bcbb4](https://github.com/ionic-team/ionicons/commit/65bcbb477734e33901a6f0c650d3f1f2c3084fca)), closes [#802](https://github.com/ionic-team/ionicons/issues/802)
-
-
-
-
-
 ## [6.1.1](https://github.com/ionic-team/ionicons/compare/v6.1.0...v6.1.1) (2023-01-18)
 
 
