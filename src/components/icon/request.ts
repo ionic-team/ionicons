@@ -1,9 +1,10 @@
+import { Build } from '@stencil/core';
 import { isEncodedDataUrl, isSvgDataUrl, validateContent } from './validate';
 
 export const ioniconContent = new Map<string, string>();
 const requests = new Map<string, Promise<any>>();
 
-let parser = new DOMParser();
+let parser: DOMParser;
 
 export const getSvgContent = (url: string, sanitize: boolean) => {
   // see if we already have a request for this url
@@ -15,7 +16,7 @@ export const getSvgContent = (url: string, sanitize: boolean) => {
        * If the url is a data url of an svg, then try to parse it
        * with the DOMParser. This works with content security policies enabled.
        */
-      if (isSvgDataUrl(url) && isEncodedDataUrl(url)) {
+      if (isSvgDataUrl(url) && isEncodedDataUrl(url) && Build.isBrowser) {
         if (!parser) {
           /**
            * Create an instance of the DOM parser. This creates a single
