@@ -14,17 +14,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [6.1.3](https://github.com/ionic-team/ionicons/compare/v6.1.2...v6.1.3) (2023-02-09)
-
-
-### Bug Fixes
-
-* DomParser usage in SSR ([#1180](https://github.com/ionic-team/ionicons/issues/1180)) ([8c412f6](https://github.com/ionic-team/ionicons/commit/8c412f67486d6cc9725de63f0c15b6c6cd8d47ce)), closes [#1179](https://github.com/ionic-team/ionicons/issues/1179)
-
-
-
-
-
 ## [6.1.2](https://github.com/ionic-team/ionicons/compare/v6.1.1...v6.1.2) (2023-02-08)
 
 
