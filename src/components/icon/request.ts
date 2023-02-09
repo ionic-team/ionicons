@@ -3,7 +3,7 @@ import { isEncodedDataUrl, isSvgDataUrl, validateContent } from './validate';
 export const ioniconContent = new Map<string, string>();
 const requests = new Map<string, Promise<any>>();
 
-let parser = new DOMParser();
+let parser: DOMParser;
 
 export const getSvgContent = (url: string, sanitize: boolean) => {
   // see if we already have a request for this url
