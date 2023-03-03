@@ -43,7 +43,7 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 #### Modifying Components
 
 1. Navigate to the `src/components/` directory and open the `icon` component to modify.
-2. Make any changes to the icon component and then [preview-changes](#preview-component-changes).
+2. Make any changes to the icon component and then [preview the changes](#preview-component-changes).
 
 
 #### Preview Component Changes
@@ -63,6 +63,10 @@ TODO -->
 2. See the [Creating a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) GitHub help article for more information.
 3. Please fill out the Pull Request template to the best of your ability and include any issues that are related.
 
+
+## Updating Documentation
+
+The documentation site for Ionicons is located in the [ionicons-site](https://github.com/ionic-team/ionicons-site) repository.
 
 ## License
 
