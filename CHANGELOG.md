@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/ionic-team/ionicons/compare/v6.1.3...v7.0.0) (2023-03-07)
+
+
+### Bug Fixes
+
+* **icon:** remove auto-generated aria-label ([#1170](https://github.com/ionic-team/ionicons/issues/1170)) ([98975ec](https://github.com/ionic-team/ionicons/commit/98975ec0f54b825c33f528683834a5e38298d598))
+
+
+
+
+
+# [7.0.0](https://github.com/ionic-team/ionicons/compare/v6.1.3...v7.0.0) (2023-03-07)
+
+
+### Bug Fixes
+
+* **icon:** remove auto-generated aria-label ([#1170](https://github.com/ionic-team/ionicons/issues/1170)) ([98975ec](https://github.com/ionic-team/ionicons/commit/98975ec0f54b825c33f528683834a5e38298d598))
+
+
+
+
+
 ## [6.1.3](https://github.com/ionic-team/ionicons/compare/v6.1.2...v6.1.3) (2023-02-09)
 
 
