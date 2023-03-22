@@ -94,7 +94,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (item.isElem()) {
               item.eachAttr((attr) => {
                 if (attr.name === 'stroke' || attr.name === 'fill') {
-                  if (attr.value === '#000') {
+                  if (attr.value === '#000' || attr.value === 'currentColor') {
                     item.addAttr({
                       name: attr.name,
                       value: 'currentColor',
