@@ -2631,11 +2631,11 @@
       ]
     },
     {
-      "name": "chevron-expand-filled",
+      "name": "chevron-expand-outline",
       "tags": [
         "chevron",
         "expand",
-        "filled"
+        "outline"
       ]
     },
     {
