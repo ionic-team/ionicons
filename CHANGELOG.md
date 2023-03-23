@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/ionic-team/ionicons/compare/v7.0.0...v7.1.0) (2023-03-23)
+
+
+### Features
+
+* chevron-expand and chevron-collapse icons ([#1198](https://github.com/ionic-team/ionicons/issues/1198)) ([cdb0d80](https://github.com/ionic-team/ionicons/commit/cdb0d80cde1dc5dd90fb2a1c3b4fa31d68294821))
+
+
+
+
+
 # [7.0.0](https://github.com/ionic-team/ionicons/compare/v6.1.3...v7.0.0) (2023-03-07)
 
 **Migration Note:** Developers should ensure that their `<ion-icon>` usages have either `aria-label` or `aria-hidden` to avoid accessibility issues. See https://ionic.io/ionicons/usage for more information.
