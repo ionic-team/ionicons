@@ -10,7 +10,7 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 
 ## Creating an Issue
 
-* If you have a question about using Ionicons, please ask on the [Ionic Forum](http://forum.ionicframework.com/) or in the [Ionic Worldwide Slack](http://ionicworldwide.herokuapp.com/) group.
+* If you have a question about using Ionicons, please ask on the [Ionic Forum](http://forum.ionicframework.com/) or in the [Ionic Discord](https://discord.com/invite/UPYYRhtyzp).
 
 * It is required that you clearly describe the steps necessary to reproduce the issue you are running into. Although we would love to help our users as much as possible, diagnosing issues without clear reproduction steps is extremely time-consuming and simply not sustainable.
 
