@@ -59,7 +59,7 @@ runs:
         rsync -R --progress $(git diff --name-only --cached) updated-screenshots
         echo 'copied images'
         if [ -d updated-screenshots ]; then
-          echo "::set-output name=hasUpdatedScreenshots::$(echo 'true')"
+          echo "hasUpdatedScreenshots=$(echo 'true')" >> $GITHUB_OUTPUT
           cd updated-screenshots
           ls
           zip -q -r ../UpdatedScreenshots-${{ inputs.shard }}-${{ inputs.totalShards }}.zip ./
