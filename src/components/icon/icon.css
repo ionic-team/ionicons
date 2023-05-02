@@ -6,7 +6,7 @@
 
   contain: strict;
 
-  fill: currentColor;
+  fill: red;
 
   box-sizing: content-box !important;
 }
