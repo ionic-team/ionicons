@@ -14,9 +14,18 @@ test.describe('icon: basic', () => {
   test('some icons should flip when rtl', async ({ page }) => {
     await page.goto(`/`);
 
+    const autoflip = page.locator('.auto-flip-chevrons [name=chevron-forward]');
+    await expect(autoflip).not.toHaveClass(/flip-rtl/);
+
+    const unflip = page.locator('.un-flip-chevrons [name=chevron-forward]');
+    await expect(unflip).not.toHaveClass(/flip-rtl/);
+
     await page.evaluate(() => {
       document.dir = 'rtl';
     });
+
+    await expect(autoflip).toHaveClass(/flip-rtl/);
+    await expect(unflip).not.toHaveClass(/flip-rtl/);
 
     // Wait for all SVGs to be lazily loaded before taking screenshots
     await page.waitForLoadState('networkidle');
