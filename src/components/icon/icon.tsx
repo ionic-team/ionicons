@@ -12,7 +12,6 @@ export class Icon {
   private io?: IntersectionObserver;
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
-  private documentDirObserver?: MutationObserver;
 
   // arrows and chevrons should flip based on `dir` *unless* the flipRtl prop is set to `false`
   private shouldAutoFlip?: boolean;
@@ -24,9 +23,6 @@ export class Icon {
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
-  // note: `dir` only gets set/changed if conditions are right for the MutationObserver to get added
-  // in most cases, the dir attribute on the document and element are irrelevant for displaying the icons
-  @State() private dir?: string;
 
   /**
    * The mode determines which platform styles to use.
@@ -95,37 +91,8 @@ export class Icon {
     this.shouldAutoFlip =
       (this.iconName?.includes('arrow') || this.iconName?.includes('chevron')) && this.flipRtl !== false;
     this.shouldBeFlippable = this.flipRtl || this.shouldAutoFlip || this.el.hasAttribute('dir');
-
-    if (this.shouldBeFlippable) {
-      // initialize `dir`. after this, it will be updated via documentDirObserver
-      this.dir = this.el.dir.toLowerCase() || document.dir.toLowerCase();
-    }
   }
 
-  componentDidLoad() {
-    if (this.shouldBeFlippable && Build.isBrowser) {
-      this.documentDirObserver = new MutationObserver(() => {
-        // if the element has a dir, it should override the document's dir
-        this.dir = this.el.dir.toLowerCase() || document.dir.toLowerCase();
-      });
-
-      // if the icon should flip when dir changes, watch for changes to dir
-      if (this.flipRtl || this.shouldAutoFlip) {
-        this.documentDirObserver.observe(document.documentElement!, {
-          attributes: true,
-          attributeFilter: ['dir'],
-        });
-      }
-
-      // if the element has a `dir` attribute set, watch for changes to it
-      if (this.el.hasAttribute('dir')) {
-        this.documentDirObserver.observe(this.el, {
-          attributes: true,
-          attributeFilter: ['dir'],
-        });
-      }
-    }
-  }
   connectedCallback() {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
@@ -140,9 +107,6 @@ export class Icon {
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
-    }
-    if (this.documentDirObserver) {
-      this.documentDirObserver.disconnect();
     }
   }
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
@@ -200,7 +164,7 @@ export class Icon {
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': this.dir === 'rtl',
+          'flip-rtl': Boolean(this.shouldBeFlippable),
         }}
         {...inheritedAttributes}
       >
