@@ -32,6 +32,23 @@ test.describe('icon: basic', () => {
     expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(`icon-rtl-diff.png`);
   });
 
+  test('arrows should flip if dir changes on the element', async ({ page }) => {
+    await page.goto(`/`);
+
+    const autoflip = page.locator('.auto-flip-chevrons [name=chevron-forward] .icon-inner');
+    const unflip = page.locator('.un-flip-chevrons [name=chevron-forward] .icon-inner');
+    await expect(autoflip).not.toHaveCSS('transform', /matrix\(-1/);
+    await expect(unflip).not.toHaveCSS('transform', /matrix\(-1/);
+
+    const autoflipEl = await page.$('.auto-flip-chevrons [name=chevron-forward]');
+    const unflipEl = await page.$('.un-flip-chevrons [name=chevron-forward]');
+    await autoflipEl!.evaluate((node) => node.setAttribute('dir', 'rtl'));
+    await unflipEl!.evaluate((node) => node.setAttribute('dir', 'rtl'));
+
+    await expect(autoflip).toHaveCSS('transform', /matrix\(-1/);
+    await expect(unflip).not.toHaveCSS('transform', /matrix\(-1/);
+  });
+
   test('icon should reassess flipping when name changes', async ({ page }) => {
     await page.goto(`/`);
 
