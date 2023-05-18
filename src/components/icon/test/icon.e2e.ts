@@ -31,4 +31,22 @@ test.describe('icon: basic', () => {
 
     expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(`icon-rtl-diff.png`);
   });
+
+  test('icon should reassess flipping when name changes', async ({ page }) => {
+    await page.goto(`/`);
+
+    await page.evaluate(() => {
+      document.dir = 'rtl';
+    });
+
+    const iconLoc = page.locator('.auto-flip-chevrons ion-icon:nth-child(2)');
+    await expect(iconLoc).toHaveAttribute('name', 'chevron-forward');
+    await expect(iconLoc).toHaveClass(/flip-rtl/);
+
+    const iconEl = await page.$('.auto-flip-chevrons ion-icon:nth-child(2)');
+    await iconEl!.evaluate((node) => node.setAttribute('name', 'brush'));
+
+    await expect(iconLoc).toHaveAttribute('name', 'brush');
+    await expect(iconLoc).not.toHaveClass(/flip-rtl/);
+  });
 });

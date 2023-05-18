@@ -88,9 +88,6 @@ export class Icon {
 
   componentWillLoad() {
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
-    this.shouldAutoFlip =
-      (this.iconName?.includes('arrow') || this.iconName?.includes('chevron')) && this.flipRtl !== false;
-    this.shouldBeFlippable = this.flipRtl || this.shouldAutoFlip || this.el.hasAttribute('dir');
   }
 
   connectedCallback() {
@@ -156,6 +153,9 @@ export class Icon {
   render() {
     const { inheritedAttributes } = this;
     const mode = this.mode || 'md';
+    this.shouldAutoFlip =
+      (this.iconName?.includes('arrow') || this.iconName?.includes('chevron')) && this.flipRtl !== false;
+    this.shouldBeFlippable = this.flipRtl || this.shouldAutoFlip || this.el.hasAttribute('dir');
 
     return (
       <Host
