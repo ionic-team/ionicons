@@ -37,7 +37,7 @@ svg {
  * -----------------------------------------------------------
  */
 
-/* :host-context is supported in safari & firefox; :dir is supported in chromium */
+/* :host-context is supported in chromium; :dir is supported in safari & firefox */
 :host(.flip-rtl):host-context([dir='rtl']) .icon-inner {
   transform: scaleX(-1);
 }

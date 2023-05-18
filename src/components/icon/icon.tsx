@@ -151,11 +151,13 @@ export class Icon {
   }
 
   render() {
-    const { inheritedAttributes } = this;
+    const { flipRtl, iconName, inheritedAttributes } = this;
     const mode = this.mode || 'md';
-    this.shouldAutoFlip =
-      (this.iconName?.includes('arrow') || this.iconName?.includes('chevron')) && this.flipRtl !== false;
-    this.shouldBeFlippable = this.flipRtl || this.shouldAutoFlip || this.el.hasAttribute('dir');
+    // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+    const shouldAutoFlip = iconName
+      ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
+      : false;
+    const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
     return (
       <Host
@@ -164,7 +166,7 @@ export class Icon {
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': Boolean(this.shouldBeFlippable),
+          'flip-rtl': shouldBeFlippable,
         }}
         {...inheritedAttributes}
       >
