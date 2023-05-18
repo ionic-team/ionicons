@@ -13,12 +13,6 @@ export class Icon {
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
 
-  // arrows and chevrons should flip based on `dir` *unless* the flipRtl prop is set to `false`
-  private shouldAutoFlip?: boolean;
-
-  // if true, the icon should change direction when `dir` changes
-  private shouldBeFlippable?: boolean;
-
   @Element() el!: HTMLElement;
 
   @State() private svgContent?: string;
@@ -157,6 +151,7 @@ export class Icon {
     const shouldAutoFlip = iconName
       ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
       : false;
+    // if shouldBeFlippable is true, the icon should change direction when `dir` changes
     const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
     return (
