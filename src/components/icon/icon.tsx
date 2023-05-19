@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getName, getUrl, inheritAttributes, isRTL } from './utils';
+import { getName, getUrl, inheritAttributes } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -100,7 +100,6 @@ export class Icon {
       this.io = undefined;
     }
   }
-
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
     if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
       const io = (this.io = new (window as any).IntersectionObserver(
@@ -146,11 +145,14 @@ export class Icon {
   }
 
   render() {
-    const { iconName, el, inheritedAttributes } = this;
+    const { flipRtl, iconName, inheritedAttributes } = this;
     const mode = this.mode || 'md';
-    const flipRtl =
-      this.flipRtl ||
-      (iconName && (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) && this.flipRtl !== false);
+    // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+    const shouldAutoFlip = iconName
+      ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
+      : false;
+    // if shouldBeFlippable is true, the icon should change direction when `dir` changes
+    const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
     return (
       <Host
@@ -159,7 +161,7 @@ export class Icon {
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': !!flipRtl && isRTL(el),
+          'flip-rtl': shouldBeFlippable,
         }}
         {...inheritedAttributes}
       >
