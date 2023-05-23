@@ -14,17 +14,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [7.1.1](https://github.com/ionic-team/ionicons/compare/v7.1.0...v7.1.1) (2023-05-23)
-
-
-### Bug Fixes
-
-* **icon:** respond to changes of document dir ([#1210](https://github.com/ionic-team/ionicons/issues/1210)) ([e70bf21](https://github.com/ionic-team/ionicons/commit/e70bf214b82cd2187ea9394803283570d28ab28c))
-
-
-
-
-
 # [7.1.0](https://github.com/ionic-team/ionicons/compare/v7.0.0...v7.1.0) (2023-03-23)
 
 
