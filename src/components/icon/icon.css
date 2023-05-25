@@ -47,6 +47,17 @@ svg {
   }
 }
 
+/**
+ * Fallback for browsers that support neither :dir nor
+ * :host-context. This also serves as a fallback for
+ * Safari 16.4 which has a bug where the :dir
+ * is not updated if the document dir
+ * is dynamically changed: https://bugs.webkit.org/show_bug.cgi?id=257133
+ */
+:host(.icon-rtl) .icon-inner {
+  transform: scaleX(-1);
+}
+
 /* Icon Sizes
  * -----------------------------------------------------------
  */
