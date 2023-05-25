@@ -54,8 +54,10 @@ svg {
  * is not updated if the document dir
  * is dynamically changed: https://bugs.webkit.org/show_bug.cgi?id=257133
  */
-:host(.icon-rtl) .icon-inner {
-  transform: scaleX(-1);
+@supports not selector(:dir(rtl)) {
+  :host(.icon-rtl) .icon-inner {
+    transform: scaleX(-1);
+  }
 }
 
 /* Icon Sizes
