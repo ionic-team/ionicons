@@ -48,6 +48,13 @@ svg {
   }
 }
 
+/**
+ * Fallback for browsers that support
+ * neither :host-context nor :dir.
+ * The icon will not react to dir
+ * changes, but it will at least
+ * respect the dir on component load.
+ */
 @supports not selector(:dir(*)) {
   :host(.icon-rtl) .icon-inner {
     transform: scaleX(-1);
