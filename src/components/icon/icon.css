@@ -33,15 +33,19 @@ svg {
   width: 100%;
 }
 
-
 /* Icon RTL
  * -----------------------------------------------------------
  */
 
-:host(.flip-rtl) .icon-inner {
+/* :host-context is supported in chromium; :dir is supported in safari & firefox */
+:host(.flip-rtl):host-context([dir='rtl']) .icon-inner {
   transform: scaleX(-1);
 }
-
+@supports selector(:dir(rtl)) {
+  :host(.flip-rtl:dir(rtl)) .icon-inner {
+    transform: scaleX(-1);
+  }
+}
 
 /* Icon Sizes
  * -----------------------------------------------------------
@@ -51,10 +55,9 @@ svg {
   font-size: 18px !important;
 }
 
-:host(.icon-large){
+:host(.icon-large) {
   font-size: 32px !important;
 }
-
 
 /* Icon Colors
  * -----------------------------------------------------------

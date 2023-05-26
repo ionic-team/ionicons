@@ -94,7 +94,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (item.isElem()) {
               item.eachAttr((attr) => {
                 if (attr.name === 'stroke' || attr.name === 'fill') {
-                  if (attr.value === '#000') {
+                  if (attr.value === '#000' || attr.value === 'currentColor') {
                     item.addAttr({
                       name: attr.name,
                       value: 'currentColor',
@@ -168,7 +168,7 @@ async function optimizeSvg(
 
   const optimizedCode = optimizedSvg.data.replace(
     /<svg (.*?)>/,
-    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>${svgData.title}</title>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">`,
   );
 
   const webComponentSvg = await webComponentPass.optimize(optimizedCode, { path: svgData.srcFilePath });
