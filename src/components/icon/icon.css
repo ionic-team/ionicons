@@ -37,22 +37,51 @@ svg {
  * -----------------------------------------------------------
  */
 
+/**
+ * Fallback for browsers that support neither :dir nor
+ * :host-context. The RTL flipping won't be reactive
+ * to dir changes, but it will at least show correctly
+ * on the initial load.
+ *
+ * Safari 16.2 incorrectly reports that it supports
+ * :dir(rtl) but it does not. As a result,
+ * we cannot use @supports not selector(:dir(rtl))
+ * to add this fallback.
+ *
+ * Since we place this in the stylesheet first
+ * browsers that support host-context or :dir will
+ * override this style below. The only
+ * browsers that will not override this
+ * style are browsers that do not support
+ * host-context/:dir in which case
+ * we want to use the fallback.
+ */
+:host(.icon-rtl) .icon-inner {
+  transform: scaleX(-1);
+}
+
 /* :host-context is supported in chromium; :dir is supported in safari & firefox */
 :host(.flip-rtl):host-context([dir='rtl']) .icon-inner {
   transform: scaleX(-1);
 }
+:host(.flip-rtl):host-context([dir='ltr']) .icon-inner {
+  transform: scaleX(1);
+}
+
 @supports selector(:dir(rtl)) {
   :host(.flip-rtl:dir(rtl)) .icon-inner {
     transform: scaleX(-1);
+  }
+  :host(.flip-rtl:dir(ltr)) .icon-inner {
+    transform: scaleX(1);
   }
 }
 
 /**
  * Fallback for browsers that support neither :dir nor
- * :host-context. This also serves as a fallback for
- * Safari 16.4 which has a bug where the :dir
- * is not updated if the document dir
- * is dynamically changed: https://bugs.webkit.org/show_bug.cgi?id=257133
+ * :host-context. The RTL flipping won't be reactive
+ * to dir changes, but it will at least show correctly
+ * on the initial load.
  */
 :host(.icon-rtl) .icon-inner {
   transform: scaleX(-1);
