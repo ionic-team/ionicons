@@ -77,16 +77,6 @@ svg {
   }
 }
 
-/**
- * Fallback for browsers that support neither :dir nor
- * :host-context. The RTL flipping won't be reactive
- * to dir changes, but it will at least show correctly
- * on the initial load.
- */
-:host(.icon-rtl) .icon-inner {
-  transform: scaleX(-1);
-}
-
 /* Icon Sizes
  * -----------------------------------------------------------
  */
