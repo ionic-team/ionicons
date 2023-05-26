@@ -24,7 +24,7 @@ describe('icon', () => {
     });
 
     expect(root).toEqualHtml(`
-      <ion-icon class="md flip-rtl" name="chevron-forward" role="img" aria-hidden="true">
+      <ion-icon class="md flip-rtl icon-rtl" name="chevron-forward" role="img" aria-hidden="true">
         <mock:shadow-root>
           <div class="icon-inner"></div>
         </mock:shadow-root>
