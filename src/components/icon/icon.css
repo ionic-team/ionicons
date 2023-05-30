@@ -76,6 +76,11 @@ svg {
   :host(.flip-rtl:dir(rtl)) .icon-inner {
     transform: scaleX(-1);
   }
+  /**
+   * This is needed for WebKit otherwise the fallback
+   * will always cause the icon to be flipped if the document
+   * loads in RTL.
+   */
   :host(.flip-rtl:dir(ltr)) .icon-inner {
     transform: scaleX(1);
   }
