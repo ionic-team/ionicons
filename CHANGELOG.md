@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.1.2](https://github.com/ionic-team/ionicons/compare/v7.1.1...v7.1.2) (2023-05-30)
+
+
+### Bug Fixes
+
+* **icon:** add :dir fallback ([#1223](https://github.com/ionic-team/ionicons/issues/1223)) ([06fa4a5](https://github.com/ionic-team/ionicons/commit/06fa4a528dd1906a5673ff6d80d22aef0f6e113b))
+
+
+
+
+
 ## [7.1.1](https://github.com/ionic-team/ionicons/compare/v7.1.0...v7.1.1) (2023-05-23)
 
 
