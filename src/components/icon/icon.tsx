@@ -1,20 +1,17 @@
-import { Build, Component, Element, Host, Prop, State, Watch, getMode, h } from '@stencil/core';
-import { getSvgContent } from './request';
-import { getName, getUrl } from './utils';
+import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
+import { getSvgContent, ioniconContent } from './request';
+import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
-
-/**
- * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
- */
 @Component({
   tag: 'ion-icon',
-  assetsDir: 'svg',
+  assetsDirs: ['svg'],
   styleUrl: 'icon.css',
-  shadow: true
+  shadow: true,
 })
 export class Icon {
   private io?: IntersectionObserver;
-  mode = getIonMode(this);
+  private iconName: string | null = null;
+  private inheritedAttributes: { [k: string]: any } = {};
 
   @Element() el!: HTMLElement;
 
@@ -22,14 +19,14 @@ export class Icon {
   @State() private isVisible = false;
 
   /**
+   * The mode determines which platform styles to use.
+   */
+  @Prop({ mutable: true }) mode = getIonMode();
+
+  /**
    * The color to use for the background of the item.
    */
   @Prop() color?: string;
-
-  /**
-   * Specifies the label to use for accessibility. Defaults to the icon name.
-   */
-  @Prop({ mutable: true, reflectToAttr: true }) ariaLabel?: string;
 
   /**
    * Specifies which icon to use on `ios` mode.
@@ -49,7 +46,7 @@ export class Icon {
   /**
    * Specifies which icon to use from the built-in set of icons.
    */
-  @Prop() name?: string;
+  @Prop({ reflect: true }) name?: string;
 
   /**
    * Specifies the exact `src` of an SVG file to use.
@@ -75,6 +72,18 @@ export class Icon {
    */
   @Prop() lazy = false;
 
+  /**
+   * When set to `false`, SVG content that is HTTP fetched will not be checked
+   * if the response SVG content has any `<script>` elements, or any attributes
+   * that start with `on`, such as `onclick`.
+   * @default true
+   */
+  @Prop() sanitize = true;
+
+  componentWillLoad() {
+    this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
+  }
+
   connectedCallback() {
     // purposely do not return the promise here because loading
     // the svg file should not hold up loading the app
@@ -91,19 +100,20 @@ export class Icon {
       this.io = undefined;
     }
   }
-
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
     if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
-      const io = this.io = new (window as any).IntersectionObserver((data: IntersectionObserverEntry[]) => {
-        if (data[0].isIntersecting) {
-          io.disconnect();
-          this.io = undefined;
-          cb();
-        }
-      }, { rootMargin });
+      const io = (this.io = new (window as any).IntersectionObserver(
+        (data: IntersectionObserverEntry[]) => {
+          if (data[0].isIntersecting) {
+            io.disconnect();
+            this.io = undefined;
+            cb();
+          }
+        },
+        { rootMargin },
+      ));
 
       io.observe(el);
-
     } else {
       // browser doesn't support IntersectionObserver
       // so just fallback to always show it
@@ -111,61 +121,69 @@ export class Icon {
     }
   }
 
-
   @Watch('name')
   @Watch('src')
   @Watch('icon')
+  @Watch('ios')
+  @Watch('md')
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
       const url = getUrl(this);
+
       if (url) {
-        getSvgContent(url)
-          .then(svgContent => this.svgContent = svgContent);
+        if (ioniconContent.has(url)) {
+          // sync if it's already loaded
+          this.svgContent = ioniconContent.get(url);
+        } else {
+          // async if it hasn't been loaded
+          getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
+        }
       }
     }
 
-    if (!this.ariaLabel) {
-      const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
-      // user did not provide a label
-      // come up with the label based on the icon name
-      if (label) {
-        this.ariaLabel = label
-          .replace('ios-', '')
-          .replace('md-', '')
-          .replace(/\-/g, ' ');
-      }
-    }
+    this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
   }
 
   render() {
+    const { flipRtl, iconName, inheritedAttributes, el } = this;
     const mode = this.mode || 'md';
-    const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
+    // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+    const shouldAutoFlip = iconName
+      ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
+      : false;
+    // if shouldBeFlippable is true, the icon should change direction when `dir` changes
+    const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
     return (
-      <Host role="img" class={{
-        [mode]: true,
-        ...createColorClasses(this.color),
-        [`icon-${this.size}`]: !!this.size,
-        'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl'
-        }}>{(
-          (Build.isBrowser && this.svgContent)
-            ? <div class="icon-inner" innerHTML={this.svgContent}></div>
-            : <div class="icon-inner"></div>
+      <Host
+        role="img"
+        class={{
+          [mode]: true,
+          ...createColorClasses(this.color),
+          [`icon-${this.size}`]: !!this.size,
+          'flip-rtl': shouldBeFlippable,
+          'icon-rtl': shouldBeFlippable && isRTL(el)
+        }}
+        {...inheritedAttributes}
+      >
+        {Build.isBrowser && this.svgContent ? (
+          <div class="icon-inner" innerHTML={this.svgContent}></div>
+        ) : (
+          <div class="icon-inner"></div>
         )}
       </Host>
     );
   }
 }
 
-
-const getIonMode = (ref: any) => {
-  return getMode(ref) || document.documentElement.getAttribute('mode') || 'md';
-};
-
+const getIonMode = () =>
+  (Build.isBrowser && typeof document !== 'undefined' && document.documentElement.getAttribute('mode')) || 'md';
 
 const createColorClasses = (color: string | undefined) => {
-  return (color) ? {
-    'ion-color': true,
-    [`ion-color-${color}`]: true
-  } : null;
+  return color
+    ? {
+        'ion-color': true,
+        [`ion-color-${color}`]: true,
+      }
+    : null;
 };

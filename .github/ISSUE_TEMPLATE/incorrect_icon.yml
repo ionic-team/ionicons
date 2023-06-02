@@ -1,0 +1,17 @@
+name: 😒 Incorrect Icon
+description: Report an incorrect icon
+labels: ["triage"]
+title: "incorrect icon: "
+body:
+  - type: textarea
+    attributes:
+      label: Describe the Issue
+      description: A clear description of what is wrong with the icon. Please include any relevant screenshots.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear description of what the icon should look like. Please include any relevant screenshots.
+    validations:
+      required: true
