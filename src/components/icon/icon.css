@@ -11,6 +11,10 @@
   box-sizing: content-box !important;
 }
 
+svg {
+  transform: translate3d(0, 0, 0);
+}
+
 :host .ionicon {
   stroke: currentColor;
 }
