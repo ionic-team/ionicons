@@ -36,7 +36,7 @@ svg {
 /* Icon RTL
  * -----------------------------------------------------------
  */
- 
+
 /**
  * Safari <16.4 incorrectly reports
  * that it supports :dir(rtl) when it does not.
@@ -53,7 +53,7 @@ svg {
     transform: scaleX(-1);
   }
 }
- 
+
 /**
  * Fallback for browsers that support
  * neither :host-context nor :dir.
@@ -91,11 +91,11 @@ svg {
  */
 
 :host(.icon-small) {
-  font-size: 18px !important;
+  font-size: 1.125rem !important;
 }
 
 :host(.icon-large) {
-  font-size: 32px !important;
+  font-size: 2rem !important;
 }
 
 /* Icon Colors
