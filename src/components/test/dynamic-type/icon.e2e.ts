@@ -11,7 +11,9 @@ test.describe('icon: dynamic type', () => {
     // Wait for all SVGs to be lazily loaded before taking screenshots
     await page.waitForLoadState('networkidle');
 
-    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(`icon-dynamic-type-diff.png`);
+    const icons = page.locator('#icons');
+
+    expect(await icons.screenshot()).toMatchSnapshot(`icon-dynamic-type-diff.png`);
   });
 
 });
