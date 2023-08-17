@@ -19,7 +19,24 @@ export const getIconMap = (): Map<string, string> => {
 
 export const addIcons = (icons: { [name: string]: string; }) => {
   const map = getIconMap();
-  Object.keys(icons).forEach(name => map.set(name, icons[name]));
+  Object.keys(icons).forEach(name => {
+    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
+    map.set(name, icons[name]);
+    
+    /**
+     * Developers can also pass in the SVG object directly
+     * and Ionicons can map the object to a kebab case name.
+     * Example: addIcons({ addCircleOutline });
+     * This will create an "addCircleOutline" entry and
+     * an "add-circle-outline" entry.
+     * Usage: <ion-icon name="add-circle-outline"></ion-icon>
+     * Using name="addCircleOutline" is valid too, but the
+     * the kebab case naming is preferred.
+     */
+    if (name !== toKebabCase) {
+      map.set(toKebabCase, icons[name]);
+    }
+  });
 };
 
 

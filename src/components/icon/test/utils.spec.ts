@@ -1,5 +1,5 @@
 import { Icon } from '../icon';
-import { getName, getSrc, getUrl } from '../utils';
+import { addIcons, getIconMap, getName, getSrc, getUrl } from '../utils';
 
 
 describe('getUrl', () => {
@@ -81,4 +81,28 @@ describe('getName', () => {
     expect(getName(undefined, undefined, '', '', '')).toBe(null);
   });
 
+});
+
+describe('addIcons', () => {
+  it('should add an svg to the icon cache', () => {
+    const testData = 'stubbed data';
+    
+    expect(getIconMap().get('logo-ionic')).toEqual(undefined);
+    
+    addIcons({ 'logo-ionic': 'stubbed data' });
+    
+    expect(getIconMap().get('logo-ionic')).toEqual(testData);
+  });
+  
+  it('should add kebab and camel case names to the icon cache', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('logo-ionitron')).toEqual(undefined);
+    expect(getIconMap().get('logoIonitron')).toEqual(undefined);
+    
+    addIcons({ logoIonitron });
+    
+    expect(getIconMap().get('logo-ionitron')).toEqual(logoIonitron);
+    expect(getIconMap().get('logoIonitron')).toEqual(logoIonitron);
+  });
 });
