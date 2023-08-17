@@ -105,4 +105,14 @@ describe('addIcons', () => {
     expect(getIconMap().get('logo-ionitron')).toEqual(logoIonitron);
     expect(getIconMap().get('logoIonitron')).toEqual(logoIonitron);
   });
+  
+  it('should map to a name that does not match the svg', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('my-fun-icon')).toEqual(undefined);
+    
+    addIcons({ 'my-fun-icon': logoIonitron });
+    
+    expect(getIconMap().get('my-fun-icon')).toEqual(logoIonitron);
+  });
 });
