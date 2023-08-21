@@ -23,7 +23,7 @@
     "test.spec": "stencil test --spec"
   },
   "dependencies": {
-    "@stencil/core": "^2.18.0"
+    "@stencil/core": "^4.0.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.33.0",
