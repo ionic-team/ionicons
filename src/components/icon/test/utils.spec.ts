@@ -137,4 +137,16 @@ describe('addIcons', () => {
     expect(getIconMap().get('logo-a')).toEqual(logoB);
     expect(getIconMap().get('logoA')).toEqual(logoA);
   });
+  
+  it('passing kebab case key should not generate a camel case key', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('kebab-key')).toEqual(undefined);
+    expect(getIconMap().get('kebabKey')).toEqual(undefined);
+    
+    addIcons({ 'kebab-key': logoIonitron });
+    
+    expect(getIconMap().get('kebab-key')).toEqual(logoIonitron);
+    expect(getIconMap().get('kebabKey')).toEqual(undefined);
+  });
 });
