@@ -125,4 +125,16 @@ describe('addIcons', () => {
     
     expect(getIconMap().get('myCoolIcon')).toEqual(logoIonitron);
   });
+  
+  it('should not overwrite icons', () => {
+    const logoA = 'logo a';
+    const logoB = 'logo b';
+    
+    expect(getIconMap().get('logo-a')).toEqual(undefined);
+    
+    addIcons({ 'logo-a': logoB, logoA });
+    
+    expect(getIconMap().get('logo-a')).toEqual(logoB);
+    expect(getIconMap().get('logoA')).toEqual(logoA);
+  });
 });

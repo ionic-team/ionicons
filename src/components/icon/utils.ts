@@ -18,10 +18,8 @@ export const getIconMap = (): Map<string, string> => {
 };
 
 export const addIcons = (icons: { [name: string]: string; }) => {
-  const map = getIconMap();
-  Object.keys(icons).forEach(name => {
-    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
-    map.set(name, icons[name]);
+  Object.keys(icons).forEach(name => {    
+    addToIconMap(name, icons[name]);
     
     /**
      * Developers can also pass in the SVG object directly
@@ -33,11 +31,22 @@ export const addIcons = (icons: { [name: string]: string; }) => {
      * Using name="addCircleOutline" is valid too, but the
      * the kebab case naming is preferred.
      */
+    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
     if (name !== toKebabCase) {
-      map.set(toKebabCase, icons[name]);
+      addToIconMap(toKebabCase, icons[name]);
     }
   });
 };
+
+const addToIconMap = (name: string, data: any) => {
+  const map = getIconMap();
+
+  if (map.get(name) === undefined) {
+    map.set(name, data);
+  } else {
+    console.warn(`[Ionicons Warning]: Multiple icons were mapped to name "${name}". Ensure that multiple icons are not mapped to the same icon name.`)
+  }
+}
 
 
 export const getUrl = (i: Icon) => {
