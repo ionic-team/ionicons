@@ -115,4 +115,14 @@ describe('addIcons', () => {
     
     expect(getIconMap().get('my-fun-icon')).toEqual(logoIonitron);
   });
+  
+  it('should map to an explicit camel case name', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('myCoolIcon')).toEqual(undefined);
+    
+    addIcons({ 'myCoolIcon': logoIonitron });
+    
+    expect(getIconMap().get('myCoolIcon')).toEqual(logoIonitron);
+  });
 });
