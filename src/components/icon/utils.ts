@@ -31,7 +31,7 @@ export const getUrl = (i: Icon) => {
 
   url = getName(i.name, i.icon, i.mode, i.ios, i.md);
   if (url) {
-    return getNamedUrl(url);
+    return getNamedUrl(url, i.el);
   }
 
   if (i.icon) {
@@ -49,13 +49,34 @@ export const getUrl = (i: Icon) => {
   return null;
 };
 
+/**
+ * This functions checks if a Stencil component is using
+ * the lazy loaded build of Stencil. Returns `true` if
+ * the component is lazy loaded. Returns `false` otherwise.
+ */
+export const hasLazyBuild = (stencilEl: HTMLElement) => {
+  return (stencilEl as any).componentOnReady !== undefined;
+};
 
-const getNamedUrl = (iconName: string) => {
+const getNamedUrl = (iconName: string, iconEl: HTMLElement) => {
   const url = getIconMap().get(iconName);
   if (url) {
     return url;
   }
-  return getAssetPath(`svg/${iconName}.svg`);
+  
+  /**
+   * The following code lazily loads the SVG
+   * data based on a string name.
+   * However, the asset path is not set when using dist-custom-elements.
+   * In that scenario, developers either need to pass
+   * the SVG data directly to the icon component or
+   * cache the SVG using the addIcons function.
+   */
+  if (hasLazyBuild(iconEl)) {
+    return getAssetPath(`svg/${iconName}.svg`);
+  } else {
+    console.warn(`[Ionicons Warning]: Could not find icon "${iconName}". Developers should either pass the SVG data to the icon component or cache it using the addIcons utility.`);
+  }
 };
 
 
