@@ -29,7 +29,7 @@ export const addIcons = (icons: { [name: string]: string; }) => {
      * an "add-circle-outline" entry.
      * Usage: <ion-icon name="add-circle-outline"></ion-icon>
      * Using name="addCircleOutline" is valid too, but the
-     * the kebab case naming is preferred.
+     * kebab case naming is preferred.
      */
     const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
     if (name !== toKebabCase) {
