@@ -1,5 +1,5 @@
 import { Icon } from '../icon';
-import { getName, getSrc, getUrl } from '../utils';
+import { addIcons, getIconMap, getName, getSrc, getUrl } from '../utils';
 
 
 describe('getUrl', () => {
@@ -81,4 +81,72 @@ describe('getName', () => {
     expect(getName(undefined, undefined, '', '', '')).toBe(null);
   });
 
+});
+
+describe('addIcons', () => {
+  it('should add an svg to the icon cache', () => {
+    const testData = 'stubbed data';
+    
+    expect(getIconMap().get('logo-ionic')).toEqual(undefined);
+    
+    addIcons({ 'logo-ionic': 'stubbed data' });
+    
+    expect(getIconMap().get('logo-ionic')).toEqual(testData);
+  });
+  
+  it('should add kebab and camel case names to the icon cache', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('logo-ionitron')).toEqual(undefined);
+    expect(getIconMap().get('logoIonitron')).toEqual(undefined);
+    
+    addIcons({ logoIonitron });
+    
+    expect(getIconMap().get('logo-ionitron')).toEqual(logoIonitron);
+    expect(getIconMap().get('logoIonitron')).toEqual(logoIonitron);
+  });
+  
+  it('should map to a name that does not match the svg', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('my-fun-icon')).toEqual(undefined);
+    
+    addIcons({ 'my-fun-icon': logoIonitron });
+    
+    expect(getIconMap().get('my-fun-icon')).toEqual(logoIonitron);
+  });
+  
+  it('should map to an explicit camel case name', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('myCoolIcon')).toEqual(undefined);
+    
+    addIcons({ 'myCoolIcon': logoIonitron });
+    
+    expect(getIconMap().get('myCoolIcon')).toEqual(logoIonitron);
+  });
+  
+  it('should not overwrite icons', () => {
+    const logoA = 'logo a';
+    const logoB = 'logo b';
+    
+    expect(getIconMap().get('logo-a')).toEqual(undefined);
+    
+    addIcons({ 'logo-a': logoB, logoA });
+    
+    expect(getIconMap().get('logo-a')).toEqual(logoB);
+    expect(getIconMap().get('logoA')).toEqual(logoA);
+  });
+  
+  it('passing kebab case key should not generate a camel case key', () => {
+    const logoIonitron = 'stubbed data';
+    
+    expect(getIconMap().get('kebab-key')).toEqual(undefined);
+    expect(getIconMap().get('kebabKey')).toEqual(undefined);
+    
+    addIcons({ 'kebab-key': logoIonitron });
+    
+    expect(getIconMap().get('kebab-key')).toEqual(logoIonitron);
+    expect(getIconMap().get('kebabKey')).toEqual(undefined);
+  });
 });
