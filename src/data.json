@@ -461,6 +461,35 @@
       ]
     },
     {
+      "name": "arrow-down-left-box",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "name": "arrow-down-left-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "left",
+        "outline"
+      ]
+    },
+    {
+      "name": "arrow-down-left-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "left",
+        "sharp"
+      ]
+    },
+    {
       "name": "arrow-down-outline",
       "tags": [
         "arrow",
@@ -7445,10 +7474,10 @@
     {
       "name": "open",
       "tags": [
-        "open",
-        "external",
         "anchor",
-        "link"
+        "external",
+        "link",
+        "open"
       ]
     },
     {
