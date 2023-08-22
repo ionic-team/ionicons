@@ -498,6 +498,35 @@
       ]
     },
     {
+      "name": "arrow-down-right-box",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "right"
+      ]
+    },
+    {
+      "name": "arrow-down-right-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "outline",
+        "right"
+      ]
+    },
+    {
+      "name": "arrow-down-right-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "right",
+        "sharp"
+      ]
+    },
+    {
       "name": "arrow-down-sharp",
       "tags": [
         "arrow",
