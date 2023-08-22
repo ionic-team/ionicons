@@ -736,6 +736,35 @@
       ]
     },
     {
+      "name": "arrow-up-left-box",
+      "tags": [
+        "arrow",
+        "box",
+        "left",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-left-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "left",
+        "outline",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-left-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "left",
+        "sharp",
+        "up"
+      ]
+    },
+    {
       "name": "arrow-up-outline",
       "tags": [
         "arrow",
