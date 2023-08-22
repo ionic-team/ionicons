@@ -773,6 +773,35 @@
       ]
     },
     {
+      "name": "arrow-up-right-box",
+      "tags": [
+        "arrow",
+        "box",
+        "right",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-right-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "outline",
+        "right",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-right-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "right",
+        "sharp",
+        "up"
+      ]
+    },
+    {
       "name": "arrow-up-sharp",
       "tags": [
         "arrow",
