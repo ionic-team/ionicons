@@ -7445,10 +7445,10 @@
     {
       "name": "open",
       "tags": [
-        "open",
-        "external",
         "anchor",
-        "link"
+        "external",
+        "link",
+        "open"
       ]
     },
     {
