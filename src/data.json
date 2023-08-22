@@ -6035,6 +6035,13 @@
       ]
     },
     {
+      "name": "logo-appflow",
+      "tags": [
+        "appflow",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-apple",
       "tags": [
         "apple",
@@ -7445,10 +7452,10 @@
     {
       "name": "open",
       "tags": [
-        "open",
-        "external",
         "anchor",
-        "link"
+        "external",
+        "link",
+        "open"
       ]
     },
     {
