@@ -6495,6 +6495,13 @@
       ]
     },
     {
+      "name": "logo-trapeze",
+      "tags": [
+        "logo",
+        "trapeze"
+      ]
+    },
+    {
       "name": "logo-tumblr",
       "tags": [
         "logo",
@@ -7445,10 +7452,10 @@
     {
       "name": "open",
       "tags": [
-        "open",
-        "external",
         "anchor",
-        "link"
+        "external",
+        "link",
+        "open"
       ]
     },
     {
