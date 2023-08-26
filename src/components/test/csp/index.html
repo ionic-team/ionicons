@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" mode="ios">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/*; img-src 'self'; connect-src 'self'; font-src https://fonts.gstatic.com/*'">
+  <title>IonIcon - Content Security Policy</title>
+  <script type="module" src="../../build/ionicons.esm.js"></script>
+  <script nomodule src="../../build/ionicons.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      font-size: 32px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    h1 {
+      margin: 15px 0 5px;
+      font-size: 25px;
+    }
+
+    h2 {
+      margin: 15px 0 5px;
+      font-size: 18px;
+    }
+
+    .custom {
+      stroke: red;
+      fill: goldenrod;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ionicons - Test </h1>
+
+  <h2>Default</h2>
+  <ion-icon src="/assets/chat.svg"></ion-icon>
+  <ion-icon name="add"></ion-icon>
+
+  <ion-icon id="icon-usage"
+    icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Watch</title><rect x='136' y='136' width='240' height='240' rx='8' ry='8'/><path d='M384 96h-48V16H176v80h-48a32 32 0 00-32 32v256a32 32 0 0032 32h48v80h160v-80h48a32 32 0 0032-32V128a32 32 0 00-32-32zm8 272a24 24 0 01-24 24H144a24 24 0 01-24-24V144a24 24 0 0124-24h224a24 24 0 0124 24z'/></svg>">
+  </ion-icon>
+
+  <ion-icon class="custom"
+    icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Watch</title><rect x='136' y='136' width='240' height='240' rx='8' ry='8'/><path d='M384 96h-48V16H176v80h-48a32 32 0 00-32 32v256a32 32 0 0032 32h48v80h160v-80h48a32 32 0 0032-32V128a32 32 0 00-32-32zm8 272a24 24 0 01-24 24H144a24 24 0 01-24-24V144a24 24 0 0124-24h224a24 24 0 0124 24z'/></svg>">
+  </ion-icon>
+</body>
+
+</html>

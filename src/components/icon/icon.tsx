@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getName, getUrl, inheritAttributes } from './utils';
+import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -17,7 +17,6 @@ export class Icon {
 
   @State() private svgContent?: string;
   @State() private isVisible = false;
-  @State() private ariaLabel?: string;
 
   /**
    * The mode determines which platform styles to use.
@@ -80,7 +79,7 @@ export class Icon {
    * @default true
    */
   @Prop() sanitize = true;
-  
+
   componentWillLoad() {
     this.inheritedAttributes = inheritAttributes(this.el, ['aria-label']);
   }
@@ -101,7 +100,6 @@ export class Icon {
       this.io = undefined;
     }
   }
-
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
     if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
       const io = (this.io = new (window as any).IntersectionObserver(
@@ -122,19 +120,16 @@ export class Icon {
       cb();
     }
   }
-  
-  private hasAriaHidden = () => {
-    const { el } = this;
-    
-    return el.hasAttribute('aria-hidden') && el.getAttribute('aria-hidden') === 'true';
-  }
 
   @Watch('name')
   @Watch('src')
   @Watch('icon')
+  @Watch('ios')
+  @Watch('md')
   loadIcon() {
     if (Build.isBrowser && this.isVisible) {
       const url = getUrl(this);
+
       if (url) {
         if (ioniconContent.has(url)) {
           // sync if it's already loaded
@@ -146,42 +141,28 @@ export class Icon {
       }
     }
 
-    const label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
-
-    /**
-     * Come up with a default label
-     * in case user does not provide their own.
-     */
-    if (label) {
-      this.ariaLabel = label.replace(/\-/g, ' ');
-    }
+    this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
   }
 
   render() {
-    const { iconName, ariaLabel, inheritedAttributes } = this;
+    const { flipRtl, iconName, inheritedAttributes, el } = this;
     const mode = this.mode || 'md';
-    const flipRtl =
-      this.flipRtl ||
-      (iconName &&
-        (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) &&
-        this.flipRtl !== false);
+    // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+    const shouldAutoFlip = iconName
+      ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
+      : false;
+    // if shouldBeFlippable is true, the icon should change direction when `dir` changes
+    const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
-    /**
-     * Only set the aria-label if a) we have generated
-     * one for the icon and if aria-hidden is not set to "true".
-     * If developer wants to set their own aria-label, then
-     * inheritedAttributes down below will override whatever
-     * default label we have set.
-     */
     return (
       <Host
-        aria-label={ariaLabel !== undefined && !this.hasAriaHidden() ? ariaLabel : null}
         role="img"
         class={{
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': !!flipRtl && (this.el.ownerDocument as Document).dir === 'rtl',
+          'flip-rtl': shouldBeFlippable,
+          'icon-rtl': shouldBeFlippable && isRTL(el)
         }}
         {...inheritedAttributes}
       >

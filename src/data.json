@@ -2546,6 +2546,29 @@
       ]
     },
     {
+      "name": "chevron-collapse",
+      "tags": [
+        "chevron",
+        "collapse"
+      ]
+    },
+    {
+      "name": "chevron-collapse-outline",
+      "tags": [
+        "chevron",
+        "collapse",
+        "outline"
+      ]
+    },
+    {
+      "name": "chevron-collapse-sharp",
+      "tags": [
+        "chevron",
+        "collapse",
+        "sharp"
+      ]
+    },
+    {
       "name": "chevron-down",
       "tags": [
         "arrow",
@@ -2597,6 +2620,29 @@
         "arrow",
         "chevron",
         "down",
+        "sharp"
+      ]
+    },
+    {
+      "name": "chevron-expand",
+      "tags": [
+        "chevron",
+        "expand"
+      ]
+    },
+    {
+      "name": "chevron-expand-outline",
+      "tags": [
+        "chevron",
+        "expand",
+        "outline"
+      ]
+    },
+    {
+      "name": "chevron-expand-sharp",
+      "tags": [
+        "chevron",
+        "expand",
         "sharp"
       ]
     },
@@ -7406,7 +7452,10 @@
     {
       "name": "open",
       "tags": [
-        "open"
+        "open",
+        "external",
+        "anchor",
+        "link"
       ]
     },
     {
