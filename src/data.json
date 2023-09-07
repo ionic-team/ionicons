@@ -8456,21 +8456,24 @@
     {
       "name": "print",
       "tags": [
-        "print"
+        "print",
+        "fax"
       ]
     },
     {
       "name": "print-outline",
       "tags": [
         "outline",
-        "print"
+        "print",
+        "fax"
       ]
     },
     {
       "name": "print-sharp",
       "tags": [
         "print",
-        "sharp"
+        "sharp",
+        "fax"
       ]
     },
     {
