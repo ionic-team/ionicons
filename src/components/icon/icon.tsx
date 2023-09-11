@@ -12,6 +12,7 @@ export class Icon {
   private io?: IntersectionObserver;
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
+  private didLoadIcon = false;
 
   @Element() el!: HTMLElement;
 
@@ -94,6 +95,12 @@ export class Icon {
     });
   }
 
+  componentDidLoad() {
+    if (!this.didLoadIcon) {
+      this.loadIcon();
+    }
+  }
+
   disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
@@ -138,6 +145,7 @@ export class Icon {
           // async if it hasn't been loaded
           getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
         }
+        this.didLoadIcon = true;
       }
     }
 
