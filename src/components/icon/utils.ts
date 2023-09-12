@@ -47,9 +47,9 @@ const addToIconMap = (name: string, data: any) => {
     map.set(name, data);
     
   /**
-   * Importing and defining the same icon reference
-   * multiple times should not yield a warning.
-   */
+  
+* Importing and defining the same icon reference
+   * multiple times should not yield a warning.   */
   } else if (existingIcon !== data) {
     console.warn(`[Ionicons Warning]: Multiple icons were mapped to name "${name}". Ensure that multiple icons are not mapped to the same icon name.`)
   }
