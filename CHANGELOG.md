@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.1](https://github.com/ionic-team/ionicons/compare/v7.2.0...v7.2.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* **icon:** font scales without host style ([#1289](https://github.com/ionic-team/ionicons/issues/1289)) ([875bfd8](https://github.com/ionic-team/ionicons/commit/875bfd8300144c62e55a5a76dc2cff8cf1f01bfe))
+
+
+
+
+
 # [7.2.0](https://github.com/ionic-team/ionicons/compare/v7.1.2...v7.2.0) (2023-10-10)
 
 
