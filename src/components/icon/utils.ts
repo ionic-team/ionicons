@@ -18,9 +18,42 @@ export const getIconMap = (): Map<string, string> => {
 };
 
 export const addIcons = (icons: { [name: string]: string; }) => {
-  const map = getIconMap();
-  Object.keys(icons).forEach(name => map.set(name, icons[name]));
+  Object.keys(icons).forEach(name => {    
+    addToIconMap(name, icons[name]);
+    
+    /**
+     * Developers can also pass in the SVG object directly
+     * and Ionicons can map the object to a kebab case name.
+     * Example: addIcons({ addCircleOutline });
+     * This will create an "addCircleOutline" entry and
+     * an "add-circle-outline" entry.
+     * Usage: <ion-icon name="add-circle-outline"></ion-icon>
+     * Using name="addCircleOutline" is valid too, but the
+     * kebab case naming is preferred.
+     */
+    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2").toLowerCase();
+    if (name !== toKebabCase) {
+      addToIconMap(toKebabCase, icons[name]);
+    }
+  });
 };
+
+const addToIconMap = (name: string, data: any) => {
+  const map = getIconMap();
+  
+  const existingIcon = map.get(name);
+
+  if (existingIcon === undefined) {
+    map.set(name, data);
+    
+  /**
+   * Importing and defining the same icon reference
+   * multiple times should not yield a warning.
+   */
+  } else if (existingIcon !== data) {
+    console.warn(`[Ionicons Warning]: Multiple icons were mapped to name "${name}". Ensure that multiple icons are not mapped to the same icon name.`)
+  }
+}
 
 
 export const getUrl = (i: Icon) => {
