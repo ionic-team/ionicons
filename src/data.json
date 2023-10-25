@@ -7619,6 +7619,22 @@
       ]
     },
     {
+      "name": "pdf",
+      "tags": [
+        "document",
+        "file",
+        "pdf"
+      ]
+    },
+    {
+      "name": "pdf-outline",
+      "tags": [
+        "document",
+        "file",
+        "pdf"
+      ]
+    },
+    {
       "name": "pencil",
       "tags": [
         "pencil"
