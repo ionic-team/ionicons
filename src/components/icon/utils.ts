@@ -88,7 +88,16 @@ const getNamedUrl = (iconName: string) => {
   if (url) {
     return url;
   }
-  return getAssetPath(`svg/${iconName}.svg`);
+  try {
+    return getAssetPath(`svg/${iconName}.svg`);
+  } catch(e) {
+    /**
+     * In the custom elements build version of ionicons, referencing an icon
+     * by name will throw an invalid URL error because the asset path is not defined.
+     * This catches that error and logs something that is more developer-friendly.
+     */
+    console.warn(`[Ionicons Warning]: Could not load icon with name "${name}". Ensure that the icon is registered using addIcons or that the icon SVG data is passed directly to the icon component.`);
+  }
 };
 
 
