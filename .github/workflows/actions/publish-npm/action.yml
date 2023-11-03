@@ -21,18 +21,30 @@ runs:
     - name: Install latest npm
       run: npm install -g npm@latest
       shell: bash
+    - name: Which Stencil (check package.json)
+      run: cat package.json
+      shell: bash
     - name: Install Dependencies
       run: npm ci
+      shell: bash
+    - name: Which Stencil
+      run: npm ls @stencil/core
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     - name: Update Version
       run: npm version ${{ inputs.version }} --git-tag-version false
       shell: bash
       working-directory: ${{ inputs.working-directory }}
+    - name: Which Stencil
+      run: npm ls @stencil/core
+      shell: bash
     - name: Run Build
       run: npm run build
       shell: bash
       working-directory: ${{ inputs.working-directory }}
+    - name: Which Stencil
+      run: npm ls @stencil/core
+      shell: bash
     - name: Prepare NPM Token
       run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
       working-directory: ${{ inputs.working-directory }}
