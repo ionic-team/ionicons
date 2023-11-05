@@ -32,15 +32,17 @@ export const getSvgContent = (url: string, sanitize: boolean) => {
       } else {
         // we don't already have a request
         req = fetch(url).then((rsp) => {
-          if (rsp.ok) {
-            return rsp.text().then((svgContent) => {
-              if (svgContent && sanitize !== false) {
-                svgContent = validateContent(svgContent);
-              }
-              ioniconContent.set(url, svgContent || '');
-            });
-          }
-          ioniconContent.set(url, '');
+          // When fetching from a file:// URL, some browsers return
+          // a 0 status code even when the request succeeds so don't
+          // rely on rsp.ok as the only signal of success.
+          return rsp.text().then((svgContent) => {
+            if (svgContent && sanitize !== false) {
+              svgContent = validateContent(svgContent);
+            }
+            ioniconContent.set(url, svgContent || '');
+          }).catch((_) => {
+            ioniconContent.set(url, '');
+          });
         });
         // cache for the same requests
         requests.set(url, req);
