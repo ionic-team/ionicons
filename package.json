@@ -74,5 +74,6 @@
   "license": "MIT",
   "sideEffects": [
     "icons/imports/"
-  ]
+  ],
+  "web-types": "dist/ionic.web-types.json"
 }
