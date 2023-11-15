@@ -31,7 +31,7 @@ async function build(rootDir: string) {
 
     await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
 
-    await createWebTypes(version, rootDir, distDir, srcSvgData)
+    await createWebTypes(version, rootDir, distDir, srcSvgData);
 
     await copyToTesting(rootDir, distDir, srcSvgData);
   } catch (e) {
