@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.2](https://github.com/ionic-team/ionicons/compare/v7.2.1...v7.2.2) (2023-12-13)
+
+
+### Bug Fixes
+
+* **icon:** add better warning when loading icons ([#1297](https://github.com/ionic-team/ionicons/issues/1297)) ([d582e62](https://github.com/ionic-team/ionicons/commit/d582e6208e626722e4350426a509a6870e90a0bc))
+
+
+
+
+
+## [7.2.2](https://github.com/ionic-team/ionicons/compare/v7.2.1...v7.2.2) (2023-12-13)
+
+
+### Bug Fixes
+
+* **icon:** add better warning when loading icons ([#1297](https://github.com/ionic-team/ionicons/issues/1297)) ([d582e62](https://github.com/ionic-team/ionicons/commit/d582e6208e626722e4350426a509a6870e90a0bc))
+
+
+
+
+
 ## [7.2.1](https://github.com/ionic-team/ionicons/compare/v7.2.0...v7.2.1) (2023-10-10)
 
 
