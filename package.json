@@ -1,6 +1,6 @@
 {
   "name": "ionicons",
-  "version": "7.1.2",
+  "version": "7.2.2",
   "description": "Premium icons for Ionic.",
   "files": [
     "components/",
@@ -23,7 +23,7 @@
     "test.spec": "stencil test --spec"
   },
   "dependencies": {
-    "@stencil/core": "^2.18.0"
+    "@stencil/core": "^4.0.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.33.0",
