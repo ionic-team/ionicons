@@ -13,7 +13,7 @@ test.describe('icon: dynamic type', () => {
 
     const icons = page.locator('#icons');
 
-    expect(await icons.screenshot()).toMatchSnapshot(`icon-dynamic-type-diff.png`);
+    await expect(icons).toHaveScreenshot(`icon-dynamic-type-diff.png`);
   });
 
 });
