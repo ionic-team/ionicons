@@ -12,6 +12,7 @@ export class Icon {
   private io?: IntersectionObserver;
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
+  private didLoadIcon = false;
 
   @Element() el!: HTMLElement;
 
@@ -94,13 +95,24 @@ export class Icon {
     });
   }
 
+  componentDidLoad() {
+    /**
+     * Addresses an Angular issue where property values are assigned after the 'connectedCallback' but prior to the registration of watchers.
+     * This enhancement ensures the loading of an icon when the component has finished rendering and the icon has yet to apply the SVG data.
+     * This modification pertains to the usage of Angular's binding syntax:
+     * `<ion-icon [name]="myIconName"></ion-icon>`
+     */
+    if (!this.didLoadIcon) {
+      this.loadIcon();
+    }
+  }
+
   disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
     }
   }
-
   private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
     if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
       const io = (this.io = new (window as any).IntersectionObserver(
@@ -139,6 +151,7 @@ export class Icon {
           // async if it hasn't been loaded
           getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
         }
+        this.didLoadIcon = true;
       }
     }
 
@@ -146,11 +159,14 @@ export class Icon {
   }
 
   render() {
-    const { iconName, el, inheritedAttributes } = this;
+    const { flipRtl, iconName, inheritedAttributes, el } = this;
     const mode = this.mode || 'md';
-    const flipRtl =
-      this.flipRtl ||
-      (iconName && (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) && this.flipRtl !== false);
+    // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+    const shouldAutoFlip = iconName
+      ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
+      : false;
+    // if shouldBeFlippable is true, the icon should change direction when `dir` changes
+    const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
     return (
       <Host
@@ -159,7 +175,8 @@ export class Icon {
           [mode]: true,
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
-          'flip-rtl': !!flipRtl && isRTL(el),
+          'flip-rtl': shouldBeFlippable,
+          'icon-rtl': shouldBeFlippable && isRTL(el)
         }}
         {...inheritedAttributes}
       >

@@ -9,6 +9,7 @@
   fill: currentColor;
 
   box-sizing: content-box !important;
+
 }
 
 :host .ionicon {
@@ -33,28 +34,70 @@ svg {
   width: 100%;
 }
 
-
 /* Icon RTL
  * -----------------------------------------------------------
  */
 
-:host(.flip-rtl) .icon-inner {
+/**
+ * Safari <16.4 incorrectly reports
+ * that it supports :dir(rtl) when it does not.
+ * This @supports statement lets us target
+ * WebKit browsers to apply the RTL fallback.
+ * -webkit-named-image only exists on WebKit.
+ * For WebKit browsers that do support :dir(rtl)
+ * (i.e. Safari >= 16.4) then the :dir(rtl)
+ * code farther down on the page will take
+ * effect and override this fallback.
+ */
+@supports (background: -webkit-named-image(i)) {
+  :host(.icon-rtl) .icon-inner {
+    transform: scaleX(-1);
+  }
+}
+
+/**
+ * Fallback for browsers that support
+ * neither :host-context nor :dir.
+ * The icon will not react to dir
+ * changes, but it will at least
+ * respect the dir on component load.
+ */
+@supports not selector(:dir(rtl)) and selector(:host-context([dir='rtl'])) {
+  :host(.icon-rtl) .icon-inner {
+    transform: scaleX(-1);
+  }
+}
+
+/* :host-context is supported in chromium; :dir is supported in safari & firefox */
+:host(.flip-rtl):host-context([dir='rtl']) .icon-inner {
   transform: scaleX(-1);
 }
 
+@supports selector(:dir(rtl)) {
+  :host(.flip-rtl:dir(rtl)) .icon-inner {
+    transform: scaleX(-1);
+  }
+  /**
+   * This is needed for WebKit otherwise the fallback
+   * will always cause the icon to be flipped if the document
+   * loads in RTL.
+   */
+  :host(.flip-rtl:dir(ltr)) .icon-inner {
+    transform: scaleX(1);
+  }
+}
 
 /* Icon Sizes
  * -----------------------------------------------------------
  */
 
 :host(.icon-small) {
-  font-size: 18px !important;
+  font-size: 1.125rem !important;
 }
 
-:host(.icon-large){
-  font-size: 32px !important;
+:host(.icon-large) {
+  font-size: 2rem !important;
 }
-
 
 /* Icon Colors
  * -----------------------------------------------------------

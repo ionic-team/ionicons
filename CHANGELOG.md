@@ -3,6 +3,68 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.2](https://github.com/ionic-team/ionicons/compare/v7.2.1...v7.2.2) (2023-12-13)
+
+
+### Bug Fixes
+
+* **icon:** add better warning when loading icons ([#1297](https://github.com/ionic-team/ionicons/issues/1297)) ([d582e62](https://github.com/ionic-team/ionicons/commit/d582e6208e626722e4350426a509a6870e90a0bc))
+
+
+
+
+
+## [7.2.1](https://github.com/ionic-team/ionicons/compare/v7.2.0...v7.2.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* **icon:** font scales without host style ([#1289](https://github.com/ionic-team/ionicons/issues/1289)) ([875bfd8](https://github.com/ionic-team/ionicons/commit/875bfd8300144c62e55a5a76dc2cff8cf1f01bfe))
+
+
+
+
+
+# [7.2.0](https://github.com/ionic-team/ionicons/compare/v7.1.2...v7.2.0) (2023-10-10)
+
+
+### Bug Fixes
+
+* **icon:** mapping same icon does not warn ([#1279](https://github.com/ionic-team/ionicons/issues/1279)) ([8297018](https://github.com/ionic-team/ionicons/commit/8297018cb591f5e33a815ceb9e4e765271ecf5ad))
+* **icon:** verify the icon loads in the lifecycle ([#1278](https://github.com/ionic-team/ionicons/issues/1278)) ([7f7f346](https://github.com/ionic-team/ionicons/commit/7f7f346af47f45531046e1d2f1a88f53acee77fa))
+
+
+### Features
+
+* allow passing in only icon SVG data to addIcons ([#1256](https://github.com/ionic-team/ionicons/issues/1256)) ([1e33313](https://github.com/ionic-team/ionicons/commit/1e3331347328c11a8b4c58c9200059bfd76b0e59))
+* **icon:** support for dynamic type ([#1246](https://github.com/ionic-team/ionicons/issues/1246)) ([45c04dd](https://github.com/ionic-team/ionicons/commit/45c04dda6c905e535083b171cead374b1c993afa))
+
+
+
+
+
+## [7.1.2](https://github.com/ionic-team/ionicons/compare/v7.1.1...v7.1.2) (2023-05-30)
+
+
+### Bug Fixes
+
+* **icon:** add :dir fallback ([#1223](https://github.com/ionic-team/ionicons/issues/1223)) ([06fa4a5](https://github.com/ionic-team/ionicons/commit/06fa4a528dd1906a5673ff6d80d22aef0f6e113b))
+
+
+
+
+
+## [7.1.1](https://github.com/ionic-team/ionicons/compare/v7.1.0...v7.1.1) (2023-05-23)
+
+
+### Bug Fixes
+
+* **icon:** respond to changes of document dir ([#1210](https://github.com/ionic-team/ionicons/issues/1210)) ([e70bf21](https://github.com/ionic-team/ionicons/commit/e70bf214b82cd2187ea9394803283570d28ab28c))
+
+
+
+
+
 # [7.1.0](https://github.com/ionic-team/ionicons/compare/v7.0.0...v7.1.0) (2023-03-23)
 
 
