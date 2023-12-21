@@ -1,6 +1,6 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
-import { getName, getUrl, inheritAttributes } from './utils';
+import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
 @Component({
   tag: 'ion-icon',
@@ -12,6 +12,7 @@ export class Icon {
   private io?: IntersectionObserver;
   private iconName: string | null = null;
   private inheritedAttributes: { [k: string]: any } = {};
+  private didLoadIcon = false;
 
   @Element() el!: HTMLElement;
 
@@ -94,6 +95,18 @@ export class Icon {
     });
   }
 
+  componentDidLoad() {
+    /**
+     * Addresses an Angular issue where property values are assigned after the 'connectedCallback' but prior to the registration of watchers.
+     * This enhancement ensures the loading of an icon when the component has finished rendering and the icon has yet to apply the SVG data.
+     * This modification pertains to the usage of Angular's binding syntax:
+     * `<ion-icon [name]="myIconName"></ion-icon>`
+     */
+    if (!this.didLoadIcon) {
+      this.loadIcon();
+    }
+  }
+
   disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
@@ -138,6 +151,7 @@ export class Icon {
           // async if it hasn't been loaded
           getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
         }
+        this.didLoadIcon = true;
       }
     }
 
@@ -145,7 +159,7 @@ export class Icon {
   }
 
   render() {
-    const { flipRtl, iconName, inheritedAttributes } = this;
+    const { flipRtl, iconName, inheritedAttributes, el } = this;
     const mode = this.mode || 'md';
     // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
     const shouldAutoFlip = iconName
@@ -162,6 +176,7 @@ export class Icon {
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
           'flip-rtl': shouldBeFlippable,
+          'icon-rtl': shouldBeFlippable && isRTL(el)
         }}
         {...inheritedAttributes}
       >
