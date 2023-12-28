@@ -51,6 +51,16 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (!Array.isArray(params.attrs)) {
               params.attrs = [params.attrs];
             }
+            
+            /**
+             * All host SVG elements must have
+             * the ionicons class otherwise styles
+             * will not apply.
+             */
+            if (item.elem === 'svg') {
+              item.class.add('ionicon');
+            }
+            
             if (item.isElem()) {
               item.eachAttr((attr) => {
                 if (attr.name === 'fill') {
@@ -165,14 +175,8 @@ async function optimizeSvg(
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
 
   const optimizedSvg = await optimizePass.optimize(srcSvgContent, { path: svgData.srcFilePath });
-
-  const optimizedCode = optimizedSvg.data.replace(
-    /<svg (.*?)>/,
-    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">`,
-  );
-
-  const webComponentSvg = await webComponentPass.optimize(optimizedCode, { path: svgData.srcFilePath });
-  const sourceSvg = await sourcePass.optimize(optimizedCode, { path: svgData.srcFilePath });
+  const webComponentSvg = await webComponentPass.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
+  const sourceSvg = await sourcePass.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
 
   svgData.optimizedSvgContent = webComponentSvg.data;
 

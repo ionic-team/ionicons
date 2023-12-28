@@ -50,7 +50,7 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 
 1. Run `npm start` from the root directory to start a local version of the icon test.
 2. Modify the icon test as needed in the `index.html` file.
-
+3. If you are modifying icons, you can run `npm run build.files` to re-run the SVG optimization script to verify there are no changes after optimizing the SVG.
 
 <!-- #### Building Changes
 

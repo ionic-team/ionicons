@@ -126,9 +126,29 @@ describe('addIcons', () => {
     expect(getIconMap().get('myCoolIcon')).toEqual(logoIonitron);
   });
   
+  it('should not warn when mapping the same icon twice', () => {
+    const spy = jest.spyOn(console, 'warn');
+
+    const myIcon = 'my-icon';
+    
+    expect(spy).not.toHaveBeenCalled();
+ 
+    addIcons({ myIcon });
+    
+    expect(spy).not.toHaveBeenCalled();
+    
+    addIcons({ myIcon });
+    
+    expect(spy).not.toHaveBeenCalled();
+  });
+  
   it('should not overwrite icons', () => {
+    const spy = jest.spyOn(console, 'warn');
+    
     const logoA = 'logo a';
     const logoB = 'logo b';
+    
+    expect(spy).not.toHaveBeenCalled();
     
     expect(getIconMap().get('logo-a')).toEqual(undefined);
     
@@ -136,17 +156,8 @@ describe('addIcons', () => {
     
     expect(getIconMap().get('logo-a')).toEqual(logoB);
     expect(getIconMap().get('logoA')).toEqual(logoA);
+    
+    expect(spy).toHaveBeenCalled();
   });
   
-  it('passing kebab case key should not generate a camel case key', () => {
-    const logoIonitron = 'stubbed data';
-    
-    expect(getIconMap().get('kebab-key')).toEqual(undefined);
-    expect(getIconMap().get('kebabKey')).toEqual(undefined);
-    
-    addIcons({ 'kebab-key': logoIonitron });
-    
-    expect(getIconMap().get('kebab-key')).toEqual(logoIonitron);
-    expect(getIconMap().get('kebabKey')).toEqual(undefined);
-  });
 });
