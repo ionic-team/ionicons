@@ -40,10 +40,17 @@ export const addIcons = (icons: { [name: string]: string; }) => {
 
 const addToIconMap = (name: string, data: any) => {
   const map = getIconMap();
+  
+  const existingIcon = map.get(name);
 
-  if (map.get(name) === undefined) {
+  if (existingIcon === undefined) {
     map.set(name, data);
-  } else {
+    
+  /**
+   * Importing and defining the same icon reference
+   * multiple times should not yield a warning.
+   */
+  } else if (existingIcon !== data) {
     console.warn(`[Ionicons Warning]: Multiple icons were mapped to name "${name}". Ensure that multiple icons are not mapped to the same icon name.`)
   }
 }
@@ -57,7 +64,7 @@ export const getUrl = (i: Icon) => {
 
   url = getName(i.name, i.icon, i.mode, i.ios, i.md);
   if (url) {
-    return getNamedUrl(url);
+    return getNamedUrl(url, i);
   }
 
   if (i.icon) {
@@ -76,12 +83,23 @@ export const getUrl = (i: Icon) => {
 };
 
 
-const getNamedUrl = (iconName: string) => {
+const getNamedUrl = (iconName: string, iconEl: Icon) => {
   const url = getIconMap().get(iconName);
   if (url) {
     return url;
   }
-  return getAssetPath(`svg/${iconName}.svg`);
+  try {
+    return getAssetPath(`svg/${iconName}.svg`);
+  } catch(e) {
+    /**
+     * In the custom elements build version of ionicons, referencing an icon
+     * by name will throw an invalid URL error because the asset path is not defined.
+     * This catches that error and logs something that is more developer-friendly.
+     * We also include a reference to the ion-icon element so developers can
+     * figure out which instance of ion-icon needs to be updated.
+     */
+    console.warn(`[Ionicons Warning]: Could not load icon with name "${iconName}". Ensure that the icon is registered using addIcons or that the icon SVG data is passed directly to the icon component.`, iconEl);
+  }
 };
 
 
