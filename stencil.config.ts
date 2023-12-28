@@ -3,6 +3,7 @@ import { Config } from '@stencil/core';
 export const config: Config = {
   namespace: 'ionicons',
   buildEs5: 'prod',
+  sourceMap: false,
   outputTargets: [
     {
       type: 'dist',
