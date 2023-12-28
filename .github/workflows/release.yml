@@ -45,8 +45,13 @@ jobs:
         git config user.name ionitron
         git config user.email hi@ionicframework.com
       shell: bash
+    # This ensures the local version of Lerna is installed
+    # and that we do not use the global Lerna version
+    - name: Install root dependencies
+      run: npm ci
+      shell: bash
     - name: Create GitHub Release
-      run: lerna version ${{ inputs.version }} --yes --force-publish='*' --conventional-commits --create-release github
+      run: npx lerna version ${{ inputs.version }} --yes --force-publish='*' --conventional-commits --create-release github
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: bash
@@ -55,7 +60,7 @@ jobs:
     # so we do that here.
     - name: Bump Package Lock
       run: |
-        lerna exec "npm install --package-lock-only --legacy-peer-deps"
+        npx lerna exec "npm install --package-lock-only --legacy-peer-deps"
         git add .
         git commit -m "chore(): update package lock files"
         git push
