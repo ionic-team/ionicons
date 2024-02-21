@@ -31,7 +31,7 @@ export const addIcons = (icons: { [name: string]: string; }) => {
      * Using name="addCircleOutline" is valid too, but the
      * kebab case naming is preferred.
      */
-    const toKebabCase = name.replace(/([a-z]|(?=[A-Z]))([A-Z0-9])/g, "$1-$2").toLowerCase();
+    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z0-9])/g, "$1-$2").toLowerCase();
     if (name !== toKebabCase) {
       addToIconMap(toKebabCase, icons[name]);
     }
