@@ -125,7 +125,7 @@ import { logoIonic } from 'ionicons/icons';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [IonIcon],
+  imports: [IonIcon], // remove if you import `IonicModule`
   template: '<ion-icon name="logo-ionic"></ion-icon>',
   styles: []
 })
