@@ -101,6 +101,42 @@ ion-icon {
 }
 ```
 
+## Add to Angular project
+
+```
+npm i @ionic/angular@latest
+```
+
+```typescript
+// app.config.ts
+import { ApplicationConfig } from '@angular/core';
+import { provideIonicAngular } from '@ionic/angular/standalone';
+
+export const appConfig: ApplicationConfig = {
+  providers: [provideIonicAngular({})]
+};
+
+// app.component.ts
+import { Component } from '@angular/core';
+import { IonIcon } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { logoIonic } from 'ionicons/icons';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [IonIcon], // remove if you import `IonicModule`
+  template: '<ion-icon name="logo-ionic"></ion-icon>',
+  styles: []
+})
+export class AppComponent {
+  constructor() {
+    addIcons({logoIonic});
+  }
+}
+```
+More: [Ionic angular build options](https://ionicframework.com/docs/angular/build-options)
+
 ## Migrating from v4
 
 See the [5.0 release notes](https://github.com/ionic-team/ionicons/releases/tag/5.0.0) for a list of icon deletions/renames.
