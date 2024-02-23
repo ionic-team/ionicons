@@ -102,6 +102,11 @@ ion-icon {
 ```
 
 ## Add to Angular project
+
+```
+npm i @ionic/angular@latest
+```
+
 ```typescript
 // app.config.ts
 import { ApplicationConfig } from '@angular/core';
