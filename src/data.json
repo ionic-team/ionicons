@@ -1411,6 +1411,26 @@
       ]
     },
     {
+      "name": "binoculars",
+      "tags": [
+        "binoculars"
+      ]
+    },
+    {
+      "name": "binoculars-outline",
+      "tags": [
+        "binoculars",
+        "outline"
+      ]
+    },
+    {
+      "name": "binoculars-sharp",
+      "tags": [
+        "binoculars",
+        "sharp"
+      ]
+    },
+    {
       "name": "bluetooth",
       "tags": [
         "bluetooth",
@@ -6151,6 +6171,13 @@
       ]
     },
     {
+      "name": "logo-appflow",
+      "tags": [
+        "appflow",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-apple",
       "tags": [
         "apple",
@@ -6608,6 +6635,13 @@
       "tags": [
         "logo",
         "tiktok"
+      ]
+    },
+    {
+      "name": "logo-trapeze",
+      "tags": [
+        "logo",
+        "trapeze"
       ]
     },
     {
