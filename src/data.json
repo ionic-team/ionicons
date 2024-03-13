@@ -8572,12 +8572,14 @@
     {
       "name": "print",
       "tags": [
+        "fax",
         "print"
       ]
     },
     {
       "name": "print-outline",
       "tags": [
+        "fax",
         "outline",
         "print"
       ]
@@ -8585,6 +8587,7 @@
     {
       "name": "print-sharp",
       "tags": [
+        "fax",
         "print",
         "sharp"
       ]
