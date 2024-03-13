@@ -8,7 +8,7 @@ test.describe('icon: basic', () => {
     // Wait for all SVGs to be lazily loaded before taking screenshots
     await page.waitForLoadState('networkidle');
 
-    expect(await page.screenshot({ fullPage: true })).toMatchSnapshot(`icon-diff.png`);
+    await expect(page).toHaveScreenshot(`icon-diff.png`, { fullPage: true });
   });
 
   test('some icons should flip when rtl', async ({ page }) => {
