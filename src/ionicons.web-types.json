@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json.schemastore.org/web-types",
+  "name": "ionicons",
+  "version": "0.0.0",
+  "description-markup": "markdown",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "ion-icon",
+          "description": "The Ionicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.",
+          "doc-url": "https://ionic.io/ionicons/usage",
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The name of the built-in icon from the Ionicons package.",
+              "priority": "high",
+              "doc-url": "https://ionic.io/ionicons/usage#basic-usage",
+              "value": {
+                "type": "symbol"
+              },
+              "values": [
+                {
+                  "name": "The ion-icon",
+                  "pattern": {
+                    "items": "ionicons"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "src",
+              "priority": "high",
+              "description": "Provide url of a custom SVG icon. The `src` attribute works the same as `<img src=\"...\">` in that the url must be accessible from the webpage that's making a request for the image. Additionally, the external file can only be a valid `svg` and does not allow scripts or events within the `svg` element.",
+              "doc-url": "https://ionic.io/ionicons/usage#basic-usage"
+            },
+            {
+              "name": "md",
+              "description": "Provide icon variant specific to MD platform",
+              "priority": "high",
+              "doc-url": "https://ionic.io/ionicons/usage#basic-usage",
+              "value": {
+                "type": "symbol"
+              },
+              "values": [
+                {
+                  "name": "The ion-icon",
+                  "pattern": {
+                    "items": "ionicons"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "ios",
+              "description": "Provide icon variant specific to iOS platform",
+              "priority": "high",
+              "doc-url": "https://ionic.io/ionicons/usage#basic-usage",
+              "value": {
+                "type": "symbol"
+              },
+              "values": [
+                {
+                  "name": "The ion-icon",
+                  "pattern": {
+                    "items": "ionicons"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "size",
+              "description": "Specify the icon size using one of the pre-defined font sizes.\n\nAlternatively you can set a specific size by applying the `font-size` CSS property on the `ion-icon` component. It's recommended to use pixel sizes that are a multiple of 8 (8, 16, 32, 64, etc.)",
+              "doc-url": "https://ionic.io/ionicons/usage#basic-usage",
+              "priority": "high",
+              "value": {
+                "type": "enum"
+              },
+              "values": [
+                {
+                  "name": "small"
+                },
+                {
+                  "name": "large"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ionicons": [
+      ]
+    }
+  }
+}
