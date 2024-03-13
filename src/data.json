@@ -1295,6 +1295,26 @@
       ]
     },
     {
+      "name": "binoculars",
+      "tags": [
+        "binoculars"
+      ]
+    },
+    {
+      "name": "binoculars-outline",
+      "tags": [
+        "binoculars",
+        "outline"
+      ]
+    },
+    {
+      "name": "binoculars-sharp",
+      "tags": [
+        "binoculars",
+        "sharp"
+      ]
+    },
+    {
       "name": "bluetooth",
       "tags": [
         "bluetooth",
@@ -7445,10 +7465,10 @@
     {
       "name": "open",
       "tags": [
-        "open",
-        "external",
         "anchor",
-        "link"
+        "external",
+        "link",
+        "open"
       ]
     },
     {
