@@ -1,6 +1,6 @@
 {
   "name": "ionicons",
-  "version": "7.2.3",
+  "version": "7.3.0",
   "description": "Premium icons for Ionic.",
   "files": [
     "components/",
@@ -74,5 +74,6 @@
   "license": "MIT",
   "sideEffects": [
     "icons/imports/"
-  ]
+  ],
+  "web-types": "dist/ionic.web-types.json"
 }
