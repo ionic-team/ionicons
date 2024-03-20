@@ -51,7 +51,7 @@ jobs:
       run: npm ci
       shell: bash
     - name: Create GitHub Release
-      run: npx lerna version ${{ inputs.version }} --yes --force-publish='*' --conventional-commits --create-release github
+      run: ./node_modules/.bin/lerna version ${{ inputs.version }} --yes --force-publish='*' --conventional-commits --create-release github
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: bash
@@ -87,7 +87,7 @@ jobs:
       # so we do that here.
       - name: Bump Package Lock
         run: |
-          npx lerna exec "npm install --package-lock-only --legacy-peer-deps"
+          ./node_modules/.bin/lerna exec "npm install --package-lock-only --legacy-peer-deps"
           git add .
           git commit -m "chore(): update package lock files"
           git push
