@@ -86,78 +86,88 @@ describe('getName', () => {
 describe('addIcons', () => {
   it('should add an svg to the icon cache', () => {
     const testData = 'stubbed data';
-    
+
     expect(getIconMap().get('logo-ionic')).toEqual(undefined);
-    
+
     addIcons({ 'logo-ionic': 'stubbed data' });
-    
+
     expect(getIconMap().get('logo-ionic')).toEqual(testData);
   });
-  
+
   it('should add kebab and camel case names to the icon cache', () => {
     const logoIonitron = 'stubbed data';
-    
+
     expect(getIconMap().get('logo-ionitron')).toEqual(undefined);
     expect(getIconMap().get('logoIonitron')).toEqual(undefined);
-    
+
     addIcons({ logoIonitron });
-    
+
     expect(getIconMap().get('logo-ionitron')).toEqual(logoIonitron);
     expect(getIconMap().get('logoIonitron')).toEqual(logoIonitron);
+
+    const logoIonitron0 = 'stubbed data 0'
+
+    expect(getIconMap().get('logo-ionitron-0')).toEqual(undefined);
+    expect(getIconMap().get('logoIonitron0')).toEqual(undefined);
+
+    addIcons({ logoIonitron0 });
+
+    expect(getIconMap().get('logo-ionitron-0')).toEqual(logoIonitron0);
+    expect(getIconMap().get('logoIonitron0')).toEqual(logoIonitron0);
   });
-  
+
   it('should map to a name that does not match the svg', () => {
     const logoIonitron = 'stubbed data';
-    
+
     expect(getIconMap().get('my-fun-icon')).toEqual(undefined);
-    
+
     addIcons({ 'my-fun-icon': logoIonitron });
-    
+
     expect(getIconMap().get('my-fun-icon')).toEqual(logoIonitron);
   });
-  
+
   it('should map to an explicit camel case name', () => {
     const logoIonitron = 'stubbed data';
-    
+
     expect(getIconMap().get('myCoolIcon')).toEqual(undefined);
-    
+
     addIcons({ 'myCoolIcon': logoIonitron });
-    
+
     expect(getIconMap().get('myCoolIcon')).toEqual(logoIonitron);
   });
-  
+
   it('should not warn when mapping the same icon twice', () => {
     const spy = jest.spyOn(console, 'warn');
 
     const myIcon = 'my-icon';
-    
+
     expect(spy).not.toHaveBeenCalled();
- 
+
     addIcons({ myIcon });
-    
+
     expect(spy).not.toHaveBeenCalled();
-    
+
     addIcons({ myIcon });
-    
+
     expect(spy).not.toHaveBeenCalled();
   });
-  
+
   it('should not overwrite icons', () => {
     const spy = jest.spyOn(console, 'warn');
-    
+
     const logoA = 'logo a';
     const logoB = 'logo b';
-    
+
     expect(spy).not.toHaveBeenCalled();
-    
+
     expect(getIconMap().get('logo-a')).toEqual(undefined);
-    
+
     addIcons({ 'logo-a': logoB, logoA });
-    
+
     expect(getIconMap().get('logo-a')).toEqual(logoB);
     expect(getIconMap().get('logoA')).toEqual(logoA);
-    
+
     expect(spy).toHaveBeenCalled();
   });
-  
+
 });
