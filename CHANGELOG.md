@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.3](https://github.com/ionic-team/ionicons/compare/v7.2.2...v7.2.3) (2024-03-20)
+
+
+### Bug Fixes
+
+* **icon:** icon names with numbers are correctly converted to kebab case ([#1339](https://github.com/ionic-team/ionicons/issues/1339)) ([077168d](https://github.com/ionic-team/ionicons/commit/077168dac9347f25d2b8ce440bd0a3e8576f4cdf)), closes [#1338](https://github.com/ionic-team/ionicons/issues/1338)
+
+
+
+
+
+## [7.2.3](https://github.com/ionic-team/ionicons/compare/v7.2.2...v7.2.3) (2024-03-20)
+
+
+### Bug Fixes
+
+* **icon:** icon names with numbers are correctly converted to kebab case ([#1339](https://github.com/ionic-team/ionicons/issues/1339)) ([077168d](https://github.com/ionic-team/ionicons/commit/077168dac9347f25d2b8ce440bd0a3e8576f4cdf)), closes [#1338](https://github.com/ionic-team/ionicons/issues/1338)
+
+
+
+
+
 ## [7.2.2](https://github.com/ionic-team/ionicons/compare/v7.2.1...v7.2.2) (2023-12-13)
 
 
