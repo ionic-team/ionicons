@@ -31,6 +31,8 @@ async function build(rootDir: string) {
 
     await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
 
+    await createWebTypes(version, rootDir, distDir, srcSvgData);
+
     await copyToTesting(rootDir, distDir, srcSvgData);
   } catch (e) {
     console.error(e);
@@ -271,6 +273,31 @@ async function createCheatsheet(
     .replace(/{{content}}/g, c.join('\n'));
 
   await fs.writeFile(distCheatsheetFilePath, html);
+}
+
+async function createWebTypes(
+  version: string,
+  rootDir: string,
+  distDir: any,
+  srcSvgData: SvgData[]
+) {
+  const srcWebTypeFilePath = join(rootDir, 'src/ionicons.web-types.json');
+  const distWebTypesFilePath = join(distDir, 'ionicons.web-types.json');
+
+  const webTypes = JSON.parse(await fs.readFile(srcWebTypeFilePath, 'utf8'))
+
+  webTypes.version = version
+
+  const icons = webTypes.contributions.html.ionicons
+  for (let data of srcSvgData) {
+    icons.push({
+      name: data.iconName,
+      icon: "dist/svg/" + data.fileName
+    })
+  }
+
+  const jsonStr = JSON.stringify(webTypes, null, 2) + '\n';
+  await fs.writeFile(distWebTypesFilePath, jsonStr);
 }
 
 async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: string): Promise<SvgData[]> {

@@ -91,4 +91,6 @@ jobs:
           git add .
           git commit -m "chore(): update package lock files"
           git push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
