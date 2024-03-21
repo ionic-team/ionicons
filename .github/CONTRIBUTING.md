@@ -32,6 +32,8 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 
 While we appreciate all contributions, please note that we do not accept contributions that add or modify icon SVG assets. All SVG asset modifications are done by Ionic's in-house design team to ensure design consistency across the entire icon set. If there is an icon you need added or an existing icon you need modified please [create a new issue](https://github.com/ionic-team/ionicons/issues/new/choose).
 
+Contributions that fix bugs or add features to the `ion-icon` component are welcome!
+
 
 ### Setup
 
