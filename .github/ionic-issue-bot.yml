@@ -26,7 +26,6 @@ closeAndLock:
 
 comment:
   labels:
-  
     - label: "help wanted"
       message: >
         This issue has been labeled as `help wanted`. This label is added to issues
