@@ -3668,26 +3668,6 @@
       ]
     },
     {
-      "name": "database",
-      "tags": [
-        "database"
-      ]
-    },
-    {
-      "name": "database-outline",
-      "tags": [
-        "database",
-        "outline"
-      ]
-    },
-    {
-      "name": "database-sharp",
-      "tags": [
-        "database",
-        "sharp"
-      ]
-    },
-    {
       "name": "desktop",
       "tags": [
         "desktop"
