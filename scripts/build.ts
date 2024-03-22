@@ -31,6 +31,8 @@ async function build(rootDir: string) {
 
     await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
 
+    await createWebTypes(version, rootDir, distDir, srcSvgData);
+
     await copyToTesting(rootDir, distDir, srcSvgData);
   } catch (e) {
     console.error(e);
@@ -51,6 +53,16 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (!Array.isArray(params.attrs)) {
               params.attrs = [params.attrs];
             }
+            
+            /**
+             * All host SVG elements must have
+             * the ionicons class otherwise styles
+             * will not apply.
+             */
+            if (item.elem === 'svg') {
+              item.class.add('ionicon');
+            }
+            
             if (item.isElem()) {
               item.eachAttr((attr) => {
                 if (attr.name === 'fill') {
@@ -94,7 +106,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (item.isElem()) {
               item.eachAttr((attr) => {
                 if (attr.name === 'stroke' || attr.name === 'fill') {
-                  if (attr.value === '#000') {
+                  if (attr.value === '#000' || attr.value === 'currentColor') {
                     item.addAttr({
                       name: attr.name,
                       value: 'currentColor',
@@ -165,14 +177,8 @@ async function optimizeSvg(
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
 
   const optimizedSvg = await optimizePass.optimize(srcSvgContent, { path: svgData.srcFilePath });
-
-  const optimizedCode = optimizedSvg.data.replace(
-    /<svg (.*?)>/,
-    `<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>${svgData.title}</title>`,
-  );
-
-  const webComponentSvg = await webComponentPass.optimize(optimizedCode, { path: svgData.srcFilePath });
-  const sourceSvg = await sourcePass.optimize(optimizedCode, { path: svgData.srcFilePath });
+  const webComponentSvg = await webComponentPass.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
+  const sourceSvg = await sourcePass.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
 
   svgData.optimizedSvgContent = webComponentSvg.data;
 
@@ -267,6 +273,31 @@ async function createCheatsheet(
     .replace(/{{content}}/g, c.join('\n'));
 
   await fs.writeFile(distCheatsheetFilePath, html);
+}
+
+async function createWebTypes(
+  version: string,
+  rootDir: string,
+  distDir: any,
+  srcSvgData: SvgData[]
+) {
+  const srcWebTypeFilePath = join(rootDir, 'src/ionicons.web-types.json');
+  const distWebTypesFilePath = join(distDir, 'ionicons.web-types.json');
+
+  const webTypes = JSON.parse(await fs.readFile(srcWebTypeFilePath, 'utf8'))
+
+  webTypes.version = version
+
+  const icons = webTypes.contributions.html.ionicons
+  for (let data of srcSvgData) {
+    icons.push({
+      name: data.iconName,
+      icon: "dist/svg/" + data.fileName
+    })
+  }
+
+  const jsonStr = JSON.stringify(webTypes, null, 2) + '\n';
+  await fs.writeFile(distWebTypesFilePath, jsonStr);
 }
 
 async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: string): Promise<SvgData[]> {

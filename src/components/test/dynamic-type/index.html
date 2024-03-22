@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" mode="ios">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/*; img-src 'self'; connect-src 'self'; font-src https://fonts.gstatic.com/*'"
+    />
+    <title>IonIcon - Dynamic Type</title>
+    <script type="module" src="../../build/ionicons.esm.js"></script>
+    <script nomodule src="../../build/ionicons.js"></script>
+    <style>
+      html {
+        font-size: 28px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="icons">
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star" size="small"></ion-icon>
+      <ion-icon name="star" size="large"></ion-icon>
+    </div>
+  </body>
+</html>
