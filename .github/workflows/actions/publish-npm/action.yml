@@ -1,0 +1,45 @@
+name: 'Release'
+description: 'Releases a package'
+inputs:
+  version:
+    description: 'The type of version to release.'
+  tag:
+    description: 'The tag to publish to on NPM.'
+  working-directory:
+    description: 'The directory of the package.'
+  folder:
+    default: './'
+    description: 'A folder containing a package.json file.'
+  token:
+    description: 'The NPM authentication token required to publish.'
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+    - name: Install latest npm
+      run: npm install -g npm@latest
+      shell: bash
+    - name: Install Dependencies
+      run: npm ci
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+    - name: Update Version
+      run: npm version ${{ inputs.version }} --git-tag-version false
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+    - name: Run Build
+      run: npm run build
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+    - name: Prepare NPM Token
+      run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      env:
+        NPM_TOKEN: ${{ inputs.token }}
+    - name: Publish to NPM
+      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --provenance
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
