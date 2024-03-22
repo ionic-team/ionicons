@@ -28,12 +28,19 @@ Please see our [Contributor Code of Conduct](./CODE_OF_CONDUCT.md) for informati
 * Looking for an issue to fix? Make sure to look through our issues with the [help wanted](https://github.com/ionic-team/ionicons/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) label!
 
 
+## Adding or Modifiying Icons
+
+While we appreciate all contributions, please note that we do not accept contributions that add or modify icon SVG assets. All SVG asset modifications are done by Ionic's in-house design team to ensure design consistency across the entire icon set. If there is an icon you need added or an existing icon you need modified please [create a new issue](https://github.com/ionic-team/ionicons/issues/new/choose).
+
+Contributions that fix bugs in or add features to the `ion-icon` component are welcome!
+
+
 ### Setup
 
 1. [Download the installer](https://nodejs.org/) for the LTS version of Node.js. This is the best way to also [install npm](https://blog.npmjs.org/post/85484771375/how-to-install-npm#_=_).
 2. Fork this repository.
 3. Clone your fork.
-4. Create a new branch from master for your change.
+4. Create a new branch from `main` for your change.
 5. Run `npm install` from the root directory to install dependencies for this package.
 6. Run `npm run build` to perform a first time build.
 7. [Modify the Icon Component](#modifying-components) if desired.
@@ -59,7 +66,7 @@ TODO -->
 
 ### Submit Pull Request
 
-1. [Create a new pull request](https://github.com/ionic-team/ionicons/compare) with the `master` branch as the `base`. You may need to click on `compare across forks` to find your changes.
+1. [Create a new pull request](https://github.com/ionic-team/ionicons/compare) with the `main` branch as the `base`. You may need to click on `compare across forks` to find your changes.
 2. See the [Creating a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) GitHub help article for more information.
 3. Please fill out the Pull Request template to the best of your ability and include any issues that are related.
 
