@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.3.0](https://github.com/ionic-team/ionicons/compare/v7.2.3...v7.3.0) (2024-03-20)
+
+
+### Features
+
+* add appflow icon ([#1262](https://github.com/ionic-team/ionicons/issues/1262)) ([fa5e765](https://github.com/ionic-team/ionicons/commit/fa5e7659fc1622908c4e55b01d0573017a36af6a))
+* add arrow box icons ([#1265](https://github.com/ionic-team/ionicons/issues/1265)) ([d5a55f8](https://github.com/ionic-team/ionicons/commit/d5a55f8541b208ab46dd41e53528aab48a90ed10))
+* add binoculars icons ([#1258](https://github.com/ionic-team/ionicons/issues/1258)) ([3024818](https://github.com/ionic-team/ionicons/commit/302481846e48428a354bc36220506001ac4c645e))
+* add trapeze icon ([#1260](https://github.com/ionic-team/ionicons/issues/1260)) ([3b85413](https://github.com/ionic-team/ionicons/commit/3b85413a059b2c91f10105d576cc717fd687a491))
+* add updated wifi logos ([#1264](https://github.com/ionic-team/ionicons/issues/1264)) ([26aac36](https://github.com/ionic-team/ionicons/commit/26aac36334cc09e5887523bc99c3d746586ebb63)), closes [#323](https://github.com/ionic-team/ionicons/issues/323)
+* add updated yahoo icon ([#1266](https://github.com/ionic-team/ionicons/issues/1266)) ([c6ed6b6](https://github.com/ionic-team/ionicons/commit/c6ed6b629e45465b49e8e35db3830083ca9520ef))
+* **doc:** add Web Types ([#1301](https://github.com/ionic-team/ionicons/issues/1301)) ([f946a3e](https://github.com/ionic-team/ionicons/commit/f946a3ee3a4a1c2bdf9508b11a71fcb0a419d571))
+* update gitlab logo ([#1261](https://github.com/ionic-team/ionicons/issues/1261)) ([2586fb2](https://github.com/ionic-team/ionicons/commit/2586fb26b2a493fcb4b5b0156dd00d6b5eab1ab0)), closes [#613](https://github.com/ionic-team/ionicons/issues/613)
+* update ionic logo ([#1263](https://github.com/ionic-team/ionicons/issues/1263)) ([50fe570](https://github.com/ionic-team/ionicons/commit/50fe570566d4c28de7fb10694543cd6dc72f3935))
+
+
+
+
+
+# [7.3.0](https://github.com/ionic-team/ionicons/compare/v7.2.3...v7.3.0) (2024-03-20)
+
+
+### Features
+
+* add appflow icon ([#1262](https://github.com/ionic-team/ionicons/issues/1262)) ([fa5e765](https://github.com/ionic-team/ionicons/commit/fa5e7659fc1622908c4e55b01d0573017a36af6a))
+* add arrow box icons ([#1265](https://github.com/ionic-team/ionicons/issues/1265)) ([d5a55f8](https://github.com/ionic-team/ionicons/commit/d5a55f8541b208ab46dd41e53528aab48a90ed10))
+* add binoculars icons ([#1258](https://github.com/ionic-team/ionicons/issues/1258)) ([3024818](https://github.com/ionic-team/ionicons/commit/302481846e48428a354bc36220506001ac4c645e))
+* add trapeze icon ([#1260](https://github.com/ionic-team/ionicons/issues/1260)) ([3b85413](https://github.com/ionic-team/ionicons/commit/3b85413a059b2c91f10105d576cc717fd687a491))
+* add updated wifi logos ([#1264](https://github.com/ionic-team/ionicons/issues/1264)) ([26aac36](https://github.com/ionic-team/ionicons/commit/26aac36334cc09e5887523bc99c3d746586ebb63)), closes [#323](https://github.com/ionic-team/ionicons/issues/323)
+* add updated yahoo icon ([#1266](https://github.com/ionic-team/ionicons/issues/1266)) ([c6ed6b6](https://github.com/ionic-team/ionicons/commit/c6ed6b629e45465b49e8e35db3830083ca9520ef))
+* **doc:** add Web Types ([#1301](https://github.com/ionic-team/ionicons/issues/1301)) ([f946a3e](https://github.com/ionic-team/ionicons/commit/f946a3ee3a4a1c2bdf9508b11a71fcb0a419d571))
+* update gitlab logo ([#1261](https://github.com/ionic-team/ionicons/issues/1261)) ([2586fb2](https://github.com/ionic-team/ionicons/commit/2586fb26b2a493fcb4b5b0156dd00d6b5eab1ab0)), closes [#613](https://github.com/ionic-team/ionicons/issues/613)
+* update ionic logo ([#1263](https://github.com/ionic-team/ionicons/issues/1263)) ([50fe570](https://github.com/ionic-team/ionicons/commit/50fe570566d4c28de7fb10694543cd6dc72f3935))
+
+
+
+
+
+## [7.2.3](https://github.com/ionic-team/ionicons/compare/v7.2.2...v7.2.3) (2024-03-20)
+
+
+### Bug Fixes
+
+* **icon:** icon names with numbers are correctly converted to kebab case ([#1339](https://github.com/ionic-team/ionicons/issues/1339)) ([077168d](https://github.com/ionic-team/ionicons/commit/077168dac9347f25d2b8ce440bd0a3e8576f4cdf)), closes [#1338](https://github.com/ionic-team/ionicons/issues/1338)
+
+
+
+
+
 ## [7.2.2](https://github.com/ionic-team/ionicons/compare/v7.2.1...v7.2.2) (2023-12-13)
 
 

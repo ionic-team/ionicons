@@ -461,11 +461,69 @@
       ]
     },
     {
+      "name": "arrow-down-left-box",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "name": "arrow-down-left-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "left",
+        "outline"
+      ]
+    },
+    {
+      "name": "arrow-down-left-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "left",
+        "sharp"
+      ]
+    },
+    {
       "name": "arrow-down-outline",
       "tags": [
         "arrow",
         "down",
         "outline"
+      ]
+    },
+    {
+      "name": "arrow-down-right-box",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "right"
+      ]
+    },
+    {
+      "name": "arrow-down-right-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "outline",
+        "right"
+      ]
+    },
+    {
+      "name": "arrow-down-right-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "down",
+        "right",
+        "sharp"
       ]
     },
     {
@@ -678,10 +736,68 @@
       ]
     },
     {
+      "name": "arrow-up-left-box",
+      "tags": [
+        "arrow",
+        "box",
+        "left",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-left-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "left",
+        "outline",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-left-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "left",
+        "sharp",
+        "up"
+      ]
+    },
+    {
       "name": "arrow-up-outline",
       "tags": [
         "arrow",
         "outline",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-right-box",
+      "tags": [
+        "arrow",
+        "box",
+        "right",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-right-box-outline",
+      "tags": [
+        "arrow",
+        "box",
+        "outline",
+        "right",
+        "up"
+      ]
+    },
+    {
+      "name": "arrow-up-right-box-sharp",
+      "tags": [
+        "arrow",
+        "box",
+        "right",
+        "sharp",
         "up"
       ]
     },
@@ -1291,6 +1407,26 @@
         "bicycle",
         "bike",
         "exercise",
+        "sharp"
+      ]
+    },
+    {
+      "name": "binoculars",
+      "tags": [
+        "binoculars"
+      ]
+    },
+    {
+      "name": "binoculars-outline",
+      "tags": [
+        "binoculars",
+        "outline"
+      ]
+    },
+    {
+      "name": "binoculars-sharp",
+      "tags": [
+        "binoculars",
         "sharp"
       ]
     },
@@ -6055,6 +6191,13 @@
       ]
     },
     {
+      "name": "logo-appflow",
+      "tags": [
+        "appflow",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-apple",
       "tags": [
         "apple",
@@ -6512,6 +6655,13 @@
       "tags": [
         "logo",
         "tiktok"
+      ]
+    },
+    {
+      "name": "logo-trapeze",
+      "tags": [
+        "logo",
+        "trapeze"
       ]
     },
     {
