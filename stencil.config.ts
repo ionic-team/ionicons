@@ -24,10 +24,6 @@ export const config: Config = {
           dest: './assets/',
         },
         {
-          src: './svg/*.svg',
-          dest: './build/svg/',
-        },
-        {
           src: './components/test/',
           dest: './test/',
         }
