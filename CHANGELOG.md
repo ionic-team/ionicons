@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.3.1](https://github.com/ionic-team/ionicons/compare/v7.3.0...v7.3.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* filled ellipsis circle icons renders correctly ([#1353](https://github.com/ionic-team/ionicons/issues/1353)) ([63e60ec](https://github.com/ionic-team/ionicons/commit/63e60ec44c11bda5902b5a496113f65a5e6f3d85)), closes [#1320](https://github.com/ionic-team/ionicons/issues/1320)
+
+
+
+
+
 # [7.3.0](https://github.com/ionic-team/ionicons/compare/v7.2.3...v7.3.0) (2024-03-20)
 
 
