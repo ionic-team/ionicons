@@ -46,9 +46,9 @@ To use a custom SVG, provide its url in the `src` attribute to request the exter
 <ion-icon src="/path/to/external/file.svg"></ion-icon>
 ```
 
-### Custom Asset Path
+#### Custom Asset Path
 
-If you have a different set of icons you like to load or if the Ionicon icons are hosted on a different page or path, you can set the asset url from which Ionicons pulls the icons via:
+If you have a different set of icons you would like to load or if the Ionicon icons are hosted on a different page or path, you can set the asset url from which Ionicons pulls the icons via:
 
 ```ts
 import { setAssetPath } from '@stencil/core'
@@ -65,7 +65,7 @@ This allows the use of named icons like this:
 ```
 
 ## Variants
-Each app icon in Ionicons has a `filled`, `outline` and `sharp` variant. These different variants are provided to make your app feel native to a variety of platforms. The filled variant uses the default name without a suffix. Note: Logo icons do not have outlines or sharp variants.
+Each app icon in Ionicons has a `filled`, `outline` and `sharp` variant. These different variants are provided to make your app feel native to a variety of platforms. The filled variant uses the default name without a suffix. Note: Logo icons do not have outline or sharp variants.
 
 ```html
 <ion-icon name="heart"></ion-icon> <!--filled-->
