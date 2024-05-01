@@ -3,7 +3,8 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [7.4.0](https://github.com/ionic-team/ionicons/compare/v7.3.0...v7.4.0) (2024-05-01)
+<<<<<<< HEAD
+# [7.4.0](https://github.com/ionic-team/ionicons/compare/v7.3.1...v7.4.0) (2024-05-01)
 
 
 ### Features
@@ -16,14 +17,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [7.4.0](https://github.com/ionic-team/ionicons/compare/v7.3.0...v7.4.0) (2024-05-01)
+## [7.3.1](https://github.com/ionic-team/ionicons/compare/v7.3.0...v7.3.1) (2024-03-27)
 
 
-### Features
+### Bug Fixes
 
-* add X logo ([#1371](https://github.com/ionic-team/ionicons/issues/1371)) ([0963fe2](https://github.com/ionic-team/ionicons/commit/0963fe20b77a03b0b8b7f4e94b646cd5d7b25f03)), closes [#1249](https://github.com/ionic-team/ionicons/issues/1249)
-* export setAssetPath ([#1372](https://github.com/ionic-team/ionicons/issues/1372)) ([87f2094](https://github.com/ionic-team/ionicons/commit/87f2094890c22b7b03bf754b6fd2651a83fe20ed)), closes [#1302](https://github.com/ionic-team/ionicons/issues/1302)
-* update server icon ([#1259](https://github.com/ionic-team/ionicons/issues/1259)) ([b4ade9d](https://github.com/ionic-team/ionicons/commit/b4ade9d887c0d5ecc29e25f8e12b576106de712a)), closes [#407](https://github.com/ionic-team/ionicons/issues/407)
+* filled ellipsis circle icons renders correctly ([#1353](https://github.com/ionic-team/ionicons/issues/1353)) ([63e60ec](https://github.com/ionic-team/ionicons/commit/63e60ec44c11bda5902b5a496113f65a5e6f3d85)), closes [#1320](https://github.com/ionic-team/ionicons/issues/1320)
 
 
 
