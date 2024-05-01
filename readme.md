@@ -19,11 +19,11 @@ label.
 
 The Ionicons Web Component is an easy and performant way to use Ionicons in your app. The component will dynamically load an SVG for each icon, so your app is only requesting the icons that you need.
 
-Also note that only visible icons are loaded, and icons which are "below the fold" and hidden from the user's view do not make fetch requests for the svg resource.
+Also note that only visible icons are loaded, and icons that are "below the fold" and hidden from the user's view do not make fetch requests for the svg resource.
 
 ### Installation
 
-If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing </body> tag, to enable them.
+If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing `</body>` tag, to enable them.
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
@@ -46,6 +46,24 @@ To use a custom SVG, provide its url in the `src` attribute to request the exter
 <ion-icon src="/path/to/external/file.svg"></ion-icon>
 ```
 
+#### Custom Asset Path
+
+If you have a different set of icons you would like to load or if the Ionicon icons are hosted on a different page or path, you can set the asset url from which Ionicons pulls the icons via:
+
+```ts
+import { setAssetPath } from '@stencil/core'
+
+// set root path for loading icons to "<root>/public/svg"
+setAssetPath(`${window.location.origin}/public/svg/`);
+```
+
+This allows the use of named icons like this:
+
+```html
+<!-- now pulls the svg from "<root>/public/svg/heart.svg" -->
+<ion-icon name="heart"></ion-icon>
+```
+
 ## Variants
 Each app icon in Ionicons has a `filled`, `outline` and `sharp` variant. These different variants are provided to make your app feel native to a variety of platforms. The filled variant uses the default name without a suffix. Note: Logo icons do not have outline or sharp variants.
 
@@ -56,7 +74,7 @@ Each app icon in Ionicons has a `filled`, `outline` and `sharp` variant. These d
 ```
 
 ### Platform specificity
-When using icons in Ionic Framework you can specify different icons per platform. Use the `md` and `ios` attributes and provide the platform specific icon/variant name.
+When using icons in Ionic Framework you can specify different icons per platform. Use the `md` and `ios` attributes and provide the platform-specific icon/variant name.
 
 ```html
 <ion-icon ios="heart-outline" md="heart-sharp"></ion-icon>
