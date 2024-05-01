@@ -1,10 +1,6 @@
 {
   "name": "ionicons",
-<<<<<<< HEAD
   "version": "7.4.0",
-=======
-  "version": "7.3.1",
->>>>>>> origin/main
   "description": "Premium icons for Ionic.",
   "files": [
     "components/",

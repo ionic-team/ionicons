@@ -3,7 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-<<<<<<< HEAD
 # [7.4.0](https://github.com/ionic-team/ionicons/compare/v7.3.1...v7.4.0) (2024-05-01)
 
 
