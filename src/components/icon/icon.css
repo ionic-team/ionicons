@@ -21,7 +21,6 @@
 }
 
 .ionicon-stroke-width {
-  stroke-width: 32px;
   stroke-width: var(--ionicon-stroke-width, 32px);
 }
 
