@@ -6669,7 +6669,8 @@
       "name": "logo-twitter",
       "tags": [
         "logo",
-        "twitter"
+        "twitter",
+        "x"
       ]
     },
     {
@@ -6754,6 +6755,7 @@
       "name": "logo-x",
       "tags": [
         "logo",
+        "twitter",
         "x"
       ]
     },
