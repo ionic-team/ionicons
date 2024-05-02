@@ -10,15 +10,14 @@ async function build(rootDir: string) {
     const iconDir = join(rootDir, 'icons');
     const distDir = join(rootDir, 'dist');
     const distIoniconsDir = join(distDir, 'ionicons');
-    const distSvgDir = join(distDir, 'svg');
 
     await Promise.all([fs.emptyDir(iconDir), fs.emptyDir(distDir)]);
-    await fs.emptyDir(distSvgDir), await fs.emptyDir(distIoniconsDir);
+    await fs.emptyDir(distIoniconsDir);
 
     const pkgData = await fs.readJson(pkgJsonPath);
     const version = pkgData.version as string;
 
-    const srcSvgData = await getSvgs(srcSvgDir, distSvgDir, distIoniconsDir);
+    const srcSvgData = await getSvgs(srcSvgDir, distIoniconsDir);
 
     await optimizeSvgs(srcSvgData);
 
@@ -53,7 +52,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (!Array.isArray(params.attrs)) {
               params.attrs = [params.attrs];
             }
-            
+
             /**
              * All host SVG elements must have
              * the ionicons class otherwise styles
@@ -62,7 +61,7 @@ async function optimizeSvgs(srcSvgData: SvgData[]) {
             if (item.elem === 'svg') {
               item.class.add('ionicon');
             }
-            
+
             if (item.isElem()) {
               item.eachAttr((attr) => {
                 if (attr.name === 'fill') {
@@ -189,7 +188,6 @@ async function optimizeSvg(
   }
 
   await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
-  await fs.writeFile(svgData.distSvgFilePath, sourceSvg.data);
 }
 
 async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgData[]) {
@@ -300,7 +298,7 @@ async function createWebTypes(
   await fs.writeFile(distWebTypesFilePath, jsonStr);
 }
 
-async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: string): Promise<SvgData[]> {
+async function getSvgs(srcSvgDir: string, distIoniconsDir: string): Promise<SvgData[]> {
   const optimizedSvgDir = join(distIoniconsDir, 'svg');
   await fs.emptyDir(optimizedSvgDir);
 
@@ -318,9 +316,6 @@ async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: s
 
       // srcFilePath: /src/svg/airplane-outline.svg
       const srcFilePath = join(srcSvgDir, fileName);
-
-      // srcFilePath: /src/svg/airplane-outline.svg
-      const distSvgFilePath = join(distSvgDir, fileName);
 
       // optimizedFilePath: /dist/ionicons/svg/airplane-outline.svg
       const optimizedFilePath = join(optimizedSvgDir, fileName);
@@ -354,7 +349,6 @@ async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: s
         fileName,
         title,
         srcFilePath,
-        distSvgFilePath,
         srcSvgContent: await fs.readFile(srcFilePath, 'utf8'),
         optimizedFilePath,
         optimizedSvgContent: null,
@@ -523,11 +517,6 @@ interface SvgData {
    * /dist/ionicons/svg/airplane-outline.svg
    */
   optimizedFilePath: string;
-
-  /**
-   * /dist/svg/airplane-outline.svg
-   */
-  distSvgFilePath: string;
 
   optimizedSvgContent: string;
 
