@@ -15,7 +15,7 @@ jobs:
   build-core:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # Checkout the latest commit in this branch
           ref: ${{ github.event.pull_request.head.sha }}
@@ -25,7 +25,7 @@ jobs:
     needs: [build-core]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/workflows/actions/test-spec
       
   test-e2e:
@@ -46,7 +46,7 @@ jobs:
     needs: [build-core]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/workflows/actions/test-e2e
         with:
           shard: ${{ matrix.shard }}
