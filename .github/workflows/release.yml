@@ -31,7 +31,7 @@ jobs:
     needs: [release-ionicons]
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         token: ${{ secrets.IONITRON_TOKEN }}
         fetch-depth: 0

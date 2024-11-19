@@ -21,7 +21,7 @@ jobs:
     permissions:
       id-token: write
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: ./.github/workflows/actions/publish-npm
       with:
         tag: ${{ inputs.tag }}
