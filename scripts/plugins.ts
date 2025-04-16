@@ -8,13 +8,6 @@ const setRootIoniconClass: PluginConfig = {
     }
 }
 
-const removeStyleAttribute: PluginConfig = {
-    name: 'removeAttrs',
-    params: {
-        attrs: ['style']
-    }
-}
-
 const addFillNoneCss: PluginConfig = {
     name: 'addFillNoneCss',
     fn: () => ({
@@ -28,11 +21,16 @@ const addFillNoneCss: PluginConfig = {
                         ].join(' ');
                     }
                     delete element.attributes.fill;
-                } else if (element.attributes.name === 'stroke') {
+                }
+                if (element.attributes.stroke) {
                     delete element.attributes.stroke;
-                } else if (element.attributes.name === 'stroke-width' && element.attributes.value === '32') {
-                    delete element.attributes.strokeWidth;
-                    element.attributes.class += ' ionicon-stroke-width';
+                }
+                if (element.attributes['stroke-width'] && (element.attributes['stroke-width'] === '32px' || element.attributes['stroke-width'] === '32')) {
+                    delete element.attributes['stroke-width'];
+                    element.attributes.class = [
+                        ...(element.attributes.class?.split(' ') || []),
+                        'ionicon-stroke-width'
+                    ].join(' ');
                 }
             }
         }
@@ -81,11 +79,11 @@ const validatePlugin: PluginConfig = {
 
 const basePlugins: PluginConfig[] = [
     'removeStyleElement',
-    removeStyleAttribute,
+    'convertStyleToAttrs',
     'removeScriptElement',
     'removeDimensions',
     setRootIoniconClass,
-    validatePlugin,
+    validatePlugin
 ]
 
 export const webComponentPassPlugins: PluginConfig[] = [
