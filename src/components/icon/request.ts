@@ -14,7 +14,7 @@ function safeFallback (url: string) {
   return svg;
 }
 
-export const getSvgContent = (url: string, sanitize: boolean): Promise<string> | string => {
+export const getSvgContent = (url: string, sanitize: boolean): Promise<string> => {
   /**
    * see if we already have a request for this url
    */
@@ -29,7 +29,7 @@ export const getSvgContent = (url: string, sanitize: boolean): Promise<string> |
      * with the DOMParser. This works with content security policies enabled.
      */
     if (isSvgDataUrl(url) && isEncodedDataUrl(url)) {
-      return getSvgByUrl(url);
+      return Promise.resolve(getSvgByUrl(url));
     }
 
     return fetchSvg(url, sanitize);
