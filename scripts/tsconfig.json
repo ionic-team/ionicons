@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "module": "commonjs",
-    "target": "es2017"
-  }
-}
