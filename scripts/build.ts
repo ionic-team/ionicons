@@ -1,25 +1,37 @@
+import path from 'node:path';
+
 import fs from 'fs-extra';
-import { join } from 'path';
-import Svgo from 'svgo';
+import { optimize } from 'svgo';
+
+import { webComponentPassPlugins, sourcePassPlugins } from './plugins';
+import { reservedKeywords } from './constants';
+import pkgData from '../package.json' with { type: 'json' };
+import type { SvgData } from './types';
 
 async function build(rootDir: string) {
   try {
-    const pkgJsonPath = join(rootDir, 'package.json');
-    const srcDir = join(rootDir, 'src');
-    const srcSvgDir = join(srcDir, 'svg');
-    const iconDir = join(rootDir, 'icons');
-    const distDir = join(rootDir, 'dist');
-    const distIoniconsDir = join(distDir, 'ionicons');
-    const distSvgDir = join(distDir, 'svg');
+    const pkgJsonPath = path.join(rootDir, 'package.json');
+    const srcDir = path.join(rootDir, 'src');
+    const srcSvgDir = path.join(srcDir, 'svg');
+    const iconDir = path.join(rootDir, 'icons');
+    const distDir = path.join(rootDir, 'dist');
+    const distIoniconsDir = path.join(distDir, 'ionicons');
+    const distSvgDir = path.join(distDir, 'svg');
+    const optimizedSvgDir = path.join(distIoniconsDir, 'svg');
 
-    await Promise.all([fs.emptyDir(iconDir), fs.emptyDir(distDir)]);
-    await fs.emptyDir(distSvgDir), await fs.emptyDir(distIoniconsDir);
+    /**
+     * Empty the directories
+     */
+    await Promise.all([
+      fs.emptyDir(iconDir),
+      fs.emptyDir(distDir),
+      fs.emptyDir(distSvgDir),
+      fs.emptyDir(optimizedSvgDir),
+      fs.emptyDir(distIoniconsDir)
+    ]);
 
-    const pkgData = await fs.readJson(pkgJsonPath);
     const version = pkgData.version as string;
-
-    const srcSvgData = await getSvgs(srcSvgDir, distSvgDir, distIoniconsDir);
-
+    const srcSvgData = await getSvgs(srcSvgDir, distSvgDir, optimizedSvgDir);
     await optimizeSvgs(srcSvgData);
 
     await Promise.all([
@@ -41,172 +53,46 @@ async function build(rootDir: string) {
 }
 
 async function optimizeSvgs(srcSvgData: SvgData[]) {
-  // https://github.com/svg/svgo
-  const optimizePass = new Svgo({});
-  const webComponentPass = new Svgo({
-    full: true,
-    plugins: [
-      {
-        addFillNoneCss: {
-          type: 'perItem',
-          fn: (item, params) => {
-            if (!Array.isArray(params.attrs)) {
-              params.attrs = [params.attrs];
-            }
-            
-            /**
-             * All host SVG elements must have
-             * the ionicons class otherwise styles
-             * will not apply.
-             */
-            if (item.elem === 'svg') {
-              item.class.add('ionicon');
-            }
-            
-            if (item.isElem()) {
-              item.eachAttr((attr) => {
-                if (attr.name === 'fill') {
-                  if (attr.value === 'none') {
-                    item.class.add('ionicon-fill-none');
-                  }
-                  item.removeAttr('fill');
-                } else if (attr.name === 'stroke') {
-                  item.removeAttr('stroke');
-                } else if (attr.name === 'stroke-width' && attr.value === '32') {
-                  item.removeAttr('stroke-width');
-                  item.class.add('ionicon-stroke-width');
-                }
-              });
-            }
-          },
-        },
-      } as any,
-      {
-        removeStyleElement: true,
-      },
-      {
-        removeScriptElement: true,
-      },
-      {
-        removeDimensions: true,
-      },
-    ],
-  });
-
-  const sourcePass = new Svgo({
-    full: true,
-    plugins: [
-      {
-        addFillNoneCss: {
-          type: 'perItem',
-          fn: (item, params) => {
-            if (!Array.isArray(params.attrs)) {
-              params.attrs = [params.attrs];
-            }
-            if (item.isElem()) {
-              item.eachAttr((attr) => {
-                if (attr.name === 'stroke' || attr.name === 'fill') {
-                  if (attr.value === '#000' || attr.value === 'currentColor') {
-                    item.addAttr({
-                      name: attr.name,
-                      value: 'currentColor',
-                      prefix: '',
-                      local: attr.name,
-                    });
-                  } else if (attr.value !== 'none') {
-                    throw new Error(`invalid "${attr.name}" value: ${attr.value}`);
-                  }
-                }
-              });
-            }
-          },
-        },
-      } as any,
-      {
-        removeStyleElement: true,
-      },
-      {
-        removeScriptElement: true,
-      },
-      {
-        removeDimensions: true,
-      },
-    ],
-  });
-
-  const validatePass = new Svgo({
-    full: true,
-    plugins: [
-      {
-        addFillNoneCss: {
-          type: 'perItem',
-          fn: (item, params) => {
-            if (!Array.isArray(params.attrs)) {
-              params.attrs = [params.attrs];
-            }
-            if (item.isElem()) {
-              item.eachAttr((attr) => {
-                if (attr.name === 'style') {
-                  throw new Error('Inline style attributed detected');
-                }
-              });
-            }
-            if (item.isElem('style')) {
-              throw new Error('Inline style element detected');
-            }
-          },
-        },
-      } as any,
-    ],
-  });
-
   await Promise.all(
     srcSvgData.map(async (svgData) => {
-      return optimizeSvg(optimizePass, webComponentPass, sourcePass, validatePass, svgData);
+      return optimizeSvg(svgData);
     }),
   );
 }
 
-async function optimizeSvg(
-  optimizePass: Svgo,
-  webComponentPass: Svgo,
-  sourcePass: Svgo,
-  validatePass: Svgo,
-  svgData: SvgData,
-) {
+async function optimizeSvg(svgData: SvgData) {
   const srcSvgContent = await fs.readFile(svgData.srcFilePath, 'utf8');
 
-  const optimizedSvg = await optimizePass.optimize(srcSvgContent, { path: svgData.srcFilePath });
-  const webComponentSvg = await webComponentPass.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
-  const sourceSvg = await sourcePass.optimize(optimizedSvg.data, { path: svgData.srcFilePath });
+  const optimizedSvg = await optimize(srcSvgContent, { path: svgData.srcFilePath });
+  const webComponentSvg = await optimize(optimizedSvg.data, {
+    path: svgData.srcFilePath,
+    plugins: webComponentPassPlugins
+  });
+  const sourceSvg = await optimize(optimizedSvg.data, {
+    path: svgData.srcFilePath,
+    plugins: sourcePassPlugins
+  });
 
   svgData.optimizedSvgContent = webComponentSvg.data;
-
-  try {
-    await validatePass.optimize(svgData.optimizedSvgContent, { path: svgData.srcFilePath });
-  } catch (e) {
-    console.error(`${e.message}: ${svgData.srcFilePath}`);
-  }
-
   await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
   await fs.writeFile(svgData.distSvgFilePath, sourceSvg.data);
 }
 
 async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgData[]) {
-  const testDir = join(rootDir, 'www');
-  const testBuildDir = join(testDir, 'build');
-  const testSvgDir = join(testBuildDir, 'svg');
+  const testDir = path.join(rootDir, 'www');
+  const testBuildDir = path.join(testDir, 'build');
+  const testSvgDir = path.join(testBuildDir, 'svg');
   await fs.ensureDir(testSvgDir);
 
   await Promise.all(
-    srcSvgData.map(async (svgData) => {
-      const testSvgFilePath = join(testSvgDir, svgData.fileName);
+    srcSvgData.filter((svgData): svgData is SvgData & { optimizedSvgContent: string } => Boolean(svgData.optimizedSvgContent)).map(async (svgData) => {
+      const testSvgFilePath = path.join(testSvgDir, svgData.fileName);
       await fs.writeFile(testSvgFilePath, svgData.optimizedSvgContent);
     }),
   );
 
-  const distCheatsheetFilePath = join(distDir, 'cheatsheet.html');
-  const testCheatsheetFilePath = join(testDir, 'cheatsheet.html');
+  const distCheatsheetFilePath = path.join(distDir, 'cheatsheet.html');
+  const testCheatsheetFilePath = path.join(testDir, 'cheatsheet.html');
   await fs.copyFile(distCheatsheetFilePath, testCheatsheetFilePath);
 }
 
@@ -217,7 +103,7 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
     return 0;
   });
 
-  const symbolsSvgFilePath = join(distDir, 'ionicons.symbols.svg');
+  const symbolsSvgFilePath = path.join(distDir, 'ionicons.symbols.svg');
 
   const lines = [
     `<svg data-ionicons="${version}" style="display:none">`,
@@ -235,7 +121,7 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
     `</style>`,
   ];
 
-  srcSvgData.forEach((svgData) => {
+  srcSvgData.filter((svgData): svgData is SvgData & { optimizedSvgContent: string } => Boolean(svgData.optimizedSvgContent)).forEach((svgData) => {
     const svg = svgData.optimizedSvgContent
       .replace(`<svg xmlns="http://www.w3.org/2000/svg"`, `<symbol id="${svgData.iconName}"`)
       .replace(`</svg>`, `</symbol>`);
@@ -245,9 +131,7 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
   lines.push(`</svg>`, ``);
 
   const content = lines.join('\n');
-
   await fs.writeFile(symbolsSvgFilePath, content);
-
   return content;
 }
 
@@ -258,8 +142,8 @@ async function createCheatsheet(
   svgSymbolsContent: string,
   srcSvgData: SvgData[],
 ) {
-  const CheatsheetTmpFilePath = join(rootDir, 'scripts', 'cheatsheet-template.html');
-  const distCheatsheetFilePath = join(distDir, 'cheatsheet.html');
+  const CheatsheetTmpFilePath = path.join(rootDir, 'scripts', 'cheatsheet-template.html');
+  const distCheatsheetFilePath = path.join(distDir, 'cheatsheet.html');
 
   const c = srcSvgData.map(
     (svgData) => `<a href="./svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
@@ -281,8 +165,8 @@ async function createWebTypes(
   distDir: any,
   srcSvgData: SvgData[]
 ) {
-  const srcWebTypeFilePath = join(rootDir, 'src/ionicons.web-types.json');
-  const distWebTypesFilePath = join(distDir, 'ionicons.web-types.json');
+  const srcWebTypeFilePath = path.join(rootDir, 'src/ionicons.web-types.json');
+  const distWebTypesFilePath = path.join(distDir, 'ionicons.web-types.json');
 
   const webTypes = JSON.parse(await fs.readFile(srcWebTypeFilePath, 'utf8'))
 
@@ -300,10 +184,7 @@ async function createWebTypes(
   await fs.writeFile(distWebTypesFilePath, jsonStr);
 }
 
-async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: string): Promise<SvgData[]> {
-  const optimizedSvgDir = join(distIoniconsDir, 'svg');
-  await fs.emptyDir(optimizedSvgDir);
-
+async function getSvgs(srcSvgDir: string, distSvgDir: string, optimizedSvgDir: string): Promise<SvgData[]> {
   const svgFiles = (await fs.readdir(srcSvgDir)).filter((fileName) => {
     return !fileName.startsWith('.') && fileName.endsWith('.svg');
   });
@@ -317,13 +198,13 @@ async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: s
       }
 
       // srcFilePath: /src/svg/airplane-outline.svg
-      const srcFilePath = join(srcSvgDir, fileName);
+      const srcFilePath = path.join(srcSvgDir, fileName);
 
       // srcFilePath: /src/svg/airplane-outline.svg
-      const distSvgFilePath = join(distSvgDir, fileName);
+      const distSvgFilePath = path.join(distSvgDir, fileName);
 
       // optimizedFilePath: /dist/ionicons/svg/airplane-outline.svg
-      const optimizedFilePath = join(optimizedSvgDir, fileName);
+      const optimizedFilePath = path.join(optimizedSvgDir, fileName);
 
       const dotSplit = fileName.split('.');
       if (dotSplit.length > 2) {
@@ -357,7 +238,6 @@ async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: s
         distSvgFilePath,
         srcSvgContent: await fs.readFile(srcFilePath, 'utf8'),
         optimizedFilePath,
-        optimizedSvgContent: null,
         iconName,
         fileNameMjs,
         fileNameCjs,
@@ -374,29 +254,15 @@ async function getSvgs(srcSvgDir: string, distSvgDir: string, distIoniconsDir: s
 }
 
 async function createIconPackage(version: string, iconDir: string, srcSvgData: SvgData[]) {
-  const iconPkgJsonFilePath = join(iconDir, 'package.json');
-
   await Promise.all([
     createEsmIcons(version, iconDir, srcSvgData),
     createCjsIcons(version, iconDir, srcSvgData),
     createDtsIcons(version, iconDir, srcSvgData),
   ]);
-
-  const iconPkgJson = {
-    name: 'ionicons/icons',
-    version,
-    module: 'index.mjs',
-    main: 'index.js',
-    typings: 'index.d.ts',
-    private: true,
-  };
-
-  const jsonStr = JSON.stringify(iconPkgJson, null, 2) + '\n';
-  await fs.writeFile(iconPkgJsonFilePath, jsonStr);
 }
 
 async function createEsmIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
-  const iconEsmFilePath = join(iconDir, 'index.mjs');
+  const iconEsmFilePath = path.join(iconDir, 'index.mjs');
 
   const o = [`/* Ionicons v${version}, ES Modules */`, ``];
 
@@ -408,7 +274,7 @@ async function createEsmIcons(version: string, iconDir: string, srcSvgData: SvgD
 }
 
 async function createCjsIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
-  const iconCjsFilePath = join(iconDir, 'index.js');
+  const iconCjsFilePath = path.join(iconDir, 'index.js');
 
   const o = [`/* Ionicons v${version}, CommonJS */`, ``];
 
@@ -420,7 +286,7 @@ async function createCjsIcons(version: string, iconDir: string, srcSvgData: SvgD
 }
 
 async function createDtsIcons(version: string, iconDir: string, srcSvgData: SvgData[]) {
-  const iconDtsFilePath = join(iconDir, 'index.d.ts');
+  const iconDtsFilePath = path.join(iconDir, 'index.d.ts');
 
   const o = [`/* Ionicons v${version}, Types */`, ``];
 
@@ -433,6 +299,11 @@ async function createDtsIcons(version: string, iconDir: string, srcSvgData: SvgD
 
 function getDataUrl(svgData: SvgData) {
   let svg = svgData.optimizedSvgContent;
+
+  if (!svg) {
+    throw new Error(`oh no! no optimized SVG content! ${svgData.fileName}`);
+  }
+
   if (svg.includes(`'`)) {
     throw new Error(`oh no! no single quotes allowed! ${svgData.fileName}`);
   }
@@ -444,17 +315,10 @@ function getDataUrl(svgData: SvgData) {
 }
 
 async function createDataJson(version: string, srcDir: string, distDir: string, srcSvgData: SvgData[]) {
-  const srcDataJsonPath = join(srcDir, 'data.json');
-  const distDataJsonPath = join(distDir, 'ionicons.json');
+  const srcDataJsonPath = path.join(srcDir, 'data.json');
+  const distDataJsonPath = path.join(distDir, 'ionicons.json');
 
-  let data: JsonData;
-
-  try {
-    data = await fs.readJson(srcDataJsonPath);
-  } catch (e) {
-    data = {} as any;
-  }
-
+  const data = await fs.readJson(srcDataJsonPath).catch(() => ({}))
   data.icons = data.icons || [];
 
   // add new icons
@@ -503,60 +367,6 @@ function upFirst(word: string) {
   return word[0].toUpperCase() + word.toLowerCase().slice(1);
 }
 
-interface SvgData {
-  /**
-   * airplane-outline.svg
-   */
-  fileName: string;
-
-  /**
-   * airplane
-   */
-  title: string;
-
-  /**
-   * /src/svg/airplane-outline.svg
-   */
-  srcFilePath: string;
-
-  /**
-   * /dist/ionicons/svg/airplane-outline.svg
-   */
-  optimizedFilePath: string;
-
-  /**
-   * /dist/svg/airplane-outline.svg
-   */
-  distSvgFilePath: string;
-
-  optimizedSvgContent: string;
-
-  /**
-   * airplane-outline
-   */
-  iconName: string;
-
-  /**
-   * airplane-outline.mjs
-   */
-  fileNameMjs: string;
-
-  /**
-   * airplane-outline.js
-   */
-  fileNameCjs: string;
-
-  /**
-   * airplaneOutline
-   */
-  exportName: string;
-}
-
-interface JsonData {
-  icons: { name: string; tags?: string[] }[];
-  version?: string;
-}
-
 function toTitleCase(str: string) {
   const s = str.trim().toLowerCase().split(' ');
   for (var i = 0; i < s.length; i++) {
@@ -565,58 +375,5 @@ function toTitleCase(str: string) {
   return s.join(' ');
 }
 
-// https://mathiasbynens.be/notes/reserved-keywords
-const reservedKeywords = new Set([
-  'do',
-  'if',
-  'in',
-  'for',
-  'let',
-  'new',
-  'try',
-  'var',
-  'case',
-  'else',
-  'enum',
-  'eval',
-  'null',
-  'this',
-  'true',
-  'void',
-  'with',
-  'await',
-  'break',
-  'catch',
-  'class',
-  'const',
-  'false',
-  'super',
-  'throw',
-  'while',
-  'yield',
-  'delete',
-  'export',
-  'import',
-  'public',
-  'return',
-  'static',
-  'switch',
-  'typeof',
-  'default',
-  'extends',
-  'finally',
-  'package',
-  'private',
-  'continue',
-  'debugger',
-  'function',
-  'arguments',
-  'interface',
-  'protected',
-  'implements',
-  'instanceof',
-  'constructor',
-]);
-
 // let's do this
-build(join(__dirname, '..'));
+build(path.join(__dirname, '..'));
