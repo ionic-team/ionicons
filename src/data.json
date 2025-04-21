@@ -7469,6 +7469,7 @@
     },
     {
       "name": "notifications",
+      "bell",
       "tags": [
         "notifications"
       ]
@@ -7485,6 +7486,7 @@
       "tags": [
         "circle",
         "notifications",
+        "bell",
         "outline"
       ]
     },
@@ -7493,6 +7495,7 @@
       "tags": [
         "circle",
         "notifications",
+        "bell",
         "sharp"
       ]
     },
@@ -7500,6 +7503,7 @@
       "name": "notifications-off",
       "tags": [
         "notifications",
+        "bell",
         "off"
       ]
     },
@@ -7508,6 +7512,7 @@
       "tags": [
         "circle",
         "notifications",
+        "bell",
         "off"
       ]
     },
@@ -7516,6 +7521,7 @@
       "tags": [
         "circle",
         "notifications",
+        "bell",
         "off",
         "outline"
       ]
@@ -7525,6 +7531,7 @@
       "tags": [
         "circle",
         "notifications",
+        "bell",
         "off",
         "sharp"
       ]
@@ -7533,6 +7540,7 @@
       "name": "notifications-off-outline",
       "tags": [
         "notifications",
+        "bell",
         "off",
         "outline"
       ]
@@ -7541,6 +7549,7 @@
       "name": "notifications-off-sharp",
       "tags": [
         "notifications",
+        "bell",
         "off",
         "sharp"
       ]
@@ -7549,6 +7558,7 @@
       "name": "notifications-outline",
       "tags": [
         "notifications",
+        "bell",
         "outline"
       ]
     },
@@ -7556,6 +7566,7 @@
       "name": "notifications-sharp",
       "tags": [
         "notifications",
+        "bell",
         "sharp"
       ]
     },
