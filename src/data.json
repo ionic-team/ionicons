@@ -7472,16 +7472,17 @@
     },
     {
       "name": "notifications",
-      "bell",
       "tags": [
-        "notifications"
+        "notifications",
+        "bell"
       ]
     },
     {
       "name": "notifications-circle",
       "tags": [
         "circle",
-        "notifications"
+        "notifications",
+        "bell"
       ]
     },
     {
