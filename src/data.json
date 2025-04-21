@@ -7844,6 +7844,7 @@
         "people",
         "person",
         "stalker",
+        "contacts",
         "users"
       ]
     },
@@ -7856,6 +7857,7 @@
         "outline",
         "people",
         "person",
+        "contacts",
         "stalker",
         "users"
       ]
@@ -7869,6 +7871,7 @@
         "people",
         "person",
         "sharp",
+        "contacts",
         "stalker",
         "users"
       ]
