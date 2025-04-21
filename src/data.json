@@ -7645,21 +7645,27 @@
     {
       "name": "options",
       "tags": [
-        "options"
+        "options",
+        "sliders",
+        "filters"
       ]
     },
     {
       "name": "options-outline",
       "tags": [
         "options",
-        "outline"
+        "outline",
+        "sliders",
+        "filters"
       ]
     },
     {
       "name": "options-sharp",
       "tags": [
         "options",
-        "sharp"
+        "sharp",
+        "sliders",
+        "filters"
       ]
     },
     {
