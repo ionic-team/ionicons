@@ -176,7 +176,7 @@ export class Icon {
           ...createColorClasses(this.color),
           [`icon-${this.size}`]: !!this.size,
           'flip-rtl': shouldBeFlippable,
-          'icon-rtl': shouldBeFlippable && isRTL(el)
+          'icon-rtl': shouldBeFlippable && isRTL(el),
         }}
         {...inheritedAttributes}
       >

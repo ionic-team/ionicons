@@ -26,7 +26,7 @@ closeAndLock:
 
 comment:
   labels:
-    - label: "help wanted"
+    - label: 'help wanted'
       message: >
         This issue has been labeled as `help wanted`. This label is added to issues
         that we believe would be good for contributors.
@@ -54,13 +54,13 @@ comment:
 
         If you have already provided a code snippet and are seeing this message, it is likely that the code snippet was
         not enough for our team to reproduce the issue.
-    - label: "community feedback wanted"
+    - label: 'community feedback wanted'
       message: >
         This issue has been labeled as `community feedback wanted`. This label is added to issues that we would like to hear from the community on before moving forward with any final decision on the feature request.
 
 
         If the requested feature is something you would find useful for your applications, please react to the original post with 👍 (`+1`). If you would like to provide an additional use case for the feature, please post a comment.
-        
+
 
         The team will review this feedback and make a final decision. Any decision will be posted on this thread, but please note that we may ultimately decide not to pursue this feature.
 
@@ -71,7 +71,7 @@ comment:
 noReply:
   days: 14
   maxIssuesPerRun: 100
-  label: "needs: reply"
+  label: 'needs: reply'
   responseLabel: triage
   exemptProjects: true
   exemptMilestones: true
@@ -89,7 +89,7 @@ noReply:
 noReproduction:
   days: 14
   maxIssuesPerRun: 100
-  label: "ionitron: needs reproduction"
+  label: 'ionitron: needs reproduction'
   responseLabel: triage
   exemptProjects: true
   exemptMilestones: true

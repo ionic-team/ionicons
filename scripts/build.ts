@@ -27,7 +27,7 @@ async function build(rootDir: string) {
       fs.emptyDir(distDir),
       fs.emptyDir(distSvgDir),
       fs.emptyDir(optimizedSvgDir),
-      fs.emptyDir(distIoniconsDir)
+      fs.emptyDir(distIoniconsDir),
     ]);
 
     const version = pkgData.version as string;
@@ -66,11 +66,11 @@ async function optimizeSvg(svgData: SvgData) {
   const optimizedSvg = await optimize(srcSvgContent, { path: svgData.srcFilePath });
   const webComponentSvg = await optimize(optimizedSvg.data, {
     path: svgData.srcFilePath,
-    plugins: webComponentPassPlugins
+    plugins: webComponentPassPlugins,
   });
   const sourceSvg = await optimize(optimizedSvg.data, {
     path: svgData.srcFilePath,
-    plugins: sourcePassPlugins
+    plugins: sourcePassPlugins,
   });
 
   svgData.optimizedSvgContent = webComponentSvg.data;
@@ -85,10 +85,12 @@ async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgDa
   await fs.ensureDir(testSvgDir);
 
   await Promise.all(
-    srcSvgData.filter((svgData): svgData is SvgData & { optimizedSvgContent: string } => Boolean(svgData.optimizedSvgContent)).map(async (svgData) => {
-      const testSvgFilePath = path.join(testSvgDir, svgData.fileName);
-      await fs.writeFile(testSvgFilePath, svgData.optimizedSvgContent);
-    }),
+    srcSvgData
+      .filter((svgData): svgData is SvgData & { optimizedSvgContent: string } => Boolean(svgData.optimizedSvgContent))
+      .map(async (svgData) => {
+        const testSvgFilePath = path.join(testSvgDir, svgData.fileName);
+        await fs.writeFile(testSvgFilePath, svgData.optimizedSvgContent);
+      }),
   );
 
   const distCheatsheetFilePath = path.join(distDir, 'cheatsheet.html');
@@ -121,12 +123,14 @@ async function createSvgSymbols(version: string, distDir: string, srcSvgData: Sv
     `</style>`,
   ];
 
-  srcSvgData.filter((svgData): svgData is SvgData & { optimizedSvgContent: string } => Boolean(svgData.optimizedSvgContent)).forEach((svgData) => {
-    const svg = svgData.optimizedSvgContent
-      .replace(`<svg xmlns="http://www.w3.org/2000/svg"`, `<symbol id="${svgData.iconName}"`)
-      .replace(`</svg>`, `</symbol>`);
-    lines.push(svg);
-  });
+  srcSvgData
+    .filter((svgData): svgData is SvgData & { optimizedSvgContent: string } => Boolean(svgData.optimizedSvgContent))
+    .forEach((svgData) => {
+      const svg = svgData.optimizedSvgContent
+        .replace(`<svg xmlns="http://www.w3.org/2000/svg"`, `<symbol id="${svgData.iconName}"`)
+        .replace(`</svg>`, `</symbol>`);
+      lines.push(svg);
+    });
 
   lines.push(`</svg>`, ``);
 
@@ -146,7 +150,8 @@ async function createCheatsheet(
   const distCheatsheetFilePath = path.join(distDir, 'cheatsheet.html');
 
   const c = srcSvgData.map(
-    (svgData) => `<a href="./svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
+    (svgData) =>
+      `<a href="./svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
   );
 
   c.push(svgSymbolsContent);
@@ -159,25 +164,20 @@ async function createCheatsheet(
   await fs.writeFile(distCheatsheetFilePath, html);
 }
 
-async function createWebTypes(
-  version: string,
-  rootDir: string,
-  distDir: any,
-  srcSvgData: SvgData[]
-) {
+async function createWebTypes(version: string, rootDir: string, distDir: any, srcSvgData: SvgData[]) {
   const srcWebTypeFilePath = path.join(rootDir, 'src/ionicons.web-types.json');
   const distWebTypesFilePath = path.join(distDir, 'ionicons.web-types.json');
 
-  const webTypes = JSON.parse(await fs.readFile(srcWebTypeFilePath, 'utf8'))
+  const webTypes = JSON.parse(await fs.readFile(srcWebTypeFilePath, 'utf8'));
 
-  webTypes.version = version
+  webTypes.version = version;
 
-  const icons = webTypes.contributions.html.ionicons
+  const icons = webTypes.contributions.html.ionicons;
   for (let data of srcSvgData) {
     icons.push({
       name: data.iconName,
-      icon: "dist/svg/" + data.fileName
-    })
+      icon: 'dist/svg/' + data.fileName,
+    });
   }
 
   const jsonStr = JSON.stringify(webTypes, null, 2) + '\n';
@@ -318,7 +318,7 @@ async function createDataJson(version: string, srcDir: string, distDir: string, 
   const srcDataJsonPath = path.join(srcDir, 'data.json');
   const distDataJsonPath = path.join(distDir, 'ionicons.json');
 
-  const data = await fs.readJson(srcDataJsonPath).catch(() => ({}))
+  const data = await fs.readJson(srcDataJsonPath).catch(() => ({}));
   data.icons = data.icons || [];
 
   // add new icons

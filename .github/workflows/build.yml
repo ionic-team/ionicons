@@ -2,7 +2,7 @@ name: 'Ionicons Build'
 
 on:
   pull_request:
-    branches: [ '**' ]
+    branches: ['**']
 
 # When pushing a new commit we should
 # cancel the previous test run to not
@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/workflows/actions/test-spec
-      
+
   test-e2e:
     strategy:
       # This ensures that all screenshot shard
@@ -51,7 +51,7 @@ jobs:
         with:
           shard: ${{ matrix.shard }}
           totalShards: ${{ matrix.totalShards }}
-  
+
   # Screenshots are required to pass
   # in order for the branch to be merge
   # eligible. However, the screenshot tests

@@ -8,7 +8,7 @@ let parser: DOMParser;
 /**
  * savely fallback to an empty svg
  */
-function safeFallback (url: string) {
+function safeFallback(url: string) {
   const svg = '';
   ioniconContent.set(url, svg);
   return svg;
@@ -52,7 +52,7 @@ function getSvgByUrl(url: string): string {
     ioniconContent.set(url, svg.outerHTML);
     return svg.outerHTML;
   }
-  
+
   throw new Error(`Could not parse svg from ${url}`);
 }
 
@@ -60,23 +60,28 @@ function fetchSvg(url: string, sanitize: boolean): Promise<string> {
   /**
    * we don't already have a request
    */
-  const req = fetch(url).then((rsp) => {
-    /**
-     * When fetching from a file:// URL, some browsers return
-     * a 0 status code even when the request succeeds so don't
-     * rely on rsp.ok as the only signal of success.
-     */
-    return rsp.text().then((svgContent) => {
-      if (svgContent && sanitize !== false) {
-        svgContent = validateContent(svgContent);
-      }
+  const req = fetch(url)
+    .then((rsp) => {
+      /**
+       * When fetching from a file:// URL, some browsers return
+       * a 0 status code even when the request succeeds so don't
+       * rely on rsp.ok as the only signal of success.
+       */
+      return rsp
+        .text()
+        .then((svgContent) => {
+          if (svgContent && sanitize !== false) {
+            svgContent = validateContent(svgContent);
+          }
 
-      const svg = svgContent || '';
-      ioniconContent.set(url, svg);
-      return svg;
-    }).catch(() => safeFallback(url));
-  }).catch(() => safeFallback(url));
- 
+          const svg = svgContent || '';
+          ioniconContent.set(url, svg);
+          return svg;
+        })
+        .catch(() => safeFallback(url));
+    })
+    .catch(() => safeFallback(url));
+
   /**
    * cache for the same requests
    */

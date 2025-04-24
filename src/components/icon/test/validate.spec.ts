@@ -1,14 +1,12 @@
 import { isEncodedDataUrl, isSvgDataUrl, isValid } from '../validate';
 
-
 describe('isValid', () => {
-
   it('invalid onload attr', () => {
     const el = {
       nodeType: 1,
       nodeName: 'svg',
       attributes: [{ name: 'onload' }],
-      childNodes: []
+      childNodes: [],
     } as any;
     expect(isValid(el)).toBe(false);
   });
@@ -18,16 +16,17 @@ describe('isValid', () => {
       nodeType: 1,
       nodeName: 'svg',
       attributes: [{ name: 'OnClIcK' }],
-      childNodes: []
+      childNodes: [],
     } as any;
     expect(isValid(el)).toBe(false);
   });
 
   it('invalid child SCRIPT elm', () => {
     const el = {
-      nodeType: 1, nodeName: 'svg', attributes: [], childNodes: [
-        { nodeType: 1, nodeName: 'SCRIPT', attributes: [], childNodes: [] }
-      ]
+      nodeType: 1,
+      nodeName: 'svg',
+      attributes: [],
+      childNodes: [{ nodeType: 1, nodeName: 'SCRIPT', attributes: [], childNodes: [] }],
     } as any;
     expect(isValid(el)).toBe(false);
   });
@@ -44,9 +43,10 @@ describe('isValid', () => {
 
   it('is valid SVG elm', () => {
     const el = {
-      nodeType: 1, nodeName: 'SVG', attributes: [], childNodes: [
-        { nodeType: 1, nodeName: 'line', attributes: [], childNodes: [] }
-      ]
+      nodeType: 1,
+      nodeName: 'SVG',
+      attributes: [],
+      childNodes: [{ nodeType: 1, nodeName: 'line', attributes: [], childNodes: [] }],
     } as any;
     expect(isValid(el)).toBe(true);
   });
@@ -55,7 +55,6 @@ describe('isValid', () => {
     const el = { nodeType: 3, nodeName: '#text' } as any;
     expect(isValid(el)).toBe(true);
   });
-
 });
 
 it('isSvgDataUrl', () => {

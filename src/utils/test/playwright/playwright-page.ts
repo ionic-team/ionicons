@@ -7,9 +7,7 @@ import type {
 } from '@playwright/test';
 import { test as base } from '@playwright/test';
 
-import {
-  goto as goToPage,
-} from './page/utils';
+import { goto as goToPage } from './page/utils';
 import type { E2EPage } from './playwright-declarations';
 
 type CustomTestArgs = PlaywrightTestArgs &

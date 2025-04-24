@@ -2,7 +2,6 @@ import { expect } from '@playwright/test';
 import { test } from '../../../utils/test/playwright';
 
 test.describe('icon: dynamic type', () => {
-
   test.beforeEach(async ({ page }) => {
     await page.goto('/test/dynamic-type');
   });
@@ -15,5 +14,4 @@ test.describe('icon: dynamic type', () => {
 
     await expect(icons).toHaveScreenshot(`icon-dynamic-type-diff.png`);
   });
-
 });

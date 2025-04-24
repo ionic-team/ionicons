@@ -1,7 +1,6 @@
 import { getAssetPath } from '@stencil/core';
 import { Icon } from './icon';
 
-
 let CACHED_MAP: Map<string, string>;
 
 export const getIconMap = (): Map<string, string> => {
@@ -17,8 +16,8 @@ export const getIconMap = (): Map<string, string> => {
   }
 };
 
-export const addIcons = (icons: { [name: string]: string; }) => {
-  Object.keys(icons).forEach(name => {
+export const addIcons = (icons: { [name: string]: string }) => {
+  Object.keys(icons).forEach((name) => {
     addToIconMap(name, icons[name]);
 
     /**
@@ -31,7 +30,7 @@ export const addIcons = (icons: { [name: string]: string; }) => {
      * Using name="addCircleOutline" is valid too, but the
      * kebab case naming is preferred.
      */
-    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z0-9])/g, "$1-$2").toLowerCase();
+    const toKebabCase = name.replace(/([a-z0-9]|(?=[A-Z]))([A-Z0-9])/g, '$1-$2').toLowerCase();
     if (name !== toKebabCase) {
       addToIconMap(toKebabCase, icons[name]);
     }
@@ -46,15 +45,16 @@ const addToIconMap = (name: string, data: any) => {
   if (existingIcon === undefined) {
     map.set(name, data);
 
-  /**
-   * Importing and defining the same icon reference
-   * multiple times should not yield a warning.
-   */
+    /**
+     * Importing and defining the same icon reference
+     * multiple times should not yield a warning.
+     */
   } else if (existingIcon !== data) {
-    console.warn(`[Ionicons Warning]: Multiple icons were mapped to name "${name}". Ensure that multiple icons are not mapped to the same icon name.`)
+    console.warn(
+      `[Ionicons Warning]: Multiple icons were mapped to name "${name}". Ensure that multiple icons are not mapped to the same icon name.`,
+    );
   }
-}
-
+};
 
 export const getUrl = (i: Icon) => {
   let url = getSrc(i.src);
@@ -82,7 +82,6 @@ export const getUrl = (i: Icon) => {
   return null;
 };
 
-
 const getNamedUrl = (iconName: string, iconEl: Icon) => {
   const url = getIconMap().get(iconName);
   if (url) {
@@ -90,7 +89,7 @@ const getNamedUrl = (iconName: string, iconEl: Icon) => {
   }
   try {
     return getAssetPath(`svg/${iconName}.svg`);
-  } catch(e) {
+  } catch (e) {
     /**
      * In the custom elements build version of ionicons, referencing an icon
      * by name will throw an invalid URL error because the asset path is not defined.
@@ -98,17 +97,19 @@ const getNamedUrl = (iconName: string, iconEl: Icon) => {
      * We also include a reference to the ion-icon element so developers can
      * figure out which instance of ion-icon needs to be updated.
      */
-    console.warn(`[Ionicons Warning]: Could not load icon with name "${iconName}". Ensure that the icon is registered using addIcons or that the icon SVG data is passed directly to the icon component.`, iconEl);
+    console.warn(
+      `[Ionicons Warning]: Could not load icon with name "${iconName}". Ensure that the icon is registered using addIcons or that the icon SVG data is passed directly to the icon component.`,
+      iconEl,
+    );
   }
 };
-
 
 export const getName = (
   iconName: string | undefined,
   icon: string | undefined,
   mode: string | undefined,
   ios: string | undefined,
-  md: string | undefined
+  md: string | undefined,
 ) => {
   // default to "md" if somehow the mode wasn't set
   mode = (mode && toLower(mode)) === 'ios' ? 'ios' : 'md';
@@ -117,10 +118,8 @@ export const getName = (
   // set the iconName to whatever was passed in
   if (ios && mode === 'ios') {
     iconName = toLower(ios);
-
   } else if (md && mode === 'md') {
     iconName = toLower(md);
-
   } else {
     if (!iconName && icon && !isSrc(icon)) {
       iconName = icon;
@@ -172,7 +171,7 @@ export const toLower = (val: string) => val.toLowerCase();
 export const inheritAttributes = (el: HTMLElement, attributes: string[] = []) => {
   const attributeObject: { [k: string]: any } = {};
 
-  attributes.forEach(attr => {
+  attributes.forEach((attr) => {
     if (el.hasAttribute(attr)) {
       const value = el.getAttribute(attr);
       if (value !== null) {
@@ -183,7 +182,7 @@ export const inheritAttributes = (el: HTMLElement, attributes: string[] = []) =>
   });
 
   return attributeObject;
-}
+};
 
 /**
  * Returns `true` if the document or host element
