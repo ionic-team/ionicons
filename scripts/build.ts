@@ -10,7 +10,6 @@ import type { SvgData } from './types';
 
 async function build(rootDir: string) {
   try {
-    const pkgJsonPath = path.join(rootDir, 'package.json');
     const srcDir = path.join(rootDir, 'src');
     const srcSvgDir = path.join(srcDir, 'svg');
     const iconDir = path.join(rootDir, 'icons');
@@ -151,7 +150,7 @@ async function createCheatsheet(
 
   const c = srcSvgData.map(
     (svgData) =>
-      `<a href="./build/svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
+      `<a href="./svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
   );
 
   c.push(svgSymbolsContent);
