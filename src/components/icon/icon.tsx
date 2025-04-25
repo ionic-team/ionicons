@@ -86,15 +86,20 @@ export class Icon {
   }
 
   connectedCallback() {
-    // purposely do not return the promise here because loading
-    // the svg file should not hold up loading the app
-    // only load the svg if it's visible
+    /**
+     * purposely do not return the promise here because loading
+     * the svg file should not hold up loading the app
+     * only load the svg if it's visible
+     */
     this.waitUntilVisible(this.el, '50px', () => {
       this.isVisible = true;
       this.loadIcon();
     });
   }
 
+  /**
+   * Loads the icon after the component has finished rendering.
+   */
   componentDidLoad() {
     /**
      * Addresses an Angular issue where property values are assigned after the 'connectedCallback' but prior to the registration of watchers.
@@ -107,33 +112,59 @@ export class Icon {
     }
   }
 
+  /**
+   * Disconnect the IntersectionObserver.
+   */
   disconnectedCallback() {
     if (this.io) {
       this.io.disconnect();
       this.io = undefined;
     }
   }
-  private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
-    if (Build.isBrowser && this.lazy && typeof window !== 'undefined' && (window as any).IntersectionObserver) {
-      const io = (this.io = new (window as any).IntersectionObserver(
-        (data: IntersectionObserverEntry[]) => {
-          if (data[0].isIntersecting) {
-            io.disconnect();
-            this.io = undefined;
-            cb();
-          }
-        },
-        { rootMargin },
-      ));
 
-      io.observe(el);
-    } else {
-      // browser doesn't support IntersectionObserver
-      // so just fallback to always show it
-      cb();
+  /**
+   * Wait until the icon is visible in the viewport.
+   * @param el - The element to observe.
+   * @param rootMargin - The root margin of the observer.
+   * @param cb - The callback to call when the element is visible.
+   */
+  private waitUntilVisible(el: HTMLElement, rootMargin: string, cb: () => void) {
+    /**
+     * IntersectionObserver is a browser API that allows you to observe
+     * the visibility of an element relative to a root element. It is
+     * supported in all modern browsers, except IE and when server-side
+     * rendering.
+     */
+    const hasIntersectionObserverSupport = Boolean(
+      Build.isBrowser && this.lazy && typeof window !== 'undefined' && window.IntersectionObserver,
+    );
+
+    /**
+     * browser doesn't support IntersectionObserver
+     * so just fallback to always show it
+     */
+    if (!hasIntersectionObserverSupport) {
+      return cb();
     }
+
+    const io = (this.io = new window.IntersectionObserver(
+      (data: IntersectionObserverEntry[]) => {
+        if (data[0].isIntersecting) {
+          io.disconnect();
+          this.io = undefined;
+          cb();
+        }
+      },
+      { rootMargin },
+    ));
+
+    io.observe(el);
   }
 
+  /**
+   * Watch for changes to the icon name, src, icon, ios, or md properties.
+   * When a change is detected, the icon will be loaded.
+   */
   @Watch('name')
   @Watch('src')
   @Watch('icon')
@@ -161,11 +192,18 @@ export class Icon {
   render() {
     const { flipRtl, iconName, inheritedAttributes, el } = this;
     const mode = this.mode || 'md';
-    // we have designated that arrows & chevrons should automatically flip (unless flip-rtl is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+
+    /**
+     * we have designated that arrows & chevrons should automatically flip (unless flip-rtl
+     * is set to false) because "back" is left in ltr and right in rtl, and "forward" is the opposite
+     */
     const shouldAutoFlip = iconName
       ? (iconName.includes('arrow') || iconName.includes('chevron')) && flipRtl !== false
       : false;
-    // if shouldBeFlippable is true, the icon should change direction when `dir` changes
+
+    /**
+     * if shouldBeFlippable is true, the icon should change direction when `dir` changes
+     */
     const shouldBeFlippable = flipRtl || shouldAutoFlip;
 
     return (
@@ -190,9 +228,18 @@ export class Icon {
   }
 }
 
+/**
+ * Get the mode of the document.
+ * @returns The mode of the document.
+ */
 const getIonMode = () =>
   (Build.isBrowser && typeof document !== 'undefined' && document.documentElement.getAttribute('mode')) || 'md';
 
+/**
+ * Create color classes for the icon.
+ * @param color - The color of the icon.
+ * @returns The color classes for the icon.
+ */
 const createColorClasses = (color: string | undefined) => {
   return color
     ? {
