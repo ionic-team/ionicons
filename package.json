@@ -30,7 +30,7 @@
     }
   },
   "scripts": {
-    "build": "run-s clean build.*",
+    "build": "run-s clean build.* prettier",
     "build.files": "tsx scripts/build.js",
     "build.component": "stencil build",
     "build.collection": "tsx scripts/collection-copy.js",
@@ -41,7 +41,9 @@
     "start": "run-s build.files start.stencil",
     "start.stencil": "stencil build --dev --watch --serve",
     "test": "run-s test.spec",
-    "test.spec": "stencil test --spec"
+    "test.spec": "stencil test --spec",
+    "test.e2e": "playwright test",
+    "test.e2e.install": "playwright install && playwright install-deps"
   },
   "dependencies": {
     "@stencil/core": "^4.29.3"
