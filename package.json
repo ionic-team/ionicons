@@ -58,6 +58,7 @@
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.5.3",
     "puppeteer": "^24.6.1",
+    "rimraf": "^6.0.1",
     "semver": "^7.7.1",
     "serve": "^14.2.4",
     "svgo": "3.3.2",
