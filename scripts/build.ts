@@ -151,7 +151,7 @@ async function createCheatsheet(
 
   const c = srcSvgData.map(
     (svgData) =>
-      `<a href="./svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
+      `<a href="./build/svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
   );
 
   c.push(svgSymbolsContent);
