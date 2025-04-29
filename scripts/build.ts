@@ -19,6 +19,18 @@ async function build(rootDir: string) {
     const optimizedSvgDir = path.join(distIoniconsDir, 'svg');
 
     /**
+     * Create the directories first, then empty them
+     * This ensures they exist before we try to write files to them
+     */
+    await Promise.all([
+      fs.ensureDir(iconDir),
+      fs.ensureDir(distDir),
+      fs.ensureDir(distSvgDir),
+      fs.ensureDir(optimizedSvgDir),
+      fs.ensureDir(distIoniconsDir),
+    ]);
+
+    /**
      * Empty the directories
      */
     await Promise.all([
@@ -32,7 +44,6 @@ async function build(rootDir: string) {
     const version = pkgData.version as string;
     const srcSvgData = await getSvgs(srcSvgDir, distSvgDir, optimizedSvgDir);
     await optimizeSvgs(srcSvgData);
-
     await Promise.all([
       createDataJson(version, srcDir, distDir, srcSvgData),
       createIconPackage(version, iconDir, srcSvgData),
@@ -41,9 +52,7 @@ async function build(rootDir: string) {
     const svgSymbolsContent = await createSvgSymbols(version, distDir, srcSvgData);
 
     await createCheatsheet(version, rootDir, distDir, svgSymbolsContent, srcSvgData);
-
     await createWebTypes(version, rootDir, distDir, srcSvgData);
-
     await copyToTesting(rootDir, distDir, srcSvgData);
   } catch (e) {
     console.error(e);
@@ -72,16 +81,30 @@ async function optimizeSvg(svgData: SvgData) {
     plugins: sourcePassPlugins,
   });
 
+  // Ensure directories exist before writing files
+  await Promise.all([
+    fs.ensureDir(path.dirname(svgData.optimizedFilePath)),
+    fs.ensureDir(path.dirname(svgData.distSvgFilePath)),
+  ]);
+
   svgData.optimizedSvgContent = webComponentSvg.data;
-  await fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent);
-  await fs.writeFile(svgData.distSvgFilePath, sourceSvg.data);
+  await Promise.all([
+    fs.writeFile(svgData.optimizedFilePath, svgData.optimizedSvgContent),
+    fs.writeFile(svgData.distSvgFilePath, sourceSvg.data),
+  ]);
 }
 
 async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgData[]) {
   const testDir = path.join(rootDir, 'www');
   const testBuildDir = path.join(testDir, 'build');
   const testSvgDir = path.join(testBuildDir, 'svg');
-  await fs.ensureDir(testSvgDir);
+
+  // Ensure all directories exist
+  await Promise.all([
+    fs.ensureDir(testDir),
+    fs.ensureDir(testBuildDir),
+    fs.ensureDir(testSvgDir)
+  ]);
 
   await Promise.all(
     srcSvgData
@@ -163,10 +186,9 @@ async function createCheatsheet(
   await fs.writeFile(distCheatsheetFilePath, html);
 }
 
-async function createWebTypes(version: string, rootDir: string, distDir: any, srcSvgData: SvgData[]) {
+async function createWebTypes(version: string, rootDir: string, distDir: string, srcSvgData: SvgData[]) {
   const srcWebTypeFilePath = path.join(rootDir, 'src/ionicons.web-types.json');
   const distWebTypesFilePath = path.join(distDir, 'ionicons.web-types.json');
-
   const webTypes = JSON.parse(await fs.readFile(srcWebTypeFilePath, 'utf8'));
 
   webTypes.version = version;
