@@ -6,7 +6,7 @@ const requests = new Map<string, Promise<any>>();
 let parser: DOMParser;
 
 /**
- * savely fallback to an empty svg
+ * Safely fallback to an empty svg
  */
 function safeFallback(url: string) {
   const svg = '';
