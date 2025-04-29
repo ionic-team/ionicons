@@ -58,7 +58,7 @@ function getSvgByUrl(url: string): string {
 
 function fetchSvg(url: string, sanitize: boolean): Promise<string> {
   /**
-   * we don't already have a request
+   * We don't already have a request
    */
   const req = fetch(url)
     .then((rsp) => {
