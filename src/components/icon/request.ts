@@ -16,7 +16,7 @@ function safeFallback(url: string) {
 
 export const getSvgContent = (url: string, sanitize: boolean): Promise<string> => {
   /**
-   * see if we already have a request for this url
+   * See if we already have a request for this url
    */
   const req = requests.get(url);
   if (req) {
