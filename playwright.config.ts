@@ -1,7 +1,7 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices, expect } from '@playwright/test';
 
-const projects = [
+const projects: PlaywrightTestConfig['projects'] = [
   {
     /**
      * This is really just desktop Firefox
@@ -19,10 +19,6 @@ const projects = [
       viewport: {
         width: 393,
         height: 727
-      },
-      screen: {
-        width: 393,
-        height: 851
       }
     },
   },

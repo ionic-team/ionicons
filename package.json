@@ -11,8 +11,6 @@
   "module": "./dist/index.js",
   "types": "dist/types/index.d.ts",
   "unpkg": "dist/ionicons.js",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
@@ -33,7 +31,6 @@
     "build": "run-s clean build.* prettier",
     "build.files": "tsx scripts/build.ts",
     "build.component": "stencil build",
-    "build.collection": "tsx scripts/collection-copy.js",
     "clean": "rimraf dist components icons www",
     "prettier": "npm run prettier.base -- --write",
     "prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
