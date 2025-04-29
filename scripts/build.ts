@@ -100,11 +100,7 @@ async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgDa
   const testSvgDir = path.join(testBuildDir, 'svg');
 
   // Ensure all directories exist
-  await Promise.all([
-    fs.ensureDir(testDir),
-    fs.ensureDir(testBuildDir),
-    fs.ensureDir(testSvgDir)
-  ]);
+  await Promise.all([fs.ensureDir(testDir), fs.ensureDir(testBuildDir), fs.ensureDir(testSvgDir)]);
 
   await Promise.all(
     srcSvgData
