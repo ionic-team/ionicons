@@ -30,11 +30,7 @@ test.describe('icon: basic', () => {
     await page.waitForLoadState('networkidle');
 
     const rtlTests = page.locator('#rtl-tests');
-    await expect(rtlTests).toHaveScreenshot(`icon-rtl-diff.png`, {
-      // Add more tolerance for font rendering differences
-      maxDiffPixelRatio: 0.02, // Allow up to 2% difference (much higher than the 0.01 difference in your error)
-      threshold: 0.2, // Increase threshold for per-pixel comparison
-    });
+    await expect(rtlTests).toHaveScreenshot(`icon-rtl-diff.png`);
   });
 
   test('arrows should flip if dir changes on the element', async ({ page }) => {
