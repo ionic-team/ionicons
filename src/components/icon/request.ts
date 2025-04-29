@@ -83,7 +83,7 @@ function fetchSvg(url: string, sanitize: boolean): Promise<string> {
     .catch(() => safeFallback(url));
 
   /**
-   * cache for the same requests
+   * Cache for the same requests
    */
   requests.set(url, req);
   return req;
