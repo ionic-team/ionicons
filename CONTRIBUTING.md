@@ -148,4 +148,4 @@ When creating issues:
    - Include relevant tests
    - Make sure all tests pass: `npm test`
    - Update documentation if needed
-   - [Create a new pull request](https://github.com/ionic-team/ionicons/compare) with the `main` branch as the `
+   - [Create a new pull request](https://github.com/ionic-team/ionicons/compare) with the `main` branch as the base.
