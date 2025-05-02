@@ -10,16 +10,16 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.js",
   "types": "dist/types/index.d.ts",
-  "unpkg": "dist/ionicons.js",
+  "unpkg": "dist/ionicons/ionicons.esm.js",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "default": "./dist/index.js",
+      "import": "./dist/ionicons/ionicons.esm.js",
       "require": "./dist/index.cjs.js"
     },
     "./components": {
-      "types": "./dist/components/index.d.ts",
-      "import": "./dist/components/index.js"
+      "types": "./components/index.d.ts",
+      "import": "./components/index.js"
     },
     "./icons": {
       "types": "./icons/index.d.ts",

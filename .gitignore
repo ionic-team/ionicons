@@ -24,3 +24,4 @@ www/
 /playwright-report/
 /playwright/.cache/
 /src/**/*-snapshots
+*.tgz
