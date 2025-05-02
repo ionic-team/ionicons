@@ -11,6 +11,7 @@
   "module": "./dist/index.js",
   "types": "dist/types/index.d.ts",
   "unpkg": "dist/ionicons/ionicons.esm.js",
+  "jsdelivr": "dist/ionicons/ionicons.esm.js",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
