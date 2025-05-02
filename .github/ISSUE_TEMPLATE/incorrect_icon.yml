@@ -1,7 +1,7 @@
 name: 😒 Incorrect Icon
 description: Report an incorrect icon
-labels: ["triage"]
-title: "incorrect icon: "
+labels: ['triage']
+title: 'incorrect icon: '
 body:
   - type: textarea
     attributes:

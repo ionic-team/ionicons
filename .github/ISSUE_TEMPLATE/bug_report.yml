@@ -1,7 +1,7 @@
 name: 🐛 Bug Report
 description: Report a bug in the ion-icon component. Incorrect icons should use the "Incorrect Icon" template instead.
-labels: ["triage"]
-title: "bug: "
+labels: ['triage']
+title: 'bug: '
 body:
   - type: textarea
     attributes:

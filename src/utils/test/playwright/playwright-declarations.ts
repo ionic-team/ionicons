@@ -52,6 +52,6 @@ export interface E2EPage extends Page {
        * - `'commit'` - consider operation to be finished when network response is received and the document started loading.
        */
       waitUntil?: 'load' | 'domcontentloaded' | 'networkidle' | 'commit';
-    }
+    },
   ) => Promise<null | Response>;
 }

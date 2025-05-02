@@ -1334,6 +1334,7 @@
       "tags": [
         "bed",
         "hotel",
+        "loveseat",
         "sleep"
       ]
     },
@@ -1342,6 +1343,7 @@
       "tags": [
         "bed",
         "hotel",
+        "loveseat",
         "outline",
         "sleep"
       ]
@@ -1351,6 +1353,7 @@
       "tags": [
         "bed",
         "hotel",
+        "loveseat",
         "sharp",
         "sleep"
       ]
@@ -7470,12 +7473,14 @@
     {
       "name": "notifications",
       "tags": [
+        "bell",
         "notifications"
       ]
     },
     {
       "name": "notifications-circle",
       "tags": [
+        "bell",
         "circle",
         "notifications"
       ]
@@ -7483,6 +7488,7 @@
     {
       "name": "notifications-circle-outline",
       "tags": [
+        "bell",
         "circle",
         "notifications",
         "outline"
@@ -7491,6 +7497,7 @@
     {
       "name": "notifications-circle-sharp",
       "tags": [
+        "bell",
         "circle",
         "notifications",
         "sharp"
@@ -7499,6 +7506,7 @@
     {
       "name": "notifications-off",
       "tags": [
+        "bell",
         "notifications",
         "off"
       ]
@@ -7506,6 +7514,7 @@
     {
       "name": "notifications-off-circle",
       "tags": [
+        "bell",
         "circle",
         "notifications",
         "off"
@@ -7514,6 +7523,7 @@
     {
       "name": "notifications-off-circle-outline",
       "tags": [
+        "bell",
         "circle",
         "notifications",
         "off",
@@ -7523,6 +7533,7 @@
     {
       "name": "notifications-off-circle-sharp",
       "tags": [
+        "bell",
         "circle",
         "notifications",
         "off",
@@ -7532,6 +7543,7 @@
     {
       "name": "notifications-off-outline",
       "tags": [
+        "bell",
         "notifications",
         "off",
         "outline"
@@ -7540,6 +7552,7 @@
     {
       "name": "notifications-off-sharp",
       "tags": [
+        "bell",
         "notifications",
         "off",
         "sharp"
@@ -7548,6 +7561,7 @@
     {
       "name": "notifications-outline",
       "tags": [
+        "bell",
         "notifications",
         "outline"
       ]
@@ -7555,6 +7569,7 @@
     {
       "name": "notifications-sharp",
       "tags": [
+        "bell",
         "notifications",
         "sharp"
       ]
@@ -7634,21 +7649,27 @@
     {
       "name": "options",
       "tags": [
-        "options"
+        "filters",
+        "options",
+        "sliders"
       ]
     },
     {
       "name": "options-outline",
       "tags": [
+        "filters",
         "options",
-        "outline"
+        "outline",
+        "sliders"
       ]
     },
     {
       "name": "options-sharp",
       "tags": [
+        "filters",
         "options",
-        "sharp"
+        "sharp",
+        "sliders"
       ]
     },
     {
@@ -7819,6 +7840,7 @@
       "name": "people-circle",
       "tags": [
         "circle",
+        "contacts",
         "head",
         "human",
         "people",
@@ -7831,6 +7853,7 @@
       "name": "people-circle-outline",
       "tags": [
         "circle",
+        "contacts",
         "head",
         "human",
         "outline",
@@ -7844,6 +7867,7 @@
       "name": "people-circle-sharp",
       "tags": [
         "circle",
+        "contacts",
         "head",
         "human",
         "people",

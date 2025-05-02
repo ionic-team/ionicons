@@ -17,7 +17,7 @@ runs:
   steps:
     - uses: actions/setup-node@v4
       with:
-        node-version: 18.x
+        node-version: 22.x
     - name: Install latest npm
       run: npm install -g npm@latest
       shell: bash

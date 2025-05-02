@@ -2,15 +2,16 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'ionicons',
-  buildEs5: 'prod',
   sourceMap: false,
   outputTargets: [
     {
       type: 'dist',
+      collectionDir: null,
       empty: false,
     },
     {
       type: 'dist-custom-elements',
+      externalRuntime: false,
       dir: './components',
     },
     {
@@ -26,7 +27,11 @@ export const config: Config = {
         {
           src: './components/test/',
           dest: './test/',
-        }
+        },
+        {
+          src: './svg/*.svg',
+          dest: './svg/',
+        },
       ],
       empty: false,
       serviceWorker: false,

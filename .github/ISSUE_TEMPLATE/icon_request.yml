@@ -1,7 +1,7 @@
 name: 🚀 Icon Request
 description: Request a new icon
-labels: ["triage"]
-title: "icon request: "
+labels: ['triage']
+title: 'icon request: '
 body:
   - type: textarea
     attributes:

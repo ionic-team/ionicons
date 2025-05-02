@@ -1,7 +1,6 @@
 import { Icon } from '../icon';
 import { addIcons, getIconMap, getName, getSrc, getUrl } from '../utils';
 
-
 describe('getUrl', () => {
   let i: Icon;
 
@@ -30,12 +29,9 @@ describe('getUrl', () => {
     i.icon = 'some-icon';
     expect(getUrl(i)).toBe('./some.svg');
   });
-
 });
 
-
 describe('getSrc', () => {
-
   it('both . and /', () => {
     expect(getSrc('./somefile.svg')).toBe('./somefile.svg');
   });
@@ -55,12 +51,9 @@ describe('getSrc', () => {
   it('no . or /', () => {
     expect(getSrc('some-name')).toBe(null);
   });
-
 });
 
-
 describe('getName', () => {
-
   it('not allow special chars', () => {
     expect(getName('some\\name', '', 'io', '', '')).toBe(null);
     expect(getName('some$name', '', 'io', '', '')).toBe(null);
@@ -80,7 +73,6 @@ describe('getName', () => {
   it('should not use name if no name, ios or md', () => {
     expect(getName(undefined, undefined, '', '', '')).toBe(null);
   });
-
 });
 
 describe('addIcons', () => {
@@ -105,7 +97,7 @@ describe('addIcons', () => {
     expect(getIconMap().get('logo-ionitron')).toEqual(logoIonitron);
     expect(getIconMap().get('logoIonitron')).toEqual(logoIonitron);
 
-    const logoIonitron0 = 'stubbed data 0'
+    const logoIonitron0 = 'stubbed data 0';
 
     expect(getIconMap().get('logo-ionitron-0')).toEqual(undefined);
     expect(getIconMap().get('logoIonitron0')).toEqual(undefined);
@@ -131,7 +123,7 @@ describe('addIcons', () => {
 
     expect(getIconMap().get('myCoolIcon')).toEqual(undefined);
 
-    addIcons({ 'myCoolIcon': logoIonitron });
+    addIcons({ myCoolIcon: logoIonitron });
 
     expect(getIconMap().get('myCoolIcon')).toEqual(logoIonitron);
   });
@@ -169,5 +161,4 @@ describe('addIcons', () => {
 
     expect(spy).toHaveBeenCalled();
   });
-
 });

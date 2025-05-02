@@ -1,7 +1,7 @@
 name: 💡 Feature Request
 description: Suggest a new feature for the ion-icon component. Icon requests should use the "Icon Request" template instead.
-labels: ["triage"]
-title: "feat: "
+labels: ['triage']
+title: 'feat: '
 body:
   - type: textarea
     attributes:

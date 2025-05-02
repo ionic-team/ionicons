@@ -21,10 +21,10 @@ jobs:
     permissions:
       id-token: write
     steps:
-    - uses: actions/checkout@v4
-    - uses: ./.github/workflows/actions/publish-npm
-      with:
-        tag: ${{ inputs.tag }}
-        version: ${{ inputs.version }}
-        working-directory: './'
-        token: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/checkout@v4
+      - uses: ./.github/workflows/actions/publish-npm
+        with:
+          tag: ${{ inputs.tag }}
+          version: ${{ inputs.version }}
+          working-directory: './'
+          token: ${{ secrets.NPM_TOKEN }}

@@ -31,7 +31,7 @@ describe('icon', () => {
       </ion-icon>
     `);
   });
-  
+
   it('renders custom aria-label', async () => {
     const { root } = await newSpecPage({
       components: [Icon],
@@ -46,13 +46,13 @@ describe('icon', () => {
       </ion-icon>
     `);
   });
-  
+
   it('renders custom label after changing source', async () => {
     const page = await newSpecPage({
       components: [Icon],
       html: `<ion-icon name="chevron-forward" aria-label="custom label"></ion-icon>`,
     });
-    
+
     const icon = page.root;
 
     expect(icon).toEqualHtml(`
@@ -62,7 +62,7 @@ describe('icon', () => {
         </mock:shadow-root>
       </ion-icon>
     `);
-    
+
     if (icon) {
       icon.name = 'trash';
     }

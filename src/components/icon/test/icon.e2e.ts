@@ -67,5 +67,4 @@ test.describe('icon: basic', () => {
     await expect(iconLoc).toHaveAttribute('name', 'brush');
     await expect(iconLoc).not.toHaveClass(/flip-rtl/);
   });
-
 });

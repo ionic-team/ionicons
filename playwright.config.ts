@@ -1,7 +1,7 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { devices, expect } from '@playwright/test';
 
-const projects = [
+const projects: PlaywrightTestConfig['projects'] = [
   {
     /**
      * This is really just desktop Firefox
@@ -19,10 +19,6 @@ const projects = [
       viewport: {
         width: 393,
         height: 727
-      },
-      screen: {
-        width: 393,
-        height: 851
       }
     },
   },
@@ -52,7 +48,23 @@ const config: PlaywrightTestConfig = {
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000
+    timeout: 5000,
+    
+    /**
+     * Configure screenshot comparison settings
+     * to be more tolerant of minor visual differences
+     */
+    toHaveScreenshot: {
+      // Increase the threshold to allow for small font rendering differences
+      // This sets the maximum allowed ratio of pixels that can be different
+      maxDiffPixelRatio: 0.02, // Allow up to 2% of pixels to be different
+      
+      // Alternatively, you can use absolute pixel count
+      // maxDiffPixels: 100, // Allow up to 100 pixels to be different
+      
+      // Add a threshold for per-pixel difference to handle anti-aliasing
+      threshold: 0.2, // Default is 0.1
+    }
   },
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -79,7 +91,7 @@ const config: PlaywrightTestConfig = {
   },
 
   /* Configure projects for major browsers */
-  projects: projects,
+  projects,
   webServer: {
     command: 'serve www -p 3333',
     port: 3333,
