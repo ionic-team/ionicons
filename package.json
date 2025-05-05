@@ -15,17 +15,22 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/ionicons/ionicons.esm.js",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs.js"
+    },
+    "./loader": {
+      "types": "./dist/loader/index.d.ts",
+      "import": "./dist/loader/index.js",
+      "require": "./dist/loader/index.cjs.js"
     },
     "./components": {
       "types": "./components/index.d.ts",
       "import": "./components/index.js"
     },
     "./icons": {
-      "types": "./icons/index.d.ts",
-      "import": "./icons/index.mjs",
-      "require": "./icons/index.js"
+      "types": "./icons/ion-icon.d.ts",
+      "import": "./icons/ion-icon.mjs",
+      "require": "./icons/ion-icon.js"
     }
   },
   "scripts": {
