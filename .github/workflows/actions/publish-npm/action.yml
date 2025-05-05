@@ -42,25 +42,26 @@ runs:
       run: npm version ${{ inputs.version }}
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-    - name: Run Build
-      run: npm run build
-      shell: bash
-      working-directory: ${{ inputs.working-directory }}
-    - name: Prepare NPM Token
-      run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-      working-directory: ${{ inputs.working-directory }}
-      shell: bash
-      env:
-        NPM_TOKEN: ${{ inputs.token }}
-    - name: Publish to NPM
-      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --provenance
-      shell: bash
-      working-directory: ${{ inputs.working-directory }}
+    # - name: Run Build
+    #   run: npm run build
+    #   shell: bash
+    #   working-directory: ${{ inputs.working-directory }}
+    # - name: Prepare NPM Token
+    #   run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+    #   working-directory: ${{ inputs.working-directory }}
+    #   shell: bash
+    #   env:
+    #     NPM_TOKEN: ${{ inputs.token }}
+    # - name: Publish to NPM
+    #   run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --provenance
+    #   shell: bash
+    #   working-directory: ${{ inputs.working-directory }}
 
     - name: Create Release
       if: ${{ inputs.createRelease == 'true' }}
       run: |
         git remote set-url origin https://${GH_TOKEN}:x-oauth-basic@github.com/ionic-team/ionicons.git
+        git remote -v
         git push origin main --tags
         gh auth login --with-token ${{ inputs.ghToken }}
         gh release create ${{ inputs.tag }} --title "v${{ inputs.tag }}" --generate-notes
