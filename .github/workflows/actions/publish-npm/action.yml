@@ -66,7 +66,6 @@ runs:
         git remote set-url origin https://${GH_TOKEN}:x-oauth-basic@github.com/ionic-team/ionicons.git
         git remote -v
         git push origin main --tags
-        echo "$GH_TOKEN" | gh auth login --with-token
         gh release create "v$VERSION" --title "v$VERSION" --generate-notes
       shell: bash
       env:
