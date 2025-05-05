@@ -26,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.IONITRON_TOKEN }}
       - name: Publish to NPM
         uses: ./.github/workflows/actions/publish-npm
         with:

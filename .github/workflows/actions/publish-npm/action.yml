@@ -39,7 +39,10 @@ runs:
         git config user.email --global hi@ionicframework.com
       shell: bash
     - name: Update Version
-      run: npm version ${{ inputs.version }}
+      id: update_version
+      run: |
+        npm version ${{ inputs.version }}
+        echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     # - name: Run Build
@@ -64,7 +67,7 @@ runs:
         git remote -v
         git push origin main --tags
         gh auth login --with-token ${{ inputs.ghToken }}
-        gh release create ${{ inputs.tag }} --title "v${{ inputs.tag }}" --generate-notes
+        gh release create ${{ steps.update_version.outputs.version }} --title "v${{ steps.update_version.outputs.version }}" --generate-notes
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.ghToken }}
