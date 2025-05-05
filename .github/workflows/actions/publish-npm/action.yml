@@ -45,20 +45,20 @@ runs:
         echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-    # - name: Run Build
-    #   run: npm run build
-    #   shell: bash
-    #   working-directory: ${{ inputs.working-directory }}
-    # - name: Prepare NPM Token
-    #   run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-    #   working-directory: ${{ inputs.working-directory }}
-    #   shell: bash
-    #   env:
-    #     NPM_TOKEN: ${{ inputs.token }}
-    # - name: Publish to NPM
-    #   run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --provenance
-    #   shell: bash
-    #   working-directory: ${{ inputs.working-directory }}
+    - name: Run Build
+      run: npm run build
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+    - name: Prepare NPM Token
+      run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+      working-directory: ${{ inputs.working-directory }}
+      shell: bash
+      env:
+        NPM_TOKEN: ${{ inputs.token }}
+    - name: Publish to NPM
+      run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --provenance
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
 
     - name: Create Release
       if: ${{ inputs.createRelease == 'true' }}
