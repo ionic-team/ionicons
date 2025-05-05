@@ -26,15 +26,15 @@ Also note that only visible icons are loaded, and icons that are "below the fold
 If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing `</body>` tag, to enable them.
 
 ```html
-<script type="module" src="https://esm.sh/ionicons@latest"></script>
-<script nomodule src="https://esm.sh/ionicons@latest"></script>
+<script type="module" src="https://esm.sh/ionicons/loader@latest"></script>
+<script nomodule src="https://esm.sh/ionicons/loader@latest"></script>
 ```
 
 you can replace `latest` to pick any version of Ionicon, e.g.:
 
 ```html
-<script type="module" src="https://esm.sh/ionicons@7.4.1"></script>
-<script nomodule src="https://esm.sh/ionicons@7.4.1"></script>
+<script type="module" src="https://esm.sh/ionicons/loader@8.0.0"></script>
+<script nomodule src="https://esm.sh/ionicons/loader@8.0.0"></script>
 ```
 
 ### Basic usage
@@ -58,10 +58,14 @@ To use a custom SVG, provide its url in the `src` attribute to request the exter
 If you have a different set of icons you would like to load or if the Ionicon icons are hosted on a different page or path, you can set the asset url from which Ionicons pulls the icons via:
 
 ```ts
-import { setAssetPath } from 'ionicons'
+import { setAssetPath, addIcons } from 'ionicons'
+import { add, logoIonic, save } from 'ionicons/icons';
 
 // set root path for loading icons to "<root>/public/svg"
 setAssetPath(`${window.location.origin}/public/svg/`);
+
+// only load specific icons
+addIcons({ add, logoIonic, save });
 ```
 
 This allows the use of named icons like this:
