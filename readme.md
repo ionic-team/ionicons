@@ -58,7 +58,7 @@ To use a custom SVG, provide its url in the `src` attribute to request the exter
 If you have a different set of icons you would like to load or if the Ionicon icons are hosted on a different page or path, you can set the asset url from which Ionicons pulls the icons via:
 
 ```ts
-import { setAssetPath, addIcons } from 'ionicons'
+import { setAssetPath, addIcons } from 'ionicons';
 import { add, logoIonic, save } from 'ionicons/icons';
 
 // set root path for loading icons to "<root>/public/svg"
