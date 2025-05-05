@@ -20,13 +20,21 @@ jobs:
         shell: bash
 
   release-ionicons:
+    runs-on: ubuntu-latest
     needs: [create-dev-hash]
-    uses: ./.github/workflows/release-ionicons.yml
-    with:
-      tag: dev
-      version: ${{ needs.create-dev-hash.outputs.dev-hash }}
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    permissions:
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Publish to NPM
+        uses: ./.github/workflows/actions/publish-npm
+        with:
+          tag: dev
+          version: ${{ needs.create-dev-hash.outputs.dev-hash }}
+          working-directory: './'
+          token: ${{ secrets.NPM_TOKEN }}
+          createRelease: 'false'
 
   get-build:
     name: Get your dev build!

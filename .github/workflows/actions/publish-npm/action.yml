@@ -12,6 +12,14 @@ inputs:
     description: 'A folder containing a package.json file.'
   token:
     description: 'The NPM authentication token required to publish.'
+
+  createRelease:
+    description: 'Create a release on GitHub.'
+    default: 'false'
+
+  ghToken:
+    description: 'The GitHub authentication token required to create a release.'
+
 runs:
   using: 'composite'
   steps:
@@ -26,7 +34,7 @@ runs:
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     - name: Update Version
-      run: npm version ${{ inputs.version }} --git-tag-version false
+      run: npm version ${{ inputs.version }}
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     - name: Run Build
@@ -43,3 +51,15 @@ runs:
       run: npm publish ${{ inputs.folder }} --tag ${{ inputs.tag }} --provenance
       shell: bash
       working-directory: ${{ inputs.working-directory }}
+
+    - name: Create Release
+      if: ${{ inputs.createRelease == 'true' }}
+      run: |
+        git config user.name ionitron
+        git config user.email hi@ionicframework.com
+        git push origin main --tags
+        gh auth login --with-token ${{ inputs.ghToken }}
+        gh release create ${{ inputs.tag }} --title "v${{ inputs.tag }}" --generate-notes
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.ghToken }}
