@@ -34,4 +34,4 @@ jobs:
           working-directory: './'
           token: ${{ secrets.NPM_TOKEN }}
           createRelease: true
-          ghToken: ${{ secrets.IONITRON_GITHUB_TOKEN }}
+          ghToken: ${{ secrets.IONITRON_TOKEN }}
