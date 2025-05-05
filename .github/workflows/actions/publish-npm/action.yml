@@ -37,10 +37,7 @@ runs:
       run: |
         git config user.name --global ionitron
         git config user.email --global hi@ionicframework.com
-        git config --global url."https://${GITHUB_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
       shell: bash
-      env:
-        GITHUB_TOKEN: ${{ inputs.ghToken }}
     - name: Update Version
       run: npm version ${{ inputs.version }}
       shell: bash
@@ -63,6 +60,7 @@ runs:
     - name: Create Release
       if: ${{ inputs.createRelease == 'true' }}
       run: |
+        git remote set-url origin https://${GH_TOKEN}:x-oauth-basic@github.com/ionic-team/ionicons.git
         git push origin main --tags
         gh auth login --with-token ${{ inputs.ghToken }}
         gh release create ${{ inputs.tag }} --title "v${{ inputs.tag }}" --generate-notes
