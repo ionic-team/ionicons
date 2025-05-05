@@ -42,7 +42,7 @@ runs:
       id: update_version
       run: |
         npm version ${{ inputs.version }}
-        echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+        echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     # - name: Run Build
@@ -67,7 +67,7 @@ runs:
         git remote -v
         git push origin main --tags
         gh auth login --with-token ${{ inputs.ghToken }}
-        gh release create ${{ steps.update_version.outputs.version }} --title "v${{ steps.update_version.outputs.version }}" --generate-notes
+        gh release create "v$VERSION" --title "v$VERSION" --generate-notes
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.ghToken }}
