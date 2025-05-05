@@ -33,6 +33,11 @@ runs:
       run: npm ci
       shell: bash
       working-directory: ${{ inputs.working-directory }}
+    - name: Set Git User
+      run: |
+        git config user.name ionitron
+        git config user.email hi@ionicframework.com
+      shell: bash
     - name: Update Version
       run: npm version ${{ inputs.version }}
       shell: bash
@@ -55,8 +60,6 @@ runs:
     - name: Create Release
       if: ${{ inputs.createRelease == 'true' }}
       run: |
-        git config user.name ionitron
-        git config user.email hi@ionicframework.com
         git push origin main --tags
         gh auth login --with-token ${{ inputs.ghToken }}
         gh release create ${{ inputs.tag }} --title "v${{ inputs.tag }}" --generate-notes
