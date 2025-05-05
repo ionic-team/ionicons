@@ -35,8 +35,8 @@ runs:
       working-directory: ${{ inputs.working-directory }}
     - name: Set Git User
       run: |
-        git config user.name --global ionitron
-        git config user.email --global hi@ionicframework.com
+        git config user.name ionitron
+        git config user.email hi@ionicframework.com
       shell: bash
     - name: Update Version
       id: update_version
