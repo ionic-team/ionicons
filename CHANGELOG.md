@@ -3,11 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.6](https://github.com/ionic-team/ionicons/compare/v8.0.5...v8.0.6) (2025-05-05)
+
+### Bug Fixes
+
+* publish correct Ionicons build
+
+
+
+
+
+## [8.0.5](https://github.com/ionic-team/ionicons/compare/v8.0.0...v8.0.5) (2025-05-05)
+
+### Bug Fixes
+
+* properly export Ionicons package files
+
+
+
+
+
 # [8.0.0](https://github.com/ionic-team/ionicons/compare/v7.4.0...v8.0.0) (2025-05-02)
 
 ### ⚠️ Breaking Changes
 
-* **Modernized Project Setup** ([#1447](https://github.com/.../pull/1447))
+* **Modernized Project Setup** ([#1447](https://github.com/ionic-team/ionicons/pull/1447))
 
   * Updated all project dependencies
   * Removed `lerna` from the monorepo setup
@@ -20,18 +40,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * Icons:
 
-  * SVG `fill` path updated in `warning-outline.svg` (Fixes [#1298](https://github.com/.../issues/1298))
-  * Applied `currentColor` to icons for better theming (Fixes [#1420](https://github.com/.../issues/1420))
+  * SVG `fill` path updated in `warning-outline.svg` (Fixes [#1298](https://github.com/ionic-team/ionicons/issues/1298))
+  * Applied `currentColor` to icons for better theming (Fixes [#1420](https://github.com/ionic-team/ionicons/issues/1420))
 * Added missing tags to multiple icons:
 
-  * `bell` tag to `notifications` (Fixes [#1090](https://github.com/.../issues/1090))
-  * `sliders`, `filters` tags to `option` (Fixes [#1060](https://github.com/.../issues/1060))
-  * `loveseat` tag to `bed` (Closes [#503](https://github.com/.../issues/503))
-  * `contacts` tag to `people-circle` (Closes [#779](https://github.com/.../issues/779))
+  * `bell` tag to `notifications` (Fixes [#1090](https://github.com/ionic-team/ionicons/issues/1090))
+  * `sliders`, `filters` tags to `option` (Fixes [#1060](https://github.com/ionic-team/ionicons/issues/1060))
+  * `loveseat` tag to `bed` (Closes [#503](https://github.com/ionic-team/ionicons/issues/503))
+  * `contacts` tag to `people-circle` (Closes [#779](https://github.com/ionic-team/ionicons/issues/779))
 * Fixed and updated `data.json`
 * Fixed broken contributing link
 * Added missing `rimraf` dependency
 * Improved codebase with additional comments
+
+
+
 
 
 # [7.4.0](https://github.com/ionic-team/ionicons/compare/v7.3.1...v7.4.0) (2024-05-01)
