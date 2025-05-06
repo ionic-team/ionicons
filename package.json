@@ -28,9 +28,9 @@
       "import": "./components/index.js"
     },
     "./icons": {
-      "types": "./icons/ion-icon.d.ts",
-      "import": "./icons/ion-icon.mjs",
-      "require": "./icons/ion-icon.js"
+      "types": "./icons/index.d.ts",
+      "import": "./icons/index.mjs",
+      "require": "./icons/index.js"
     }
   },
   "scripts": {
