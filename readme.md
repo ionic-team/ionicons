@@ -26,15 +26,15 @@ Also note that only visible icons are loaded, and icons that are "below the fold
 If you're using [Ionic Framework](https://ionicframework.com/), Ionicons is packaged by default, so no installation is necessary. Want to use Ionicons without Ionic Framework? Place the following `<script>` near the end of your page, right before the closing `</body>` tag, to enable them.
 
 ```html
-<script type="module" src="https://esm.sh/ionicons/loader@latest"></script>
-<script nomodule src="https://esm.sh/ionicons/loader@latest"></script>
+<script type="module" src="https://esm.sh/ionicons@latest/loader"></script>
+<script nomodule src="https://esm.sh/ionicons@latest/loader"></script>
 ```
 
 you can replace `latest` to pick any version of Ionicon, e.g.:
 
 ```html
-<script type="module" src="https://esm.sh/ionicons/loader@8.0.0"></script>
-<script nomodule src="https://esm.sh/ionicons/loader@8.0.0"></script>
+<script type="module" src="https://esm.sh/ionicons@8.0.0/loader"></script>
+<script nomodule src="https://esm.sh/ionicons@8.0.0/loader"></script>
 ```
 
 ### Basic usage
