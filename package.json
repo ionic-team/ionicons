@@ -31,6 +31,9 @@
       "types": "./icons/index.d.ts",
       "import": "./icons/index.mjs",
       "require": "./icons/index.js"
+    },
+    "./dist/ionicons.json": {
+      "default": "./dist/ionicons.json"
     }
   },
   "scripts": {
