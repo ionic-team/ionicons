@@ -12,6 +12,8 @@
   "types": "dist/types/index.d.ts",
   "unpkg": "dist/ionicons/ionicons.esm.js",
   "jsdelivr": "dist/ionicons/ionicons.esm.js",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
