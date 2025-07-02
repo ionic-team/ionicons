@@ -6,7 +6,7 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      collectionDir: null,
+      collectionDir: './collection',
       empty: false,
     },
     {
