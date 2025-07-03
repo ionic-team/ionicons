@@ -29,6 +29,10 @@
       "types": "./components/index.d.ts",
       "import": "./components/index.js"
     },
+    "./components/ion-icon.js": {
+      "types": "./components/ion-icon.d.ts",
+      "import": "./components/ion-icon.js"
+    },
     "./icons": {
       "types": "./icons/index.d.ts",
       "import": "./icons/index.mjs",
