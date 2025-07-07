@@ -3,6 +3,8 @@ name: 'Ionicons Build'
 on:
   pull_request:
     branches: ['**']
+  push:
+    branches: ['main']
 
 # When pushing a new commit we should
 # cancel the previous test run to not
