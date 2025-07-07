@@ -51,6 +51,3 @@ export interface SvgData {
    */
   exportName: string;
 }
-
-type ExtractCustomPlugin<T> = T extends { fn: any } ? T : never;
-export type CustomPlugin = ExtractCustomPlugin<PluginConfig>;

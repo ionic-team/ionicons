@@ -25,6 +25,7 @@ export namespace Components {
     ios?: string;
     /**
      * If enabled, ion-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+     * @default false
      */
     lazy: boolean;
     /**
@@ -33,6 +34,7 @@ export namespace Components {
     md?: string;
     /**
      * The mode determines which platform styles to use.
+     * @default getIonMode()
      */
     mode: string;
     /**
@@ -84,6 +86,7 @@ declare namespace LocalJSX {
     ios?: string;
     /**
      * If enabled, ion-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+     * @default false
      */
     lazy?: boolean;
     /**
@@ -92,6 +95,7 @@ declare namespace LocalJSX {
     md?: string;
     /**
      * The mode determines which platform styles to use.
+     * @default getIonMode()
      */
     mode?: string;
     /**

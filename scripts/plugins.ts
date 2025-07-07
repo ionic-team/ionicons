@@ -1,5 +1,4 @@
 import { PluginConfig } from 'svgo';
-import type { CustomPlugin } from './types';
 
 const setRootIoniconClass: PluginConfig = {
   name: 'addClassesToSVGElement',
@@ -77,7 +76,7 @@ const validatePlugin: PluginConfig = {
 const basePlugins: PluginConfig[] = [
   'removeStyleElement',
   'convertStyleToAttrs',
-  'removeScriptElement',
+  'removeScripts',
   'removeDimensions',
   setRootIoniconClass,
   validatePlugin,
