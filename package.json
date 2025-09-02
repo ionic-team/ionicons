@@ -45,6 +45,7 @@
   "scripts": {
     "build": "run-s clean build.* prettier",
     "build.files": "tsx scripts/build.ts",
+    "build.types": "node scripts/types.mjs",
     "build.component": "stencil build",
     "build.collection": "tsx scripts/collection-copy.ts",
     "clean": "rimraf dist components icons www",

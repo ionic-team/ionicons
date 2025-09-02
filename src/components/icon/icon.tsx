@@ -1,6 +1,7 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
 import { getSvgContent, ioniconContent } from './request';
 import { getName, getUrl, inheritAttributes, isRTL } from './utils';
+import { IoniconName, IoniconSource } from 'src/types/iconicons';
 
 @Component({
   tag: 'ion-icon',
@@ -22,7 +23,7 @@ export class Icon {
   /**
    * The mode determines which platform styles to use.
    */
-  @Prop({ mutable: true }) mode = getIonMode();
+  @Prop({ mutable: true }) mode = getIonMode() as any;
 
   /**
    * The color to use for the background of the item.
@@ -47,7 +48,7 @@ export class Icon {
   /**
    * Specifies which icon to use from the built-in set of icons.
    */
-  @Prop({ reflect: true }) name?: string;
+  @Prop({ reflect: true }) name?: IoniconName;
 
   /**
    * Specifies the exact `src` of an SVG file to use.
@@ -59,7 +60,7 @@ export class Icon {
    * it will set the `src` property. Otherwise it assumes it's a built-in named
    * SVG and set the `name` property.
    */
-  @Prop() icon?: any;
+  @Prop() icon?: IoniconSource;
 
   /**
    * The size of the icon.

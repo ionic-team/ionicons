@@ -27,15 +27,15 @@ describe('getUrl', () => {
    * @ToDo(@christian-bromann): investigate why this is failing
    */
   it.skip('use name prop', () => {
-    i.name = 'some-name';
-    expect(getUrl(i)).toBe('/svg/some-name.svg');
+    i.name = 'add';
+    expect(getUrl(i)).toBe('/svg/add.svg');
   });
 
   it('use src prop', () => {
     i.src = './some.svg';
-    i.name = 'some-name';
+    i.name = 'add';
     i.icon = 'some-icon';
-    expect(getUrl(i)).toBe('./some.svg');
+    expect(getUrl(i)).toBe('./add.svg');
   });
 });
 
