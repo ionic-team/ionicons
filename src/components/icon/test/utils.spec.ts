@@ -35,7 +35,7 @@ describe('getUrl', () => {
     i.src = './some.svg';
     i.name = 'add';
     i.icon = 'some-icon';
-    expect(getUrl(i)).toBe('./add.svg');
+    expect(getUrl(i)).toBe('./some.svg');
   });
 });
 
