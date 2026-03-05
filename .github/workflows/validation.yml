@@ -1,4 +1,4 @@
-name: 'Ionicons Build'
+name: 'Validation'
 
 on:
   pull_request:

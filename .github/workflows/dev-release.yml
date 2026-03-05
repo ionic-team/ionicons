@@ -1,7 +1,7 @@
-name: 'Ionicons Dev Build'
+name: 'Dev Release'
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   create-dev-hash:

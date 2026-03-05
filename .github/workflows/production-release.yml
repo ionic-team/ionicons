@@ -1,22 +1,12 @@
-name: 'Ionicons Production Release'
+name: 'Production Release'
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       version:
-        required: true
-        type: choice
-        description: Which version should be published?
-        options:
-          - patch
-          - minor
-          - major
-      tag:
-        required: true
-        type: choice
-        description: Which npm tag should this be published to?
-        options:
-          - latest
+        required: false
+        type: string
+        description: npm version (major, minor, or patch)
 
 jobs:
   release-ionicons:
@@ -31,7 +21,7 @@ jobs:
       - name: Publish to NPM
         uses: ./.github/workflows/actions/publish-npm
         with:
-          tag: ${{ inputs.tag }}
+          tag: latest
           version: ${{ inputs.version }}
           working-directory: './'
           token: ${{ secrets.NPM_TOKEN }}

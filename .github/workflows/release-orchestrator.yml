@@ -1,0 +1,33 @@
+name: 'Release Orchestrator'
+
+on:
+    workflow_dispatch:
+        inputs:
+            release-type:
+                description: 'Release type'
+                required: true
+                type: choice
+                options:
+                    - dev
+                    - production
+            version:
+                description: 'Version for production releases'
+                required: false
+                type: choice
+                options:
+                    - patch
+                    - minor
+                    - major
+
+jobs:
+    run-dev:
+        if: ${{ inputs.release-type == 'dev' }}
+        uses: ./.github/workflows/dev-release.yml
+        secrets: inherit
+
+    run-production:
+        if: ${{ inputs.release-type == 'production' }}
+        uses: ./.github/workflows/production-release.yml
+        secrets: inherit
+        with:
+            version: ${{ inputs.version }}
