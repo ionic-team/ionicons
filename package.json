@@ -59,7 +59,7 @@
     "test.e2e.install": "playwright install && playwright install-deps"
   },
   "dependencies": {
-    "@stencil/core": "^4.35.3"
+    "@stencil/core": "^4.43.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.53.2",

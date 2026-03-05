@@ -116,15 +116,34 @@ declare namespace LocalJSX {
      */
     src?: string;
   }
+
+  interface IonIconAttributes {
+    mode: string;
+    color: string;
+    ios: string;
+    md: string;
+    flipRtl: boolean;
+    name: string;
+    src: string;
+    icon: string;
+    size: string;
+    lazy: boolean;
+    sanitize: boolean;
+  }
+
   interface IntrinsicElements {
-    'ion-icon': IonIcon;
+    'ion-icon': Omit<IonIcon, keyof IonIconAttributes> & {
+      [K in keyof IonIcon & keyof IonIconAttributes]?: IonIcon[K];
+    } & { [K in keyof IonIcon & keyof IonIconAttributes as `attr:${K}`]?: IonIconAttributes[K] } & {
+      [K in keyof IonIcon & keyof IonIconAttributes as `prop:${K}`]?: IonIcon[K];
+    };
   }
 }
 export { LocalJSX as JSX };
 declare module '@stencil/core' {
   export namespace JSX {
     interface IntrinsicElements {
-      'ion-icon': LocalJSX.IonIcon & JSXBase.HTMLAttributes<HTMLIonIconElement>;
+      'ion-icon': LocalJSX.IntrinsicElements['ion-icon'] & JSXBase.HTMLAttributes<HTMLIonIconElement>;
     }
   }
 }
