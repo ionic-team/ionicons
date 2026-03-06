@@ -19,6 +19,10 @@ on:
                     - minor
                     - major
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
     run-dev:
         if: ${{ inputs.release-type == 'dev' }}

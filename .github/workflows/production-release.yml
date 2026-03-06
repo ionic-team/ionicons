@@ -24,6 +24,5 @@ jobs:
           tag: latest
           version: ${{ inputs.version }}
           working-directory: './'
-          token: ${{ secrets.NPM_TOKEN }}
           createRelease: true
           ghToken: ${{ secrets.IONITRON_TOKEN }}

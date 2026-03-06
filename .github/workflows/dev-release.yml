@@ -33,7 +33,6 @@ jobs:
           tag: dev
           version: ${{ needs.create-dev-hash.outputs.dev-hash }}
           working-directory: './'
-          token: ${{ secrets.NPM_TOKEN }}
           createRelease: 'false'
 
   get-build:
