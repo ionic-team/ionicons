@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import { IoniconName, IoniconSource } from './types/iconicons.d';
+export { IoniconName, IoniconSource } from './types/iconicons.d';
 export namespace Components {
   interface IonIcon {
     /**
@@ -18,7 +20,7 @@ export namespace Components {
     /**
      * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
      */
-    icon?: any;
+    icon?: IoniconSource;
     /**
      * Specifies which icon to use on `ios` mode.
      */
@@ -34,13 +36,13 @@ export namespace Components {
     md?: string;
     /**
      * The mode determines which platform styles to use.
-     * @default getIonMode()
+     * @default getIonMode() as any
      */
-    mode: string;
+    mode: any;
     /**
      * Specifies which icon to use from the built-in set of icons.
      */
-    name?: string;
+    name?: IoniconName;
     /**
      * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
      * @default true
@@ -79,7 +81,7 @@ declare namespace LocalJSX {
     /**
      * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
      */
-    icon?: any;
+    icon?: IoniconSource;
     /**
      * Specifies which icon to use on `ios` mode.
      */
@@ -95,13 +97,13 @@ declare namespace LocalJSX {
     md?: string;
     /**
      * The mode determines which platform styles to use.
-     * @default getIonMode()
+     * @default getIonMode() as any
      */
-    mode?: string;
+    mode?: any;
     /**
      * Specifies which icon to use from the built-in set of icons.
      */
-    name?: string;
+    name?: IoniconName;
     /**
      * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
      * @default true
