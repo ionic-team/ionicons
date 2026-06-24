@@ -1,31 +1,22 @@
 {
-    "ignore": [
-        "**/.*",
-        "builder",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "version": "2.1.0",
-    "name": "silverorange-ionicons",
-    "license": "MIT",
-    "authors": [
-        "Ben Sperry <ben@drifty.com>",
-        "Adam Bradley <adam@drifty.com>",
-        "Max Lynch <max@drifty.com>"
-    ],
-    "keywords": [
-        "fonts",
-        "icon font",
-        "icons",
-        "ionic",
-        "web font"
-    ],
-    "main": [
-        "css/ionicons.css",
-        "fonts/*"
-    ],
-    "homepage": "https://github.com/silverorange/silverorange-ionicons",
-    "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework. Modified for use by silverorange."
+  "name": "silverorange-ionicons",
+  "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework. Modified for use by silverorange.",
+  "version": "2.1.0",
+  "license": "MIT",
+  "keywords": ["fonts", "icon font", "icons", "ionic", "web font"],
+  "authors": [
+    "Ben Sperry <ben@drifty.com>",
+    "Adam Bradley <adam@drifty.com>",
+    "Max Lynch <max@drifty.com>"
+  ],
+  "homepage": "https://github.com/silverorange/silverorange-ionicons",
+  "main": ["css/ionicons.css", "fonts/*"],
+  "ignore": [
+    "**/.*",
+    "builder",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

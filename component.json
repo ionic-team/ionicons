@@ -1,19 +1,17 @@
 {
-    "repo": "silverorange/silverorange-ionicons",
-    "development": {},
-    "version": "2.1.0",
-    "styles": [
-        "css/ionicons.css"
-    ],
-    "name": "silverorange-ionicons",
-    "dependencies": {},
-    "keywords": [],
-    "license": "MIT",
-    "fonts": [
-        "fonts/ionicons.eot",
-        "fonts/ionicons.svg",
-        "fonts/ionicons.ttf",
-        "fonts/ionicons.woff"
-    ],
-    "description": "The premium icon font for Ionic Framework. Modified for use by silverorange."
+  "name": "silverorange-ionicons",
+  "description": "The premium icon font for Ionic Framework. Modified for use by silverorange.",
+  "version": "2.1.0",
+  "license": "MIT",
+  "keywords": [],
+  "repo": "silverorange/silverorange-ionicons",
+  "dependencies": {},
+  "development": {},
+  "styles": ["css/ionicons.css"],
+  "fonts": [
+    "fonts/ionicons.eot",
+    "fonts/ionicons.svg",
+    "fonts/ionicons.ttf",
+    "fonts/ionicons.woff"
+  ]
 }
