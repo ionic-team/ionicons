@@ -1,4 +1,28 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/vendor/
+/node_modules/
+
+# misc
+.DS_Store
+.env
+/.idea/
+pnpm-debug.log*
+pnpm-error.log*
+*.swp
+
+# testing/tooling output
+.php-cs-fixer.cache
+.phpunit.cache
+.phpunit.result.cache
+/build/
+
+# overrides for local tooling
+phpstan.neon
+phpstan-baseline.neon
+phpunit.xml
+
 _site
 .sass-cache
 *.scssc
-*.swp
