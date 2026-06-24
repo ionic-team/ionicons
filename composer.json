@@ -1,36 +1,33 @@
 {
-    "name": "silverorange/silverorange-ionicons",
-    "license": [
-        "MIT"
-    ],
-    "extra": {},
-    "authors": [
-        {
-            "homepage": "https://twitter.com/benjsperry",
-            "role": "Designer",
-            "name": "Ben Sperry",
-            "email": "ben@drifty.com"
-        },
-        {
-            "homepage": "https://twitter.com/adamdbradley",
-            "role": "Developer",
-            "name": "Adam Bradley",
-            "email": "adam@drifty.com"
-        },
-        {
-            "homepage": "https://twitter.com/maxlynch",
-            "role": "Developer",
-            "name": "Max Lynch",
-            "email": "max@drifty.com"
-        }
-    ],
-    "keywords": [
-        "fonts",
-        "icon font",
-        "icons",
-        "ionic",
-        "web font"
-    ],
-    "homepage": "https://github.com/silverorange/silverorange-ionicons",
-    "description": "The premium icon font for Ionic Framework. Modified for use by silverorange."
+  "name": "silverorange/silverorange-ionicons",
+  "description": "The premium icon font for Ionic Framework. Modified for use by silverorange.",
+  "license": "MIT",
+  "keywords": [
+    "fonts",
+    "icon font",
+    "icons",
+    "ionic",
+    "web font"
+  ],
+  "authors": [
+    {
+      "name": "Ben Sperry",
+      "email": "ben@drifty.com",
+      "homepage": "https://twitter.com/benjsperry",
+      "role": "Designer"
+    },
+    {
+      "name": "Adam Bradley",
+      "email": "adam@drifty.com",
+      "homepage": "https://twitter.com/adamdbradley",
+      "role": "Developer"
+    },
+    {
+      "name": "Max Lynch",
+      "email": "max@drifty.com",
+      "homepage": "https://twitter.com/maxlynch",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/silverorange/silverorange-ionicons"
 }
