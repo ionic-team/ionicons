@@ -6225,6 +6225,13 @@
       ]
     },
     {
+      "name": "logo-bsky",
+      "tags": [
+        "bsky",
+        "logo"
+      ]
+    },
+    {
       "name": "logo-buffer",
       "tags": [
         "buffer",
@@ -6250,6 +6257,13 @@
       "tags": [
         "captioning",
         "closed",
+        "logo"
+      ]
+    },
+    {
+      "name": "logo-codeberg",
+      "tags": [
+        "codeberg",
         "logo"
       ]
     },
