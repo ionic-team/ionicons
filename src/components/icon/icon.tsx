@@ -221,7 +221,9 @@ export class Icon {
         {Build.isBrowser && this.svgContent ? (
           <div class="icon-inner" innerHTML={this.svgContent}></div>
         ) : (
-          <div class="icon-inner"></div>
+          <div class="icon-inner">
+            <slot></slot>
+          </div>
         )}
       </Host>
     );

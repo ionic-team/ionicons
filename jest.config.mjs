@@ -6,8 +6,9 @@ import { createJestStencilPreset } from 'jest-stencil-runner';
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 export default createJestStencilPreset({
-  rootDir: __dirname,  
+  rootDir: __dirname,
   // Add any additional Jest configuration here
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/**/*.d.ts',

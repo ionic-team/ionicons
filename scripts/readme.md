@@ -28,12 +28,11 @@ npm start
 
 ## Release Steps
 
-The release script will ask what version to use. After the script completes, double check the `www/cheatsheet.html` to ensure everything is good to go.
+Releases are automated via GitHub Actions. To trigger a release:
 
-Next, update `CHANGELOG.md`, then commit and push your changes Github.
-
-```sh
-npm run release
-```
-
-Triple check the version number is correct, and choose which tag this should be released as. If it's a pre-release, it should be `dev`.
+1. Go to the [Release Orchestrator](https://github.com/ionic-team/ionicons/actions/workflows/release-orchestrator.yml) workflow
+2. Click "Run workflow"
+3. Select the release type:
+   - **dev** — Creates a pre-release with a timestamp-based version (e.g., `8.0.14-dev.11784821417.1c794397`)
+   - **production** — Creates a semver release; select `patch`, `minor`, or `major`
+4. The workflow will build, publish to NPM, and create a GitHub release (for production releases)

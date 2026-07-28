@@ -8,6 +8,9 @@
     <script nomodule src="/build/ionicons.js"></script>
     <link rel="stylesheet" href="../styles.css" />
     <script src="../header.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
   </head>
 
   <body>
@@ -16,16 +19,41 @@
     <main>
       <h1>Icon - Accessibility</h1>
 
-      <h2>Icon with aria-label</h2>
+      <h2>SVG icon with aria-label</h2>
       <ion-icon name="cellular" aria-label="Mobile data"></ion-icon>
 
-      <h2>Button with aria-label</h2>
+      <h2>Button with aria-label and SVG icon</h2>
       <button aria-label="Mobile data">
         <ion-icon name="cellular" aria-hidden="true"></ion-icon>
       </button>
 
-      <h2>Icon with aria-hidden</h2>
+      <h2>SVG icon with aria-hidden</h2>
       <ion-icon name="cellular" aria-hidden="true"></ion-icon>
+
+      <hr />
+
+      <h2>Font icon with aria-label</h2>
+      <ion-icon aria-label="Mobile data">
+        <i class="fa fa-home"></i>
+      </ion-icon>
+
+      <h2>Button with aria-label and font icon</h2>
+      <button aria-label="Mobile data">
+        <ion-icon aria-hidden="true">
+          <i class="fa fa-home"></i>
+        </ion-icon>
+      </button>
+
+      <h2>Font icon with aria-hidden</h2>
+      <ion-icon aria-hidden="true">
+        <i class="fa fa-home"></i>
+      </ion-icon>
     </main>
+
+    <style>
+      ion-icon {
+        font-size: 32px;
+      }
+    </style>
   </body>
 </html>
