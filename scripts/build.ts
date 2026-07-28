@@ -98,9 +98,16 @@ async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgDa
   const testDir = path.join(rootDir, 'www');
   const testBuildDir = path.join(testDir, 'build');
   const testSvgDir = path.join(testBuildDir, 'svg');
+  const cheatsheetDir = path.join(testDir, 'icon', 'test', 'cheatsheet');
+  const version = (await fs.readJson(path.join(rootDir, 'package.json'))).version;
 
   // Ensure all directories exist
-  await Promise.all([fs.ensureDir(testDir), fs.ensureDir(testBuildDir), fs.ensureDir(testSvgDir)]);
+  await Promise.all([
+    fs.ensureDir(testDir),
+    fs.ensureDir(testBuildDir),
+    fs.ensureDir(testSvgDir),
+    fs.ensureDir(cheatsheetDir),
+  ]);
 
   await Promise.all(
     srcSvgData
@@ -111,9 +118,27 @@ async function copyToTesting(rootDir: string, distDir: string, srcSvgData: SvgDa
       }),
   );
 
-  const distCheatsheetFilePath = path.join(distDir, 'cheatsheet.html');
-  const testCheatsheetFilePath = path.join(testDir, 'cheatsheet.html');
-  await fs.copyFile(distCheatsheetFilePath, testCheatsheetFilePath);
+  const wwwCheatsheetFilePath = path.join(cheatsheetDir, 'index.html');
+  const srcIndexFilePath = path.join(rootDir, 'src', 'components', 'icon', 'test', 'index.html');
+  const testIndexFilePath = path.join(testDir, 'index.html');
+
+  await fs.copyFile(srcIndexFilePath, testIndexFilePath);
+
+  // Generate the cheatsheet with placeholders filled in
+  const svgSymbolsContent = await fs.readFile(path.join(distDir, 'ionicons.symbols.svg'), 'utf8');
+  const c = srcSvgData.map(
+    (svgData) =>
+      `<a href="/svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
+  );
+  c.push(svgSymbolsContent);
+
+  const cheatsheetTemplate = await fs.readFile(path.join(rootDir, 'scripts', 'cheatsheet-template.html'), 'utf8');
+  const cheatsheetHtml = cheatsheetTemplate
+    .replace(/{{version}}/g, version)
+    .replace(/{{count}}/g, srcSvgData.length.toString())
+    .replace(/{{content}}/g, c.join('\n'));
+
+  await fs.writeFile(wwwCheatsheetFilePath, cheatsheetHtml);
 }
 
 async function createSvgSymbols(version: string, distDir: string, srcSvgData: SvgData[]) {
@@ -169,7 +194,7 @@ async function createCheatsheet(
 
   const c = srcSvgData.map(
     (svgData) =>
-      `<a href="./svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
+      `<a href="/svg/${svgData.fileName}"><svg><use href="#${svgData.iconName}" xlink:href="#${svgData.iconName}"/></svg></a>`,
   );
 
   c.push(svgSymbolsContent);

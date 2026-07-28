@@ -43,26 +43,26 @@
     }
   },
   "scripts": {
-    "build": "run-s clean build.* prettier",
+    "build": "run-s clean build.*",
     "build.files": "tsx scripts/build.ts",
     "build.component": "stencil build",
     "build.collection": "tsx scripts/collection-copy.ts",
     "clean": "rimraf dist components icons www",
-    "prettier": "npm run prettier.base -- --write",
-    "prettier.base": "prettier --cache \"./({bin,scripts,src,test}/**/*.{ts,tsx,js,jsx})|bin/stencil|.github/(**/)?*.(yml|yaml)|*.js\"",
-    "prettier.dry-run": "npm run prettier.base -- --list-different",
-    "start": "run-s build.files start.stencil",
-    "start.stencil": "stencil build --dev --watch --serve",
-    "test": "run-s test.spec",
+    "lint": "npm run prettier -- --write",
+    "prettier": "prettier \"./src/**/*.{html,ts,tsx,js,jsx,scss}\"",
+    "prettier.dry-run": "npm run prettier -- --list-different",
+    "start": "run-s build.files && stencil build --dev --watch --serve",
+    "test": "run-s test.spec test.e2e",
     "test.spec": "jest",
     "test.e2e": "playwright test",
     "test.e2e.install": "playwright install && playwright install-deps"
   },
   "dependencies": {
-    "@stencil/core": "^4.35.3"
+    "@stencil/core": "^4.43.5"
   },
   "devDependencies": {
-    "@playwright/test": "^1.53.2",
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.61.1",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.15.3",
@@ -70,7 +70,7 @@
     "fs-extra": "^11.3.0",
     "jest": "^30.0.4",
     "jest-cli": "^30.0.4",
-    "jest-stencil-runner": "^0.0.8",
+    "jest-stencil-runner": "^0.0.20",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "puppeteer": "^24.12.0",

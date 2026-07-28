@@ -1,18 +1,9 @@
 import { expect } from '@playwright/test';
 import { test } from '@utils/test/playwright';
 
-test.describe('icon: basic', () => {
-  test('should not have visual regressions', async ({ page }) => {
-    await page.goto(`/`);
-
-    // Wait for all SVGs to be lazily loaded before taking screenshots
-    await page.waitForLoadState('networkidle');
-
-    await expect(page).toHaveScreenshot(`icon-diff.png`, { fullPage: true });
-  });
-
+test.describe('icon: rtl', () => {
   test('some icons should flip when rtl', async ({ page }) => {
-    await page.goto(`/`);
+    await page.goto(`/icon/test/rtl/`);
 
     const autoflip = page.locator('.auto-flip-chevrons [name=chevron-forward] .icon-inner');
     const unflip = page.locator('.un-flip-chevrons [name=chevron-forward] .icon-inner');
@@ -29,12 +20,11 @@ test.describe('icon: basic', () => {
     // Wait for all SVGs to be lazily loaded before taking screenshots
     await page.waitForLoadState('networkidle');
 
-    const rtlTests = page.locator('#rtl-tests');
-    await expect(rtlTests).toHaveScreenshot(`icon-rtl-diff.png`);
+    await expect(page).toHaveScreenshot(`icon-rtl.png`);
   });
 
   test('arrows should flip if dir changes on the element', async ({ page }) => {
-    await page.goto(`/`);
+    await page.goto(`/icon/test/rtl/`);
 
     const autoflip = page.locator('.auto-flip-chevrons [name=chevron-forward] .icon-inner');
     const unflip = page.locator('.un-flip-chevrons [name=chevron-forward] .icon-inner');
@@ -51,7 +41,7 @@ test.describe('icon: basic', () => {
   });
 
   test('icon should reassess flipping when name changes', async ({ page }) => {
-    await page.goto(`/`);
+    await page.goto(`/icon/test/rtl/`);
 
     await page.evaluate(() => {
       document.dir = 'rtl';

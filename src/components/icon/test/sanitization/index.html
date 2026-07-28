@@ -1,0 +1,31 @@
+<!doctype html>
+<html dir="ltr" lang="en" mode="ios">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Icon - Sanitization</title>
+    <script type="module" src="/build/ionicons.esm.js"></script>
+    <script nomodule src="/build/ionicons.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../header.js"></script>
+  </head>
+
+  <body>
+    <test-header></test-header>
+
+    <main>
+      <h1>Icon - Sanitization</h1>
+
+      <h2>Sanitized (shouldn't show)</h2>
+      <ion-icon src="/icon/assets/sanitize.svg"></ion-icon>
+
+      <h2>Not Sanitized (should show)</h2>
+      <ion-icon sanitize="false" src="/icon/assets/no-sanitize.svg"></ion-icon>
+
+      <h2>Base64 URL</h2>
+      <ion-icon
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDBWMHoiLz48cGF0aCBkPSJNMjAgMkg0Yy0xLjEgMC0yIC45LTIgMnYxOGw0LTRoMTRjMS4xIDAgMi0uOSAyLTJWNGMwLTEuMS0uOS0yLTItMnptMCAxNEg2bC0yIDJWNGgxNnYxMnoiLz48L3N2Zz4="
+      ></ion-icon>
+    </main>
+  </body>
+</html>

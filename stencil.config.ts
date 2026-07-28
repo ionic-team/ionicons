@@ -21,12 +21,12 @@ export const config: Config = {
       type: 'www',
       copy: [
         {
-          src: './components/test/*.svg',
-          dest: './assets/',
+          src: './components/icon/assets',
+          dest: './icon/assets/',
         },
         {
-          src: './components/test/',
-          dest: './test/',
+          src: './components/icon/test',
+          dest: './icon/test',
         },
         {
           src: './svg/*.svg',

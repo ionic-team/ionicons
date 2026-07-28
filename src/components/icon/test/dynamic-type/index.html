@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
+<!doctype html>
+<html dir="ltr" lang="en" mode="ios">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Ionicons {{version}} Cheatsheet</title>
+    <title>Icon - Dynamic Type</title>
     <script type="module" src="/build/ionicons.esm.js"></script>
     <script nomodule src="/build/ionicons.js"></script>
     <link rel="stylesheet" href="../styles.css" />
@@ -14,24 +14,17 @@
     <test-header></test-header>
 
     <main>
-      <h1>Ionicons {{version}} Cheatsheet</h1>
-      <h3>{{count}} icons</h3>
+      <h1>Icon - Dynamic Type</h1>
 
-      {{content}}
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star" size="small"></ion-icon>
+      <ion-icon name="star" size="large"></ion-icon>
     </main>
-  </body>
 
-  <style>
-    svg {
-      width: 32px;
-      height: 32px;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    a:hover {
-      opacity: 0.7;
-    }
-  </style>
+    <style>
+      html {
+        font-size: 28px;
+      }
+    </style>
+  </body>
 </html>

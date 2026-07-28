@@ -6,20 +6,18 @@ This document outlines the guidelines and processes for contributing to this pro
 
 ## Table of Contents
 
-- [Contributing to Ionicons](#contributing-to-ionicons)
-  - [Table of Contents](#table-of-contents)
-  - [Code of Conduct](#code-of-conduct)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Environment Setup](#environment-setup)
-  - [Development Workflow](#development-workflow)
-    - [Branch Strategy](#branch-strategy)
-    - [Component Modifications](#component-modifications)
-    - [Testing Changes](#testing-changes)
-    - [Code Style](#code-style)
-    - [Building](#building)
-  - [Submitting Issues](#submitting-issues)
-  - [Submitting Pull Requests](#submitting-pull-requests)
+- [Code of Conduct](#code-of-conduct)
+- [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Environment Setup](#environment-setup)
+- [Development Workflow](#development-workflow)
+  * [Branch Strategy](#branch-strategy)
+  * [Component Modifications](#component-modifications)
+  * [Testing](#testing)
+  * [Code Style](#code-style)
+  * [Building](#building)
+- [Submitting Issues](#submitting-issues)
+- [Submitting Pull Requests](#submitting-pull-requests)
 
 ## Code of Conduct
 
@@ -84,20 +82,67 @@ If you're modifying the `ion-icon` component:
 
 1. Navigate to `src/components/` directory and open the `icon` component to modify
 2. Make your changes to the component code
-3. Test your changes (see [Testing Changes](#testing-changes))
+3. Test your changes locally with `npm start`
+4. Run the full test suite: `npm run test.spec` for unit tests and `npm run test.e2e` for E2E tests
+5. All PRs that change component behavior must include tests covering the changes
 
-### Testing Changes
+### Testing
 
-To preview component changes:
+Tests are crucial for maintaining confidence in changes. All PRs that modify component behavior must include tests covering those changes.
 
-1. Run:
-   ```bash
-   npm start
-   ```
-   This will start a local version of the icon test with a test page
-   
-2. Modify the test page in `index.html` as needed to test your changes
-3. If you are modifying icons, you can run `npm run build.files` to re-run the SVG optimization script to verify there are no changes after optimizing the SVG
+#### Local Development & Previewing
+
+To preview component changes during development:
+
+```bash
+npm start
+```
+
+This starts the dev server with live-reloading. The test landing page displays all available test pages.
+
+Test pages are organized in `src/components/icon/test/` with individual folders for each test scenario.
+
+#### Unit Tests
+
+Run Jest tests for component logic:
+
+```bash
+npm run test.spec
+```
+
+#### E2E Tests
+
+Run Playwright tests to generate visual regression snapshots and verify component behavior:
+
+```bash
+npm run test.e2e
+```
+
+View the HTML report after tests complete:
+
+```bash
+npx playwright show-report
+```
+
+> [!IMPORTANT]
+> All E2E test navigation URLs must include a trailing slash (e.g., `/icon/test/basic/` not `/icon/test/basic`). The trailing slash ensures proper directory routing, correct timing for script initialization, and consistent page loading across browsers.
+
+##### Updating Snapshots
+
+To update visual regression snapshots with new baselines:
+
+```bash
+npm run test.e2e -- --update-snapshots
+```
+
+Or for a specific test:
+
+```bash
+npm run test.e2e -- src/components/icon/test/basic/icon.e2e.ts --update-snapshots
+```
+
+> [!NOTE]
+> Updating snapshots locally updates your gitignored screenshot files for local testing. To update the official repository snapshots, run the "Update Reference Screenshots" GitHub action with your development branch selected.
 
 ### Code Style
 

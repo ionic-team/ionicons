@@ -1,9 +1,9 @@
 import { expect } from '@playwright/test';
-import { test } from '../../../utils/test/playwright';
+import { test } from '@utils/test/playwright';
 
 test.describe('icon: csp', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/test/csp');
+    await page.goto('/icon/test/csp');
   });
 
   test('should load svg', async ({ page }) => {
