@@ -10,6 +10,7 @@ test.describe('icon: dynamic type', () => {
     // Wait for all SVGs to be lazily loaded before taking screenshots
     await page.waitForLoadState('networkidle');
 
-    await expect(page).toHaveScreenshot(`icon-dynamic-type.png`);
+    const main = page.locator('main');
+    await expect(main).toHaveScreenshot(`icon-dynamic-type.png`);
   });
 });

@@ -7,6 +7,7 @@ test.describe('icon: sanitization', () => {
 
     await page.waitForLoadState('networkidle');
 
-    await expect(page).toHaveScreenshot(`icon-sanitization.png`);
+    const main = page.locator('main');
+    await expect(main).toHaveScreenshot(`icon-sanitization.png`);
   });
 });
