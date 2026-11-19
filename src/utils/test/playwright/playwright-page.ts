@@ -7,7 +7,7 @@ import type {
 } from '@playwright/test';
 import { test as base } from '@playwright/test';
 
-import { goto as goToPage } from './page/utils';
+import { goto as goToPage, setContent } from './page/utils';
 import type { E2EPage } from './playwright-declarations';
 
 type CustomTestArgs = PlaywrightTestArgs &
@@ -43,6 +43,7 @@ export async function extendPageFixture(page: E2EPage, testInfo: TestInfo) {
   })();`);
   // Overridden Playwright methods
   page.goto = (url: string, options) => goToPage(page, url, options, testInfo, originalGoto);
+  page.setContent = (html: string, options) => setContent(page, html, testInfo, options);
 
   return page;
 }

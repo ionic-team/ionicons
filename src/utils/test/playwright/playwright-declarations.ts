@@ -54,4 +54,10 @@ export interface E2EPage extends Page {
       waitUntil?: 'load' | 'domcontentloaded' | 'networkidle' | 'commit';
     },
   ) => Promise<null | Response>;
+
+  /**
+   * Replaces the page content with the given HTML, loads the ionicons build,
+   * and waits for the Stencil components to be hydrated.
+   */
+  setContent: (html: string, options?: Parameters<E2EPage['goto']>[1]) => Promise<void>;
 }

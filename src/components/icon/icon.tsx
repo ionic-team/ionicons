@@ -1,5 +1,5 @@
 import { Build, Component, Element, Host, Prop, State, Watch, h } from '@stencil/core';
-import { getSvgContent, ioniconContent } from './request';
+import { getCacheKey, getSvgContent, ioniconContent } from './request';
 import { getName, getUrl, inheritAttributes, isRTL } from './utils';
 
 @Component({
@@ -74,9 +74,11 @@ export class Icon {
   @Prop() lazy = false;
 
   /**
-   * When set to `false`, SVG content that is HTTP fetched will not be checked
-   * if the response SVG content has any `<script>` elements, or any attributes
-   * that start with `on`, such as `onclick`.
+   * When `true`, SVG content, including SVG `data:` URLs, is checked before it
+   * renders. SVGs with `<script>` elements, attributes that start with `on`
+   * (like `onclick`), `javascript:` URLs, or non-SVG elements aren't rendered,
+   * and `<foreignObject>` elements are removed. Only set this to `false` for
+   * SVG content from a trusted source.
    * @default true
    */
   @Prop() sanitize = true;
@@ -175,12 +177,13 @@ export class Icon {
       const url = getUrl(this);
 
       if (url) {
-        if (ioniconContent.has(url)) {
+        const cacheKey = getCacheKey(url, this.sanitize);
+        if (ioniconContent.has(cacheKey)) {
           // sync if it's already loaded
-          this.svgContent = ioniconContent.get(url);
+          this.svgContent = ioniconContent.get(cacheKey);
         } else {
           // async if it hasn't been loaded
-          getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(url)));
+          getSvgContent(url, this.sanitize).then(() => (this.svgContent = ioniconContent.get(cacheKey)));
         }
         this.didLoadIcon = true;
       }

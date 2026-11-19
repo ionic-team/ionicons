@@ -42,7 +42,7 @@ export namespace Components {
          */
         "name"?: string;
         /**
-          * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
+          * When `true`, SVG content, including SVG `data:` URLs, is checked before it renders. SVGs with `<script>` elements, attributes that start with `on` (like `onclick`), `javascript:` URLs, or non-SVG elements aren't rendered, and `<foreignObject>` elements are removed. Only set this to `false` for SVG content from a trusted source.
           * @default true
          */
         "sanitize": boolean;
@@ -104,7 +104,7 @@ declare namespace LocalJSX {
          */
         "name"?: string;
         /**
-          * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
+          * When `true`, SVG content, including SVG `data:` URLs, is checked before it renders. SVGs with `<script>` elements, attributes that start with `on` (like `onclick`), `javascript:` URLs, or non-SVG elements aren't rendered, and `<foreignObject>` elements are removed. Only set this to `false` for SVG content from a trusted source.
           * @default true
          */
         "sanitize"?: boolean;
